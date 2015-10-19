@@ -7,7 +7,7 @@ Below tables include a bit joke. Patch welcome!
 <table>
     <tr>
         <th>view</th>
-        <th>code</th>
+        <th>code example</th>
         <th>japanese</th>
         <th>meaning</th>
     </tr>
@@ -204,8 +204,8 @@ Below tables include a bit joke. Patch welcome!
         <td>"It is ambiguous"</td>
     </tr>
     <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/slack-reaction-decomoji.png"></td>
-        <td><code>:slack-reaction-decomoji:</code></td>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/naruhodo.png"></td>
+        <td><code>:naruhodo:</code></td>
         <td>なるほど</td>
         <td>"It makes sense."</td>
     </tr>
