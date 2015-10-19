@@ -6,16 +6,16 @@ Below tables include a bit joke. Patch welcome!
 
 <table>
     <tr>
-        <th>view</th>
-        <th>code example</th>
-        <th>japanese</th>
-        <th>meaning</th>
+        <th>View</th>
+        <th>Code Example</th>
+        <th>Japanese</th>
+        <th>Meaning</th>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/ahhai.png"></td>
         <td><code>:ahhai:</code></td>
         <td>あっハイ</td>
-        <td>"well."</td>
+        <td>"Well."</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/arisou.png"></td>
@@ -39,13 +39,13 @@ Below tables include a bit joke. Patch welcome!
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/choroi.png"></td>
         <td><code>:choroi:</code></td>
         <td>ちょろい</td>
-        <td>"soooooo easy!"</td>
+        <td>"Soooooo easy!"</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/dasaku.png"></td>
         <td><code>:dasaku:</code></td>
         <td>駄作</td>
-        <td>"it's so bad"</td>
+        <td>"It's so bad"</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/desuyone.png"></td>
@@ -63,7 +63,7 @@ Below tables include a bit joke. Patch welcome!
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/dousite.png"></td>
         <td><code>:dousite:</code></td>
         <td>どうして</td>
-        <td>"why?" / "how?"</td>
+        <td>"Why?" / "How?"</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/douyatteyatteruno.png"></td>
@@ -93,7 +93,7 @@ Below tables include a bit joke. Patch welcome!
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/gomente.png"></td>
         <td><code>:gomente:</code></td>
         <td>ごめんて</td>
-        <td>"so sorry..."</td>
+        <td>"So sorry..."</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/guuzendazo.png"></td>
@@ -135,7 +135,7 @@ Below tables include a bit joke. Patch welcome!
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kaerou.png"></td>
         <td><code>:kaerou:</code></td>
         <td>帰ろう。</td>
-        <td>"let's get back home."</td>
+        <td>"Let's get back home."</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kanasii.png"></td>
@@ -159,7 +159,7 @@ Below tables include a bit joke. Patch welcome!
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kudasai.png"></td>
         <td><code>:kudasai:</code></td>
         <td>ください</td>
-        <td>"give me."</td>
+        <td>"Give me."</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/majikayo.png"></td>
@@ -177,7 +177,7 @@ Below tables include a bit joke. Patch welcome!
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/meisaku.png"></td>
         <td><code>:meisaku:</code></td>
         <td>迷作</td>
-        <td>"hahaha."</td>
+        <td>"Hahaha."</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/murisou.png"></td>
@@ -273,7 +273,7 @@ Below tables include a bit joke. Patch welcome!
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/ra-men.png"></td>
         <td><code>:ra-men:</code></td>
         <td>ラーメン</td>
-        <td>japanese noodle / 🍜</td>
+        <td>Japanese noodle / 🍜</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/ryosaku.png"></td>
@@ -315,7 +315,7 @@ Below tables include a bit joke. Patch welcome!
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/sokka.png"></td>
         <td><code>:sokka:</code></td>
         <td>そっか。</td>
-        <td>"okay."</td>
+        <td>"Okay."</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/soudesu.png"></td>
