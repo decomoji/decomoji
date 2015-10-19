@@ -387,7 +387,7 @@ Below tables include a bit joke. Patch welcome!
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/wwww.png"></td>
         <td><code>:wwww:</code></td>
         <td>wwww</td>
-        <td>"LoL"</td>
+        <td>"LOL"</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/yabasou.png"></td>
