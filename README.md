@@ -48,6 +48,12 @@ Below tables include a bit joke. Patch welcome!
         <td>"it's so bad"</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/dekasita.png"></td>
+        <td><code>:dekasita:</code></td>
+        <td>でかした</td>
+        <td>"Well done!"</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/desuyone.png"></td>
         <td><code>:desuyone:</code></td>
         <td>ですよね</td>
