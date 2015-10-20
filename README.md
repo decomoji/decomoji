@@ -1,8 +1,12 @@
 # Slack Reaction Decomoji
 
-icon collection for slack reaction.
+Custom emoji icon collection for slack reaction.
 
-Below tables include a bit joke. Patch welcome!
+![screen shot](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/ss.png)
+
+You can add emoji in https://****.slack.com/customize/emoji (need permission).
+
+Below is jp-en compatible table include a bit joke. Patches welcome!
 
 <table>
     <tr>
@@ -46,6 +50,12 @@ Below tables include a bit joke. Patch welcome!
         <td><code>:dasaku:</code></td>
         <td>駄作</td>
         <td>worthless stuff</td>
+    </tr>
+    <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/dekasita.png"></td>
+        <td><code>:dekasita:</code></td>
+        <td>でかした</td>
+        <td>"Well done!"</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/desuyone.png"></td>
