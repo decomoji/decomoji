@@ -55,7 +55,7 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/dekasita.png"></td>
         <td><code>:dekasita:</code></td>
         <td>でかした</td>
-        <td>"Well done!"</td>
+        <td>good job</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/desuyone.png"></td>
