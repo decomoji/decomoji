@@ -19,7 +19,7 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/ahhai.png"></td>
         <td><code>:ahhai:</code></td>
         <td>あっハイ</td>
-        <td>"Ah, yeah."</td>
+        <td>"Oh, yah."</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/arisou.png"></td>
@@ -31,13 +31,13 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/atodeiku.png"></td>
         <td><code>:atodeiku:</code></td>
         <td>後で行く</td>
-        <td>"Follow you."</td>
+        <td>"I'll go if I can."</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/bimi.png"></td>
         <td><code>:bimi:</code></td>
         <td>美味</td>
-        <td>delicious</td>
+        <td>"Yummy!"</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/choroi.png"></td>
@@ -85,7 +85,7 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/erai.png"></td>
         <td><code>:erai:</code></td>
         <td>偉い</td>
-        <td>worthful / awesome</td>
+        <td>"Great!"</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/futoruzo.png"></td>
@@ -115,7 +115,7 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/hentaikayo.png"></td>
         <td><code>:hentaikayo:</code></td>
         <td>変態かよ</td>
-        <td>"You crazy!"</td>
+        <td>"Crazy!"</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/hiwai.png"></td>
@@ -163,13 +163,13 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kousokuzensin.png"></td>
         <td><code>:kousokuzensin:</code></td>
         <td>高速前進</td>
-        <td>fast-foward</td>
+        <td>fast-forward merge</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kudasai.png"></td>
         <td><code>:kudasai:</code></td>
         <td>ください</td>
-        <td>"Give me."</td>
+        <td>"Gimme."</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/majikayo.png"></td>
@@ -193,7 +193,7 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/murisou.png"></td>
         <td><code>:murisou:</code></td>
         <td>無理そう</td>
-        <td>looks hopeless</td>
+        <td>impossible</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/nandato.png"></td>
@@ -295,13 +295,13 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/sakiniike.png"></td>
         <td><code>:sakiniike:</code></td>
         <td>先に行け</td>
-        <td>"Don't worry about me, go ahead." / "After you."</td>
+        <td>"Don't worry, go ahead."</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/singi.png"></td>
         <td><code>:singi:</code></td>
         <td>審議</td>
-        <td>review</td>
+        <td>under deliveration</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/sinkasiro.png"></td>
@@ -343,7 +343,7 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/sugosou.png"></td>
         <td><code>:sugosou:</code></td>
         <td>すごそう</td>
-        <td>looks great</td>
+        <td>"Looks great."</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/superdry.png"></td>
@@ -361,19 +361,19 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tanonda.png"></td>
         <td><code>:tanonda:</code></td>
         <td>たのんだ</td>
-        <td>"You will."</td>
+        <td>"You do."</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tsukareta.png"></td>
         <td><code>:tsukareta:</code></td>
         <td>疲れた</td>
-        <td>tired</td>
+        <td>"I'm tired."</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tsurai.png"></td>
         <td><code>:tsurai:</code></td>
         <td>つらい</td>
-        <td>tought</td>
+        <td>"Tough."</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/ukeru.png"></td>
@@ -403,7 +403,7 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/yabasou.png"></td>
         <td><code>:yabasou:</code></td>
         <td>やばそう</td>
-        <td>looks danger</td>
+        <td>"Seems dangerous."</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/yamero.png"></td>
@@ -421,7 +421,7 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/yosasou.png"></td>
         <td><code>:yosasou:</code></td>
         <td>良さそう</td>
-        <td>looks good</td>
+        <td>LGTM</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/z-index.png"></td>
