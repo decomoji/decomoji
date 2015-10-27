@@ -292,6 +292,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>boobs</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/ositsukeryoku.png"></td>
+        <td><code>:ositsukeryoku:</code></td>
+        <td>押付力</td>
+        <td>git push -f / force push</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/otukaresama.png"></td>
         <td><code>:otukaresama:</code></td>
         <td>お疲れ様</td>
