@@ -130,6 +130,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>"Crazy!"</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/hidoukiteki.png"></td>
+        <td><code>:hidoukiteki:</code></td>
+        <td>非同期的</td>
+        <td>Asyncronized</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/hiwai.png"></td>
         <td><code>:hiwai:</code></td>
         <td>ひわい❤️</td>
