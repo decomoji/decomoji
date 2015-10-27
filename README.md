@@ -400,6 +400,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>"I got to my office."</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tabetai.png"></td>
+        <td><code>:tabetai:</code></td>
+        <td>食べたい</td>
+        <td>"I wanna eat."</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tanonda.png"></td>
         <td><code>:tanonda:</code></td>
         <td>たのんだ</td>
