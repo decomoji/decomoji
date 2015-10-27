@@ -220,6 +220,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>impossible</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/nakunayo.png"></td>
+        <td><code>:nakunayo:</code></td>
+        <td>泣くなよ</td>
+        <td>"Don't cry."</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/nandato.png"></td>
         <td><code>:nandato:</code></td>
         <td>なんだと</td>
