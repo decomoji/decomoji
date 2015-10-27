@@ -334,6 +334,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>"Don't worry, go ahead."</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/sigotosiro.png"></td>
+        <td><code>:sigotosiro:</code></td>
+        <td>仕事しろ</td>
+        <td>"Work!"</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/singi.png"></td>
         <td><code>:singi:</code></td>
         <td>審議</td>
