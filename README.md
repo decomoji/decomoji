@@ -472,6 +472,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>LGTM</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/yossya.png"></td>
+        <td><code>:yossya:</code></td>
+        <td>よっしゃ</td>
+        <td>"I got it!" / "You got it!"</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/z-index.png"></td>
         <td><code>:z-index:</code></td>
         <td>z-index</td>
