@@ -28,6 +28,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>"It could be."</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/aruaru.png"></td>
+        <td><code>:aruaru:</code></td>
+        <td>ありそう</td>
+        <td>"It often happens."</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/atodeiku.png"></td>
         <td><code>:atodeiku:</code></td>
         <td>後で行く</td>
