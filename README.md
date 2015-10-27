@@ -118,6 +118,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>*"It's Gonna Happen."*</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/haraheri.png"></td>
+        <td><code>:haraheri:</code></td>
+        <td>はらへり</td>
+        <td>"I'm starving."</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/hentaikayo.png"></td>
         <td><code>:hentaikayo:</code></td>
         <td>変態かよ</td>
