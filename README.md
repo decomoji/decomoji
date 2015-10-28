@@ -28,6 +28,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>"It could be."</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/aruaru.png"></td>
+        <td><code>:aruaru:</code></td>
+        <td>ありそう</td>
+        <td>"It often happens."</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/atodeiku.png"></td>
         <td><code>:atodeiku:</code></td>
         <td>後で行く</td>
@@ -112,10 +118,28 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>*"It's Gonna Happen."*</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/haraheri.png"></td>
+        <td><code>:haraheri:</code></td>
+        <td>はらへり</td>
+        <td>"I'm starving."</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/hentaikayo.png"></td>
         <td><code>:hentaikayo:</code></td>
         <td>変態かよ</td>
         <td>"Crazy!"</td>
+    </tr>
+    <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/hidoukiteki.png"></td>
+        <td><code>:hidoukiteki:</code></td>
+        <td>非同期的</td>
+        <td>asynchronous</td>
+    </tr>
+    <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/hirunesuru.png"></td>
+        <td><code>:hirunesuru:</code></td>
+        <td>昼寝する</td>
+        <td>"Take a nap."</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/hiwai.png"></td>
@@ -196,6 +220,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>impossible</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/nakunayo.png"></td>
+        <td><code>:nakunayo:</code></td>
+        <td>泣くなよ</td>
+        <td>"Don't cry."</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/nandato.png"></td>
         <td><code>:nandato:</code></td>
         <td>なんだと</td>
@@ -262,6 +292,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>boobs</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/ositsukeryoku.png"></td>
+        <td><code>:ositsukeryoku:</code></td>
+        <td>押付力</td>
+        <td>git push -f / force push</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/otukaresama.png"></td>
         <td><code>:otukaresama:</code></td>
         <td>お疲れ様</td>
@@ -296,6 +332,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td><code>:sakiniike:</code></td>
         <td>先に行け</td>
         <td>"Don't worry, go ahead."</td>
+    </tr>
+    <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/sigotosiro.png"></td>
+        <td><code>:sigotosiro:</code></td>
+        <td>仕事しろ</td>
+        <td>"Do your Job!"</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/singi.png"></td>
@@ -356,6 +398,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td><code>:syussyasita:</code></td>
         <td>出社した</td>
         <td>"I got to my office."</td>
+    </tr>
+    <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tabetai.png"></td>
+        <td><code>:tabetai:</code></td>
+        <td>食べたい</td>
+        <td>"I wanna eat."</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tanonda.png"></td>
@@ -422,6 +470,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td><code>:yosasou:</code></td>
         <td>良さそう</td>
         <td>LGTM</td>
+    </tr>
+    <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/yossya.png"></td>
+        <td><code>:yossya:</code></td>
+        <td>よっしゃ</td>
+        <td>"I got it!" / "You got it!"</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/z-index.png"></td>
