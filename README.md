@@ -133,7 +133,7 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/hidoukiteki.png"></td>
         <td><code>:hidoukiteki:</code></td>
         <td>非同期的</td>
-        <td>Asyncronized</td>
+        <td>asynchronous</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/hirunesuru.png"></td>
@@ -337,7 +337,7 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/sigotosiro.png"></td>
         <td><code>:sigotosiro:</code></td>
         <td>仕事しろ</td>
-        <td>"Work!"</td>
+        <td>"Do your Job!"</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/singi.png"></td>
