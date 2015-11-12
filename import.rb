@@ -4,7 +4,6 @@ require 'mechanize'
 BASE_DIR = File.expand_path(File.dirname(__FILE__))
 agent = Mechanize.new
 page = nil
-emoji_page_url = nil
 
 loop do
   team_name  = ask('Your slack team name(subdomain): ')

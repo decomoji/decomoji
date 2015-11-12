@@ -4,7 +4,20 @@ Custom emoji icon collection for slack reaction.
 
 ![screen shot](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/ss.png)
 
+# Instration
+
 You can add emoji in https://****.slack.com/customize/emoji (need permission).
+
+## Import by script
+
+```bash
+$ git clone git@github.com:oti/slack-reaction-decomoji.git
+$ cd slack-reaction-decomoji
+$ bundle install
+$ bundle exec ruby import.rb
+```
+
+# All Decomoji
 
 Below is jp-en compatible table include a bit joke. Patches welcome!
 
