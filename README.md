@@ -167,6 +167,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>"That's sexy a bit❤️️"</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/iie.png"></td>
+        <td><code>:iie:</code></td>
+        <td>いいえ</td>
+        <td>"No."</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/iikagennisiro.png"></td>
         <td><code>:iikagennisiro:</code></td>
         <td>いい加減にしろ</td>
