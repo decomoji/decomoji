@@ -43,7 +43,7 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/aruaru.png"></td>
         <td><code>:aruaru:</code></td>
-        <td>ありそう</td>
+        <td>あるある</td>
         <td>"It often happens."</td>
     </tr>
     <tr>
@@ -127,7 +127,7 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/guuzendazo.png"></td>
         <td><code>:guuzendazo:</code></td>
-        <td>偶然だぞ</td>
+        <td><a href="https://www.google.co.jp/search?q=%E7%A6%8F%E7%95%99%20%E5%81%B6%E7%84%B6%E3%81%A0%E3%81%9E&rct=j">偶然だぞ</a></td>
         <td>*"It's Gonna Happen."*</td>
     </tr>
     <tr>
@@ -176,7 +176,7 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kaere.png"></td>
         <td><code>:kaere:</code></td>
         <td>帰れ</td>
-        <td>"Go gack home!"</td>
+        <td>"Go back home!"</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kaerou.png"></td>
@@ -403,7 +403,7 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/superdry.png"></td>
         <td><code>:superdry:</code></td>
-        <td>極度乾燥(しなさい)</td>
+        <td><a href="https://www.google.co.jp/search?q=%E6%A5%B5%E5%BA%A6%E4%B9%BE%E7%87%A5&rct=j">極度乾燥(しなさい)</a></td>
         <td>Superdry</td>
     </tr>
     <tr>
