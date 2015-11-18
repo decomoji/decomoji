@@ -53,6 +53,10 @@ class Importer
   def upload_decomojis
     Dir.glob("#{BASE_DIR}/dist/*.png").each do |path|
       basename = File.basename(path, '.*')
+
+      # skip if already exists
+      next if page.body.include?(":#{basename}:")
+
       puts "importing #{basename}..."
 
       form = page.form_with(action: '/customize/emoji')
