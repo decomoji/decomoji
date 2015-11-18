@@ -131,6 +131,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>*"It's Gonna Happen."*</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/hai.png"></td>
+        <td><code>:hai:</code></td>
+        <td>はい</td>
+        <td>"Yes."</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/haraheri.png"></td>
         <td><code>:haraheri:</code></td>
         <td>はらへり</td>
