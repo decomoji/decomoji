@@ -209,6 +209,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>"I'm sad."</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kaneganai.png"></td>
+        <td><code>:kaneganai:</code></td>
+        <td>金がない</td>
+        <td>"No money."</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/komattazo.png"></td>
         <td><code>:komattazo:</code></td>
         <td>困ったぞ</td>
