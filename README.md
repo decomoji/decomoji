@@ -491,6 +491,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>"I can imagine it!" / "I totally agree with you!" / "Exactly!!!"</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/wasureyou.png"></td>
+        <td><code>:wasureyou:</code></td>
+        <td>忘れよう</td>
+        <td>"Take your mind off."</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/wwww.png"></td>
         <td><code>:wwww:</code></td>
         <td>wwww</td>
