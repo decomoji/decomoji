@@ -311,6 +311,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>"Get sleep."</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/nsfw.png"></td>
+        <td><code>:nsfw:</code></td>
+        <td>NSFW</td>
+        <td>Not ( suitable | safe ) for work</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/ohayou.png"></td>
         <td><code>:ohayou:</code></td>
         <td>おはよう</td>
