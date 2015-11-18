@@ -185,6 +185,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>"It doesn't make sense."</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/jouhourouei.png"></td>
+        <td><code>:jouhourouei:</code></td>
+        <td>情報漏洩</td>
+        <td>information leakage</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kaere.png"></td>
         <td><code>:kaere:</code></td>
         <td>帰れ</td>
