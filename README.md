@@ -43,7 +43,7 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/aruaru.png"></td>
         <td><code>:aruaru:</code></td>
-        <td>ありそう</td>
+        <td>あるある</td>
         <td>"It often happens."</td>
     </tr>
     <tr>
