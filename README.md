@@ -176,7 +176,7 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kaere.png"></td>
         <td><code>:kaere:</code></td>
         <td>帰れ</td>
-        <td>"Go gack home!"</td>
+        <td>"Go back home!"</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kaerou.png"></td>
