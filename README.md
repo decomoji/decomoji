@@ -125,6 +125,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>health and smile</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/goisuu.png"></td>
+        <td><code>:goisuu:</code></td>
+        <td>ゴイスー</td>
+        <td>amazing</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/gomente.png"></td>
         <td><code>:gomente:</code></td>
         <td>ごめんて</td>
