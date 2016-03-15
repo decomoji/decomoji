@@ -83,6 +83,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>"I know."</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/doihii.png"></td>
+        <td><code>:doihii:</code></td>
+        <td>ドイヒー</td>
+        <td>too bad</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/donmai.png"></td>
         <td><code>:donmai:</code></td>
         <td>ドンマイ</td>
