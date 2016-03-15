@@ -232,6 +232,13 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>完全理解</td>
         <td>100% understood</td>
     </tr>
+    <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kashikomariko.png"></td>
+        <td><code>:kashikomariko:</code></td>
+        <td>かしこまりこ</td>
+        <td>"Yes, sir!"</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/komattazo.png"></td>
         <td><code>:komattazo:</code></td>
         <td>困ったぞ</td>
