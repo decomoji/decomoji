@@ -593,6 +593,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>"I got it!" / "You got it!"</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/zannnenn.png"></td>
+        <td><code>:zannnenn:</code></td>
+        <td>残念</td>
+        <td>"I'm sorry" / unfortunate / disappointing</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/z-index.png"></td>
         <td><code>:z-index:</code></td>
         <td>z-index</td>
