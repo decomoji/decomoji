@@ -287,6 +287,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>"Look at the time!"</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/munenn.png"></td>
+        <td><code>:munenn:</code></td>
+        <td>無念</td>
+        <td>R.I.P</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/murisou.png"></td>
         <td><code>:murisou:</code></td>
         <td>無理そう</td>
