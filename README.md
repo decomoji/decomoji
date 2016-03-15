@@ -269,6 +269,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>"Got your back!"</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/mazusou.png"></td>
+        <td><code>:mazusou:</code></td>
+        <td>まずそう</td>
+        <td>"Looks so unappetizing" / looks like evil situation</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/meisaku.png"></td>
         <td><code>:meisaku:</code></td>
         <td>迷作</td>
