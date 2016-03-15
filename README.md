@@ -569,6 +569,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>"STOP!"</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/yannderu.png"></td>
+        <td><code>:yannderu:</code></td>
+        <td>やんでる</td>
+        <td>"It"s pathological..."</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/yattane.png"></td>
         <td><code>:yattane:</code></td>
         <td>やったね</td>
