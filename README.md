@@ -4,7 +4,7 @@ Custom emoji icon collection for slack reaction.
 
 ![screen shot](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/ss.png)
 
-# Instration
+# Installation
 
 You can add emoji in https://****.slack.com/customize/emoji (need permission).
 
