@@ -557,6 +557,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>"It's joke!"</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/usodesyo.png"></td>
+        <td><code>:usodesyo:</code></td>
+        <td>嘘でしょ</td>
+        <td>"You kidding."</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/wakaru.png"></td>
         <td><code>:wakaru:</code></td>
         <td>わかる</td>
