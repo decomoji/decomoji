@@ -497,6 +497,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>Superdry</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/syougaigenneki.png"></td>
+        <td><code>:syougaigenneki:</code></td>
+        <td>生涯現役</td>
+        <td>never retire</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/syussyasita.png"></td>
         <td><code>:syussyasita:</code></td>
         <td>出社した</td>
