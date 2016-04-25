@@ -515,6 +515,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>"I wanna eat."</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/taipoda.png"></td>
+        <td><code>:taipoda:</code></td>
+        <td>タイポだ</td>
+        <td>"typo."</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tanonda.png"></td>
         <td><code>:tanonda:</code></td>
         <td>たのんだ</td>
