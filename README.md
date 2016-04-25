@@ -233,6 +233,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>100% understood</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kawaii.png"></td>
+        <td><code>:kawaii:</code></td>
+        <td>かわいい</td>
+        <td>kawaii / cute / pretty</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kashikomariko.png"></td>
         <td><code>:kashikomariko:</code></td>
         <td>かしこまりこ</td>
