@@ -17,7 +17,9 @@ $ bundle install
 $ bundle exec ruby import.rb
 ```
 
-Opened browser, type your team(sub domain), ID, PASS. so start importing.
+In CLI, input your slack team subdomain, ID(email address), PASS.
+
+![screen shot of impoting by import.rb](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/ss_import.png)
 
 
 # All Decomoji
