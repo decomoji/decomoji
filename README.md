@@ -17,6 +17,9 @@ $ bundle install
 $ bundle exec ruby import.rb
 ```
 
+Opened browser, type your team(sub domain), ID, PASS. so start importing.
+
+
 # All Decomoji
 
 Below is jp-en compatible table include a bit joke. Patches welcome!
