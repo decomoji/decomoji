@@ -34,6 +34,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <th>Meaning</th>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/adoribu.png"></td>
+        <td><code>:adoribu:</code></td>
+        <td>アドリブ</td>
+        <td>Ad-lib</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/ahhai.png"></td>
         <td><code>:ahhai:</code></td>
         <td>あっハイ</td>
