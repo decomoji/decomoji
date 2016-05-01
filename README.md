@@ -567,6 +567,13 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>ちっさい</td>
         <td>"It's small."</td>
     </tr>
+    <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tonnmana.png"></td>
+        <td><code>:tonnmana:</code></td>
+        <td>トンマナ</td>
+        <td>Voice, Tone, and Style</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tsukareta.png"></td>
         <td><code>:tsukareta:</code></td>
         <td>疲れた</td>
