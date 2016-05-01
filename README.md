@@ -502,6 +502,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>"Okay."</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/sorede.png"></td>
+        <td><code>:sorede:</code></td>
+        <td>それで？</td>
+        <td>"So what?"</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/soudesu.png"></td>
         <td><code>:soudesu:</code></td>
         <td>そうです</td>
