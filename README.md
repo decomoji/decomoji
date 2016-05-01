@@ -34,10 +34,22 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <th>Meaning</th>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/adoribu.png"></td>
+        <td><code>:adoribu:</code></td>
+        <td>アドリブ</td>
+        <td>Ad-lib</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/ahhai.png"></td>
         <td><code>:ahhai:</code></td>
         <td>あっハイ</td>
         <td>"Oh, yah."</td>
+    </tr>
+    <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/arigato.png"></td>
+        <td><code>:arigato:</code></td>
+        <td>ありがと</td>
+        <td>"Thanks."</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/arisou.png"></td>
@@ -268,6 +280,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>"Gimme."</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kusoripu.png"></td>
+        <td><code>:kusoripu:</code></td>
+        <td>クソリプ</td>
+        <td>shit posting</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/majikayo.png"></td>
         <td><code>:majikayo:</code></td>
         <td>まじかよ</td>
@@ -382,6 +400,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>"Get up!"</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/okkii.png"></td>
+        <td><code>:okkii:</code></td>
+        <td>おっきい</td>
+        <td>"It's big."</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/oko.png"></td>
         <td><code>:oko:</code></td>
         <td>おこだよ</td>
@@ -478,6 +502,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>"Okay."</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/sorede.png"></td>
+        <td><code>:sorede:</code></td>
+        <td>それで？</td>
+        <td>"So what?"</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/soudesu.png"></td>
         <td><code>:soudesu:</code></td>
         <td>そうです</td>
@@ -530,6 +560,18 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td><code>:tanonda:</code></td>
         <td>たのんだ</td>
         <td>"You do."</td>
+    </tr>
+    <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tissai.png"></td>
+        <td><code>:tissai:</code></td>
+        <td>ちっさい</td>
+        <td>"It's small."</td>
+    </tr>
+    <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tonnmana.png"></td>
+        <td><code>:tonnmana:</code></td>
+        <td>トンマナ</td>
+        <td>Voice, Tone, and Style</td>
     </tr>
     <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tsukareta.png"></td>
@@ -641,6 +683,7 @@ CC BY-NC
 
 ## Icon Additional History
 
+- 2016-05-01<img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/adoribu.png width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/arigato.png width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kusoripu.png width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/okkii.png width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/sorede.png width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tissai.png width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tonnmana.png width="22">
 - 2016-04-26 <img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kawaii.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/syougaigenneki.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/taipoda.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/usodesyo.png" width="22">
 - 2016-03-15 <img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/doihii.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/goisuu.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/umasou.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/yannderu.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/zannnenn.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/seikai.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/muteki.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/munenn.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kashikomariko.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/mazusou.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kannzennrikai.png" width="22">
 - 2015-10-27 <img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/aruaru.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/haraheri.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/hidoukiteki.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/hirunesuru.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/nakunayo.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/ositsukeryoku.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/sigotosiro.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tabetai.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/yossya.png" width="22">
