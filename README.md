@@ -562,6 +562,11 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>"You do."</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tissai.png"></td>
+        <td><code>:tissai:</code></td>
+        <td>ちっさい</td>
+        <td>"It's small."</td>
+    </tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tsukareta.png"></td>
         <td><code>:tsukareta:</code></td>
         <td>疲れた</td>
