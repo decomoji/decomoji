@@ -400,6 +400,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>"Get up!"</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/okkii.png"></td>
+        <td><code>:okkii:</code></td>
+        <td>おっきい</td>
+        <td>"It's big."</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/oko.png"></td>
         <td><code>:oko:</code></td>
         <td>おこだよ</td>
