@@ -280,6 +280,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>"Gimme."</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kusoripu.png"></td>
+        <td><code>:kusoripu:</code></td>
+        <td>クソリプ</td>
+        <td>shit posting</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/majikayo.png"></td>
         <td><code>:majikayo:</code></td>
         <td>まじかよ</td>
