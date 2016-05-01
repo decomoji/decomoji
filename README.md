@@ -46,6 +46,12 @@ Below is jp-en compatible table include a bit joke. Patches welcome!
         <td>"Oh, yah."</td>
     </tr>
     <tr>
+        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/arigato.png"></td>
+        <td><code>:arigato:</code></td>
+        <td>ありがと</td>
+        <td>"Thanks."</td>
+    </tr>
+    <tr>
         <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/arisou.png"></td>
         <td><code>:arisou:</code></td>
         <td>ありそう</td>
