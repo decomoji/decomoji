@@ -168,7 +168,7 @@ In CLI, input your slack team name, ID(email address) and PASS.
 ## LICENSE
 
 [![Creative Commons License](https://i.creativecommons.org/l/by-nc/3.0/88x31.png "CC BY-NC 3.0")](https://creativecommons.org/licenses/by-nc/3.0/deed.en)  
-This project licensed under [CC BY-NC 3.0](http://creativecommons.org/licenses/by-nc/3.0/deed.en) ([Japanese](https://creativecommons.org/licenses/by-nc/3.0/deed.ja))
+This product is licensed under [CC BY-NC 3.0](http://creativecommons.org/licenses/by-nc/3.0/deed.en) ([Japanese](https://creativecommons.org/licenses/by-nc/3.0/deed.ja))
 
 ## Special Thanks
 
