@@ -1,9 +1,9 @@
 # Decomoji List
 
-jp-en compatible table include a bit joke. Patches welcome!
+jp-en compatible table includes some jokes. Patches welcome!
 
 |Decomoji|Default Code|Japanese|English|
-|:---:|:---|:---|:---|
+|:---:|:---:|:---:|:---:|
 |![adoribu](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/adoribu.png)|`:adoribu:`|アドリブ|Ad-lib|
 |![ahhai](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/ahhai.png)|`:ahhai:`|あっハイ|"Oh, yah."|
 |![arigato](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/arigato.png)|`:arigato:`|ありがと|"Thanks."|
