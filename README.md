@@ -1,14 +1,34 @@
-# Slack Reaction Decomoji
+# Slack Reaction Decomoji v2
 
 Custom emoji icon collection for slack reaction.
 
 ![screen shot](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/ss.png)
 
-# Installation
+## Attention!
 
-You can add emoji in https://****.slack.com/customize/emoji (need permission).
+**Breaking changes in v2.**
 
-## Import by script
+### 1. JUMBOMOJI ready
+
+Decomoji are size-up to 64*64px.
+
+If you update v1 to v2, need remove old decomoji...
+
+### 2. Unification of filename
+
+Fix spelling inconsistency. Decomoji v2 use [roman alphabet input method(JIS X4063:2000)](https://ja.wikipedia.org/wiki/%E3%83%AD%E3%83%BC%E3%83%9E%E5%AD%97%E5%85%A5%E5%8A%9B#.E5.BF.85.E3.81.9A.E5.AE.9F.E8.A3.85.E3.81.97.E3.81.AA.E3.81.91.E3.82.8C.E3.81.B0.E3.81.84.E3.81.91.E3.81.AA.E3.81.84.E5.85.A5.E5.8A.9B.E6.96.B9.E5.BC.8F).
+
+## Installation
+
+**Need permission.**
+
+### by manual
+
+You can add decomoji in browser. access to [https://{{your-team-name}}.slack.com/customize/emoji](https://{{your-team-name}}.slack.com/customize/emoji).
+
+### by ruby script
+
+Need ruby, bundler.
 
 ```bash
 $ git clone git@github.com:oti/slack-reaction-decomoji.git
@@ -17,674 +37,130 @@ $ bundle install
 $ bundle exec ruby import.rb
 ```
 
-In CLI, input your slack team subdomain, ID(email address), PASS.
+In CLI, input your slack team name, ID(email address) and PASS.
 
 ![screen shot of impoting by import.rb](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/ss_import.png)
 
+## All Decomoji List
 
-# All Decomoji
+![adoribu](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/adoribu.png)
+![ahhai](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/ahhai.png)
+![arigato](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/arigato.png)
+![arisou](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/arisou.png)
+![aruaru](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/aruaru.png)
+![atodeiku](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/atodeiku.png)
+![bimi](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/bimi.png)
+![choroi](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/choroi.png)
+![dasaku](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/dasaku.png)
+![dekasita](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/dekasita.png)
+![desuyone](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/desuyone.png)
+![doihii](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/doihii.png)
+![donmai](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/donmai.png)
+![dousite](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/dousite.png)
+![douyatteyatteruno](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/douyatteyatteruno.png)
+![erai](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/erai.png)
+![futoruzo](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/futoruzo.png)
+![genkiegao](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/genkiegao.png)
+![goisuu](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/goisuu.png)
+![gomente](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/gomente.png)
+![guuzendazo](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/guuzendazo.png)
+![hai](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/hai.png)
+![haraheri](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/haraheri.png)
+![hentaikayo](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/hentaikayo.png)
+![hidoukiteki](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/hidoukiteki.png)
+![hirunesuru](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/hirunesuru.png)
+![hiwai](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/hiwai.png)
+![iie](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/iie.png)
+![iikagennisiro](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/iikagennisiro.png)
+![imifumei](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/imifumei.png)
+![jouhourouei](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/jouhourouei.png)
+![kaere](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kaere.png)
+![kaerou](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kaerou.png)
+![kanasii](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kanasii.png)
+![kaneganai](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kaneganai.png)
+![kannzennrikai](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kannzennrikai.png)
+![kashikomariko](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kashikomariko.png)
+![kawaii](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kawaii.png)
+![komattazo](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/komattazo.png)
+![kousokuzensin](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kousokuzensin.png)
+![kudasai](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kudasai.png)
+![kusoripu](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kusoripu.png)
+![majikayo](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/majikayo.png)
+![makasero](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/makasero.png)
+![mazusou](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/mazusou.png)
+![meisaku](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/meisaku.png)
+![moukon](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/moukon.png)
+![munenn](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/munenn.png)
+![murisou](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/murisou.png)
+![muteki](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/muteki.png)
+![nakunayo](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/nakunayo.png)
+![nandato](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/nandato.png)
+![nanikore](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/nanikore.png)
+![nannnano](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/nannnano.png)
+![naruhodo](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/naruhodo.png)
+![nasasou](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/nasasou.png)
+![nazodesune](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/nazodesune.png)
+![nero](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/nero.png)
+![nsfw](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/nsfw.png)
+![ohayou](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/ohayou.png)
+![okiro](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/okiro.png)
+![okkii](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/okkii.png)
+![oko](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/oko.png)
+![oppai](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/oppai.png)
+![ositsukeryoku](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/ositsukeryoku.png)
+![otukaresama](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/otukaresama.png)
+![oyaoya](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/oyaoya.png)
+![oyasumi](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/oyasumi.png)
+![ra-men](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/ra-men.png)
+![ryosaku](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/ryosaku.png)
+![sakiniike](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/sakiniike.png)
+![seikai](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/seikai.png)
+![sigotosiro](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/sigotosiro.png)
+![singi](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/singi.png)
+![sinkasiro](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/sinkasiro.png)
+![sinsidana](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/sinsidana.png)
+![sirangana](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/sirangana.png)
+![sokka](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/sokka.png)
+![sorede](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/sorede.png)
+![soudesu](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/soudesu.png)
+![stackingcontext](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/stackingcontext.png)
+![sugosou](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/sugosou.png)
+![superdry](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/superdry.png)
+![syougaigenneki](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/syougaigenneki.png)
+![syussyasita](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/syussyasita.png)
+![tabetai](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tabetai.png)
+![taipoda](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/taipoda.png)
+![tanonda](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tanonda.png)
+![tissai](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tissai.png)
+![tonnmana](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tonnmana.png)
+![tsukareta](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tsukareta.png)
+![tsurai](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tsurai.png)
+![ukeru](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/ukeru.png)
+![umasou](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/umasou.png)
+![usodesu](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/usodesu.png)
+![usodesyo](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/usodesyo.png)
+![wakaru](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/wakaru.png)
+![wasureyou](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/wasureyou.png)
+![wwww](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/wwww.png)
+![yabasou](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/yabasou.png)
+![yamero](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/yamero.png)
+![yannderu](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/yannderu.png)
+![yattane](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/yattane.png)
+![yosasou](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/yosasou.png)
+![yossya](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/yossya.png)
+![z-index](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/z-index.png)
+![zannnenn](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/zannnenn.png)
 
-Below is jp-en compatible table include a bit joke. Patches welcome!
-
-<table>
-    <tr>
-        <th>View</th>
-        <th>Code Example</th>
-        <th>Japanese</th>
-        <th>Meaning</th>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/adoribu.png"></td>
-        <td><code>:adoribu:</code></td>
-        <td>アドリブ</td>
-        <td>Ad-lib</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/ahhai.png"></td>
-        <td><code>:ahhai:</code></td>
-        <td>あっハイ</td>
-        <td>"Oh, yah."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/arigato.png"></td>
-        <td><code>:arigato:</code></td>
-        <td>ありがと</td>
-        <td>"Thanks."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/arisou.png"></td>
-        <td><code>:arisou:</code></td>
-        <td>ありそう</td>
-        <td>"It could be."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/aruaru.png"></td>
-        <td><code>:aruaru:</code></td>
-        <td>あるある</td>
-        <td>"It often happens."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/atodeiku.png"></td>
-        <td><code>:atodeiku:</code></td>
-        <td>後で行く</td>
-        <td>"I'll go if I can."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/bimi.png"></td>
-        <td><code>:bimi:</code></td>
-        <td>美味</td>
-        <td>"Yummy!"</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/choroi.png"></td>
-        <td><code>:choroi:</code></td>
-        <td>ちょろい</td>
-        <td>"Soooooo easy!"</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/dasaku.png"></td>
-        <td><code>:dasaku:</code></td>
-        <td>駄作</td>
-        <td>worthless stuff</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/dekasita.png"></td>
-        <td><code>:dekasita:</code></td>
-        <td>でかした</td>
-        <td>good job</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/desuyone.png"></td>
-        <td><code>:desuyone:</code></td>
-        <td>ですよね</td>
-        <td>"I know."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/doihii.png"></td>
-        <td><code>:doihii:</code></td>
-        <td>ドイヒー</td>
-        <td>too bad</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/donmai.png"></td>
-        <td><code>:donmai:</code></td>
-        <td>ドンマイ</td>
-        <td>"Never mind."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/dousite.png"></td>
-        <td><code>:dousite:</code></td>
-        <td>どうして</td>
-        <td>"Why?" / "How could it be?"</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/douyatteyatteruno.png"></td>
-        <td><code>:douyatteyatteruno:</code></td>
-        <td>どうやってやってるの</td>
-        <td>"How did you do that?" / "How does it work?"</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/erai.png"></td>
-        <td><code>:erai:</code></td>
-        <td>偉い</td>
-        <td>"Great!"</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/futoruzo.png"></td>
-        <td><code>:futoruzo:</code></td>
-        <td>太るぞ！</td>
-        <td>"You get grow fat!"</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/genkiegao.png"></td>
-        <td><code>:genkiegao:</code></td>
-        <td>元気笑顔</td>
-        <td>health and smile</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/goisuu.png"></td>
-        <td><code>:goisuu:</code></td>
-        <td>ゴイスー</td>
-        <td>amazing</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/gomente.png"></td>
-        <td><code>:gomente:</code></td>
-        <td>ごめんて</td>
-        <td>"SORRY!"</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/guuzendazo.png"></td>
-        <td><code>:guuzendazo:</code></td>
-        <td><a href="https://www.google.co.jp/search?q=%E7%A6%8F%E7%95%99%20%E5%81%B6%E7%84%B6%E3%81%A0%E3%81%9E&rct=j">偶然だぞ</a></td>
-        <td>*"It's Gonna Happen."*</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/hai.png"></td>
-        <td><code>:hai:</code></td>
-        <td>はい</td>
-        <td>"Yes."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/haraheri.png"></td>
-        <td><code>:haraheri:</code></td>
-        <td>はらへり</td>
-        <td>"I'm starving."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/hentaikayo.png"></td>
-        <td><code>:hentaikayo:</code></td>
-        <td>変態かよ</td>
-        <td>"Crazy!"</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/hidoukiteki.png"></td>
-        <td><code>:hidoukiteki:</code></td>
-        <td>非同期的</td>
-        <td>asynchronous</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/hirunesuru.png"></td>
-        <td><code>:hirunesuru:</code></td>
-        <td>昼寝する</td>
-        <td>"Take a nap."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/hiwai.png"></td>
-        <td><code>:hiwai:</code></td>
-        <td>ひわい❤️</td>
-        <td>"That's sexy a bit❤️️"</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/iie.png"></td>
-        <td><code>:iie:</code></td>
-        <td>いいえ</td>
-        <td>"No."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/iikagennisiro.png"></td>
-        <td><code>:iikagennisiro:</code></td>
-        <td>いい加減にしろ</td>
-        <td>"STOP!"</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/imifumei.png"></td>
-        <td><code>:imifumei:</code></td>
-        <td>意味不明</td>
-        <td>"It doesn't make sense."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/jouhourouei.png"></td>
-        <td><code>:jouhourouei:</code></td>
-        <td>情報漏洩</td>
-        <td>information leakage</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kaere.png"></td>
-        <td><code>:kaere:</code></td>
-        <td>帰れ</td>
-        <td>"Go back home!"</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kaerou.png"></td>
-        <td><code>:kaerou:</code></td>
-        <td>帰ろう。</td>
-        <td>"Let's get back home."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kanasii.png"></td>
-        <td><code>:kanasii:</code></td>
-        <td>悲しい。</td>
-        <td>"I'm sad."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kaneganai.png"></td>
-        <td><code>:kaneganai:</code></td>
-        <td>金がない</td>
-        <td>"No money."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kannzennrikai.png"></td>
-        <td><code>:kannzennrikai:</code></td>
-        <td>完全理解</td>
-        <td>100% understood</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kawaii.png"></td>
-        <td><code>:kawaii:</code></td>
-        <td>かわいい</td>
-        <td>kawaii / cute / pretty</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kashikomariko.png"></td>
-        <td><code>:kashikomariko:</code></td>
-        <td>かしこまりこ</td>
-        <td>"Yes, sir!"</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/komattazo.png"></td>
-        <td><code>:komattazo:</code></td>
-        <td>困ったぞ</td>
-        <td>"I'm in trouble..."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kousokuzensin.png"></td>
-        <td><code>:kousokuzensin:</code></td>
-        <td>高速前進</td>
-        <td>fast-forward merge</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kudasai.png"></td>
-        <td><code>:kudasai:</code></td>
-        <td>ください</td>
-        <td>"Gimme."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kusoripu.png"></td>
-        <td><code>:kusoripu:</code></td>
-        <td>クソリプ</td>
-        <td>shit posting</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/majikayo.png"></td>
-        <td><code>:majikayo:</code></td>
-        <td>まじかよ</td>
-        <td>WTF</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/makasero.png"></td>
-        <td><code>:makasero:</code></td>
-        <td>まかせろ</td>
-        <td>"Got your back!"</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/mazusou.png"></td>
-        <td><code>:mazusou:</code></td>
-        <td>まずそう</td>
-        <td>"Looks so unappetizing" / looks like evil situation</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/meisaku.png"></td>
-        <td><code>:meisaku:</code></td>
-        <td>迷作</td>
-        <td>"Hahaha."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/moukon.png"></td>
-        <td><code>:moukon:</code></td>
-        <td>毛根タイム（もうこんな時間）</td>
-        <td>"Look at the time!"</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/munenn.png"></td>
-        <td><code>:munenn:</code></td>
-        <td>無念</td>
-        <td>R.I.P</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/murisou.png"></td>
-        <td><code>:murisou:</code></td>
-        <td>無理そう</td>
-        <td>impossible</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/muteki.png"></td>
-        <td><code>:muteki:</code></td>
-        <td>無敵</td>
-        <td>super mario</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/nakunayo.png"></td>
-        <td><code>:nakunayo:</code></td>
-        <td>泣くなよ</td>
-        <td>"Don't cry."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/nandato.png"></td>
-        <td><code>:nandato:</code></td>
-        <td>なんだと</td>
-        <td>"WHAT DID YOU SAY?"</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/nanikore.png"></td>
-        <td><code>:nanikore:</code></td>
-        <td>ナニコレ</td>
-        <td>"What is it?"</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/nannnano.png"></td>
-        <td><code>:nannnano:</code></td>
-        <td>なんなの</td>
-        <td>"It is ambiguous."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/naruhodo.png"></td>
-        <td><code>:naruhodo:</code></td>
-        <td>なるほど</td>
-        <td>"It makes sense."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/nasasou.png"></td>
-        <td><code>:nasasou:</code></td>
-        <td>なさそう</td>
-        <td>"It couldn't be."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/nazodesune.png"></td>
-        <td><code>:nazodesune:</code></td>
-        <td>謎ですね</td>
-        <td>"It's mystery."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/nero.png"></td>
-        <td><code>:nero:</code></td>
-        <td>寝ろ</td>
-        <td>"Get sleep."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/nsfw.png"></td>
-        <td><code>:nsfw:</code></td>
-        <td>NSFW</td>
-        <td>Not ( suitable | safe ) for work</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/ohayou.png"></td>
-        <td><code>:ohayou:</code></td>
-        <td>おはよう</td>
-        <td>"Good morning."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/okiro.png"></td>
-        <td><code>:okiro:</code></td>
-        <td>起きろ！</td>
-        <td>"Get up!"</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/okkii.png"></td>
-        <td><code>:okkii:</code></td>
-        <td>おっきい</td>
-        <td>"It's big."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/oko.png"></td>
-        <td><code>:oko:</code></td>
-        <td>おこだよ</td>
-        <td>"That's annoying."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/oppai.png"></td>
-        <td><code>:oppai:</code></td>
-        <td>おっぱい</td>
-        <td>boobs</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/ositsukeryoku.png"></td>
-        <td><code>:ositsukeryoku:</code></td>
-        <td>押付力</td>
-        <td>git push -f / force push</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/otukaresama.png"></td>
-        <td><code>:otukaresama:</code></td>
-        <td>お疲れ様</td>
-        <td>"Good work!"</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/oyaoya.png"></td>
-        <td><code>:oyaoya:</code></td>
-        <td>おやおや</td>
-        <td>"Well, well, well."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/oyasumi.png"></td>
-        <td><code>:oyasumi:</code></td>
-        <td>おやすみ</td>
-        <td>"Good night."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/ra-men.png"></td>
-        <td><code>:ra-men:</code></td>
-        <td>ラーメン</td>
-        <td>Ramen 🍜</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/ryosaku.png"></td>
-        <td><code>:ryosaku:</code></td>
-        <td>良作</td>
-        <td>masterpiece</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/sakiniike.png"></td>
-        <td><code>:sakiniike:</code></td>
-        <td>先に行け</td>
-        <td>"Don't worry, go ahead."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/seikai.png"></td>
-        <td><code>:seikai:</code></td>
-        <td>正解</td>
-        <td>"That's right"</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/sigotosiro.png"></td>
-        <td><code>:sigotosiro:</code></td>
-        <td>仕事しろ</td>
-        <td>"Do your Job!"</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/singi.png"></td>
-        <td><code>:singi:</code></td>
-        <td>審議</td>
-        <td>under deliveration</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/sinkasiro.png"></td>
-        <td><code>:sinkasiro:</code></td>
-        <td>進化しろ</td>
-        <td>"Get evolved."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/sinsidana.png"></td>
-        <td><code>:sinsidana:</code></td>
-        <td>紳士だな</td>
-        <td>"You're a gentleman."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/sirangana.png"></td>
-        <td><code>:sirangana:</code></td>
-        <td>知らんがな</td>
-        <td>"So what?"</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/sokka.png"></td>
-        <td><code>:sokka:</code></td>
-        <td>そっか。</td>
-        <td>"Okay."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/sorede.png"></td>
-        <td><code>:sorede:</code></td>
-        <td>それで？</td>
-        <td>"So what?"</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/soudesu.png"></td>
-        <td><code>:soudesu:</code></td>
-        <td>そうです</td>
-        <td>"Exactly."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/stackingcontext.png"></td>
-        <td><code>:stackingcontext:</code></td>
-        <td>スタック文脈</td>
-        <td>"It's a bug of stacking context??!?!?"</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/sugosou.png"></td>
-        <td><code>:sugosou:</code></td>
-        <td>すごそう</td>
-        <td>"Looks great."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/superdry.png"></td>
-        <td><code>:superdry:</code></td>
-        <td><a href="https://www.google.co.jp/search?q=%E6%A5%B5%E5%BA%A6%E4%B9%BE%E7%87%A5&rct=j">極度乾燥(しなさい)</a></td>
-        <td>Superdry</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/syougaigenneki.png"></td>
-        <td><code>:syougaigenneki:</code></td>
-        <td>生涯現役</td>
-        <td>never retire</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/syussyasita.png"></td>
-        <td><code>:syussyasita:</code></td>
-        <td>出社した</td>
-        <td>"I got to my office."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tabetai.png"></td>
-        <td><code>:tabetai:</code></td>
-        <td>食べたい</td>
-        <td>"I wanna eat."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/taipoda.png"></td>
-        <td><code>:taipoda:</code></td>
-        <td>タイポだ</td>
-        <td>"typo."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tanonda.png"></td>
-        <td><code>:tanonda:</code></td>
-        <td>たのんだ</td>
-        <td>"You do."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tissai.png"></td>
-        <td><code>:tissai:</code></td>
-        <td>ちっさい</td>
-        <td>"It's small."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tonnmana.png"></td>
-        <td><code>:tonnmana:</code></td>
-        <td>トンマナ</td>
-        <td>Voice, Tone, and Style</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tsukareta.png"></td>
-        <td><code>:tsukareta:</code></td>
-        <td>疲れた</td>
-        <td>"I'm tired."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tsurai.png"></td>
-        <td><code>:tsurai:</code></td>
-        <td>つらい</td>
-        <td>"Tough."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/ukeru.png"></td>
-        <td><code>:ukeru:</code></td>
-        <td>ウケる。</td>
-        <td>"Hahaha."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/umasou.png"></td>
-        <td><code>:umasou:</code></td>
-        <td>うまそう</td>
-        <td>looks delicious / looks good at ~</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/usodesu.png"></td>
-        <td><code>:usodesu:</code></td>
-        <td>ウソです</td>
-        <td>"It's joke!"</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/usodesyo.png"></td>
-        <td><code>:usodesyo:</code></td>
-        <td>嘘でしょ</td>
-        <td>"You kidding."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/wakaru.png"></td>
-        <td><code>:wakaru:</code></td>
-        <td>わかる</td>
-        <td>"I can imagine it!" / "I totally agree with you!" / "Exactly!!!"</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/wasureyou.png"></td>
-        <td><code>:wasureyou:</code></td>
-        <td>忘れよう</td>
-        <td>"Take your mind off."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/wwww.png"></td>
-        <td><code>:wwww:</code></td>
-        <td>wwww</td>
-        <td>LOL</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/yabasou.png"></td>
-        <td><code>:yabasou:</code></td>
-        <td>やばそう</td>
-        <td>"Seems dangerous."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/yamero.png"></td>
-        <td><code>:yamero:</code></td>
-        <td>やめろ</td>
-        <td>"STOP!"</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/yannderu.png"></td>
-        <td><code>:yannderu:</code></td>
-        <td>やんでる</td>
-        <td>"It"s pathological..."</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/yattane.png"></td>
-        <td><code>:yattane:</code></td>
-        <td>やったね</td>
-        <td>"You got it!"</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/yosasou.png"></td>
-        <td><code>:yosasou:</code></td>
-        <td>良さそう</td>
-        <td>LGTM</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/yossya.png"></td>
-        <td><code>:yossya:</code></td>
-        <td>よっしゃ</td>
-        <td>"I got it!" / "You got it!"</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/zannnenn.png"></td>
-        <td><code>:zannnenn:</code></td>
-        <td>残念</td>
-        <td>"I'm sorry" / unfortunate / disappointing</td>
-    </tr>
-    <tr>
-        <td><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/z-index.png"></td>
-        <td><code>:z-index:</code></td>
-        <td>z-index</td>
-        <td>"Don't over-increment to z-index value!!!"</td>
-    </tr>
-</table>
+[meaning table is here.](decomoji-list.md)
 
 ## LICENSE
 
-CC BY-NC
+[![Creative Commons License](https://i.creativecommons.org/l/by-nc/3.0/88x31.png "CC BY-NC 3.0")](http://creativecommons.org/licenses/by-nc/3.0/deed.en)  
+This project licensed under [CC BY-NC 3.0](http://creativecommons.org/licenses/by-nc/3.0/deed.en) ([Japanese](https://creativecommons.org/licenses/by-nc/3.0/deed.ja))
 
-## Icon Additional History
+## Special Thanks
 
-- 2016-05-01 <img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/adoribu.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/arigato.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kusoripu.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/okkii.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/sorede.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tissai.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tonnmana.png" width="22">
-- 2016-04-26 <img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kawaii.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/syougaigenneki.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/taipoda.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/usodesyo.png" width="22">
-- 2016-03-15 <img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/doihii.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/goisuu.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/umasou.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/yannderu.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/zannnenn.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/seikai.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/muteki.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/munenn.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kashikomariko.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/mazusou.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kannzennrikai.png" width="22">
-- 2015-10-27 <img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/aruaru.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/haraheri.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/hidoukiteki.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/hirunesuru.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/nakunayo.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/ositsukeryoku.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/sigotosiro.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tabetai.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/yossya.png" width="22">
-- 2015-11-19 <img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/hai.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/iie.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/jouhourouei.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kaneganai.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/moukon.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/nsfw.png" width="22"><img src="https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/wasureyou.png" width="22">
+[@geckotang](https://github.com/geckotang/)  
+[@ginpei](https://github.com/ginpei/)  
+[@watilde](https://github.com/watilde/)  
+[@fukayatsu](https://github.com/fukayatsu/)
