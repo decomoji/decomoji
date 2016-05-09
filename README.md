@@ -8,13 +8,13 @@ Custom emoji icon collection for slack reaction.
 
 1. text image
 2. 4 letters(almost)
-3. easy reading with warichu(inlune cutting note style)
+3. easy reading with warichu(inline cutting note style)
 4. colorful
 5. compatible with JUMBOMOJI
 6. compatible with Retina display
 7. [Including jp-en](decomoji-list.md)
 
-Decomoji made up of text image. You can doing fast communication with high-context!
+Decomoji made up of the text image. You can do fast communication with high-context!
 
 ## Breaking changes in v2
 
@@ -24,7 +24,7 @@ Decomoji made up of text image. You can doing fast communication with high-conte
 
 Decomoji are size-up to 64*64px.
 
-If you using v1(no-mark version) and update to v2, need remove old decomojies in browser...
+If you using v1(no-mark version) and update to v2, need to remove old decomojies at setting page.
 
 ### 2. Unification of filename
 
@@ -148,9 +148,9 @@ Fix spelling inconsistency. Decomoji v2 use [roman alphabet input method(JIS X40
 
 ### by manual
 
-Add decomoji in browser. Access to [https://{{your-team-name}}.slack.com/customize/emoji](https://{{your-team-name}}.slack.com/customize/emoji).
+Add decomoji in a browser. Access to [https://{{your-team-name}}.slack.com/customize/emoji](https://{{your-team-name}}.slack.com/customize/emoji).
 
-### by ruby script
+### by script
 
 Need ruby, bundler.
 
@@ -163,11 +163,11 @@ $ bundle exec ruby import.rb
 
 In CLI, input your slack team name, ID(email address) and PASS.
 
-![screen shot of impoting by import.rb](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/ss_import.png)
+![screen shot of script importing](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/ss_import.png)
 
 ## LICENSE
 
-[![Creative Commons License](https://i.creativecommons.org/l/by-nc/3.0/88x31.png "CC BY-NC 3.0")](http://creativecommons.org/licenses/by-nc/3.0/deed.en)  
+[![Creative Commons License](https://i.creativecommons.org/l/by-nc/3.0/88x31.png "CC BY-NC 3.0")](https://creativecommons.org/licenses/by-nc/3.0/deed.en)  
 This project licensed under [CC BY-NC 3.0](http://creativecommons.org/licenses/by-nc/3.0/deed.en) ([Japanese](https://creativecommons.org/licenses/by-nc/3.0/deed.ja))
 
 ## Special Thanks
