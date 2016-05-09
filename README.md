@@ -4,44 +4,35 @@ Custom emoji icon collection for slack reaction.
 
 ![screen shot](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/ss.png)
 
-## Attention!
+## Feature
 
-**Breaking changes in v2.**
+1. text image
+2. 4 letters(almost)
+3. easy reading with warichu(inlune cutting note style)
+4. colorful
+5. compatible with JUMBOMOJI
+6. compatible with Retina display
+7. [Including jp-en](decomoji-list.md)
+
+Decomoji made up of text image. You can doing fast communication with high-context!
+
+## Breaking changes in v2
+
+
 
 ### 1. JUMBOMOJI ready
 
 Decomoji are size-up to 64*64px.
 
-If you update v1 to v2, need remove old decomoji...
+If you using v1(no-mark version) and update to v2, need remove old decomojies in browser...
 
 ### 2. Unification of filename
 
 Fix spelling inconsistency. Decomoji v2 use [roman alphabet input method(JIS X4063:2000)](https://ja.wikipedia.org/wiki/%E3%83%AD%E3%83%BC%E3%83%9E%E5%AD%97%E5%85%A5%E5%8A%9B#.E5.BF.85.E3.81.9A.E5.AE.9F.E8.A3.85.E3.81.97.E3.81.AA.E3.81.91.E3.82.8C.E3.81.B0.E3.81.84.E3.81.91.E3.81.AA.E3.81.84.E5.85.A5.E5.8A.9B.E6.96.B9.E5.BC.8F).
 
-## Installation
-
-**Need permission.**
-
-### by manual
-
-You can add decomoji in browser. access to [https://{{your-team-name}}.slack.com/customize/emoji](https://{{your-team-name}}.slack.com/customize/emoji).
-
-### by ruby script
-
-Need ruby, bundler.
-
-```bash
-$ git clone git@github.com:oti/slack-reaction-decomoji.git
-$ cd slack-reaction-decomoji
-$ bundle install
-$ bundle exec ruby import.rb
-```
-
-In CLI, input your slack team name, ID(email address) and PASS.
-
-![screen shot of impoting by import.rb](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/ss_import.png)
-
 ## All Decomoji List
+
+[meaning table is here.](decomoji-list.md)
 
 ![adoribu](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/adoribu.png)
 ![ahhai](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/ahhai.png)
@@ -151,7 +142,28 @@ In CLI, input your slack team name, ID(email address) and PASS.
 ![z-index](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/z-index.png)
 ![zannnenn](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/zannnenn.png)
 
-[meaning table is here.](decomoji-list.md)
+## Installation
+
+**Need permission.**
+
+### by manual
+
+Add decomoji in browser. Access to [https://{{your-team-name}}.slack.com/customize/emoji](https://{{your-team-name}}.slack.com/customize/emoji).
+
+### by ruby script
+
+Need ruby, bundler.
+
+```bash
+$ git clone git@github.com:oti/slack-reaction-decomoji.git
+$ cd slack-reaction-decomoji
+$ bundle install
+$ bundle exec ruby import.rb
+```
+
+In CLI, input your slack team name, ID(email address) and PASS.
+
+![screen shot of impoting by import.rb](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/ss_import.png)
 
 ## LICENSE
 
