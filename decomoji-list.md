@@ -20,10 +20,10 @@ jp-en compatible table includes some jokes. Patches welcome!
 |![douyatteyatteruno](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/douyatteyatteruno.png)|`:douyatteyatteruno:`|どうやってやってるの|"How did you do that?" / "How does it work?"|
 |![erai](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/erai.png)|`:erai:`|偉い|"Great!"|
 |![fixedyamero](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/fixedyamero.png)|`:fixedyamero:`|fixedやめろ|"DON'T USE `position: fixed`"|
-|![genkiegao](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/genkiegao.png)|`:genkiegao:`|元気笑顔|health and smile|
+|![gennkiegao](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/gennkiegao.png)|`:gennkiegao:`|元気笑顔|health and smile|
 |![goisuu](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/goisuu.png)|`:goisuu:`|ゴイスー|amazing|
 |![gomennte](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/gomennte.png)|`:gomennte:`|ごめんて|"SORRY!"|
-|![guuzendazno](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/guuzendnazo.png)|`:guuzenndazo:`|[偶然だぞ](https://www.google.co.jp/search?q=福留%20偶然だぞ)|*"It's Gonna Happen."*|
+|![guuzenndazo](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/guuzenndazo.png)|`:guuzenndazo:`|[偶然だぞ](https://www.google.co.jp/search?q=福留%20偶然だぞ)|*"It's Gonna Happen."*|
 |![hai](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/hai.png)|`:hai:`|はい|"Yes."|
 |![haraheri](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/haraheri.png)|`:haraheri:`|はらへり|"I'm starving."|
 |![henntaikayo](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/henntaikayo.png)|`:henntaikayo:`|変態かよ|"Crazy!"|
