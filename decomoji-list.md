@@ -62,7 +62,7 @@ jp-en compatible table includes some jokes. Patches welcome!
 |![nasasou](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/nasasou.png)|`:nasasou:`|なさそう|"It couldn't be."|
 |![nazodesune](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/nazodesune.png)|`:nazodesune:`|謎ですね|"It's mystery."|
 |![nero](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/nero.png)|`:nero:`|寝ろ|"Get sleep."|
-|![nsfw](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/nsfw.png)|`:nsfw:`|NSFW|Not ( suitable | safe ) for work|
+|![nsfw](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/nsfw.png)|`:nsfw:`|NSFW|Not ( suitable \| safe ) for work|
 |![ohayou](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/ohayou.png)|`:ohayou:`|おはよう|"Good morning."|
 |![okiro](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/okiro.png)|`:okiro:`|起きろ！|"Get up!"|
 |![okkii](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/okkii.png)|`:okkii:`|おっきい|"It's big."|
