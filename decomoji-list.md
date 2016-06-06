@@ -40,8 +40,9 @@ jp-en compatible table includes some jokes. Patches welcome!
 |![kanasii](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kanasii.png)|`:kanasii:`|かなしい|"I'm sad."|
 |![kaneganai](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kaneganai.png)|`:kaneganai:`|金がない|"No money."|
 |![kannzennrikai](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kannzennrikai.png)|`:kannzennrikai:`|完全理解|100% understood|
-|![kawaii](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kawaii.png)|`:kawaii:`|かわいい|kawaii / cute / pretty|
 |![kasikomariko](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kasikomariko.png)|`:kasikomariko:`|かしこまりこ|"Yes, sir!"|
+|![kawaii](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kawaii.png)|`:kawaii:`|かわいい|kawaii / cute / pretty|
+|![kiresou](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kiresou.png)|`:kiresou:`|キレそう|last straw / "GTFO"|
 |![komattazo](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/komattazo.png)|`:komattazo:`|困ったぞ|"I'm in trouble..."|
 |![kousokuzennsinn](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kousokuzennsinn.png)|`:kousokuzennsinn:`|高速前進|fast-forward merge|
 |![kudasai](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kudasai.png)|`:kudasai:`|ください|"Gimme."|
@@ -115,6 +116,7 @@ jp-en compatible table includes some jokes. Patches welcome!
 
 ## Icon Additional History
 
+- 2016-06-06 ![kiresou](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kiresou.png)
 - 2016-05-12 ![fixedyamero](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/fixedyamero.png)
 - 2016-05-01 ![adoribu](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/adoribu.png)![arigato](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/arigato.png)![kusoripu](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kusoripu.png)![okkii](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/okkii.png)![sorede](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/sorede.png)![tissai](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tissai.png)![tonnmana](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/tonnmana.png)
 - 2016-04-26 ![kawaii](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/kawaii.png)![syougaigenneki](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/syougaigenneki.png)![taipoda](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/taipoda.png)![usodesyo](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/dist/usodesyo.png)
