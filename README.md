@@ -1,8 +1,10 @@
 # Slack Reaction Decomoji v2
 
-Custom emoji icon collection for slack reaction.
+Custom emoji icon collection for slack reaction. These icon called "Decomoji" in this project.
 
-![screen shot](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/ss.png)
+![screen shot](./ss.png)
+
+[日本語ドキュメント](./README_ja.md)
 
 ## Feature
 
@@ -16,8 +18,6 @@ Custom emoji icon collection for slack reaction.
 Decomoji made up of the text image. You can do fast communication with high-context!
 
 ## Breaking changes in v2
-
-
 
 ### 1. JUMBOMOJI ready
 
@@ -54,7 +54,7 @@ $ bundle exec ruby import.rb
 
 In CLI, input your slack team name, ID(email address) and PASS.
 
-![screen shot of script importing](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/ss_import.png)
+![screen shot of script importing](./ss_import.png)
 
 ## LICENSE
 
@@ -66,4 +66,5 @@ This product is licensed under [CC BY-NC 3.0](http://creativecommons.org/license
 [@geckotang](https://github.com/geckotang/)  
 [@ginpei](https://github.com/ginpei/)  
 [@watilde](https://github.com/watilde/)  
+[@matori](https://github.com/matori/)  
 [@fukayatsu](https://github.com/fukayatsu/)
