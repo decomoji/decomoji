@@ -6,6 +6,8 @@ Custom emoji icon collection for slack reaction. These icon called "Decomoji" in
 
 [日本語ドキュメント](./README_ja.md)
 
+<script async class="speakerdeck-embed" data-id="4567c6a6f46a4461b4af0f608791a679" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+
 ## Feature
 
 1. text image
