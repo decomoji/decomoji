@@ -4,6 +4,8 @@ Custom emoji icon collection for slack reaction.
 
 ![screen shot](https://raw.githubusercontent.com/oti/slack-reaction-decomoji/master/ss.png)
 
+[日本語ドキュメント](./README_ja.md)
+
 ## Feature
 
 1. text image
@@ -66,4 +68,5 @@ This product is licensed under [CC BY-NC 3.0](http://creativecommons.org/license
 [@geckotang](https://github.com/geckotang/)  
 [@ginpei](https://github.com/ginpei/)  
 [@watilde](https://github.com/watilde/)  
+[@matori](https://github.com/matori/)  
 [@fukayatsu](https://github.com/fukayatsu/)
