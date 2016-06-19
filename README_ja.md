@@ -64,6 +64,10 @@ $ bundle exec ruby import.rb
 
 ![screen shot of script importing](./ss_import.png)
 
+## コントリビューティングガイドライン
+
+[CONTRIBUTING_ja.md](CONTRIBUTING_ja.md)を参照してください。
+
 ## ライセンス
 
 [![Creative Commons License](https://i.creativecommons.org/l/by-nc/3.0/88x31.png "CC BY-NC 3.0")](https://creativecommons.org/licenses/by-nc/3.0/deed.en)  

@@ -62,6 +62,10 @@ In CLI, input your slack team name, ID(email address) and PASS.
 
 ![screen shot of script importing](./ss_import.png)
 
+## CONTRIBUTING GUIDELINES
+
+[Look CONTRIBUTING.md](CONTRIBUTING.md)
+
 ## LICENSE
 
 [![Creative Commons License](https://i.creativecommons.org/l/by-nc/3.0/88x31.png "CC BY-NC 3.0")](https://creativecommons.org/licenses/by-nc/3.0/deed.en)  
