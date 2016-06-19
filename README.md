@@ -2,7 +2,7 @@
 
 [日本語ドキュメント](./README_ja.md)
 
-Custom emoji icon collection for slack reaction. These icon called "Decomoji" in this project.
+Custom emoji icon collection for slack reaction. These decorationed emoji icons called "Decomoji" in this project. 
 
 ![screen shot](./ss.png)
 
