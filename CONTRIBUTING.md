@@ -2,15 +2,15 @@
 
 [日本語のコントリビューティングガイドライン](CONTRIBUTING_ja.md)
 
-## About of decomoji add or remove
+## Add your decomoji or remove a decomoji
 
-It does not accept in principle.
+Thanks for interesting in contributing, but "basically" we don't expect your patch about adding a new decomoji.
 
-Use decomoji-template.psd if you want to use new one.
+You can use `decomoji-template.psd` if you want to add a new decomoji you created.
 
-Remove files from `decomoji/` directory if you don't want to use one.
+Also, if you would like to remove a decomoji, you can do by removing a file from `decomoji/`
 
-import.rb auto-register those of `decomoji/` directory.
+`import.rb` rule them all to remove a registered decomoji on your Slack automatically.
 
 ### Decomoji Template
 
