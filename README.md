@@ -79,4 +79,5 @@ This product is licensed under [CC BY-NC 3.0](http://creativecommons.org/license
 [@ginpei](https://github.com/ginpei/)  
 [@watilde](https://github.com/watilde/)  
 [@matori](https://github.com/matori/)  
-[@fukayatsu](https://github.com/fukayatsu/)
+[@fukayatsu](https://github.com/fukayatsu/)  
+[@maiha2](https://github.com/maiha2/)

@@ -81,4 +81,5 @@ $ bundle exec ruby import.rb
 [@ginpei](https://github.com/ginpei/)  
 [@watilde](https://github.com/watilde/)  
 [@matori](https://github.com/matori/)  
-[@fukayatsu](https://github.com/fukayatsu/)
+[@fukayatsu](https://github.com/fukayatsu/)  
+[@maiha2](https://github.com/maiha2/)
