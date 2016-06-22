@@ -59,7 +59,7 @@ jp-en compatible table includes some jokes. Patches welcome!
 |![nanikore](./decomoji/nanikore.png)|`:nanikore:`|ナニコレ|"What is it?"|
 |![nannnano](./decomoji/nannnano.png)|`:nannnano:`|なんなの|"It is ambiguous."|
 |![nanndato](./decomoji/nanndato.png)|`:nanndato:`|なんだと|"WHAT DID YOU SAY?"|
-|![naruhodo](./decomoji/naruhodo.png)|`:naruhodo:`|なるほど|"It makes sense."|
+|![naruhodo](./decomoji/naruhodo.png)<br>the original created by [@imaz](https://github.com/imaz)|`:naruhodo:`|なるほど|"It makes sense."|
 |![nasasou](./decomoji/nasasou.png)|`:nasasou:`|なさそう|"It couldn't be."|
 |![nazodesune](./decomoji/nazodesune.png)|`:nazodesune:`|謎ですね|"It's mystery."|
 |![nero](./decomoji/nero.png)|`:nero:`|寝ろ|"Get sleep."|

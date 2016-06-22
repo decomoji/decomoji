@@ -4,6 +4,8 @@ Slackリアクション機能で使えるカスタム絵文字のセットです
 
 ![screen shot](./ss.png)
 
+これらのデコモジは、[@imaz](https://github.com/imaz)氏が作成した`:naruhodo:`に*強く*影響を受け生み出されました。
+
 ## 紹介スライド
 
 イベントで使用したスライドにかえさせてください。PDFです。
@@ -68,6 +70,8 @@ $ bundle exec ruby import.rb
 このプロジェクトは [CC BY-NC 3.0](http://creativecommons.org/licenses/by-nc/3.0/deed.en) ([Japanese](https://creativecommons.org/licenses/by-nc/3.0/deed.ja))の元にライセンスされています。非営利目的に限り自由に使用、改変、再配布が可能ですが、いずれもこのリポジトリへのリンクを示す必要があります。また、改変の場合は変更点を示さなければなりません。
 
 ## Special Thanks
+
+[@imaz](https://github.com/imaz/)(オリジナルの`:naruhodo:`の作者)
 
 [@geckotang](https://github.com/geckotang/)  
 [@ginpei](https://github.com/ginpei/)  
