@@ -1,12 +1,12 @@
 # Slack Reaction Decomoji v2
 
+[日本語ドキュメント](./README_ja.md)
+
 Custom emoji icon collection for slack reaction. These icon called "Decomoji" in this project.
 
 ![screen shot](./ss.png)
 
-[日本語ドキュメント](./README_ja.md)
-
-<script async class="speakerdeck-embed" data-id="4567c6a6f46a4461b4af0f608791a679" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+These are *strongly* inspired by [@imaz](https://github.com/imaz).
 
 ## Introduction
 
@@ -68,6 +68,8 @@ In CLI, input your slack team name, ID(email address) and PASS.
 This product is licensed under [CC BY-NC 3.0](http://creativecommons.org/licenses/by-nc/3.0/deed.en) ([Japanese](https://creativecommons.org/licenses/by-nc/3.0/deed.ja))
 
 ## Special Thanks
+
+[@imaz](https://github.com/imaz/)(creator of the original `:naruhodo:`)
 
 [@geckotang](https://github.com/geckotang/)  
 [@ginpei](https://github.com/ginpei/)  
