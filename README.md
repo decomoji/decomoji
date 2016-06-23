@@ -69,7 +69,7 @@ This product is licensed under [CC BY-NC 3.0](http://creativecommons.org/license
 
 ## Special Thanks
 
-[@imaz](https://github.com/imaz/)(creater of the original `:naruhodo:`)
+[@imaz](https://github.com/imaz/)(creator of the original `:naruhodo:`)
 
 [@geckotang](https://github.com/geckotang/)  
 [@ginpei](https://github.com/ginpei/)  
