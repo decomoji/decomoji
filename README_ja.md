@@ -16,7 +16,7 @@ Slackリアクション機能で使えるカスタム絵文字のセットです
 
 1. テキスト画像
 2. だいたい4文字
-3. 割中レイアウトで読みやすい
+3. 割注レイアウトで読みやすい
 4. 色とりどり
 5. JUMBOMOJIに対応
 6. 高精細ディスプレイに対応
@@ -64,6 +64,10 @@ $ bundle exec ruby import.rb
 
 ![screen shot of script importing](./ss_import.png)
 
+## コントリビューティングガイドライン
+
+[CONTRIBUTING_ja.md](CONTRIBUTING_ja.md)を参照してください。
+
 ## ライセンス
 
 [![Creative Commons License](https://i.creativecommons.org/l/by-nc/3.0/88x31.png "CC BY-NC 3.0")](https://creativecommons.org/licenses/by-nc/3.0/deed.en)  
@@ -77,4 +81,5 @@ $ bundle exec ruby import.rb
 [@ginpei](https://github.com/ginpei/)  
 [@watilde](https://github.com/watilde/)  
 [@matori](https://github.com/matori/)  
-[@fukayatsu](https://github.com/fukayatsu/)
+[@fukayatsu](https://github.com/fukayatsu/)  
+[@maiha2](https://github.com/maiha2/)

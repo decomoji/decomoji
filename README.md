@@ -2,7 +2,7 @@
 
 [日本語ドキュメント](./README_ja.md)
 
-Custom emoji icon collection for slack reaction. These icon called "Decomoji" in this project.
+Custom emoji icon collection for slack reaction. These decorationed emoji icons called "Decomoji" in this project. 
 
 ![screen shot](./ss.png)
 
@@ -62,6 +62,10 @@ In CLI, input your slack team name, ID(email address) and PASS.
 
 ![screen shot of script importing](./ss_import.png)
 
+## CONTRIBUTING GUIDELINES
+
+[Look CONTRIBUTING.md](CONTRIBUTING.md)
+
 ## LICENSE
 
 [![Creative Commons License](https://i.creativecommons.org/l/by-nc/3.0/88x31.png "CC BY-NC 3.0")](https://creativecommons.org/licenses/by-nc/3.0/deed.en)  
@@ -75,4 +79,5 @@ This product is licensed under [CC BY-NC 3.0](http://creativecommons.org/license
 [@ginpei](https://github.com/ginpei/)  
 [@watilde](https://github.com/watilde/)  
 [@matori](https://github.com/matori/)  
-[@fukayatsu](https://github.com/fukayatsu/)
+[@fukayatsu](https://github.com/fukayatsu/)  
+[@maiha2](https://github.com/maiha2/)
