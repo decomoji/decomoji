@@ -50,7 +50,7 @@ jp-en compatible table includes some jokes. Patches welcome!
 |![majikayo](./decomoji/majikayo.png)|`:majikayo:`|まじかよ|WTF|
 |![makasero](./decomoji/makasero.png)|`:makasero:`|まかせろ|"Got your back!"|
 |![mazusou](./decomoji/mazusou.png)|`:mazusou:`|まずそう|"Looks so unappetizing" / looks like evil situation|
-|![meisaku](./decomoji/meisaku.png)|`:meisaku:`|迷作|"Hahaha."|
+|![meisaku](./decomoji/meisaku.png)|`:meisaku:`|迷作|"Hahaha..."|
 |![moukonn](./decomoji/moukonn.png)|`:moukonn:`|毛根タイム（もうこんな時間）|"Look at the time!"|
 |![munenn](./decomoji/munenn.png)|`:munenn:`|無念|R.I.P|
 |![murisou](./decomoji/murisou.png)|`:murisou:`|無理そう|impossible|
