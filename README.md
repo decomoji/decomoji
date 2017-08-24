@@ -4,7 +4,7 @@
 
 Custom emoji icon collection for slack reaction. These decorationed emoji icons called "Decomoji" in this project. 
 
-![screen shot](./ss.png)
+![](./ss.png)
 
 These are *strongly* inspired by [@imaz](https://github.com/imaz).
 
@@ -45,7 +45,15 @@ Fix spelling inconsistency. Decomoji v2 use [roman alphabet input method(JIS X40
 
 ### by manual
 
-Add decomoji in a browser. Access to [https://{{your-team-name}}.slack.com/customize/emoji](https://{{your-team-name}}.slack.com/customize/emoji).
+[https://{{your-team-name}}.slack.com/customize/emoji](https://{{your-team-name}}.slack.com/customize/emoji)
+
+Open in a browser, add by form.
+
+![](./ss_form.png)
+
+Or, Drag&Drop.
+
+![](./ss_dnd.png)
 
 ### by script
 

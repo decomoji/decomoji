@@ -2,7 +2,7 @@
 
 Slackリアクション機能で使えるカスタム絵文字のセットです。このプロジェクトではそれら一つ一つを「デコモジ」と呼んでいます。
 
-![screen shot](./ss.png)
+![](./ss.png)
 
 これらのデコモジは、[@imaz](https://github.com/imaz)氏が作成した`:naruhodo:`に*強く*影響を受け生み出されました。
 
@@ -45,7 +45,15 @@ v1（無印）からのアップデートをしようとしているなら、既
 
 ### マニュアルで登録する
 
-ブラウザでSlackチームにログインし、フォームから登録してください。[https://{{your-team-name}}.slack.com/customize/emoji](https://{{your-team-name}}.slack.com/customize/emoji).
+[https://{{your-team-name}}.slack.com/customize/emoji](https://{{your-team-name}}.slack.com/customize/emoji)
+
+ブラウザでSlackチームにログインし、フォームから登録してください。
+
+![](./ss_form.png)
+
+もしくは、ドラッグ&ドロップでまとめて追加することもできます。
+
+![](./ss_dnd.png)
 
 ### スクリプトで登録する
 
@@ -62,7 +70,7 @@ $ bundle exec ruby import.rb
 
 `import.rb`を実行すると、チーム名とあなたのアカウントとパスワードを聞かれるので、入力すると`decomoji/`にあるファイルが一つずつ登録されていきます。
 
-![screen shot of script importing](./ss_import.png)
+![](./ss_import.png)
 
 ## コントリビューティングガイドライン
 
