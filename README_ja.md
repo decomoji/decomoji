@@ -51,7 +51,9 @@ v1（無印）からのアップデートをしようとしているなら、既
 
 ![](./ss_form.png)
 
-もしくは、ドラッグ&ドロップでまとめて追加することもできます。
+### Chromeエクステンション
+
+['Slack Emoji Tools'](https://chrome.google.com/webstore/detail/slack-emoji-tools/anchoacphlfbdomdlomnbbfhcmcdmjej) をGoogle Chromeにインストールすると、Drag&Dropでまとめて追加可能です。
 
 ![](./ss_dnd.png)
 

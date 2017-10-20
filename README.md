@@ -51,7 +51,9 @@ Open in a browser, add by form.
 
 ![](./ss_form.png)
 
-Or, Drag&Drop.
+### with Chrome Extention
+
+Install ['Slack Emoji Tools'](https://chrome.google.com/webstore/detail/slack-emoji-tools/anchoacphlfbdomdlomnbbfhcmcdmjej) to Google Chrome, and Drag&Drop.
 
 ![](./ss_dnd.png)
 
