@@ -1,23 +1,17 @@
-# CONTRIBUTING GUIDELINES
+# コントリビューティングガイドライン
 
-[日本語のコントリビューティングガイドライン](CONTRIBUTING_ja.md)
+## デコモジの追加・削除
 
-## Add your decomoji or remove a decomoji
+このプロジェクトに興味を持っていただいてありがとうございます。
 
-Thanks for interesting in contributing, but "basically" we don't expect your patch about adding a new decomoji.
+デコモジ追加・削除のプルリクエストは原則として**受けつけていません。**
 
-You can use [`decomoji-template`](https://github.com/oti/decomoji-template) if you want to add a new decomoji you created.
+もしあなたが自分で使いたい言葉がある場合は、[`decomoji-template`](https://github.com/oti/decomoji-template)を利用しご自分で作成なさるなどしてください。
 
-Also, if you would like to remove a decomoji, you can do by removing a file from `decomoji/`
+マニュアル登録であれば置き場所はどこでもかまいません。スクリプトを利用するなら`decomoji/`配下におくことで自動登録の対象になります。
 
-`import.rb` rule them all to remove a registered decomoji on your Slack automatically.
+自動登録から除外したいデコモジがある場合は、逆に`decomoji/`配下の対象ファイルを削除してから`import.rb`を実行してください。
 
-## About of except for decomoji add or remove
+## デコモジ以外のプルリクエスト
 
-about...
-
-- decomoji's romanization
-- context in [decomoji-list.md](decomoji-list.md) 
-- translation in decomoji-list.md
-
-Patches welcome!
+このプロジェクトに追加されているデコモジについて、ファイル名のローマ字表記などにミスやより良い提案がある場合は、Issueに報告または、プルリクエストを送ってください。
