@@ -24,5 +24,4 @@
 
 [oti/who-use-decomoji](https://github.com/oti/who-use-decomoji)
 
-あなたの所属する組織のSlackチームでデコモジが使われていたら、可能であれば「Who use Decomoji?」リポジトリに報告してください！  
-Issueかプルリクエストをお待ちしています !['たのんだ'](decomoji/tanonnda.png)
+あなたの所属する組織のSlackチームでデコモジが使われていたら、可能であれば「Who use Decomoji?」リポジトリに報告してください。Issueかプルリクエストをお待ちしています！
