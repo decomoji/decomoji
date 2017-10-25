@@ -2,7 +2,7 @@
 
 Slackリアクション機能で使えるカスタム絵文字のアセットです。このプロジェクトではそれら一つ一つを「デコモジ」と呼んでいます。
 
-![](./ss.png)
+![](images/ss.png)
 
 これらのデコモジは、[@imaz](https://github.com/imaz)氏が作成した`:naruhodo:`に影響を受け生み出されました。
 
@@ -27,13 +27,13 @@ Slackリアクション機能で使えるカスタム絵文字のアセットで
 
 ブラウザでSlackチームにログインし、フォームから登録してください。
 
-![](./ss_form.png)
+![](images/ss_form.png)
 
 ### Chromeエクステンション
 
 ['Slack Emoji Tools'](https://chrome.google.com/webstore/detail/slack-emoji-tools/anchoacphlfbdomdlomnbbfhcmcdmjej) をGoogle Chromeにインストールすると、Drag&Dropでまとめて追加可能です。
 
-![](./ss_dnd.png)
+![](images/ss_dnd.png)
 
 ### スクリプトで登録する
 
@@ -41,16 +41,16 @@ Rubyとbundlerが必要です。
 
 ```bash
 $ git clone git@github.com:oti/slack-reaction-decomoji.git
-$ cd slack-reaction-decomoji
+$ cd slack-reaction-decomoji/
 $ bundle install
 $ bundle exec ruby import.rb
 ```
 
 コマンドラインで上記の手順で必要なモジュールをインストールしてください。
 
-`import.rb`を実行すると、チーム名とあなたのアカウントとパスワードを聞かれるので、入力すると`decomoji/`にあるファイルが一つずつ登録されていきます。
+`import.rb`を実行すると、チーム名とあなたのアカウントとパスワードを聞かれるのでそれぞれ入力してください。`decomoji/`にあるファイルが一つずつ登録されていきます。
 
-![](./ss_import.png)
+![](images/ss_import.png)
 
 ## デコモジ一覧
 
@@ -66,13 +66,15 @@ MIT
 
 ## Change Log
 
-###  v3は破壊的変更を含んでいます
+### v3は破壊的変更を含んでいます
 
 - 既存デコモジのリファイン
   - 色の修正
   - 使用フォントの統一
   - ファイル名の修正
 - ライセンスをCC BY-NC 3.0からMITに変更
+
+「つ」が `tu` と `tsu` で混在していたので `tu` に統一しました。他のローマ字表記も可能な限り短くなるようにしています。
 
 v3から営利目的のサービスにデコモジを組み込めるようになりました。ライセンスの変更については賛否あるかと思いますが何卒ご了承ください。
 
