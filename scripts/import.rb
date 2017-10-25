@@ -3,8 +3,6 @@ require 'mechanize'
 
 # Decomoji Importer
 class Importer
-  BASE_DIR = File.expand_path(File.dirname(__FILE__))
-
   def initialize
     @page = nil
     @agent = Mechanize.new
@@ -51,7 +49,7 @@ class Importer
   end
 
   def upload_decomojis
-    Dir.glob("#{BASE_DIR}/decomoji/*.png").each do |path|
+    Dir.glob(File.expand_path(File.dirname(__FILE__)) + "/../decomoji/*.png").each do |path|
       basename = File.basename(path, '.*')
 
       # skip if already exists

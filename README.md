@@ -64,14 +64,14 @@ Rubyとbundlerが必要です。
 
 ```bash
 $ git clone git@github.com:oti/slack-reaction-decomoji.git
-$ cd slack-reaction-decomoji/
+$ cd slack-reaction-decomoji/scripts/
 $ bundle install
 $ bundle exec ruby import.rb
 ```
 
 コマンドラインで上記の手順で必要なモジュールをインストールしてください。
 
-`import.rb`を実行すると、チーム名とあなたのアカウントとパスワードを聞かれるのでそれぞれ入力してください。`decomoji/`にあるファイルが一つずつ登録されていきます。
+`import.rb`を実行すると、チーム名とあなたのアカウントとパスワードを聞かれるのでそれぞれ入力してください。`decomoji/`にあるファイルが一つずつ登録されていきます。同じファイル名のカスタム絵文字がすでにある場合はスキップされます。
 
 ![](images/ss_import.png)
 
