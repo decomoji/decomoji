@@ -6,6 +6,14 @@ Slackリアクション機能で使えるカスタム絵文字のアセットで
 
 これらのデコモジは、[@imaz](https://github.com/imaz)氏が作成した`:naruhodo:`に影響を受け生み出されました。
 
+## デコモジ一覧
+
+[decomoji-list.md](decomoji-list.md)に羅列しています。
+
+## コントリビューティングガイドライン
+
+[CONTRIBUTING.md](CONTRIBUTING.md)を参照してください。
+
 ## 特徴
 
 1. テキスト画像
@@ -51,14 +59,6 @@ $ bundle exec ruby import.rb
 `import.rb`を実行すると、チーム名とあなたのアカウントとパスワードを聞かれるのでそれぞれ入力してください。`decomoji/`にあるファイルが一つずつ登録されていきます。
 
 ![](images/ss_import.png)
-
-## デコモジ一覧
-
-[こちらのドキュメント](decomoji-list.md)に別記しています。
-
-## コントリビューティングガイドライン
-
-[CONTRIBUTING.md](CONTRIBUTING.md)を参照してください。
 
 ## ライセンス
 
