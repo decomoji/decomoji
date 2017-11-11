@@ -1,23 +1,25 @@
-# CONTRIBUTING GUIDELINES
+# コントリビューティングガイドライン
 
-[日本語のコントリビューティングガイドライン](CONTRIBUTING_ja.md)
+## リポジトリへのデコモジの追加・削除
 
-## Add your decomoji or remove a decomoji
+このプロジェクトに興味を持っていただいてありがとうございます。
 
-Thanks for interesting in contributing, but "basically" we don't expect your patch about adding a new decomoji.
+デコモジ追加・削除のプルリクエストは原則として**受けつけていません。**
 
-You can use [`decomoji-template`](https://github.com/oti/decomoji-template) if you want to add a new decomoji you created.
+もしあなたが自分で使いたい言葉がある場合は、[oti/decomoji-template](https://github.com/oti/decomoji-template)を利用しご自分で作成なさるなどしてください。
 
-Also, if you would like to remove a decomoji, you can do by removing a file from `decomoji/`
+スクリプトによる自動登録時に除外したいデコモジがある場合は、逆に`decomoji/`配下の対象ファイルを削除してから`import.rb`を実行してください。
 
-`import.rb` rule them all to remove a registered decomoji on your Slack automatically.
+## リーダビリティに関する要望
 
-## About of except for decomoji add or remove
+色の変更、字詰めの変更についてはIssueで報告をいただければ対応を検討したいと思います。
 
-about...
+## その他のプルリクエスト
 
-- decomoji's romanization
-- context in [decomoji-list.md](decomoji-list.md) 
-- translation in decomoji-list.md
+ドキュメントテキスト、デコモジのファイル名、import.rb、スクリーンショットなどにミスを発見したり、より良い提案があればプルリクエストを送ってください。
 
-Patches welcome!
+## Who use Decomoji?
+
+[oti/who-use-decomoji](https://github.com/oti/who-use-decomoji)
+
+あなたの所属する組織のSlackチームでデコモジが使われていたら、可能であれば「Who use Decomoji?」リポジトリに報告してください。Issueかプルリクエストをお待ちしています！
