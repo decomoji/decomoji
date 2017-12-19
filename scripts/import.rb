@@ -42,7 +42,7 @@ class Importer
         login
       end
 
-      break if page.title.include?('Emoji')
+      break if page.title.include?('絵文字') || page.title.include?('Emoji')
       puts 'Login failure. Please try again.'
       puts
     end
