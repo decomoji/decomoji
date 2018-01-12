@@ -80,7 +80,7 @@
 ![gyoreru](./decomoji/gyoreru.png)
 ![gyoukaihyoujunn](./decomoji/gyoukaihyoujunn.png)
 ![ha](./decomoji/ha.png)
-![hai](./decomoji/hai.png)
+![hai-](./decomoji/hai-.png)
 ![haibokuwosiritai](./decomoji/haibokuwosiritai.png)
 ![haraheri](./decomoji/haraheri.png)
 ![hayakutide](./decomoji/hayakutide.png)
