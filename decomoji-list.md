@@ -87,7 +87,7 @@
 ![hennjiari](./decomoji/hennjiari.png)
 ![hennjinasi](./decomoji/hennjinasi.png)
 ![henntaikayo](./decomoji/henntaikayo.png)
-![hicontext](./decomoji/hicontext.png)
+![haikonntekisuto](./decomoji/haikonntekisuto.png)
 ![hidariuekakuninn](./decomoji/hidariuekakuninn.png)
 ![hidoukiteki](./decomoji/hidoukiteki.png)
 ![hirunesuru](./decomoji/hirunesuru.png)
