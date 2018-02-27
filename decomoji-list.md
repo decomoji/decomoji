@@ -113,7 +113,7 @@
 ![ikenai](./decomoji/ikenai.png)
 ![iketaraiku](./decomoji/iketaraiku.png)
 ![imihumei](./decomoji/imihumei.png)
-![innfuru](./decomoji/innfuru.png)
+![innhuru](./decomoji/innhuru.png)
 ![isdare](./decomoji/isdare.png)
 ![isnani](./decomoji/isnani.png)
 ![ittannkyuukei](./decomoji/ittannkyuukei.png)
