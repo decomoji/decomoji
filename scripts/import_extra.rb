@@ -49,7 +49,7 @@ class Importer
   end
 
   def upload_decomojis
-    Dir.glob(File.expand_path(File.dirname(__FILE__)) + "/../decomoji/basic/*.png").each do |path|
+    Dir.glob(File.expand_path(File.dirname(__FILE__)) + "/../decomoji/extra/*.png").each do |path|
       basename = File.basename(path, '.*')
 
       # skip if already exists
