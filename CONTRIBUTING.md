@@ -6,9 +6,20 @@
 
 デコモジ追加・削除のプルリクエストは原則として**受けつけていません。**
 
-もしあなたが自分で使いたい言葉がある場合は、[oti/decomoji-template](https://github.com/oti/decomoji-template)を利用しご自分で作成なさるなどしてください。
+もしあなたが欲しいデコモジがある場合は、[decomoji-template](https://github.com/decomoji/decomoji-template)を利用しご自分で作成なさるなどしてください。
 
 スクリプトによる自動登録時に除外したいデコモジがある場合は、逆に`decomoji/`配下の対象ファイルを削除してから`import.rb`を実行してください。
+
+### やること
+
+- 不定期なデコモジの追加
+- 文字の色や字詰めの修正
+- ファイル名やスクリプトのミスの修正
+
+### やらないこと
+
+- 一度追加したデコモジの削除
+- デコモジの追加・削除要望への対応
 
 ## リーダビリティに関する要望
 
@@ -20,6 +31,6 @@
 
 ## Who use Decomoji?
 
-[oti/who-use-decomoji](https://github.com/oti/who-use-decomoji)
+[who-use-decomoji](https://github.com/decomoji/who-use-decomoji)
 
-あなたの所属する組織のSlackチームでデコモジが使われていたら、可能であれば「Who use Decomoji?」リポジトリに報告してください。Issueかプルリクエストをお待ちしています！
+あなたの所属する組織のSlackチームでデコモジが使われていたら、ぜひ「Who use Decomoji?」リポジトリに追加してください。Issueで教えてもらってもいいですし、編集してプルリクエストを投げてもらってもよいです！
