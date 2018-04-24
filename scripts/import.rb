@@ -21,7 +21,7 @@ class Importer
     email      = ask('Login email: ')
     password   = ask('Login password(hidden): ') { |q| q.echo = false }
 
-    emoji_page_url = "https://#{team_name}.slack.com/admin/emoji"
+    emoji_page_url = "https://#{team_name}.slack.com/customize/emoji"
 
     page = agent.get(emoji_page_url)
     page.form.email = email
@@ -49,7 +49,7 @@ class Importer
   end
 
   def upload_decomojis
-    Dir.glob(File.expand_path(File.dirname(__FILE__)) + "/../decomoji/*.png").each do |path|
+    Dir.glob(File.expand_path(File.dirname(__FILE__)) + "/../decomoji/basic/*.png").each do |path|
       basename = File.basename(path, '.*')
 
       # skip if already exists
