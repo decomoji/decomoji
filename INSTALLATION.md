@@ -21,7 +21,7 @@
 **Ruby v2.5.1**と**bundler**が必要です。
 
 ```bash
-git clone git@github.com:docomoji/slack-reaction-decomoji.git
+git clone git@github.com:decomoji/slack-reaction-decomoji.git
 cd slack-reaction-decomoji/scripts/
 bundle install
 bundle exec ruby import.rb
