@@ -41,13 +41,15 @@ Slackのリアクション機能で使えるカスタム絵文字のアセット
 
 [CONTRIBUTING.md](CONTRIBUTING.md)
 
-## 表記ルール
+## ファイル名ルール
 
 [NOTATIONS.md](NOTATIONS.md)
 
 訓令式ローマ字がベースです。
 
 ## ライセンス
+
+Copyright (c) 2015 decomoji consortium and other contributors.
 
 Under the [MIT License](LICENSE.txt).
 
