@@ -1,0 +1,19 @@
+{
+  "name": "slack-reaction-decomoji",
+  "version": "4.2.0",
+  "description": "Fast, Fun, High-context communication perfect assets",
+  "main": "",
+  "scripts": {
+    "decomoji-list": "node scripts/generate_decomoji_list.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oti/slack-reaction-decomoji.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oti/slack-reaction-decomoji/issues"
+  },
+  "homepage": "https://github.com/oti/slack-reaction-decomoji#readme"
+}
