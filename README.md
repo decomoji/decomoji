@@ -65,7 +65,7 @@ Under the [MIT License](LICENSE.txt).
 
 ## えっ支援したいって！？
 
-ありがとうございます！　![Patreon](decomoji/extra/peitorionn.png)にページを作りました！
+ありがとうございます！　Patreonにページを作りました！
 
 https://www.patreon.com/decomoji
 
