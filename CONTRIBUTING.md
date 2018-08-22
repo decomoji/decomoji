@@ -29,8 +29,8 @@
 
 ドキュメントテキスト、デコモジのファイル名、import.rb、スクリーンショットなどにミスを発見したり、より良い提案があればプルリクエストを送ってください。
 
-## Who use Decomoji?
+## Who use decomoji?
 
 [who-use-decomoji](https://github.com/decomoji/who-use-decomoji)
 
-あなたの所属する組織のSlackチームでデコモジが使われていたら、ぜひ「Who use Decomoji?」リポジトリに追加してください。Issueで教えてもらってもいいですし、編集してプルリクエストを投げてもらってもよいです！
+あなたの所属する組織のSlackチームでデコモジが使われていたら、ぜひ「Who use decomoji?」リポジトリに追加してください。Issueで教えてもらってもいいですし、編集してプルリクエストを投げてもらってもよいです！

@@ -57,9 +57,16 @@ Under the [MIT License](LICENSE.txt).
 
 [CHANGES.md](CHANGES.md)
 
+## Who use decomoji?
+
+[who-use-decomoji](https://github.com/decomoji/who-use-decomoji)
+
+あなたの所属する組織のSlackチームでデコモジが使われていたら、ぜひ「Who use decomoji?」リポジトリに追加してください。Issueで教えてもらってもいいですし、編集してプルリクエストを投げてもらってもよいです！
+
 ## えっ支援したいって！？
 
-ありがとうございます！Patreonにページを作りました！
+ありがとうございます！　![Patreon](decomoji/extra/peitorionn.png)にページを作りました！
+
 https://www.patreon.com/decomoji
 
 ## スペシャルサンクス！
