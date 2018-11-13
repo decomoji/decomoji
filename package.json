@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/oti/slack-reaction-decomoji.git"
+    "url": "git+https://github.com/decomoji/slack-reaction-decomoji.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/oti/slack-reaction-decomoji/issues"
+    "url": "https://github.com/decomoji/slack-reaction-decomoji/issues"
   },
-  "homepage": "https://github.com/oti/slack-reaction-decomoji#readme"
+  "homepage": "https://github.com/decomoji/slack-reaction-decomoji#readme"
 }
