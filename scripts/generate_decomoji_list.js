@@ -21,7 +21,10 @@ function generate_decomoji_list(type) {
       text += `![${file.split('.')[0]}](./decomoji/${type}/${file})`
     })
 
-    fs.writeFile(`./decomoji-${type}.md`, header[type]+text)
+    fs.writeFile(`./decomoji-${type}.md`, header[type]+text, (err) => {
+      if (err) throw err;
+      console.log(`decomoji-${type}.md has been saved!`);
+    })
   })
 }
 
