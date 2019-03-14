@@ -53,13 +53,18 @@ class Importer
 
   def upload_decomojis
     emojis = list_emojis
-    Dir.glob(File.expand_path(File.dirname(__FILE__)) + "/../decomoji/basic/*.png").each do |path|
+    files = Dir.glob(File.expand_path(File.dirname(__FILE__)) + "/../decomoji/basic/*.png")
+    len = files.length
+    files.each.with_index(1) do |path, i|
       basename = File.basename(path, '.*')
 
       # skip if already exists
-      next if emojis.include?(basename)
+      if emojis.include?(basename)
+        puts "(#{i}/#{len}) #{basename} already exists, skip"
+        next
+      end
 
-      puts "importing #{basename}..."
+      puts "(#{i}/#{len}) importing #{basename}..."
 
       params = {
         name: basename,
