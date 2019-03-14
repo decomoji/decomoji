@@ -28,12 +28,13 @@ class Importer
     page.form.email = email
     page.form.password = password
     @page = page.form.submit
-    @token = @page.body[/(?<=api_token:\s")[^"]+/]
+    @token = @page.body[/(?<=api_token":")[^"]+/]
   end
 
   def enter_two_factor_authentication_code
     page.form['2fa_code'] = ask('Your two factor authentication code: ')
     @page = page.form.submit
+    @token = @page.body[/(?<=api_token":")[^"]+/]
   end
 
   def move_to_emoji_page
