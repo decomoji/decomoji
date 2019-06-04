@@ -10,22 +10,35 @@ class Importer
   attr_accessor :page, :agent, :team_name, :token
 
   def import_decomojis
+    ask_team_name
     move_to_emoji_page
     upload_decomojis
   end
 
   private
 
-  def login
-    @team_name = ask('Your slack team name(subdomain): ')
-    email      = ask('Login email: ')
-    password   = ask('Login password(hidden): ') { |q| q.echo = false }
+  def ask_team_name
+    begin
+      @team_name = ask('Your slack team name(subdomain): ')
+      agent.get("https://#{team_name}.slack.com")
+    rescue
+      puts "Not found workspace. Please try again."
+      retry
+    end
+  end
 
+  def ask_login_info
+    @email      = ask('Login email: ')
+    @password   = ask('Login password(hidden): ') { |q| q.echo = false }
+  end
+
+  def login
     emoji_page_url = "https://#{team_name}.slack.com/customize/emoji"
 
+    agent = Mechanize.new
     page = agent.get(emoji_page_url)
-    page.form.email = email
-    page.form.password = password
+    page.form.email = @email
+    page.form.password = @password
     @page = page.form.submit
     @token = @page.body[/(?<=api_token":")[^"]+/]
   end
@@ -39,8 +52,10 @@ class Importer
   def move_to_emoji_page
     loop do
       if page && page.form['signin_2fa']
+        @is_two_factor = true
         enter_two_factor_authentication_code
       else
+        ask_login_info
         login
       end
 
@@ -65,13 +80,28 @@ class Importer
 
       puts "(#{i}/#{len}) importing #{basename}..."
 
-      params = {
-        name: basename,
-        image: File.new(path),
-        mode: 'data',
-        token: token
-      }
-      agent.post("https://#{team_name}.slack.com/api/emoji.add", params)
+      begin
+        params = {
+          name: basename,
+          image: File.new(path),
+          mode: 'data',
+          token: token
+        }
+        response = agent.post("https://#{team_name}.slack.com/api/emoji.add", params)
+      rescue Mechanize::ResponseCodeError => e
+        if @is_two_factor
+          retry_after = e.page.header['retry-after']
+          if e.page.code != "429" or retry_after.nil?
+            raise e
+          end
+          puts "Too Many Requests. Retry after " + retry_after +  " sec."
+          sleep(retry_after.to_i)
+          retry
+        else
+          login
+          retry
+        end
+      end
     end
   end
 
