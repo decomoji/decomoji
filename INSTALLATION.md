@@ -52,12 +52,12 @@ bundle exec ruby import_extra.rb
 ```bash
 git clone git@github.com:decomoji/slack-reaction-decomoji.git
 cd slack-reaction-decomoji/
-Docker-compose up -d
+docker-compose up -d
 ```
 
 #### 作成したコンテナに入る
 ```bash
-Docker run -it slack-reaction-decomoji_app bash
+docker run -it slack-reaction-decomoji_app bash
 ```
 
 #### スクリプトで登録する
