@@ -5,5 +5,5 @@ require 'mechanize'
 require './importer'
 
 importer = Importer.new
-importer.import_decomojis
+importer.serial
 puts 'Done!'

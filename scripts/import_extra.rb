@@ -6,5 +6,5 @@ require './importer'
 
 extra_imege_dir = File.expand_path(File.dirname(__FILE__)) + "/../decomoji/extra"
 importer = Importer.new(import_img_dir: extra_imege_dir)
-importer.import_decomojis
+importer.serial
 puts 'Done!'

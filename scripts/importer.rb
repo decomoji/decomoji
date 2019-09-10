@@ -9,7 +9,7 @@ class Importer
   end
   attr_accessor :page, :agent, :team_name, :token
 
-  def import_decomojis
+  def serial
     ask_team_name
     move_to_emoji_page
     upload_decomojis
