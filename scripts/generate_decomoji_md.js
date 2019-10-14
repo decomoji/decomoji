@@ -9,10 +9,8 @@ const header = {
 
 
 function generate_decomoji_list(type) {
-  fs.readdir(`./decomoji/${type}/`, (error, files) => {
-    if (error) {
-      throw error
-    }
+  fs.readdir(`./decomoji/${type}/`, (err, files) => {
+    if (err) throw err
 
     let text = ''
 
@@ -22,8 +20,8 @@ function generate_decomoji_list(type) {
     })
 
     fs.writeFile(`./decomoji-${type}.md`, header[type]+text, (err) => {
-      if (err) throw err;
-      console.log(`decomoji-${type}.md has been saved!`);
+      if (err) throw err
+      console.log(`decomoji-${type}.md has been saved!`)
     })
   })
 }

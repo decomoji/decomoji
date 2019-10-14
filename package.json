@@ -4,7 +4,7 @@
   "description": "Fast, Fun, High-context communication. The perfect assets is this",
   "main": "",
   "scripts": {
-    "update-list": "node scripts/generate_decomoji_list.js"
+    "update-md": "node scripts/generate_decomoji_md.js"
   },
   "repository": {
     "type": "git",
