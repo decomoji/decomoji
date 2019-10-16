@@ -7,19 +7,18 @@ const header = {
   extra: `# デコモジ拡張セット\n\n作りたいと思った気持ちのままに作った拡張セットです。使い方にご注意ください。\n\n`
 }
 
-
 function generate_decomoji_list(type) {
   fs.readdir(`./decomoji/${type}/`, (err, files) => {
     if (err) throw err
 
     let text = ''
 
-    files.forEach((file) => {
+    files.forEach(file => {
       if (file === '.DS_Store') return
       text += `![${file.split('.')[0]}](./decomoji/${type}/${file})`
     })
 
-    fs.writeFile(`./decomoji-${type}.md`, header[type]+text, (err) => {
+    fs.writeFile(`./decomoji-${type}.md`, header[type] + text, err => {
       if (err) throw err
       console.log(`decomoji-${type}.md has been saved!`)
     })
