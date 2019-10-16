@@ -7,17 +7,15 @@ function generate_decomoji_ts(type) {
     if (err) throw err
 
     const decomoji_array = files.reduce((memo, file) => {
-      return file === '.DS_Store' ? memo : memo.concat({
-        category: type,
-        name: file.split('.')[0]
-      })
+      return file === '.DS_Store' ? memo : memo.concat(file.split('.')[0])
     }, [])
 
     if (!fs.existsSync('./ts')) fs.mkdirSync('./ts')
 
     fs.writeFile(
       `./ts/${type}.ts`,
-      `export const DECOMOJI_${type.toUpperCase()} = ` + JSON.stringify(decomoji_array),
+      `export const DECOMOJI_${type.toUpperCase()} = ` +
+        JSON.stringify(decomoji_array),
       err => {
         if (err) throw err
         console.log(`${type}.ts has been saved!`)
