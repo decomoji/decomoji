@@ -5,7 +5,8 @@
   "main": "",
   "scripts": {
     "update-md": "node scripts/generate_decomoji_md.js",
-    "update-json": "node scripts/generate_decomoji_json.js"
+    "update-json": "node scripts/generate_decomoji_json.js",
+    "update-ts": "node scripts/generate_decomoji_ts.js"
   },
   "repository": {
     "type": "git",
