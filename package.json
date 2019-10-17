@@ -6,7 +6,8 @@
   "scripts": {
     "update-md": "node scripts/generate_decomoji_md.js",
     "update-json": "node scripts/generate_decomoji_json.js",
-    "update-ts": "node scripts/generate_decomoji_ts.js"
+    "update-ts": "node scripts/generate_decomoji_ts.js",
+    "postinstall": "node scripts/generate_decomoji_ts.js && node scripts/generate_decomoji_json.js"
   },
   "repository": {
     "type": "git",
