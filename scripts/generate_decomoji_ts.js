@@ -32,3 +32,4 @@ function generate_decomoji_ts(type) {
 
 generate_decomoji_ts('basic')
 generate_decomoji_ts('extra')
+generate_decomoji_ts('explicit')

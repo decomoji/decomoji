@@ -7,7 +7,7 @@ const header = {
   extra: `# デコモジ拡張セット\n\n作りたいと思った気持ちのままに作った拡張セットです。使い方にご注意ください。\n\n`
 }
 
-function generate_decomoji_list(type) {
+function generate_decomoji_md(type) {
   fs.readdir(`./decomoji/${type}/`, (err, files) => {
     if(err) {
       if (err.code === 'ENOENT') {
@@ -31,5 +31,6 @@ function generate_decomoji_list(type) {
   })
 }
 
-generate_decomoji_list('basic')
-generate_decomoji_list('extra')
+generate_decomoji_md('basic')
+generate_decomoji_md('extra')
+generate_decomoji_md('explicit')
