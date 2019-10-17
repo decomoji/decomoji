@@ -4,7 +4,13 @@ let fs = require('fs')
 
 function generate_decomoji_ts(type) {
   fs.readdir(`./decomoji/${type}/`, (err, files) => {
-    if (err) throw err
+    if(err) {
+      if (err.code === 'ENOENT') {
+        files = ['.DS_Store']
+      } else {
+        throw err
+      }
+    }
 
     const decomoji_array = files.reduce((memo, file) => {
       return file === '.DS_Store' ? memo : memo.concat(file.split('.')[0])

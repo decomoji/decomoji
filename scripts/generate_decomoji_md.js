@@ -9,7 +9,13 @@ const header = {
 
 function generate_decomoji_list(type) {
   fs.readdir(`./decomoji/${type}/`, (err, files) => {
-    if (err) throw err
+    if(err) {
+      if (err.code === 'ENOENT') {
+        files = ['.DS_Store']
+      } else {
+        throw err
+      }
+    }
 
     let text = ''
 
