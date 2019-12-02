@@ -52,7 +52,7 @@ bundle exec ruby import_extra.rb
 ```bash
 git clone git@github.com:decomoji/slack-reaction-decomoji.git
 cd slack-reaction-decomoji/
-docker-compose --rm run app bundle exec ruby import.rb
+docker-compose run --rm app bundle exec ruby import.rb
 ```
 
 `import.rb`を実行すると、チーム名とあなたのアカウントとパスワードを聞かれるのでそれぞれ入力してください。`decomoji/basic/`にあるファイルが一つずつ登録されていきます。同じファイル名のカスタム絵文字がすでにある場合はスキップされます。
@@ -62,5 +62,5 @@ docker-compose --rm run app bundle exec ruby import.rb
 #### 拡張セットを登録する
 
 ```bash
-docker-compose --rm run app bundle exec import_extra.rb
+docker-compose run --rm app bundle exec import_extra.rb
 ```
