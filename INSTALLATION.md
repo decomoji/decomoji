@@ -62,5 +62,5 @@ docker-compose run --rm app bundle exec ruby import.rb
 #### 拡張セットを登録する
 
 ```bash
-docker-compose run --rm app bundle exec run import_extra.rb
+docker-compose run --rm app bundle exec ruby import_extra.rb
 ```
