@@ -12,7 +12,7 @@ class Remover
   def serial
     ask_team_name
     move_to_emoji_page
-    upload_decomojis
+    remove_decomojis
   end
 
   private
@@ -65,7 +65,7 @@ class Remover
     end
   end
 
-  def upload_decomojis
+  def remove_decomojis
     emojis = list_emojis
     files = Dir.glob(@remove_img_dir + "/*.png")
     len = files.length
