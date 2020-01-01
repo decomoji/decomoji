@@ -1,8 +1,8 @@
 .DS_Store
 Thumbs.db
 .bundle
+.history
 vendor
 json
-ts
-node_modules
+tsnode_modules
 inputs.json
