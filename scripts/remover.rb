@@ -1,11 +1,10 @@
 # Decomoji Remover
 class Remover
-  DEFAULT_REMOVE_IMG_DIR = "basic"
-
-  def initialize(remove_img_dir: nil)
+  def initialize(remove_img_target: nil, target_mode: nil)
     @page = nil
     @agent = Mechanize.new
-    @remove_img_dir = remove_img_dir || DEFAULT_REMOVE_IMG_DIR
+    @target_mode = target_mode || 'dir'
+    @remove_img_target = remove_img_target
   end
   attr_accessor :page, :agent, :team_name, :token
 
@@ -67,10 +66,25 @@ class Remover
 
   def remove_decomojis
     emojis = list_emojis
-    files = Dir.glob(File.expand_path(File.dirname(__FILE__)) + "/../decomoji/" + @remove_img_dir + "/*.png")
+    
+    files = nil
+    if @target_mode === 'json'
+      File.open(File.expand_path(File.dirname(__FILE__)) + "/" + @remove_img_target + ".json") do |file|
+        files = JSON.load(file)
+      end
+    else
+      files = Dir.glob(File.expand_path(File.dirname(__FILE__)) + "/../decomoji/" + @remove_img_target + "/*.png")
+    end
+
+    puts "Remove mode: #{@target_mode}"
+
     len = files.length
-    files.each.with_index(1) do |path, i|
-      basename = File.basename(path, '.*')
+    if len === 0
+      puts 'Target Files not found.'
+      return
+    end
+    files.each.with_index(1) do |hash, i|
+      basename = @target_mode === 'json' ? hash : File.basename(hash, '.*')
 
       # skip if not found
       unless emojis.include?(basename)
