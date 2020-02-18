@@ -1,4 +1,14 @@
-# decomoji v4
+# decomoji v5-preview
+
+v5のプレビュー版として、作った順に `decomoji/preview/` に追加しています。このブランチはパブリックベータを兼ねています。
+
+プレビュー版のマイナーバージョンは互換性がないかもしれません。
+
+また、**削除スクリプトのテストが不十分ですので、利用によって生じた損害について一切の責任は負いません。**
+
+それゆえ、あえて npm run-script に追加していません。利用の際はスクリプトを読み、実装を理解した上で実行してください。
+
+ここから下は v4 についての README です。v5-preview を説明するものではないかもしれません。
 
 ---
 
@@ -88,7 +98,7 @@ Patreon で支援を受け付けています。
 
 ## スペシャルサンクス！
 
-[@imaz](https://github.com/imaz/) / [@geckotang](https://github.com/geckotang/) / [@ginpei](https://github.com/ginpei/) / [@watilde](https://github.com/watilde/) / [@matori](https://github.com/matori/) / [@fukayatsu](https://github.com/fukayatsu/) / [@maiha2](https://github.com/maiha2/) / [@webcre8](https://github.com/webcre8/) / [@masuP9](https://github.com/masuP9/) / [@yuheiy](https://github.com/yuheiy) / [@kubosho](https://github.com/kubosho)
+[@imaz](https://github.com/imaz/), [@geckotang](https://github.com/geckotang/), [@ginpei](https://github.com/ginpei/), [@watilde](https://github.com/watilde/), [@matori](https://github.com/matori/), [@fukayatsu](https://github.com/fukayatsu/), [@maiha2](https://github.com/maiha2/), [@webcre8](https://github.com/webcre8/), [@masuP9](https://github.com/masuP9/), [@yuheiy](https://github.com/yuheiy), [@kubosho](https://github.com/kubosho) and All Contributors!
 
 ## ライセンス
 
