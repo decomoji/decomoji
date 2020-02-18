@@ -1,6 +1,6 @@
 # Decomoji Remover
 class Remover
-  DEFAULT_REMOVE_IMG_DIR = File.expand_path(File.dirname(__FILE__)) + "/../decomoji/basic"
+  DEFAULT_REMOVE_IMG_DIR = "basic"
 
   def initialize(remove_img_dir: nil)
     @page = nil
@@ -67,7 +67,7 @@ class Remover
 
   def remove_decomojis
     emojis = list_emojis
-    files = Dir.glob(@remove_img_dir + "/*.png")
+    files = Dir.glob(File.expand_path(File.dirname(__FILE__)) + "/../decomoji/" + @remove_img_dir + "/*.png")
     len = files.length
     files.each.with_index(1) do |path, i|
       basename = File.basename(path, '.*')
