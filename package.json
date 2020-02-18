@@ -7,9 +7,7 @@
     "update-md": "node scripts/generate_decomoji_md.js",
     "update-json": "node scripts/generate_decomoji_json.js",
     "import-basic": "cd scripts/ && bundle exec ruby import.rb",
-    "import-extra": "cd scripts/ && bundle exec ruby import_extra.rb",
-    "remove-basic": "cd scripts/ && bundle exec ruby remove.rb",
-    "remove-extra": "cd scripts/ && bundle exec ruby remove_extra.rb"
+    "import-extra": "cd scripts/ && bundle exec ruby import_extra.rb"
   },
   "repository": {
     "type": "git",
