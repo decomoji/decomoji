@@ -38,7 +38,7 @@ bundle exec ruby import.rb
 拡張セット用の.rbファイルを実行してください。
 
 ```bash
-bundle exec ruby import_extra.rb
+bundle exec ruby import.rb extra
 ```
 
 ### Dockerを使って登録する
@@ -62,5 +62,5 @@ docker-compose run --rm app bundle exec ruby import.rb
 #### 拡張セットを登録する
 
 ```bash
-docker-compose run --rm app bundle exec ruby import_extra.rb
+docker-compose run --rm app bundle exec ruby import.rb extra
 ```
