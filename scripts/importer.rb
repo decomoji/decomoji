@@ -1,6 +1,6 @@
 # Decomoji Importer
 class Importer
-  DEFAULT_IMPORT_IMG_DIR = File.expand_path(File.dirname(__FILE__)) + "/../decomoji/basic"
+  DEFAULT_IMPORT_IMG_DIR = "basic"
 
   def initialize(import_img_dir: nil)
     @page = nil
@@ -67,7 +67,7 @@ class Importer
 
   def upload_decomojis
     emojis = list_emojis
-    files = Dir.glob(@import_img_dir + "/*.png")
+    files = Dir.glob(File.expand_path(File.dirname(__FILE__)) + "/../decomoji/" + @import_img_dir + "/*.png")
     len = files.length
     files.each.with_index(1) do |path, i|
       basename = File.basename(path, '.*')
