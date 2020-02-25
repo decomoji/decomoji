@@ -2,8 +2,10 @@ require 'highline/import'
 require 'json'
 require 'mechanize'
 
-require './importer'
+# sample command
+#   - bundle exec ruby import.rb preview account.json
 
-importer = Importer.new(import_img_dir: ARGV[0])
+require './importer'
+importer = Importer.new(import_target: ARGV[0], account: ARGV[1])
 importer.serial
 puts 'Done!'
