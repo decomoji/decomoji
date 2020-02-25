@@ -4,5 +4,7 @@ Thumbs.db
 .history
 vendor
 json
-tsnode_modules
+ts
+node_modules
 inputs.json
+account.json
