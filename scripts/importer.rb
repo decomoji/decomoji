@@ -1,11 +1,17 @@
 # Decomoji Importer
 class Importer
-  DEFAULT_IMPORT_IMG_DIR = "basic"
+  DEFAULT_IMPORT_TARGET = "basic"
 
-  def initialize(import_img_dir: nil)
+  def initialize(import_target: nil, account: nil)
     @page = nil
     @agent = Mechanize.new
-    @import_img_dir = import_img_dir || DEFAULT_IMPORT_IMG_DIR
+    @import_target = import_target || DEFAULT_IMPORT_TARGET
+    @account = JSON.parse("{}")
+    if account
+      @account = open(account) do |data|
+        JSON.load(data)
+      end
+    end
   end
   attr_accessor :page, :agent, :team_name, :token
 
@@ -19,17 +25,21 @@ class Importer
 
   def ask_team_name
     begin
-      @team_name = ask('Your slack team name(subdomain): ')
+      @team_name = @account ? @account['team_name'] : ask('Your slack team name(subdomain): ')
       agent.get("https://#{team_name}.slack.com")
     rescue
       puts "Not found workspace. Please try again."
+      @account['team_name'] = ask('Your slack team name(subdomain): ')
       retry
     end
+
+    puts "Team: #{@team_name}"
+    puts
   end
 
   def ask_login_info
-    @email      = ask('Login email: ')
-    @password   = ask('Login password(hidden): ') { |q| q.echo = false }
+    @email      = @account ? @account['email'] : ask('Login email: ')
+    @password   = @account ? @account['password'] : ask('Login password(hidden): ') { |q| q.echo = false }
   end
 
   def login
@@ -41,6 +51,10 @@ class Importer
     page.form.password = @password
     @page = page.form.submit
     @token = @page.body[/(?<=api_token":")[^"]+/]
+
+    puts "User: #{@email}"
+    puts "Pass: ****************"
+    puts
   end
 
   def enter_two_factor_authentication_code
@@ -62,23 +76,25 @@ class Importer
       break if page.title.include?('絵文字') || page.title.include?('Emoji')
       puts 'Login failure. Please try again.'
       puts
+      @account['email'] = ask('Login email: ')
+      @account['password'] = ask('Login password(hidden): ') { |q| q.echo = false }
     end
   end
 
   def upload_decomojis
     emojis = list_emojis
-    files = Dir.glob(File.expand_path(File.dirname(__FILE__)) + "/../decomoji/" + @import_img_dir + "/*.png")
+    files = Dir.glob(File.expand_path(File.dirname(__FILE__)) + "/../decomoji/" + @import_target + "/*.png")
     len = files.length
     files.each.with_index(1) do |path, i|
       basename = File.basename(path, '.*')
 
       # skip if already exists
       if emojis.include?(basename)
-        puts "(#{i}/#{len}) #{basename} already exists, skip"
+        puts "(#{i}/#{len})   Skip #{basename}, Already exists"
         next
       end
 
-      puts "(#{i}/#{len}) importing #{basename}..."
+      puts "(#{i}/#{len}) Import #{basename}..."
 
       begin
         params = {
@@ -103,6 +119,9 @@ class Importer
         end
       end
     end
+
+    puts "Import '#{@import_target}' done!"
+    puts
   end
 
   def list_emojis
