@@ -1,10 +1,16 @@
 # Decomoji Remover
 class Remover
-  def initialize(remove_img_target: nil, target_mode: nil)
+  def initialize(remove_target: nil, target_mode: nil, account: nil)
     @page = nil
     @agent = Mechanize.new
     @target_mode = target_mode || 'dir'
-    @remove_img_target = remove_img_target
+    @remove_target = remove_target
+    @account = JSON.parse("{}")
+    if account
+      @account = open(account) do |data|
+        JSON.load(data)
+      end
+    end
   end
   attr_accessor :page, :agent, :team_name, :token
 
@@ -18,17 +24,21 @@ class Remover
 
   def ask_team_name
     begin
-      @team_name = ask('Your slack team name(subdomain): ')
+      @team_name = @account ? @account['team_name'] : ask('Your slack team name(subdomain): ')
       agent.get("https://#{team_name}.slack.com")
     rescue
       puts "Not found workspace. Please try again."
+      @account['team_name'] = ask('Your slack team name(subdomain): ')
       retry
     end
+
+    puts "Team: #{@team_name}"
+    puts
   end
 
   def ask_login_info
-    @email      = ask('Login email: ')
-    @password   = ask('Login password(hidden): ') { |q| q.echo = false }
+    @email      = @account ? @account['email'] : ask('Login email: ')
+    @password   = @account ? @account['password'] : ask('Login password(hidden): ') { |q| q.echo = false }
   end
 
   def login
@@ -40,6 +50,10 @@ class Remover
     page.form.password = @password
     @page = page.form.submit
     @token = @page.body[/(?<=api_token":")[^"]+/]
+
+    puts "User: #{@email}"
+    puts "Pass: ****************"
+    puts
   end
 
   def enter_two_factor_authentication_code
@@ -61,6 +75,8 @@ class Remover
       break if page.title.include?('絵文字') || page.title.include?('Emoji')
       puts 'Login failure. Please try again.'
       puts
+      @account['email'] = ask('Login email: ')
+      @account['password'] = ask('Login password(hidden): ') { |q| q.echo = false }
     end
   end
 
@@ -69,11 +85,11 @@ class Remover
     
     files = nil
     if @target_mode === 'json'
-      File.open(File.expand_path(File.dirname(__FILE__)) + "/" + @remove_img_target + ".json") do |file|
+      File.open(File.expand_path(File.dirname(__FILE__)) + "/" + @remove_target + ".json") do |file|
         files = JSON.load(file)
       end
     else
-      files = Dir.glob(File.expand_path(File.dirname(__FILE__)) + "/../decomoji/" + @remove_img_target + "/*.png")
+      files = Dir.glob(File.expand_path(File.dirname(__FILE__)) + "/../decomoji/" + @remove_target + "/*.png")
     end
 
     puts "Remove mode: #{@target_mode}"
@@ -88,11 +104,10 @@ class Remover
 
       # skip if not found
       unless emojis.include?(basename)
-        puts "(#{i}/#{len}) #{basename} not found, skip"
+        puts "(#{i}/#{len})   Skip #{basename}, Not found"
         next
       end
-
-      puts "(#{i}/#{len}) removing #{basename}..."
+      puts "(#{i}/#{len}) Remove #{basename}..."
 
       begin
         params = {
@@ -115,6 +130,9 @@ class Remover
         end
       end
     end
+
+    puts "Remove '#{@remove_target}' done!"
+    puts
   end
 
   def list_emojis
