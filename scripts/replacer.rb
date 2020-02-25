@@ -58,6 +58,22 @@ class Replacer
     @token = @page.body[/(?<=api_token":")[^"]+/]
   end
 
+  def move_to_emoji_page
+    loop do
+      if page && page.form['signin_2fa']
+        @is_two_factor = true
+        enter_two_factor_authentication_code
+      else
+        ask_login_info
+        login
+      end
+
+      break if page.title.include?('絵文字') || page.title.include?('Emoji')
+      puts 'Login failure. Please try again.'
+      puts
+    end
+  end
+
   def remove_decomojis
     emojis = list_emojis
     
@@ -105,22 +121,6 @@ class Replacer
     end
 
     puts "Remove '#{@remove_target}' done!"
-  end
-
-  def move_to_emoji_page
-    loop do
-      if page && page.form['signin_2fa']
-        @is_two_factor = true
-        enter_two_factor_authentication_code
-      else
-        ask_login_info
-        login
-      end
-
-      break if page.title.include?('絵文字') || page.title.include?('Emoji')
-      puts 'Login failure. Please try again.'
-      puts
-    end
   end
 
   def upload_decomojis
