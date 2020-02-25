@@ -71,11 +71,11 @@ class Replacer
 
       # skip if not found
       unless emojis.include?(basename)
-        puts "(#{i}/#{len}) #{basename} not found, skip"
+        puts "[Skip] (#{i}/#{len}) #{basename} not found"
         next
       end
 
-      puts "(#{i}/#{len}) removing #{basename}..."
+      puts "[Load] (#{i}/#{len}) removing #{basename}..."
 
       begin
         params = {
@@ -99,7 +99,7 @@ class Replacer
       end
     end
 
-    puts "Remove '#{@import_target}' done!"
+    puts "Remove '#{@remove_target}' done!"
   end
 
   def move_to_emoji_page
@@ -127,11 +127,11 @@ class Replacer
 
       # skip if already exists
       if emojis.include?(basename)
-        puts "(#{i}/#{len}) #{basename} already exists, skip"
+        puts "[Skip] (#{i}/#{len}) #{basename} already exists"
         next
       end
 
-      puts "(#{i}/#{len}) importing #{basename}..."
+      puts "[Load] (#{i}/#{len}) importing #{basename}..."
 
       begin
         params = {
