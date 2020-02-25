@@ -8,7 +8,7 @@ class Replacer
     @agent = Mechanize.new
     @remove_target = remove_target || DEFAULT_REMOVE_TARGET
     @import_target = import_target || DEFAULT_IMPORT_TARGET
-    @account = nil
+    @account = JSON.parse("{}")
     if account
       @account = open(account) do |data|
         JSON.load(data)
@@ -32,6 +32,7 @@ class Replacer
       agent.get("https://#{team_name}.slack.com")
     rescue
       puts "Not found workspace. Please try again."
+      @account['team_name'] = ask('Your slack team name(subdomain): ')
       retry
     end
 
@@ -76,6 +77,8 @@ class Replacer
       break if page.title.include?('絵文字') || page.title.include?('Emoji')
       puts 'Login failure. Please try again.'
       puts
+      @account['email'] = ask('Login email: ')
+      @account['password'] = ask('Login password(hidden): ') { |q| q.echo = false }
     end
   end
 
