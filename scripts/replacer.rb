@@ -3,11 +3,17 @@ class Replacer
   DEFAULT_IMPORT_TARGET = "basic"
   DEFAULT_REMOVE_TARGET = "v4-basic.json"
 
-  def initialize(remove_target: nil, import_target: nil)
+  def initialize(remove_target: nil, import_target: nil, account: nil)
     @page = nil
     @agent = Mechanize.new
     @remove_target = remove_target || DEFAULT_REMOVE_TARGET
     @import_target = import_target || DEFAULT_IMPORT_TARGET
+    @account = nil
+    if account
+      @account = open(account) do |data|
+        JSON.load(data)
+      end
+    end
   end
   attr_accessor :page, :agent, :team_name, :token
 
@@ -15,7 +21,6 @@ class Replacer
     ask_team_name
     move_to_emoji_page
     remove_decomojis
-    sleep(1)
     upload_decomojis
   end
 
@@ -23,7 +28,7 @@ class Replacer
 
   def ask_team_name
     begin
-      @team_name = ask('Your slack team name(subdomain): ')
+      @team_name = @account ? @account['team_name'] : ask('Your slack team name(subdomain): ')
       agent.get("https://#{team_name}.slack.com")
     rescue
       puts "Not found workspace. Please try again."
@@ -34,8 +39,8 @@ class Replacer
   end
 
   def ask_login_info
-    @email      = ask('Login email: ')
-    @password   = ask('Login password(hidden): ') { |q| q.echo = false }
+    @email      = @account ? @account['email'] : ask('Login email: ')
+    @password   = @account ? @account['password'] : ask('Login password(hidden): ') { |q| q.echo = false }
 
     puts "User: #{@email}"
     puts "Pass: ****************"
