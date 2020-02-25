@@ -29,11 +29,16 @@ class Replacer
       puts "Not found workspace. Please try again."
       retry
     end
+
+    puts "Team: #{@team_name}"
   end
 
   def ask_login_info
     @email      = ask('Login email: ')
     @password   = ask('Login password(hidden): ') { |q| q.echo = false }
+
+    puts "User: #{@email}"
+    puts "Pass: ****************"
   end
 
   def login
