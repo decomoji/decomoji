@@ -37,14 +37,12 @@ class Replacer
     end
 
     puts "Team: #{@team_name}"
+    puts
   end
 
   def ask_login_info
     @email      = @account ? @account['email'] : ask('Login email: ')
     @password   = @account ? @account['password'] : ask('Login password(hidden): ') { |q| q.echo = false }
-
-    puts "User: #{@email}"
-    puts "Pass: ****************"
   end
 
   def login
@@ -56,6 +54,10 @@ class Replacer
     page.form.password = @password
     @page = page.form.submit
     @token = @page.body[/(?<=api_token":")[^"]+/]
+
+    puts "User: #{@email}"
+    puts "Pass: ****************"
+    puts
   end
 
   def enter_two_factor_authentication_code
@@ -100,11 +102,10 @@ class Replacer
 
       # skip if not found
       unless emojis.include?(basename)
-        puts "[Skip] (#{i}/#{len}) #{basename} not found"
+        puts "(#{i}/#{len})   Skip #{basename}, Not found"
         next
       end
-
-      puts "[Load] (#{i}/#{len}) removing #{basename}..."
+      puts "(#{i}/#{len}) Remove #{basename}..."
 
       begin
         params = {
@@ -129,6 +130,7 @@ class Replacer
     end
 
     puts "Remove '#{@remove_target}' done!"
+    puts
   end
 
   def upload_decomojis
@@ -140,11 +142,11 @@ class Replacer
 
       # skip if already exists
       if emojis.include?(basename)
-        puts "[Skip] (#{i}/#{len}) #{basename} already exists"
+        puts "(#{i}/#{len})   Skip #{basename}, Already exists"
         next
       end
 
-      puts "[Load] (#{i}/#{len}) importing #{basename}..."
+      puts "(#{i}/#{len}) Import #{basename}..."
 
       begin
         params = {
@@ -171,6 +173,7 @@ class Replacer
     end
 
     puts "Import '#{@import_target}' done!"
+    puts
   end
 
   def list_emojis
