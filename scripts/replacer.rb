@@ -84,20 +84,29 @@ class Replacer
     end
   end
 
-  def remove_decomojis
-    emojis = list_emojis
-    
+  def list_remove_filenames
     files = nil
     File.open(File.expand_path(File.dirname(__FILE__)) + "/" + @remove_target) do |file|
       files = JSON.load(file)
     end
+    files
+  end
 
-    len = files.length
+  def list_import_files
+    files = Dir.glob(File.expand_path(File.dirname(__FILE__)) + "/../decomoji/" + @import_target + "/*.png")
+    files
+  end
+
+  def remove_decomojis
+    filenames = list_remove_filenames
+    emojis = list_emojis
+
+    len = filenames.length
     if len === 0
       puts 'Target Files not found.'
       return
     end
-    files.each.with_index(1) do |hash, i|
+    filenames.each.with_index(1) do |hash, i|
       basename = @target_mode === 'json' ? hash : File.basename(hash, '.*')
 
       # skip if not found
@@ -134,13 +143,21 @@ class Replacer
   end
 
   def upload_decomojis
+    imports = list_import_files
+    removes = list_remove_filenames
     emojis = list_emojis
-    files = Dir.glob(File.expand_path(File.dirname(__FILE__)) + "/../decomoji/" + @import_target + "/*.png")
-    len = files.length
-    files.each.with_index(1) do |path, i|
+    
+    len = imports.length
+    imports.each.with_index(1) do |path, i|
       basename = File.basename(path, '.*')
 
-      # skip if already exists
+      # 追加しようとしているデコモジが削除したデコモジリストに含まれていなかったらスキップする
+      unless removes.include?(basename)
+        puts "(#{i}/#{len})   Skip #{basename}, Not target"
+        next
+      end
+
+      # 追加しようとしているデコモジが既に存在していたらスキップする
       if emojis.include?(basename)
         puts "(#{i}/#{len})   Skip #{basename}, Already exists"
         next
