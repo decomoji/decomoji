@@ -6,7 +6,7 @@ class Importer
     @page = nil
     @agent = Mechanize.new
     @import_target = import_target || DEFAULT_IMPORT_TARGET
-    @account = JSON.parse("{}")
+    @account = nil
     if account
       @account = open(account) do |data|
         JSON.load(data)
@@ -34,7 +34,6 @@ class Importer
     end
 
     puts "Team: #{@team_name}"
-    puts
   end
 
   def ask_login_info
@@ -54,7 +53,6 @@ class Importer
 
     puts "User: #{@email}"
     puts "Pass: ****************"
-    puts
   end
 
   def enter_two_factor_authentication_code
