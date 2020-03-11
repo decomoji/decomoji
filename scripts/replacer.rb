@@ -8,7 +8,7 @@ class Replacer
     @agent = Mechanize.new
     @remove_target = remove_target || DEFAULT_REMOVE_TARGET
     @import_target = import_target || DEFAULT_IMPORT_TARGET
-    @account = JSON.parse("{}")
+    @account = nil
     if account
       @account = open(account) do |data|
         JSON.load(data)
@@ -37,7 +37,6 @@ class Replacer
     end
 
     puts "Team: #{@team_name}"
-    puts
   end
 
   def ask_login_info
@@ -57,7 +56,6 @@ class Replacer
 
     puts "User: #{@email}"
     puts "Pass: ****************"
-    puts
   end
 
   def enter_two_factor_authentication_code

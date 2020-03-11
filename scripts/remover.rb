@@ -5,7 +5,7 @@ class Remover
     @agent = Mechanize.new
     @target_mode = target_mode || 'dir'
     @remove_target = remove_target
-    @account = JSON.parse("{}")
+    @account = nil
     if account
       @account = open(account) do |data|
         JSON.load(data)
@@ -33,7 +33,6 @@ class Remover
     end
 
     puts "Team: #{@team_name}"
-    puts
   end
 
   def ask_login_info
@@ -53,7 +52,6 @@ class Remover
 
     puts "User: #{@email}"
     puts "Pass: ****************"
-    puts
   end
 
   def enter_two_factor_authentication_code
