@@ -4,8 +4,9 @@ require 'mechanize'
 
 # sample command
 #   - bundle exec ruby import.rb preview account.json
+#   - bundle exec ruby import.rb alias-standard.json account.json
 
 require './importer'
-importer = Importer.new(import_target: ARGV[0], account: ARGV[1])
+importer = Importer.new(import_target: ARGV[0], import_mode: ARGV[1], account: ARGV[2])
 importer.serial
 puts 'Done!'
