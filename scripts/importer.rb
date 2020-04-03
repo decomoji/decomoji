@@ -1,11 +1,13 @@
 # Decomoji Importer
 class Importer
   DEFAULT_IMPORT_TARGET = "basic"
+  DEFAULT_IMPORT_MODE = "data"
 
-  def initialize(import_target: nil, account: nil)
+  def initialize(import_target: nil, import_mode: nil, account: nil)
     @page = nil
     @agent = Mechanize.new
     @import_target = import_target || DEFAULT_IMPORT_TARGET
+    @import_mode = import_mode || DEFAULT_IMPORT_MODE
     @account = nil
     if account
       @account = open(account) do |data|
@@ -81,10 +83,29 @@ class Importer
 
   def upload_decomojis
     emojis = list_emojis
-    files = Dir.glob(File.expand_path(File.dirname(__FILE__)) + "/../decomoji/" + @import_target + "/*.png")
+
+    files = nil
+    if @import_mode === 'alias'
+      File.open(File.expand_path(File.dirname(__FILE__)) + "/" + @import_target) do |file|
+        files = JSON.load(file)
+      end
+    else
+      files = Dir.glob(File.expand_path(File.dirname(__FILE__)) + "/../decomoji/" + @import_target + "/*.png")
+    end
+
+    puts "Import mode: #{@import_mode}"
+
     len = files.length
-    files.each.with_index(1) do |path, i|
-      basename = File.basename(path, '.*')
+    basename = nil
+    alias_for = nil
+
+    files.each.with_index(1) do |item, i|
+      if @import_mode === 'alias'
+        basename = item['basename']
+        alias_for = ':'+item['alias_for']+':'
+      else
+        basename = File.basename(item, '.*')
+      end
 
       # skip if already exists
       if emojis.include?(basename)
@@ -95,12 +116,22 @@ class Importer
       puts "(#{i}/#{len}) Import #{basename}..."
 
       begin
-        params = {
-          name: basename,
-          image: File.new(path),
-          mode: 'data',
-          token: token
-        }
+        params = nil
+        if @import_mode === 'alias'
+          params = {
+            name: basename,
+            alias_for: alias_for,
+            mode: 'alias',
+            token: token
+          }
+        else
+          params = {
+            name: basename,
+            image: File.new(item),
+            mode: 'data',
+            token: token
+          }
+        end
         response = agent.post("https://#{team_name}.slack.com/api/emoji.add", params)
       rescue Mechanize::ResponseCodeError => e
         if @is_two_factor
