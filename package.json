@@ -4,6 +4,7 @@
   "description": "Fast, Fun, High-context communication. The perfect assets is this",
   "main": "",
   "scripts": {
+    "prettier:fix": "prettier --write scripts/*.js",
     "update-md": "node scripts/generate_decomoji_md.js",
     "update-json": "node scripts/generate_decomoji_json.js"
   },
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/decomoji/slack-reaction-decomoji#readme",
   "dependencies": {
+    "prettier": "^2.0.5",
     "puppeteer": "^3.0.2"
   }
 }
