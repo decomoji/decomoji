@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/decomoji/slack-reaction-decomoji/issues"
   },
-  "homepage": "https://github.com/decomoji/slack-reaction-decomoji#readme"
+  "homepage": "https://github.com/decomoji/slack-reaction-decomoji#readme",
+  "dependencies": {
+    "puppeteer": "^3.0.2"
+  }
 }
