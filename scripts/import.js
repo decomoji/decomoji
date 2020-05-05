@@ -1,9 +1,10 @@
 const inquirer = require("./inquirer");
 
-let inputs = {};
-
-inquirer((answers) => {
-  // console.log(JSON.stringify(answers, null, "  "));
-  inputs = { ...answers }
-  console.log(inputs)
-});
+if (process.argv[2]) {
+  const inputs = require("./inputs.json");
+  console.log(inputs);
+} else {
+  inquirer((answers) => {
+    console.log(JSON.stringify(answers, null, "  "));
+  });
+}
