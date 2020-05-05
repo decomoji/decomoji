@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/decomoji/slack-reaction-decomoji#readme",
   "dependencies": {
+    "inquirer": "^7.1.0",
     "prettier": "^2.0.5",
     "puppeteer": "^3.0.2"
   }
