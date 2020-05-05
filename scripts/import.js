@@ -19,14 +19,20 @@ const getEmojiList = async (inputs) => {
     Accept: "application/json",
   };
 
-  await fetch(`https://${inputs.team_name}.slack.com/api/emoji.adminList`, {
-    method,
-    headers,
-    body,
-  })
-    .then((res) => res.json())
-    .then(console.log)
-    .catch(console.error);
+  try {
+    const response = await fetch(
+      `https://${inputs.team_name}.slack.com/api/emoji.adminList`,
+      {
+        method,
+        headers,
+        body,
+      }
+    );
+    const data = await response.json();
+    return data;
+  } catch (e) {
+    return e;
+  }
 };
 
 const puppeteerConnect = async (inputs) => {
@@ -50,7 +56,8 @@ const puppeteerConnect = async (inputs) => {
   await page.screenshot({ path: "screenshot.png" });
 
   // ここから /customize/emoji に遷移後の処理
-  await page.evaluate(getEmojiList(), inputs);
+  const emojiList = await page.evaluate(getEmojiList, inputs);
+  console.log(emojiList);
 
   await browser.close();
 };
