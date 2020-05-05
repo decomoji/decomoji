@@ -56,10 +56,7 @@ const puppeteerConnect = async (inputs) => {
 };
 
 if (process.argv[2]) {
-  const inputs = require("./inputs.json");
-  puppeteerConnect(inputs);
+  puppeteerConnect(require("./inputs.json"));
 } else {
-  inquirer((answers) => {
-    puppeteerConnect(answers);
-  });
+  inquirer((answers) => puppeteerConnect(answers));
 }
