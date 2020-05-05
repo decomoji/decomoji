@@ -1,7 +1,7 @@
 const inquirer = require("./inquirer");
 const puppeteer = require("puppeteer");
 
-async function importer(inputs) {
+const puppeteerConnect = async (inputs) => {
   // puppeteer でブラウザを起動する
   const browser = await puppeteer.launch();
   // ページを追加する
@@ -50,14 +50,14 @@ async function importer(inputs) {
   }, inputs);
 
   await browser.close();
-}
+};
 
 if (process.argv[2]) {
   const inputs = require("./inputs.json");
-  importer(inputs);
+  puppeteerConnect(inputs);
 } else {
   inquirer((answers) => {
     // console.log(JSON.stringify(answers, null, "  "));
-    importer(answers);
+    puppeteerConnect(answers);
   });
 }
