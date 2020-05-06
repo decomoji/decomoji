@@ -1,6 +1,13 @@
 const inquirer = require("./inquirer");
 const puppeteer = require("puppeteer");
 
+const isStringOfNotEmpty = (value) => {
+  return (
+    Object.prototype.toString.call(value) === "[object String]" &&
+    value.length > 0
+  );
+};
+
 // オプションをパースする
 const options = {};
 ((argv) => {
@@ -81,7 +88,13 @@ const puppeteerConnect = async (inputs) => {
 };
 
 if (options.inputs) {
-  puppeteerConnect(require(options.inputs));
+  // --inputs=./something.json などと値が指定されていたらそれを require し
+  // --inputs キーのみの場合はデフォルトで `./inputs.json` を require する
+  puppeteerConnect(
+    require(isStringOfNotEmpty(options.inputs)
+      ? options.inputs
+      : "./inputs.json")
+  );
 } else {
   inquirer((answers) => puppeteerConnect(answers));
 }
