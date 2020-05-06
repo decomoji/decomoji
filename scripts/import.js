@@ -1,11 +1,21 @@
 const askSettings = require("./askSettings");
+const inquirer = require("inquirer");
 const puppeteer = require("puppeteer");
+
+const MESSAGE_NO_VALUE = "Input required.";
 
 const isStringOfNotEmpty = (value) => {
   return (
     Object.prototype.toString.call(value) === "[object String]" &&
     value.length > 0
   );
+};
+
+const isInputs = (value) => {
+  return Object.prototype.toString.call(value) === "[object String]" &&
+    value.length > 0
+    ? true
+    : MESSAGE_NO_VALUE;
 };
 
 // オプションをパースする
@@ -57,9 +67,7 @@ const getEmojiList = async (team_name) => {
 
 const puppeteerConnect = async (inputs) => {
   // puppeteer でブラウザを起動する
-  const browser = await puppeteer.launch(
-    options.debug ? { devtools: true } : {}
-  );
+  const browser = await puppeteer.launch({ devtools: options.debug });
   // ページを追加する
   const page = await browser.newPage();
   // カスタム絵文字画面に遷移する
@@ -71,11 +79,35 @@ const puppeteerConnect = async (inputs) => {
   // パスワードを入力する
   await page.type("#password", inputs.password);
   // 「サインイン」する
-  await page.click("#signin_btn");
-  // カスタム絵文字のセクションが見つかるまで待つ
-  await page.waitFor("#list_emoji_section", { timeout: 180000 });
-  // スクリーンショットを保存する
-  // await page.screenshot({ path: "screenshot.png" });
+  // 遷移待ち
+  await Promise.all([
+    page.click("#signin_btn"),
+    page.waitForNavigation({ waitUntil: "networkidle0" }),
+  ]);
+  // 2FA入力欄の有無をチェック
+  const has2FAInput = await page.$('[name="2fa_code"]').then((res) => !!res);
+  // 2FA入力欄があれば入力を求めて inquirer を起動する
+  if (has2FAInput) {
+    try {
+      const two_factor_answer = await inquirer.prompt({
+        type: "password",
+        name: "2fa",
+        mask: "*",
+        message: "Enter a 2FA code.",
+        validate: isInputs,
+      });
+      await page.type('[name="2fa_code"]', two_factor_answer["2fa"]);
+      // 遷移待ち
+      await Promise.all([
+        page.click("#signin_btn"),
+        page.waitForNavigation({ waitUntil: "networkidle0" }),
+      ]);
+    } catch (e) {
+      return e;
+    }
+  }
+  // カスタム絵文字セクションが見つかるまで待つ
+  await page.waitForSelector("#list_emoji_section", { timeout: 180000 });
 
   // ここから /customize/emoji に遷移後の処理
   const emojiList = await page.evaluate(getEmojiList, inputs.team_name);
