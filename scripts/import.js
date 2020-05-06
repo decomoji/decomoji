@@ -44,7 +44,7 @@ const getEmojiList = async (team_name) => {
       if (data.paging.page === data.paging.pages) {
         return;
       }
-      await _fetchEmojiAdminList(data.paging.page+1);
+      await _fetchEmojiAdminList(data.paging.page + 1);
     } catch (e) {
       return e;
     }
@@ -72,8 +72,8 @@ const puppeteerConnect = async (inputs) => {
   await page.type("#password", inputs.password);
   // 「サインイン」する
   await page.click("#signin_btn");
-  // カスタム絵文字検索フィールドが見つかるまで待つ
-  await page.waitFor("#customize_emoji_wrapper_search", { timeout: 180000 });
+  // カスタム絵文字のセクションが見つかるまで待つ
+  await page.waitFor("#list_emoji_section", { timeout: 180000 });
   // スクリーンショットを保存する
   // await page.screenshot({ path: "screenshot.png" });
 
