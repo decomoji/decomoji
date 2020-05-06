@@ -1,6 +1,16 @@
 const inquirer = require("./inquirer");
 const puppeteer = require("puppeteer");
 
+// オプションをパースする
+const options = {};
+((argv) => {
+  argv.forEach((v, i) => {
+    const opt = v.split("=");
+    const key = opt[0].replace("--", "");
+    options[key] = opt.length > 1 ? opt[1] : true;
+  });
+})(process.argv);
+
 const getEmojiList = async (inputs) => {
   const param = {
     query: "",
@@ -37,7 +47,9 @@ const getEmojiList = async (inputs) => {
 
 const puppeteerConnect = async (inputs) => {
   // puppeteer でブラウザを起動する
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch(
+    options.debug ? { devtools: true } : {}
+  );
   // ページを追加する
   const page = await browser.newPage();
   // カスタム絵文字画面に遷移する
@@ -53,17 +65,20 @@ const puppeteerConnect = async (inputs) => {
   // カスタム絵文字検索フィールドが見つかるまで待つ
   await page.waitFor("#customize_emoji_wrapper_search", { timeout: 180000 });
   // スクリーンショットを保存する
-  await page.screenshot({ path: "screenshot.png" });
+  // await page.screenshot({ path: "screenshot.png" });
 
   // ここから /customize/emoji に遷移後の処理
   const emojiList = await page.evaluate(getEmojiList, inputs);
   console.log(emojiList);
+  console.log(emojiList.length);
 
-  await browser.close();
+  if (!options.debug) {
+    await browser.close();
+  }
 };
 
-if (process.argv[2]) {
-  puppeteerConnect(require("./inputs.json"));
+if (options.inputs) {
+  puppeteerConnect(require(options.inputs));
 } else {
   inquirer((answers) => puppeteerConnect(answers));
 }
