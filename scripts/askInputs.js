@@ -1,8 +1,9 @@
 const inquirer = require("inquirer");
 
+const convertToLowerCasedArray = require("./utilities/convertToLowerCasedArray");
+const isEmail = require("./utilities/isEmail");
 const isInputs = require("./utilities/isInputs");
 const isSelects = require("./utilities/isSelects");
-const convertToLowerCasedArray = require("./utilities/convertToLowerCasedArray");
 
 // inquirer Setting
 const questions = [
@@ -16,7 +17,7 @@ const questions = [
     type: "input",
     name: "email",
     message: "Enter login email.",
-    validate: isInputs,
+    validate: isEmail,
   },
   {
     type: "password",
