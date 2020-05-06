@@ -123,6 +123,12 @@ const puppeteerConnect = async (inputs) => {
             validate: isInputs,
           }
         ]);
+        // Recaptcha があるかをチェックする
+        if (await page.$("#slack_captcha").then((res) => !!res)) {
+          // Recaptcha があったら無理なので諦める
+          console.log("\n\nOops, you might judged a Bot. Please wait and try again.\n\n")
+          await browser.close();
+        }
         // フォームに再入力して submit する
         await page.type("#email", retry.email);
         await page.type("#password", retry.password);
