@@ -1,4 +1,3 @@
-const askSettings = require("./askSettings");
 const inquirer = require("inquirer");
 const puppeteer = require("puppeteer");
 
@@ -128,5 +127,5 @@ if (options.inputs) {
       : "./inputs.json")
   );
 } else {
-  askSettings((inputs) => puppeteerConnect(inputs));
+  askInputs((inputs) => puppeteerConnect(inputs));
 }
