@@ -11,38 +11,41 @@ const options = {};
   });
 })(process.argv);
 
-const getEmojiList = async (inputs) => {
-  const param = {
-    query: "",
-    page: 1,
-    count: 100,
-    token: boot_data.api_token,
-    _x_reason: "customize-emoji-new-query",
-    _x_mode: "online",
-  };
-  const method = "POST";
-  const body = Object.keys(param).reduce(
-    (o, key) => (o.set(key, param[key]), o),
-    new FormData()
-  );
-  const headers = {
-    Accept: "application/json",
-  };
-
-  try {
-    const response = await fetch(
-      `https://${inputs.team_name}.slack.com/api/emoji.adminList`,
-      {
-        method,
-        headers,
-        body,
+const getEmojiList = async (team_name) => {
+  let emoji = [];
+  // 絵文字を全ページ分取得する
+  const _fetchEmojiAdminList = async (nextPage) => {
+    const param = {
+      page: nextPage || 1,
+      count: 100,
+      token: window.boot_data.api_token,
+    };
+    try {
+      const response = await fetch(
+        `https://${team_name}.slack.com/api/emoji.adminList`,
+        {
+          method: "POST",
+          headers: { Accept: "application/json" },
+          body: Object.keys(param).reduce(
+            (o, key) => (o.set(key, param[key]), o),
+            new FormData()
+          ),
+        }
+      );
+      const data = await response.json();
+      emoji.push(...data.emoji);
+      if (data.paging.page === data.paging.pages) {
+        return;
       }
-    );
-    const data = await response.json();
-    return data;
-  } catch (e) {
-    return e;
-  }
+      await _fetchEmojiAdminList(data.paging.page+1);
+    } catch (e) {
+      return e;
+    }
+  };
+  // 終わるまで再起
+  await _fetchEmojiAdminList();
+  // 終わったら全絵文字を返す
+  return emoji;
 };
 
 const puppeteerConnect = async (inputs) => {
@@ -68,7 +71,7 @@ const puppeteerConnect = async (inputs) => {
   // await page.screenshot({ path: "screenshot.png" });
 
   // ここから /customize/emoji に遷移後の処理
-  const emojiList = await page.evaluate(getEmojiList, inputs);
+  const emojiList = await page.evaluate(getEmojiList, inputs.team_name);
   console.log(emojiList);
   console.log(emojiList.length);
 
