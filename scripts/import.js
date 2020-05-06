@@ -2,8 +2,9 @@ const inquirer = require("inquirer");
 const puppeteer = require("puppeteer");
 
 const askInputs = require("./askInputs");
-const isStringOfNotEmpty = require("./utilities/isStringOfNotEmpty");
+const isEmail = require("./utilities/isEmail");
 const isInputs = require("./utilities/isInputs");
+const isStringOfNotEmpty = require("./utilities/isStringOfNotEmpty");
 
 // オプションをパースする
 const options = {};
@@ -94,11 +95,54 @@ const puppeteerConnect = async (inputs) => {
   // パスワードを入力する
   await page.type("#password", inputs.password);
   // 「サインイン」する
-  // 遷移待ち
   await Promise.all([
     page.click("#signin_btn"),
     page.waitForNavigation({ waitUntil: "networkidle0" }),
   ]);
+  // ログインエラーになっているかをチェックする
+  if (await page.$(".alert_error").then((res) => !!res)) {
+    // ログインエラーなら inquirer を起動して email と password を再入力させる
+    const _retry = async (tried) => {
+      // 前の入力を空にしておく
+      await page.evaluate(() => document.querySelector("#email").value = "");
+      await page.evaluate(() => document.querySelector("#password").value = "");
+      try {
+        const retry = await inquirer.prompt([
+          {
+            type: "input",
+            name: "email",
+            message: `Enter login email again.`,
+            validate: isEmail,
+            default: tried.email,
+          },
+          {
+            type: "password",
+            name: "password",
+            mask: "*",
+            message: `Enter a password again.`,
+            validate: isInputs,
+          }
+        ]);
+        // フォームに再入力して submit する
+        await page.type("#email", retry.email);
+        await page.type("#password", retry.password);
+        await Promise.all([
+          page.click("#signin_btn"),
+          page.waitForNavigation({ waitUntil: "networkidle0" }),
+        ]);
+        // #signin_form がなかったらログインできたと見なして再起を抜ける
+        if (await page.$("#signin_form").then((res) => !res)) {
+          return;
+        }
+        // ログインできるまで何度でもトライ！
+        await _retry(retry);
+      } catch (e) {
+        return e;
+      }
+    }
+    // 再起をスタートする
+    await _retry(inputs)
+  }
   // 2FA入力欄の有無をチェック
   const has2FAInput = await page.$('[name="2fa_code"]').then((res) => !!res);
   // 2FA入力欄があれば入力を求めて inquirer を起動する
