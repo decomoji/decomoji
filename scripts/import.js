@@ -57,10 +57,38 @@ const puppeteerConnect = async (inputs) => {
   const browser = await puppeteer.launch({ devtools: options.debug });
   // ページを追加する
   const page = await browser.newPage();
-  // カスタム絵文字画面に遷移する
-  await page.goto(`https://${inputs.team_name}.slack.com/customize/emoji`, {
+  // ログイン画面に遷移する（チームのカスタム絵文字管理画面へのリダイレクトパラメータ付き）
+  await page.goto(`https://${inputs.team_name}.slack.com/?redir=%2Fcustomize%2Femoji#/`, {
     waitUntil: "domcontentloaded",
   });
+  // ログイン画面に遷移できたかをチェックする
+  if (await page.$("#signin_form").then((res) => !res)) {
+    // おそらくチームが存在しない場合なので inquirer を起動して team_name を再入力させる
+    const _retry = async (tried_team_name) => {
+      try {
+        const retry = await inquirer.prompt({
+          type: "input",
+          name: "team_name",
+          message: `${tried_team_name} is not found. Please try again.`,
+          validate: isInputs,
+        });
+        // ログイン画面に再び遷移する
+        await page.goto(`https://${retry.team_name}.slack.com/?redir=%2Fcustomize%2Femoji#/`, {
+          waitUntil: "domcontentloaded",
+        });
+        // ログイン画面に遷移できたかを再びチェックし、できていたら再起を抜ける
+        if (await page.$("#signin_form").then((res) => !!res)) {
+          return;
+        }
+        // ログインページに到達できるまで何度でもトライ！
+        await _retry(retry.team_name);
+      } catch (e) {
+        return e;
+      }
+    }
+    // 再起をスタートする
+    await _retry(inputs.team_name)
+  }
   // ログイン email を入力する
   await page.type("#email", inputs.email);
   // パスワードを入力する
