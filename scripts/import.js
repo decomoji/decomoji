@@ -1,4 +1,4 @@
-const inquirer = require("./inquirer");
+const askSettings = require("./askSettings");
 const puppeteer = require("puppeteer");
 
 const isStringOfNotEmpty = (value) => {
@@ -96,5 +96,5 @@ if (options.inputs) {
       : "./inputs.json")
   );
 } else {
-  inquirer((answers) => puppeteerConnect(answers));
+  askSettings((inputs) => puppeteerConnect(inputs));
 }
