@@ -149,28 +149,40 @@ const puppeteerConnect = async (inputs) => {
     // 再起をスタートする
     await _retry(inputs)
   }
-  // 2FA入力欄の有無をチェック
-  const has2FAInput = await page.$('[name="2fa_code"]').then((res) => !!res);
-  // 2FA入力欄があれば入力を求めて inquirer を起動する
-  if (has2FAInput) {
-    try {
-      const two_factor_answer = await inquirer.prompt({
-        type: "password",
-        name: "2fa",
-        mask: "*",
-        message: "Enter a 2FA code.",
-        validate: isInputs,
-      });
-      await page.type('[name="2fa_code"]', two_factor_answer["2fa"]);
-      // 遷移待ち
-      await Promise.all([
-        page.click("#signin_btn"),
-        page.waitForNavigation({ waitUntil: "networkidle0" }),
-      ]);
-    } catch (e) {
-      return e;
+  // 2FA入力欄があるかをチェックする
+  if (await page.$('[name="2fa_code"]').then((res) => !!res)) {
+    // 2FA入力欄があれば inquirer を起動して入力させる
+    const _auth = async () => {
+      // 前の入力を空にしておく
+      await page.evaluate(() => document.querySelector('[name="2fa_code"]').value = "");
+      try {
+        const answer = await inquirer.prompt({
+          type: "password",
+          name: "2fa",
+          mask: "*",
+          message: "Enter a 2FA code.",
+          validate: isInputs,
+        });
+        // フォームに入力して submit する
+        await page.type('[name="2fa_code"]', answer["2fa"]);
+        await Promise.all([
+          page.click("#signin_btn"),
+          page.waitForNavigation({ waitUntil: "networkidle0" }),
+        ]);
+        // 2FA入力欄がなかったら2FA認証できたと見なして再起を抜ける
+        if (await page.$('[name="2fa_code"]').then((res) => !res)) {
+          return;
+        }
+        // 2FA認証できるまで何度でもトライ！
+        await _auth()
+      } catch (e) {
+        return e;
+      }
     }
+    // 再起をスタートする
+    _auth();
   }
+  
   // カスタム絵文字セクションが見つかるまで待つ
   await page.waitForSelector("#list_emoji_section", { timeout: 180000 });
 
