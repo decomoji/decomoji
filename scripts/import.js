@@ -1,21 +1,9 @@
 const inquirer = require("inquirer");
 const puppeteer = require("puppeteer");
 
-const MESSAGE_NO_VALUE = "Input required.";
-
-const isStringOfNotEmpty = (value) => {
-  return (
-    Object.prototype.toString.call(value) === "[object String]" &&
-    value.length > 0
-  );
-};
-
-const isInputs = (value) => {
-  return Object.prototype.toString.call(value) === "[object String]" &&
-    value.length > 0
-    ? true
-    : MESSAGE_NO_VALUE;
-};
+const askInputs = require("./askInputs");
+const isStringOfNotEmpty = require("./utilities/isStringOfNotEmpty");
+const isInputs = require("./utilities/isInputs");
 
 // オプションをパースする
 const options = {};
