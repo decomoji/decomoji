@@ -1,27 +1,8 @@
 const inquirer = require("inquirer");
 
-const MESSAGE_NO_VALUE = "Input required.";
-const MESSAGE_NO_SELECTION = "Choice required.";
-
-// 値が空ではない文字列であるか否か、否の場合エラーメッセージを返す
-const isInputs = (value) => {
-  return Object.prototype.toString.call(value) === "[object String]" &&
-    value.length > 0
-    ? true
-    : MESSAGE_NO_VALUE;
-};
-
-// 配列のアイテムが1つ以上あるか否か、否の場合エラーメッセージを返す
-const isSelects = (selection) => {
-  return selection.length ? true : MESSAGE_NO_SELECTION;
-};
-
-//
-const convertLowerCaseMap = (array) => {
-  return array.map((item) => {
-    return item.toLowerCase();
-  });
-};
+const isInputs = require("./utilities/isInputs");
+const isSelects = require("./utilities/isSelects");
+const convertToLowerCasedArray = require("./utilities/convertToLowerCasedArray");
 
 // inquirer Setting
 const questions = [
@@ -59,7 +40,7 @@ const questions = [
         name: "Explicit",
       },
     ],
-    filter: convertLowerCaseMap,
+    filter: convertToLowerCasedArray,
     validate: isSelects,
   },
   {
