@@ -1,3 +1,26 @@
+/**
+@typedef {number} UnixTime;
+
+emoji.adminList が返す配列のアイテムの型定義
+@typedef {{
+  name: string;
+  is_alias: number;
+  alias_for: string;
+  url: string;
+  created: UnixTime;
+  team_id: string;
+  user_id: string;
+  user_display_name: string;
+  avatar_hash: string;
+  can_delete: boolean;
+  is_bad: boolean;
+  synonyms: string[];
+}} EmojiItem;
+
+emoji.adminList が返すレスポンスの型定義
+@typedef {EmojiItem[]} EmojiAdminList;
+*/
+
 const inquirer = require("inquirer");
 const puppeteer = require("puppeteer");
 
@@ -16,27 +39,8 @@ const options = {};
   });
 })(process.argv);
 
+/** @param {string}} team_name */
 const getEmojiAdminList = async (team_name) => {
-  /**
-   * emoji.adminList が返すレスポンスの型定義
-  @typedef {number} UnixTime
-  @typedef {{
-    name: string;
-    is_alias: number;
-    alias_for: string;
-    url: string;
-    created: UnixTime;
-    team_id: string;
-    user_id: string;
-    user_display_name: string;
-    avatar_hash: string;
-    can_delete: boolean;
-    is_bad: boolean;
-    synonyms: string[];
-  }} EmojiItem
-  @typedef {EmojiItem[]} EmojiAdminList
-  */
-
   /** @type {EmojiAdminList} */
   let emoji = [];
   // 絵文字を全ページ分取得する
