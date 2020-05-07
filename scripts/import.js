@@ -17,6 +17,27 @@ const options = {};
 })(process.argv);
 
 const getEmojiAdminList = async (team_name) => {
+  /**
+   * emoji.adminList が返すレスポンスの型定義
+  @typedef {number} UnixTime
+  @typedef {{
+    name: string;
+    is_alias: number;
+    alias_for: string;
+    url: string;
+    created: UnixTime;
+    team_id: string;
+    user_id: string;
+    user_display_name: string;
+    avatar_hash: string;
+    can_delete: boolean;
+    is_bad: boolean;
+    synonyms: string[];
+  }} EmojiItem
+  @typedef {EmojiItem[]} EmojiAdminList
+  */
+
+  /** @type {EmojiAdminList} */
   let emoji = [];
   // 絵文字を全ページ分取得する
   const _fetch = async (nextPage) => {
@@ -199,10 +220,14 @@ const puppeteerConnect = async (inputs) => {
    *    - これにより、自分で登録するデコモジをカスタマイズできる。カスタマイズの支援は decomoji-finder に搭載する
    *    - 別ディレクトリを指定して抽出するオプションも備えたい
    *  - デコモジを1つずつPostする
+   *    - emojiAdminList にファイルがあったら override するか？ emoji.remove したりなんなりが必要だ…
    */
-
+  // 登録済みのカスタム絵文字リストを取得
   const emojiAdminList = await page.evaluate(getEmojiAdminList, inputs.team_name);
+  console.log(emojiAdminList)
 
+  
+  
   // 処理が終わったらブラウザを閉じる
   if (!options.debug) {
     await browser.close();
