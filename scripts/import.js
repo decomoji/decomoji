@@ -1,5 +1,18 @@
 /**
+@typedef {"basic" | "extra" | "explicit"} Category;
+@typedef {"add" | "alias" | "remove"} Mode;
 @typedef {number} UnixTime;
+
+inputs.json もしくは inquirer のレスポンスの型定義
+@typedef {{
+  team_name: string;
+  email: string;
+  password: string;
+  categories: Category[];
+  suffix: boolean;
+  custom_suffix: boolean;
+  mode: Mode;
+}} Inputs;
 
 emoji.adminList が返す配列のアイテムの型定義
 @typedef {{
@@ -21,8 +34,10 @@ emoji.adminList が返すレスポンスの型定義
 @typedef {EmojiItem[]} EmojiAdminList;
 */
 
+const fs = require("fs");
 const inquirer = require("inquirer");
 const puppeteer = require("puppeteer");
+const rootPath = require("path").resolve("");
 
 const askInputs = require("./askInputs");
 const isEmail = require("./utilities/isEmail");
@@ -78,6 +93,36 @@ const getEmojiAdminList = async (team_name) => {
   return emoji;
 };
 
+/** @param {Category} categories */
+const getTargetDecomojiList = async (categories) => {
+  let decomojiList = [];
+  try {
+    categories.forEach((category, i) => {
+      fs.readdir(
+        `./decomoji/${category}/`,
+        (e, files) => {
+          if (e) {
+            console.log(e)
+            if (e.code === "ENOENT") {
+              console.log("ENOENT")
+              // ディレクトリにファイルがない場合、空の配列を出力させる
+              files = [];
+            } else {
+              throw e;
+            }
+          }
+          console.log(files)
+          decomojiList = [...decomojiList, ...files];
+        }
+      )
+    });
+  } catch(e) {
+    return e;
+  }
+  return decomojiList;
+}
+
+/** @param {Inputs} inputs */
 const puppeteerConnect = async (inputs) => {
   /**
    * Puppeteer を起動する
@@ -227,10 +272,13 @@ const puppeteerConnect = async (inputs) => {
    *    - emojiAdminList にファイルがあったら override するか？ emoji.remove したりなんなりが必要だ…
    */
   // 登録済みのカスタム絵文字リストを取得
-  const emojiAdminList = await page.evaluate(getEmojiAdminList, inputs.team_name);
-  console.log(emojiAdminList)
+  // const emojiAdminList = await page.evaluate(getEmojiAdminList, inputs.team_name);
+  // console.log(emojiAdminList)
+  // console.log(emojiAdminList.length)
 
-  
+  const decomojiList = await getTargetDecomojiList(inputs.categories);
+  console.log(decomojiList)
+  console.log(decomojiList.length)
   
   // 処理が終わったらブラウザを閉じる
   if (!options.debug) {
