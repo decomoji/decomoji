@@ -16,10 +16,10 @@ const options = {};
   });
 })(process.argv);
 
-const getEmojiList = async (team_name) => {
+const getEmojiAdminList = async (team_name) => {
   let emoji = [];
   // 絵文字を全ページ分取得する
-  const _fetchEmojiAdminList = async (nextPage) => {
+  const _fetch = async (nextPage) => {
     const param = {
       page: nextPage || 1,
       count: 100,
@@ -42,22 +42,27 @@ const getEmojiList = async (team_name) => {
       if (data.paging.page === data.paging.pages) {
         return;
       }
-      await _fetchEmojiAdminList(data.paging.page + 1);
+      await _fetch(data.paging.page + 1);
     } catch (e) {
       return e;
     }
   };
   // 終わるまで再起
-  await _fetchEmojiAdminList();
+  await _fetch();
   // 終わったら全絵文字を返す
   return emoji;
 };
 
 const puppeteerConnect = async (inputs) => {
+  /**
+   * Puppeteer を起動する
+   */
   // puppeteer でブラウザを起動する
   const browser = await puppeteer.launch({ devtools: options.debug });
   // ページを追加する
   const page = await browser.newPage();
+
+
   // ログイン画面に遷移する（チームのカスタム絵文字管理画面へのリダイレクトパラメータ付き）
   await page.goto(`https://${inputs.team_name}.slack.com/?redir=%2Fcustomize%2Femoji#/`, {
     waitUntil: "domcontentloaded",
@@ -182,15 +187,23 @@ const puppeteerConnect = async (inputs) => {
     // 再起をスタートする
     _auth();
   }
-  
+
   // カスタム絵文字セクションが見つかるまで待つ
   await page.waitForSelector("#list_emoji_section", { timeout: 180000 });
 
-  // ここから /customize/emoji に遷移後の処理
-  const emojiList = await page.evaluate(getEmojiList, inputs.team_name);
-  console.log(emojiList);
-  console.log(emojiList.length);
+  /**
+   * /customize/emoji に遷移後の処理
+   *  - 登録済みカスタム絵文字を取得する（emojiAdminList）
+   *  - 登録するデコモジを取得する（decomojiList）
+   *    - v4 ではカテゴリのディレクトリ内を全てさらうなどの実装をするが、v5 では全てのデコモジが入ったディレクトリから json を元に特定ファイルだけ抽出する実装に変える
+   *    - これにより、自分で登録するデコモジをカスタマイズできる。カスタマイズの支援は decomoji-finder に搭載する
+   *    - 別ディレクトリを指定して抽出するオプションも備えたい
+   *  - デコモジを1つずつPostする
+   */
 
+  const emojiAdminList = await page.evaluate(getEmojiAdminList, inputs.team_name);
+
+  // 処理が終わったらブラウザを閉じる
   if (!options.debug) {
     await browser.close();
   }
