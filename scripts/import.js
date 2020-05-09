@@ -54,7 +54,7 @@ const options = {};
   });
 })(process.argv);
 
-/** @param {string}} team_name */
+/** @param {string} team_name */
 const getEmojiAdminList = async (team_name) => {
   /** @type {EmojiAdminList} */
   let emoji = [];
@@ -93,32 +93,39 @@ const getEmojiAdminList = async (team_name) => {
   return emoji;
 };
 
-/** @param {Category} categories */
+/** @param {Category[]} categories */
 const getTargetDecomojiList = async (categories) => {
   let decomojiList = [];
-  try {
-    categories.forEach((category, i) => {
-      fs.readdir(
-        `./decomoji/${category}/`,
-        (e, files) => {
-          if (e) {
-            console.log(e)
-            if (e.code === "ENOENT") {
-              console.log("ENOENT")
-              // ディレクトリにファイルがない場合、空の配列を出力させる
-              files = [];
-            } else {
-              throw e;
-            }
+  const _fetFileNames = async (category) => {
+    let list = [];
+    fs.readdir(
+      `./decomoji/${category}/`,
+      (e, files) => {
+        if (e) {
+          console.log(e)
+          if (e.code === "ENOENT") {
+            console.log("ENOENT")
+            // ディレクトリにファイルがない場合、空の配列を出力させる
+            files = [];
+          } else {
+            throw e;
           }
-          console.log(files)
-          decomojiList = [...decomojiList, ...files];
         }
-      )
-    });
-  } catch(e) {
-    return e;
-  }
+        console.log("files", files)
+        list = files;
+      }
+    )
+    return list;
+  };
+
+  for (let i=0; i<categories.length; i++) {
+    try {
+      const files = await _fetFileNames(categories[i]);
+      decomojiList.push(...files);
+    } catch(e) {
+      return e;
+    }
+  };
   return decomojiList;
 }
 
@@ -272,13 +279,14 @@ const puppeteerConnect = async (inputs) => {
    *    - emojiAdminList にファイルがあったら override するか？ emoji.remove したりなんなりが必要だ…
    */
   // 登録済みのカスタム絵文字リストを取得
-  // const emojiAdminList = await page.evaluate(getEmojiAdminList, inputs.team_name);
-  // console.log(emojiAdminList)
+  const emojiAdminList = await page.evaluate(getEmojiAdminList, inputs.team_name);
+  // console.log("emojiAdminList:", emojiAdminList)
   // console.log(emojiAdminList.length)
 
   const decomojiList = await getTargetDecomojiList(inputs.categories);
-  console.log(decomojiList)
-  console.log(decomojiList.length)
+  console.log("decomojiList:", decomojiList)
+  // console.log(decomojiList.length)
+  // await page.evaluate(importDeomoji, {emojiAdminList, decomojiList, team_name: inputs.team_name});
   
   // 処理が終わったらブラウザを閉じる
   if (!options.debug) {
