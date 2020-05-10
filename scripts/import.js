@@ -86,7 +86,7 @@ const puppeteerConnect = async (inputs) => {
         await page.goto(`https://${retry.team_name}.slack.com/?redir=%2Fcustomize%2Femoji#/`, {
           waitUntil: "domcontentloaded",
         });
-        // ログイン画面に遷移できたかを再びチェックし、できていたら再起を抜ける
+        // ログイン画面に遷移できたかを再びチェックし、できていたら再帰処理を抜ける
         if (await page.$("#signin_form").then((res) => !!res)) {
           // チーム名を保存し直す
           inputs.team_name = retry.team_name;
@@ -98,7 +98,7 @@ const puppeteerConnect = async (inputs) => {
         return e;
       }
     }
-    // 再起をスタートする
+    // 再帰処理をスタートする
     await _retry(inputs.team_name)
   }
   // ログイン email を入力する
@@ -147,7 +147,7 @@ const puppeteerConnect = async (inputs) => {
           page.click("#signin_btn"),
           page.waitForNavigation({ waitUntil: "networkidle0" }),
         ]);
-        // #signin_form がなかったらログインできたと見なして再起を抜ける
+        // #signin_form がなかったらログインできたと見なして再帰処理を抜ける
         if (await page.$("#signin_form").then((res) => !res)) {
           return;
         }
@@ -157,7 +157,7 @@ const puppeteerConnect = async (inputs) => {
         return e;
       }
     }
-    // 再起をスタートする
+    // 再帰処理をスタートする
     await _retry(inputs)
   }
   // 2FA入力欄があるかをチェックする
@@ -180,7 +180,7 @@ const puppeteerConnect = async (inputs) => {
           page.click("#signin_btn"),
           page.waitForNavigation({ waitUntil: "networkidle0" }),
         ]);
-        // 2FA入力欄がなかったら2FA認証できたと見なして再起を抜ける
+        // 2FA入力欄がなかったら2FA認証できたと見なして再帰処理を抜ける
         if (await page.$('[name="2fa_code"]').then((res) => !res)) {
           return;
         }
@@ -190,7 +190,7 @@ const puppeteerConnect = async (inputs) => {
         return e;
       }
     }
-    // 再起をスタートする
+    // 再帰処理をスタートする
     _auth();
   }
 

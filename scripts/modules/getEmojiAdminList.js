@@ -2,7 +2,6 @@
 const getEmojiAdminList = async (team_name) => {
   /** @type {EmojiAdminList} */
   let emojiAdminList = [];
-  // 絵文字を全件取得する
   const fetchEmojiAdminList = async (nextPage) => {
     const param = {
       page: nextPage || 1,
@@ -33,7 +32,8 @@ const getEmojiAdminList = async (team_name) => {
       return e;
     }
   };
-  // 
+  
+  // 絵文字を全件取得する
   await fetchEmojiAdminList();
   return emojiAdminList;
 };

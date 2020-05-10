@@ -8,7 +8,7 @@ const getTargetDecomojiList = async (categories) => {
   const targetDecomojiList = await Promise.all(categories.map((category) => {
     return fs.readdirSync(`./decomoji/${category}/`);
   }));
-  // 二次元配列を flat 化しつつ、 .DS_Store は取り除く
+  // 二次元配列を flat 化して .DS_Store を取り除いたものを返す
   return targetDecomojiList.flat().filter(v => v !== ".DS_Store");
 };
 
