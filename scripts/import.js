@@ -44,6 +44,7 @@ const isEmail = require("./utilities/isEmail");
 const isInputs = require("./utilities/isInputs");
 const isStringOfNotEmpty = require("./utilities/isStringOfNotEmpty");
 
+const fetchEmojiAdminList = require("./modules/fetchEmojiAdminList");
 // オプションをパースする
 const options = {};
 ((argv) => {
@@ -53,45 +54,6 @@ const options = {};
     options[key] = opt.length > 1 ? opt[1] : true;
   });
 })(process.argv);
-
-/** @param {string} team_name */
-const getEmojiAdminList = async (team_name) => {
-  /** @type {EmojiAdminList} */
-  let emoji = [];
-  // 絵文字を全ページ分取得する
-  const _fetch = async (nextPage) => {
-    const param = {
-      page: nextPage || 1,
-      count: 100,
-      token: window.boot_data.api_token,
-    };
-    try {
-      const response = await fetch(
-        `https://${team_name}.slack.com/api/emoji.adminList`,
-        {
-          method: "POST",
-          headers: { Accept: "application/json" },
-          body: Object.keys(param).reduce(
-            (o, key) => (o.set(key, param[key]), o),
-            new FormData()
-          ),
-        }
-      );
-      const data = await response.json();
-      emoji.push(...data.emoji);
-      if (data.paging.page === data.paging.pages) {
-        return;
-      }
-      await _fetch(data.paging.page + 1);
-    } catch (e) {
-      return e;
-    }
-  };
-  // 終わるまで再起
-  await _fetch();
-  // 終わったら全絵文字を返す
-  return emoji;
-};
 
 /** @param {Category[]} categories */
 const getTargetDecomojiList = async (categories) => {
@@ -253,7 +215,7 @@ const puppeteerConnect = async (inputs) => {
    *    - emojiAdminList にファイルがあったら override するか？ emoji.remove したりなんなりが必要だ…
    */
   // 登録済みのカスタム絵文字リストを取得
-  const emojiAdminList = await page.evaluate(getEmojiAdminList, inputs.team_name);
+  const emojiAdminList = await page.evaluate(fetchEmojiAdminList, inputs.team_name);
   // console.log("emojiAdminList:", emojiAdminList)
   // console.log(emojiAdminList.length)
 
