@@ -37,7 +37,6 @@ emoji.adminList が返すレスポンスの型定義
 const fs = require("fs");
 const inquirer = require("inquirer");
 const puppeteer = require("puppeteer");
-const rootPath = require("path").resolve("");
 
 const askInputs = require("./askInputs");
 const isEmail = require("./utilities/isEmail");
@@ -45,6 +44,8 @@ const isInputs = require("./utilities/isInputs");
 const isStringOfNotEmpty = require("./utilities/isStringOfNotEmpty");
 
 const fetchEmojiAdminList = require("./modules/fetchEmojiAdminList");
+const getTargetDecomojiList = require("./modules/getTargetDecomojiList");
+
 // オプションをパースする
 const options = {};
 ((argv) => {
@@ -54,16 +55,6 @@ const options = {};
     options[key] = opt.length > 1 ? opt[1] : true;
   });
 })(process.argv);
-
-/** @param {Category[]} categories */
-const getTargetDecomojiList = async (categories) => {
-  // ディレクトリをさらってファイル名の配列を返す
-  const targets = await Promise.all(categories.map((category) => {
-    return fs.readdirSync(`./decomoji/${category}/`);
-  }));
-  // 二次元配列を flat 化しつつ、 .DS_Store は取り除く
-  return targets.flat().filter(v => v !== ".DS_Store");
-}
 
 /** @param {Inputs} inputs */
 const puppeteerConnect = async (inputs) => {
