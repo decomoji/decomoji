@@ -88,6 +88,8 @@ const puppeteerConnect = async (inputs) => {
         });
         // ログイン画面に遷移できたかを再びチェックし、できていたら再起を抜ける
         if (await page.$("#signin_form").then((res) => !!res)) {
+          // チーム名を保存し直す
+          inputs.team_name = retry.team_name;
           return;
         }
         // ログインページに到達できるまで何度でもトライ！
