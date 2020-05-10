@@ -38,4 +38,4 @@ const getEmojiAdminList = async (team_name) => {
   return emojiAdminList;
 };
 
-module.exports = fetchEmojiAdminList;
+module.exports = getEmojiAdminList;

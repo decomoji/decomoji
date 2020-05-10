@@ -43,7 +43,7 @@ const isEmail = require("./utilities/isEmail");
 const isInputs = require("./utilities/isInputs");
 const isStringOfNotEmpty = require("./utilities/isStringOfNotEmpty");
 
-const fetchEmojiAdminList = require("./modules/fetchEmojiAdminList");
+const getEmojiAdminList = require("./modules/getEmojiAdminList");
 const getTargetDecomojiList = require("./modules/getTargetDecomojiList");
 
 // オプションをパースする
@@ -206,7 +206,7 @@ const puppeteerConnect = async (inputs) => {
    *    - emojiAdminList にファイルがあったら override するか？ emoji.remove したりなんなりが必要だ…
    */
   // 登録済みのカスタム絵文字リストを取得
-  const emojiAdminList = await page.evaluate(fetchEmojiAdminList, inputs.team_name);
+  const emojiAdminList = await page.evaluate(getEmojiAdminList, inputs.team_name);
   // console.log("emojiAdminList:", emojiAdminList)
   // console.log(emojiAdminList.length)
 
