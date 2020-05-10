@@ -239,7 +239,7 @@ const puppeteerConnect = async (inputs) => {
 
       console.log(`${i+1}/${amountAsCategory}: importing ${targetBasename}...`)
       
-      const file = await fs.readFileSync(`./decomoji/${targetCategoryName}/${item}`);
+      const file = await fs.readFileSync(`./decomoji/${targetCategoryName}/${item}`, "binary");
       await page.evaluate(fetchEmojiAdd, inputs.team_name, targetBasename, file);
     }
   }
