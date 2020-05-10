@@ -95,38 +95,12 @@ const getEmojiAdminList = async (team_name) => {
 
 /** @param {Category[]} categories */
 const getTargetDecomojiList = async (categories) => {
-  let decomojiList = [];
-  const _fetFileNames = async (category) => {
-    let list = [];
-    fs.readdir(
-      `./decomoji/${category}/`,
-      (e, files) => {
-        if (e) {
-          console.log(e)
-          if (e.code === "ENOENT") {
-            console.log("ENOENT")
-            // ディレクトリにファイルがない場合、空の配列を出力させる
-            files = [];
-          } else {
-            throw e;
-          }
-        }
-        console.log("files", files)
-        list = files;
-      }
-    )
-    return list;
-  };
-
-  for (let i=0; i<categories.length; i++) {
-    try {
-      const files = await _fetFileNames(categories[i]);
-      decomojiList.push(...files);
-    } catch(e) {
-      return e;
-    }
-  };
-  return decomojiList;
+  // ディレクトリをさらってファイル名の配列を返す
+  const targets = await Promise.all(categories.map((category) => {
+    return fs.readdirSync(`./decomoji/${category}/`);
+  }));
+  // 二次元配列を flat 化しつつ、 .DS_Store は取り除く
+  return targets.flat().filter(v => v !== ".DS_Store");
 }
 
 /** @param {Inputs} inputs */
