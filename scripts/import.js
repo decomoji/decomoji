@@ -45,6 +45,7 @@ const isStringOfNotEmpty = require("./utilities/isStringOfNotEmpty");
 
 const getEmojiAdminList = require("./modules/getEmojiAdminList");
 const getTargetDecomojiList = require("./modules/getTargetDecomojiList");
+const fetchEmojiAdd = require("./modules/fetchEmojiAdd")
 
 // オプションをパースする
 const options = {};
@@ -212,10 +213,36 @@ const puppeteerConnect = async (inputs) => {
   // console.log("emojiAdminList:", emojiAdminList)
   // console.log(emojiAdminList.length)
 
-  const decomojiList = await getTargetDecomojiList(inputs.categories);
-  console.log("decomojiList:", decomojiList)
-  // console.log(decomojiList.length)
-  // await page.evaluate(importDeomoji, {emojiAdminList, decomojiList, team_name: inputs.team_name});
+  const targetDecomojiList = await getTargetDecomojiList(inputs.categories);
+  // console.log("targetDecomojiList:", targetDecomojiList)
+  // console.log(targetDecomojiList.length)
+
+  // emojiAdminList からファイル名だけの配列を作っておく
+  const emojiAdminNameList = new Set(emojiAdminList.map(v => v.name));
+
+  for(let i=0; i<targetDecomojiList.length; i++) {
+    const targetAsCategory = targetDecomojiList[i];
+    const amountAsCategory = targetAsCategory.length;
+    const targetCategoryName = inputs.categories[i];
+
+    console.log(`\n[${targetCategoryName}] category start!`)
+
+    for(let i=0; i<amountAsCategory; i++) {
+      const item = targetAsCategory[i];
+      const targetBasename = item.split(".")[0];
+
+      // 登録済みカスタム絵文字に追加しようとしているデコモジと同じファイル名がある場合はスキップする
+      if (emojiAdminNameList.has(targetBasename)) {
+        console.log(`Skip ${targetBasename}... Already exists.`);
+        continue;
+      }
+
+      console.log(`${i+1}/${amountAsCategory}: importing ${targetBasename}...`)
+      
+      const file = await fs.readFileSync(`./decomoji/${targetCategoryName}/${item}`);
+      await page.evaluate(fetchEmojiAdd, inputs.team_name, targetBasename, file);
+    }
+  }
   
   // 処理が終わったらブラウザを閉じる
   if (!options.debug) {
