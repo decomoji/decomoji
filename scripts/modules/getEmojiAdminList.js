@@ -32,7 +32,7 @@ const getEmojiAdminList = async (team_name) => {
       return e;
     }
   };
-  
+
   // 絵文字を全件取得する
   await fetchEmojiAdminList();
   return emojiAdminList;
