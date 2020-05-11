@@ -168,6 +168,7 @@ const main = async (inputs) => {
 
   // カスタム絵文字セクションが見つかるまで待つ
   await page.waitForSelector("#list_emoji_section", { timeout: 180000 });
+  await page.waitFor(1000);
 
   // 登録済みのカスタム絵文字リストを取得する
   const emojiAdminList = await page.evaluate(
