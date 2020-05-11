@@ -21,7 +21,7 @@ const options = {};
 })(process.argv);
 
 // 自動処理を実行する
-const puppeteerConnect = async (inputs) => {
+const main = async (inputs) => {
   // puppeteer でブラウザを起動する
   const browser = await puppeteer.launch({ devtools: options.debug });
   // ページを追加する
@@ -196,12 +196,12 @@ const puppeteerConnect = async (inputs) => {
 if (options.inputs) {
   // --inputs=./something.json などと値が指定されていたらそれを require し
   // --inputs キーのみの場合はデフォルトで `./inputs.json` を require する
-  puppeteerConnect(
+  main(
     require(isStringOfNotEmpty(options.inputs)
       ? options.inputs
       : "./inputs.json")
   );
 } else {
-  askInputs((inputs) => puppeteerConnect(inputs));
   // inputs がない場合は inquirer を起動して対話的にオプションを作る
+  askInputs((inputs) => main(inputs));
 }
