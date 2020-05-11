@@ -1,8 +1,27 @@
-/** @typedef {"basic" | "extra" | "explicit"} Category; */
+/**
+  emoji.adminList が返す配列のアイテムの型定義
+  @typedef {{
+    name: string;
+    is_alias: number;
+    alias_for: string;
+    url: string;
+    created: number;
+    team_id: string;
+    user_id: string;
+    user_display_name: string;
+    avatar_hash: string;
+    can_delete: boolean;
+    is_bad: boolean;
+    synonyms: string[];
+  }} EmojiItem;
+
+  emoji.adminList が返すレスポンスの型定義
+  @typedef {EmojiItem[]} EmojiAdminList;
+*/
 
 const fs = require("fs");
 
-/** @param {Category[]} categories */
+/** @param {("basic" | "extra" | "explicit")[]} categories */
 const getTargetDecomojiList = async (categories) => {
   // ディレクトリをさらってファイル名の配列を返す
   const targetDecomojiList = await Promise.all(

@@ -1,3 +1,16 @@
+/**
+  inputs.json もしくは inquirer のレスポンスの型定義
+  @typedef {{
+    team_name: string;
+    email: string;
+    password: string;
+    categories: ("basic" | "extra" | "explicit")[];
+    suffix: boolean;
+    custom_suffix: boolean;
+    mode: "add" | "alias" | "remove";
+  }} Inputs;
+*/
+
 const inquirer = require("inquirer");
 
 const convertToLowerCasedArray = require("../utilities/convertToLowerCasedArray");
@@ -93,5 +106,6 @@ const questions = [
 ];
 
 module.exports = (callback) => {
+  /** @param {Inputs} inputs */
   inquirer.prompt(questions).then(callback);
 };

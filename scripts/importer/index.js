@@ -1,39 +1,3 @@
-/**
-@typedef {"basic" | "extra" | "explicit"} Category;
-@typedef {"add" | "alias" | "remove"} Mode;
-@typedef {number} UnixTime;
-
-inputs.json もしくは inquirer のレスポンスの型定義
-@typedef {{
-  team_name: string;
-  email: string;
-  password: string;
-  categories: Category[];
-  suffix: boolean;
-  custom_suffix: boolean;
-  mode: Mode;
-}} Inputs;
-
-emoji.adminList が返す配列のアイテムの型定義
-@typedef {{
-  name: string;
-  is_alias: number;
-  alias_for: string;
-  url: string;
-  created: UnixTime;
-  team_id: string;
-  user_id: string;
-  user_display_name: string;
-  avatar_hash: string;
-  can_delete: boolean;
-  is_bad: boolean;
-  synonyms: string[];
-}} EmojiItem;
-
-emoji.adminList が返すレスポンスの型定義
-@typedef {EmojiItem[]} EmojiAdminList;
-*/
-
 const inquirer = require("inquirer");
 const puppeteer = require("puppeteer");
 
@@ -56,7 +20,6 @@ const options = {};
   });
 })(process.argv);
 
-/** @param {Inputs} inputs */
 const puppeteerConnect = async (inputs) => {
   /**
    * Puppeteer を起動する
