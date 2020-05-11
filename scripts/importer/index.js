@@ -27,6 +27,10 @@ const main = async (inputs) => {
   // ページを追加する
   const page = await browser.newPage();
 
+  console.log(
+    `\nworkspace: https://${inputs.team_name}.slack.com/\n    email: ${inputs.email}\n password: **********\n\nConnecting...\n`
+  );
+
   // ログイン画面に遷移する（チームのカスタム絵文字管理画面へのリダイレクトパラメータ付き）
   await page.goto(
     `https://${inputs.team_name}.slack.com/?redir=%2Fcustomize%2Femoji#/`,
@@ -178,15 +182,21 @@ const main = async (inputs) => {
     getEmojiAdminList,
     inputs.team_name
   );
-  options.debug && console.log("emojiAdminList:", emojiAdminList.length, emojiAdminList)
+  options.debug &&
+    console.log("emojiAdminList:", emojiAdminList.length, emojiAdminList);
 
   // 追加する対象デコモジリストを取得する
   const targetDecomojiList = await getTargetDecomojiList(inputs.categories);
-  options.debug && console.log("targetDecomojiList:", targetDecomojiList.length, targetDecomojiList)
+  options.debug &&
+    console.log(
+      "targetDecomojiList:",
+      targetDecomojiList.length,
+      targetDecomojiList
+    );
 
   // emojiAdminList からファイル名だけの配列を作っておく
   const emojiAdminNameList = new Set(emojiAdminList.map((v) => v.name));
-  options.debug && console.log("emojiAdminNameList:", emojiAdminNameList)
+  options.debug && console.log("emojiAdminNameList:", emojiAdminNameList);
 
   // ファイルをアップロードする
   await importer(page, inputs, targetDecomojiList, emojiAdminNameList);
