@@ -1,4 +1,4 @@
-const fetchEmojiAdd = async (team_name, name, image) => {
+const postEmojiAdd = async (team_name, name, image) => {
   const param = {
     mode: "data",
     name,
@@ -23,4 +23,4 @@ const fetchEmojiAdd = async (team_name, name, image) => {
   return;
 };
 
-module.exports = fetchEmojiAdd;
+module.exports = postEmojiAdd;
