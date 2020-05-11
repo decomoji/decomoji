@@ -1,5 +1,5 @@
 const fs = require("fs");
-const fetchEmojiAdd = require("./fetchEmojiAdd");
+const postEmojiAdd = require("./postEmojiAdd");
 
 const importer = async (page, inputs, targets, existsName) => {
   for(let i=0; i<targets.length; i++) {
@@ -22,7 +22,7 @@ const importer = async (page, inputs, targets, existsName) => {
       console.log(`${i+1}/${amountAsCategory}: importing ${targetBasename}...`)
       
       const file = await fs.readFileSync(`./decomoji/${targetCategoryName}/${item}`, "binary");
-      await page.evaluate(fetchEmojiAdd, inputs.team_name, targetBasename, file);
+      await page.evaluate(postEmojiAdd, inputs.team_name, targetBasename, file);
     }
   }
   return;

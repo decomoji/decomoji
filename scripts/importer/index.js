@@ -34,15 +34,14 @@ emoji.adminList が返すレスポンスの型定義
 @typedef {EmojiItem[]} EmojiAdminList;
 */
 
-const fs = require("fs");
 const inquirer = require("inquirer");
 const puppeteer = require("puppeteer");
 
-const askInputs = require("./askInputs");
 const isEmail = require("./utilities/isEmail");
 const isInputs = require("./utilities/isInputs");
 const isStringOfNotEmpty = require("./utilities/isStringOfNotEmpty");
 
+const askInputs = require("./modules/askInputs");
 const getEmojiAdminList = require("./modules/getEmojiAdminList");
 const getTargetDecomojiList = require("./modules/getTargetDecomojiList");
 const importer = require("./modules/importer");
