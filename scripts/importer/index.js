@@ -158,7 +158,7 @@ const main = async (inputs) => {
         ]);
         // 2FA入力欄がなかったら2FA認証できたと見なして再帰処理を抜ける
         if (await page.$('[name="2fa_code"]').then((res) => !res)) {
-          options.debug && console.log("OK");
+          options.debug && console.log("2FA Verified.");
           return;
         }
         // 2FA認証できるまで何度でもトライ！
@@ -171,10 +171,10 @@ const main = async (inputs) => {
     await _auth();
   }
 
-  // グローバル変数boot_dataと、カスタム絵文字セクションが見つかるまで待つ
+  // グローバル変数 boot_data と、カスタム絵文字セクションが見つかるまで待つ
   await Promise.all([
     page.waitForXPath("//script[contains(text(), 'boot_data')]"),
-    page.waitForSelector("#list_emoji_section")
+    page.waitForSelector("#list_emoji_section"),
   ]);
 
   // 登録済みのカスタム絵文字リストを取得する
