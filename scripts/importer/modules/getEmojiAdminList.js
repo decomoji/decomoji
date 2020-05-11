@@ -10,7 +10,7 @@ const getEmojiAdminList = async (team_name) => {
     };
     try {
       const response = await fetch(
-        `https://${team_name}.slack.com/api/emoji.emojiAdminList`,
+        `https://${team_name}.slack.com/api/emoji.adminList`,
         {
           method: "POST",
           headers: { Accept: "application/json" },
@@ -21,7 +21,7 @@ const getEmojiAdminList = async (team_name) => {
         }
       );
       const data = await response.json();
-      emojiAdminList.push(...data.emojiAdminList);
+      emojiAdminList.push(...data.emoji);
       // 最終ページまで fetch したら resolve する
       if (data.paging.page === data.paging.pages) {
         return;
