@@ -6,8 +6,8 @@
     password: string;
     categories: ("basic" | "extra" | "explicit")[];
     suffix: boolean;
-    custom_suffix: boolean;
-    mode: "add" | "alias" | "remove";
+    custom_suffix?: boolean;
+    exec_mode: "add" | "alias" | "remove";
   }} Inputs;
 */
 
@@ -86,7 +86,7 @@ const questions = [
   },
   {
     type: "list",
-    name: "mode",
+    name: "exec_mode",
     message: "Select script mode.",
     choices: [
       {
