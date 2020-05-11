@@ -5,8 +5,8 @@
   "main": "",
   "scripts": {
     "prettier:fix": "prettier --write scripts/**/*.js",
-    "update-md": "node scripts/generate_decomoji_md.js",
-    "update-json": "node scripts/generate_decomoji_json.js"
+    "update-md": "node scripts/generator/to_md.js",
+    "update-json": "node scripts/generator/to_json.js"
   },
   "repository": {
     "type": "git",
