@@ -1,7 +1,9 @@
-const fs = require("fs");
 const postEmojiAdd = require("./postEmojiAdd");
+const injectUploadForm = require("./injectUploadForm");
 
 const importer = async (page, inputs, targets, existsName) => {
+  await page.evaluate(injectUploadForm);
+
   for(let i=0; i<targets.length; i++) {
     const targetAsCategory = targets[i];
     const amountAsCategory = targetAsCategory.length;
@@ -19,10 +21,17 @@ const importer = async (page, inputs, targets, existsName) => {
         continue;
       }
 
-      console.log(`${i+1}/${amountAsCategory}: importing ${targetBasename}...`)
-      
-      const file = await fs.readFileSync(`./decomoji/${targetCategoryName}/${item}`, "binary");
-      await page.evaluate(postEmojiAdd, inputs.team_name, targetBasename, file);
+      console.log(`${i + 1}/${amountAsCategory}: importing ${targetBasename}...`);
+
+      const result = await postEmojiAdd(page, inputs.team_name, targetCategoryName, targetBasename, item);
+
+      if (!result.ok) {
+        console.log(`${i + 1}/${amountAsCategory}: ${result.error} ${targetBasename}.`);
+        continue;
+      }
+
+      console.log(`${i + 1}/${amountAsCategory}: imported ${targetBasename}.`);
+
     }
   }
   return;
