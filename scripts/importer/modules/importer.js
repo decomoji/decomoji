@@ -31,7 +31,6 @@ const importer = async (page, inputs, targets, existsNames) => {
       }
 
       console.log(`${i + 1}/${amountAsCategory}: imported ${targetBasename}.`);
-
     }
   }
   return;

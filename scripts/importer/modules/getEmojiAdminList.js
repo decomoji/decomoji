@@ -1,4 +1,3 @@
-/** @param {string} team_name */
 const getEmojiAdminList = async (team_name) => {
   /** @type {EmojiAdminList} */
   let emojiAdminList = [];
