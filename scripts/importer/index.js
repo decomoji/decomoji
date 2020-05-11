@@ -29,11 +29,13 @@ const puppeteerConnect = async (inputs) => {
   // ページを追加する
   const page = await browser.newPage();
 
-
   // ログイン画面に遷移する（チームのカスタム絵文字管理画面へのリダイレクトパラメータ付き）
-  await page.goto(`https://${inputs.team_name}.slack.com/?redir=%2Fcustomize%2Femoji#/`, {
-    waitUntil: "domcontentloaded",
-  });
+  await page.goto(
+    `https://${inputs.team_name}.slack.com/?redir=%2Fcustomize%2Femoji#/`,
+    {
+      waitUntil: "domcontentloaded",
+    }
+  );
   // ログイン画面に遷移できたかをチェックする
   if (await page.$("#signin_form").then((res) => !res)) {
     // おそらくチームが存在しない場合なので inquirer を起動して team_name を再入力させる
@@ -46,9 +48,12 @@ const puppeteerConnect = async (inputs) => {
           validate: isInputs,
         });
         // ログイン画面に再び遷移する
-        await page.goto(`https://${retry.team_name}.slack.com/?redir=%2Fcustomize%2Femoji#/`, {
-          waitUntil: "domcontentloaded",
-        });
+        await page.goto(
+          `https://${retry.team_name}.slack.com/?redir=%2Fcustomize%2Femoji#/`,
+          {
+            waitUntil: "domcontentloaded",
+          }
+        );
         // ログイン画面に遷移できたかを再びチェックし、できていたら再帰処理を抜ける
         if (await page.$("#signin_form").then((res) => !!res)) {
           // チーム名を保存し直す
@@ -60,9 +65,9 @@ const puppeteerConnect = async (inputs) => {
       } catch (e) {
         return e;
       }
-    }
+    };
     // 再帰処理をスタートする
-    await _retry(inputs.team_name)
+    await _retry(inputs.team_name);
   }
   // ログイン email を入力する
   await page.type("#email", inputs.email);
@@ -78,8 +83,10 @@ const puppeteerConnect = async (inputs) => {
     // ログインエラーなら inquirer を起動して email と password を再入力させる
     const _retry = async (tried) => {
       // 前の入力を空にしておく
-      await page.evaluate(() => document.querySelector("#email").value = "");
-      await page.evaluate(() => document.querySelector("#password").value = "");
+      await page.evaluate(() => (document.querySelector("#email").value = ""));
+      await page.evaluate(
+        () => (document.querySelector("#password").value = "")
+      );
       try {
         const retry = await inquirer.prompt([
           {
@@ -95,12 +102,14 @@ const puppeteerConnect = async (inputs) => {
             mask: "*",
             message: `Enter a password again.`,
             validate: isInputs,
-          }
+          },
         ]);
         // Recaptcha があるかをチェックする
         if (await page.$("#slack_captcha").then((res) => !!res)) {
           // Recaptcha があったら無理なので諦める
-          console.log("\n\nOops, you might judged a Bot. Please wait and try again.\n\n")
+          console.log(
+            "\n\nOops, you might judged a Bot. Please wait and try again.\n\n"
+          );
           await browser.close();
         }
         // フォームに再入力して submit する
@@ -119,16 +128,18 @@ const puppeteerConnect = async (inputs) => {
       } catch (e) {
         return e;
       }
-    }
+    };
     // 再帰処理をスタートする
-    await _retry(inputs)
+    await _retry(inputs);
   }
   // 2FA入力欄があるかをチェックする
   if (await page.$('[name="2fa_code"]').then((res) => !!res)) {
     // 2FA入力欄があれば inquirer を起動して入力させる
     const _auth = async () => {
       // 前の入力を空にしておく
-      await page.evaluate(() => document.querySelector('[name="2fa_code"]').value = "");
+      await page.evaluate(
+        () => (document.querySelector('[name="2fa_code"]').value = "")
+      );
       try {
         const answer = await inquirer.prompt({
           type: "password",
@@ -148,11 +159,11 @@ const puppeteerConnect = async (inputs) => {
           return;
         }
         // 2FA認証できるまで何度でもトライ！
-        await _auth()
+        await _auth();
       } catch (e) {
         return e;
       }
-    }
+    };
     // 再帰処理をスタートする
     _auth();
   }
@@ -171,7 +182,10 @@ const puppeteerConnect = async (inputs) => {
    *    - emojiAdminList にファイルがあったら override するか？ emoji.remove したりなんなりが必要だ…
    */
   // 登録済みのカスタム絵文字リストを取得
-  const emojiAdminList = await page.evaluate(getEmojiAdminList, inputs.team_name);
+  const emojiAdminList = await page.evaluate(
+    getEmojiAdminList,
+    inputs.team_name
+  );
   // console.log("emojiAdminList:", emojiAdminList)
   // console.log(emojiAdminList.length)
 
@@ -180,10 +194,10 @@ const puppeteerConnect = async (inputs) => {
   // console.log(targetDecomojiList.length)
 
   // emojiAdminList からファイル名だけの配列を作っておく
-  const emojiAdminNameList = new Set(emojiAdminList.map(v => v.name));
+  const emojiAdminNameList = new Set(emojiAdminList.map((v) => v.name));
 
   await importer(page, inputs, targetDecomojiList, emojiAdminNameList);
-  
+
   // 処理が終わったらブラウザを閉じる
   if (!options.debug) {
     await browser.close();
