@@ -174,16 +174,15 @@ const puppeteerConnect = async (inputs) => {
     getEmojiAdminList,
     inputs.team_name
   );
-  // console.log("emojiAdminList:", emojiAdminList)
-  // console.log(emojiAdminList.length)
+  options.debug && console.log("emojiAdminList:", emojiAdminList.length, emojiAdminList)
 
   // 追加する対象デコモジリストを取得する
   const targetDecomojiList = await getTargetDecomojiList(inputs.categories);
-  // console.log("targetDecomojiList:", targetDecomojiList)
-  // console.log(targetDecomojiList.length)
+  options.debug && console.log("targetDecomojiList:", targetDecomojiList.length, targetDecomojiList)
 
   // emojiAdminList からファイル名だけの配列を作っておく
   const emojiAdminNameList = new Set(emojiAdminList.map((v) => v.name));
+  options.debug && console.log("emojiAdminNameList:", emojiAdminNameList)
 
   // ファイルをアップロードする
   await importer(page, inputs, targetDecomojiList, emojiAdminNameList);
