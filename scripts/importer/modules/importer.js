@@ -11,20 +11,27 @@ const importer = async (page, inputs, targets) => {
 
     console.log(`\n[${targetCategoryName}] category start!`)
 
-    for(let i=0; i<amountAsCategory; i++) {
-      const item = targetAsCategory[i];
+    let j = 0;
+    while(j < amountAsCategory) {
+      const item = targetAsCategory[j];
       const targetBasename = item.split(".")[0];
-
-      console.log(`${i + 1}/${amountAsCategory}: importing ${targetBasename}...`);
-
+  
+      console.log(`${j + 1}/${amountAsCategory}: importing ${targetBasename}...`);
+  
       const result = await postEmojiAdd(page, inputs.team_name, targetCategoryName, targetBasename, item);
-
+  
       if (!result.ok) {
-        console.log(`${i + 1}/${amountAsCategory}: ${result.error} ${targetBasename}.`);
+        console.log(`${j + 1}/${amountAsCategory}: ${result.error} ${targetBasename}.`);
+        // ratelimited が返ってきていたら、インデックスをインクリメントせず3秒待ってもう一度実行する
+        if (result.error === "ratelimited") {
+          console.log("waiting...");
+          await page.waitFor(3000);
+        }
         continue;
       }
-
-      console.log(`${i + 1}/${amountAsCategory}: imported ${targetBasename}.`);
+  
+      console.log(`${j + 1}/${amountAsCategory}: imported ${targetBasename}.`);
+      j++;
     }
   }
   return;
