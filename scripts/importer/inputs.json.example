@@ -2,8 +2,5 @@
   "team_name": "<team_name>",
   "email": "<email>",
   "password": "<password>",
-  "categories": ["basic", "extra"],
-  "suffix": true,
-  "custom_suffix": false,
-  "mode": "add"
+  "categories": ["basic", "extra"]
 }
