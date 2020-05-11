@@ -20,10 +20,8 @@ const options = {};
   });
 })(process.argv);
 
+// 自動処理を実行する
 const puppeteerConnect = async (inputs) => {
-  /**
-   * Puppeteer を起動する
-   */
   // puppeteer でブラウザを起動する
   const browser = await puppeteer.launch({ devtools: options.debug });
   // ページを追加する
@@ -171,17 +169,7 @@ const puppeteerConnect = async (inputs) => {
   // カスタム絵文字セクションが見つかるまで待つ
   await page.waitForSelector("#list_emoji_section", { timeout: 180000 });
 
-  /**
-   * /customize/emoji に遷移後の処理
-   *  - 登録済みカスタム絵文字を取得する（emojiAdminList）
-   *  - 登録するデコモジを取得する（decomojiList）
-   *    - v4 ではカテゴリのディレクトリ内を全てさらうなどの実装をするが、v5 では全てのデコモジが入ったディレクトリから json を元に特定ファイルだけ抽出する実装に変える
-   *    - これにより、自分で登録するデコモジをカスタマイズできる。カスタマイズの支援は decomoji-finder に搭載する
-   *    - 別ディレクトリを指定して抽出するオプションも備えたい
-   *  - デコモジを1つずつPostする
-   *    - emojiAdminList にファイルがあったら override するか？ emoji.remove したりなんなりが必要だ…
-   */
-  // 登録済みのカスタム絵文字リストを取得
+  // 登録済みのカスタム絵文字リストを取得する
   const emojiAdminList = await page.evaluate(
     getEmojiAdminList,
     inputs.team_name
@@ -189,6 +177,7 @@ const puppeteerConnect = async (inputs) => {
   // console.log("emojiAdminList:", emojiAdminList)
   // console.log(emojiAdminList.length)
 
+  // 追加する対象デコモジリストを取得する
   const targetDecomojiList = await getTargetDecomojiList(inputs.categories);
   // console.log("targetDecomojiList:", targetDecomojiList)
   // console.log(targetDecomojiList.length)
@@ -196,6 +185,7 @@ const puppeteerConnect = async (inputs) => {
   // emojiAdminList からファイル名だけの配列を作っておく
   const emojiAdminNameList = new Set(emojiAdminList.map((v) => v.name));
 
+  // ファイルをアップロードする
   await importer(page, inputs, targetDecomojiList, emojiAdminNameList);
 
   // 処理が終わったらブラウザを閉じる
@@ -214,4 +204,5 @@ if (options.inputs) {
   );
 } else {
   askInputs((inputs) => puppeteerConnect(inputs));
+  // inputs がない場合は inquirer を起動して対話的にオプションを作る
 }
