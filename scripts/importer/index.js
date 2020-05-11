@@ -185,8 +185,21 @@ const main = async (inputs) => {
   options.debug &&
     console.log("emojiAdminList:", emojiAdminList.length, emojiAdminList);
 
-  // 追加する対象デコモジリストを取得する
-  const targetDecomojiList = await getTargetDecomojiList(inputs.categories);
+  // 対象デコモジリストを取得する
+  const allDecomojiList = await getTargetDecomojiList(inputs.categories);
+  options.debug &&
+    console.log("allDecomojiList:", allDecomojiList.length, allDecomojiList);
+
+  // emojiAdminList からファイル名だけの配列を作っておく
+  const emojiAdminNameList = new Set(emojiAdminList.map((v) => v.name));
+  options.debug && console.log("emojiAdminNameList:", emojiAdminNameList);
+
+  // emojiAdminList と allDecomojiList を突合させて処理するアイテムだけのリストを作る
+  const targetDecomojiList = allDecomojiList.map((category) =>
+    category.filter(
+      (candidate) => !emojiAdminNameList.has(candidate.split(".")[0])
+    )
+  );
   options.debug &&
     console.log(
       "targetDecomojiList:",
@@ -194,12 +207,8 @@ const main = async (inputs) => {
       targetDecomojiList
     );
 
-  // emojiAdminList からファイル名だけの配列を作っておく
-  const emojiAdminNameList = new Set(emojiAdminList.map((v) => v.name));
-  options.debug && console.log("emojiAdminNameList:", emojiAdminNameList);
-
   // ファイルをアップロードする
-  await importer(page, inputs, targetDecomojiList, emojiAdminNameList);
+  await importer(page, inputs, targetDecomojiList);
 
   // 処理が終わったらブラウザを閉じる
   if (!options.debug) {

@@ -1,7 +1,7 @@
 const postEmojiAdd = require("./postEmojiAdd");
 const injectUploadForm = require("./injectUploadForm");
 
-const importer = async (page, inputs, targets, existsNames) => {
+const importer = async (page, inputs, targets) => {
   await page.evaluate(injectUploadForm);
 
   for(let i=0; i<targets.length; i++) {
@@ -14,12 +14,6 @@ const importer = async (page, inputs, targets, existsNames) => {
     for(let i=0; i<amountAsCategory; i++) {
       const item = targetAsCategory[i];
       const targetBasename = item.split(".")[0];
-
-      // 登録済みカスタム絵文字に追加しようとしているデコモジと同じファイル名がある場合はスキップする
-      if (existsNames.has(targetBasename)) {
-        console.log(`Skip ${targetBasename}... Already exists.`);
-        continue;
-      }
 
       console.log(`${i + 1}/${amountAsCategory}: importing ${targetBasename}...`);
 
