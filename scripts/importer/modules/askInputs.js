@@ -23,7 +23,7 @@ const questions = [
   {
     type: "input",
     name: "team_name",
-    message: "Enter your slack team (subdomain).",
+    message: "Enter workspace (subdomain).",
     validate: isInputs,
   },
   {
@@ -50,59 +50,59 @@ const questions = [
       {
         name: "Extra",
       },
-      {
-        name: "Explicit",
-      },
+      // {
+      //   name: "Explicit",
+      // },
     ],
     filter: convertToLowerCasedArray,
     validate: isSelects,
   },
-  {
-    type: "list",
-    name: "suffix",
-    message: "Select suffix mode.",
-    choices: [
-      {
-        name: "no-suffix",
-        value: false,
-      },
-      {
-        name: "default (recommended. '_dcmj' suffixed.)",
-        value: true,
-      },
-      {
-        name: "custom",
-      },
-    ],
-    default: true,
-  },
-  {
-    type: "input",
-    name: "custom_suffix",
-    message: "Enter your suffix.",
-    when: function (answers) {
-      return answers.suffix === "custom";
-    },
-  },
-  {
-    type: "list",
-    name: "exec_mode",
-    message: "Select script mode.",
-    choices: [
-      {
-        name: "Import decomoji",
-        value: "add",
-      },
-      {
-        name: "Register alias to decomoji",
-        value: "alias",
-      },
-      {
-        name: "Remove decomoji",
-        value: "remove",
-      },
-    ],
-  },
+  // {
+  //   type: "list",
+  //   name: "suffix",
+  //   message: "Select suffix mode.",
+  //   choices: [
+  //     {
+  //       name: "no-suffix",
+  //       value: false,
+  //     },
+  //     {
+  //       name: "default (recommended. '_dcmj' suffixed.)",
+  //       value: true,
+  //     },
+  //     {
+  //       name: "custom",
+  //     },
+  //   ],
+  //   default: true,
+  // },
+  // {
+  //   type: "input",
+  //   name: "custom_suffix",
+  //   message: "Enter your suffix.",
+  //   when: function (answers) {
+  //     return answers.suffix === "custom";
+  //   },
+  // },
+  // {
+  //   type: "list",
+  //   name: "exec_mode",
+  //   message: "Select script mode.",
+  //   choices: [
+  //     {
+  //       name: "Import decomoji",
+  //       value: "add",
+  //     },
+  //     {
+  //       name: "Register alias to decomoji",
+  //       value: "alias",
+  //     },
+  //     {
+  //       name: "Remove decomoji",
+  //       value: "remove",
+  //     },
+  //   ],
+  // },
 ];
 
 module.exports = (callback) => {
