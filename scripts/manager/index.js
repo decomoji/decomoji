@@ -13,8 +13,13 @@ program
 
 // 自動処理を実行する
 const main = async (inputs) => {
+  // コマンドオプションを inputs に混ぜる
+  const _inputs = {
+    ...inputs,
+    ...program,
+  };
   // ファイルをアップロードする
-  await importer(inputs, program);
+  await importer(_inputs);
 };
 
 if (program.inputs) {
