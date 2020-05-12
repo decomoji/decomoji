@@ -1,42 +1,99 @@
-const postEmojiAdd = require("./postEmojiAdd");
+const puppeteer = require("puppeteer");
+
+const getEmojiAdminList = require("./getEmojiAdminList");
+const getTargetDecomojiList = require("./getTargetDecomojiList");
+const goToEmojiPage = require("./goToEmojiPage");
 const injectUploadForm = require("./injectUploadForm");
+const postEmojiAdd = require("./postEmojiAdd");
 
-const importer = async (page, inputs, targets) => {
-  await page.evaluate(injectUploadForm);
+const importer = async (inputs) => {
 
-  const targetLength = targets.length;
-  let currentCategory = '';
-  let i = 0;
+  const _import = async (inputs) => {
 
-  while(i < targetLength) {
-    const target = targets[i];
-    const { category, name, path } = target;
-    const currentIdx = i + 1;
+    // puppeteer でブラウザを起動する
+    const browser = await puppeteer.launch({ devtools: inputs.debug });
+    // ページを追加する
+    const page = await browser.newPage();
+  
+    console.log(
+      `\nworkspace: https://${inputs.team_name}.slack.com/\n    email: ${inputs.email}\n password: **********\n\nConnecting...\n`
+    );
+  
+    // カスタム絵文字管理画面へ遷移する
+    inputs = await goToEmojiPage(page, inputs);
 
-    if (currentCategory === '' && currentCategory !== category) {
-      console.log(`\n[${category}] category start!`)
-      currentCategory = category;
-    }
+    // 登録済みのカスタム絵文字リストを取得する
+    const emojiAdminList = await page.evaluate(
+      getEmojiAdminList,
+      inputs.team_name
+    );
+    inputs.debug && inputs.fatlog &&
+      console.log("emojiAdminList:", emojiAdminList.length, emojiAdminList);
 
-    console.log(`${currentIdx}/${targetLength}: importing ${name}...`);
+    // 対象デコモジリストを取得する
+    const allDecomojiList = await getTargetDecomojiList(inputs.categories);
+    inputs.debug && inputs.fatlog &&
+      console.log("allDecomojiList:", allDecomojiList.length, allDecomojiList);
 
-    const result = await postEmojiAdd(page, inputs.team_name, name, path);
+    // emojiAdminList と allDecomojiList を突合させて処理するアイテムだけのリストを作る
+    const targetDecomojiList = allDecomojiList.filter((item) => {
+      return emojiAdminList.findIndex((v) => v.name === item.name);
+    });
+    inputs.debug && inputs.fatlog &&
+      console.log(
+        "targetDecomojiList:",
+        targetDecomojiList.length,
+        targetDecomojiList
+      );
 
-    if (!result.ok) {
-      console.log(`${currentIdx}/${targetLength}: ${result.error} ${name}.`);
+    // ページに form 要素を挿入する
+    await page.evaluate(injectUploadForm);
+
+    const targetLength = targetDecomojiList.length;
+    let currentCategory = '';
+    let i = 0;
+    let ratelimited = false;
+
+    while (i < targetLength) {
+      const target = targetDecomojiList[i];
+      const { category, name, path } = target;
+      const currentIdx = i + 1;
+
+      if (currentCategory === '' && currentCategory !== category) {
+        console.log(`\n[${category}] category start!`)
+        currentCategory = category;
+      }
+
+      console.log(`${currentIdx}/${targetLength}: importing ${name}...`);
+
+      const result = await postEmojiAdd(page, inputs.team_name, name, path);
+
+      console.log(`${currentIdx}/${targetLength}: ${ result.ok ? 'imported' : result.error } ${name}.`);
+
       // ratelimited が返ってきていたら、インデックスをインクリメントせず3秒待ってもう一度実行する
       if (result.error === "ratelimited") {
-        console.log("waiting...");
-        await page.waitFor(3000);
+        ratelimited = true;
+        break;
       }
-      continue;
+      // インデックスを進める
+      i++;
     }
 
-    console.log(`${currentIdx}/${targetLength}: imported ${name}.`);
-    i++;
+    // ブラウザを閉じる
+    if (!inputs.debug) {
+      await browser.close();
+    }
+
+    // ratelimited でループを抜けていたらもう一度ログイン
+    if (ratelimited) {
+      await _import(inputs);
+    }
+
+    return;
   }
 
-  return;
+  // 再帰処理をスタートする
+  await _import(inputs);
 };
 
 module.exports = importer;

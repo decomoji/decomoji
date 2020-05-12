@@ -3,7 +3,7 @@ const inquirer = require("inquirer");
 const isEmail = require("../utilities/isEmail");
 const isInputs = require("../utilities/isInputs");
 
-const goToEmojiPage = async (page, inputs, options) => {
+const goToEmojiPage = async (page, inputs) => {
   // ログイン画面に遷移する（チームのカスタム絵文字管理画面へのリダイレクトパラメータ付き）
   await page.goto(
     `https://${inputs.team_name}.slack.com/?redir=%2Fcustomize%2Femoji#/`,
@@ -96,7 +96,7 @@ const goToEmojiPage = async (page, inputs, options) => {
         ]);
         // #signin_form がなかったらログインできたと見なして再帰処理を抜ける
         if (await page.$("#signin_form").then((res) => !res)) {
-          options.debug && console.log("success login.");
+          inputs.debug && console.log("success login.");
           return;
         }
         // ログインできるまで何度でもトライ！
@@ -132,7 +132,7 @@ const goToEmojiPage = async (page, inputs, options) => {
         ]);
         // 2FA入力欄がなかったら2FA認証できたと見なして再帰処理を抜ける
         if (await page.$('[name="2fa_code"]').then((res) => !res)) {
-          options.debug && console.log("2FA Verified.");
+          inputs.debug && console.log("2FA Verified.");
           return;
         }
         // 2FA認証できるまで何度でもトライ！
