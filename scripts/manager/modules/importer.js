@@ -26,17 +26,17 @@ const importer = async (inputs) => {
       getEmojiAdminList,
       inputs.team_name
     );
-    // inputs.debug &&
-    //   console.log("emojiAdminList:", emojiAdminList.length, emojiAdminList);
+    inputs.debug && inputs.fatlog &&
+      console.log("emojiAdminList:", emojiAdminList.length, emojiAdminList);
 
     // 対象デコモジリストを取得する
     const allDecomojiList = await getTargetDecomojiList(inputs.categories);
-    // inputs.debug &&
-    //   console.log("allDecomojiList:", allDecomojiList.length, allDecomojiList);
+    inputs.debug && inputs.fatlog &&
+      console.log("allDecomojiList:", allDecomojiList.length, allDecomojiList);
 
     // emojiAdminList からファイル名だけの配列を作っておく
     const emojiAdminNameList = new Set(emojiAdminList.map((v) => v.name));
-    // inputs.debug && console.log("emojiAdminNameList:", emojiAdminNameList); 
+    inputs.debug && inputs.fatlog && console.log("emojiAdminNameList:", emojiAdminNameList); 
 
     // emojiAdminList と allDecomojiList を突合させて処理するアイテムだけのリストを作る
     const targetDecomojiList = allDecomojiList.map((category) =>
@@ -44,12 +44,12 @@ const importer = async (inputs) => {
         (candidate) => !emojiAdminNameList.has(candidate.split(".")[0])
       )
     );
-    // inputs.debug &&
-    //   console.log(
-    //     "targetDecomojiList:",
-    //     targetDecomojiList.length,
-    //     targetDecomojiList
-    //   );
+    inputs.debug && inputs.fatlog &&
+      console.log(
+        "targetDecomojiList:",
+        targetDecomojiList.length,
+        targetDecomojiList
+      );
 
     // ページに form 要素を挿入する
     await page.evaluate(injectUploadForm);

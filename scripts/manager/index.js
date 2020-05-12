@@ -8,6 +8,7 @@ const importer = require("./modules/importer");
 // コマンドライン引数の定義
 program
   .option("-d, --debug", "output extra debugging")
+  .option("-f, --fatlog", "output more extra log")
   .option("-i, --inputs", "input setting json file")
   .parse(process.argv);
 
