@@ -1,9 +1,8 @@
 const puppeteer = require("puppeteer");
 
-const getEmojiAdminList = require("./getEmojiAdminList");
-const getTargetDecomojiList = require("./getTargetDecomojiList");
 const goToEmojiPage = require("./goToEmojiPage");
 const injectUploadForm = require("./injectUploadForm");
+const getUploadableDecomojiList = require("./getUploadableDecomojiList");
 const postEmojiAdd = require("./postEmojiAdd");
 
 const importer = async (inputs) => {
@@ -14,7 +13,7 @@ const importer = async (inputs) => {
     const browser = await puppeteer.launch({ devtools: inputs.debug });
     // ページを追加する
     const page = await browser.newPage();
-  
+
     console.log(
       `\nworkspace: https://${inputs.team_name}.slack.com/\n    email: ${inputs.email}\n password: **********\n\nConnecting...\n`
     );
@@ -22,41 +21,25 @@ const importer = async (inputs) => {
     // カスタム絵文字管理画面へ遷移する
     inputs = await goToEmojiPage(page, inputs);
 
-    // 登録済みのカスタム絵文字リストを取得する
-    const emojiAdminList = await page.evaluate(
-      getEmojiAdminList,
-      inputs.team_name
-    );
-    inputs.debug && inputs.fatlog &&
-      console.log("emojiAdminList:", emojiAdminList.length, emojiAdminList);
-
-    // 対象デコモジリストを取得する
-    const allDecomojiList = await getTargetDecomojiList(inputs.categories);
-    inputs.debug && inputs.fatlog &&
-      console.log("allDecomojiList:", allDecomojiList.length, allDecomojiList);
-
-    // emojiAdminList と allDecomojiList を突合させて処理するアイテムだけのリストを作る
-    const targetDecomojiList = allDecomojiList.filter((item) => {
-      return emojiAdminList.findIndex((v) => v.name === item.name);
-    });
-    inputs.debug && inputs.fatlog &&
-      console.log(
-        "targetDecomojiList:",
-        targetDecomojiList.length,
-        targetDecomojiList
-      );
-
     // ページに form 要素を挿入する
     await page.evaluate(injectUploadForm);
 
-    const targetLength = targetDecomojiList.length;
+    const uploadableDecomojiList = await getUploadableDecomojiList(page, inputs);
+    const uploadableDecomojiLength = uploadableDecomojiList.length;
     let currentCategory = '';
     let i = 0;
     let ratelimited = false;
 
-    while (i < targetLength) {
-      const target = targetDecomojiList[i];
-      const { category, name, path } = target;
+    // アップロード可能なものがない場合は終わり
+    if (uploadableDecomojiLength === 0) {
+      if (!inputs.debug) {
+        await browser.close();
+      }
+      return;
+    }
+
+    while (i < uploadableDecomojiLength) {
+      const { category, name, path } = uploadableDecomojiList[i];
       const currentIdx = i + 1;
 
       if (currentCategory === '' && currentCategory !== category) {
@@ -64,11 +47,11 @@ const importer = async (inputs) => {
         currentCategory = category;
       }
 
-      console.log(`${currentIdx}/${targetLength}: importing ${name}...`);
+      console.log(`${currentIdx}/${uploadableDecomojiLength}: importing ${name}...`);
 
       const result = await postEmojiAdd(page, inputs.team_name, name, path);
 
-      console.log(`${currentIdx}/${targetLength}: ${ result.ok ? 'imported' : result.error } ${name}.`);
+      console.log(`${currentIdx}/${uploadableDecomojiLength}: ${ result.ok ? 'imported' : result.error } ${name}.`);
 
       // ratelimited が返ってきていたら、インデックスをインクリメントせず3秒待ってもう一度実行する
       if (result.error === "ratelimited") {
