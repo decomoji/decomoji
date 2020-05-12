@@ -3,7 +3,7 @@ const inquirer = require("inquirer");
 const isEmail = require("../utilities/isEmail");
 const isInputs = require("../utilities/isInputs");
 
-const goToEmojiPage = async (page, options, inputs) => {
+const goToEmojiPage = async (page, inputs, options) => {
   // ログイン画面に遷移する（チームのカスタム絵文字管理画面へのリダイレクトパラメータ付き）
   await page.goto(
     `https://${inputs.team_name}.slack.com/?redir=%2Fcustomize%2Femoji#/`,
@@ -96,6 +96,7 @@ const goToEmojiPage = async (page, options, inputs) => {
         ]);
         // #signin_form がなかったらログインできたと見なして再帰処理を抜ける
         if (await page.$("#signin_form").then((res) => !res)) {
+          options.debug && console.log("success login.");
           return;
         }
         // ログインできるまで何度でもトライ！
