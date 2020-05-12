@@ -38,7 +38,7 @@ npm ci
 ```
 
 ```bash
-node scripts/import/index.js
+node scripts/manager
 ```
 
 対話式でチーム名、アカウント、パスワード、追加するデコモジのカテゴリーを入力できます。
@@ -54,7 +54,7 @@ node scripts/import/index.js
 登録スクリプトに `--inputs` オプションを付与することで `inputs.json` の情報がログインに使われます。
 
 ```bash
-node scripts/manager/ --inputs
+node scripts/manager --inputs
 ```
 
 `--inputs` オプションをつけると対話式の入力インターフェースは起動せず、すぐに登録処理が実行されます。
