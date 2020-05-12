@@ -1,9 +1,8 @@
 const puppeteer = require("puppeteer");
 
-const getEmojiAdminList = require("./getEmojiAdminList");
-const getTargetDecomojiList = require("./getTargetDecomojiList");
 const goToEmojiPage = require("./goToEmojiPage");
 const injectUploadForm = require("./injectUploadForm");
+const getUploadableDecomojiList = require("./getUploadableDecomojiList");
 const postEmojiAdd = require("./postEmojiAdd");
 
 const importer = async (inputs) => {
@@ -13,7 +12,7 @@ const importer = async (inputs) => {
     const browser = await puppeteer.launch({ devtools: inputs.debug });
     // ページを追加する
     const page = await browser.newPage();
-  
+
     console.log(
       `\nworkspace: https://${inputs.team_name}.slack.com/\n    email: ${inputs.email}\n password: **********\n\nConnecting...\n`
     );
@@ -21,69 +20,41 @@ const importer = async (inputs) => {
     // カスタム絵文字管理画面へ遷移する
     inputs = await goToEmojiPage(page, inputs);
 
-    // 登録済みのカスタム絵文字リストを取得する
-    const emojiAdminList = await page.evaluate(
-      getEmojiAdminList,
-      inputs.team_name
-    );
-    inputs.debug && inputs.fatlog &&
-      console.log("emojiAdminList:", emojiAdminList.length, emojiAdminList);
-
-    // 対象デコモジリストを取得する
-    const allDecomojiList = await getTargetDecomojiList(inputs.categories);
-    inputs.debug && inputs.fatlog &&
-      console.log("allDecomojiList:", allDecomojiList.length, allDecomojiList);
-
-    // emojiAdminList からファイル名だけの配列を作っておく
-    const emojiAdminNameList = new Set(emojiAdminList.map((v) => v.name));
-    inputs.debug && inputs.fatlog && console.log("emojiAdminNameList:", emojiAdminNameList); 
-
-    // emojiAdminList と allDecomojiList を突合させて処理するアイテムだけのリストを作る
-    const targetDecomojiList = allDecomojiList.map((category) =>
-      category.filter(
-        (candidate) => !emojiAdminNameList.has(candidate.split(".")[0])
-      )
-    );
-    inputs.debug && inputs.fatlog &&
-      console.log(
-        "targetDecomojiList:",
-        targetDecomojiList.length,
-        targetDecomojiList
-      );
-
     // ページに form 要素を挿入する
     await page.evaluate(injectUploadForm);
 
+    const uploadableDecomojiList = await getUploadableDecomojiList(page, inputs);
+    const uploadableDecomojiLength = uploadableDecomojiList.length;
+    let currentCategory = '';
+    let i = 0;
     let ratelimited = false;
-    for(let i=0; i<targetDecomojiList.length; i++) {
-      const targetAsCategory = targetDecomojiList[i];
-      const amountAsCategory = targetAsCategory.length;
-      const targetCategoryName = inputs.categories[i];
-  
-      console.log(`\n[${targetCategoryName}] category start!`)
-  
-      let j = 0;
-      while(j < amountAsCategory) {
-        const item = targetAsCategory[j];
-        const targetBasename = item.split(".")[0];
-    
-        console.log(`${j + 1}/${amountAsCategory}: importing ${targetBasename}...`);
-    
-        const result = await postEmojiAdd(page, inputs.team_name, targetCategoryName, targetBasename, item);
-    
-        if (!result.ok) {
-          console.log(`${j + 1}/${amountAsCategory}: ${result.error} ${targetBasename}.`);
-          // ratelimited が返ってきたらループを終了する
-          if (result.error === "ratelimited") {
-            ratelimited = true;
-            break;
-          }
-        }
-        // インデックスを進める
-        j++;
+
+    // アップロード可能なものがない場合は終わり
+    if (uploadableDecomojiLength === 0) {
+      if (!inputs.debug) {
+        await browser.close();
       }
-      // ratelimited ならループを終了する
-      if (ratelimited) {
+      return;
+    }
+
+    while (i < uploadableDecomojiLength) {
+      const { category, name, path } = uploadableDecomojiList[i];
+      const currentIdx = i + 1;
+
+      if (currentCategory === '' && currentCategory !== category) {
+        console.log(`\n[${category}] category start!`)
+        currentCategory = category;
+      }
+
+      console.log(`${currentIdx}/${uploadableDecomojiLength}: importing ${name}...`);
+
+      const result = await postEmojiAdd(page, inputs.team_name, name, path);
+
+      console.log(`${currentIdx}/${uploadableDecomojiLength}: ${ result.ok ? 'imported' : result.error } ${name}.`);
+
+      // ratelimited が返ってきていたら、インデックスをインクリメントせず3秒待ってもう一度実行する
+      if (result.error === "ratelimited") {
+        ratelimited = true;
         break;
       }
     }

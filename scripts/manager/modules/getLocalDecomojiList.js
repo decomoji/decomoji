@@ -22,7 +22,7 @@
 const fs = require("fs");
 
 /** @param {("basic" | "extra" | "explicit")[]} categories */
-const getTargetDecomojiList = (categories) => {
+const getLocalDecomojiList = (categories) => {
   // ディレクトリをさらってファイルパス、カテゴリ、名前の配列を返す
   return categories.map((category) => {
     const dir = `./decomoji/${category}/`;
@@ -39,4 +39,4 @@ const getTargetDecomojiList = (categories) => {
   }).flat();
 };
 
-module.exports = getTargetDecomojiList;
+module.exports = getLocalDecomojiList;
