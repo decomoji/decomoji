@@ -37,21 +37,15 @@ const main = async (inputs) => {
   program.debug &&
     console.log("emojiAdminList:", emojiAdminList.length, emojiAdminList);
 
-  // 対象デコモジリストを取得する
-  const allDecomojiList = await getTargetDecomojiList(inputs.categories);
+  // アップロード対象のデコモジリストを取得する
+  const allDecomojiList = getTargetDecomojiList(inputs.categories);
   program.debug &&
     console.log("allDecomojiList:", allDecomojiList.length, allDecomojiList);
 
-  // emojiAdminList からファイル名だけの配列を作っておく
-  const emojiAdminNameList = new Set(emojiAdminList.map((v) => v.name));
-  program.debug && console.log("emojiAdminNameList:", emojiAdminNameList);
-
   // emojiAdminList と allDecomojiList を突合させて処理するアイテムだけのリストを作る
-  const targetDecomojiList = allDecomojiList.map((category) =>
-    category.filter(
-      (candidate) => !emojiAdminNameList.has(candidate.split(".")[0])
-    )
-  );
+  const targetDecomojiList = allDecomojiList.filter((item) => {
+    return emojiAdminList.findIndex((v) => v.name === item.name);
+  });
   program.debug &&
     console.log(
       "targetDecomojiList:",
