@@ -30,7 +30,7 @@ const main = async (inputs) => {
   );
 
   // カスタム絵文字管理画面へ遷移する
-  inputs = await goToEmojiPage(page, options, inputs);
+  inputs = await goToEmojiPage(page, inputs, options);
 
   // 登録済みのカスタム絵文字リストを取得する
   const emojiAdminList = await page.evaluate(
