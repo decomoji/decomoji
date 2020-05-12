@@ -8,7 +8,8 @@ const postEmojiAdd = require("./postEmojiAdd");
 
 const importer = async (inputs) => {
 
-  const _import = async(inputs) => {
+  const _import = async (inputs) => {
+
     // puppeteer でブラウザを起動する
     const browser = await puppeteer.launch({ devtools: inputs.debug });
     // ページを追加する
@@ -34,16 +35,10 @@ const importer = async (inputs) => {
     inputs.debug && inputs.fatlog &&
       console.log("allDecomojiList:", allDecomojiList.length, allDecomojiList);
 
-    // emojiAdminList からファイル名だけの配列を作っておく
-    const emojiAdminNameList = new Set(emojiAdminList.map((v) => v.name));
-    inputs.debug && inputs.fatlog && console.log("emojiAdminNameList:", emojiAdminNameList); 
-
     // emojiAdminList と allDecomojiList を突合させて処理するアイテムだけのリストを作る
-    const targetDecomojiList = allDecomojiList.map((category) =>
-      category.filter(
-        (candidate) => !emojiAdminNameList.has(candidate.split(".")[0])
-      )
-    );
+    const targetDecomojiList = allDecomojiList.filter((item) => {
+      return emojiAdminList.findIndex((v) => v.name === item.name);
+    });
     inputs.debug && inputs.fatlog &&
       console.log(
         "targetDecomojiList:",
@@ -54,38 +49,34 @@ const importer = async (inputs) => {
     // ページに form 要素を挿入する
     await page.evaluate(injectUploadForm);
 
+    const targetLength = targetDecomojiList.length;
+    let currentCategory = '';
+    let i = 0;
     let ratelimited = false;
-    for(let i=0; i<targetDecomojiList.length; i++) {
-      const targetAsCategory = targetDecomojiList[i];
-      const amountAsCategory = targetAsCategory.length;
-      const targetCategoryName = inputs.categories[i];
-  
-      console.log(`\n[${targetCategoryName}] category start!`)
-  
-      let j = 0;
-      while(j < amountAsCategory) {
-        const item = targetAsCategory[j];
-        const targetBasename = item.split(".")[0];
-    
-        console.log(`${j + 1}/${amountAsCategory}: importing ${targetBasename}...`);
-    
-        const result = await postEmojiAdd(page, inputs.team_name, targetCategoryName, targetBasename, item);
-    
-        if (!result.ok) {
-          console.log(`${j + 1}/${amountAsCategory}: ${result.error} ${targetBasename}.`);
-          // ratelimited が返ってきたらループを終了する
-          if (result.error === "ratelimited") {
-            ratelimited = true;
-            break;
-          }
-        }
-        // インデックスを進める
-        j++;
+
+    while (i < targetLength) {
+      const target = targetDecomojiList[i];
+      const { category, name, path } = target;
+      const currentIdx = i + 1;
+
+      if (currentCategory === '' && currentCategory !== category) {
+        console.log(`\n[${category}] category start!`)
+        currentCategory = category;
       }
-      // ratelimited ならループを終了する
-      if (ratelimited) {
+
+      console.log(`${currentIdx}/${targetLength}: importing ${name}...`);
+
+      const result = await postEmojiAdd(page, inputs.team_name, name, path);
+
+      console.log(`${currentIdx}/${targetLength}: ${ result.ok ? 'imported' : result.error } ${name}.`);
+
+      // ratelimited が返ってきていたら、インデックスをインクリメントせず3秒待ってもう一度実行する
+      if (result.error === "ratelimited") {
+        ratelimited = true;
         break;
       }
+      // インデックスを進める
+      i++;
     }
 
     // ブラウザを閉じる
@@ -97,8 +88,9 @@ const importer = async (inputs) => {
     if (ratelimited) {
       await _import(inputs);
     }
+
     return;
-  };
+  }
 
   // 再帰処理をスタートする
   await _import(inputs);

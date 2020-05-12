@@ -22,16 +22,21 @@
 const fs = require("fs");
 
 /** @param {("basic" | "extra" | "explicit")[]} categories */
-const getTargetDecomojiList = async (categories) => {
-  // ディレクトリをさらってファイル名の配列を返す
-  const targetDecomojiList = await Promise.all(
-    categories.map((category) => {
-      // .DS_Store を取り除いたものを返す
-      return fs.readdirSync(`./decomoji/${category}/`).filter((v) => v !== ".DS_Store");
+const getTargetDecomojiList = (categories) => {
+  // ディレクトリをさらってファイルパス、カテゴリ、名前の配列を返す
+  return categories.map((category) => {
+    const dir = `./decomoji/${category}/`;
+    const list = fs.readdirSync(dir).filter((v) => v !== ".DS_Store");
+    return list.map((file) => {
+      const name = file.split(".")[0];
+      const path = `${dir}${file}`;
+      return {
+        path,
+        name,
+        category
+      }
     })
-  );
-  // categories の順番ごとに二次元配列になっているのでそのまま返す
-  return targetDecomojiList;
+  }).flat();
 };
 
 module.exports = getTargetDecomojiList;
