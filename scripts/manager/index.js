@@ -4,6 +4,7 @@ const isStringOfNotEmpty = require("./utilities/isStringOfNotEmpty");
 
 const askInputs = require("./modules/askInputs");
 const importer = require("./modules/importer");
+const remover = require("./modules/remover");
 
 // コマンドライン引数の定義
 program
@@ -19,8 +20,15 @@ const main = async (inputs) => {
     ...inputs,
     ...program,
   };
-  // ファイルをアップロードする
-  await importer(_inputs);
+
+  switch (_inputs.execMode) {
+    case "add":
+      await importer(_inputs);
+      break;
+    case "remove":
+      await remover(_inputs);
+      break;
+  }
 };
 
 if (program.inputs) {
