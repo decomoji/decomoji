@@ -21,10 +21,10 @@ function generate_decomoji_md(type) {
 
     files.forEach((file) => {
       if (file === ".DS_Store") return;
-      text += `![${file.split(".")[0]}](./decomoji/${type}/${file})`;
+      text += `![${file.split(".")[0]}](../decomoji/${type}/${file})`;
     });
 
-    fs.writeFile(`./decomoji-${type}.md`, header[type] + text, (err) => {
+    fs.writeFile(`./docs/decomoji-${type}.md`, header[type] + text, (err) => {
       if (err) throw err;
       console.log(`decomoji-${type}.md has been saved!`);
     });
@@ -33,4 +33,3 @@ function generate_decomoji_md(type) {
 
 generate_decomoji_md("basic");
 generate_decomoji_md("extra");
-generate_decomoji_md("explicit");

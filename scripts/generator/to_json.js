@@ -31,4 +31,3 @@ function generate_decomoji_json(type) {
 
 generate_decomoji_json("basic");
 generate_decomoji_json("extra");
-generate_decomoji_json("explicit");
