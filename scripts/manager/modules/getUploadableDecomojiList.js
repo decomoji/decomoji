@@ -19,8 +19,10 @@ const getUploadableDecomojiList = async (page, inputs) => {
     );
 
   // remoteEmojiList と localDecomojiList を突合させて処理するアイテムだけのリストを作る
-  const uploadableDecomojiList = localDecomojiList.filter((item) => {
-    return remoteEmojiList.findIndex((v) => v.name === item.name) === -1;
+  const uploadableDecomojiList = localDecomojiList.filter((local) => {
+    return (
+      remoteEmojiList.findIndex((remote) => remote.name === local.name) === -1
+    );
   });
   inputs.debug &&
     inputs.fatlog &&
