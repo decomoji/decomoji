@@ -3,11 +3,6 @@
   "version": "4.20.6",
   "description": "Fast, Fun, High-context communication. The perfect assets is this",
   "main": "",
-  "scripts": {
-    "prettier:fix": "prettier --write scripts/**/*.js",
-    "update-md": "node scripts/generator/to_md.js",
-    "update-json": "node scripts/generator/to_json.js"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/decomoji/slack-reaction-decomoji.git"
