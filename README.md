@@ -12,13 +12,13 @@ https://github.com/decomoji/slack-reaction-decomoji/pull/63
 
 ---
 
-![](images/ss_basic.png)
+![](docs/images/ss_basic.png)
 
 Slackのリアクション機能で使えるカスタム絵文字のアセットです。このプロジェクトではそれら一つ一つを「デコモジ」と呼んでいます。
 
 ## Slackで使うとこうなります
 
-![](images/ss_using.png)
+![](docs/images/ss_using.png)
 
 これらのデコモジは、[@imaz](https://github.com/imaz)氏が作成した`:naruhodo:`に影響を受け生み出されました。
 
@@ -37,25 +37,25 @@ Slackのリアクション機能で使えるカスタム絵文字のアセット
 
 ## インストール
 
-[INSTALLATION.md](INSTALLATION.md)
+[INSTALLATION.md](docs/INSTALLATION.md)
 
 ## 基本セットと拡張セット
 
-[docomoji-basic.md](decomoji-basic.md)
+[docomoji-basic.md](docs/decomoji-basic.md)
 
 基本セットは、すぐに使えてSlackが楽しくなるセットです。
 
-[docomoji-extra.md](decomoji-extra.md)
+[docomoji-extra.md](docs/decomoji-extra.md)
 
 拡張セットは、作りたいと思った気持ちのままに作ったセットです。
 
 ## コントリビューティング
 
-[CONTRIBUTING.md](CONTRIBUTING.md)
+[CONTRIBUTING.md](docs/CONTRIBUTING.md)
 
 ## ファイル名ルール
 
-[NOTATIONS.md](NOTATIONS.md)
+[NOTATIONS.md](docs/NOTATIONS.md)
 
 訓令式ローマ字がベースです。
 
@@ -67,7 +67,7 @@ Under the [MIT License](LICENSE.txt).
 
 ## チェンジログ
 
-[CHANGES.md](CHANGES.md)
+[CHANGES.md](docs/CHANGES.md)
 
 ## Who use decomoji?
 
