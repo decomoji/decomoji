@@ -13,14 +13,14 @@ program
   .parse(process.argv);
 
 // 自動処理を実行する
-const main = async (inputs) => {
+const main = async (_inputs) => {
   // コマンドオプションを inputs に混ぜる
-  const _inputs = {
-    ...inputs,
+  const inputs = {
+    ..._inputs,
     ...program,
   };
   // ファイルをアップロードする
-  await importer(_inputs);
+  await importer(inputs);
 };
 
 if (program.inputs) {
