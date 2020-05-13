@@ -15,13 +15,22 @@ const importer = async (inputs) => {
     console.log(
       `\nworkspace: https://${inputs.workspace}.slack.com/\n    email: ${inputs.email}\n password: **********\n\nConnecting...\n`
     );
-  
+
     // カスタム絵文字管理画面へ遷移する
     inputs = await goToEmojiPage(page, inputs);
 
+<<<<<<< HEAD
     const uploadableDecomojiList = await getUploadableDecomojiList(page, inputs);
     const uploadableDecomojiLength = uploadableDecomojiList.length;
     let currentCategory = '';
+=======
+    console.log("Success to login.\nChecking data...\n");
+    const uploadableDecomojiList = await getUploadableDecomojiList(
+      page,
+      inputs
+    );
+    const uploadableDecomojiLength = uploadableDecomojiList.length;
+>>>>>>> refactor(manager): ログ出力を変更した
     let i = 0;
     let ratelimited = false;
 
@@ -35,15 +44,8 @@ const importer = async (inputs) => {
     }
 
     while (i < uploadableDecomojiLength) {
-      const { category, name, path } = uploadableDecomojiList[i];
+      const { name, path } = uploadableDecomojiList[i];
       const currentIdx = i + 1;
-
-      if (currentCategory === '' && currentCategory !== category) {
-        console.log(`\n[${category}] category start!`)
-        currentCategory = category;
-      }
-
-      console.log(`${currentIdx}/${uploadableDecomojiLength}: importing ${name}...`);
 
       const result = await postEmojiAdd(page, inputs.workspace, name, path);
 

@@ -18,9 +18,9 @@ const remover = async (inputs) => {
     // カスタム絵文字管理画面へ遷移する
     inputs = await goToEmojiPage(page, inputs);
 
+    console.log("Success to login.\nChecking data...\n");
     const removableDecomojiList = await getRemovableDecomojiList(page, inputs);
     const removableDecomojiLength = removableDecomojiList.length;
-    let currentCategory = "";
     let i = 0;
     let ratelimited = false;
 
@@ -34,17 +34,8 @@ const remover = async (inputs) => {
     }
 
     while (i < removableDecomojiLength) {
-      const { category, name } = removableDecomojiList[i];
+      const { name } = removableDecomojiList[i];
       const currentIdx = i + 1;
-
-      if (currentCategory === "" && currentCategory !== category) {
-        console.log(`\n[${category}] category start!`);
-        currentCategory = category;
-      }
-
-      console.log(
-        `${currentIdx}/${removableDecomojiLength}: removing ${name}...`
-      );
 
       const result = await postEmojiRemove(page, inputs.workspace, name);
 
