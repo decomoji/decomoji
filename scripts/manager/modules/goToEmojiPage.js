@@ -97,6 +97,8 @@ const goToEmojiPage = async (page, inputs) => {
         // #signin_form がなかったらログインできたと見なして再帰処理を抜ける
         if (await page.$("#signin_form").then((res) => !res)) {
           inputs.debug && console.log("success login.");
+          // email を保存し直す
+          inputs.email = retry.email;
           return;
         }
         // ログインできるまで何度でもトライ！
@@ -131,7 +133,9 @@ const goToEmojiPage = async (page, inputs) => {
         ]);
         // 2FA入力欄がなかったら2FA認証できたと見なして再帰処理を抜ける
         if (await page.$('[name="2fa_code"]').then((res) => !res)) {
-          inputs.debug && console.log("2FA Verified.");
+          console.log("2FA Verified.");
+          // 2FA 利用のフラグを立てる
+          inputs.twofactor_code = true;
           return;
         }
         // 2FA認証できるまで何度でもトライ！

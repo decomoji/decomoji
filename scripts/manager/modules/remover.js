@@ -54,8 +54,13 @@ const remover = async (inputs) => {
         } ${name}.`
       );
 
-      // ratelimited が返ってきていたら、インデックスをインクリメントせず3秒待ってもう一度実行する
+      // ratelimited の場合、2FAを利用しているなら3秒待って再開、そうでなければループを抜けて再ログインする
       if (result.error === "ratelimited") {
+        if (inputs.twofactor_code) {
+          console.log("waiting...");
+          await page.waitFor(3000);
+          continue;
+        }
         ratelimited = true;
         break;
       }
