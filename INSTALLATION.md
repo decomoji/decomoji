@@ -8,9 +8,9 @@
 
 ## マニュアルで登録する
 
-ブラウザでSlackチームにログインし、フォームから登録してください。
+ブラウザでワークスペースにログインし、フォームから登録してください。
 
-[https://<your_team_name>.slack.com/customize/emoji](https://<your_team_name>.slack.com/customize/emoji)
+[https://<your_workspace>.slack.com/customize/emoji](https://<your_workspace>.slack.com/customize/emoji)
 
 | /customize/emoji |
 | :--- |

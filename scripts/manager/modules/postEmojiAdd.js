@@ -1,12 +1,12 @@
-const postEmojiAdd = async (page, team_name, emoji_name, emoji_path) => {
-  const upload_form_id = "decomoji_upload_form";
+const postEmojiAdd = async (page, workspace, emojiName, emojiPath) => {
+  const uploadFormId = "decomoji_upload_form";
 
   // 1度だけページにアップロード用の form 要素を挿入する
-  if (await page.$(`#${upload_form_id}`).then((res) => !res)) {
-    await page.evaluate(async (upload_form_id) => {
+  if (await page.$(`#${uploadFormId}`).then((res) => !res)) {
+    await page.evaluate(async (uploadFormId) => {
       const form = document.createElement("form");
       const token = window.boot_data.api_token;
-      form.id = upload_form_id;
+      form.id = uploadFormId;
       form.innerHTML = `
       <input type="hidden" id="decomoji_name_input" name="name">
       <input type="hidden" id="decomoji_token_input" name="token" value="${token}">
@@ -14,23 +14,21 @@ const postEmojiAdd = async (page, team_name, emoji_name, emoji_path) => {
       <input type="file" id="decomoji_file_input" name="image">
     `;
       document.body.append(form);
-    }, upload_form_id);
+    }, uploadFormId);
   }
 
   // 画像ファイルをinput[type=file]にセットする
   const fileInputHandle = await page.$("#decomoji_file_input");
-  await fileInputHandle.uploadFile(emoji_path);
+  await fileInputHandle.uploadFile(emojiPath);
 
   // 埋め込んだ情報をもとにAPIにアクセスする
   const result = await page.evaluate(
-    async (team_name, upload_form_id, emoji_name) => {
-      const formData = new FormData(
-        document.querySelector(`#${upload_form_id}`)
-      );
-      formData.append("name", emoji_name);
+    async (workspace, uploadFormId, emojiName) => {
+      const formData = new FormData(document.querySelector(`#${uploadFormId}`));
+      formData.append("name", emojiName);
       try {
         const response = await fetch(
-          `https://${team_name}.slack.com/api/emoji.add`,
+          `https://${workspace}.slack.com/api/emoji.add`,
           {
             method: "POST",
             mode: "cors",
@@ -43,9 +41,9 @@ const postEmojiAdd = async (page, team_name, emoji_name, emoji_path) => {
         return error;
       }
     },
-    team_name,
-    upload_form_id,
-    emoji_name
+    workspace,
+    uploadFormId,
+    emojiName
   );
 
   return result;

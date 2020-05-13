@@ -1,12 +1,32 @@
+/**
+  emoji.adminList が返す配列のアイテムの型定義
+  @typedef {{
+    name: string;
+    is_alias: number;
+    alias_for: string;
+    url: string;
+    created: number;
+    team_id: string;
+    user_id: string;
+    user_display_name: string;
+    avatar_hash: string;
+    can_delete: boolean;
+    is_bad: boolean;
+    synonyms: string[];
+  }} EmojiItem;
+
+  emoji.adminList が返すレスポンスの型定義
+  @typedef {EmojiItem[]} EmojiAdminList;
+*/
+
 const fetchRemoteEmojiList = async (page, inputs) => {
+  const { workspace } = inputs;
 
-  const { team_name } = inputs;
+  inputs.debug &&
+    inputs.fatlog &&
+    console.log("\nStart to fetch remote emoji list...");
 
-  inputs.debug && inputs.fatlog &&
-    console.log('\nStart to fetch remote emoji list...');
-
-  const remoteEmojiList = await page.evaluate( async (team_name) => {
-
+  const remoteEmojiList = await page.evaluate(async (workspace) => {
     /** @type {EmojiAdminList} */
     let emojiAdminList = [];
     const fetchEmojiAdminList = async (nextPage) => {
@@ -17,7 +37,7 @@ const fetchRemoteEmojiList = async (page, inputs) => {
       };
       try {
         const response = await fetch(
-          `https://${team_name}.slack.com/api/emoji.adminList`,
+          `https://${workspace}.slack.com/api/emoji.adminList`,
           {
             method: "POST",
             headers: { Accept: "application/json" },
@@ -43,11 +63,11 @@ const fetchRemoteEmojiList = async (page, inputs) => {
     // 絵文字を全件取得する
     await fetchEmojiAdminList();
     return emojiAdminList;
+  }, workspace);
 
-  }, team_name);
-
-  inputs.debug && inputs.fatlog &&
-    console.log('Complete to fetch remote emoji list!\n');
+  inputs.debug &&
+    inputs.fatlog &&
+    console.log("Complete to fetch remote emoji list!\n");
 
   return remoteEmojiList;
 };
