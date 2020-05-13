@@ -27,6 +27,25 @@ const questions = [
     validate: isInputs,
   },
   {
+    type: "list",
+    name: "execMode",
+    message: "Select script mode.",
+    choices: [
+      {
+        name: "Import",
+        value: "add",
+      },
+      // {
+      //   name: "Alias",
+      //   value: "alias",
+      // },
+      {
+        name: "Remove",
+        value: "remove",
+      },
+    ],
+  },
+  {
     type: "checkbox",
     message: "Select categories.",
     name: "categories",
@@ -71,25 +90,6 @@ const questions = [
   //     return answers.suffix === "custom";
   //   },
   // },
-  {
-    type: "list",
-    name: "execMode",
-    message: "Select script mode.",
-    choices: [
-      {
-        name: "Import",
-        value: "add",
-      },
-      // {
-      //   name: "Alias",
-      //   value: "alias",
-      // },
-      {
-        name: "Remove",
-        value: "remove",
-      },
-    ],
-  },
 ];
 
 module.exports = (callback) => {
