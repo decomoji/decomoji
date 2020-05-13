@@ -1,5 +1,5 @@
 const fs = require("fs");
-const toDecomojiName = require("../utilities/toDecomojiName");
+const toBasename = require("../utilities/toBasename");
 
 const getLocalDecomojiList = (categories) => {
   // ディレクトリをさらってファイルパスとファイル名の配列を返す
@@ -10,7 +10,7 @@ const getLocalDecomojiList = (categories) => {
         return /.+\.(png|gif|jpg|jpeg)$/.test(v);
       });
       return list.map((file) => {
-        const name = toDecomojiName(file);
+        const name = toBasename(file);
         const path = `${dir}${file}`;
         return {
           path,
