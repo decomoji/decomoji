@@ -6,7 +6,7 @@
     password: string;
     categories: ("basic" | "extra" | "explicit")[];
     suffix: boolean;
-    custom_suffix?: boolean;
+    customSuffix?: boolean;
     exec_mode: "add" | "alias" | "remove";
   }} Inputs;
 */
@@ -63,11 +63,11 @@ const questions = [
   //   message: "Select suffix mode.",
   //   choices: [
   //     {
-  //       name: "no-suffix",
+  //       name: "nothing",
   //       value: false,
   //     },
   //     {
-  //       name: "default (recommended. '_dcmj' suffixed.)",
+  //       name: "recommended ('_dcmj')",
   //       value: true,
   //     },
   //     {
@@ -78,7 +78,7 @@ const questions = [
   // },
   // {
   //   type: "input",
-  //   name: "custom_suffix",
+  //   name: "customSuffix",
   //   message: "Enter your suffix.",
   //   when: function (answers) {
   //     return answers.suffix === "custom";
@@ -90,15 +90,15 @@ const questions = [
   //   message: "Select script mode.",
   //   choices: [
   //     {
-  //       name: "Import decomoji",
+  //       name: "Import",
   //       value: "add",
   //     },
   //     {
-  //       name: "Register alias to decomoji",
+  //       name: "Alias",
   //       value: "alias",
   //     },
   //     {
-  //       name: "Remove decomoji",
+  //       name: "Remove",
   //       value: "remove",
   //     },
   //   ],

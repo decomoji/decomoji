@@ -15,12 +15,12 @@ const goToEmojiPage = async (page, inputs) => {
   // ログイン画面に遷移できたかをチェックする
   if (await page.$("#signin_form").then((res) => !res)) {
     // おそらくチームが存在しない場合なので inquirer を起動して workspace を再入力させる
-    const _retry = async (tried_workspace) => {
+    const _retry = async (faildWorkspace) => {
       try {
         const retry = await inquirer.prompt({
           type: "input",
           name: "workspace",
-          message: `${tried_workspace} is not found. Please try again.`,
+          message: `${faildWorkspace} is not found. Please try again.`,
           validate: isInputs,
         });
         // ログイン画面に再び遷移する

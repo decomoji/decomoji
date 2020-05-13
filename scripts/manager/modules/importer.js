@@ -27,6 +27,7 @@ const importer = async (inputs) => {
 
     // アップロード可能なものがない場合は終わり
     if (uploadableDecomojiLength === 0) {
+      console.log("All decomoji has already been imported!");
       if (!inputs.debug) {
         await browser.close();
       }
