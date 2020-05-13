@@ -1,11 +1,10 @@
 const postEmojiAdd = async (page, team_name, emoji_name, emoji_path) => {
-
   const upload_form_id = "decomoji_upload_form";
 
   // 1度だけページにアップロード用の form 要素を挿入する
   if (await page.$(`#${upload_form_id}`).then((res) => !res)) {
     await page.evaluate(async (upload_form_id) => {
-      const form = document.createElement('form');
+      const form = document.createElement("form");
       const token = window.boot_data.api_token;
       form.id = upload_form_id;
       form.innerHTML = `
@@ -19,25 +18,35 @@ const postEmojiAdd = async (page, team_name, emoji_name, emoji_path) => {
   }
 
   // 画像ファイルをinput[type=file]にセットする
-  const fileInputHandle = await page.$('#decomoji_file_input');
+  const fileInputHandle = await page.$("#decomoji_file_input");
   await fileInputHandle.uploadFile(emoji_path);
 
   // 埋め込んだ情報をもとにAPIにアクセスする
-  const result = await page.evaluate( async (team_name, upload_form_id, emoji_name) => {
-    const formData = new FormData(document.querySelector(`#${upload_form_id}`));
-    formData.append('name', emoji_name);
-    try {
-      const response = await fetch(`https://${team_name}.slack.com/api/emoji.add`, {
-        method: 'POST',
-        mode: 'cors',
-        credentials: 'include',
-        body: formData
-      })
-      return await response.json();
-    } catch (error) {
-      return error;
-    }
-  }, team_name, upload_form_id, emoji_name);
+  const result = await page.evaluate(
+    async (team_name, upload_form_id, emoji_name) => {
+      const formData = new FormData(
+        document.querySelector(`#${upload_form_id}`)
+      );
+      formData.append("name", emoji_name);
+      try {
+        const response = await fetch(
+          `https://${team_name}.slack.com/api/emoji.add`,
+          {
+            method: "POST",
+            mode: "cors",
+            credentials: "include",
+            body: formData,
+          }
+        );
+        return await response.json();
+      } catch (error) {
+        return error;
+      }
+    },
+    team_name,
+    upload_form_id,
+    emoji_name
+  );
 
   return result;
 };
