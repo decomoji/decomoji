@@ -1,11 +1,11 @@
 const fetchRemoteEmojiList = async (page, inputs) => {
 
-  const { team_name } = inputs;
+  const { workspace } = inputs;
 
   inputs.debug && inputs.fatlog &&
     console.log('\nStart to fetch remote emoji list...');
 
-  const remoteEmojiList = await page.evaluate( async (team_name) => {
+  const remoteEmojiList = await page.evaluate( async (workspace) => {
 
     /** @type {EmojiAdminList} */
     let emojiAdminList = [];
@@ -17,7 +17,7 @@ const fetchRemoteEmojiList = async (page, inputs) => {
       };
       try {
         const response = await fetch(
-          `https://${team_name}.slack.com/api/emoji.adminList`,
+          `https://${workspace}.slack.com/api/emoji.adminList`,
           {
             method: "POST",
             headers: { Accept: "application/json" },
@@ -44,7 +44,7 @@ const fetchRemoteEmojiList = async (page, inputs) => {
     await fetchEmojiAdminList();
     return emojiAdminList;
 
-  }, team_name);
+  }, workspace);
 
   inputs.debug && inputs.fatlog &&
     console.log('Complete to fetch remote emoji list!\n');

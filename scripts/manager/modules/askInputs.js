@@ -1,7 +1,7 @@
 /**
   inputs.json もしくは inquirer のレスポンスの型定義
   @typedef {{
-    team_name: string;
+    workspace: string;
     email: string;
     password: string;
     categories: ("basic" | "extra" | "explicit")[];
@@ -22,7 +22,7 @@ const isSelects = require("../utilities/isSelects");
 const questions = [
   {
     type: "input",
-    name: "team_name",
+    name: "workspace",
     message: "Enter workspace (subdomain).",
     validate: isInputs,
   },

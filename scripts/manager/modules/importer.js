@@ -13,7 +13,7 @@ const importer = async (inputs) => {
     const page = await browser.newPage();
 
     console.log(
-      `\nworkspace: https://${inputs.team_name}.slack.com/\n    email: ${inputs.email}\n password: **********\n\nConnecting...\n`
+      `\nworkspace: https://${inputs.workspace}.slack.com/\n    email: ${inputs.email}\n password: **********\n\nConnecting...\n`
     );
   
     // カスタム絵文字管理画面へ遷移する
@@ -44,7 +44,7 @@ const importer = async (inputs) => {
 
       console.log(`${currentIdx}/${uploadableDecomojiLength}: importing ${name}...`);
 
-      const result = await postEmojiAdd(page, inputs.team_name, name, path);
+      const result = await postEmojiAdd(page, inputs.workspace, name, path);
 
       console.log(`${currentIdx}/${uploadableDecomojiLength}: ${ result.ok ? 'imported' : result.error } ${name}.`);
 
