@@ -4,9 +4,8 @@ const goToEmojiPage = require("./goToEmojiPage");
 const getUploadableDecomojiList = require("./getUploadableDecomojiList");
 const postEmojiAdd = require("./postEmojiAdd");
 
-const importer = async (inputs) => {
-
-  const _import = async(inputs) => {
+const uploader = async (inputs) => {
+  const _upload = async (inputs) => {
     // puppeteer でブラウザを起動する
     const browser = await puppeteer.launch({ devtools: inputs.debug });
     // ページを追加する
@@ -19,24 +18,18 @@ const importer = async (inputs) => {
     // カスタム絵文字管理画面へ遷移する
     inputs = await goToEmojiPage(page, inputs);
 
-<<<<<<< HEAD
-    const uploadableDecomojiList = await getUploadableDecomojiList(page, inputs);
-    const uploadableDecomojiLength = uploadableDecomojiList.length;
-    let currentCategory = '';
-=======
     console.log("Success to login.\nChecking data...\n");
     const uploadableDecomojiList = await getUploadableDecomojiList(
       page,
       inputs
     );
     const uploadableDecomojiLength = uploadableDecomojiList.length;
->>>>>>> refactor(manager): ログ出力を変更した
     let i = 0;
     let ratelimited = false;
 
     // アップロード可能なものがない場合は終わり
     if (uploadableDecomojiLength === 0) {
-      console.log("All decomoji has already been imported!");
+      console.log("All decomoji has already been uploaded!");
       if (!inputs.debug) {
         await browser.close();
       }
@@ -49,7 +42,11 @@ const importer = async (inputs) => {
 
       const result = await postEmojiAdd(page, inputs.workspace, name, path);
 
-      console.log(`${currentIdx}/${uploadableDecomojiLength}: ${ result.ok ? 'imported' : result.error } ${name}.`);
+      console.log(
+        `${currentIdx}/${uploadableDecomojiLength}: ${
+          result.ok ? "uploaded" : result.error
+        } ${name}.`
+      );
 
       // ratelimited の場合、2FAを利用しているなら3秒待って再開、そうでなければループを抜けて再ログインする
       if (result.error === "ratelimited") {
@@ -70,17 +67,17 @@ const importer = async (inputs) => {
 
     // ratelimited でループを抜けていたらもう一度ログイン
     if (ratelimited) {
-      await _import(inputs);
+      await _upload(inputs);
     }
 
     console.log("completed!");
     return;
   };
 
-  inputs.debug && console.time("[import time]");
+  inputs.debug && console.time("[upload time]");
   // 再帰処理をスタートする
-  await _import(inputs);
-  inputs.debug && console.timeEnd("[import time]");
+  await _upload(inputs);
+  inputs.debug && console.timeEnd("[upload time]");
 };
 
-module.exports = importer;
+module.exports = uploader;

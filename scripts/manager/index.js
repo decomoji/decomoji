@@ -3,7 +3,7 @@ const program = require("commander");
 const isStringOfNotEmpty = require("./utilities/isStringOfNotEmpty");
 
 const askInputs = require("./modules/askInputs");
-const importer = require("./modules/importer");
+const uploader = require("./modules/uploader");
 const remover = require("./modules/remover");
 
 // コマンドライン引数の定義
@@ -23,7 +23,7 @@ const main = async (inputs) => {
 
   switch (_inputs.execMode) {
     case "add":
-      await importer(_inputs);
+      await uploader(_inputs);
       break;
     case "remove":
       await remover(_inputs);

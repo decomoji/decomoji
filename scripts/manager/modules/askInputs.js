@@ -32,7 +32,7 @@ const questions = [
     message: "Select script mode.",
     choices: [
       {
-        name: "Import",
+        name: "Upload",
         value: "add",
       },
       // {
