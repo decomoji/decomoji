@@ -15,12 +15,12 @@ const goToEmojiPage = async (page, inputs) => {
   // ログイン画面に遷移できたかをチェックする
   if (await page.$("#signin_form").then((res) => !res)) {
     // おそらくチームが存在しない場合なので inquirer を起動して workspace を再入力させる
-    const _retry = async (faildWorkspace) => {
+    const _retry = async (failedWorkspace) => {
       try {
         const retry = await inquirer.prompt({
           type: "input",
           name: "workspace",
-          message: `${faildWorkspace} is not found. Please try again.`,
+          message: `${failedWorkspace} is not found. Please try again.`,
           validate: isInputs,
         });
         // ログイン画面に再び遷移する
@@ -59,10 +59,9 @@ const goToEmojiPage = async (page, inputs) => {
     // ログインエラーなら inquirer を起動して email と password を再入力させる
     const _retry = async (tried) => {
       // 前の入力を空にしておく
-      await page.evaluate(() => (document.querySelector("#email").value = ""));
-      await page.evaluate(
-        () => (document.querySelector("#password").value = "")
-      );
+      await page.$eval("#email", (e) => (e.value = ""));
+      await page.$eval("#password", (e) => (e.value = ""));
+      // ログイン試行
       try {
         const retry = await inquirer.prompt([
           {
@@ -114,19 +113,18 @@ const goToEmojiPage = async (page, inputs) => {
     // 2FA入力欄があれば inquirer を起動して入力させる
     const _auth = async () => {
       // 前の入力を空にしておく
-      await page.evaluate(
-        () => (document.querySelector('[name="2fa_code"]').value = "")
-      );
+      await page.$eval('[name="2fa_code"]', (e) => (e.value = ""));
+      // 2FA試行
       try {
-        const answer = await inquirer.prompt({
+        const { twofactor_code } = await inquirer.prompt({
           type: "password",
-          name: "2fa",
+          name: "twofactor_code",
           mask: "*",
           message: "Enter a 2FA code.",
           validate: isInputs,
         });
         // フォームに入力して submit する
-        await page.type('[name="2fa_code"]', answer["2fa"]);
+        await page.type('[name="2fa_code"]', twofactor_code);
         await Promise.all([
           page.click("#signin_btn"),
           page.waitForNavigation({ waitUntil: "networkidle0" }),
