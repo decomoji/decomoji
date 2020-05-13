@@ -28,7 +28,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged --pattern '**/*.*(js|ts)'",
+      "pre-commit": "pretty-quick --staged --pattern '**/*'",
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
   },

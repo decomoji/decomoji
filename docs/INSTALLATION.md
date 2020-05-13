@@ -12,20 +12,19 @@
 
 [https://<your_workspace>.slack.com/customize/emoji](https://<your_workspace>.slack.com/customize/emoji)
 
-| /customize/emoji |
-| :--- |
+| /customize/emoji              |
+| :---------------------------- |
 | ![](images/ss_form_input.png) |
 
-### Chromeエクステンション
+### Chrome エクステンション
 
-[Neutral Face Emoji Tools](https://chrome.google.com/webstore/detail/neutral-face-emoji-tools/anchoacphlfbdomdlomnbbfhcmcdmjej) をGoogle Chromeにインストールすると、Drag&Dropでまとめて追加可能です。
+[Neutral Face Emoji Tools](https://chrome.google.com/webstore/detail/neutral-face-emoji-tools/anchoacphlfbdomdlomnbbfhcmcdmjej) を Google Chrome にインストールすると、Drag&Drop でまとめて追加可能です。
 
-| Neutral Face Emoji Tools |
-| :--- |
+| Neutral Face Emoji Tools          |
+| :-------------------------------- |
 | ![](images/ss_form_extention.png) |
 
-ただし、一度に100個以上を追加しようとしたり、連続してたくさんの画像を D&D すると登録に失敗するようです。
-
+ただし、一度に 100 個以上を追加しようとしたり、連続してたくさんの画像を D&D すると登録に失敗するようです。
 
 ## スクリプトで登録する
 
@@ -43,8 +42,8 @@ node scripts/manager
 
 対話式でチーム名、アカウント、パスワード、追加するデコモジのカテゴリーを入力できます。
 
-| CLI |
-| :--- |
+| CLI                         |
+| :-------------------------- |
 | ![](images/ss_inpuirer.gif) |
 
 ### チーム名などを json ファイルに保存し実行を簡略化する
@@ -59,4 +58,4 @@ node scripts/manager --inputs
 
 `--inputs` オプションをつけると対話式の入力インターフェースは起動せず、すぐに登録処理が実行されます。
 
-基本セット（Basic）と拡張セット（Extra）の両方を登録するのに60分ほどかかりますので、お昼休憩前や業後に実行することをお勧めします。
+基本セット（Basic）と拡張セット（Extra）の両方を登録するのに 60 分ほどかかりますので、お昼休憩前や業後に実行することをお勧めします。

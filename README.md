@@ -14,9 +14,9 @@ https://github.com/decomoji/slack-reaction-decomoji/pull/63
 
 ![](docs/images/ss_basic.png)
 
-Slackのリアクション機能で使えるカスタム絵文字のアセットです。このプロジェクトではそれら一つ一つを「デコモジ」と呼んでいます。
+Slack のリアクション機能で使えるカスタム絵文字のアセットです。このプロジェクトではそれら一つ一つを「デコモジ」と呼んでいます。
 
-## Slackで使うとこうなります
+## Slack で使うとこうなります
 
 ![](docs/images/ss_using.png)
 
@@ -43,7 +43,7 @@ Slackのリアクション機能で使えるカスタム絵文字のアセット
 
 [docomoji-basic.md](docs/decomoji-basic.md)
 
-基本セットは、すぐに使えてSlackが楽しくなるセットです。
+基本セットは、すぐに使えて Slack が楽しくなるセットです。
 
 [docomoji-extra.md](docs/decomoji-extra.md)
 
@@ -73,15 +73,14 @@ Under the [MIT License](LICENSE.txt).
 
 [who-use-decomoji](https://github.com/decomoji/who-use-decomoji)
 
-あなたの所属する組織のSlackチームでデコモジが使われていたら、ぜひ「Who use decomoji?」リポジトリに追加してください。Issueで教えてもらってもいいですし、編集してプルリクエストを投げてもらってもよいです！
+あなたの所属する組織の Slack チームでデコモジが使われていたら、ぜひ「Who use decomoji?」リポジトリに追加してください。Issue で教えてもらってもいいですし、編集してプルリクエストを投げてもらってもよいです！
 
 ## えっ支援したいって！？
 
-ありがとうございます！　Patreonにページを作りました！
+ありがとうございます！　 Patreon にページを作りました！
 
 https://www.patreon.com/decomoji
 
 ## スペシャルサンクス！
 
 [@imaz](https://github.com/imaz/) / [@geckotang](https://github.com/geckotang/) / [@ginpei](https://github.com/ginpei/) / [@watilde](https://github.com/watilde/) / [@matori](https://github.com/matori/) / [@fukayatsu](https://github.com/fukayatsu/) / [@maiha2](https://github.com/maiha2/) / [@webcre8](https://github.com/webcre8/) / [@masuP9](https://github.com/masuP9/) / [@yuheiy](https://github.com/yuheiy) / [@kubosho](https://github.com/kubosho)
-
