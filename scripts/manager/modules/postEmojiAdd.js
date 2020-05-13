@@ -4,7 +4,6 @@ const postEmojiAdd = async (page, team_name, emoji_name, emoji_path) => {
 
   // 1度だけページにアップロード用の form 要素を挿入する
   if (await page.$(`#${upload_form_id}`).then((res) => !res)) {
-    console.log('初回だけformを追加する');
     await page.evaluate(async (upload_form_id) => {
       const form = document.createElement('form');
       const token = window.boot_data.api_token;
