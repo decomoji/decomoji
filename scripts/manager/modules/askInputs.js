@@ -7,7 +7,7 @@
     categories: ("basic" | "extra" | "explicit")[];
     suffix: boolean;
     customSuffix?: boolean;
-    exec_mode: "add" | "alias" | "remove";
+    execMode: "add" | "alias" | "remove";
   }} Inputs;
 */
 
@@ -84,25 +84,25 @@ const questions = [
   //     return answers.suffix === "custom";
   //   },
   // },
-  // {
-  //   type: "list",
-  //   name: "exec_mode",
-  //   message: "Select script mode.",
-  //   choices: [
-  //     {
-  //       name: "Import",
-  //       value: "add",
-  //     },
-  //     {
-  //       name: "Alias",
-  //       value: "alias",
-  //     },
-  //     {
-  //       name: "Remove",
-  //       value: "remove",
-  //     },
-  //   ],
-  // },
+  {
+    type: "list",
+    name: "execMode",
+    message: "Select script mode.",
+    choices: [
+      {
+        name: "Import",
+        value: "add",
+      },
+      // {
+      //   name: "Alias",
+      //   value: "alias",
+      // },
+      {
+        name: "Remove",
+        value: "remove",
+      },
+    ],
+  },
 ];
 
 module.exports = (callback) => {
