@@ -4,27 +4,28 @@ const isEmail = require("../utilities/isEmail");
 const isInputs = require("../utilities/isInputs");
 
 const goToEmojiPage = async (page, inputs) => {
+
   // ログイン画面に遷移する（チームのカスタム絵文字管理画面へのリダイレクトパラメータ付き）
   await page.goto(
-    `https://${inputs.team_name}.slack.com/?redir=%2Fcustomize%2Femoji#/`,
+    `https://${inputs.workspace}.slack.com/?redir=%2Fcustomize%2Femoji#/`,
     {
       waitUntil: "domcontentloaded",
     }
   );
   // ログイン画面に遷移できたかをチェックする
   if (await page.$("#signin_form").then((res) => !res)) {
-    // おそらくチームが存在しない場合なので inquirer を起動して team_name を再入力させる
-    const _retry = async (tried_team_name) => {
+    // おそらくチームが存在しない場合なので inquirer を起動して workspace を再入力させる
+    const _retry = async (tried_workspace) => {
       try {
         const retry = await inquirer.prompt({
           type: "input",
-          name: "team_name",
-          message: `${tried_team_name} is not found. Please try again.`,
+          name: "workspace",
+          message: `${tried_workspace} is not found. Please try again.`,
           validate: isInputs,
         });
         // ログイン画面に再び遷移する
         await page.goto(
-          `https://${retry.team_name}.slack.com/?redir=%2Fcustomize%2Femoji#/`,
+          `https://${retry.workspace}.slack.com/?redir=%2Fcustomize%2Femoji#/`,
           {
             waitUntil: "domcontentloaded",
           }
@@ -32,17 +33,17 @@ const goToEmojiPage = async (page, inputs) => {
         // ログイン画面に遷移できたかを再びチェックし、できていたら再帰処理を抜ける
         if (await page.$("#signin_form").then((res) => !!res)) {
           // チーム名を保存し直す
-          inputs.team_name = retry.team_name;
+          inputs.workspace = retry.workspace;
           return;
         }
         // ログインページに到達できるまで何度でもトライ！
-        await _retry(retry.team_name);
+        await _retry(retry.workspace);
       } catch (e) {
         return e;
       }
     };
     // 再帰処理をスタートする
-    await _retry(inputs.team_name);
+    await _retry(inputs.workspace);
   }
   // ログイン email を入力する
   await page.type("#email", inputs.email);
@@ -151,7 +152,7 @@ const goToEmojiPage = async (page, inputs) => {
     page.waitForSelector("#list_emoji_section"),
   ]);
 
-  // team_name が変わっている可能性があるので返しておく
+  // workspace が変更されている可能性があるので返しておく
   return inputs;
 };
 

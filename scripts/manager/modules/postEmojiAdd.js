@@ -1,4 +1,4 @@
-const postEmojiAdd = async (page, team_name, emoji_name, emoji_path) => {
+const postEmojiAdd = async (page, workspace, emoji_name, emoji_path) => {
 
   const upload_form_id = "decomoji_upload_form";
 
@@ -23,11 +23,11 @@ const postEmojiAdd = async (page, team_name, emoji_name, emoji_path) => {
   await fileInputHandle.uploadFile(emoji_path);
 
   // 埋め込んだ情報をもとにAPIにアクセスする
-  const result = await page.evaluate( async (team_name, upload_form_id, emoji_name) => {
+  const result = await page.evaluate( async (workspace, upload_form_id, emoji_name) => {
     const formData = new FormData(document.querySelector(`#${upload_form_id}`));
     formData.append('name', emoji_name);
     try {
-      const response = await fetch(`https://${team_name}.slack.com/api/emoji.add`, {
+      const response = await fetch(`https://${workspace}.slack.com/api/emoji.add`, {
         method: 'POST',
         mode: 'cors',
         credentials: 'include',
@@ -37,7 +37,7 @@ const postEmojiAdd = async (page, team_name, emoji_name, emoji_path) => {
     } catch (error) {
       return error;
     }
-  }, team_name, upload_form_id, emoji_name);
+  }, workspace, upload_form_id, emoji_name);
 
   return result;
 };
