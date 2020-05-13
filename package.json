@@ -28,10 +28,12 @@
   "devDependencies": {
     "commitizen": "^4.1.2",
     "cz-customizable": "^6.2.0",
-    "husky": "^4.2.5"
+    "husky": "^4.2.5",
+    "pretty-quick": "^2.0.1"
   },
   "husky": {
     "hooks": {
+      "pre-commit": "pretty-quick --staged --pattern '**/*.*(js|ts)'",
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
   },
