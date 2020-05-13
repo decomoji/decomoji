@@ -70,8 +70,10 @@ const importer = async (inputs) => {
     return;
   };
 
+  inputs.debug && console.time("[import time]");
   // 再帰処理をスタートする
   await _import(inputs);
+  inputs.debug && console.timeEnd("[import time]");
 };
 
 module.exports = importer;

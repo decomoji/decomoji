@@ -77,8 +77,10 @@ const remover = async (inputs) => {
     return;
   };
 
+  inputs.debug && console.time("[remove time]");
   // 再帰処理をスタートする
   await _remove(inputs);
+  inputs.debug && console.timeEnd("[remove time]");
 };
 
 module.exports = remover;
