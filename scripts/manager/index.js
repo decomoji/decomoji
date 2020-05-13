@@ -13,25 +13,25 @@ program
   .parse(process.argv);
 
 // 自動処理を実行する
-const main = async (_inputs) => {
+const main = async (inputs) => {
   // コマンドオプションを inputs に混ぜる
-  const inputs = {
-    ..._inputs,
+  const _inputs = {
+    ...inputs,
     ...program,
   };
   // ファイルをアップロードする
-  await importer(inputs);
+  await importer(_inputs);
 };
 
 if (program.inputs) {
-  // --inputs=./something.json などと値が指定されていたらそれを require し
-  // --inputs キーのみの場合はデフォルトで `./inputs.json` を require する
+  // --inputs=./something.json などのファイルパスが指定されていたらそれを require し、
+  // --inputs オプションがキーのみの場合はデフォルトで `src/scripts/manager/inputs.json` を require する
   main(
     require(isStringOfNotEmpty(program.inputs)
       ? program.inputs
       : "./inputs.json")
   );
 } else {
-  // inputs がない場合は inquirer を起動して対話的にオプションを作る
+  // --inputs オプション がない場合は inquirer を起動して対話的にオプションを作る
   askInputs((inputs) => main(inputs));
 }

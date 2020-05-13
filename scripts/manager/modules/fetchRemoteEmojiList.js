@@ -1,3 +1,24 @@
+/**
+  emoji.adminList が返す配列のアイテムの型定義
+  @typedef {{
+    name: string;
+    is_alias: number;
+    alias_for: string;
+    url: string;
+    created: number;
+    team_id: string;
+    user_id: string;
+    user_display_name: string;
+    avatar_hash: string;
+    can_delete: boolean;
+    is_bad: boolean;
+    synonyms: string[];
+  }} EmojiItem;
+
+  emoji.adminList が返すレスポンスの型定義
+  @typedef {EmojiItem[]} EmojiAdminList;
+*/
+
 const fetchRemoteEmojiList = async (page, inputs) => {
 
   const { workspace } = inputs;
