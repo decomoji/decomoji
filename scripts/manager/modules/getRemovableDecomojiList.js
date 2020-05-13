@@ -19,8 +19,12 @@ const getRemovableDecomojiList = async (page, inputs) => {
     );
 
   // remoteEmojiList と localDecomojiList を突合させて処理するアイテムだけのリストを作る
-  const removableDecomojiList = localDecomojiList.filter((item) => {
-    return remoteEmojiList.findIndex((v) => v.name === item.name) >= 0;
+  const removableDecomojiList = localDecomojiList.filter((local) => {
+    return (
+      remoteEmojiList.findIndex(
+        (remote) => remote.name === local.name && remote.can_delete
+      ) >= 0
+    );
   });
   inputs.debug &&
     inputs.fatlog &&
