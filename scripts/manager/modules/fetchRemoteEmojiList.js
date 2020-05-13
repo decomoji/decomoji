@@ -31,21 +31,17 @@ const fetchRemoteEmojiList = async (page, inputs) => {
     /** @type {EmojiAdminList} */
     let emojiAdminList = [];
     const fetchEmojiAdminList = async (nextPage) => {
-      const param = {
-        page: nextPage || 1,
-        count: 100,
-        token: window.boot_data.api_token,
-      };
+      const formData = new FormData();
+      formData.append("page", nextPage || 1);
+      formData.append("count", 100);
+      formData.append("token", window.boot_data.api_token);
       try {
         const response = await fetch(
           `https://${workspace}.slack.com/api/emoji.adminList`,
           {
             method: "POST",
             headers: { Accept: "application/json" },
-            body: Object.keys(param).reduce(
-              (o, key) => (o.set(key, param[key]), o),
-              new FormData()
-            ),
+            body: formData,
           }
         );
         const data = await response.json();
