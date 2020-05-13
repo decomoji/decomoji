@@ -1,12 +1,13 @@
 const fs = require("fs");
 
-/** @param {("basic" | "extra" | "explicit")[]} categories */
 const getLocalDecomojiList = (categories) => {
-  // ディレクトリをさらってファイルパス、カテゴリ、名前の配列を返す
+  // ディレクトリをさらってファイルパスとファイル名の配列を返す
   return categories
     .map((category) => {
       const dir = `./decomoji/${category}/`;
-      const list = fs.readdirSync(dir).filter((v) => v !== ".DS_Store");
+      const list = fs.readdirSync(dir).filter((v) => {
+        return /.+\.(png|gif|jpg|jpeg)$/.test(v);
+      });
       return list.map((file) => {
         const name = file.split(".")[0];
         const path = `${dir}${file}`;
@@ -18,5 +19,4 @@ const getLocalDecomojiList = (categories) => {
     })
   }).flat();
 };
-
 module.exports = getLocalDecomojiList;
