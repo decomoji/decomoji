@@ -1,7 +1,6 @@
 const puppeteer = require("puppeteer");
 
 const goToEmojiPage = require("./goToEmojiPage");
-const injectUploadForm = require("./injectUploadForm");
 const getUploadableDecomojiList = require("./getUploadableDecomojiList");
 const postEmojiAdd = require("./postEmojiAdd");
 
@@ -20,9 +19,6 @@ const importer = async (inputs) => {
   
     // カスタム絵文字管理画面へ遷移する
     inputs = await goToEmojiPage(page, inputs);
-
-    // ページに form 要素を挿入する
-    await page.evaluate(injectUploadForm);
 
     const uploadableDecomojiList = await getUploadableDecomojiList(page, inputs);
     const uploadableDecomojiLength = uploadableDecomojiList.length;
