@@ -65,6 +65,8 @@ const importer = async (inputs) => {
     if (ratelimited) {
       await _import(inputs);
     }
+
+    console.log("completed!");
     return;
   };
 

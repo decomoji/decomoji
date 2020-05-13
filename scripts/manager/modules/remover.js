@@ -73,6 +73,7 @@ const remover = async (inputs) => {
       await _import(inputs);
     }
 
+    console.log("completed!");
     return;
   };
 
