@@ -21,12 +21,14 @@
 
 const fetchRemoteEmojiList = async (page, inputs) => {
   inputs.debug && console.time("[fetch remote emoji list time]");
-  const { workspace } = inputs;
 
   inputs.debug && inputs.fatlog &&
     console.log('\nStart to fetch remote emoji list...');
 
   const remoteEmojiList = await page.evaluate( async (workspace) => {
+
+  const remoteEmojiList = await page.evaluate(async (inputs) => {
+    const { workspace, mode } = inputs;
 
     /** @type {EmojiAdminList} */
     let emojiAdminList = [];
@@ -35,6 +37,9 @@ const fetchRemoteEmojiList = async (page, inputs) => {
       formData.append("page", nextPage || 1);
       formData.append("count", 100);
       formData.append("token", window.boot_data.api_token);
+      if (mode === "Remove") {
+        formData.append("user_ids", JSON.stringify([window.boot_data.user_id]));
+      }
       try {
         const response = await fetch(
           `https://${workspace}.slack.com/api/emoji.adminList`,
@@ -60,8 +65,7 @@ const fetchRemoteEmojiList = async (page, inputs) => {
     // 絵文字を全件取得する
     await fetchEmojiAdminList();
     return emojiAdminList;
-
-  }, workspace);
+  }, inputs);
 
   inputs.debug && inputs.fatlog &&
     console.log('Complete to fetch remote emoji list!\n');
