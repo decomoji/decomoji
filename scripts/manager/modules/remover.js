@@ -45,7 +45,6 @@ const remover = async (inputs) => {
 
       // エラーがあればループを抜ける
       if (result.error) {
-        error = true;
         // ratelimited の場合、2FAを利用しているなら3秒待って再開、そうでなければ再ログインのためのフラグを立てる
         if (result.error === "ratelimited") {
           if (inputs.twofactor_code) {
@@ -54,6 +53,8 @@ const remover = async (inputs) => {
             continue;
           }
           ratelimited = true;
+        } else {
+          error = true;
         }
         break;
       }
