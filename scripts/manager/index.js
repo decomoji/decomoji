@@ -21,11 +21,11 @@ const main = async (inputs) => {
     ...program,
   };
 
-  switch (_inputs.execMode) {
-    case "add":
+  switch (_inputs.mode) {
+    case "Upload":
       await uploader(_inputs);
       break;
-    case "remove":
+    case "Remove":
       await remover(_inputs);
       break;
   }

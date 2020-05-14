@@ -28,12 +28,11 @@ const questions = [
   },
   {
     type: "list",
-    name: "execMode",
+    name: "mode",
     message: "Select script mode.",
     choices: [
       {
         name: "Upload",
-        value: "add",
       },
       // {
       //   name: "Alias",
@@ -41,7 +40,6 @@ const questions = [
       // },
       {
         name: "Remove",
-        value: "remove",
       },
     ],
   },
