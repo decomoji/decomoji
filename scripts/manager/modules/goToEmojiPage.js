@@ -83,7 +83,7 @@ const goToEmojiPage = async (page, inputs) => {
         if (await page.$("#slack_captcha").then((res) => !!res)) {
           // Recaptcha があったら無理なので諦める
           console.log(
-            "\n\nOops, you might judged a Bot. Please wait and try again.\n\n"
+            "\n[ERROR] Oops, you might judged a Bot. Please wait and try again.\n"
           );
           await browser.close();
         }
@@ -96,7 +96,7 @@ const goToEmojiPage = async (page, inputs) => {
         ]);
         // #signin_form がなかったらログインできたと見なして再帰処理を抜ける
         if (await page.$("#signin_form").then((res) => !res)) {
-          inputs.debug && console.log("success login.");
+          console.log("\nLogin successful!");
           // email を保存し直す
           inputs.email = retry.email;
           return;
@@ -133,7 +133,7 @@ const goToEmojiPage = async (page, inputs) => {
         ]);
         // 2FA入力欄がなかったら2FA認証できたと見なして再帰処理を抜ける
         if (await page.$('[name="2fa_code"]').then((res) => !res)) {
-          console.log("2FA Verified.");
+          console.log("\n2FA Verified.");
           // 2FA 利用のフラグを立てる
           inputs.twofactor_code = true;
           return;

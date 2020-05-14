@@ -11,14 +11,9 @@ const remover = async (inputs) => {
     // ページを追加する
     const page = await browser.newPage();
 
-    console.log(
-      `\nworkspace: https://${inputs.workspace}.slack.com/\n    email: ${inputs.email}\n password: **********\n\nConnecting...\n`
-    );
-
     // カスタム絵文字管理画面へ遷移する
     inputs = await goToEmojiPage(page, inputs);
 
-    console.log("Success to login.\nChecking data...\n");
     const removableDecomojiList = await getRemovableDecomojiList(page, inputs);
     const removableDecomojiLength = removableDecomojiList.length;
     let i = 0;
@@ -26,13 +21,14 @@ const remover = async (inputs) => {
 
     // 削除可能なものがない場合は終わり
     if (removableDecomojiLength === 0) {
-      console.log("All decomoji has already been removed!");
+      console.log("\nAll decomoji has already been removed!");
       if (!inputs.debug) {
         await browser.close();
       }
       return;
     }
 
+    console.log("");
     while (i < removableDecomojiLength) {
       const { name } = removableDecomojiList[i];
       const currentIdx = i + 1;
@@ -69,7 +65,7 @@ const remover = async (inputs) => {
       await _remove(inputs);
     }
 
-    console.log("completed!");
+    console.log("\nRemove completed!");
     return;
   };
 

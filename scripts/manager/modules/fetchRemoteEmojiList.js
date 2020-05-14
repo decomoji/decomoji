@@ -20,7 +20,7 @@
 */
 
 const fetchRemoteEmojiList = async (page, inputs) => {
-  inputs.debug && console.time("[fetch remote emoji list time]");
+  inputs.debug && console.time("[fetch time]");
 
   inputs.debug && inputs.fatlog &&
     console.log('\nStart to fetch remote emoji list...');
@@ -51,8 +51,8 @@ const fetchRemoteEmojiList = async (page, inputs) => {
         );
         const data = await response.json();
         emojiAdminList.push(...data.emoji);
-        // 最終ページまで fetch したら resolve する
-        if (data.paging.page === data.paging.pages) {
+        // 絵文字が一つもないか、最終ページまで fetch したら resolve する
+        if (data.paging.pages === 0 || data.paging.page === data.paging.pages) {
           return;
         }
         // 次のページを fetch
@@ -67,10 +67,11 @@ const fetchRemoteEmojiList = async (page, inputs) => {
     return emojiAdminList;
   }, inputs);
 
-  inputs.debug && inputs.fatlog &&
-    console.log('Complete to fetch remote emoji list!\n');
+  inputs.debug &&
+    inputs.fatlog &&
+    console.log("\nComplete to fetch remote emoji list!");
 
-  inputs.debug && console.timeEnd("[fetch remote emoji list time]");
+  inputs.debug && console.timeEnd("[fetch time]");
   return remoteEmojiList;
 };
 

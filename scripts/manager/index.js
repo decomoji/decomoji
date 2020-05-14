@@ -26,6 +26,14 @@ const main = async (inputs) => {
     fatlog: program.fatlog,
   };
 
+  console.log(`
+workspace  : https://${_inputs.workspace}.slack.com/
+email      : ${_inputs.email}
+mode       : ${_inputs.mode}
+categories : ${_inputs.categories}
+
+Connecting...`);
+
   switch (_inputs.mode) {
     case "Upload":
       await uploader(_inputs);
@@ -33,6 +41,10 @@ const main = async (inputs) => {
     case "Remove":
       await remover(_inputs);
       break;
+    default:
+      console.log(
+        "\n[ERROR] Undefined script mode. please confirm 'mode' value."
+      );
   }
 };
 

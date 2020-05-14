@@ -6,14 +6,14 @@ const getRemovableDecomojiList = async (page, inputs) => {
   const remoteEmojiList = await fetchRemoteEmojiList(page, inputs);
   inputs.debug &&
     inputs.fatlog &&
-    console.log("remoteEmojiList:", remoteEmojiList.length, remoteEmojiList);
+    console.log("\nremoteEmojiList:", remoteEmojiList.length, remoteEmojiList);
 
   // 対象デコモジリストを取得する
   const localDecomojiList = getLocalDecomojiList(inputs.categories);
   inputs.debug &&
     inputs.fatlog &&
     console.log(
-      "localDecomojiList:",
+      "\nlocalDecomojiList:",
       localDecomojiList.length,
       localDecomojiList
     );
@@ -29,7 +29,7 @@ const getRemovableDecomojiList = async (page, inputs) => {
   inputs.debug &&
     inputs.fatlog &&
     console.log(
-      "removableDecomojiList:",
+      "\nremovableDecomojiList:",
       removableDecomojiList.length,
       removableDecomojiList
     );

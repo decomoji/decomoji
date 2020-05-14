@@ -11,14 +11,9 @@ const uploader = async (inputs) => {
     // ページを追加する
     const page = await browser.newPage();
 
-    console.log(
-      `\nworkspace: https://${inputs.workspace}.slack.com/\n    email: ${inputs.email}\n password: **********\n\nConnecting...\n`
-    );
-
     // カスタム絵文字管理画面へ遷移する
     inputs = await goToEmojiPage(page, inputs);
 
-    console.log("Success to login.\nChecking data...\n");
     const uploadableDecomojiList = await getUploadableDecomojiList(
       page,
       inputs
@@ -29,13 +24,14 @@ const uploader = async (inputs) => {
 
     // アップロード可能なものがない場合は終わり
     if (uploadableDecomojiLength === 0) {
-      console.log("All decomoji has already been uploaded!");
+      console.log("\nAll decomoji has already been uploaded!");
       if (!inputs.debug) {
         await browser.close();
       }
       return;
     }
 
+    console.log("");
     while (i < uploadableDecomojiLength) {
       const { name, path } = uploadableDecomojiList[i];
       const currentIdx = i + 1;
@@ -51,7 +47,7 @@ const uploader = async (inputs) => {
       // ratelimited の場合、2FAを利用しているなら3秒待って再開、そうでなければループを抜けて再ログインする
       if (result.error === "ratelimited") {
         if (inputs.twofactor_code) {
-          console.log("waiting...");
+          console.log("Waiting...");
           await page.waitFor(3000);
           continue;
         }
@@ -70,7 +66,7 @@ const uploader = async (inputs) => {
       await _upload(inputs);
     }
 
-    console.log("completed!");
+    console.log("\nUpload completed!");
     return;
   };
 
