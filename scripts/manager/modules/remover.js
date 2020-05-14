@@ -17,6 +17,7 @@ const remover = async (inputs) => {
     const removableDecomojiList = await getRemovableDecomojiList(page, inputs);
     const removableDecomojiLength = removableDecomojiList.length;
     let i = 0;
+    let error = false;
     let ratelimited = false;
 
     // 削除可能なものがない場合は終わり
@@ -29,6 +30,7 @@ const remover = async (inputs) => {
     }
 
     console.log("");
+    inputs.debug && console.time("[remove time]");
     while (i < removableDecomojiLength) {
       const { name } = removableDecomojiList[i];
       const currentIdx = i + 1;
@@ -41,19 +43,27 @@ const remover = async (inputs) => {
         } ${name}.`
       );
 
-      // ratelimited の場合、2FAを利用しているなら3秒待って再開、そうでなければループを抜けて再ログインする
-      if (result.error === "ratelimited") {
-        if (inputs.twofactor_code) {
-          console.log("waiting...");
-          await page.waitFor(3000);
-          continue;
+      // エラーがあればループを抜ける
+      if (result.error) {
+        error = true;
+        // ratelimited の場合、2FAを利用しているなら3秒待って再開、そうでなければ再ログインのためのフラグを立てる
+        if (result.error === "ratelimited") {
+          if (inputs.twofactor_code) {
+            console.log("Waiting...");
+            await page.waitFor(3000);
+            continue;
+          }
+          ratelimited = true;
         }
-        ratelimited = true;
         break;
       }
+
       // インデックスを進める
+      error = false;
+      ratelimited = false;
       i++;
     }
+    inputs.debug && console.timeEnd("[remove time]");
 
     // ブラウザを閉じる
     if (!inputs.debug) {
@@ -65,14 +75,16 @@ const remover = async (inputs) => {
       await _remove(inputs);
     }
 
-    console.log("\nRemove completed!");
+    if (error) {
+      console.log("\n[ERROR]Remove failed.");
+    } else {
+      console.log("\nRemove completed!");
+    }
     return;
   };
 
-  inputs.debug && console.time("[remove time]");
   // 再帰処理をスタートする
   await _remove(inputs);
-  inputs.debug && console.timeEnd("[remove time]");
 };
 
 module.exports = remover;

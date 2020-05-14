@@ -20,6 +20,7 @@ const uploader = async (inputs) => {
     );
     const uploadableDecomojiLength = uploadableDecomojiList.length;
     let i = 0;
+    let error = false;
     let ratelimited = false;
 
     // アップロード可能なものがない場合は終わり
@@ -32,6 +33,7 @@ const uploader = async (inputs) => {
     }
 
     console.log("");
+    inputs.debug && console.time("[upload time]");
     while (i < uploadableDecomojiLength) {
       const { name, path } = uploadableDecomojiList[i];
       const currentIdx = i + 1;
@@ -44,17 +46,27 @@ const uploader = async (inputs) => {
         } ${name}.`
       );
 
-      // ratelimited の場合、2FAを利用しているなら3秒待って再開、そうでなければループを抜けて再ログインする
-      if (result.error === "ratelimited") {
-        if (inputs.twofactor_code) {
-          console.log("Waiting...");
-          await page.waitFor(3000);
-          continue;
+      // エラーがあればループを抜ける
+      if (result.error) {
+        error = true;
+        // ratelimited の場合、2FAを利用しているなら3秒待って再開、そうでなければ再ログインのためのフラグを立てる
+        if (result.error === "ratelimited") {
+          if (inputs.twofactor_code) {
+            console.log("Waiting...");
+            await page.waitFor(3000);
+            continue;
+          }
+          ratelimited = true;
         }
-        ratelimited = true;
         break;
       }
+
+      // インデックスを進める
+      error = false;
+      ratelimited = false;
+      i++;
     }
+    inputs.debug && console.timeEnd("[upload time]");
 
     // ブラウザを閉じる
     if (!inputs.debug) {
@@ -66,14 +78,16 @@ const uploader = async (inputs) => {
       await _upload(inputs);
     }
 
-    console.log("\nUpload completed!");
+    if (error) {
+      console.log("\n[ERROR]Upload failed.");
+    } else {
+      console.log("\nUpload completed!");
+    }
     return;
   };
 
-  inputs.debug && console.time("[upload time]");
   // 再帰処理をスタートする
   await _upload(inputs);
-  inputs.debug && console.timeEnd("[upload time]");
 };
 
 module.exports = uploader;
