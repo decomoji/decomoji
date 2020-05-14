@@ -28,16 +28,17 @@ const fetchRemoteEmojiList = async (page, inputs) => {
   const remoteEmojiList = await page.evaluate( async (workspace) => {
 
   const remoteEmojiList = await page.evaluate(async (inputs) => {
-    const { workspace, mode } = inputs;
+    const { workspace, mode, forceRemove } = inputs;
 
-    /** @type {EmojiAdminList} */
+    /** @type {EmojiAdminList} emojiAdminList */
     let emojiAdminList = [];
     const fetchEmojiAdminList = async (nextPage) => {
       const formData = new FormData();
       formData.append("page", nextPage || 1);
       formData.append("count", 100);
       formData.append("token", window.boot_data.api_token);
-      if (mode === "Remove") {
+      // forceRemove = true の場合は user_id に関係なく取得する
+      if (!forceRemove && mode === "Remove") {
         formData.append("user_ids", JSON.stringify([window.boot_data.user_id]));
       }
       try {

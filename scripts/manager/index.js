@@ -22,6 +22,7 @@ const main = async (inputs) => {
     password: inputs.password,
     categories: inputs.categories,
     mode: inputs.mode,
+    forceRemove: inputs.forceRemove,
     debug: program.debug,
     fatlog: program.fatlog,
   };
