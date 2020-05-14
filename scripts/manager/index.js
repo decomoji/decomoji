@@ -15,10 +15,15 @@ program
 
 // 自動処理を実行する
 const main = async (inputs) => {
-  // コマンドオプションを inputs に混ぜる
+  // コマンドオプションと inquirer から必要なものだけ取り出す
   const _inputs = {
-    ...inputs,
-    ...program,
+    workspace: inputs.workspace,
+    email: inputs.email,
+    password: inputs.password,
+    categories: inputs.categories,
+    mode: inputs.mode,
+    debug: program.debug,
+    fatlog: program.fatlog,
   };
 
   switch (_inputs.mode) {
