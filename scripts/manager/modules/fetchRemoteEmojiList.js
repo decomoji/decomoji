@@ -22,10 +22,9 @@
 const fetchRemoteEmojiList = async (page, inputs) => {
   inputs.debug && console.time("[fetch time]");
 
-  inputs.debug && inputs.fatlog &&
-    console.log('\nStart to fetch remote emoji list...');
-
-  const remoteEmojiList = await page.evaluate( async (workspace) => {
+  inputs.debug &&
+    inputs.fatlog &&
+    console.log("\nStart to fetch remote emoji list...");
 
   const remoteEmojiList = await page.evaluate(async (inputs) => {
     const { workspace, mode, forceRemove } = inputs;

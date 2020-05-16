@@ -18,6 +18,6 @@ const getLocalDecomojiList = (categories) => {
         };
       });
     })
-  }).flat();
+    .flat();
 };
 module.exports = getLocalDecomojiList;
