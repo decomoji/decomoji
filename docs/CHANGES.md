@@ -18,7 +18,7 @@
     - バージョン固定用の.ruby-version を追加
     - 基本セットと拡張セットのカテゴリ分けに対応（import_extra.rb）
 
-v4.21.0 で Ruby スクリプトを削除し、JavaScript 版に置き換えました。委細は #69 を参照してください。
+v4.21.0 で Ruby スクリプトを削除し、JavaScript 版に置き換えました。委細は [#69](https://github.com/decomoji/slack-reaction-decomoji/pull/69) を参照してください。
 
 ## v3 は破壊的変更を含んでいます
 

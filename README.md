@@ -6,9 +6,9 @@
 
 https://github.com/decomoji/slack-reaction-decomoji/pull/63
 
-#68 2020年5月頭に Ruby スクリプトが動作しなくなり、v5-preview で追加実装していたスクリプトも動作不可になりました。
+2020 年 5 月頭に Ruby スクリプトが動作しなくなり（[#68](https://github.com/decomoji/slack-reaction-decomoji/pull/68)）、v5-preview で追加実装していたスクリプトも動作不可になりました。
 
-これに対応するため #69 を作業中です。これは v4 にマージされる予定です。デコモジの追加と削除をお急ぎの方は #69 のブランチをお試しください。
+これに対応するため [#69](https://github.com/decomoji/slack-reaction-decomoji/pull/69) を作業中です。これは v4 にマージされる予定です。デコモジの追加と削除をお急ぎの方は [#69](https://github.com/decomoji/slack-reaction-decomoji/pull/69) のブランチをお試しください。
 
 ---
 
@@ -35,10 +35,6 @@ Slack のリアクション機能で使えるカスタム絵文字のアセッ�
 
 ---
 
-## インストール
-
-[INSTALLATION.md](docs/INSTALLATION.md)
-
 ## 基本セットと拡張セット
 
 [docomoji-basic.md](docs/decomoji-basic.md)
@@ -47,40 +43,56 @@ Slack のリアクション機能で使えるカスタム絵文字のアセッ�
 
 [docomoji-extra.md](docs/decomoji-extra.md)
 
-拡張セットは、作りたいと思った気持ちのままに作ったセットです。
+拡張セットは、作りたいと思った気持ちのままに作ったセットです。大量にあるので閲覧には十分注意してください。
 
-## コントリビューティング
+## ワークスペースへの登録
 
-[CONTRIBUTING.md](docs/CONTRIBUTING.md)
+**カスタム絵文字の追加には権限が必要です。**
 
-## ファイル名ルール
+1. 絵文字登録ページのフォームから一つずつ登録する
+2. Chrome 用のエクステンションで [Neutral Face Emoji Tools](https://chrome.google.com/webstore/detail/neutral-face-emoji-tools/anchoacphlfbdomdlomnbbfhcmcdmjej) Drag&Drop で登録する
+3. スクリプトでコマンドラインから一括登録・削除する
 
-[NOTATIONS.md](docs/NOTATIONS.md)
+### スクリプトでコマンドラインから一括登録・削除する
 
-訓令式ローマ字がベースです。
+この操作はエンジニア向けです。実行には Node.js v12.16.3 が必要です。
+
+プロジェクトルートで依存パッケージをインストールしてから Node コマンドを実行してください。
+
+```bash
+npm ci
+node scripts/manager
+```
+
+![](docs/images/ss_inpuirer.gif)
+
+対話式でチーム名、アカウント、パスワード、追加か削除、実行するデコモジのカテゴリーを入力できます。
+
+## フー・ユーズ・デコモジ？
+
+あなたの所属する組織のチームやコミュニティでデコモジが使われていたら、ぜひ「Who use decomoji?」リポジトリに追加して教えてください！
+
+[who-use-decomoji](https://github.com/decomoji/who-use-decomoji)
+
+## サポートするには
+
+Patreon で支援を受け付けています。
+
+<a href="https://www.patreon.com/bePatron?u=486549" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+
+## その他ドキュメント
+
+- [高度な管理方法について](docs/ADVANCE.md)
+- [コントリビューティングガイドラインについて](docs/CONTRIBUTING.md)
+- [デコモジファイルの命名規則について](docs/NOTATIONS.md)
+- [チェンジログ](docs/CHANGES.md)
+
+## スペシャルサンクス！
+
+[@imaz](https://github.com/imaz/) / [@geckotang](https://github.com/geckotang/) / [@ginpei](https://github.com/ginpei/) / [@watilde](https://github.com/watilde/) / [@matori](https://github.com/matori/) / [@fukayatsu](https://github.com/fukayatsu/) / [@maiha2](https://github.com/maiha2/) / [@webcre8](https://github.com/webcre8/) / [@masuP9](https://github.com/masuP9/) / [@yuheiy](https://github.com/yuheiy) / [@kubosho](https://github.com/kubosho)
 
 ## ライセンス
 
 Copyright (c) 2015 decomoji consortium and other contributors.
 
 Under the [MIT License](LICENSE.txt).
-
-## チェンジログ
-
-[CHANGES.md](docs/CHANGES.md)
-
-## Who use decomoji?
-
-[who-use-decomoji](https://github.com/decomoji/who-use-decomoji)
-
-あなたの所属する組織の Slack チームでデコモジが使われていたら、ぜひ「Who use decomoji?」リポジトリに追加してください。Issue で教えてもらってもいいですし、編集してプルリクエストを投げてもらってもよいです！
-
-## えっ支援したいって！？
-
-ありがとうございます！　 Patreon にページを作りました！
-
-https://www.patreon.com/decomoji
-
-## スペシャルサンクス！
-
-[@imaz](https://github.com/imaz/) / [@geckotang](https://github.com/geckotang/) / [@ginpei](https://github.com/ginpei/) / [@watilde](https://github.com/watilde/) / [@matori](https://github.com/matori/) / [@fukayatsu](https://github.com/fukayatsu/) / [@maiha2](https://github.com/maiha2/) / [@webcre8](https://github.com/webcre8/) / [@masuP9](https://github.com/masuP9/) / [@yuheiy](https://github.com/yuheiy) / [@kubosho](https://github.com/kubosho)
