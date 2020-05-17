@@ -3,12 +3,6 @@
   "version": "5.0.0-preview",
   "description": "Fast, Fun, High-context communication. The perfect assets is this",
   "main": "",
-  "scripts": {
-    "update-md": "node scripts/generate_decomoji_md.js",
-    "update-json": "node scripts/generate_decomoji_json.js",
-    "import-basic": "cd scripts/ && bundle exec ruby import.rb",
-    "import-extra": "cd scripts/ && bundle exec ruby import.rb extra"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/decomoji/slack-reaction-decomoji.git"
