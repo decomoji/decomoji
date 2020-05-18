@@ -4,7 +4,7 @@ const isEmail = require("../utilities/isEmail");
 const isInputs = require("../utilities/isInputs");
 
 const goToEmojiPage = async (page, inputs) => {
-  inputs.debug && console.time("[login time]");
+  (inputs.debug || inputs.time) && console.time("[Login time]");
   // ログイン画面に遷移する（チームのカスタム絵文字管理画面へのリダイレクトパラメータ付き）
   await page.goto(
     `https://${inputs.workspace}.slack.com/?redir=%2Fcustomize%2Femoji#/`,
@@ -82,8 +82,8 @@ const goToEmojiPage = async (page, inputs) => {
         // Recaptcha があるかをチェックする
         if (await page.$("#slack_captcha").then((res) => !!res)) {
           // Recaptcha があったら無理なので諦める
-          console.log(
-            "\n[ERROR] Oops, you might judged a Bot. Please wait and try again.\n"
+          console.error(
+            "[ERROR] Oops, you might judged a Bot. Please wait and try again."
           );
           await browser.close();
         }
@@ -96,7 +96,7 @@ const goToEmojiPage = async (page, inputs) => {
         ]);
         // #signin_form がなかったらログインできたと見なして再帰処理を抜ける
         if (await page.$("#signin_form").then((res) => !res)) {
-          console.log("\nLogin successful!");
+          console.info("Login successful!");
           // email を保存し直す
           inputs.email = retry.email;
           return;
@@ -133,7 +133,7 @@ const goToEmojiPage = async (page, inputs) => {
         ]);
         // 2FA入力欄がなかったら2FA認証できたと見なして再帰処理を抜ける
         if (await page.$('[name="2fa_code"]').then((res) => !res)) {
-          console.log("\n2FA Verified.");
+          console.info("2FA Verified!");
           // 2FA 利用のフラグを立てる
           inputs.twofactor_code = true;
           return;
@@ -154,7 +154,7 @@ const goToEmojiPage = async (page, inputs) => {
     page.waitForSelector("#list_emoji_section"),
   ]);
 
-  inputs.debug && console.timeEnd("[login time]");
+  (inputs.debug || inputs.time) && console.timeEnd("[Login time]");
 
   // workspace が変更されている可能性があるので返しておく
   return inputs;

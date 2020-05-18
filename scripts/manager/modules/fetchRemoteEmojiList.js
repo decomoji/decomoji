@@ -20,11 +20,10 @@
 */
 
 const fetchRemoteEmojiList = async (page, inputs) => {
-  inputs.debug && console.time("[fetch time]");
+  (inputs.debug || inputs.time) && console.time("[Fetch time]");
 
-  inputs.debug &&
-    inputs.fatlog &&
-    console.log("\nStart to fetch remote emoji list...");
+  (inputs.debug || inputs.log) &&
+    console.log("Start to fetch remote emoji list...");
 
   const remoteEmojiList = await page.evaluate(async (inputs) => {
     const { workspace, mode, forceRemove } = inputs;
@@ -67,11 +66,10 @@ const fetchRemoteEmojiList = async (page, inputs) => {
     return emojiAdminList;
   }, inputs);
 
-  inputs.debug &&
-    inputs.fatlog &&
-    console.log("\nComplete to fetch remote emoji list!");
+  (inputs.debug || inputs.log) &&
+    console.log("Complete to fetch remote emoji list!");
 
-  inputs.debug && console.timeEnd("[fetch time]");
+  (inputs.debug || inputs.time) && console.timeEnd("[Fetch time]");
   return remoteEmojiList;
 };
 

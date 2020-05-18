@@ -7,7 +7,9 @@ const postEmojiRemove = require("./postEmojiRemove");
 const remover = async (inputs) => {
   const _remove = async (inputs) => {
     // puppeteer でブラウザを起動する
-    const browser = await puppeteer.launch({ devtools: inputs.debug });
+    const browser = await puppeteer.launch({
+      devtools: inputs.debug || inputs.browser,
+    });
     // ページを追加する
     const page = await browser.newPage();
 
@@ -22,22 +24,21 @@ const remover = async (inputs) => {
 
     // 削除可能なものがない場合は終わり
     if (removableDecomojiLength === 0) {
-      console.log("\nAll decomoji has already been removed!");
+      console.info("All decomoji has already been removed!");
       if (!inputs.debug) {
         await browser.close();
       }
       return;
     }
 
-    console.log("");
-    inputs.debug && console.time("[remove time]");
+    (inputs.debug || inputs.time) && console.time("[Remove time]");
     while (i < removableDecomojiLength) {
       const { name } = removableDecomojiList[i];
       const currentIdx = i + 1;
 
       const result = await postEmojiRemove(page, inputs.workspace, name);
 
-      console.log(
+      console.info(
         `${currentIdx}/${removableDecomojiLength}: ${
           result.ok ? "removed" : result.error
         } ${name}.`
@@ -48,7 +49,7 @@ const remover = async (inputs) => {
         // ratelimited の場合、2FAを利用しているなら3秒待って再開、そうでなければ再ログインのためのフラグを立てる
         if (result.error === "ratelimited") {
           if (inputs.twofactor_code) {
-            console.log("Waiting...");
+            console.info("Waiting...");
             await page.waitFor(3000);
             continue;
           }
@@ -64,7 +65,7 @@ const remover = async (inputs) => {
       ratelimited = false;
       i++;
     }
-    inputs.debug && console.timeEnd("[remove time]");
+    (inputs.debug || inputs.time) && console.timeEnd("[Remove time]");
 
     // ブラウザを閉じる
     if (!inputs.debug) {
@@ -78,9 +79,9 @@ const remover = async (inputs) => {
 
     // 削除中に ratelimited にならなかった場合ここまで到達する
     if (error) {
-      console.log("\n[ERROR]Remove failed.");
+      console.error("[ERROR]Remove failed.");
     } else {
-      console.log("\nRemove completed!");
+      console.info("Remove completed!");
     }
     return;
   };

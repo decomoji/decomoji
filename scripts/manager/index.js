@@ -10,9 +10,14 @@ const DEFAULT_INPUT_PATH = "./inputs.json";
 
 // コマンドライン引数の定義
 program
-  .option("-d, --debug", "output extra debugging")
-  .option("-f, --fatlog", "output more extra log")
   .option("-i, --inputs", "input setting json file")
+  .option("-b, --browser", "open browser")
+  .option("-l, --log", "output data log")
+  .option("-t, --time", "output running time")
+  .option(
+    "-d, --debug",
+    "full debugging mode (open browser, output data log, output running time)"
+  )
   .parse(process.argv);
 
 // 自動処理を実行する
@@ -25,11 +30,13 @@ const main = async (inputs) => {
     categories: inputs.categories,
     mode: inputs.mode,
     forceRemove: inputs.forceRemove,
+    browser: program.browser,
     debug: program.debug,
-    fatlog: program.fatlog,
+    log: program.log,
+    time: program.time,
   };
 
-  console.log(`
+  console.info(`
 workspace  : https://${_inputs.workspace}.slack.com/
 email      : ${_inputs.email}
 mode       : ${_inputs.mode}
@@ -37,6 +44,7 @@ categories : ${_inputs.categories}
 
 Connecting...`);
 
+  (_inputs.debug || _inputs.time) && console.time("[Total time]");
   switch (_inputs.mode) {
     case "Upload":
       await uploader(_inputs);
@@ -45,10 +53,12 @@ Connecting...`);
       await remover(_inputs);
       break;
     default:
-      console.log(
-        "\n[ERROR] Undefined script mode. please confirm 'mode' value."
+      console.error(
+        "[ERROR] Undefined script mode. please confirm 'mode' value."
       );
+      break;
   }
+  (_inputs.debug || _inputs.time) && console.timeEnd("[Total time]");
 };
 
 if (program.inputs) {
