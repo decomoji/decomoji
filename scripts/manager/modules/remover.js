@@ -71,11 +71,12 @@ const remover = async (inputs) => {
       await browser.close();
     }
 
-    // ratelimited でループを抜けていたらもう一度ログイン
+    // ratelimited なら再帰する
     if (ratelimited) {
-      await _remove(inputs);
+      return await _remove(inputs);
     }
 
+    // 削除中に ratelimited にならなかった場合ここまで到達する
     if (error) {
       console.log("\n[ERROR]Remove failed.");
     } else {

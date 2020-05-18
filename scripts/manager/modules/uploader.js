@@ -74,11 +74,12 @@ const uploader = async (inputs) => {
       await browser.close();
     }
 
-    // ratelimited でループを抜けていたらもう一度ログイン
+    // ratelimited なら再帰する
     if (ratelimited) {
-      await _upload(inputs);
+      return await _upload(inputs);
     }
 
+    // 追加中に ratelimited にならなかった場合ここまで到達する
     if (error) {
       console.log("\n[ERROR]Upload failed.");
     } else {
