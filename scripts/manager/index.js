@@ -6,6 +6,8 @@ const askInputs = require("./modules/askInputs");
 const uploader = require("./modules/uploader");
 const remover = require("./modules/remover");
 
+const DEFAULT_INPUT_PATH = "./inputs.json";
+
 // コマンドライン引数の定義
 program
   .option("-d, --debug", "output extra debugging")
@@ -55,7 +57,7 @@ if (program.inputs) {
   main(
     require(isStringOfNotEmpty(program.inputs)
       ? program.inputs
-      : "./inputs.json")
+      : DEFAULT_INPUT_PATH)
   );
 } else {
   // --inputs オプション がない場合は inquirer を起動して対話的にオプションを作る
