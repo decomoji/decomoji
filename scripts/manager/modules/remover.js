@@ -74,6 +74,8 @@ const remover = async (inputs) => {
 
     // ratelimited なら再帰する
     if (ratelimited) {
+      (inputs.debug || inputs.time) && console.timeLog("[Total time]");
+      console.info("Reconnecting...");
       return await _remove(inputs);
     }
 
