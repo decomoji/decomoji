@@ -37,21 +37,22 @@ Slack のリアクション機能で使えるカスタム絵文字のアセッ�
 
 ## 基本セットと拡張セット
 
-[docomoji-basic.md](docs/decomoji-basic.md)
+デコモジには 2 つのカテゴリがあります。リンク先のドキュメントにアクセスすると**画像ファイルが超大量に参照される**のでご注意ください。
 
-基本セットは、すぐに使えて Slack が楽しくなるセットです。
-
-[docomoji-extra.md](docs/decomoji-extra.md)
-
-拡張セットは、作りたいと思った気持ちのままに作ったセットです。大量にあるので閲覧には十分注意してください。
+- [基本セット](docs/decomoji-basic.md): 基本セットは、すぐに使えて Slack が楽しくなるセットです
+- [拡張セット](docs/decomoji-extra.md): 拡張セットは、作りたいと思った気持ちのままに作ったセットです
 
 ## ワークスペースへの登録
 
 **カスタム絵文字の追加には権限が必要です。**
 
+デコモジをあなたのワークスペースに登録する方法は 3 つあります。
+
 1. 絵文字登録ページのフォームから一つずつ登録する
-2. Chrome 用のエクステンションで [Neutral Face Emoji Tools](https://chrome.google.com/webstore/detail/neutral-face-emoji-tools/anchoacphlfbdomdlomnbbfhcmcdmjej) Drag&Drop で登録する
+2. Chrome 用のエクステンション [Neutral Face Emoji Tools](https://chrome.google.com/webstore/detail/neutral-face-emoji-tools/anchoacphlfbdomdlomnbbfhcmcdmjej) を使って Drag&Drop で登録する
 3. スクリプトでコマンドラインから一括登録・削除する
+
+次のセクションで 3 つ目の方法について解説しています。
 
 ### スクリプトでコマンドラインから一括登録・削除する
 
@@ -80,7 +81,7 @@ Patreon で支援を受け付けています。
 
 <a href="https://www.patreon.com/bePatron?u=486549" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
 
-## その他ドキュメント
+## その他のドキュメント
 
 - [高度な管理方法について](docs/ADVANCE.md)
 - [コントリビューティングガイドラインについて](docs/CONTRIBUTING.md)
