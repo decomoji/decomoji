@@ -6,9 +6,7 @@
 
 https://github.com/decomoji/slack-reaction-decomoji/pull/63
 
-2020 年 5 月頭に Ruby スクリプトが動作しなくなり（[#68](https://github.com/decomoji/slack-reaction-decomoji/pull/68)）、v5-preview で追加実装していたスクリプトも動作不可になりました。
-
-これに対応するため [#69](https://github.com/decomoji/slack-reaction-decomoji/pull/69) を作業中です。これは v4 にマージされる予定です。デコモジの追加と削除をお急ぎの方は [#69](https://github.com/decomoji/slack-reaction-decomoji/pull/69) のブランチをお試しください。
+是非お試しください。
 
 ---
 
@@ -65,9 +63,9 @@ npm ci
 node scripts/manager
 ```
 
-![](docs/images/ss_inpuirer.gif)
+![](docs/images/ss_demo.gif)
 
-対話式でチーム名、アカウント、パスワード、追加か削除、実行するデコモジのカテゴリーを入力できます。
+対話式でチーム名、アカウント、パスワード、追加か削除、実行するデコモジのカテゴリーを入力すると、自動で処理が始まります。全てのデコモジを追加・削除するのに 60 分ほどかかります。
 
 ## フー・ユーズ・デコモジ？
 
