@@ -34,10 +34,9 @@ const questions = [
       {
         name: "Upload",
       },
-      // {
-      //   name: "Alias",
-      //   value: "alias",
-      // },
+      {
+        name: "Alias",
+      },
       {
         name: "Remove",
       },
@@ -60,6 +59,23 @@ const questions = [
     ],
     filter: convertToLowerCasedArray,
     validate: isSelects,
+    when: (answers) => {
+      return answers.mode !== "Alias";
+    },
+  },
+  {
+    type: "list",
+    name: "alias",
+    message: "Select alias preset.",
+    choices: [
+      {
+        name: "v4 to v5",
+        value: "scripts/manager/configs/oldies.json",
+      },
+    ],
+    when: (answers) => {
+      return answers.mode === "Alias";
+    },
   },
   // {
   //   type: "list",
