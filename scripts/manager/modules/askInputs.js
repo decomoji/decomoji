@@ -69,8 +69,8 @@ const questions = [
     message: "Select alias preset.",
     choices: [
       {
-        name: "v4 to v5",
-        value: "scripts/manager/configs/oldies.json",
+        name: "migration v4 to v5",
+        value: "scripts/manager/configs/alias/migration.json",
       },
     ],
     when: (answers) => {
