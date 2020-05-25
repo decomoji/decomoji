@@ -19,7 +19,9 @@ const getRemovableDecomojiList = async (page, inputs) => {
   });
   LOG &&
     console.log(
-      `removableDecomojiList(${removableDecomojiList.length}): ${removableDecomojiList}`
+      "removableDecomojiList:",
+      removableDecomojiList,
+      removableDecomojiList.length
     );
   return removableDecomojiList;
 };

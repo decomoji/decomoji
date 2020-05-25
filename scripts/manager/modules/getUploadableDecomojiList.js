@@ -17,7 +17,9 @@ const getUploadableDecomojiList = async (page, inputs) => {
   });
   LOG &&
     console.log(
-      `uploadableDecomojiList(${uploadableDecomojiList.length}): ${uploadableDecomojiList}`
+      "uploadableDecomojiList:",
+      uploadableDecomojiList,
+      uploadableDecomojiList.length
     );
   return uploadableDecomojiList;
 };

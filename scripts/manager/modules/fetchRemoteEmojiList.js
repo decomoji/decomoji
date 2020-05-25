@@ -69,9 +69,7 @@ const fetchRemoteEmojiList = async (page, inputs) => {
   LOG && console.log("Complete to fetch remote emoji list!");
   TIME && console.timeEnd("[Fetch time]");
   LOG &&
-    console.log(
-      `remoteEmojiList(${remoteEmojiList.length}): ${remoteEmojiList}`
-    );
+    console.log("remoteEmojiList:", remoteEmojiList, remoteEmojiList.length);
   return remoteEmojiList;
 };
 

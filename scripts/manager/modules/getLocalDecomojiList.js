@@ -21,7 +21,9 @@ const getLocalDecomojiList = (targets, LOG) => {
     .flat();
   LOG &&
     console.log(
-      `localDecomojiList(${localDecomojiList.length}): ${localDecomojiList}`
+      "localDecomojiList:",
+      localDecomojiList,
+      localDecomojiList.length
     );
   return localDecomojiList;
 };

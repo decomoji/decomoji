@@ -24,7 +24,9 @@ const getPretendableDecomojiList = async (page, inputs) => {
   });
   LOG &&
     console.log(
-      `pretendableDecomojiList(${pretendableDecomojiList.length}): ${pretendableDecomojiList}`
+      "pretendableDecomojiList:",
+      pretendableDecomojiList,
+      pretendableDecomojiList.length
     );
   return pretendableDecomojiList;
 };
