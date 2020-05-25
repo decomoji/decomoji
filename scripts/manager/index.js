@@ -1,6 +1,6 @@
 const program = require("commander");
 
-const isStringOfNotEmpty = require("./utilities/isStringOfNotEmpty");
+const isStringOfNotEmpty = require("../utilities/isStringOfNotEmpty");
 
 const askInputs = require("./modules/askInputs");
 const uploader = require("./modules/uploader");

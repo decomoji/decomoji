@@ -52,9 +52,11 @@ const questions = [
     choices: [
       {
         name: "Basic",
+        value: "v5_basic",
       },
       {
         name: "Extra",
+        value: "v5_extra",
       },
       // {
       //   name: "Explicit",
