@@ -67,15 +67,17 @@ const questions = [
     },
   },
   {
-    type: "list",
+    type: "checkbox",
     name: "alias",
     message: "Select alias preset.",
     choices: [
       {
         name: "migration v4 to v5",
-        value: "scripts/manager/configs/alias/migration.json",
+        value: "migration",
       },
     ],
+    validate: isSelects,
+    filter: convertToLowerCasedArray,
     when: (answers) => {
       return answers.mode === "alias";
     },
