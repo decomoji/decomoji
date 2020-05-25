@@ -1,5 +1,5 @@
 const fs = require("fs");
-const toBasename = require("../utilities/toBasename");
+const toBasename = require("../../utilities/toBasename");
 
 const getLocalDecomojiList = (categories) => {
   // ディレクトリをさらってファイルパスとファイル名の配列を返す

@@ -1,5 +1,5 @@
 const fs = require("fs");
-const toBasename = require("../manager/utilities/toBasename");
+const toBasename = require("../utilities/toBasename");
 
 const toNamePathList = (type, output) => {
   const dir = `./decomoji/${type}/`;
