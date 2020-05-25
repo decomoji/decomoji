@@ -1,11 +1,11 @@
 const fs = require("fs");
 const toBasename = require("../../utilities/toBasename");
 
-const getLocalDecomojiList = (categories) => {
+const getLocalDecomojiList = (targets, LOG) => {
   // ディレクトリをさらってファイルパスとファイル名の配列を返す
-  return categories
-    .map((category) => {
-      const dir = `./decomoji/${category}/`;
+  const localDecomojiList = targets
+    .map((target) => {
+      const dir = `./decomoji/${target}/`;
       const list = fs.readdirSync(dir).filter((v) => {
         return /.+\.(png|gif|jpg|jpeg)$/.test(v);
       });
@@ -19,5 +19,10 @@ const getLocalDecomojiList = (categories) => {
       });
     })
     .flat();
+  LOG &&
+    console.log(
+      `localDecomojiList(${localDecomojiList.length}): ${localDecomojiList}`
+    );
+  return localDecomojiList;
 };
 module.exports = getLocalDecomojiList;
