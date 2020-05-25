@@ -1,9 +1,9 @@
 const inquirer = require("inquirer");
 
-const convertToLowerCasedArray = require("../utilities/convertToLowerCasedArray");
-const isEmail = require("../utilities/isEmail");
-const isInputs = require("../utilities/isInputs");
-const isSelects = require("../utilities/isSelects");
+const convertToLowerCasedArray = require("../../utilities/convertToLowerCasedArray");
+const isEmail = require("../../utilities/isEmail");
+const isInputs = require("../../utilities/isInputs");
+const isSelects = require("../../utilities/isSelects");
 
 // inquirer Setting
 const questions = [

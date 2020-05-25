@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 
-const isEmail = require("../utilities/isEmail");
-const isInputs = require("../utilities/isInputs");
+const isEmail = require("../../utilities/isEmail");
+const isInputs = require("../../utilities/isInputs");
 
 const goToEmojiPage = async (page, inputs) => {
   (inputs.debug || inputs.time) && console.time("[Login time]");
