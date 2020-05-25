@@ -24,3 +24,4 @@ const toNamePathList = (type, output) => {
 
 toNamePathList("basic", "./scripts/manager/configs/list/v4_basic.json");
 toNamePathList("extra", "./scripts/manager/configs/list/v4_extra.json");
+toNamePathList("preview", "./scripts/manager/configs/list/v5_all.json");
