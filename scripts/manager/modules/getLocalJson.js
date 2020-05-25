@@ -10,7 +10,7 @@ const getLocalJson = (targets, mode, LOG) => {
       );
     })
     .flat();
-  LOG && console.log(`localJson(${localJson.length}): ${localJson}`);
+  LOG && console.log("localJson:", localJson, localJson.length);
   return localJson;
 };
 module.exports = getLocalJson;
