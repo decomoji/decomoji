@@ -36,7 +36,7 @@ const fetchRemoteEmojiList = async (page, inputs) => {
       formData.append("count", 100);
       formData.append("token", window.boot_data.api_token);
       // forceRemove = true の場合は user_id に関係なく取得する
-      if (!forceRemove && mode === "Remove") {
+      if (!forceRemove && mode === "remove") {
         formData.append("user_ids", JSON.stringify([window.boot_data.user_id]));
       }
       try {

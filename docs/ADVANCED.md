@@ -12,7 +12,7 @@
   "email": "<email>",
   "password": "<password>",
   "categories": ["basic", "extra"],
-  "mode": "Upload"
+  "mode": "upload"
 }
 ```
 
@@ -26,7 +26,7 @@ node scripts/manager --inputs
 
 scripst/manager の削除スクリプトは、デフォルトでは自分が登録した絵文字しか削除できない設定になっています。あなたのアカウントに権限があれば、他のメンバーが登録した絵文字でも強制削除することができます。
 
-強制削除オプションは対話入力では設定できません。 inputs.json を `"mode": "Remove"` として `"forceRemove": true` を追加してください。
+強制削除オプションは対話入力では設定できません。 inputs.json を `"mode": "remove"` として `"forceRemove": true` を追加してください。
 
 ```
 {
@@ -34,7 +34,7 @@ scripst/manager の削除スクリプトは、デフォルトでは自分が登�
   "email": "<email>",
   "password": "<password>",
   "categories": ["basic", "extra"],
-  "mode": "Remove",
+  "mode": "remove",
   "forceRemove": true
 }
 ```
