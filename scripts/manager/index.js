@@ -42,20 +42,20 @@ const main = async (inputs) => {
 workspace  : https://${_inputs.workspace}.slack.com/
 email      : ${_inputs.email}
 mode       : ${_inputs.mode}`);
-  _inputs.mode === "Alias" && console.info(`alias      : ${_inputs.alias}`);
-  _inputs.mode !== "Alias" &&
+  _inputs.mode === "alias" && console.info(`alias      : ${_inputs.alias}`);
+  _inputs.mode !== "alias" &&
     console.info(`categories : ${_inputs.categories}`);
   console.info("\nConnecting...");
 
   (_inputs.debug || _inputs.time) && console.time("[Total time]");
   switch (_inputs.mode) {
-    case "Upload":
+    case "upload":
       await uploader(_inputs);
       break;
-    case "Alias":
+    case "alias":
       await pretender(_inputs);
       break;
-    case "Remove":
+    case "remove":
       await remover(_inputs);
       break;
     default:

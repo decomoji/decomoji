@@ -41,6 +41,9 @@ const questions = [
         name: "Remove",
       },
     ],
+    filter: (answers) => {
+      return answers.toLowerCase();
+    },
   },
   {
     type: "checkbox",
@@ -60,7 +63,7 @@ const questions = [
     filter: convertToLowerCasedArray,
     validate: isSelects,
     when: (answers) => {
-      return answers.mode !== "Alias";
+      return answers.mode !== "alias";
     },
   },
   {
@@ -74,7 +77,7 @@ const questions = [
       },
     ],
     when: (answers) => {
-      return answers.mode === "Alias";
+      return answers.mode === "alias";
     },
   },
   // {
