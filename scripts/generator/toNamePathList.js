@@ -11,19 +11,15 @@ const toNamePathList = (type, output) => {
     const name = toBasename(file);
     const path = `${dir}${file}`;
     return {
-      path,
       name,
+      path,
     };
   });
 
-  fs.writeFileSync(
-    `${listDir}/${output}`,
-    JSON.stringify(namePathList),
-    (err) => {
-      if (err) throw err;
-      console.log(`${output} has been saved!`);
-    }
-  );
+  fs.writeFileSync(output, JSON.stringify(namePathList), (err) => {
+    if (err) throw err;
+    console.log(`${output} has been saved!`);
+  });
 };
 
 toNamePathList("basic", "./scripts/manager/configs/list/v4_basic.json");
