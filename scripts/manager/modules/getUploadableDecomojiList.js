@@ -1,5 +1,5 @@
 const fetchRemoteEmojiList = require("./fetchRemoteEmojiList");
-const getLocalDecomojiList = require("./getLocalDecomojiList");
+const getLocalJson = require("./getLocalJson");
 
 const getUploadableDecomojiList = async (page, inputs) => {
   const LOG = inputs.debug || inputs.log;
@@ -7,7 +7,7 @@ const getUploadableDecomojiList = async (page, inputs) => {
   const remoteEmojiList = await fetchRemoteEmojiList(page, inputs);
 
   // 対象デコモジリストを取得する
-  const localDecomojiList = getLocalDecomojiList(inputs.categories, LOG);
+  const localDecomojiList = getLocalJson(inputs.categories, inputs.mode, LOG);
 
   // remoteEmojiList と localDecomojiList を突合させて処理するアイテムだけのリストを作る
   const uploadableDecomojiList = localDecomojiList.filter((local) => {
