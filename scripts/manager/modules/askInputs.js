@@ -52,15 +52,16 @@ const questions = [
     choices: [
       {
         name: "Basic",
-        value: "v5_basic",
+        value: "v4_basic",
       },
       {
         name: "Extra",
-        value: "v5_extra",
+        value: "v4_extra",
       },
-      // {
-      //   name: "Explicit",
-      // },
+      {
+        name: "v5-preview",
+        value: "v5_all",
+      },
     ],
     filter: convertToLowerCasedArray,
     validate: isSelects,
