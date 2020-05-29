@@ -51,15 +51,15 @@ const questions = [
     name: "categories",
     choices: [
       {
-        name: "Basic",
+        name: "v4 Basic",
         value: "v4_basic",
       },
       {
-        name: "Extra",
+        name: "v4 Extra",
         value: "v4_extra",
       },
       {
-        name: "v5-preview",
+        name: "v5 Preview",
         value: "v5_all",
       },
     ],
