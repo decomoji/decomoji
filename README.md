@@ -77,7 +77,7 @@ node scripts/manager
 
 Patreon で支援を受け付けています。
 
-<a href="https://www.patreon.com/bePatron?u=486549" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+[Become a patron](https://www.patreon.com/bePatron?u=486549)
 
 ## その他のドキュメント
 
