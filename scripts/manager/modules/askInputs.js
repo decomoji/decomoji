@@ -66,7 +66,7 @@ const questions = [
     filter: convertToLowerCasedArray,
     validate: isSelects,
     when: (answers) => {
-      return answers.mode !== "alias";
+      return answers.mode === "upload";
     },
   },
   {
@@ -83,6 +83,34 @@ const questions = [
     filter: convertToLowerCasedArray,
     when: (answers) => {
       return answers.mode === "alias";
+    },
+  },
+  {
+    type: "checkbox",
+    message: "Select categories.",
+    name: "categories",
+    choices: [
+      {
+        name: "v4 Old Name(bug fixed)",
+        value: "v4_fixed",
+      },
+      {
+        name: "v4 Basic",
+        value: "v4_basic",
+      },
+      {
+        name: "v4 Extra",
+        value: "v4_extra",
+      },
+      {
+        name: "v5 Preview",
+        value: "v5_all",
+      },
+    ],
+    filter: convertToLowerCasedArray,
+    validate: isSelects,
+    when: (answers) => {
+      return answers.mode === "remove";
     },
   },
   // {
