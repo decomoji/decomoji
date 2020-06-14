@@ -77,7 +77,7 @@ node scripts/manager
 
 Patreon で支援を受け付けています。
 
-[Become a patron](https://www.patreon.com/bePatron?u=486549)
+<a href="https://www.patreon.com/bePatron?u=486549"><img src="docs/images/banner_patreon.png" width="217" height="51"></a>
 
 ## その他のドキュメント
 
