@@ -81,7 +81,7 @@ Patreon で支援を受け付けています。
 
 ## その他のドキュメント
 
-- [高度な管理方法について](docs/ADVANCE.md)
+- [高度な管理方法について](docs/ADVANCED.md)
 - [コントリビューティングガイドラインについて](docs/CONTRIBUTING.md)
 - [デコモジファイルの命名規則について](docs/NOTATIONS.md)
 - [チェンジログ](docs/CHANGES.md)
