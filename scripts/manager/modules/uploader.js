@@ -43,12 +43,16 @@ const uploader = async (inputs) => {
 
       console.info(
         `${currentIdx}/${uploadableDecomojiLength}: ${
-          result.ok ? "uploaded" : result.error
+          result.ok
+            ? "uploaded"
+            : result.error === "error_name_taken"
+            ? "skipped(already exists)."
+            : result.error
         } ${name}.`
       );
 
-      // エラーがあればループを抜ける
-      if (result.error) {
+      // error_name_taken 以外のエラーがあればループを抜ける
+      if (result.error !== "error_name_taken") {
         // ratelimited の場合、2FAを利用しているなら3秒待って再開、そうでなければ再ログインのためのフラグを立てる
         if (result.error === "ratelimited") {
           if (inputs.twofactor_code) {
