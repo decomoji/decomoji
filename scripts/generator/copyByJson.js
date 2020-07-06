@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const dripByJson = (jsonPath, targetDir) => {
+const copyByJson = (jsonPath, targetDir) => {
   const json = JSON.parse(fs.readFileSync(jsonPath));
 
   if (!fs.existsSync(targetDir)) fs.mkdirSync(targetDir);
@@ -13,5 +13,5 @@ const dripByJson = (jsonPath, targetDir) => {
   });
 };
 
-// node scripts/generator/dripByJson.js ~/Desktop/candidate_basic.json ~/Desktop/basic/
-dripByJson(process.argv[2], process.argv[3]);
+// node scripts/generator/copyByJson.js ~/Desktop/candidate_basic.json ~/Desktop/candidate_basic/
+copyByJson(process.argv[2], process.argv[3]);
