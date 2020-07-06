@@ -1,15 +1,18 @@
 const fs = require("fs");
 
-const copyByJson = (jsonPath, targetDir) => {
-  const json = JSON.parse(fs.readFileSync(jsonPath));
+const copyByJson = (jsonPath, destDir) => {
+  const fileList = JSON.parse(fs.readFileSync(jsonPath));
 
-  if (!fs.existsSync(targetDir)) fs.mkdirSync(targetDir);
+  if (!fs.existsSync(destDir)) fs.mkdirSync(destDir);
 
-  json.forEach((item) => {
-    fs.copyFile(item.path, `${targetDir}${item.name}.png`, (err) => {
-      if (err) throw err;
-      console.log(`${item.path} has copied!`);
-    });
+  fileList.forEach(({path, name}) => {
+    const destPath = `${destDir}${name}.png`;
+    try {
+      fs.copyFileSync(path, destPath);
+      console.log(`${path} has copied!`);
+    } catch (err) {
+      throw err
+    }
   });
 };
 
