@@ -7,7 +7,7 @@ const header = {
   extra: `# デコモジ拡張セット\n\n作りたいと思った気持ちのままに作った拡張セットです。使い方にご注意ください。\n\n`,
 };
 
-function generate_decomoji_md(type) {
+function toListMd(type) {
   fs.readdir(`./decomoji/${type}/`, (err, files) => {
     if (err) {
       if (err.code === "ENOENT") {
@@ -24,12 +24,14 @@ function generate_decomoji_md(type) {
       text += `![${file.split(".")[0]}](../decomoji/${type}/${file})`;
     });
 
-    fs.writeFile(`./docs/decomoji-${type}.md`, header[type] + text, (err) => {
-      if (err) throw err;
+    try {
+      fs.writeFileSync(`./docs/decomoji-${type}.md`, header[type] + text);
       console.log(`decomoji-${type}.md has been saved!`);
-    });
+    } catch (err) {
+      throw err;
+    }
   });
 }
 
-generate_decomoji_md("basic");
-generate_decomoji_md("extra");
+toListMd("basic");
+toListMd("extra");
