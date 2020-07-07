@@ -16,10 +16,12 @@ const toNamePathList = (type, output) => {
     };
   });
 
-  fs.writeFileSync(output, JSON.stringify(namePathList), (err) => {
-    if (err) throw err;
+  try {
+    fs.writeFileSync(output, JSON.stringify(namePathList));
     console.log(`${output} has been saved!`);
-  });
+  } catch (err) {
+    throw err;
+  }
 };
 
 toNamePathList("basic", "./scripts/manager/configs/list/v4_basic.json");
