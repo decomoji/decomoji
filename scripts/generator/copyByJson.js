@@ -5,13 +5,13 @@ const copyByJson = (jsonPath, destDir) => {
 
   if (!fs.existsSync(destDir)) fs.mkdirSync(destDir);
 
-  fileList.forEach(({path, name}) => {
+  fileList.forEach(({ path, name }) => {
     const destPath = `${destDir}${name}.png`;
     try {
       fs.copyFileSync(path, destPath);
-      console.log(`${path} has copied!`);
+      console.log(`${path} has been copied!`);
     } catch (err) {
-      throw err
+      throw err;
     }
   });
 };
