@@ -4,14 +4,15 @@ const imagemin = require("imagemin");
 const imageminPngquant = require("imagemin-pngquant");
 const imageminOptipng = require("imagemin-optipng");
 
-async function optimize_decomoji(type) {
-  await imagemin([`./decomoji/${type}/`], {
-    destination: `./decomoji/${type}/`,
+async function optimize_decomoji(category) {
+  await imagemin([`./decomoji/${category}/`], {
+    destination: `./decomoji/${category}/`,
     plugins: [imageminPngquant(), imageminOptipng()],
   });
 
-  console.log(`decomoji in ${type} has been optimized!`);
+  console.log(`decomoji in ${category} has been optimized!`);
 }
 
 optimize_decomoji("basic");
 optimize_decomoji("extra");
+optimize_decomoji("explicit");
