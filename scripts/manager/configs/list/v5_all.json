@@ -4466,7 +4466,6 @@
   { "name": "ribennsei", "path": "./decomoji/preview/ribennsei.png" },
   { "name": "ribido-", "path": "./decomoji/preview/ribido-.png" },
   { "name": "ribobarai", "path": "./decomoji/preview/ribobarai.png" },
-  { "name": "ribusasu", "path": "./decomoji/preview/ribusasu.png" },
   { "name": "rikainngu", "path": "./decomoji/preview/rikainngu.png" },
   { "name": "rikonnseikou", "path": "./decomoji/preview/rikonnseikou.png" },
   { "name": "rikonnsippai", "path": "./decomoji/preview/rikonnsippai.png" },
@@ -4502,6 +4501,7 @@
   { "name": "ronnriteki", "path": "./decomoji/preview/ronnriteki.png" },
   { "name": "rosokutai", "path": "./decomoji/preview/rosokutai.png" },
   { "name": "rougai", "path": "./decomoji/preview/rougai.png" },
+  { "name": "rubisasu", "path": "./decomoji/preview/rubisasu.png" },
   {
     "name": "rukkuanndofi-ru",
     "path": "./decomoji/preview/rukkuanndofi-ru.png"
@@ -6728,7 +6728,6 @@
   { "name": "yoi", "path": "./decomoji/preview/yoi.png" },
   { "name": "yokattane_", "path": "./decomoji/preview/yokattane_.png" },
   { "name": "yokereba", "path": "./decomoji/preview/yokereba.png" },
-  { "name": "yokumite", "path": "./decomoji/preview/yokumite.png" },
   { "name": "yokkyoudai", "path": "./decomoji/preview/yokkyoudai.png" },
   { "name": "yokodeyaro", "path": "./decomoji/preview/yokodeyaro.png" },
   { "name": "yokofabo", "path": "./decomoji/preview/yokofabo.png" },
@@ -6736,6 +6735,7 @@
   { "name": "yokubousakusyu", "path": "./decomoji/preview/yokubousakusyu.png" },
   { "name": "yokudekiteru", "path": "./decomoji/preview/yokudekiteru.png" },
   { "name": "yokumiro", "path": "./decomoji/preview/yokumiro.png" },
+  { "name": "yokumite", "path": "./decomoji/preview/yokumite.png" },
   { "name": "yokuugoku", "path": "./decomoji/preview/yokuugoku.png" },
   {
     "name": "yokuwakaranaikedonaotta",
