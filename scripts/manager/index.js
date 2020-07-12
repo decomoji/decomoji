@@ -46,6 +46,7 @@ email      : ${_inputs.email}
 mode       : ${_inputs.mode}`);
   _inputs.mode === "alias" && console.info(`alias      : ${_inputs.alias}`);
   _inputs.mode !== "alias" &&
+    _inputs.categories &&
     console.info(`categories : ${_inputs.categories}`);
   _inputs.forceRemove && console.info(`forceRemove: ${_inputs.forceRemove}`);
   console.info("\nConnecting...");
@@ -60,6 +61,24 @@ mode       : ${_inputs.mode}`);
       break;
     case "remove":
       await remover(_inputs);
+      break;
+    case "migration-v4-to-v5":
+      console.log("Remove 'v4_all' starting...");
+      await remover({
+        ..._inputs,
+        ...{ mode: "remove", categories: ["v4_all"] },
+      });
+      console.log("Upload 'v5_basic, v5_extra' starting...");
+      await uploader({
+        ..._inputs,
+        ...{ mode: "upload", categories: ["v5_basic", "v5_extra"] },
+      });
+      console.log("Register 'v4_fixed-to-v5' starting...");
+      await pretender({
+        ..._inputs,
+        ...{ mode: "alias", alias: ["v4_fixed-to-v5"] },
+      });
+      console.log("All migration step has completed!");
       break;
     default:
       console.error(

@@ -43,9 +43,17 @@ const questions = [
         name: "削除",
         value: "remove",
       },
+      {
+        name:
+          "v4 から v5 への移行（v4 を全て削除し、v5 の基本セットと拡張セットを登録します）",
+        value: "migration-v4-to-v5",
+      },
     ],
   },
   {
+    when: (answers) => {
+      return answers.mode === "upload";
+    },
     type: "checkbox",
     message: "追加するカテゴリーを選択してください:",
     name: "categories",
@@ -65,11 +73,11 @@ const questions = [
     ],
     filter: convertToLowerCasedArray,
     validate: isSelects,
-    when: (answers) => {
-      return answers.mode === "upload";
-    },
   },
   {
+    when: (answers) => {
+      return answers.mode === "alias";
+    },
     type: "checkbox",
     name: "alias",
     message: "エイリアスを選択してください:",
@@ -77,16 +85,16 @@ const questions = [
       {
         name:
           "v4_fixed to v5（v4 時代のミスのあったデコモジを v5 の新しいデコモジにリンクします）",
-        value: "migration",
+        value: "v4_fixed-to-v5",
       },
     ],
     validate: isSelects,
     filter: convertToLowerCasedArray,
-    when: (answers) => {
-      return answers.mode === "alias";
-    },
   },
   {
+    when: (answers) => {
+      return answers.mode === "remove";
+    },
     type: "checkbox",
     message: "削除するカテゴリーを選択してください:",
     name: "categories",
@@ -119,9 +127,6 @@ const questions = [
     ],
     filter: convertToLowerCasedArray,
     validate: isSelects,
-    when: (answers) => {
-      return answers.mode === "remove";
-    },
   },
   // {
   //   type: "list",
