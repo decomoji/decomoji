@@ -11,7 +11,7 @@
   "workspace": "<workspace>",
   "email": "<email>",
   "password": "<password>",
-  "categories": ["basic", "extra"],
+  "categories": ["v5_basic", "v5_extra"],
   "mode": "upload"
 }
 ```
@@ -33,7 +33,7 @@ scripst/manager の削除スクリプトは、デフォルトでは自分が登�
   "workspace": "<workspace>",
   "email": "<email>",
   "password": "<password>",
-  "categories": ["basic", "extra"],
+  "categories": ["v4_basic", "v4_extra"],
   "mode": "remove",
   "forceRemove": true
 }
