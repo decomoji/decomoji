@@ -1,8 +1,8 @@
 const fs = require("fs");
 const toBasename = require("../utilities/toBasename");
 
-const toNamePathList = (type, output) => {
-  const dir = `./decomoji/${type}/`;
+const toNamePathList = (category, output) => {
+  const dir = `./decomoji/${category}/`;
   const list = fs.readdirSync(dir).filter((v) => {
     return /.+\.(png|gif|jpg|jpeg)$/.test(v);
   });

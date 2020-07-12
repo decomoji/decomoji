@@ -8,7 +8,7 @@ const header = {
   explicit: `# デコモジ露骨セット\n\n性的なものや暴力的なもの、その他使用には注意が必要そうなものを隔離したセットです。たぶん入れない方がいいです。\n\n`,
 };
 
-function toListMd(category) {
+const toListMd = (category) => {
   fs.readdir(`./decomoji/${category}/`, (err, files) => {
     if (err) {
       if (err.code === "ENOENT") {
@@ -32,7 +32,7 @@ function toListMd(category) {
       throw err;
     }
   });
-}
+};
 
 toListMd("basic");
 toListMd("extra");
