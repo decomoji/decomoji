@@ -10,10 +10,11 @@ const copyByJson = (jsonPath, destDir, mode) => {
     try {
       if (mode === "move") {
         fs.renameSync(path, destPath);
+        console.log(`${path} has been moved!`);
       } else {
         fs.copyFileSync(path, destPath);
+        console.log(`${path} has been copied!`);
       }
-      console.log(`${path} has been copied!`);
     } catch (err) {
       throw err;
     }
