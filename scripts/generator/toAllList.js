@@ -15,6 +15,14 @@ const toAllList = async (targets, output) => {
 
 toAllList(
   [
+    "./scripts/manager/configs/list/v4_basic.json",
+    "./scripts/manager/configs/list/v4_extra.json",
+    "./scripts/manager/configs/list/v4_fixed.json",
+  ],
+  "./scripts/manager/configs/list/v4_all.json"
+);
+toAllList(
+  [
     "./scripts/manager/configs/list/v5_basic.json",
     "./scripts/manager/configs/list/v5_extra.json",
     "./scripts/manager/configs/list/v5_explicit.json",
