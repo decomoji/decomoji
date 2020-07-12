@@ -45,6 +45,7 @@ mode       : ${_inputs.mode}`);
   _inputs.mode === "alias" && console.info(`alias      : ${_inputs.alias}`);
   _inputs.mode !== "alias" &&
     console.info(`categories : ${_inputs.categories}`);
+  _inputs.forceRemove && console.info(`forceRemove: ${_inputs.forceRemove}`);
   console.info("\nConnecting...");
 
   (_inputs.debug || _inputs.time) && console.time("[Total time]");
@@ -60,7 +61,7 @@ mode       : ${_inputs.mode}`);
       break;
     default:
       console.error(
-        "[ERROR] Undefined script mode. please confirm 'mode' value."
+        "[ERROR] Unknown script mode. please confirm 'mode' value."
       );
       break;
   }
