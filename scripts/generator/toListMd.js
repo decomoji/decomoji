@@ -3,12 +3,13 @@
 let fs = require("fs");
 
 const header = {
-  basic: `# デコモジ基本セット\n\nすぐに使えて Slack が楽しくなる基本セットです。\n\n`,
-  extra: `# デコモジ拡張セット\n\n作りたいと思った気持ちのままに作った拡張セットです。使い方にご注意ください。\n\n`,
+  basic: `# デコモジ基本セット\n\nすぐに使えて Slack が楽しくなるセットです。\n\n`,
+  extra: `# デコモジ拡張セット\n\n基本セットと合わせるとさらに Slack が便利で楽しくなるセットです。\n\n`,
+  explicit: `# デコモジ露骨セット\n\n性的なものや暴力的なもの、その他使用には注意が必要そうなものを隔離したセットです。たぶん入れない方がいいです。\n\n`,
 };
 
-function toListMd(type) {
-  fs.readdir(`./decomoji/${type}/`, (err, files) => {
+function toListMd(category) {
+  fs.readdir(`./decomoji/${category}/`, (err, files) => {
     if (err) {
       if (err.code === "ENOENT") {
         files = [".DS_Store"];
@@ -21,12 +22,12 @@ function toListMd(type) {
 
     files.forEach((file) => {
       if (file === ".DS_Store") return;
-      text += `![${file.split(".")[0]}](../decomoji/${type}/${file})`;
+      text += `![${file.split(".")[0]}](../decomoji/${category}/${file})`;
     });
 
     try {
-      fs.writeFileSync(`./docs/decomoji-${type}.md`, header[type] + text);
-      console.log(`decomoji-${type}.md has been saved!`);
+      fs.writeFileSync(`./docs/LIST-${category}.md`, header[category] + text);
+      console.log(`LIST-${category}.md has been saved!`);
     } catch (err) {
       throw err;
     }
@@ -35,3 +36,4 @@ function toListMd(type) {
 
 toListMd("basic");
 toListMd("extra");
+toListMd("explicit");
