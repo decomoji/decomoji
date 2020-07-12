@@ -10,57 +10,57 @@ const questions = [
   {
     type: "input",
     name: "workspace",
-    message: "Enter workspace (subdomain).",
+    message: "ワークスペース（サブドメイン）を入力してください:",
     validate: isInputs,
   },
   {
     type: "input",
     name: "email",
-    message: "Enter login email.",
+    message: "メールアドレスを入力してください:",
     validate: isEmail,
   },
   {
     type: "password",
     name: "password",
     mask: "*",
-    message: "Enter a password.",
+    message: "パスワードを入力してください:",
     validate: isInputs,
   },
   {
     type: "list",
     name: "mode",
-    message: "Select script mode.",
+    message: "モードを選択してください:",
     choices: [
       {
-        name: "Upload",
+        name: "登録",
+        value: "upload",
       },
       {
-        name: "Alias",
+        name: "エイリアス登録",
+        value: "alias",
       },
       {
-        name: "Remove",
+        name: "削除",
+        value: "remove",
       },
     ],
-    filter: (answers) => {
-      return answers.toLowerCase();
-    },
   },
   {
     type: "checkbox",
-    message: "Select categories.",
+    message: "追加するカテゴリーを選択してください:",
     name: "categories",
     choices: [
       {
-        name: "v4 Basic",
-        value: "v4_basic",
+        name: "基本セット（v5_basic）",
+        value: "v5_basic",
       },
       {
-        name: "v4 Extra",
-        value: "v4_extra",
+        name: "拡張セット（v5_extra）",
+        value: "v5_extra",
       },
       {
-        name: "v5 Preview",
-        value: "v5_all",
+        name: "露骨セット（v5_explicit）",
+        value: "v5_explicit",
       },
     ],
     filter: convertToLowerCasedArray,
@@ -72,10 +72,11 @@ const questions = [
   {
     type: "checkbox",
     name: "alias",
-    message: "Select alias preset.",
+    message: "エイリアスを選択してください:",
     choices: [
       {
-        name: "migration v4 to v5",
+        name:
+          "v4_fixed to v5（v4 時代のミスのあったデコモジを v5 の新しいデコモジにリンクします）",
         value: "migration",
       },
     ],
@@ -87,24 +88,33 @@ const questions = [
   },
   {
     type: "checkbox",
-    message: "Select categories.",
+    message: "削除するカテゴリーを選択してください:",
     name: "categories",
     choices: [
       {
-        name: "v4 Old Name(bug fixed)",
+        name: "v4 時代にファイル名を修正したセット",
         value: "v4_fixed",
       },
       {
-        name: "v4 Basic",
+        name: "v4 の基本セット",
         value: "v4_basic",
       },
       {
-        name: "v4 Extra",
+        name: "v4 の拡張セット",
         value: "v4_extra",
       },
+      new inquirer.Separator(),
       {
-        name: "v5 Preview",
-        value: "v5_all",
+        name: "v5 の基本セット",
+        value: "v5_basic",
+      },
+      {
+        name: "v5 の拡張セット",
+        value: "v5_extra",
+      },
+      {
+        name: "v5 の露骨セット",
+        value: "v5_explicit",
       },
     ],
     filter: convertToLowerCasedArray,

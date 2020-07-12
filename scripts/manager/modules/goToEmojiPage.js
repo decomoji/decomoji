@@ -20,7 +20,7 @@ const goToEmojiPage = async (page, inputs) => {
         const retry = await inquirer.prompt({
           type: "input",
           name: "workspace",
-          message: `${failedWorkspace} is not found. Please try again.`,
+          message: `${failedWorkspace} は見つかりませんでした。ワークスペースを再度入力してください:`,
           validate: isInputs,
         });
         // ログイン画面に再び遷移する
@@ -67,7 +67,7 @@ const goToEmojiPage = async (page, inputs) => {
           {
             type: "input",
             name: "email",
-            message: `Enter login email again.`,
+            message: "メールアドレスを入力してください:",
             validate: isEmail,
             default: tried.email,
           },
@@ -75,7 +75,7 @@ const goToEmojiPage = async (page, inputs) => {
             type: "password",
             name: "password",
             mask: "*",
-            message: `Enter a password again.`,
+            message: "パスワードを入力してください:",
             validate: isInputs,
           },
         ]);
@@ -122,7 +122,7 @@ const goToEmojiPage = async (page, inputs) => {
           type: "password",
           name: "twofactor_code",
           mask: "*",
-          message: "Enter a 2FA code.",
+          message: "2FA コードを入力してください:",
           validate: isInputs,
         });
         // フォームに入力して submit する
