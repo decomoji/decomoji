@@ -38,6 +38,8 @@ const main = async (inputs) => {
     time: program.time,
   };
 
+  const TIME = _inputs.debug || _inputs.time;
+
   console.info(`
 workspace  : https://${_inputs.workspace}.slack.com/
 email      : ${_inputs.email}
@@ -48,7 +50,7 @@ mode       : ${_inputs.mode}`);
   _inputs.forceRemove && console.info(`forceRemove: ${_inputs.forceRemove}`);
   console.info("\nConnecting...");
 
-  (_inputs.debug || _inputs.time) && console.time("[Total time]");
+  TIME && console.time("[Total time]");
   switch (_inputs.mode) {
     case "upload":
       await uploader(_inputs);
@@ -65,7 +67,7 @@ mode       : ${_inputs.mode}`);
       );
       break;
   }
-  (_inputs.debug || _inputs.time) && console.timeEnd("[Total time]");
+  TIME && console.timeEnd("[Total time]");
 };
 
 if (program.inputs) {
