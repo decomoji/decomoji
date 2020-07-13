@@ -6,7 +6,7 @@ Slack のリアクション機能で使えるカスタム絵文字のアセッ�
 
 ## Slack で使うとこうなります
 
-![](docs/images/ss_using.png)
+![](docs/images/ss_light.png)
 
 これらのデコモジは、[@imaz](https://github.com/imaz)氏が作成した`:naruhodo:`に影響を受け生み出されました。
 
