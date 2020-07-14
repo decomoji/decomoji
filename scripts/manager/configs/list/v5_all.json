@@ -4010,7 +4010,6 @@
     "path": "./decomoji/extra/pikuserupa-fekuto.png"
   },
   { "name": "pinnkatu", "path": "./decomoji/extra/pinnkatu.png" },
-  { "name": "pinnkubonn", "path": "./decomoji/extra/pinnkubonn.png" },
   { "name": "piyo", "path": "./decomoji/extra/piyo.png" },
   { "name": "poinnthinngu", "path": "./decomoji/extra/poinnthinngu.png" },
   { "name": "poipoi", "path": "./decomoji/extra/poipoi.png" },
@@ -5532,7 +5531,6 @@
   { "name": "tissa", "path": "./decomoji/extra/tissa.png" },
   { "name": "tissai", "path": "./decomoji/extra/tissai.png" },
   { "name": "tisu", "path": "./decomoji/extra/tisu.png" },
-  { "name": "titiyatu", "path": "./decomoji/extra/titiyatu.png" },
   { "name": "to-kunn", "path": "./decomoji/extra/to-kunn.png" },
   { "name": "to-suto", "path": "./decomoji/extra/to-suto.png" },
   {
@@ -6605,6 +6603,7 @@
     "path": "./decomoji/explicit/osyaburisanngurasu.png"
   },
   { "name": "otokonoyoga", "path": "./decomoji/explicit/otokonoyoga.png" },
+  { "name": "pinnkubonn", "path": "./decomoji/explicit/pinnkubonn.png" },
   { "name": "sasetarou", "path": "./decomoji/explicit/sasetarou.png" },
   { "name": "seidesyoumou", "path": "./decomoji/explicit/seidesyoumou.png" },
   { "name": "seiwosyouhi", "path": "./decomoji/explicit/seiwosyouhi.png" },
@@ -6626,6 +6625,7 @@
   { "name": "sousaigorosi", "path": "./decomoji/explicit/sousaigorosi.png" },
   { "name": "subetekorosu", "path": "./decomoji/explicit/subetekorosu.png" },
   { "name": "tikubiga", "path": "./decomoji/explicit/tikubiga.png" },
+  { "name": "titiyatu", "path": "./decomoji/explicit/titiyatu.png" },
   { "name": "urusai", "path": "./decomoji/explicit/urusai.png" },
   { "name": "ussa", "path": "./decomoji/explicit/ussa.png" },
   { "name": "uzai", "path": "./decomoji/explicit/uzai.png" },
