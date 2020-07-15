@@ -91,7 +91,7 @@ mode       : ${_inputs.mode}`);
 
 if (program.inputs) {
   // --inputs=./something.json などのファイルパスが指定されていたらそれを require し、
-  // --inputs オプションがキーのみの場合はデフォルトで `src/scripts/manager/inputs.json` を require する
+  // --inputs オプションがキーのみの場合はデフォルトで `scripts/manager/inputs.json` を require する
   main(
     require(isStringOfNotEmpty(program.inputs)
       ? program.inputs
