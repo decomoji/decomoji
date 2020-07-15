@@ -67,7 +67,8 @@ const goToEmojiPage = async (page, inputs) => {
           {
             type: "input",
             name: "email",
-            message: "メールアドレスを入力してください:",
+            message:
+              "ログインに失敗しました。正しいメールアドレスを入力してください:",
             validate: isEmail,
             default: tried.email,
           },
@@ -75,7 +76,7 @@ const goToEmojiPage = async (page, inputs) => {
             type: "password",
             name: "password",
             mask: "*",
-            message: "パスワードを入力してください:",
+            message: "正しいパスワードを入力してください:",
             validate: isInputs,
           },
         ]);
@@ -97,7 +98,7 @@ const goToEmojiPage = async (page, inputs) => {
         // #signin_form がなかったらログインできたと見なして再帰処理を抜ける
         if (await page.$("#signin_form").then((res) => !res)) {
           console.info("Login successful!");
-          // email を保存し直す
+          // email と password を保存し直す
           inputs.email = retry.email;
           inputs.password = retry.password;
           return;
