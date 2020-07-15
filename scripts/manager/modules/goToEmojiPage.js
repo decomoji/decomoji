@@ -52,7 +52,7 @@ const goToEmojiPage = async (page, inputs) => {
   // 「サインイン」する
   await Promise.all([
     page.click("#signin_btn"),
-    page.waitForNavigation({ waitUntil: "networkidle0" }),
+    page.waitForNavigation({ waitUntil: ["load", "networkidle2"] }),
   ]);
   // ログインエラーになっているかをチェックする
   if (await page.$(".alert_error").then((res) => !!res)) {
