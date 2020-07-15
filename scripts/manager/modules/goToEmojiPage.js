@@ -99,6 +99,7 @@ const goToEmojiPage = async (page, inputs) => {
           console.info("Login successful!");
           // email を保存し直す
           inputs.email = retry.email;
+          inputs.password = retry.password;
           return;
         }
         // ログインできるまで何度でもトライ！
