@@ -11,7 +11,7 @@ const DEFAULT_INPUT_PATH = "./inputs.json";
 
 // コマンドライン引数の定義
 program
-  .option("-i, --inputs", "input setting json file")
+  .option("-i, --inputs [value]", "input setting json file")
   .option("-b, --browser", "open browser")
   .option("-l, --log", "output data log")
   .option("-t, --time", "output running time")
@@ -90,8 +90,8 @@ mode       : ${_inputs.mode}`);
 };
 
 if (program.inputs) {
-  // --inputs=./something.json などのファイルパスが指定されていたらそれを require し、
-  // --inputs オプションがキーのみの場合はデフォルトで `scripts/manager/inputs.json` を require する
+  // --inputs ./inputs.hoge.json などのファイルパスが指定されていたらそれを require し、
+  // --inputs オプションがキーのみの場合はデフォルトで `./inputs.json` を require する
   main(
     require(isStringOfNotEmpty(program.inputs)
       ? program.inputs
