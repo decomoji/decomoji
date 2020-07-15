@@ -40,3 +40,5 @@ scripst/manager の削除スクリプトは、デフォルトでは自分が登�
 ```
 
 **権限にかかわらず削除した絵文字はたとえ直後であっても復元できません。必ず削除前にバックアップするなどしてください。**
+
+バックアップには Chrome エクステンションの[Slack Custom Emoji Manager](https://chrome.google.com/webstore/detail/slack-custom-emoji-manage/cgipifjpcbhdppbjjphmgkmmgbeaggpc)が便利です。
