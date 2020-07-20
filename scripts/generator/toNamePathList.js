@@ -24,6 +24,4 @@ const toNamePathList = (category, output) => {
   }
 };
 
-toNamePathList("basic", "./scripts/manager/configs/list/v5_basic.json");
-toNamePathList("extra", "./scripts/manager/configs/list/v5_extra.json");
-toNamePathList("explicit", "./scripts/manager/configs/list/v5_explicit.json");
+toNamePathList(process.argv[2], process.argv[3]);
