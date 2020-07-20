@@ -1,6 +1,6 @@
 {
-  "name": "slack-reaction-decomoji",
-  "version": "5.0.0-preview",
+  "name": "decomoji",
+  "version": "5.0.0",
   "description": "Slack のリアクション機能で使える最強カスタム絵文字セットです。",
   "keywords": [
     "decomoji",
@@ -12,14 +12,14 @@
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/decomoji/slack-reaction-decomoji.git"
+    "url": "git+https://github.com/decomoji/decomoji.git"
   },
   "author": "oti",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/decomoji/slack-reaction-decomoji/issues"
+    "url": "https://github.com/decomoji/decomoji/issues"
   },
-  "homepage": "https://github.com/decomoji/slack-reaction-decomoji#readme",
+  "homepage": "https://github.com/decomoji/decomoji#readme",
   "dependencies": {
     "commander": "^5.1.0",
     "email-validator": "^2.0.4",
