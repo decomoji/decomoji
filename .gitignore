@@ -1,8 +1,8 @@
 .DS_Store
-Thumbs.db
 .bundle
-vendor
-json
-ts
+.history
+.vscode
+Thumbs.db
 node_modules
 inputs.json
+inputs.*.json

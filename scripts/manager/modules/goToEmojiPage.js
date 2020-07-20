@@ -1,10 +1,12 @@
 const inquirer = require("inquirer");
 
-const isEmail = require("../utilities/isEmail");
-const isInputs = require("../utilities/isInputs");
+const isEmail = require("../../utilities/isEmail");
+const isInputs = require("../../utilities/isInputs");
 
 const goToEmojiPage = async (page, inputs) => {
-  (inputs.debug || inputs.time) && console.time("[Login time]");
+  const TIME = inputs.time;
+
+  TIME && console.time("[Login time]");
   // ログイン画面に遷移する（チームのカスタム絵文字管理画面へのリダイレクトパラメータ付き）
   await page.goto(
     `https://${inputs.workspace}.slack.com/?redir=%2Fcustomize%2Femoji#/`,
@@ -20,7 +22,7 @@ const goToEmojiPage = async (page, inputs) => {
         const retry = await inquirer.prompt({
           type: "input",
           name: "workspace",
-          message: `${failedWorkspace} is not found. Please try again.`,
+          message: `${failedWorkspace} は見つかりませんでした。ワークスペースを再度入力してください:`,
           validate: isInputs,
         });
         // ログイン画面に再び遷移する
@@ -52,7 +54,7 @@ const goToEmojiPage = async (page, inputs) => {
   // 「サインイン」する
   await Promise.all([
     page.click("#signin_btn"),
-    page.waitForNavigation({ waitUntil: "networkidle0" }),
+    page.waitForNavigation({ waitUntil: ["load", "networkidle2"] }),
   ]);
   // ログインエラーになっているかをチェックする
   if (await page.$(".alert_error").then((res) => !!res)) {
@@ -67,7 +69,8 @@ const goToEmojiPage = async (page, inputs) => {
           {
             type: "input",
             name: "email",
-            message: `Enter login email again.`,
+            message:
+              "ログインに失敗しました。正しいメールアドレスを入力してください:",
             validate: isEmail,
             default: tried.email,
           },
@@ -75,7 +78,7 @@ const goToEmojiPage = async (page, inputs) => {
             type: "password",
             name: "password",
             mask: "*",
-            message: `Enter a password again.`,
+            message: "正しいパスワードを入力してください:",
             validate: isInputs,
           },
         ]);
@@ -97,8 +100,9 @@ const goToEmojiPage = async (page, inputs) => {
         // #signin_form がなかったらログインできたと見なして再帰処理を抜ける
         if (await page.$("#signin_form").then((res) => !res)) {
           console.info("Login successful!");
-          // email を保存し直す
+          // email と password を保存し直す
           inputs.email = retry.email;
+          inputs.password = retry.password;
           return;
         }
         // ログインできるまで何度でもトライ！
@@ -122,7 +126,7 @@ const goToEmojiPage = async (page, inputs) => {
           type: "password",
           name: "twofactor_code",
           mask: "*",
-          message: "Enter a 2FA code.",
+          message: "2FA コードを入力してください:",
           validate: isInputs,
         });
         // フォームに入力して submit する
@@ -154,7 +158,7 @@ const goToEmojiPage = async (page, inputs) => {
     page.waitForSelector("#list_emoji_section"),
   ]);
 
-  (inputs.debug || inputs.time) && console.timeEnd("[Login time]");
+  TIME && console.timeEnd("[Login time]");
 
   // workspace が変更されている可能性があるので返しておく
   return inputs;

@@ -1,16 +1,17 @@
 const program = require("commander");
 
-const isStringOfNotEmpty = require("./utilities/isStringOfNotEmpty");
+const isStringOfNotEmpty = require("../utilities/isStringOfNotEmpty");
 
 const askInputs = require("./modules/askInputs");
 const uploader = require("./modules/uploader");
+const pretender = require("./modules/pretender");
 const remover = require("./modules/remover");
 
 const DEFAULT_INPUT_PATH = "./inputs.json";
 
 // コマンドライン引数の定義
 program
-  .option("-i, --inputs", "input setting json file")
+  .option("-i, --inputs [value]", "input setting json file")
   .option("-b, --browser", "open browser")
   .option("-l, --log", "output data log")
   .option("-t, --time", "output running time")
@@ -27,43 +28,70 @@ const main = async (inputs) => {
     workspace: inputs.workspace,
     email: inputs.email,
     password: inputs.password,
-    categories: inputs.categories,
     mode: inputs.mode,
+    categories: inputs.categories,
+    alias: inputs.alias,
     forceRemove: inputs.forceRemove,
-    browser: program.browser,
+    browser: program.browser || program.debug,
+    log: program.log || program.debug,
+    time: program.time || program.debug,
     debug: program.debug,
-    log: program.log,
-    time: program.time,
   };
+
+  const TIME = _inputs.time;
 
   console.info(`
 workspace  : https://${_inputs.workspace}.slack.com/
 email      : ${_inputs.email}
-mode       : ${_inputs.mode}
-categories : ${_inputs.categories}
+mode       : ${_inputs.mode}`);
+  _inputs.mode === "alias" && console.info(`alias      : ${_inputs.alias}`);
+  _inputs.mode !== "alias" &&
+    _inputs.categories &&
+    console.info(`categories : ${_inputs.categories}`);
+  _inputs.forceRemove && console.info(`forceRemove: ${_inputs.forceRemove}`);
+  console.info("\nConnecting...");
 
-Connecting...`);
-
-  (_inputs.debug || _inputs.time) && console.time("[Total time]");
+  TIME && console.time("[Total time]");
   switch (_inputs.mode) {
-    case "Upload":
+    case "upload":
       await uploader(_inputs);
       break;
-    case "Remove":
+    case "alias":
+      await pretender(_inputs);
+      break;
+    case "remove":
       await remover(_inputs);
+      break;
+    case "migration-v4-to-v5":
+      console.log("Remove 'v4_all' starting...");
+      await remover({
+        ..._inputs,
+        ...{ mode: "remove", categories: ["v4_all"], forceRemove: true },
+      });
+      console.log("Upload 'v5_basic, v5_extra' starting...");
+      await uploader({
+        ..._inputs,
+        ...{ mode: "upload", categories: ["v5_basic", "v5_extra"] },
+      });
+      console.log("Register 'v4_fixed-to-v5' starting...");
+      await pretender({
+        ..._inputs,
+        ...{ mode: "alias", alias: ["v4_fixed-to-v5"] },
+      });
+      console.log("All migration step has completed!");
       break;
     default:
       console.error(
-        "[ERROR] Undefined script mode. please confirm 'mode' value."
+        "[ERROR] Unknown script mode. please confirm 'mode' value."
       );
       break;
   }
-  (_inputs.debug || _inputs.time) && console.timeEnd("[Total time]");
+  TIME && console.timeEnd("[Total time]");
 };
 
 if (program.inputs) {
-  // --inputs=./something.json などのファイルパスが指定されていたらそれを require し、
-  // --inputs オプションがキーのみの場合はデフォルトで `src/scripts/manager/inputs.json` を require する
+  // --inputs ./inputs.hoge.json などのファイルパスが指定されていたらそれを require し、
+  // --inputs オプションがキーのみの場合はデフォルトで `./inputs.json` を require する
   main(
     require(isStringOfNotEmpty(program.inputs)
       ? program.inputs

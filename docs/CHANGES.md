@@ -1,5 +1,16 @@
 # チェンジログ
 
+## v5 は破壊的変更を含んでいます
+
+- 基本セットを選考し直した
+- 基本セット、拡張セット、露骨セットに分割した
+- デコモジをダークモードでも読めるように作り直した
+  - カラーパレットを変更した（[decomoji-colors](https://github.com/decomoji/colors)）
+  - 漢字の閉じ開きを見直した
+  - 3 段組みレイアウトを導入した
+- エイリアス登録スクリプトを実装した
+- v4 から v5 への専用移行コマンドを提供した
+
 ## v4 は破壊的変更を含んでいます
 
 - デコモジを基本セットと拡張セットに分割
@@ -9,16 +20,16 @@
   - 色の修正
   - 使用フォントの統一
 - インストールスクリプトの改修
-  - JavaScript 版（[v4.21.0](https://github.com/decomoji/slack-reaction-decomoji/releases/tag/4.21.0)以降）
+  - JavaScript 版（[v4.21.0](https://github.com/decomoji/decomoji/releases/tag/4.21.0)以降）
     - 基本セット、拡張セットを選んで登録できるインターフェースを実装
     - 削除スクリプトもついでに実装
-  - Ruby 版（[v4.20.6](https://github.com/decomoji/slack-reaction-decomoji/releases/tag/4.20.6)まで）
+  - Ruby 版（[v4.20.6](https://github.com/decomoji/decomoji/releases/tag/4.20.6)まで）
     - Ruby バージョンの更新
     - Gemfile.lock の更新
     - バージョン固定用の.ruby-version を追加
     - 基本セットと拡張セットのカテゴリ分けに対応（import_extra.rb）
 
-v4.21.0 で Ruby スクリプトを削除し、JavaScript 版に置き換えました。委細は [#69](https://github.com/decomoji/slack-reaction-decomoji/pull/69) を参照してください。
+v4.21.0 で Ruby スクリプトを削除し、JavaScript 版に置き換えました。委細は [#69](https://github.com/decomoji/decomoji/pull/69) を参照してください。
 
 ## v3 は破壊的変更を含んでいます
 

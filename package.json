@@ -1,18 +1,25 @@
 {
-  "name": "slack-reaction-decomoji",
-  "version": "4.27.0",
-  "description": "Fast, Fun, High-context communication. The perfect assets is this",
+  "name": "decomoji",
+  "version": "5.0.0",
+  "description": "Slack のリアクション機能で使える最強カスタム絵文字セットです。",
+  "keywords": [
+    "decomoji",
+    "slack",
+    "custom emoji",
+    "emoji"
+  ],
   "main": "",
+  "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/decomoji/slack-reaction-decomoji.git"
+    "url": "git+https://github.com/decomoji/decomoji.git"
   },
   "author": "oti",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/decomoji/slack-reaction-decomoji/issues"
+    "url": "https://github.com/decomoji/decomoji/issues"
   },
-  "homepage": "https://github.com/decomoji/slack-reaction-decomoji#readme",
+  "homepage": "https://github.com/decomoji/decomoji#readme",
   "dependencies": {
     "commander": "^5.1.0",
     "email-validator": "^2.0.4",
@@ -23,6 +30,9 @@
     "commitizen": "^4.1.2",
     "cz-customizable": "^6.2.0",
     "husky": "^4.2.5",
+    "imagemin": "^7.0.1",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-pngquant": "^9.0.0",
     "prettier": "^2.0.5",
     "pretty-quick": "^2.0.1"
   },

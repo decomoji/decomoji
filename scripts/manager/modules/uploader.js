@@ -6,9 +6,11 @@ const postEmojiAdd = require("./postEmojiAdd");
 
 const uploader = async (inputs) => {
   const _upload = async (inputs) => {
+    const TIME = inputs.time;
+
     // puppeteer でブラウザを起動する
     const browser = await puppeteer.launch({
-      devtools: inputs.debug || inputs.browser,
+      devtools: inputs.browser,
     });
     // ページを追加する
     const page = await browser.newPage();
@@ -34,7 +36,7 @@ const uploader = async (inputs) => {
       return;
     }
 
-    (inputs.debug || inputs.time) && console.time("[Upload time]");
+    TIME && console.time("[Upload time]");
     while (i < uploadableDecomojiLength) {
       const { name, path } = uploadableDecomojiList[i];
       const currentIdx = i + 1;
@@ -72,7 +74,7 @@ const uploader = async (inputs) => {
       ratelimited = false;
       i++;
     }
-    (inputs.debug || inputs.time) && console.timeEnd("[Upload time]");
+    TIME && console.timeEnd("[Upload time]");
 
     // ブラウザを閉じる
     if (!inputs.debug) {
@@ -81,7 +83,7 @@ const uploader = async (inputs) => {
 
     // ratelimited なら再帰する
     if (ratelimited) {
-      (inputs.debug || inputs.time) && console.timeLog("[Total time]");
+      TIME && console.timeLog("[Total time]");
       console.info("Reconnecting...");
       return await _upload(inputs);
     }

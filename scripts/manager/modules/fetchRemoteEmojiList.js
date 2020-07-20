@@ -20,10 +20,11 @@
 */
 
 const fetchRemoteEmojiList = async (page, inputs) => {
-  (inputs.debug || inputs.time) && console.time("[Fetch time]");
+  const TIME = inputs.time;
+  const LOG = inputs.log;
 
-  (inputs.debug || inputs.log) &&
-    console.log("Start to fetch remote emoji list...");
+  TIME && console.time("[Fetch time]");
+  LOG && console.log("Start to fetch remote emoji list...");
 
   const remoteEmojiList = await page.evaluate(async (inputs) => {
     const { workspace, mode, forceRemove } = inputs;
@@ -36,7 +37,7 @@ const fetchRemoteEmojiList = async (page, inputs) => {
       formData.append("count", 100);
       formData.append("token", window.boot_data.api_token);
       // forceRemove = true の場合は user_id に関係なく取得する
-      if (!forceRemove && mode === "Remove") {
+      if (!forceRemove && mode === "remove") {
         formData.append("user_ids", JSON.stringify([window.boot_data.user_id]));
       }
       try {
@@ -66,10 +67,11 @@ const fetchRemoteEmojiList = async (page, inputs) => {
     return emojiAdminList;
   }, inputs);
 
-  (inputs.debug || inputs.log) &&
-    console.log("Complete to fetch remote emoji list!");
+  LOG && console.log("Complete to fetch remote emoji list!");
+  TIME && console.timeEnd("[Fetch time]");
+  LOG &&
+    console.log("remoteEmojiList:", remoteEmojiList, remoteEmojiList.length);
 
-  (inputs.debug || inputs.time) && console.timeEnd("[Fetch time]");
   return remoteEmojiList;
 };
 

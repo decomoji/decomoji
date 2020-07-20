@@ -2,6 +2,6 @@
   "workspace": "<workspace>",
   "email": "<email>",
   "password": "<password>",
-  "categories": ["basic", "extra"],
-  "mode": "Upload"
+  "mode": "upload",
+  "categories": ["v5_basic", "v5_extra"]
 }
