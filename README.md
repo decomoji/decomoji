@@ -4,12 +4,6 @@
 
 Slack のリアクション機能で使えるカスタム絵文字のアセットです。このプロジェクトではそれら一つ一つを「デコモジ」と呼んでいます。
 
-## Slack で使うとこうなります
-
-![](docs/images/ss_light.png)
-
-これらのデコモジは、[@imaz](https://github.com/imaz)氏が作成した`:naruhodo:`に影響を受け生み出されました。
-
 ## デコモジだけの５つの特徴
 
 1. **カラフルなテキスト画像** - 見やすい 12 のカラーパレットで Slack に彩を添えます！
@@ -23,6 +17,8 @@ Slack のリアクション機能で使えるカスタム絵文字のアセッ�
 ハイコンテキスト！　だから使って楽しい！
 
 デコモジはあなたのワークスペースに**カルチャーとベロシティを提供**します！
+
+![](docs/images/ss_using.png)
 
 ## まずは基本セットから始めましょう
 
@@ -99,6 +95,8 @@ Patreon で支援を受け付けています。
 - [チェンジログ](docs/CHANGES.md)
 
 ## スペシャルサンクス！
+
+これらのデコモジは、imaz 氏が作成した`:naruhodo:`に影響を受け生み出されました。改めて感謝の意を評します。
 
 [@imaz](https://github.com/imaz/), [@geckotang](https://github.com/geckotang/), [@ginpei](https://github.com/ginpei/), [@watilde](https://github.com/watilde/), [@matori](https://github.com/matori/), [@fukayatsu](https://github.com/fukayatsu/), [@maiha2](https://github.com/maiha2/), [@webcre8](https://github.com/webcre8/), [@masuP9](https://github.com/masuP9/), [@yuheiy](https://github.com/yuheiy), [@kubosho](https://github.com/kubosho) and All Contributors!
 
