@@ -18,8 +18,11 @@ node scripts/generator/toAllNamePathList.js
 node scripts/generator/toListMd.js extra
 
 # 5. 更新分の json を作成する
-node scripts/generator/toAllNamePathList.js extra_tmp ./scripts/manager/configs/list/v5_xxx.json
+node scripts/generator/toNamePathList.js extra_tmp ./scripts/manager/configs/list/v5.1_extra.json
 ## 作成後、 path フィールドを修正する
+
+# 6.Prettier の意志のままに整形する
+npx prettier --write .
 ```
 
 ## ドキュメントの追加・修正
