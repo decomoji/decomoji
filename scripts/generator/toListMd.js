@@ -34,6 +34,4 @@ const toListMd = (category) => {
   });
 };
 
-toListMd("basic");
-toListMd("extra");
-toListMd("explicit");
+toListMd(process.argv[2]);
