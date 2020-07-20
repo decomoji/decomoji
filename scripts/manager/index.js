@@ -32,13 +32,13 @@ const main = async (inputs) => {
     categories: inputs.categories,
     alias: inputs.alias,
     forceRemove: inputs.forceRemove,
-    browser: program.browser,
+    browser: program.browser || program.debug,
+    log: program.log || program.debug,
+    time: program.time || program.debug,
     debug: program.debug,
-    log: program.log,
-    time: program.time,
   };
 
-  const TIME = _inputs.debug || _inputs.time;
+  const TIME = _inputs.time;
 
   console.info(`
 workspace  : https://${_inputs.workspace}.slack.com/

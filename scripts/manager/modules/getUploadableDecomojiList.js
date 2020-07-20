@@ -2,7 +2,8 @@ const fetchRemoteEmojiList = require("./fetchRemoteEmojiList");
 const getLocalJson = require("./getLocalJson");
 
 const getUploadableDecomojiList = async (page, inputs) => {
-  const LOG = inputs.debug || inputs.log;
+  const LOG = inputs.log;
+
   // 登録済みのカスタム絵文字リストを取得する
   const remoteEmojiList = await fetchRemoteEmojiList(page, inputs);
 
@@ -15,12 +16,14 @@ const getUploadableDecomojiList = async (page, inputs) => {
       remoteEmojiList.findIndex((remote) => remote.name === local.name) === -1
     );
   });
+
   LOG &&
     console.log(
       "uploadableDecomojiList:",
       uploadableDecomojiList,
       uploadableDecomojiList.length
     );
+
   return uploadableDecomojiList;
 };
 

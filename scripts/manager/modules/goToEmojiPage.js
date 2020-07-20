@@ -4,7 +4,9 @@ const isEmail = require("../../utilities/isEmail");
 const isInputs = require("../../utilities/isInputs");
 
 const goToEmojiPage = async (page, inputs) => {
-  (inputs.debug || inputs.time) && console.time("[Login time]");
+  const TIME = inputs.time;
+
+  TIME && console.time("[Login time]");
   // ログイン画面に遷移する（チームのカスタム絵文字管理画面へのリダイレクトパラメータ付き）
   await page.goto(
     `https://${inputs.workspace}.slack.com/?redir=%2Fcustomize%2Femoji#/`,
@@ -156,7 +158,7 @@ const goToEmojiPage = async (page, inputs) => {
     page.waitForSelector("#list_emoji_section"),
   ]);
 
-  (inputs.debug || inputs.time) && console.timeEnd("[Login time]");
+  TIME && console.timeEnd("[Login time]");
 
   // workspace が変更されている可能性があるので返しておく
   return inputs;

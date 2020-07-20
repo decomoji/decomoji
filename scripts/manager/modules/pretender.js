@@ -6,9 +6,11 @@ const postEmojiAlias = require("./postEmojiAlias");
 
 const pretender = async (inputs) => {
   const _pretend = async (inputs) => {
+    const TIME = inputs.time;
+
     // puppeteer でブラウザを起動する
     const browser = await puppeteer.launch({
-      devtools: inputs.debug || inputs.browser,
+      devtools: inputs.browser,
     });
     // ページを追加する
     const page = await browser.newPage();
@@ -34,7 +36,7 @@ const pretender = async (inputs) => {
       return;
     }
 
-    (inputs.debug || inputs.time) && console.time("[Register time]");
+    TIME && console.time("[Register time]");
     while (i < pretendableDecomojiLength) {
       const { name, alias_for } = pretendableDecomojiList[i];
       const currentIdx = i + 1;
@@ -73,7 +75,7 @@ const pretender = async (inputs) => {
       ratelimited = false;
       i++;
     }
-    (inputs.debug || inputs.time) && console.timeEnd("[Register time]");
+    TIME && console.timeEnd("[Register time]");
 
     // ブラウザを閉じる
     if (!inputs.debug) {
@@ -82,7 +84,7 @@ const pretender = async (inputs) => {
 
     // ratelimited なら再帰する
     if (ratelimited) {
-      (inputs.debug || inputs.time) && console.timeLog("[Total time]");
+      TIME && console.timeLog("[Total time]");
       console.info("Reconnecting...");
       return await _pretend(inputs);
     }
