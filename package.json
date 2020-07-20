@@ -2,6 +2,12 @@
   "name": "slack-reaction-decomoji",
   "version": "5.0.0-preview",
   "description": "Fast, Fun, High-context communication. The perfect assets is this",
+  "keywords": [
+    "decomoji",
+    "slack",
+    "custom emoji",
+    "emoji"
+  ],
   "main": "",
   "scripts": {
     "update-md": "node scripts/generate_decomoji_md.js",
