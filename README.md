@@ -106,4 +106,4 @@ Patreon で支援を受け付けています。
 
 Copyright (c) 2015 decomoji consortium and other contributors.
 
-Under the [MIT License](LICENSE.txt).
+Under the [MIT License](LICENSE).
