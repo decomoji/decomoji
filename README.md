@@ -22,8 +22,6 @@ Slack のリアクション機能で使えるカスタム絵文字のアセッ�
 
 ![Slack の発言にデコモジでリアクションをした様子。楽しそう！](docs/images/ss_using.png)
 
-<div style="height: 1rem"></div>
-
 ## まずは基本セットから始めましょう
 
 デコモジには 3 つのカテゴリがあります。まずは基本セットの 300 個をあなたのワークスペースに登録してしばらく使ってみてください。
@@ -36,15 +34,11 @@ Slack のリアクション機能で使えるカスタム絵文字のアセッ�
 - [拡張セット](docs/LIST-extra.md): 基本セットと合わせるとさらに Slack が便利で楽しくなるセットです。
 - 露骨セット: 性的なもの、暴力的なもの、露骨な表現で使用には注意が必要なものを隔離したセットです。多くの場合、使わない方が良いです。
 
-<div style="height: 1rem"></div>
-
 ## デコモジを探す
 
 「この言葉ってデコモジにあったっけ？」デコモジが多すぎでわからなくなりますよね。
 
 そんな時は[デコモジファインダー](https://finder.decomoji.dev/?size=ll&category=basic)を使ってみてください。正規表現でも検索できます！
-
-<div style="height: 1rem"></div>
 
 ## ワークスペースへの登録方法
 
@@ -83,15 +77,11 @@ node scripts/manager
 
 モード選択で「v4 から v5 への移行」を選択すると、v4 時代の古いデコモジを削除してから v5 の新しいデコモジを追加します。また、古いファイル名から新しいファイル名へのエイリアス登録も追加されます。移行コマンドが完了するまで 120 分程度かかります。
 
-<div style="height: 1rem"></div>
-
 ## フー・ユーズ・デコモジ？
 
 あなたの所属する組織のチームやコミュニティでデコモジが使われていたら、ぜひ「Who use decomoji?」リポジトリに追加して教えてください！
 
 [who-use-decomoji](https://github.com/decomoji/who-use-decomoji)
-
-<div style="height: 1rem"></div>
 
 ## サポートするには
 
@@ -99,16 +89,12 @@ Patreon で支援を受け付けています。
 
 <a href="https://www.patreon.com/bePatron?u=486549"><img src="docs/images/banner_patreon.png" width="217" height="51"></a>
 
-<div style="height: 1rem"></div>
-
 ## その他のドキュメント
 
 - [高度な管理方法](docs/ADVANCED.md)
 - [コントリビューティングガイドライン](docs/CONTRIBUTING.md)
 - [デコモジファイルの命名規則](docs/NOTATIONS.md)
 - [チェンジログ](docs/CHANGES.md)
-
-<div style="height: 1rem"></div>
 
 ## スペシャルサンクス！
 
