@@ -98,7 +98,7 @@ Patreon で支援を受け付けています。
 
 ## スペシャルサンクス！
 
-これらのデコモジは、imaz 氏が作成した`:naruhodo:`に影響を受け生み出されました。改めて感謝の意を評します。
+これらのデコモジは、imaz 氏が作成した`:naruhodo:`に影響を受け生み出されました。改めて深く感謝を申し上げます。
 
 [@imaz](https://github.com/imaz/), [@geckotang](https://github.com/geckotang/), [@ginpei](https://github.com/ginpei/), [@watilde](https://github.com/watilde/), [@matori](https://github.com/matori/), [@fukayatsu](https://github.com/fukayatsu/), [@maiha2](https://github.com/maiha2/), [@webcre8](https://github.com/webcre8/), [@masuP9](https://github.com/masuP9/), [@yuheiy](https://github.com/yuheiy), [@kubosho](https://github.com/kubosho) and All Contributors!
 
