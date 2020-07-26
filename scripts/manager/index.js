@@ -80,6 +80,24 @@ mode       : ${_inputs.mode}`);
       });
       console.log("All migration step has completed!");
       break;
+    case "update-v5":
+      console.log("Remove 'v5_fixed' starting...");
+      await remover({
+        ..._inputs,
+        ...{ mode: "remove", categories: ["v5_fixed"], forceRemove: true },
+      });
+      console.log("Upload v5 diffs starting...");
+      await uploader({
+        ..._inputs,
+        ...{ mode: "upload", categories: ["v5_fixed", "v5_basic", "v5_extra"] },
+      });
+      console.log("Register 'v5_fixed' starting...");
+      await pretender({
+        ..._inputs,
+        ...{ mode: "alias", alias: ["v5_fixed"] },
+      });
+      console.log("All migration step has completed!");
+      break;
     default:
       console.error(
         "[ERROR] Unknown script mode. please confirm 'mode' value."
