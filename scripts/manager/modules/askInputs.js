@@ -48,6 +48,11 @@ const questions = [
           "v4 から v5 への移行（v4 を全て削除し、v5 の基本セットと拡張セットを登録します）",
         value: "migration-v4-to-v5",
       },
+      {
+        name:
+          "最新版の v5 への更新",
+        value: "update-v5",
+      },
     ],
   },
   {
@@ -70,6 +75,11 @@ const questions = [
         name: "露骨セット（v5_explicit）",
         value: "v5_explicit",
       },
+      {
+        name:
+          "修正セット（v5_fixed）",
+        value: "v5_fixed",
+      },
     ],
     filter: convertToLowerCasedArray,
     validate: isSelects,
@@ -86,6 +96,11 @@ const questions = [
         name:
           "v4_fixed to v5（v4 時代のミスのあったデコモジを v5 の新しいデコモジにリンクします）",
         value: "v4_fixed-to-v5",
+      },
+      {
+        name:
+          "v5 の修正セット（v5_fixed）",
+        value: "v5_fixed",
       },
     ],
     validate: isSelects,
@@ -123,6 +138,10 @@ const questions = [
       {
         name: "v5 の露骨セット",
         value: "v5_explicit",
+      },
+      {
+        name: "v5 の修正セット（v5_fixed）",
+        value: "v5_fixed",
       },
     ],
     filter: convertToLowerCasedArray,
