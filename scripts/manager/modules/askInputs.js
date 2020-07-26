@@ -10,7 +10,7 @@ const questions = [
   {
     type: "input",
     name: "workspace",
-    message: "ワークスペース（サブドメイン）を入力してください:",
+    message: "ワークスペースのサブドメインを入力してください:",
     validate: isInputs,
   },
   {
@@ -32,26 +32,24 @@ const questions = [
     message: "モードを選択してください:",
     choices: [
       {
-        name: "登録",
-        value: "upload",
+        value: "update-v5",
+        name: "更新（v5 の最新版までの差分追加）",
       },
       {
-        name: "エイリアス登録",
-        value: "alias",
+        name: "追加",
+        value: "upload",
       },
       {
         name: "削除",
         value: "remove",
       },
       {
-        name:
-          "v4 から v5 への移行（v4 を全て削除し、v5 の基本セットと拡張セットを登録します）",
         value: "migration-v4-to-v5",
+        name: "エイリアス登録",
       },
       {
-        name:
-          "最新版の v5 への更新",
-        value: "update-v5",
+        name: "移行（v4 から v5 への置き換え）",
+        value: "migration",
       },
     ],
   },
@@ -76,8 +74,7 @@ const questions = [
         value: "v5_explicit",
       },
       {
-        name:
-          "修正セット（v5_fixed）",
+        name: "修正セット（v5_fixed）",
         value: "v5_fixed",
       },
     ],
@@ -97,8 +94,7 @@ const questions = [
         value: "v4_fixed",
       },
       {
-        name:
-          "v5 の修正セット（v5_fixed）",
+        name: "v5 の修正セット（v5_fixed）",
         value: "v5_fixed",
       },
     ],
@@ -114,10 +110,6 @@ const questions = [
     name: "categories",
     choices: [
       {
-        name: "v4 時代にファイル名を修正したセット",
-        value: "v4_fixed",
-      },
-      {
         name: "v4 の基本セット",
         value: "v4_basic",
       },
@@ -125,23 +117,28 @@ const questions = [
         name: "v4 の拡張セット",
         value: "v4_extra",
       },
+      {
+        name: "v4 の修正のセット",
+        value: "v4_fixed",
+      },
       new inquirer.Separator(),
       {
-        name: "v5 の基本セット",
+        name: "v5 の基本セット（v5_basic）",
         value: "v5_basic",
       },
       {
-        name: "v5 の拡張セット",
+        name: "v5 の拡張セット（v5_extra）",
         value: "v5_extra",
       },
       {
-        name: "v5 の露骨セット",
+        name: "v5 の露骨セット（v5_explicit）",
         value: "v5_explicit",
       },
       {
         name: "v5 の修正セット（v5_fixed）",
         value: "v5_fixed",
       },
+      new inquirer.Separator(),
     ],
     filter: convertToLowerCasedArray,
     validate: isSelects,
