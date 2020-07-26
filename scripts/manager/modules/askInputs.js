@@ -93,9 +93,8 @@ const questions = [
     message: "エイリアスを選択してください:",
     choices: [
       {
-        name:
-          "v4_fixed to v5（v4 時代のミスのあったデコモジを v5 の新しいデコモジにリンクします）",
-        value: "v4_fixed-to-v5",
+        name: "v4 の修正セット（v4_fixed）",
+        value: "v4_fixed",
       },
       {
         name:
