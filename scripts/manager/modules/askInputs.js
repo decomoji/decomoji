@@ -32,8 +32,8 @@ const questions = [
     message: "モードを選択してください:",
     choices: [
       {
-        value: "update-v5",
         name: "更新（v5 の最新版までの差分追加）",
+        value: "update",
       },
       {
         name: "追加",
@@ -44,8 +44,8 @@ const questions = [
         value: "remove",
       },
       {
-        value: "migration-v4-to-v5",
         name: "エイリアス登録",
+        value: "alias",
       },
       {
         name: "移行（v4 から v5 への置き換え）",

@@ -62,7 +62,7 @@ mode       : ${_inputs.mode}`);
     case "remove":
       await remover(_inputs);
       break;
-    case "migration-v4-to-v5":
+    case "migration":
       console.log("Remove 'v4_all' starting...");
       await remover({
         ..._inputs,
@@ -80,7 +80,7 @@ mode       : ${_inputs.mode}`);
       });
       console.log("All migration step has completed!");
       break;
-    case "update-v5":
+    case "update":
       console.log("Remove 'v5_fixed' starting...");
       await remover({
         ..._inputs,
