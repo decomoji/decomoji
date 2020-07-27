@@ -32,11 +32,11 @@ const questions = [
     message: "モードを選択してください:",
     choices: [
       {
-        name: "更新（v5 の最新版までの差分追加）",
+        name: "更新",
         value: "update",
       },
       {
-        name: "追加",
+        name: "登録",
         value: "upload",
       },
       {
@@ -48,7 +48,7 @@ const questions = [
         value: "alias",
       },
       {
-        name: "移行（v4 から v5 への置き換え）",
+        name: "移行（v4 を v5 に置換）",
         value: "migration",
       },
     ],
@@ -58,7 +58,7 @@ const questions = [
       return answers.mode === "upload";
     },
     type: "checkbox",
-    message: "追加するカテゴリーを選択してください:",
+    message: "登録するカテゴリーを選択してください:",
     name: "categories",
     choices: [
       {
@@ -87,7 +87,7 @@ const questions = [
     },
     type: "checkbox",
     name: "alias",
-    message: "エイリアスを選択してください:",
+    message: "登録するエイリアスを選択してください:",
     choices: [
       {
         name: "v4 の修正セット（v4_fixed）",
