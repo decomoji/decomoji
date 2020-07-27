@@ -73,10 +73,10 @@ mode       : ${_inputs.mode}`);
         ..._inputs,
         ...{ mode: "upload", categories: ["v5_basic", "v5_extra"] },
       });
-      console.log("Register 'v4_fixed' starting...");
+      console.log("Register 'v4_fixed, v5_fixed' starting...");
       await pretender({
         ..._inputs,
-        ...{ mode: "alias", alias: ["v4_fixed"] },
+        ...{ mode: "alias", alias: ["v4_fixed", "v5_fixed"] },
       });
       console.log("All migration step has completed!");
       break;
