@@ -73,10 +73,6 @@ const questions = [
         name: "露骨セット（v5_explicit）",
         value: "v5_explicit",
       },
-      {
-        name: "修正セット（v5_fixed）",
-        value: "v5_fixed",
-      },
     ],
     filter: convertToLowerCasedArray,
     validate: isSelects,
@@ -90,11 +86,7 @@ const questions = [
     message: "登録するエイリアスを選択してください:",
     choices: [
       {
-        name: "v4 の修正セット（v4_fixed）",
-        value: "v4_fixed",
-      },
-      {
-        name: "v5 の修正セット（v5_fixed）",
+        name: "v5 以降でファイル名を修正したもの（v5_fixed）",
         value: "v5_fixed",
       },
     ],
@@ -110,35 +102,21 @@ const questions = [
     name: "categories",
     choices: [
       {
-        name: "v4 の基本セット",
-        value: "v4_basic",
-      },
-      {
-        name: "v4 の拡張セット",
-        value: "v4_extra",
-      },
-      {
-        name: "v4 の修正のセット",
-        value: "v4_fixed",
-      },
-      new inquirer.Separator(),
-      {
-        name: "v5 の基本セット（v5_basic）",
+        name: "基本セット（v5_basic）",
         value: "v5_basic",
       },
       {
-        name: "v5 の拡張セット（v5_extra）",
+        name: "拡張セット（v5_extra）",
         value: "v5_extra",
       },
       {
-        name: "v5 の露骨セット（v5_explicit）",
+        name: "露骨セット（v5_explicit）",
         value: "v5_explicit",
       },
       {
-        name: "v5 の修正セット（v5_fixed）",
+        name: "v5 以降でファイル名にミスがあったもの（v5_fixed）",
         value: "v5_fixed",
       },
-      new inquirer.Separator(),
     ],
     filter: convertToLowerCasedArray,
     validate: isSelects,
