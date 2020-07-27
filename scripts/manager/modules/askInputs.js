@@ -62,15 +62,15 @@ const questions = [
     name: "categories",
     choices: [
       {
-        name: "基本セット（v5_basic）",
+        name: "基本セット",
         value: "v5_basic",
       },
       {
-        name: "拡張セット（v5_extra）",
+        name: "拡張セット",
         value: "v5_extra",
       },
       {
-        name: "露骨セット（v5_explicit）",
+        name: "露骨セット",
         value: "v5_explicit",
       },
     ],
@@ -86,7 +86,7 @@ const questions = [
     message: "登録するエイリアスを選択してください:",
     choices: [
       {
-        name: "v5 以降でファイル名を修正したもの（v5_fixed）",
+        name: "v5 以降でファイル名を修正したもの",
         value: "v5_fixed",
       },
     ],
@@ -102,19 +102,19 @@ const questions = [
     name: "categories",
     choices: [
       {
-        name: "基本セット（v5_basic）",
+        name: "基本セット",
         value: "v5_basic",
       },
       {
-        name: "拡張セット（v5_extra）",
+        name: "拡張セット",
         value: "v5_extra",
       },
       {
-        name: "露骨セット（v5_explicit）",
+        name: "露骨セット",
         value: "v5_explicit",
       },
       {
-        name: "v5 以降でファイル名にミスがあったもの（v5_fixed）",
+        name: "v5 以降でファイル名にミスがあったもの",
         value: "v5_fixed",
       },
     ],
