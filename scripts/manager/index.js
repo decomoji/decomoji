@@ -89,7 +89,7 @@ mode       : ${_inputs.mode}`);
       console.log("Upload v5 diffs starting...");
       await uploader({
         ..._inputs,
-        ...{ mode: "upload", categories: ["v5_fixed", "v5_basic", "v5_extra"] },
+        ...{ mode: "upload", categories: ["v5_basic", "v5_extra"] },
       });
       console.log("Register 'v5_fixed' starting...");
       await pretender({
