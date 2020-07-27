@@ -62,7 +62,7 @@ mode       : ${_inputs.mode}`);
     case "remove":
       await remover(_inputs);
       break;
-    case "migration-v4-to-v5":
+    case "migration":
       console.log("Remove 'v4_all' starting...");
       await remover({
         ..._inputs,
@@ -73,10 +73,28 @@ mode       : ${_inputs.mode}`);
         ..._inputs,
         ...{ mode: "upload", categories: ["v5_basic", "v5_extra"] },
       });
-      console.log("Register 'v4_fixed-to-v5' starting...");
+      console.log("Register 'v4_fixed, v5_fixed' starting...");
       await pretender({
         ..._inputs,
-        ...{ mode: "alias", alias: ["v4_fixed-to-v5"] },
+        ...{ mode: "alias", alias: ["v4_fixed", "v5_fixed"] },
+      });
+      console.log("All migration step has completed!");
+      break;
+    case "update":
+      console.log("Remove 'v5_fixed' starting...");
+      await remover({
+        ..._inputs,
+        ...{ mode: "remove", categories: ["v5_fixed"], forceRemove: true },
+      });
+      console.log("Upload v5 diffs starting...");
+      await uploader({
+        ..._inputs,
+        ...{ mode: "upload", categories: ["v5_basic", "v5_extra"] },
+      });
+      console.log("Register 'v5_fixed' starting...");
+      await pretender({
+        ..._inputs,
+        ...{ mode: "alias", alias: ["v5_fixed"] },
       });
       console.log("All migration step has completed!");
       break;

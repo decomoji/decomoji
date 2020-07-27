@@ -4,5 +4,9 @@
 .vscode
 Thumbs.db
 node_modules
+decomoji/basic_tmp
+decomoji/extra_tmp
+decomoji/explicit_tmp
+decomoji/tmp
 inputs.json
 inputs.*.json

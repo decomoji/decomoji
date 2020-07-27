@@ -51,7 +51,7 @@ const pretender = async (inputs) => {
       console.info(
         `${currentIdx}/${pretendableDecomojiLength}: ${
           result.ok ? "registered" : result.error
-        } ${name}.`
+        } ${name} -> ${alias_for}.`
       );
 
       // エラーがあればループを抜ける

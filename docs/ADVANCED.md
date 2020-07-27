@@ -2,14 +2,14 @@
 
 ## JSON ファイルで対話入力を簡略化する
 
-ログイン情報や追加削除の設定を JSON ファイルに保存すると、対話式の設定入力を簡略化できます。
+ログイン情報や実行モードの設定を JSON ファイルに保存すると、対話式の設定入力を省略できます。
 
 まず scripts/manager/inputs.json.example を雛形に scripts/manager/inputs.json を保存してください。
 
 値の型については後述しています。
 
 ```json
-// inputs.json
+// scripts/manager/inputs.json
 {
   "workspace": "<workspace>",
   "email": "<email>",
@@ -28,18 +28,18 @@ node scripts/manager -i
 
 ## 削除時に自分以外のメンバーが登録したカスタム絵文字も強制的に削除する
 
-scripst/manager の削除スクリプトは、デフォルトでは自分が登録した絵文字しか削除できない設定になっています。**あなたのアカウントに権限があれば**、他のメンバーが登録した絵文字でも強制削除することができます。
+scripst/manager の削除スクリプトは、デフォルトでは自分が登録した絵文字しか削除できない設定になっています。**あなたのアカウントに権限があれば**、他のメンバーが登録した絵文字でも強制的に削除できます。
 
-強制削除オプションは対話入力では設定できません。 inputs.json を `"mode": "remove"` として `"forceRemove": true` を追加してください。
+強制削除オプションは対話入力では設定できません。 inputs.json を `"mode": "remove"` として `"forceRemove": true` を追記してください。
 
 ```json
-// inputs.json
+// scripts/manager/inputs.json
 {
   "workspace": "<workspace>",
   "email": "<email>",
   "password": "<password>",
-  "mode": "upload",
-  "categories": ["v4_basic", "v4_extra"],
+  "mode": "remove",
+  "categories": ["v5_basic", "v5_extra", "v5_fixed"],
   "forceRemove": true
 }
 ```
@@ -48,12 +48,14 @@ scripst/manager の削除スクリプトは、デフォルトでは自分が登�
 
 バックアップには Chrome エクステンションの[Slack Custom Emoji Manager](https://chrome.google.com/webstore/detail/slack-custom-emoji-manage/cgipifjpcbhdppbjjphmgkmmgbeaggpc)が便利です。
 
+`"categories": ["v4_all", "v5_all"]` とするとデコモジが全て削除されます。
+
 ## オリジナルのエイリアスを登録する
 
-scripst/manager/alias/ に下記のフォーマットで my-alias.json ファイルを置き、inputs.json に設定を追加してください。
+scripst/manager/alias/ に下記のフォーマットで my-alias.json ファイルを置き、inputs.json に設定を追記してください。
 
 ```json
-// my-alias.json
+// scripst/manager/alias/my-alias.json
 [
   {
     "name": "ナルホド", // エイリアス名
@@ -63,7 +65,7 @@ scripst/manager/alias/ に下記のフォーマットで my-alias.json ファイ
 ```
 
 ```json
-// inputs.json
+// scripts/manager/inputs.json
 {
   "workspace": "<workspace>",
   "email": "<email>",
@@ -88,5 +90,5 @@ Slack の仕様により、１つのエイリアス名には複数のエイリ�
 | password    | `string`                                                                                                            | `"hogehoge"`               |                                                                                                                                      |
 | mode        | `"upload" | "alias" | "remove"`                                                                                     | `"upload"`                 |                                                                                                                                      |
 | categories  | `("v4_all" | "v4_basic" | "v4_extra" | "v4_fixed" | "v5_all" | "v5_basic" | "v5_extra" | "v5_explicit" | string)[]` | `["v5_basic", "v5_extra"]` | scripts/manager/configs/list/ に格納した json ファイル名を値にとる配列                                                               |
-| alias       | `("v4_fixed-to-v5" | string)[]`                                                                                     | `["v4_fixed-to-v5"]`       | scripts/manager/configs/alias/ に格納した json ファイル名を値にとる配列                                                              |
+| alias       | `("v4_fixed" | string)[]`                                                                                           | `["v4_fixed"]`             | scripts/manager/configs/alias/ に格納した json ファイル名を値にとる配列                                                              |
 | forceRemove | `boolean`                                                                                                           | `false`                    | mode="remove" で `true` の時、他ユーザーが登録したカスタム絵文字も削除対象に含めます。対象に含めても権限がない場合は削除されません。 |
