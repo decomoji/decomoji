@@ -79,6 +79,8 @@ node scripts/manager
 
 ### v5 の差分更新
 
+<img src="docs/images/ss_update.png" width="490" height="200" loading="lazy">
+
 v5.0.0 を登録したのち、v5.1.x 以降の差分を登録したい場合は、モード選択で「更新」を選んで実行してください。
 
 このモードでは基本セットと拡張セットが登録されます。
