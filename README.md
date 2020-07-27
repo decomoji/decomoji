@@ -71,7 +71,7 @@ node scripts/manager
 
 ### v4 から v5 への移行
 
-![](docs/images/ss_migration.png)
+<img src="docs/images/ss_migration.png" width="490" height="200" loading="lazy">
 
 モード選択で「移行（v4 を v5 に置換）」を選択すると、v4 時代の古いデコモジを削除してから v5 の新しいデコモジを登録します。また、古いファイル名から新しいファイル名へのエイリアスも登録されます。
 
