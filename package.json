@@ -20,21 +20,19 @@
     "url": "https://github.com/decomoji/decomoji/issues"
   },
   "homepage": "https://github.com/decomoji/decomoji#readme",
-  "dependencies": {
-    "commander": "^5.1.0",
-    "email-validator": "^2.0.4",
-    "inquirer": "^7.1.0",
-    "puppeteer": "^3.0.4"
-  },
   "devDependencies": {
+    "commander": "^5.1.0",
     "commitizen": "^4.1.2",
     "cz-customizable": "^6.2.0",
+    "email-validator": "^2.0.4",
     "husky": "^4.2.5",
     "imagemin": "^7.0.1",
     "imagemin-optipng": "^8.0.0",
     "imagemin-pngquant": "^9.0.0",
+    "inquirer": "^7.1.0",
     "prettier": "^2.0.5",
-    "pretty-quick": "^2.0.1"
+    "pretty-quick": "^2.0.1",
+    "puppeteer": "^3.0.4"
   },
   "husky": {
     "hooks": {
