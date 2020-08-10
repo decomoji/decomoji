@@ -6,5 +6,9 @@
   {
     "name": "tennshyokusijou",
     "alias_for": "tennsyokusijou"
+  },
+  {
+    "name": "euc_jp",
+    "alias_for": "euc-jp"
   }
 ]
