@@ -59,7 +59,7 @@ const questions = [
     },
     type: "checkbox",
     message: "登録するカテゴリーを選択してください:",
-    name: "categories",
+    name: "configs",
     choices: [
       {
         name: "基本セット",
@@ -82,12 +82,12 @@ const questions = [
       return answers.mode === "alias";
     },
     type: "checkbox",
-    name: "alias",
+    name: "configs",
     message: "登録するエイリアスを選択してください:",
     choices: [
       {
         name: "v5 以降でファイル名を修正したもの",
-        value: "v5_fixed",
+        value: "v5_rename",
       },
     ],
     validate: isSelects,
@@ -99,7 +99,7 @@ const questions = [
     },
     type: "checkbox",
     message: "削除するカテゴリーを選択してください:",
-    name: "categories",
+    name: "configs",
     choices: [
       {
         name: "基本セット",
