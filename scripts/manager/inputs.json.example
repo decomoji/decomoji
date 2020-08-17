@@ -3,5 +3,5 @@
   "email": "<email>",
   "password": "<password>",
   "mode": "upload",
-  "categories": ["v5_basic", "v5_extra"]
+  "configs": ["v5_basic", "v5_extra"]
 }
