@@ -8,7 +8,7 @@ const getPretendableDecomojiList = async (page, inputs) => {
   const remoteEmojiList = await fetchRemoteEmojiList(page, inputs);
 
   // 対象デコモジリストを取得する
-  const aliasDecomojiList = getLocalJson(inputs.alias, inputs.mode, LOG);
+  const aliasDecomojiList = getLocalJson(inputs.configs, LOG);
 
   // remoteEmojiList と aliasDecomojiList を突合させて処理するアイテムだけのリストを作る
   const pretendableDecomojiList = aliasDecomojiList.filter((alias) => {
