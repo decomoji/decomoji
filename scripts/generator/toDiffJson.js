@@ -12,7 +12,7 @@ const diffTypes = [
 const getTags = (versionPrefix) => {
   const resultBuffer = execSync(`git tag --list | grep -E ^${versionPrefix}`);
   if (!resultBuffer) return;
-  return bufferToArray(resultBuffer);
+  return ["4.27.0", ...bufferToArray(resultBuffer)];
 };
 
 // バッファを配列にする
