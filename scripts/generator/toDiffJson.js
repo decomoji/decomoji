@@ -88,3 +88,11 @@ const toPurename = (filepath) => {
   return path.basename(filepath).split(".png")[0];
 };
 
+// デコモジファインダー用のフォーマットに変換する
+const formatToFinderObject = (value, tag, add) => {
+  return {
+    name: toPurename(value),
+    path: `./${value}`,
+    ...(add ? { created_ver: tag } : { update_ver: tag }),
+  };
+};
