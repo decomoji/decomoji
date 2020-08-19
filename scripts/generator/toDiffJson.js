@@ -1,4 +1,5 @@
 const fs = require("fs");
+const path = require("path");
 const { execSync } = require("child_process");
 const diffTypes = [
   { type: "upload", mode: "A" },
@@ -81,3 +82,9 @@ const getLogs = (versionPrefix) => {
     return [..._log, { tag, log }];
   }, []);
 };
+
+// ファイルパスから拡張子なしのファイル名を返す
+const toPurename = (filepath) => {
+  return path.basename(filepath).split(".png")[0];
+};
+
