@@ -96,3 +96,45 @@ const formatToFinderObject = (value, tag, add) => {
     ...(add ? { created_ver: tag } : { update_ver: tag }),
   };
 };
+
+// diff-filter のモードをデコモジファインダーで扱う世界観のキーに振り分けたオブジェクトを返す
+const getMixedDiffs = (diff) => {
+  const tag = diff.tag;
+  const upload = [];
+  const fixed = [];
+  const rename = [];
+  Object.entries(diff.log).forEach((entry) => {
+    const [mode, list] = entry;
+    console.log(tag, mode, list);
+
+    if (mode === "upload") {
+      list.forEach((v) => {
+        upload.push(formatToFinderObject(v, tag, "add"));
+      });
+    }
+    if (mode === "modify") {
+      list.forEach((v) => {
+        fixed.push(formatToFinderObject(v, tag));
+        upload.push(formatToFinderObject(v, tag));
+      });
+    }
+    if (mode === "delete") {
+      list.forEach((v) => {
+        fixed.push(formatToFinderObject(v, tag));
+      });
+    }
+    if (mode === "rename") {
+      list.forEach((v) => {
+        const [before, after] = v;
+        fixed.push(formatToFinderObject(before, tag));
+        upload.push(formatToFinderObject(after, tag));
+        rename.push({
+          name: before,
+          alias_for: after,
+        });
+      });
+    }
+  });
+
+  return { fixed, upload, rename };
+};
