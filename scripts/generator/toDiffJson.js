@@ -138,3 +138,16 @@ const getMixedDiffs = (diff) => {
 
   return { fixed, upload, rename };
 };
+
+// 実行！
+getLogs("v5").forEach((diff) => {
+  try {
+    fs.writeFileSync(
+      `./scripts/manager/configs/${diff.tag}.json`,
+      JSON.stringify(getMixedDiffs(diff))
+    );
+    console.log(`./scripts/manager/configs/${diff.tag}.json has been saved!`);
+  } catch (err) {
+    throw err;
+  }
+});
