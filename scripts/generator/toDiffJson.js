@@ -1,5 +1,5 @@
 const fs = require("fs");
-const convertToFinderObject = require("../utilities/convertToFinderObject");
+const convertToDecomojiObject = require("../utilities/convertToDecomojiObject");
 const getGitDiffArray = require("../utilities/getGitDiffArray");
 const getGitDiffOfRenameArray = require("../utilities/getGitDiffOfRenameArray");
 const getGitTagPairArray = require("../utilities/getGitTagPairArray");
@@ -47,25 +47,25 @@ const getMixedDecomojiDiff = (diff) => {
 
     if (mode === "upload") {
       list.forEach((v) => {
-        upload.push(convertToFinderObject(v, tag, "add"));
+        upload.push(convertToDecomojiObject(v, tag, "upload"));
       });
     }
     if (mode === "modify") {
       list.forEach((v) => {
-        fixed.push(convertToFinderObject(v, tag));
-        upload.push(convertToFinderObject(v, tag));
+        fixed.push(convertToDecomojiObject(v, tag));
+        upload.push(convertToDecomojiObject(v, tag));
       });
     }
     if (mode === "delete") {
       list.forEach((v) => {
-        fixed.push(convertToFinderObject(v, tag));
+        fixed.push(convertToDecomojiObject(v, tag));
       });
     }
     if (mode === "rename") {
       list.forEach((v) => {
         const [before, after] = v;
-        fixed.push(convertToFinderObject(before, tag));
-        upload.push(convertToFinderObject(after, tag));
+        fixed.push(convertToDecomojiObject(before, tag));
+        upload.push(convertToDecomojiObject(after, tag));
         rename.push({
           name: before,
           alias_for: after,

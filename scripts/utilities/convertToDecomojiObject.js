@@ -1,12 +1,12 @@
 const convertFilepathToBasename = require("./convertFilepathToBasename");
 
 // デコモジファインダー用のフォーマットに変換する
-const convertToFinderObject = (path, tag, add) => {
+const convertToDecomojiObject = (path, tag, upload) => {
   return {
     name: convertFilepathToBasename(path),
-    path: `./${path}`,
-    ...(add ? { created_ver: tag } : { update_ver: tag }),
+    path,
+    ...(upload ? { created_ver: tag } : { update_ver: tag }),
   };
 };
 
-module.exports = convertToFinderObject;
+module.exports = convertToDecomojiObject;
