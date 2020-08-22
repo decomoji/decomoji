@@ -60,37 +60,30 @@ const getDecomojiDiffAsTag = (diff) => {
   const rename = [];
   Object.entries(diff.log).forEach((entry) => {
     const [mode, list] = entry;
-    console.log(tag, mode, list);
+    list.forEach((path) => {
+      const decomoji =
+        mode === "rename"
+          ? {}
+          : convertToDecomojiObject(path, tag, mode === "upload");
 
-    if (mode === "upload") {
-      list.forEach((v) => {
-        upload.push(convertToDecomojiObject(v, tag, "upload"));
-      });
-    }
-    if (mode === "modify") {
-      list.forEach((v) => {
-        fixed.push(convertToDecomojiObject(v, tag));
-        upload.push(convertToDecomojiObject(v, tag));
-      });
-    }
-    if (mode === "delete") {
-      list.forEach((v) => {
-        fixed.push(convertToDecomojiObject(v, tag));
-      });
-    }
-    if (mode === "rename") {
-      list.forEach((v) => {
-        const [before, after] = v;
+      if (mode === "delete" || mode === "modify") {
+        fixed.push(decomoji);
+      }
+      if (mode === "upload" || mode === "modify") {
+        upload.push(decomoji);
+      }
+
+      if (mode === "rename") {
+        const [before, after] = path;
         fixed.push(convertToDecomojiObject(before, tag));
         upload.push(convertToDecomojiObject(after, tag));
         rename.push({
           name: before,
           alias_for: after,
         });
-      });
-    }
+      }
+    });
   });
-
   return { fixed, upload, rename };
 };
 
