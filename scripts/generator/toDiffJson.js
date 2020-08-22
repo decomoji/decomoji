@@ -3,7 +3,9 @@ const convertToDecomojiObject = require("../utilities/convertToDecomojiObject");
 const getGitDiffArray = require("../utilities/getGitDiffArray");
 const getGitDiffOfRenameArray = require("../utilities/getGitDiffOfRenameArray");
 const getGitTagPairArray = require("../utilities/getGitTagPairArray");
+const getDecomojiCategory = require("../utilities/getDecomojiCategory");
 const isDecomojiFile = require("../utilities/isDecomojiFile");
+const { version } = require("punycode");
 
 // diff-filter 向け辞書
 const diffTypes = [
@@ -35,8 +37,23 @@ const getDecomojiDiff = (versionPrefix, startVersion) => {
   }, []);
 };
 
-// diff-filter のモードをデコモジファインダーで扱う世界観のキーに振り分けたオブジェクトを返す
-const getMixedDecomojiDiff = (diff) => {
+// diff-filter の結果を { fixed, upload, rename } に再分配したオブジェクトを返す
+/**
+ * type DecomojiObject =
+    {
+      name!: decomojiName
+      path!: decomojiFilepath
+      created_ver?: SemVer
+      update_ver?: SemVer
+    }
+
+ * {
+ *   fixed!: DecomojiObject[]
+ *   upload!: DecomojiObject[]
+ *   rename!: DecomojiObject[]
+ * }
+ */
+const getDecomojiDiffAsTag = (diff) => {
   const tag = diff.tag;
   const upload = [];
   const fixed = [];
@@ -78,14 +95,18 @@ const getMixedDecomojiDiff = (diff) => {
 };
 
 // 実行！
-getDecomojiDiff("v5", "4.27.0").forEach((diff) => {
-  try {
-    fs.writeFileSync(
-      `./scripts/manager/configs/${diff.tag}.json`,
-      JSON.stringify(getMixedDecomojiDiff(diff))
-    );
-    console.log(`./scripts/manager/configs/${diff.tag}.json has been saved!`);
-  } catch (err) {
-    throw err;
-  }
-});
+getDecomojiDiff("v5", "4.27.0")
+  .map((diff) => {
+    try {
+      fs.writeFileSync(
+        `./scripts/manager/configs/${diff.tag}.json`,
+        JSON.stringify(getDecomojiDiffAsTag(diff))
+      );
+      console.log(`./scripts/manager/configs/${diff.tag}.json has been saved!`);
+    } catch (err) {
+      throw err;
+    }
+    // 次の reduce でカテゴリー別 JSON を作るためにそのまま返す
+    return diff;
+  })
+  .reduce((_version, diff) => {}, {});
