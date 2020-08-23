@@ -50,26 +50,29 @@ const getDecomojiDiffAsMode = (diff, tag) => {
   Object.entries(diff).forEach((entry) => {
     const [mode, list] = entry;
     list.forEach((path) => {
-      const decomoji =
-        mode === "rename"
-          ? {}
-          : convertToDecomojiObject(path, tag, mode === "upload");
+      // v5.0.0 は upload のみにする
+      if (tag === "v5.0.0") {
+        upload.push(convertToDecomojiObject(path, tag, "upload"));
+      } else {
+        const decomoji =
+          mode === "rename" ? {} : convertToDecomojiObject(path, tag, mode);
 
-      if (mode === "delete" || mode === "modify") {
-        fixed.push(decomoji);
-      }
-      if (mode === "upload" || mode === "modify") {
-        upload.push(decomoji);
-      }
+        if (mode === "delete" || mode === "modify") {
+          fixed.push(decomoji);
+        }
+        if (mode === "upload" || mode === "modify") {
+          upload.push(decomoji);
+        }
 
-      if (mode === "rename") {
-        const [before, after] = path;
-        fixed.push(convertToDecomojiObject(before, tag));
-        upload.push(convertToDecomojiObject(after, tag));
-        rename.push({
-          name: before,
-          alias_for: after,
-        });
+        if (mode === "rename") {
+          const [before, after] = path;
+          fixed.push(convertToDecomojiObject(before, tag, "delete"));
+          upload.push(convertToDecomojiObject(after, tag, "upload"));
+          rename.push({
+            name: before,
+            alias_for: after,
+          });
+        }
       }
     });
   });
@@ -77,19 +80,27 @@ const getDecomojiDiffAsMode = (diff, tag) => {
 };
 
 // 実行！
-Object.entries(getDecomojiGitDiffAsTag(getGitTagPairArray("v5", "4.27.0"))).map(
-  (entry) => {
-    const [tag, diff] = entry;
+const categories = {
+  basic: [],
+  extra: [],
+  explicit: [],
+};
+const tagPairs = getGitTagPairArray("v5", "4.27.0");
+const diffAsTag = getDecomojiGitDiffAsTag(tagPairs);
+Object.entries(diffAsTag)
+  // entry は tag ごとの切り分け
+  .map((entry) => {
+    const [tag, list] = entry;
+    const diffAsMode = getDecomojiDiffAsMode(list, tag);
     try {
       fs.writeFileSync(
         `./scripts/manager/configs/${tag}.json`,
-        JSON.stringify(getDecomojiDiffAsMode(diff, tag))
+        JSON.stringify(diffAsMode)
       );
       console.log(`./scripts/manager/configs/${tag}.json has been saved!`);
     } catch (err) {
       throw err;
     }
-    // 次の reduce でカテゴリー別 JSON を作るためにそのまま返す
-    return entry;
-  }
-);
+
+    return diffAsMode;
+  });
