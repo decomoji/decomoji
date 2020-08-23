@@ -111,7 +111,6 @@ const categories = {
 const tagPairs = getGitTagPairArray("v5", "4.27.0");
 const diffAsTag = getDecomojiGitDiffAsTag(tagPairs);
 Object.entries(diffAsTag)
-  // entry は tag ごとの切り分け
   .map((entry) => {
     const [tag, list] = entry;
     const diffAsMode = getDecomojiDiffAsMode(list, tag);
@@ -126,4 +125,21 @@ Object.entries(diffAsTag)
     }
 
     return diffAsMode;
+  })
+  .map((diffAsMode) => {
+    const diffAsCategory = getDecomojiDiffAsCategory(diffAsMode);
+    Object.entries(diffAsCategory).forEach((entry) => {
+      const [categoryName, list] = entry;
+      list.forEach((decomoji) => {
+        const target = categories[categoryName];
+        const index = target.findIndex((v) => v.name === decomoji.name);
+        // 同じ名前があったらマージして置き換える
+        if (index > -1) {
+          target.splice(index, 1, { ...target[index], ...decomoji });
+        } else {
+          target.push(decomoji);
+        }
+      });
+    });
+    });
   });
