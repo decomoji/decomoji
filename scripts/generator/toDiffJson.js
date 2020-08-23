@@ -5,7 +5,6 @@ const getGitDiffOfRenameArray = require("../utilities/getGitDiffOfRenameArray");
 const getGitTagPairArray = require("../utilities/getGitTagPairArray");
 const getDecomojiCategory = require("../utilities/getDecomojiCategory");
 const isDecomojiFile = require("../utilities/isDecomojiFile");
-const { version } = require("punycode");
 
 // diff-filter 向け辞書
 const diffTypes = [
@@ -18,7 +17,6 @@ const diffTypes = [
 // ファイル名の配列が差分種別キーごとにまとまったオブジェクトとバージョンのキーバリューの配列を返す
 const getDecomojiDiff = (versionPrefix, startVersion) => {
   const tagPairs = getGitTagPairArray(versionPrefix, startVersion);
-  console.log(`-------------------------------------`);
   return tagPairs.reduce((_log, { from, to }) => {
     const tag = to;
     const log = diffTypes.reduce((_diff, { type, mode }) => {
@@ -32,27 +30,11 @@ const getDecomojiDiff = (versionPrefix, startVersion) => {
         ...{ [type]: diff.filter(isDecomojiFile) },
       };
     }, {});
-    console.log(`-------------------------------------`);
     return [..._log, { tag, log }];
   }, []);
 };
 
 // diff-filter の結果を { fixed, upload, rename } に再分配したオブジェクトを返す
-/**
- * type DecomojiObject =
-    {
-      name!: decomojiName
-      path!: decomojiFilepath
-      created_ver?: SemVer
-      update_ver?: SemVer
-    }
-
- * {
- *   fixed!: DecomojiObject[]
- *   upload!: DecomojiObject[]
- *   rename!: DecomojiObject[]
- * }
- */
 const getDecomojiDiffAsTag = (diff) => {
   const tag = diff.tag;
   const upload = [];
