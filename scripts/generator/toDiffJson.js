@@ -141,5 +141,26 @@ Object.entries(diffAsTag)
         }
       });
     });
+
+    // タグごとに毎回上書きする
+    Object.entries(categories).forEach((entry) => {
+      const [category, list] = entry;
+      // removed キーを持つものを弾く
+      const filtedList = list.filter(({ removed }) => !removed);
+      // name キーでソートする
+      const sortedList = filtedList.sort((a, b) =>
+        a.name.localeCompare(b.name)
+      );
+      try {
+        fs.writeFileSync(
+          `./scripts/manager/configs/v5_${category}.json`,
+          JSON.stringify(sortedList)
+        );
+        console.log(
+          `./scripts/manager/configs/v5_${category}.json by has been saved!`
+        );
+      } catch (err) {
+        throw err;
+      }
     });
   });
