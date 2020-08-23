@@ -74,6 +74,34 @@ const getDecomojiDiffAsMode = (diff, tag) => {
   return { fixed, upload, rename };
 };
 
+// diff-filter の結果からバージョンを統合して { basic, extra, explicit } に再分配したオブジェクトを返す
+const getDecomojiDiffAsCategory = (diffAsMode) => {
+  const c = {
+    basic: [],
+    extra: [],
+    explicit: [],
+  };
+  Object.entries(diffAsMode).forEach((entry) => {
+    const [mode, list] = entry;
+
+    list.forEach((decomoji) => {
+      if (mode === "rename") {
+        return;
+      }
+      const categoryName = getDecomojiCategory(decomoji.path);
+      const target = c[categoryName];
+      const index = target.findIndex((v) => v.name === decomoji.name);
+      // 同じ名前があったらマージして置き換える
+      if (index > -1) {
+        target.splice(index, 1, { ...target[index], ...decomoji });
+      } else {
+        target.push(decomoji);
+      }
+    });
+  });
+  return c;
+};
+
 // 実行！
 const categories = {
   basic: [],
