@@ -43,12 +43,11 @@ const getDecomojiGitDiffAsTag = (tagPairs) => {
 };
 
 // diff-filter の結果を { fixed, upload, rename } に再分配したオブジェクトを返す
-const getDecomojiDiffAsTag = (diff) => {
-  const tag = diff.tag;
+const getDecomojiDiffAsMode = (diff, tag) => {
   const upload = [];
   const fixed = [];
   const rename = [];
-  Object.entries(diff.log).forEach((entry) => {
+  Object.entries(diff).forEach((entry) => {
     const [mode, list] = entry;
     list.forEach((path) => {
       const decomoji =
@@ -78,18 +77,19 @@ const getDecomojiDiffAsTag = (diff) => {
 };
 
 // 実行！
-getDecomojiDiff("v5", "4.27.0")
-  .map((diff) => {
+Object.entries(getDecomojiGitDiffAsTag(getGitTagPairArray("v5", "4.27.0"))).map(
+  (entry) => {
+    const [tag, diff] = entry;
     try {
       fs.writeFileSync(
-        `./scripts/manager/configs/${diff.tag}.json`,
-        JSON.stringify(getDecomojiDiffAsTag(diff))
+        `./scripts/manager/configs/${tag}.json`,
+        JSON.stringify(getDecomojiDiffAsMode(diff, tag))
       );
-      console.log(`./scripts/manager/configs/${diff.tag}.json has been saved!`);
+      console.log(`./scripts/manager/configs/${tag}.json has been saved!`);
     } catch (err) {
       throw err;
     }
     // 次の reduce でカテゴリー別 JSON を作るためにそのまま返す
-    return diff;
-  })
-  .reduce((_version, diff) => {}, {});
+    return entry;
+  }
+);
