@@ -6,6 +6,10 @@ const getGitTagPairArray = require("../utilities/getGitTagPairArray");
 const getDecomojiCategory = require("../utilities/getDecomojiCategory");
 const isDecomojiFile = require("../utilities/isDecomojiFile");
 
+// バージョン定数
+const MAJOR_TAG_PREFIX = process.argv[2] || "v5";
+const LATEST_PREV_TAG = process.argv[3] || "4.27.0";
+
 // diff-filter 向け辞書
 const diffTypes = [
   { type: "upload", mode: "A" },
@@ -108,7 +112,7 @@ const categories = {
   extra: [],
   explicit: [],
 };
-const tagPairs = getGitTagPairArray("v5", "4.27.0");
+const tagPairs = getGitTagPairArray(MAJOR_TAG_PREFIX, LATEST_PREV_TAG);
 const diffAsTag = getDecomojiGitDiffAsTag(tagPairs);
 Object.entries(diffAsTag)
   .map((entry) => {
@@ -157,7 +161,7 @@ Object.entries(diffAsTag)
           JSON.stringify(sortedList)
         );
         console.log(
-          `./scripts/manager/configs/v5_${category}.json by has been saved!`
+          `./scripts/manager/configs/v5_${category}.json has been saved!`
         );
       } catch (err) {
         throw err;
