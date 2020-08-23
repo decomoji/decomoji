@@ -14,9 +14,15 @@ const diffTypes = [
   { type: "delete", mode: "D" },
 ];
 
-// ファイル名の配列が差分種別キーごとにまとまったオブジェクトとバージョンのキーバリューの配列を返す
-const getDecomojiDiff = (versionPrefix, startVersion) => {
-  const tagPairs = getGitTagPairArray(versionPrefix, startVersion);
+// diff-filter-mode をキーにして差分を配列で持つオブジェクトをタグごとに持ったオブジェクトを返す
+/**
+ * {
+ *  <tag>: {"upload: [...]", "modify": [...], "rename": [...], "delete": [...]},
+ *  <tag>: {"upload: [...]", "modify": [...], "rename": [...], "delete": [...]},
+ *  ...
+ * }
+ */
+const getDecomojiGitDiffAsTag = (tagPairs) => {
   return tagPairs.reduce((_log, { from, to }) => {
     const tag = to;
     const log = diffTypes.reduce((_diff, { type, mode }) => {
@@ -25,13 +31,15 @@ const getDecomojiDiff = (versionPrefix, startVersion) => {
       const diff = isRenameMode
         ? getGitDiffOfRenameArray(from, to)
         : getGitDiffArray(from, to, mode);
+      // "<diff-filter-mode>": [<filepath>, <filepath>, ...]
       return {
         ..._diff,
         ...{ [type]: diff.filter(isDecomojiFile) },
       };
     }, {});
-    return [..._log, { tag, log }];
-  }, []);
+    // { <tag>: {"upload: [...]", "modify": [...], "rename": [...], "delete": [...]}}
+    return { ..._log, [tag]: log };
+  }, {});
 };
 
 // diff-filter の結果を { fixed, upload, rename } に再分配したオブジェクトを返す
