@@ -50,29 +50,24 @@ const getDecomojiDiffAsMode = (diff, tag) => {
   Object.entries(diff).forEach((entry) => {
     const [mode, list] = entry;
     list.forEach((path) => {
-      // v5.0.0 は upload のみにする
-      if (tag === "v5.0.0") {
-        upload.push(convertToDecomojiObject(path, tag, "upload"));
-      } else {
-        const decomoji =
-          mode === "rename" ? {} : convertToDecomojiObject(path, tag, mode);
+      const decomoji =
+        mode === "rename" ? {} : convertToDecomojiObject(path, tag, mode);
 
-        if (mode === "delete" || mode === "modify") {
-          fixed.push(decomoji);
-        }
-        if (mode === "upload" || mode === "modify") {
-          upload.push(decomoji);
-        }
+      if (mode === "delete" || mode === "modify") {
+        fixed.push(decomoji);
+      }
+      if (mode === "upload" || mode === "modify") {
+        upload.push(decomoji);
+      }
 
-        if (mode === "rename") {
-          const [before, after] = path;
-          fixed.push(convertToDecomojiObject(before, tag, "delete"));
-          upload.push(convertToDecomojiObject(after, tag, "upload"));
-          rename.push({
-            name: before,
-            alias_for: after,
-          });
-        }
+      if (mode === "rename") {
+        const [before, after] = path;
+        fixed.push(convertToDecomojiObject(before, tag, "delete"));
+        upload.push(convertToDecomojiObject(after, tag, "upload"));
+        rename.push({
+          name: before,
+          alias_for: after,
+        });
       }
     });
   });
