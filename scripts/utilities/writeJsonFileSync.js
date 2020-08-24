@@ -1,13 +1,10 @@
 const fs = require("fs");
 
 // ファイル名がデコモジかどうか返す
-const writeJsonFileSync = (buffer, filename) => {
+const writeJsonFileSync = (buffer, filepath) => {
   try {
-    fs.writeFileSync(
-      `./scripts/manager/configs/${filename}.json`,
-      JSON.stringify(buffer)
-    );
-    console.log(`${filename}.json has been saved!`);
+    fs.writeFileSync(`${filepath}`, JSON.stringify(buffer));
+    console.log(`${filepath} has been saved!`);
   } catch (err) {
     throw err;
   }
