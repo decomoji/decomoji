@@ -1,4 +1,5 @@
 const fs = require("fs");
+const convertFilepathToBasename = require("../utilities/convertFilepathToBasename");
 const convertToDecomojiObject = require("../utilities/convertToDecomojiObject");
 const getGitDiffArray = require("../utilities/getGitDiffArray");
 const getGitDiffOfRenameArray = require("../utilities/getGitDiffOfRenameArray");
@@ -69,8 +70,8 @@ const getDecomojiDiffAsMode = (diff, tag) => {
         fixed.push(convertToDecomojiObject(before, tag, "delete"));
         upload.push(convertToDecomojiObject(after, tag, "upload"));
         rename.push({
-          name: before,
-          alias_for: after,
+          name: convertFilepathToBasename(before),
+          alias_for: convertFilepathToBasename(after),
         });
       }
     });
