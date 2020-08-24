@@ -51,10 +51,10 @@ scripst/manager の削除スクリプトは、デフォルトでは自分が登�
 
 ## オリジナルのエイリアスを登録する
 
-scripst/manager/configs/ に下記のフォーマットで my-alias.json ファイルを置き、inputs.json に設定を追記してください。
+`diffs/` に下記のフォーマットで my-alias.json ファイルを置き、inputs.json に設定を追記してください。
 
 ```json
-// scripst/manager/configs/my-alias.json
+// diffs/my-alias.json
 [
   {
     "name": "ナルホド", // エイリアス名
@@ -88,5 +88,5 @@ Slack の仕様により、１つのエイリアス名には複数のエイリ�
 | email       | `email`                                                                                                                                        | `"otiext@gmail.com"`       |                                                                                                                                      |
 | password    | `string`                                                                                                                                       | `"hogehoge"`               |                                                                                                                                      |
 | mode        | `"upload" | "alias" | "remove"`                                                                                                                | `"upload"`                 |                                                                                                                                      |
-| configs     | `("v4_all" | "v4_basic" | "v4_extra" | "v4_fixed" | "v5_all" | "v5_basic" | "v5_extra" | "v5_explicit" | "v4_rename" | "v5_rename | string)[]` | `["v5_basic", "v5_extra"]` | scripts/manager/configs/ に格納した json ファイル名を値にとる配列                                                                    |
+| configs     | `("v4_all" | "v4_basic" | "v4_extra" | "v4_fixed" | "v5_all" | "v5_basic" | "v5_extra" | "v5_explicit" | "v4_rename" | "v5_rename | string)[]` | `["v5_basic", "v5_extra"]` | diffs/ に格納した json ファイル名を値にとる配列                                                                                      |
 | forceRemove | `boolean`                                                                                                                                      | `false`                    | mode="remove" で `true` の時、他ユーザーが登録したカスタム絵文字も削除対象に含めます。対象に含めても権限がない場合は削除されません。 |
