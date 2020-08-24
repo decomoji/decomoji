@@ -210,6 +210,18 @@ Object.entries(diffAsTag)
     });
   });
 
+// v5_fixed.json を作る
+const _fixed = Manages["fixed"].sort((a, b) => a.name.localeCompare(b.name));
+try {
+  fs.writeFileSync(
+    `./scripts/manager/configs/v5_fixed.json`,
+    JSON.stringify(_fixed)
+  );
+  console.log(`./scripts/manager/configs/v5_fixed.json has been saved!`);
+} catch (err) {
+  throw err;
+}
+
 // v5_rename.json を作る
 const _rename = Manages["rename"]
   .concat({ name: "euc_jp", alias_for: "euc-jp" })
