@@ -47,7 +47,7 @@ module.exports = {
   scopes: [
     { name: "decomoji" },
     { name: "docs" },
-    { name: "diffs" },
+    { name: "configs" },
     { name: "generator" },
     { name: "manager" },
     { name: "utilities" },
