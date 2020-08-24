@@ -1,6 +1,12 @@
 // デコモジのカテゴリー名を返す
 const getDecomojiCategory = (filepath) => {
-  return filepath.split("/")[1];
+  const splited = filepath.split("/");
+  if (splited.length > 2) {
+    // decomoji/hoge/name.png -> hoge
+    return splited[1];
+  } else {
+    return "root";
+  }
 };
 
 module.exports = getDecomojiCategory;
