@@ -5,23 +5,20 @@
 ## デコモジの追加・修正
 
 ```bash
-# 1. 追加したデコモジを最適化する
+# 1. リネームがある場合は git mv で行う
+git mv decomoji/extra/euc_jp.png decomoji/extra/euc-jp.png
+# リネームとバイナリ変更を行う場合は、git mv 後に変更をコミットして squash する（git diff で RENAME を取得するため）
+
+# 2. 追加したデコモジを最適化する
 node scripts/generator/optimize.js ./decomoji/extra_tmp/ ./decomoji/extra/
 
-# 2. v5_extra.json を更新する
-node scripts/generator/toNamePathList.js extra ./scripts/manager/configs/list/v5_extra.json
+# 3. json を更新する
+node scripts/generator/toDiffJson.js
 
-# 3. v5_all.json を更新する
-node scripts/generator/toAllNamePathList.js
+# 4. LIST-***.md を更新する
+node scripts/generator/toListMd.js
 
-# 4. LIST-extra.md を更新する
-node scripts/generator/toListMd.js extra
-
-# 5. 更新分の json を作成する
-node scripts/generator/toNamePathList.js extra_tmp ./scripts/manager/configs/list/v5.1_extra.json
-## 作成後、 path フィールドを修正する
-
-# 6.Prettier の意志のままに整形する
+# 5. Prettier の意志のままに整形する
 npx prettier --write .
 ```
 
