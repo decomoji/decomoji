@@ -117,6 +117,19 @@ const getDecomojiDiffAsCategory = (diffAsMode) => {
       const categoryName = getDecomojiCategory(decomoji.path);
       const target = c[categoryName];
       const index = target.findIndex((v) => v.name === decomoji.name);
+      if (mode === "fixed") {
+        const fixed = Manages["fixed"];
+        const indexOfFixed = fixed.findIndex((v) => v.name === decomoji.name);
+        // 同じ名前があったらマージして置き換える
+        if (indexOfFixed > -1) {
+          fixed.splice(indexOfFixed, 1, {
+            ...fixed[indexOfFixed],
+            ...decomoji,
+          });
+        } else {
+          fixed.push(decomoji);
+        }
+      }
       // 同じ名前があったらマージして置き換える
       if (index > -1) {
         target.splice(index, 1, { ...target[index], ...decomoji });
