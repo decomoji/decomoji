@@ -55,6 +55,7 @@ Object.entries(gitDiffAsTag)
 // v5_all.json, v5_basic.json, v5_extra.json, v5_explicit.json を作る
 Object.entries(Seeds.categories).forEach((entry) => {
   const [category, list] = entry;
+  if (list.length < 1) return;
   writeJsonFileSync(
     list
       .filter(({ removed }) => !removed)
