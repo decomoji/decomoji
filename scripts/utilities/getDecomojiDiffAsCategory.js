@@ -4,8 +4,9 @@ const getDecomojiCategory = require("./getDecomojiCategory");
 const getDecomojiDiffAsCategory = (diffAsMode) => {
   const categories = {
     basic: [],
-    extra: [],
     explicit: [],
+    extra: [],
+    root: [],
   };
   Object.entries(diffAsMode).forEach((entry) => {
     const [filterMode, list] = entry;
