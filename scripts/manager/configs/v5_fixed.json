@@ -1,89 +1,16 @@
 [
-  { "name": "10bai", "path": "decomoji/extra/10bai.png", "updated": "v5.2.0" },
-  {
-    "name": "10baimasi",
-    "path": "decomoji/extra/10baimasi.png",
-    "updated": "v5.2.0"
-  },
-  {
-    "name": "10nennhayai",
-    "path": "decomoji/extra/10nennhayai.png",
-    "updated": "v5.2.0"
-  },
-  {
-    "name": "10nennosoi",
-    "path": "decomoji/extra/10nennosoi.png",
-    "updated": "v5.2.0"
-  },
-  {
-    "name": "10waririkai",
-    "path": "decomoji/extra/10waririkai.png",
-    "updated": "v5.2.0"
-  },
-  {
-    "name": "4kterebi",
-    "path": "decomoji/extra/4kterebi.png",
-    "updated": "v5.1.1"
-  },
-  {
-    "name": "6kterebi",
-    "path": "decomoji/extra/6kterebi.png",
-    "updated": "v5.1.1"
-  },
-  {
-    "name": "8kterebi",
-    "path": "decomoji/extra/8kterebi.png",
-    "updated": "v5.1.1"
-  },
-  { "name": "a-ne", "path": "decomoji/basic/a-ne.png", "removed": "v5.1.0" },
-  {
-    "name": "atteru",
-    "path": "decomoji/extra/atteru.png",
-    "updated": "v5.2.0"
-  },
-  {
-    "name": "dehanai",
-    "path": "decomoji/extra/dehanai.png",
-    "updated": "v5.2.0"
-  },
-  {
-    "name": "euc_jp",
-    "path": "decomoji/extra/euc_jp.png",
-    "removed": "v5.2.0"
-  },
-  {
-    "name": "hennkenn",
-    "path": "decomoji/extra/hennkenn.png",
-    "updated": "v5.1.2"
-  },
-  {
-    "name": "jstukao",
-    "path": "decomoji/extra/jstukao.png",
-    "updated": "v5.2.0"
-  },
-  {
-    "name": "kaiteta",
-    "path": "decomoji/extra/kaiteta.png",
-    "updated": "v5.2.0"
-  },
-  {
-    "name": "kimenomonndai",
-    "path": "decomoji/extra/kimenomonndai.png",
-    "updated": "v5.2.0"
-  },
-  {
-    "name": "kuukikannsenn",
-    "path": "decomoji/extra/kuukikannsenn.png",
-    "updated": "v5.1.2"
-  },
-  {
-    "name": "seimeiutyuusositebannbutunituitenokyuukyokunogimonnnokotae",
-    "path": "decomoji/extra/seimeiutyuusositebannbutunituitenokyuukyokunogimonnnokotae.png",
-    "updated": "v5.1.1"
-  },
-  {
-    "name": "tennshyokusijou",
-    "path": "decomoji/extra/tennshyokusijou.png",
-    "removed": "v5.1.0"
-  }
+  { "name": "a-ne" },
+  { "name": "tennshyokusijou" },
+  { "name": "4kterebi" },
+  { "name": "6kterebi" },
+  { "name": "8kterebi" },
+  { "name": "seimeiutyuusositebannbutunituitenokyuukyokunogimonnnokotae" },
+  { "name": "hennkenn" },
+  { "name": "kuukikannsenn" },
+  { "name": "10bai" },
+  { "name": "10baimasi" },
+  { "name": "10nennhayai" },
+  { "name": "10nennosoi" },
+  { "name": "10waririkai" },
+  { "name": "euc_jp" }
 ]

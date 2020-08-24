@@ -36,11 +36,6 @@
       "updated": "v5.2.0"
     },
     {
-      "name": "euc_jp",
-      "path": "decomoji/extra/euc_jp.png",
-      "removed": "v5.2.0"
-    },
-    {
       "name": "jstukao",
       "path": "decomoji/extra/jstukao.png",
       "updated": "v5.2.0"
@@ -54,36 +49,16 @@
       "name": "kimenomonndai",
       "path": "decomoji/extra/kimenomonndai.png",
       "updated": "v5.2.0"
+    },
+    {
+      "name": "euc_jp",
+      "path": "decomoji/extra/euc_jp.png",
+      "removed": "v5.2.0"
     }
   ],
   "upload": [
-    {
-      "name": "10bai",
-      "path": "decomoji/extra/10bai.png",
-      "updated": "v5.2.0"
-    },
-    {
-      "name": "10baimasi",
-      "path": "decomoji/extra/10baimasi.png",
-      "updated": "v5.2.0"
-    },
-    {
-      "name": "10nennhayai",
-      "path": "decomoji/extra/10nennhayai.png",
-      "updated": "v5.2.0"
-    },
-    {
-      "name": "10nennosoi",
-      "path": "decomoji/extra/10nennosoi.png",
-      "updated": "v5.2.0"
-    },
-    {
-      "name": "10waririkai",
-      "path": "decomoji/extra/10waririkai.png",
-      "updated": "v5.2.0"
-    },
-    { "name": "a-a", "path": "decomoji/extra/a-a.png", "created": "v5.2.0" },
     { "name": "a-a-", "path": "decomoji/extra/a-a-.png", "created": "v5.2.0" },
+    { "name": "a-a", "path": "decomoji/extra/a-a.png", "created": "v5.2.0" },
     {
       "name": "a-hai",
       "path": "decomoji/extra/a-hai.png",
@@ -319,11 +294,6 @@
       "name": "atodeyaru",
       "path": "decomoji/extra/atodeyaru.png",
       "created": "v5.2.0"
-    },
-    {
-      "name": "atteru",
-      "path": "decomoji/extra/atteru.png",
-      "updated": "v5.2.0"
     },
     {
       "name": "atya-",
@@ -731,11 +701,6 @@
       "name": "datteyo",
       "path": "decomoji/extra/datteyo.png",
       "created": "v5.2.0"
-    },
-    {
-      "name": "dehanai",
-      "path": "decomoji/extra/dehanai.png",
-      "updated": "v5.2.0"
     },
     {
       "name": "dekinari",
@@ -1994,11 +1959,6 @@
       "created": "v5.2.0"
     },
     {
-      "name": "jstukao",
-      "path": "decomoji/extra/jstukao.png",
-      "updated": "v5.2.0"
-    },
-    {
       "name": "kaihenn",
       "path": "decomoji/extra/kaihenn.png",
       "created": "v5.2.0"
@@ -2309,11 +2269,6 @@
       "created": "v5.2.0"
     },
     {
-      "name": "kaiteta",
-      "path": "decomoji/extra/kaiteta.png",
-      "updated": "v5.2.0"
-    },
-    {
       "name": "kakanai",
       "path": "decomoji/extra/kakanai.png",
       "created": "v5.2.0"
@@ -2337,11 +2292,6 @@
       "name": "kakitai",
       "path": "decomoji/extra/kakitai.png",
       "created": "v5.2.0"
-    },
-    {
-      "name": "kimenomonndai",
-      "path": "decomoji/extra/kimenomonndai.png",
-      "updated": "v5.2.0"
     },
     {
       "name": "kiminobagu",
@@ -5006,6 +4956,56 @@
       "name": "zuttozutto",
       "path": "decomoji/extra/zuttozutto.png",
       "created": "v5.2.0"
+    },
+    {
+      "name": "10bai",
+      "path": "decomoji/extra/10bai.png",
+      "updated": "v5.2.0"
+    },
+    {
+      "name": "10baimasi",
+      "path": "decomoji/extra/10baimasi.png",
+      "updated": "v5.2.0"
+    },
+    {
+      "name": "10nennhayai",
+      "path": "decomoji/extra/10nennhayai.png",
+      "updated": "v5.2.0"
+    },
+    {
+      "name": "10nennosoi",
+      "path": "decomoji/extra/10nennosoi.png",
+      "updated": "v5.2.0"
+    },
+    {
+      "name": "10waririkai",
+      "path": "decomoji/extra/10waririkai.png",
+      "updated": "v5.2.0"
+    },
+    {
+      "name": "atteru",
+      "path": "decomoji/extra/atteru.png",
+      "updated": "v5.2.0"
+    },
+    {
+      "name": "dehanai",
+      "path": "decomoji/extra/dehanai.png",
+      "updated": "v5.2.0"
+    },
+    {
+      "name": "jstukao",
+      "path": "decomoji/extra/jstukao.png",
+      "updated": "v5.2.0"
+    },
+    {
+      "name": "kaiteta",
+      "path": "decomoji/extra/kaiteta.png",
+      "updated": "v5.2.0"
+    },
+    {
+      "name": "kimenomonndai",
+      "path": "decomoji/extra/kimenomonndai.png",
+      "updated": "v5.2.0"
     }
   ],
   "rename": []

@@ -281,11 +281,6 @@
       "created": "v5.1.0"
     },
     {
-      "name": "a-ne_",
-      "path": "decomoji/basic/a-ne_.png",
-      "created": "v5.1.0"
-    },
-    {
       "name": "aisometorikku",
       "path": "decomoji/extra/aisometorikku.png",
       "created": "v5.1.0"
@@ -3805,12 +3800,12 @@
       "path": "decomoji/extra/sirotobisasuke.png",
       "created": "v5.1.0"
     },
-    { "name": "so", "path": "decomoji/extra/so.png", "created": "v5.1.0" },
     {
       "name": "so-syarudhisutannsu",
       "path": "decomoji/extra/so-syarudhisutannsu.png",
       "created": "v5.1.0"
     },
+    { "name": "so", "path": "decomoji/extra/so.png", "created": "v5.1.0" },
     {
       "name": "sobokunahtml",
       "path": "decomoji/extra/sobokunahtml.png",
@@ -3989,11 +3984,6 @@
     {
       "name": "tamatisaikyou",
       "path": "decomoji/extra/tamatisaikyou.png",
-      "created": "v5.1.0"
-    },
-    {
-      "name": "tennsyokusijou",
-      "path": "decomoji/extra/tennsyokusijou.png",
       "created": "v5.1.0"
     },
     {
@@ -4905,10 +4895,26 @@
       "name": "zuttookiteru",
       "path": "decomoji/extra/zuttookiteru.png",
       "created": "v5.1.0"
+    },
+    {
+      "name": "a-ne_",
+      "path": "decomoji/basic/a-ne_.png",
+      "created": "v5.1.0"
+    },
+    {
+      "name": "tennsyokusijou",
+      "path": "decomoji/extra/tennsyokusijou.png",
+      "created": "v5.1.0"
     }
   ],
   "rename": [
-    { "name": "a-ne", "alias_for": "a-ne_" },
-    { "name": "tennshyokusijou", "alias_for": "tennsyokusijou" }
+    {
+      "name": "decomoji/basic/a-ne.png",
+      "alias_for": "decomoji/basic/a-ne_.png"
+    },
+    {
+      "name": "decomoji/extra/tennshyokusijou.png",
+      "alias_for": "decomoji/extra/tennsyokusijou.png"
+    }
   ]
 }
