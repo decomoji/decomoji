@@ -19,6 +19,18 @@ const diffTypes = [
   { type: "delete", mode: "D" },
 ];
 
+// デコモジオブジェクトの格納先
+const Categories = {
+  all: [],
+  basic: [],
+  explicit: [],
+  extra: [],
+};
+const Manages = {
+  fixed: [],
+  rename: [],
+};
+
 // diff-filter-mode をキーにして差分を配列で持つオブジェクトをタグごとに持ったオブジェクトを返す
 /**
  * {
@@ -108,11 +120,6 @@ const getDecomojiDiffAsCategory = (diffAsMode) => {
 };
 
 // 実行！
-const categories = {
-  basic: [],
-  extra: [],
-  explicit: [],
-};
 const tagPairs = getGitTagPairArray(MAJOR_TAG_PREFIX, LATEST_PREV_TAG);
 const diffAsTag = getDecomojiGitDiffAsTag(tagPairs);
 Object.entries(diffAsTag)
@@ -136,7 +143,8 @@ Object.entries(diffAsTag)
     Object.entries(diffAsCategory).forEach((entry) => {
       const [categoryName, list] = entry;
       list.forEach((decomoji) => {
-        const target = categories[categoryName];
+        // カテゴリー別に配列に格納する
+        const target = Categories[categoryName];
         const index = target.findIndex((v) => v.name === decomoji.name);
         // 同じ名前があったらマージして置き換える
         if (index > -1) {
@@ -147,8 +155,8 @@ Object.entries(diffAsTag)
       });
     });
 
-    // タグごとに毎回上書きする
-    Object.entries(categories).forEach((entry) => {
+    // カテゴリー別の JSON を作る
+    Object.entries(Categories).forEach((entry) => {
       const [category, list] = entry;
       // removed キーを持つものを弾く
       const filtedList = list.filter(({ removed }) => !removed);
