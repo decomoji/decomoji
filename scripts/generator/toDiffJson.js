@@ -1,3 +1,4 @@
+const v = require("../utilities/convertToVPrefixedVersion");
 const getDecomojiDiffAsCategory = require("../utilities/getDecomojiDiffAsCategory");
 const getDecomojiDiffAsFilterMode = require("../utilities/getDecomojiDiffAsFilterMode");
 const getDecomojiGitDiffAsTag = require("../utilities/getDecomojiGitDiffAsTag");
@@ -29,7 +30,7 @@ const tagPairs = getGitTagPairArray(TAG_PREFIX, TAG_PREV);
 
 // git tag ごとの差分を保存する
 const gitDiffAsTag = getDecomojiGitDiffAsTag(tagPairs);
-// writeJsonFileSync(gitDiffAsTag, "./configs/gitDiffAsTag.json");
+// writeJsonFileSync(gitDiffAsTag, `./configs/${v(TAG_PREFIX)}_diff.json`);
 
 // 実行！
 Object.entries(gitDiffAsTag)
@@ -37,7 +38,7 @@ Object.entries(gitDiffAsTag)
     const [tag, list] = entry;
     // diff-filter の結果を { fixed, upload, rename } に再分配し JSON に書き出す
     const diffAsFilterMode = getDecomojiDiffAsFilterMode(list, tag);
-    writeJsonFileSync(diffAsFilterMode, `./configs/${tag}.json`);
+    writeJsonFileSync(diffAsFilterMode, `./configs/${v(tag)}.json`);
     return diffAsFilterMode;
   })
   .forEach((diffAsFilterMode) => {
@@ -58,7 +59,7 @@ Object.entries(Seeds.categories).forEach((entry) => {
     list
       .filter(({ removed }) => !removed)
       .sort((a, b) => a.name.localeCompare(b.name)),
-    `./configs/v5_${category}.json`
+    `./configs/${v(TAG_PREFIX)}_${category}.json`
   );
 });
 
@@ -71,6 +72,6 @@ Object.entries(Seeds.manages).forEach((entry) => {
       : list;
   writeJsonFileSync(
     _list.sort((a, b) => a.name.localeCompare(b.name)),
-    `./configs/v5_${manage}.json`
+    `./configs/${v(TAG_PREFIX)}_${manage}.json`
   );
 });
