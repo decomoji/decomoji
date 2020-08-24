@@ -70,25 +70,34 @@ const getDecomojiDiffAsMode = (diff, tag) => {
       const decomoji =
         mode === "rename" ? {} : convertToDecomojiObject(path, tag, mode);
 
-      if (mode === "delete" || mode === "modify") {
-        fixed.push(decomoji);
-      }
-      if (mode === "upload" || mode === "modify") {
-        upload.push(decomoji);
-      }
-
-      if (mode === "rename") {
-        const [before, after] = path;
-        fixed.push(convertToDecomojiObject(before, tag, "delete"));
-        upload.push(convertToDecomojiObject(after, tag, "upload"));
-        rename.push({
-          name: convertFilepathToBasename(before),
-          alias_for: convertFilepathToBasename(after),
-        });
+      if (tag === "v5.0.0" && mode !== "rename") {
+        // v5.0.0 では rename 以外全て upload 扱いにする
+        upload.push(convertToDecomojiObject(path, tag, "upload"));
+      } else {
+        if (mode === "delete" || mode === "modify") {
+          fixed.push(decomoji);
+        }
+        if (mode === "upload" || mode === "modify") {
+          upload.push(decomoji);
+        }
+        if (mode === "rename") {
+          const [before, after] = path;
+          fixed.push(convertToDecomojiObject(before, tag, "delete"));
+          upload.push(convertToDecomojiObject(after, tag, "upload"));
+          rename.push({
+            name: convertFilepathToBasename(before),
+            alias_for: convertFilepathToBasename(after),
+          });
+        }
       }
     });
   });
-  return { fixed, upload, rename };
+
+  return {
+    fixed: fixed.sort((a, b) => a.name.localeCompare(b.name)),
+    upload: upload.sort((a, b) => a.name.localeCompare(b.name)),
+    rename: rename.sort((a, b) => a.name.localeCompare(b.name)),
+  };
 };
 
 // diff-filter の結果からバージョンを統合して { basic, extra, explicit } に再分配したオブジェクトを返す
@@ -100,7 +109,6 @@ const getDecomojiDiffAsCategory = (diffAsMode) => {
   };
   Object.entries(diffAsMode).forEach((entry) => {
     const [mode, list] = entry;
-
     list.forEach((decomoji) => {
       if (mode === "rename") {
         Manages["rename"].push(decomoji);
