@@ -29,7 +29,7 @@ const tagPairs = getGitTagPairArray(TAG_PREFIX, TAG_PREV);
 
 // git tag ごとの差分を保存する
 const gitDiffAsTag = getDecomojiGitDiffAsTag(tagPairs);
-writeJsonFileSync(gitDiffAsTag, "diff");
+// writeJsonFileSync(gitDiffAsTag, "diff");
 
 // 実行！
 Object.entries(gitDiffAsTag)
