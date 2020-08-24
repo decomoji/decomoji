@@ -1,234 +1,76 @@
-const fs = require("fs");
-const convertFilepathToBasename = require("../utilities/convertFilepathToBasename");
-const convertToDecomojiObject = require("../utilities/convertToDecomojiObject");
-const getGitDiffArray = require("../utilities/getGitDiffArray");
-const getGitDiffOfRenameArray = require("../utilities/getGitDiffOfRenameArray");
+const getDecomojiDiffAsCategory = require("../utilities/getDecomojiDiffAsCategory");
+const getDecomojiDiffAsFilterMode = require("../utilities/getDecomojiDiffAsFilterMode");
+const getDecomojiGitDiffAsTag = require("../utilities/getDecomojiGitDiffAsTag");
 const getGitTagPairArray = require("../utilities/getGitTagPairArray");
-const getDecomojiCategory = require("../utilities/getDecomojiCategory");
-const isDecomojiFile = require("../utilities/isDecomojiFile");
-
-// バージョン定数
-const MAJOR_TAG_PREFIX = process.argv[2] || "v5";
-const LATEST_PREV_TAG = process.argv[3] || "4.27.0";
-
-// diff-filter 向け辞書
-const diffTypes = [
-  { type: "upload", mode: "A" },
-  { type: "modify", mode: "M" },
-  { type: "rename", mode: "R" },
-  { type: "delete", mode: "D" },
-];
+const getMixedArrayOfCategories = require("../utilities/getMixedArrayOfCategories");
+const getMixedArrayOfManages = require("../utilities/getMixedArrayOfManages");
+const writeJsonFileSync = require("../utilities/writeJsonFileSync");
 
 // デコモジオブジェクトの格納先
-const Categories = {
-  all: [],
-  basic: [],
-  explicit: [],
-  extra: [],
-};
-const Manages = {
-  fixed: [],
-  rename: [],
-};
-
-// diff-filter-mode をキーにして差分を配列で持つオブジェクトをタグごとに持ったオブジェクトを返す
-/**
- * {
- *  <tag>: {"upload: [...]", "modify": [...], "rename": [...], "delete": [...]},
- *  <tag>: {"upload: [...]", "modify": [...], "rename": [...], "delete": [...]},
- *  ...
- * }
- */
-const getDecomojiGitDiffAsTag = (tagPairs) => {
-  return tagPairs.reduce((_log, { from, to }) => {
-    const tag = to;
-    const log = diffTypes.reduce((_diff, { type, mode }) => {
-      console.log(`Diff[${mode}]: ${from}...${to}`);
-      const isRenameMode = mode === "R";
-      const diff = isRenameMode
-        ? getGitDiffOfRenameArray(from, to)
-        : getGitDiffArray(from, to, mode);
-      // "<diff-filter-mode>": [<filepath>, <filepath>, ...]
-      return {
-        ..._diff,
-        ...{ [type]: diff.filter(isDecomojiFile) },
-      };
-    }, {});
-    // { <tag>: {"upload: [...]", "modify": [...], "rename": [...], "delete": [...]}}
-    return { ..._log, [tag]: log };
-  }, {});
-};
-
-// diff-filter の結果を { fixed, upload, rename } に再分配したオブジェクトを返す
-const getDecomojiDiffAsMode = (diff, tag) => {
-  const upload = [];
-  const fixed = [];
-  const rename = [];
-  Object.entries(diff).forEach((entry) => {
-    const [mode, list] = entry;
-    list.forEach((path) => {
-      const decomoji =
-        mode === "rename" ? {} : convertToDecomojiObject(path, tag, mode);
-
-      if (tag === "v5.0.0" && mode !== "rename") {
-        // v5.0.0 では rename 以外全て upload 扱いにする
-        upload.push(convertToDecomojiObject(path, tag, "upload"));
-      } else {
-        if (mode === "delete" || mode === "modify") {
-          fixed.push(decomoji);
-        }
-        if (mode === "upload" || mode === "modify") {
-          upload.push(decomoji);
-        }
-        if (mode === "rename") {
-          const [before, after] = path;
-          fixed.push(convertToDecomojiObject(before, tag, "delete"));
-          upload.push(convertToDecomojiObject(after, tag, "upload"));
-          rename.push({
-            name: convertFilepathToBasename(before),
-            alias_for: convertFilepathToBasename(after),
-          });
-        }
-      }
-    });
-  });
-
-  return {
-    fixed: fixed.sort((a, b) => a.name.localeCompare(b.name)),
-    upload: upload.sort((a, b) => a.name.localeCompare(b.name)),
-    rename: rename.sort((a, b) => a.name.localeCompare(b.name)),
-  };
-};
-
-// diff-filter の結果からバージョンを統合して { basic, extra, explicit } に再分配したオブジェクトを返す
-const getDecomojiDiffAsCategory = (diffAsMode) => {
-  const c = {
+const Seeds = {
+  categories: {
+    all: [],
     basic: [],
-    extra: [],
     explicit: [],
-  };
-  Object.entries(diffAsMode).forEach((entry) => {
-    const [mode, list] = entry;
-    list.forEach((decomoji) => {
-      if (mode === "rename") {
-        Manages["rename"].push(decomoji);
-        return;
-      }
-      const categoryName = getDecomojiCategory(decomoji.path);
-      const target = c[categoryName];
-      const index = target.findIndex((v) => v.name === decomoji.name);
-      if (mode === "fixed") {
-        const fixed = Manages["fixed"];
-        const indexOfFixed = fixed.findIndex((v) => v.name === decomoji.name);
-        // 同じ名前があったらマージして置き換える
-        if (indexOfFixed > -1) {
-          fixed.splice(indexOfFixed, 1, {
-            ...fixed[indexOfFixed],
-            ...decomoji,
-          });
-        } else {
-          fixed.push(decomoji);
-        }
-      }
-      // 同じ名前があったらマージして置き換える
-      if (index > -1) {
-        target.splice(index, 1, { ...target[index], ...decomoji });
-      } else {
-        target.push(decomoji);
-      }
-    });
-  });
-  return c;
+    extra: [],
+  },
+  manages: {
+    fixed: [],
+    rename: [],
+  },
 };
+
+// バージョン定数
+const TAG_PREFIX = process.argv[2] || "v5";
+const TAG_PREV = process.argv[3] || "4.27.0";
+
+// git tag のペアを作る
+const tagPairs = getGitTagPairArray(TAG_PREFIX, TAG_PREV);
+
+// git tag ごとの差分を保存する
+const gitDiffAsTag = getDecomojiGitDiffAsTag(tagPairs);
+writeJsonFileSync(gitDiffAsTag, "diff");
 
 // 実行！
-const tagPairs = getGitTagPairArray(MAJOR_TAG_PREFIX, LATEST_PREV_TAG);
-const diffAsTag = getDecomojiGitDiffAsTag(tagPairs);
-Object.entries(diffAsTag)
+Object.entries(gitDiffAsTag)
   .map((entry) => {
     const [tag, list] = entry;
-    const diffAsMode = getDecomojiDiffAsMode(list, tag);
-    try {
-      fs.writeFileSync(
-        `./scripts/manager/configs/${tag}.json`,
-        JSON.stringify(diffAsMode)
-      );
-      console.log(`./scripts/manager/configs/${tag}.json has been saved!`);
-    } catch (err) {
-      throw err;
-    }
-    return diffAsMode;
+    // diff-filter の結果を { fixed, upload, rename } に再分配し JSON に書き出す
+    const diffAsFilterMode = getDecomojiDiffAsFilterMode(list, tag);
+    writeJsonFileSync(diffAsFilterMode, tag);
+    return diffAsFilterMode;
   })
-  .map((diffAsMode) => {
-    const diffAsCategory = getDecomojiDiffAsCategory(diffAsMode);
-    Object.entries(diffAsCategory).forEach((entry) => {
-      const [categoryName, list] = entry;
-      list.forEach((decomoji) => {
-        // カテゴリー別に配列に格納する
-        const target = Categories[categoryName];
-        const all = Categories["all"];
-        const indexOfAll = all.findIndex((v) => v.name === decomoji.name);
-        const indexOfTarget = target.findIndex((v) => v.name === decomoji.name);
-        // 同じ名前があったらマージして置き換える
-        if (indexOfTarget > -1) {
-          target.splice(indexOfTarget, 1, {
-            ...target[indexOfTarget],
-            ...decomoji,
-          });
-        } else {
-          target.push(decomoji);
-        }
-        if (indexOfAll > -1) {
-          all.splice(indexOfAll, 1, { ...all[indexOfAll], ...decomoji });
-        } else {
-          all.push(decomoji);
-        }
-      });
-    });
+  .forEach((diffAsFilterMode) => {
+    // diffAsFilterMode からバージョンを統合して { basic, extra, explicit } に再分配する
+    const diffAsCategory = getDecomojiDiffAsCategory(diffAsFilterMode);
+    // Seeds に差分をマージしてまとめる
+    Seeds.categories = getMixedArrayOfCategories(
+      diffAsCategory,
+      Seeds.categories
+    );
+    Seeds.manages = getMixedArrayOfManages(diffAsFilterMode, Seeds.manages);
   });
 
-// カテゴリー別の JSON と v5_all.json を作る
-Object.entries(Categories).forEach((entry) => {
+// v5_all.json, v5_basic.json, v5_extra.json, v5_explicit.json を作る
+Object.entries(Seeds.categories).forEach((entry) => {
   const [category, list] = entry;
-  // removed されたアイテムを弾く
-  const filtedList = list.filter(({ removed }) => !removed);
-  // name キーでソートする
-  const _list = filtedList.sort((a, b) => a.name.localeCompare(b.name));
-  try {
-    fs.writeFileSync(
-      `./scripts/manager/configs/v5_${category}.json`,
-      JSON.stringify(_list)
-    );
-    console.log(
-      `./scripts/manager/configs/v5_${category}.json has been saved!`
-    );
-  } catch (err) {
-    throw err;
-  }
+  writeJsonFileSync(
+    list
+      .filter(({ removed }) => !removed)
+      .sort((a, b) => a.name.localeCompare(b.name)),
+    `v5_${category}`
+  );
 });
 
-// v5_fixed.json を作る
-const _fixed = Manages["fixed"].sort((a, b) => a.name.localeCompare(b.name));
-try {
-  fs.writeFileSync(
-    `./scripts/manager/configs/v5_fixed.json`,
-    JSON.stringify(_fixed)
+// v5_fixed.json, v5_rename.json を作る
+Object.entries(Seeds.manages).forEach((entry) => {
+  const [manage, list] = entry;
+  const _list =
+    manage === "rename"
+      ? list.concat({ name: "euc_jp", alias_for: "euc-jp" })
+      : list;
+  writeJsonFileSync(
+    _list.sort((a, b) => a.name.localeCompare(b.name)),
+    `v5_${manage}`
   );
-  console.log(`./scripts/manager/configs/v5_fixed.json has been saved!`);
-} catch (err) {
-  throw err;
-}
-
-// v5_rename.json を作る
-const _rename = Manages["rename"]
-  .concat({ name: "euc_jp", alias_for: "euc-jp" })
-  .sort((a, b) => a.name.localeCompare(b.name));
-try {
-  fs.writeFileSync(
-    `./scripts/manager/configs/v5_rename.json`,
-    JSON.stringify(_rename)
-  );
-  console.log(`./scripts/manager/configs/v5_rename.json has been saved!`);
-} catch (err) {
-  throw err;
-}
+});
