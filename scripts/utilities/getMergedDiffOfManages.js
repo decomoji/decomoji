@@ -1,5 +1,5 @@
 // manages にデコモジオブジェクトを push （場合によってはアイテムをマージ）し、オブジェクトを返す
-const getMixedArrayOfManages = (diffAsMode, manages) => {
+const getMergedDiffOfManages = (diffAsMode, manages) => {
   const _manages = manages;
   Object.entries(diffAsMode).forEach((entry) => {
     const [filterMode, list] = entry;
@@ -20,4 +20,4 @@ const getMixedArrayOfManages = (diffAsMode, manages) => {
   return _manages;
 };
 
-module.exports = getMixedArrayOfManages;
+module.exports = getMergedDiffOfManages;

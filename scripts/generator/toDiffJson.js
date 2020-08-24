@@ -2,8 +2,8 @@ const getDecomojiDiffAsCategory = require("../utilities/getDecomojiDiffAsCategor
 const getDecomojiDiffAsFilterMode = require("../utilities/getDecomojiDiffAsFilterMode");
 const getDecomojiGitDiffAsTag = require("../utilities/getDecomojiGitDiffAsTag");
 const getGitTagPairArray = require("../utilities/getGitTagPairArray");
-const getMixedArrayOfCategories = require("../utilities/getMixedArrayOfCategories");
-const getMixedArrayOfManages = require("../utilities/getMixedArrayOfManages");
+const getMergedDiffOfCategories = require("../utilities/getMergedDiffOfCategories");
+const getMergedDiffOfManages = require("../utilities/getMergedDiffOfManages");
 const writeJsonFileSync = require("../utilities/writeJsonFileSync");
 
 // デコモジオブジェクトの格納先
@@ -44,11 +44,11 @@ Object.entries(gitDiffAsTag)
     // diffAsFilterMode からバージョンを統合して { basic, extra, explicit } に再分配する
     const diffAsCategory = getDecomojiDiffAsCategory(diffAsFilterMode);
     // Seeds に差分をマージしてまとめる
-    Seeds.categories = getMixedArrayOfCategories(
+    Seeds.categories = getMergedDiffOfCategories(
       diffAsCategory,
       Seeds.categories
     );
-    Seeds.manages = getMixedArrayOfManages(diffAsFilterMode, Seeds.manages);
+    Seeds.manages = getMergedDiffOfManages(diffAsFilterMode, Seeds.manages);
   });
 
 // v5_all.json, v5_basic.json, v5_extra.json, v5_explicit.json を作る
