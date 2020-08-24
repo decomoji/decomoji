@@ -14,6 +14,7 @@ const Seeds = {
     basic: [],
     explicit: [],
     extra: [],
+    root: [],
   },
   manages: {
     fixed: [],
