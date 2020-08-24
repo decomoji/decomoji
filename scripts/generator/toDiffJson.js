@@ -103,6 +103,7 @@ const getDecomojiDiffAsCategory = (diffAsMode) => {
 
     list.forEach((decomoji) => {
       if (mode === "rename") {
+        Manages["rename"].push(decomoji);
         return;
       }
       const categoryName = getDecomojiCategory(decomoji.path);
@@ -177,3 +178,17 @@ Object.entries(diffAsTag)
       }
     });
   });
+
+// v5_rename.json を作る
+Manages["rename"].push({ name: "euc_jp", alias_for: "euc-jp" });
+try {
+  fs.writeFileSync(
+    `./scripts/manager/configs/v5_rename.json`,
+    JSON.stringify(
+      Manages["rename"].sort((a, b) => a.name.localeCompare(b.name))
+    )
+  );
+  console.log(`./scripts/manager/configs/v5_rename.json has been saved!`);
+} catch (err) {
+  throw err;
+}
