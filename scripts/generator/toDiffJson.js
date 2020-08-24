@@ -167,12 +167,22 @@ Object.entries(diffAsTag)
       list.forEach((decomoji) => {
         // カテゴリー別に配列に格納する
         const target = Categories[categoryName];
-        const index = target.findIndex((v) => v.name === decomoji.name);
+        const all = Categories["all"];
+        const indexOfAll = all.findIndex((v) => v.name === decomoji.name);
+        const indexOfTarget = target.findIndex((v) => v.name === decomoji.name);
         // 同じ名前があったらマージして置き換える
-        if (index > -1) {
-          target.splice(index, 1, { ...target[index], ...decomoji });
+        if (indexOfTarget > -1) {
+          target.splice(indexOfTarget, 1, {
+            ...target[indexOfTarget],
+            ...decomoji,
+          });
         } else {
           target.push(decomoji);
+        }
+        if (indexOfAll > -1) {
+          all.splice(indexOfAll, 1, { ...all[indexOfAll], ...decomoji });
+        } else {
+          all.push(decomoji);
         }
       });
     });
