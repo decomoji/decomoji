@@ -157,7 +157,6 @@ Object.entries(diffAsTag)
     } catch (err) {
       throw err;
     }
-
     return diffAsMode;
   })
   .map((diffAsMode) => {
@@ -186,29 +185,27 @@ Object.entries(diffAsTag)
         }
       });
     });
-
-    // カテゴリー別の JSON を作る
-    Object.entries(Categories).forEach((entry) => {
-      const [category, list] = entry;
-      // removed キーを持つものを弾く
-      const filtedList = list.filter(({ removed }) => !removed);
-      // name キーでソートする
-      const sortedList = filtedList.sort((a, b) =>
-        a.name.localeCompare(b.name)
-      );
-      try {
-        fs.writeFileSync(
-          `./scripts/manager/configs/v5_${category}.json`,
-          JSON.stringify(sortedList)
-        );
-        console.log(
-          `./scripts/manager/configs/v5_${category}.json has been saved!`
-        );
-      } catch (err) {
-        throw err;
-      }
-    });
   });
+
+// カテゴリー別の JSON と v5_all.json を作る
+Object.entries(Categories).forEach((entry) => {
+  const [category, list] = entry;
+  // removed されたアイテムを弾く
+  const filtedList = list.filter(({ removed }) => !removed);
+  // name キーでソートする
+  const _list = filtedList.sort((a, b) => a.name.localeCompare(b.name));
+  try {
+    fs.writeFileSync(
+      `./scripts/manager/configs/v5_${category}.json`,
+      JSON.stringify(_list)
+    );
+    console.log(
+      `./scripts/manager/configs/v5_${category}.json has been saved!`
+    );
+  } catch (err) {
+    throw err;
+  }
+});
 
 // v5_fixed.json を作る
 const _fixed = Manages["fixed"].sort((a, b) => a.name.localeCompare(b.name));
