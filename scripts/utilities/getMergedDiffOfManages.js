@@ -9,8 +9,10 @@ const getMergedDiffOfManages = (diffAsMode, manages) => {
         const indexOfManage = manage.findIndex((v) => v.name === decomoji.name);
         // 同じ名前があったらマージして置き換える
         if (indexOfManage > -1) {
-          const merged = { ...manage[indexOfManage], ...decomoji };
-          manage.splice(indexOfManage, 1, merged);
+          manage.splice(indexOfManage, 1, {
+            ...manage[indexOfManage],
+            ...decomoji,
+          });
         } else {
           manage.push(decomoji);
         }

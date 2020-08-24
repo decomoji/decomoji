@@ -11,8 +11,10 @@ const getMergedDiffOfCategories = (diffAsCategory, categories) => {
       );
       if (indexOfCategory > -1) {
         // 同じ名前があったらマージして置き換える
-        const merged = { ...category[indexOfCategory], ...decomoji };
-        category.splice(indexOfCategory, 1, merged);
+        category.splice(indexOfCategory, 1, {
+          ...category[indexOfCategory],
+          ...decomoji,
+        });
       } else {
         category.push(decomoji);
       }
@@ -21,8 +23,7 @@ const getMergedDiffOfCategories = (diffAsCategory, categories) => {
       const indexOfAll = all.findIndex((v) => v.name === decomoji.name);
       if (indexOfAll > -1) {
         // 同じ名前があったらマージして置き換える
-        const merged = { ...all[indexOfAll], ...decomoji };
-        all.splice(indexOfAll, 1, merged);
+        all.splice(indexOfAll, 1, { ...all[indexOfAll], ...decomoji });
       } else {
         all.push(decomoji);
       }
