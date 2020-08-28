@@ -3,38 +3,44 @@ const convertToDecomojiObject = require("./convertToDecomojiObject");
 
 // diff-filter の結果を { fixed, upload, rename } に再分配したオブジェクトを返す
 const getDecomojiDiffAsFilterMode = (diff, tag) => {
+  const isFirstOfMajorVerison = /\.0\.0$/.test(tag);
   const upload = [];
   const fixed = [];
   const rename = [];
   Object.entries(diff).forEach((entry) => {
     const [filterMode, list] = entry;
     list.forEach((path) => {
-      const decomoji =
-        filterMode === "rename"
-          ? {}
-          : convertToDecomojiObject(path, tag, filterMode);
+      const A = filterMode === "upload";
+      const M = filterMode === "modify";
+      const D = filterMode === "delete";
+      const R = filterMode === "rename";
+      const decomoji = R ? {} : convertToDecomojiObject(path, tag, filterMode);
 
-      if (/\.0\.0$/.test(tag)) {
-        // x.0.0 では upload と modify だけ扱う
-        if (filterMode === "upload" || filterMode === "modify") {
+      // x.0.0 では upload と modify だけ扱う
+      if (isFirstOfMajorVerison) {
+        if (A || M) {
           upload.push(convertToDecomojiObject(path, tag, "upload"));
         }
-      } else {
-        if (filterMode === "delete" || filterMode === "modify") {
-          fixed.push(decomoji);
-        }
-        if (filterMode === "upload" || filterMode === "modify") {
-          upload.push(decomoji);
-        }
-        if (filterMode === "rename") {
-          const [before, after] = path;
-          fixed.push(convertToDecomojiObject(before, tag, "delete"));
-          upload.push(convertToDecomojiObject(after, tag, "upload"));
-          rename.push({
-            name: convertFilepathToBasename(before),
-            alias_for: convertFilepathToBasename(after),
-          });
-        }
+        return;
+      }
+      if (D) {
+        fixed.push(decomoji);
+      }
+      if (A) {
+        upload.push(decomoji);
+      }
+      if (M) {
+        fixed.push(decomoji);
+        upload.push(decomoji);
+      }
+      if (R) {
+        const [before, after] = path;
+        fixed.push(convertToDecomojiObject(before, tag, "delete"));
+        upload.push(convertToDecomojiObject(after, tag, "upload"));
+        rename.push({
+          name: convertFilepathToBasename(before),
+          alias_for: convertFilepathToBasename(after),
+        });
       }
     });
   });
