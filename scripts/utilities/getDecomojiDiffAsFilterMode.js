@@ -15,8 +15,8 @@ const getDecomojiDiffAsFilterMode = (diff, tag) => {
           : convertToDecomojiObject(path, tag, filterMode);
 
       if (/\.0\.0$/.test(tag)) {
-        // x.0.0 では rename 以外全て upload 扱いにする
-        if (filterMode !== "rename") {
+        // x.0.0 では upload と modify だけ扱う
+        if (filterMode === "upload" || filterMode === "modify") {
           upload.push(convertToDecomojiObject(path, tag, "upload"));
         }
       } else {
