@@ -3,9 +3,10 @@ const convertBufferToArray = require("./convertBufferToArray");
 
 // git でタグ一覧を配列で返す
 const getGitTagArray = (versionPrefix) => {
-  const resultBuffer = versionPrefix
-    ? execSync(`git tag --list | grep -E ^${versionPrefix}`)
-    : execSync("git tag --list");
+  const cmd = versionPrefix
+    ? `git tag --list | grep -E ^${versionPrefix}`
+    : "git tag --list";
+  const resultBuffer = execSync(cmd);
   if (!resultBuffer) return;
   return convertBufferToArray(resultBuffer);
 };
