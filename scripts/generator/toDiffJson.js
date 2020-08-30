@@ -23,11 +23,16 @@ const Seeds = {
 };
 
 // バージョン定数
-const TAG_PREFIX = process.argv[2] || "v5";
-const TAG_PREV = process.argv[3] || "4.27.0";
+const TAG_UPDATE_CANDIDATE = process.argv[2];
+const TAG_PREFIX = process.argv[3] || "v5";
+const TAG_PREV = process.argv[4] || "4.27.0";
+
+if (!TAG_UPDATE_CANDIDATE) {
+  throw new Error("TAG_UPDATE_CANDIDATE argument is undefined.");
+}
 
 // git tag のペアを作る
-const tagPairs = getGitTagPairArray(TAG_PREFIX, TAG_PREV);
+const tagPairs = getGitTagPairArray(TAG_PREV, TAG_PREFIX, TAG_UPDATE_CANDIDATE);
 
 // git tag ごとの差分を保存する
 const gitDiffAsTag = getDecomojiGitDiffAsTag(tagPairs);
