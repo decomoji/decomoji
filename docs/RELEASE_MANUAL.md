@@ -12,8 +12,8 @@ git mv decomoji/extra/euc_jp.png decomoji/extra/euc-jp.png
 # 2. 追加したデコモジを最適化する
 node scripts/generator/optimize.js ./decomoji/extra_tmp/ ./decomoji/extra/
 
-# 3. json を更新する
-node scripts/generator/toDiffJson.js
+# 3. json を更新する。コマンドに更新する予定のバージョン名が必要。
+node scripts/generator/toDiffJson.js v5.x.0
 
 # 4. LIST-***.md を更新する
 node scripts/generator/toListMd.js
