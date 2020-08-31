@@ -15,7 +15,7 @@
   "email": "<email>",
   "password": "<password>",
   "mode": "upload",
-  "categories": ["v5_basic", "v5_extra"]
+  "configs": ["v5_basic", "v5_extra"]
 }
 ```
 
@@ -23,7 +23,6 @@
 
 ```bash
 node scripts/manager --inputs
-node scripts/manager -i
 ```
 
 ## 削除時に自分以外のメンバーが登録したカスタム絵文字も強制的に削除する
@@ -39,7 +38,7 @@ scripst/manager の削除スクリプトは、デフォルトでは自分が登�
   "email": "<email>",
   "password": "<password>",
   "mode": "remove",
-  "categories": ["v5_basic", "v5_extra", "v5_fixed"],
+  "configs": ["v5_basic", "v5_extra", "v5_fixed"],
   "forceRemove": true
 }
 ```
@@ -48,14 +47,14 @@ scripst/manager の削除スクリプトは、デフォルトでは自分が登�
 
 バックアップには Chrome エクステンションの[Slack Custom Emoji Manager](https://chrome.google.com/webstore/detail/slack-custom-emoji-manage/cgipifjpcbhdppbjjphmgkmmgbeaggpc)が便利です。
 
-`"categories": ["v4_all", "v5_all"]` とするとデコモジが全て削除されます。
+`"configs": ["v4_all", "v5_all"]` とするとデコモジが全て削除されます。
 
 ## オリジナルのエイリアスを登録する
 
-scripst/manager/alias/ に下記のフォーマットで my-alias.json ファイルを置き、inputs.json に設定を追記してください。
+`configs/` に下記のフォーマットで my-alias.json ファイルを置き、inputs.json に設定を追記してください。
 
 ```json
-// scripst/manager/alias/my-alias.json
+// configs/my-alias.json
 [
   {
     "name": "ナルホド", // エイリアス名
@@ -71,7 +70,7 @@ scripst/manager/alias/ に下記のフォーマットで my-alias.json ファイ
   "email": "<email>",
   "password": "<password>",
   "mode": "alias",
-  "alias": ["my-alias"]
+  "configs": ["my-alias"]
 }
 ```
 
@@ -83,12 +82,11 @@ Slack の仕様により、１つのエイリアス名には複数のエイリ�
 
 ## inputs.json の型
 
-| キー        | 値の型                                                                                                              | 値の凡例                   | 注記                                                                                                                                 |
-| :---------- | :------------------------------------------------------------------------------------------------------------------ | :------------------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
-| workspace   | `string`                                                                                                            | `"decomoji"`               | ワークスペースのサブドメインです。                                                                                                   |
-| email       | `email`                                                                                                             | `"otiext@gmail.com"`       |                                                                                                                                      |
-| password    | `string`                                                                                                            | `"hogehoge"`               |                                                                                                                                      |
-| mode        | `"upload" | "alias" | "remove"`                                                                                     | `"upload"`                 |                                                                                                                                      |
-| categories  | `("v4_all" | "v4_basic" | "v4_extra" | "v4_fixed" | "v5_all" | "v5_basic" | "v5_extra" | "v5_explicit" | string)[]` | `["v5_basic", "v5_extra"]` | scripts/manager/configs/list/ に格納した json ファイル名を値にとる配列                                                               |
-| alias       | `("v4_fixed" | string)[]`                                                                                           | `["v4_fixed"]`             | scripts/manager/configs/alias/ に格納した json ファイル名を値にとる配列                                                              |
-| forceRemove | `boolean`                                                                                                           | `false`                    | mode="remove" で `true` の時、他ユーザーが登録したカスタム絵文字も削除対象に含めます。対象に含めても権限がない場合は削除されません。 |
+| キー        | 値の型     | 値の凡例             | 注記                                                                                                                                 |
+| :---------- | :--------- | :------------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
+| workspace   | `string`   | `"decomoji"`         | ワークスペースのサブドメインです。                                                                                                   |
+| email       | `email`    | `"otiext@gmail.com"` |                                                                                                                                      |
+| password    | `string`   | `"hogehoge"`         |                                                                                                                                      |
+| mode        | `"upload"  | "alias"              | "remove"`                                                                                                                            | `"upload"` |  |
+| configs     | `("v4_all" | "v4_basic"           | "v4_extra"                                                                                                                           | "v4_fixed" | "v5_all" | "v5_basic" | "v5_extra" | "v5_explicit" | "v4_rename" | "v5_rename | string)[]` | `["v5_basic", "v5_extra"]` | configs/ に格納した json ファイル名を値にとる配列 |
+| forceRemove | `boolean`  | `false`              | mode="remove" で `true` の時、他ユーザーが登録したカスタム絵文字も削除対象に含めます。対象に含めても権限がない場合は削除されません。 |

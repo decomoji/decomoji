@@ -29,8 +29,7 @@ const main = async (inputs) => {
     email: inputs.email,
     password: inputs.password,
     mode: inputs.mode,
-    categories: inputs.categories,
-    alias: inputs.alias,
+    configs: inputs.configs,
     forceRemove: inputs.forceRemove,
     browser: program.browser || program.debug,
     log: program.log || program.debug,
@@ -41,13 +40,10 @@ const main = async (inputs) => {
   const TIME = _inputs.time;
 
   console.info(`
-workspace  : https://${_inputs.workspace}.slack.com/
-email      : ${_inputs.email}
-mode       : ${_inputs.mode}`);
-  _inputs.mode === "alias" && console.info(`alias      : ${_inputs.alias}`);
-  _inputs.mode !== "alias" &&
-    _inputs.categories &&
-    console.info(`categories : ${_inputs.categories}`);
+workspace : https://${_inputs.workspace}.slack.com/
+email     : ${_inputs.email}
+mode      : ${_inputs.mode}
+configs   : ${_inputs.configs}`);
   _inputs.forceRemove && console.info(`forceRemove: ${_inputs.forceRemove}`);
   console.info("\nConnecting...");
 
@@ -66,17 +62,17 @@ mode       : ${_inputs.mode}`);
       console.log("Remove 'v4_all' starting...");
       await remover({
         ..._inputs,
-        ...{ mode: "remove", categories: ["v4_all"], forceRemove: true },
+        ...{ mode: "remove", configs: ["v4_all"], forceRemove: true },
       });
       console.log("Upload 'v5_basic, v5_extra' starting...");
       await uploader({
         ..._inputs,
-        ...{ mode: "upload", categories: ["v5_basic", "v5_extra"] },
+        ...{ mode: "upload", configs: ["v5_basic", "v5_extra"] },
       });
-      console.log("Register 'v4_fixed, v5_fixed' starting...");
+      console.log("Register 'v4_rename, v5_rename' starting...");
       await pretender({
         ..._inputs,
-        ...{ mode: "alias", alias: ["v4_fixed", "v5_fixed"] },
+        ...{ mode: "alias", configs: ["v4_rename", "v5_rename"] },
       });
       console.log("All migration step has completed!");
       break;
@@ -84,17 +80,17 @@ mode       : ${_inputs.mode}`);
       console.log("Remove 'v5_fixed' starting...");
       await remover({
         ..._inputs,
-        ...{ mode: "remove", categories: ["v5_fixed"], forceRemove: true },
+        ...{ mode: "remove", configs: ["v5_fixed"], forceRemove: true },
       });
       console.log("Upload v5 diffs starting...");
       await uploader({
         ..._inputs,
-        ...{ mode: "upload", categories: ["v5_basic", "v5_extra"] },
+        ...{ mode: "upload", configs: ["v5_basic", "v5_extra"] },
       });
       console.log("Register 'v5_fixed' starting...");
       await pretender({
         ..._inputs,
-        ...{ mode: "alias", alias: ["v5_fixed"] },
+        ...{ mode: "alias", configs: ["v5_rename"] },
       });
       console.log("All migration step has completed!");
       break;

@@ -1,5 +1,5 @@
 const fs = require("fs");
-const toBasename = require("../../utilities/toBasename");
+const convertFilepathToBasename = require("../../utilities/convertFilepathToBasename");
 
 const getLocalDecomojiList = (targets, LOG) => {
   // ディレクトリをさらってファイルパスとファイル名の配列を返す
@@ -10,7 +10,7 @@ const getLocalDecomojiList = (targets, LOG) => {
         return /.+\.(png|gif|jpg|jpeg)$/.test(v);
       });
       return list.map((file) => {
-        const name = toBasename(file);
+        const name = convertFilepathToBasename(file);
         const path = `${dir}${file}`;
         return {
           path,

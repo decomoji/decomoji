@@ -30,13 +30,13 @@
     "imagemin-optipng": "^8.0.0",
     "imagemin-pngquant": "^9.0.0",
     "inquirer": "^7.1.0",
-    "prettier": "^2.0.5",
+    "prettier": "^2.1.0",
     "pretty-quick": "^2.0.1",
     "puppeteer": "^3.0.4"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged --pattern '**/*'",
+      "pre-commit": "pretty-quick --staged",
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
   },

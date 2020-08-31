@@ -8,7 +8,7 @@ const getRemovableDecomojiList = async (page, inputs) => {
   const remoteEmojiList = await fetchRemoteEmojiList(page, inputs);
 
   // 対象デコモジリストを取得する
-  const localDecomojiList = getLocalJson(inputs.categories, inputs.mode, LOG);
+  const localDecomojiList = getLocalJson(inputs.configs, LOG);
 
   // remoteEmojiList と localDecomojiList を突合させて処理するアイテムだけのリストを作る
   const removableDecomojiList = localDecomojiList.filter((local) => {
