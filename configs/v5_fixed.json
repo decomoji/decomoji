@@ -77,6 +77,11 @@
     "updated": "v5.1.2"
   },
   {
+    "name": "moukannsenn",
+    "path": "decomoji/extra/moukannsenn.png",
+    "updated": "v5.3.0"
+  },
+  {
     "name": "seimeiutyuusositebannbutunituitenokyuukyokunogimonnnokotae",
     "path": "decomoji/extra/seimeiutyuusositebannbutunituitenokyuukyokunogimonnnokotae.png",
     "updated": "v5.1.1"
@@ -85,5 +90,6 @@
     "name": "tennshyokusijou",
     "path": "decomoji/extra/tennshyokusijou.png",
     "removed": "v5.1.0"
-  }
+  },
+  { "name": "yasei", "path": "decomoji/extra/yasei.png", "updated": "v5.3.0" }
 ]
