@@ -37,9 +37,19 @@
   },
   { "name": "a-ne", "path": "decomoji/basic/a-ne.png", "removed": "v5.1.0" },
   {
+    "name": "apuripowaze",
+    "path": "decomoji/extra/apuripowaze.png",
+    "updated": "v5.3.1"
+  },
+  {
     "name": "atteru",
     "path": "decomoji/extra/atteru.png",
     "updated": "v5.2.0"
+  },
+  {
+    "name": "cssinjs",
+    "path": "decomoji/extra/cssinjs.png",
+    "updated": "v5.3.1"
   },
   {
     "name": "dehanai",
@@ -47,9 +57,64 @@
     "updated": "v5.2.0"
   },
   {
+    "name": "doredetukuro",
+    "path": "decomoji/extra/doredetukuro.png",
+    "updated": "v5.3.1"
+  },
+  {
+    "name": "doredetukuru",
+    "path": "decomoji/extra/doredetukuru.png",
+    "updated": "v5.3.1"
+  },
+  {
+    "name": "dorehatukuro",
+    "path": "decomoji/extra/dorehatukuro.png",
+    "updated": "v5.3.1"
+  },
+  {
+    "name": "dorehatukuru",
+    "path": "decomoji/extra/dorehatukuru.png",
+    "updated": "v5.3.1"
+  },
+  {
+    "name": "dorekatukuro",
+    "path": "decomoji/extra/dorekatukuro.png",
+    "updated": "v5.3.1"
+  },
+  {
+    "name": "dorekatukuru",
+    "path": "decomoji/extra/dorekatukuru.png",
+    "updated": "v5.3.1"
+  },
+  {
+    "name": "dorewotukuro",
+    "path": "decomoji/extra/dorewotukuro.png",
+    "updated": "v5.3.1"
+  },
+  {
+    "name": "dorewotukuru",
+    "path": "decomoji/extra/dorewotukuru.png",
+    "updated": "v5.3.1"
+  },
+  {
     "name": "euc_jp",
     "path": "decomoji/extra/euc_jp.png",
     "removed": "v5.2.0"
+  },
+  {
+    "name": "girigirideikou",
+    "path": "decomoji/extra/girigirideikou.png",
+    "updated": "v5.3.1"
+  },
+  {
+    "name": "girigiriwoikiteyagaru",
+    "path": "decomoji/extra/girigiriwoikiteyagaru.png",
+    "updated": "v5.3.1"
+  },
+  {
+    "name": "girigiriwotanosinndeyagaru",
+    "path": "decomoji/extra/girigiriwotanosinndeyagaru.png",
+    "updated": "v5.3.1"
   },
   {
     "name": "hennkenn",
@@ -85,6 +150,16 @@
     "name": "seimeiutyuusositebannbutunituitenokyuukyokunogimonnnokotae",
     "path": "decomoji/extra/seimeiutyuusositebannbutunituitenokyuukyokunogimonnnokotae.png",
     "updated": "v5.1.1"
+  },
+  {
+    "name": "syuugodekaosaiyou",
+    "path": "decomoji/extra/syuugodekaosaiyou.png",
+    "removed": "v5.3.1"
+  },
+  {
+    "name": "syuugodenomikai",
+    "path": "decomoji/extra/syuugodenomikai.png",
+    "removed": "v5.3.1"
   },
   {
     "name": "tennshyokusijou",
