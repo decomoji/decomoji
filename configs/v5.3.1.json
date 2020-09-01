@@ -1,0 +1,160 @@
+{
+  "fixed": [
+    {
+      "name": "apuripowaze",
+      "path": "decomoji/extra/apuripowaze.png",
+      "updated": "v5.3.1"
+    },
+    {
+      "name": "cssinjs",
+      "path": "decomoji/extra/cssinjs.png",
+      "updated": "v5.3.1"
+    },
+    {
+      "name": "doredetukuro",
+      "path": "decomoji/extra/doredetukuro.png",
+      "updated": "v5.3.1"
+    },
+    {
+      "name": "doredetukuru",
+      "path": "decomoji/extra/doredetukuru.png",
+      "updated": "v5.3.1"
+    },
+    {
+      "name": "dorehatukuro",
+      "path": "decomoji/extra/dorehatukuro.png",
+      "updated": "v5.3.1"
+    },
+    {
+      "name": "dorehatukuru",
+      "path": "decomoji/extra/dorehatukuru.png",
+      "updated": "v5.3.1"
+    },
+    {
+      "name": "dorekatukuro",
+      "path": "decomoji/extra/dorekatukuro.png",
+      "updated": "v5.3.1"
+    },
+    {
+      "name": "dorekatukuru",
+      "path": "decomoji/extra/dorekatukuru.png",
+      "updated": "v5.3.1"
+    },
+    {
+      "name": "dorewotukuro",
+      "path": "decomoji/extra/dorewotukuro.png",
+      "updated": "v5.3.1"
+    },
+    {
+      "name": "dorewotukuru",
+      "path": "decomoji/extra/dorewotukuru.png",
+      "updated": "v5.3.1"
+    },
+    {
+      "name": "girigirideikou",
+      "path": "decomoji/extra/girigirideikou.png",
+      "updated": "v5.3.1"
+    },
+    {
+      "name": "girigiriwoikiteyagaru",
+      "path": "decomoji/extra/girigiriwoikiteyagaru.png",
+      "updated": "v5.3.1"
+    },
+    {
+      "name": "girigiriwotanosinndeyagaru",
+      "path": "decomoji/extra/girigiriwotanosinndeyagaru.png",
+      "updated": "v5.3.1"
+    },
+    {
+      "name": "syuugodekaosaiyou",
+      "path": "decomoji/extra/syuugodekaosaiyou.png",
+      "removed": "v5.3.1"
+    },
+    {
+      "name": "syuugodenomikai",
+      "path": "decomoji/extra/syuugodenomikai.png",
+      "removed": "v5.3.1"
+    }
+  ],
+  "upload": [
+    {
+      "name": "apuripowaze",
+      "path": "decomoji/extra/apuripowaze.png",
+      "updated": "v5.3.1"
+    },
+    {
+      "name": "cssinjs",
+      "path": "decomoji/extra/cssinjs.png",
+      "updated": "v5.3.1"
+    },
+    {
+      "name": "doredetukuro",
+      "path": "decomoji/extra/doredetukuro.png",
+      "updated": "v5.3.1"
+    },
+    {
+      "name": "doredetukuru",
+      "path": "decomoji/extra/doredetukuru.png",
+      "updated": "v5.3.1"
+    },
+    {
+      "name": "dorehatukuro",
+      "path": "decomoji/extra/dorehatukuro.png",
+      "updated": "v5.3.1"
+    },
+    {
+      "name": "dorehatukuru",
+      "path": "decomoji/extra/dorehatukuru.png",
+      "updated": "v5.3.1"
+    },
+    {
+      "name": "dorekatukuro",
+      "path": "decomoji/extra/dorekatukuro.png",
+      "updated": "v5.3.1"
+    },
+    {
+      "name": "dorekatukuru",
+      "path": "decomoji/extra/dorekatukuru.png",
+      "updated": "v5.3.1"
+    },
+    {
+      "name": "dorewotukuro",
+      "path": "decomoji/extra/dorewotukuro.png",
+      "updated": "v5.3.1"
+    },
+    {
+      "name": "dorewotukuru",
+      "path": "decomoji/extra/dorewotukuru.png",
+      "updated": "v5.3.1"
+    },
+    {
+      "name": "girigirideikou",
+      "path": "decomoji/extra/girigirideikou.png",
+      "updated": "v5.3.1"
+    },
+    {
+      "name": "girigiriwoikiteyagaru",
+      "path": "decomoji/extra/girigiriwoikiteyagaru.png",
+      "updated": "v5.3.1"
+    },
+    {
+      "name": "girigiriwotanosinndeyagaru",
+      "path": "decomoji/extra/girigiriwotanosinndeyagaru.png",
+      "updated": "v5.3.1"
+    },
+    {
+      "name": "syuu5dekaosaiyou",
+      "path": "decomoji/extra/syuu5dekaosaiyou.png",
+      "created": "v5.3.1"
+    },
+    {
+      "name": "syuu5denomikai",
+      "path": "decomoji/extra/syuu5denomikai.png",
+      "created": "v5.3.1"
+    }
+  ],
+  "rename": [
+    { "name": "syuugodekaosaiyou", "alias_for": "syuu5dekaosaiyou" },
+    { "name": "syuugodenomikai", "alias_for": "syuu5denomikai" }
+  ]
+}

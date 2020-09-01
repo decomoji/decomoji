@@ -1,5 +1,7 @@
 [
   { "name": "a-ne", "alias_for": "a-ne_" },
   { "name": "euc_jp", "alias_for": "euc-jp" },
+  { "name": "syuugodekaosaiyou", "alias_for": "syuu5dekaosaiyou" },
+  { "name": "syuugodenomikai", "alias_for": "syuu5denomikai" },
   { "name": "tennshyokusijou", "alias_for": "tennsyokusijou" }
 ]
