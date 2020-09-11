@@ -45,4 +45,6 @@ if (duplicates.length) {
   const data = duplicates.map(({ no, yomi }) => ({ no, yomi }));
   writeJsonFileSync(data, `./duplicate-error.json`);
   console.error("[FAIL]: CSV HAS DUPLICATES!");
+} else {
+  console.info("[PASS]: CSV HAVE NO DUPLICATE.");
 }
