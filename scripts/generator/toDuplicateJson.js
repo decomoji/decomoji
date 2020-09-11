@@ -33,3 +33,8 @@ const labelled = values.map((row) => {
 
 // `ignore: TRUE` を取り除く
 const candidates = labelled.filter((v) => !v.ignore);
+
+// 登録しようとしているリスト（candidates）と既存リスト（exists）を突合して重複しているものを作る
+const duplicates = candidates.filter((c) => {
+  return exists.findIndex((e) => e.name === c.yomi) > -1;
+});
