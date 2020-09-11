@@ -1,6 +1,7 @@
 // node scripts/generator/toDuplicateJson.js ~/Downloads/candidate.csv
 const fs = require("fs");
 const isStringOfNotEmpty = require("../utilities/isStringOfNotEmpty");
+const writeJsonFileSync = require("../utilities/writeJsonFileSync");
 
 // v5_all のデータを準備しておく
 const all_buffer = fs.readFileSync("./configs/v5_all.json");
@@ -38,3 +39,10 @@ const candidates = labelled.filter((v) => !v.ignore);
 const duplicates = candidates.filter((c) => {
   return exists.findIndex((e) => e.name === c.yomi) > -1;
 });
+
+// 重複があれば重複リストを書き出す
+if (duplicates.length) {
+  const data = duplicates.map(({ no, yomi }) => ({ no, yomi }));
+  writeJsonFileSync(data, `./duplicate-error.json`);
+  console.error("[FAIL]: CSV HAS DUPLICATES!");
+}
