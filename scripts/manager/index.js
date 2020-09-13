@@ -106,8 +106,8 @@ configs   : ${_inputs.configs}`);
 if (program.inputs) {
   // --inputs inputs.hoge.json などのファイルパスが指定されていたらそれを require し、
   // --inputs オプションがキーのみの場合はデフォルトで `./inputs.json` を require する
-  const FILE = isStringOfNotEmpty(program.input)
-    ? program.input
+  const FILE = isStringOfNotEmpty(program.inputs)
+    ? program.inputs
     : DEFAULT_INPUT_NAME;
   const INPUT = require(`./${FILE}`);
   main(INPUT);
