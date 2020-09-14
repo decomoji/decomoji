@@ -956,7 +956,8 @@
   {
     "name": "anatanihasiyoudagawatasinihabagu",
     "path": "decomoji/extra/anatanihasiyoudagawatasinihabagu.png",
-    "created": "v5.4.0"
+    "created": "v5.4.0",
+    "updated": "v5.4.1"
   },
   {
     "name": "andmore",
@@ -3510,7 +3511,7 @@
     "path": "decomoji/extra/batteri-ga.png",
     "created": "v5.0.0"
   },
-  { "name": "bau", "path": "decomoji/extra/bau.png", "created": "v5.4.0" },
+  { "name": "bau_", "path": "decomoji/extra/bau_.png", "created": "v5.4.1" },
   {
     "name": "bausyuenn",
     "path": "decomoji/extra/bausyuenn.png",
@@ -29268,7 +29269,8 @@
   {
     "name": "raitote-ma",
     "path": "decomoji/extra/raitote-ma.png",
-    "created": "v5.4.0"
+    "created": "v5.4.0",
+    "updated": "v5.4.1"
   },
   {
     "name": "rakki-",
