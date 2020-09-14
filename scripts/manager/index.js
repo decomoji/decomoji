@@ -7,7 +7,7 @@ const uploader = require("./modules/uploader");
 const pretender = require("./modules/pretender");
 const remover = require("./modules/remover");
 
-const DEFAULT_INPUT_PATH = "./inputs.json";
+const DEFAULT_INPUT_NAME = "inputs.json";
 
 // コマンドライン引数の定義
 program
@@ -104,13 +104,13 @@ configs   : ${_inputs.configs}`);
 };
 
 if (program.inputs) {
-  // --inputs ./inputs.hoge.json などのファイルパスが指定されていたらそれを require し、
+  // --inputs inputs.hoge.json などのファイルパスが指定されていたらそれを require し、
   // --inputs オプションがキーのみの場合はデフォルトで `./inputs.json` を require する
-  main(
-    require(isStringOfNotEmpty(program.inputs)
-      ? program.inputs
-      : DEFAULT_INPUT_PATH)
-  );
+  const FILE = isStringOfNotEmpty(program.inputs)
+    ? program.inputs
+    : DEFAULT_INPUT_NAME;
+  const INPUT = require(`./${FILE}`);
+  main(INPUT);
 } else {
   // --inputs オプション がない場合は inquirer を起動して対話的にオプションを作る
   askInputs((inputs) => main(inputs));
