@@ -37,6 +37,11 @@
   },
   { "name": "a-ne", "path": "decomoji/basic/a-ne.png", "removed": "v5.1.0" },
   {
+    "name": "anatanihasiyoudagawatasinihabagu",
+    "path": "decomoji/extra/anatanihasiyoudagawatasinihabagu.png",
+    "updated": "v5.4.1"
+  },
+  {
     "name": "apuripowaze",
     "path": "decomoji/extra/apuripowaze.png",
     "updated": "v5.3.1"
@@ -46,6 +51,7 @@
     "path": "decomoji/extra/atteru.png",
     "updated": "v5.2.0"
   },
+  { "name": "bau", "path": "decomoji/extra/bau.png", "removed": "v5.4.1" },
   {
     "name": "cssinjs",
     "path": "decomoji/extra/cssinjs.png",
@@ -160,6 +166,11 @@
     "name": "ra-men",
     "path": "decomoji/basic/ra-men.png",
     "removed": "v5.4.0"
+  },
+  {
+    "name": "raitote-ma",
+    "path": "decomoji/extra/raitote-ma.png",
+    "updated": "v5.4.1"
   },
   {
     "name": "seimeiutyuusositebannbutunituitenokyuukyokunogimonnnokotae",
