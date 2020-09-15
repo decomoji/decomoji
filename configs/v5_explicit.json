@@ -186,9 +186,9 @@
     "created": "v5.0.0"
   },
   {
-    "name": "kihyousyojo",
-    "path": "decomoji/explicit/kihyousyojo.png",
-    "created": "v5.0.0"
+    "name": "kihyousyozyo",
+    "path": "decomoji/explicit/kihyousyozyo.png",
+    "created": "v5.4.2"
   },
   {
     "name": "killnohuzi",
@@ -332,11 +332,6 @@
     "created": "v5.0.0"
   },
   {
-    "name": "sigusinu",
-    "path": "decomoji/explicit/sigusinu.png",
-    "created": "v5.0.0"
-  },
-  {
     "name": "sikotarou",
     "path": "decomoji/explicit/sikotarou.png",
     "created": "v5.0.0"
@@ -352,9 +347,9 @@
     "created": "v5.0.0"
   },
   {
-    "name": "sinnjaoro-su-",
-    "path": "decomoji/explicit/sinnjaoro-su-.png",
-    "created": "v5.0.0"
+    "name": "sinnzyaoro-su-",
+    "path": "decomoji/explicit/sinnzyaoro-su-.png",
+    "created": "v5.4.2"
   },
   {
     "name": "sinosabaki",
@@ -382,6 +377,11 @@
     "created": "v5.0.0"
   },
   {
+    "name": "sugusinu",
+    "path": "decomoji/explicit/sugusinu.png",
+    "created": "v5.4.2"
+  },
+  {
     "name": "tikubiga",
     "path": "decomoji/explicit/tikubiga.png",
     "created": "v5.0.0"
@@ -405,8 +405,8 @@
   },
   { "name": "uzza", "path": "decomoji/explicit/uzza.png", "created": "v5.0.0" },
   {
-    "name": "zijounoarukuso",
-    "path": "decomoji/explicit/zijounoarukuso.png",
-    "created": "v5.0.0"
+    "name": "zizyounoarukuso",
+    "path": "decomoji/explicit/zizyounoarukuso.png",
+    "created": "v5.4.2"
   }
 ]
