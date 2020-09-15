@@ -87,7 +87,7 @@ configs   : ${_inputs.configs}`);
         ..._inputs,
         ...{ mode: "upload", configs: ["v5_basic", "v5_extra"] },
       });
-      console.log("Register 'v5_fixed' starting...");
+      console.log("Register 'v5_rename' starting...");
       await pretender({
         ..._inputs,
         ...{ mode: "alias", configs: ["v5_rename"] },
