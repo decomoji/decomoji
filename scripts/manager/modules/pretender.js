@@ -50,12 +50,22 @@ const pretender = async (inputs) => {
 
       console.info(
         `${currentIdx}/${pretendableDecomojiLength}: ${
-          result.ok ? "registered" : result.error
+          result.ok
+            ? "registered"
+            : result.error === "error_name_taken"
+            ? "skipped(already exists)."
+            : result.error === "error_name_taken_i18n"
+            ? "skipped(international emoji set already includes)."
+            : result.error
         } ${name} -> ${alias_for}.`
       );
 
-      // エラーがあればループを抜ける
-      if (result.error) {
+      // result が ok 以外でかつ error_name_taken と error_name_taken_i18n 以外のエラーがあればループを抜ける
+      if (
+        !result.ok &&
+        result.error !== "error_name_taken" &&
+        result.error !== "error_name_taken_i18n"
+      ) {
         // ratelimited の場合、2FAを利用しているなら3秒待って再開、そうでなければ再ログインのためのフラグを立てる
         if (result.error === "ratelimited") {
           if (inputs.twofactor_code) {
