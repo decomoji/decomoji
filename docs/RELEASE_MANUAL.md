@@ -10,7 +10,9 @@ git mv decomoji/extra/euc_jp.png decomoji/extra/euc-jp.png
 # リネームとバイナリ変更を行う場合は、git mv 後に変更をコミットして squash する（git diff で RENAME を取得するため）
 
 # 2. 追加したデコモジを最適化する
-node scripts/generator/optimize.js ./decomoji/extra_tmp/ ./decomoji/extra/
+node scripts/generator/optimize.js basic
+node scripts/generator/optimize.js extra
+node scripts/generator/optimize.js explicit
 
 # 3. json を更新する。コマンドに更新する予定のバージョン名が必要。
 node scripts/generator/toDiffJson.js v5.x.0
