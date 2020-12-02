@@ -4,14 +4,14 @@ const imagemin = require("imagemin");
 const imageminPngquant = require("imagemin-pngquant");
 const imageminOptipng = require("imagemin-optipng");
 
-async function optimize(source, output) {
-  console.log(`${source}**.png is optimizing...`);
-  await imagemin([source], {
-    destination: output || source,
+async function optimize(category) {
+  console.log(`./decomoji/${category}_tmp/**.png is optimizing...`);
+  await imagemin([`./decomoji/${category}_tmp`], {
+    destination: `./decomoji/${category}/`,
     plugins: [imageminPngquant(), imageminOptipng()],
   });
 
-  console.log(`${source}**.png has been optimized!`);
+  console.log(`./decomoji/${category}/**.png has been optimized!`);
 }
 
-optimize(process.argv[2], process.argv[3]);
+optimize(process.argv[2]);
