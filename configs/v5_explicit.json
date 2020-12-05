@@ -45,6 +45,11 @@
     "created": "v5.0.0"
   },
   {
+    "name": "daitaiuzai",
+    "path": "decomoji/explicit/daitaiuzai.png",
+    "created": "v5.8.0"
+  },
+  {
     "name": "deaikei",
     "path": "decomoji/explicit/deaikei.png",
     "created": "v5.0.0"
@@ -149,6 +154,11 @@
     "name": "hiwaiyuusenn",
     "path": "decomoji/explicit/hiwaiyuusenn.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "huguri",
+    "path": "decomoji/explicit/huguri.png",
+    "created": "v5.8.0"
   },
   {
     "name": "hukennkounaseiyoku",
@@ -470,8 +480,33 @@
   },
   { "name": "uzza", "path": "decomoji/explicit/uzza.png", "created": "v5.0.0" },
   {
+    "name": "yarahata",
+    "path": "decomoji/explicit/yarahata.png",
+    "created": "v5.8.0"
+  },
+  {
+    "name": "yaramiso",
+    "path": "decomoji/explicit/yaramiso.png",
+    "created": "v5.8.0"
+  },
+  {
+    "name": "yarayoso",
+    "path": "decomoji/explicit/yarayoso.png",
+    "created": "v5.8.0"
+  },
+  {
     "name": "zizyounoarukuso",
     "path": "decomoji/explicit/zizyounoarukuso.png",
     "created": "v5.4.2"
+  },
+  {
+    "name": "zizyounonaikuso",
+    "path": "decomoji/explicit/zizyounonaikuso.png",
+    "created": "v5.8.0"
+  },
+  {
+    "name": "zukkonnbakkonn",
+    "path": "decomoji/explicit/zukkonnbakkonn.png",
+    "created": "v5.8.0"
   }
 ]
