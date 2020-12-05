@@ -215,11 +215,26 @@
     "path": "decomoji/explicit/kukkorose.png",
     "created": "v5.0.0"
   },
+  {
+    "name": "kusaimononihuta",
+    "path": "decomoji/explicit/kusaimononihuta.png",
+    "created": "v5.7.0"
+  },
   { "name": "kuso", "path": "decomoji/explicit/kuso.png", "created": "v5.0.0" },
+  {
+    "name": "kusomonogatari",
+    "path": "decomoji/explicit/kusomonogatari.png",
+    "created": "v5.7.0"
+  },
   {
     "name": "kusoobukuso",
     "path": "decomoji/explicit/kusoobukuso.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "kusoriku",
+    "path": "decomoji/explicit/kusoriku.png",
+    "created": "v5.7.0"
   },
   {
     "name": "kusoripu",
@@ -232,14 +247,44 @@
     "created": "v5.0.0"
   },
   {
+    "name": "kutabare",
+    "path": "decomoji/explicit/kutabare.png",
+    "created": "v5.7.0"
+  },
+  {
+    "name": "kutabari",
+    "path": "decomoji/explicit/kutabari.png",
+    "created": "v5.7.0"
+  },
+  {
+    "name": "kutabaro",
+    "path": "decomoji/explicit/kutabaro.png",
+    "created": "v5.7.0"
+  },
+  {
+    "name": "kutabaru",
+    "path": "decomoji/explicit/kutabaru.png",
+    "created": "v5.7.0"
+  },
+  {
     "name": "meimeigasukebe",
     "path": "decomoji/explicit/meimeigasukebe.png",
     "created": "v5.0.0"
   },
   {
+    "name": "mekusohanakuso",
+    "path": "decomoji/explicit/mekusohanakuso.png",
+    "created": "v5.7.0"
+  },
+  {
     "name": "mennzudebaisu",
     "path": "decomoji/explicit/mennzudebaisu.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "motomotohaettinagazou",
+    "path": "decomoji/explicit/motomotohaettinagazou.png",
+    "created": "v5.7.0"
   },
   {
     "name": "mousikoi",
@@ -250,6 +295,21 @@
     "name": "musyuusei",
     "path": "decomoji/explicit/musyuusei.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "nanikarananimadegomi",
+    "path": "decomoji/explicit/nanikarananimadegomi.png",
+    "created": "v5.7.0"
+  },
+  {
+    "name": "nanikarananimadekuso",
+    "path": "decomoji/explicit/nanikarananimadekuso.png",
+    "created": "v5.7.0"
+  },
+  {
+    "name": "nanikarananimadekuzu",
+    "path": "decomoji/explicit/nanikarananimadekuzu.png",
+    "created": "v5.7.0"
   },
   {
     "name": "nobaka_",
