@@ -1,0 +1,9 @@
+{
+  "fixed": [
+    { "name": "sake", "path": "decomoji/extra/sake.png", "removed": "v5.9.3" }
+  ],
+  "upload": [
+    { "name": "sake_", "path": "decomoji/extra/sake_.png", "created": "v5.9.3" }
+  ],
+  "rename": [{ "name": "sake", "alias_for": "sake_" }]
+}
