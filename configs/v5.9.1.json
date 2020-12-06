@@ -1,0 +1,17 @@
+{
+  "fixed": [
+    {
+      "name": "nasca\\343\\201\\247",
+      "path": "\"decomoji/extra/nasca\\343\\201\\247.png\"",
+      "removed": "v5.9.1"
+    }
+  ],
+  "upload": [
+    {
+      "name": "nascade",
+      "path": "decomoji/extra/nascade.png",
+      "created": "v5.9.1"
+    }
+  ],
+  "rename": [{ "name": "nasca\\343\\201\\247", "alias_for": "nascade" }]
+}
