@@ -75,7 +75,9 @@ Object.entries(Seeds.manages).forEach((entry) => {
   const [manage, list] = entry;
   const _list =
     manage === "rename"
-      ? list.concat({ name: "euc_jp", alias_for: "euc-jp" })
+      ? list
+          .concat({ name: "euc_jp", alias_for: "euc-jp" })
+          .filter(({ name }) => name !== "nasca\\343\\201\\247")
       : list;
   writeJsonFileSync(
     _list.sort((a, b) => a.name.localeCompare(b.name)),
