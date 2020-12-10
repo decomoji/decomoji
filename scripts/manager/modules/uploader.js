@@ -61,7 +61,7 @@ const uploader = async (inputs) => {
         // 2FA 利用しているならば 3秒待って同じ i でループを再開する
         if (TWOFACTOR_CODE) {
           console.info("Waiting...");
-          await page.waitFor(3000);
+          await new Promise((r) => setTimeout(r, 3000));
           continue;
         }
         // 2FA 利用でなければ再ログインのためのフラグを立ててループを終了する
