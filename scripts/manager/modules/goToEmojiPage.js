@@ -86,7 +86,7 @@ const goToEmojiPage = async (page, inputs) => {
         if (await page.$("#slack_captcha").then((res) => !!res)) {
           // Recaptcha があったら無理なので諦める
           console.error(
-            "[ERROR] Oops, you might judged a Bot. Please wait and try again."
+            "[ERROR]Oops, you might judged a bot. Please wait and try again."
           );
           await browser.close();
         }

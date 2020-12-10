@@ -1,16 +1,30 @@
 const puppeteer = require("puppeteer");
 
 const goToEmojiPage = require("./goToEmojiPage");
-const getRemovableDecomojiList = require("./getRemovableDecomojiList");
+const getLocalJson = require("./getLocalJson");
 const postEmojiRemove = require("./postEmojiRemove");
 
 const remover = async (inputs) => {
-  const _remove = async (inputs) => {
-    const TIME = inputs.time;
+  const {
+    browser: BROWSER,
+    configs: CONFIGS,
+    debug: DEBUG,
+    log: LOG,
+    time: TIME,
+    twofactor_code: TWOFACTOR_CODE,
+    workspace: WORKSPACE,
+  } = inputs;
 
+  let i = 0; // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
+  let FAILED = false;
+  let RELOGIN = false;
+  const localDecomojiList = getLocalJson(CONFIGS, LOG);
+  const localDecomojiListLength = localDecomojiList.length;
+
+  const _remove = async (inputs) => {
     // puppeteer でブラウザを起動する
     const browser = await puppeteer.launch({
-      devtools: inputs.browser,
+      devtools: BROWSER,
     });
     // ページを追加する
     const page = await browser.newPage();
@@ -18,75 +32,75 @@ const remover = async (inputs) => {
     // カスタム絵文字管理画面へ遷移する
     inputs = await goToEmojiPage(page, inputs);
 
-    const removableDecomojiList = await getRemovableDecomojiList(page, inputs);
-    const removableDecomojiLength = removableDecomojiList.length;
-    let i = 0;
-    let error = false;
-    let ratelimited = false;
-
-    // 削除可能なものがない場合は終わり
-    if (removableDecomojiLength === 0) {
-      console.info("All decomoji has already been removed!");
-      if (!inputs.debug) {
-        await browser.close();
-      }
+    // ローカルのデコモジが存在しなかったらエラーにして終了する
+    if (localDecomojiListLength === 0) {
+      console.error("[ERROR]No decomoji items.");
+      !DEBUG && (await browser.close());
       return;
     }
 
     TIME && console.time("[Remove time]");
-    while (i < removableDecomojiLength) {
-      const { name } = removableDecomojiList[i];
-      const currentIdx = i + 1;
-
-      const result = await postEmojiRemove(page, inputs.workspace, name);
+    while (i < localDecomojiListLength) {
+      const { name } = localDecomojiList[i];
+      const result = await postEmojiRemove(page, WORKSPACE, name);
 
       console.info(
-        `${currentIdx}/${removableDecomojiLength}: ${
-          result.ok ? "removed" : result.error
+        `${i + 1}/${localDecomojiListLength}: ${
+          result.ok
+            ? "removed"
+            : result.error === "no_permission"
+            ? "skipped(no permission or already removed)"
+            : result.error
         } ${name}.`
       );
 
-      // エラーがあればループを抜ける
-      if (result.error) {
-        // ratelimited の場合、2FAを利用しているなら3秒待って再開、そうでなければ再ログインのためのフラグを立てる
-        if (result.error === "ratelimited") {
-          if (inputs.twofactor_code) {
-            console.info("Waiting...");
-            await page.waitFor(3000);
-            continue;
-          }
-          ratelimited = true;
-        } else {
-          error = true;
+      // ratelimited エラーの場合
+      if (result.error === "ratelimited") {
+        // 2FA 利用しているならば 3秒待って同じ i でループを再開する
+        if (TWOFACTOR_CODE) {
+          console.info("Waiting...");
+          await new Promise((r) => setTimeout(r, 3000));
+          continue;
         }
+        // 2FA 利用でなければ再ログインのためのフラグを立ててループを終了する
+        RELOGIN = true;
+        break;
+      }
+
+      // 特定のエラー以外は失敗フラグを立てる
+      if (
+        result.error &&
+        result.error !== "no_permission" // 削除する対象が見つからないエラー
+      ) {
+        FAILED = true;
         break;
       }
 
       // インデックスを進める
-      error = false;
-      ratelimited = false;
       i++;
+      // ステータスをリセットする
+      FAILED = false;
+      RELOGIN = false;
     }
     TIME && console.timeEnd("[Remove time]");
 
     // ブラウザを閉じる
-    if (!inputs.debug) {
+    if (!DEBUG) {
       await browser.close();
     }
 
     // ratelimited なら再帰する
-    if (ratelimited) {
+    if (RELOGIN) {
       TIME && console.timeLog("[Total time]");
       console.info("Reconnecting...");
       return await _remove(inputs);
     }
 
     // 削除中に ratelimited にならなかった場合ここまで到達する
-    if (error) {
+    if (FAILED) {
       console.error("[ERROR]Remove failed.");
-    } else {
-      console.info("Remove completed!");
     }
+    console.info("Remove completed!");
     return;
   };
 

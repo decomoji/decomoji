@@ -173,6 +173,7 @@
   { "name": "ra-men", "alias_for": "ra-menn" },
   { "name": "reikijoutai", "alias_for": "reikizyoutai" },
   { "name": "ryouhousakujo", "alias_for": "ryouhousakuzyo" },
+  { "name": "sake", "alias_for": "sake_" },
   { "name": "sakujo", "alias_for": "sakuzyo" },
   { "name": "sakujoari", "alias_for": "sakuzyoari" },
   { "name": "sakujoaru", "alias_for": "sakuzyoaru" },
