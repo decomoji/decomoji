@@ -82,7 +82,7 @@ configs   : ${_inputs.configs}`);
         ..._inputs,
         ...{ mode: "remove", configs: ["v5_fixed"], forceRemove: true },
       });
-      console.log("Upload v5 diffs starting...");
+      console.log("Upload 'v5_basic, v5_extra' starting...");
       await uploader({
         ..._inputs,
         ...{ mode: "upload", configs: ["v5_basic", "v5_extra"] },
@@ -92,12 +92,10 @@ configs   : ${_inputs.configs}`);
         ..._inputs,
         ...{ mode: "alias", configs: ["v5_rename"] },
       });
-      console.log("All migration step has completed!");
+      console.log("All update step has completed!");
       break;
     default:
-      console.error(
-        "[ERROR] Unknown script mode. please confirm 'mode' value."
-      );
+      console.error("[ERROR]Unknown script mode. please confirm 'mode' value.");
       break;
   }
   TIME && console.timeEnd("[Total time]");
