@@ -16,8 +16,8 @@ const uploader = async (inputs) => {
   } = inputs;
 
   let i = 0; // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
-  let ERROR = false;
-  let RATELIMITED = false;
+  let FAILED = false;
+  let RELOGIN = false;
   const localDecomojiList = getLocalJson(CONFIGS, LOG);
   const localDecomojiListLength = localDecomojiList.length;
 
@@ -56,31 +56,34 @@ const uploader = async (inputs) => {
         } ${name}.`
       );
 
-      // result が ok 以外でかつ error_name_taken と error_name_taken_i18n 以外のエラーがあればループを抜ける
-      if (
-        !result.ok &&
-        result.error !== "error_name_taken" &&
-        result.error !== "error_name_taken_i18n"
-      ) {
-        // ratelimited の場合、2FAを利用しているなら3秒待って再開、そうでなければ再ログインのためのフラグを立てる
-        if (result.error === "ratelimited") {
-          if (TWOFACTOR_CODE) {
-            console.info("Waiting...");
-            await page.waitFor(3000);
-            continue;
-          }
-          RATELIMITED = true;
-        } else {
-          ERROR = true;
+      // ratelimited エラーの場合
+      if (result.error === "ratelimited") {
+        // 2FA 利用しているならば 3秒待って同じ i でループを再開する
+        if (TWOFACTOR_CODE) {
+          console.info("Waiting...");
+          await page.waitFor(3000);
+          continue;
         }
+        // 2FA 利用でなければ再ログインのためのフラグを立ててループを終了する
+        RELOGIN = true;
+        break;
+      }
+
+      // 特定のエラー以外は失敗フラグを立てる
+      if (
+        result.error &&
+        result.error !== "error_name_taken" && // 登録済みのエラー
+        result.error !== "error_name_taken_i18n" // i18n と競合するエラー
+      ) {
+        FAILED = true;
         break;
       }
 
       // インデックスを進める
       i++;
       // ステータスをリセットする
-      ERROR = false;
-      RATELIMITED = false;
+      FAILED = false;
+      RELOGIN = false;
     }
     TIME && console.timeEnd("[Upload time]");
 
@@ -90,14 +93,14 @@ const uploader = async (inputs) => {
     }
 
     // ratelimited なら再帰する
-    if (RATELIMITED) {
+    if (RELOGIN) {
       TIME && console.timeLog("[Total time]");
       console.info("Reconnecting...");
       return await _upload(inputs);
     }
 
     // 追加中に ratelimited にならなかった場合ここまで到達する
-    if (ERROR) {
+    if (FAILED) {
       console.error("[ERROR]Upload failed.");
     }
     console.info("Upload completed!");
