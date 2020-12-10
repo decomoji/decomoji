@@ -40,36 +40,25 @@ const fetchRemoteEmojiList = async (page, inputs) => {
       if (!forceRemove && mode === "remove") {
         formData.append("user_ids", JSON.stringify([window.boot_data.user_id]));
       }
-      const result = await fetch(
-        `https://${workspace}.slack.com/api/emoji.adminList`,
-        {
-          method: "POST",
-          headers: { Accept: "application/json" },
-          body: formData,
-        }
-      );
-      const data = await result.json();
-
-      if (data.ok) {
-        // 絵文字をコピーする
+      try {
+        const response = await fetch(
+          `https://${workspace}.slack.com/api/emoji.adminList`,
+          {
+            method: "POST",
+            headers: { Accept: "application/json" },
+            body: formData,
+          }
+        );
+        const data = await response.json();
         emojiAdminList.push(...data.emoji);
         // 絵文字が一つもないか、最終ページまで fetch したら resolve する
         if (data.paging.pages === 0 || data.paging.page === data.paging.pages) {
           return;
         }
-        // 次のページを fetch する
+        // 次のページを fetch
         await fetchEmojiAdminList(data.paging.page + 1);
-      } else {
-        // ratelimited エラー
-        if (data.error === "ratelimited") {
-          console.log(data);
-          const timer = setTimeout(async () => {
-            console.info("ratelimited: Reconnecting...");
-            clearTimeout(timer);
-            // 3秒待ってから再度同じページを fetch する
-            await fetchEmojiAdminList(nextPage);
-          }, 3000);
-        }
+      } catch (e) {
+        return e;
       }
     };
 
