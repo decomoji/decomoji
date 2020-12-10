@@ -1,10 +1,15 @@
 const puppeteer = require("puppeteer");
 
 const goToEmojiPage = require("./goToEmojiPage");
-const getRemovableDecomojiList = require("./getRemovableDecomojiList");
+const getLocalJson = require("./getLocalJson");
 const postEmojiRemove = require("./postEmojiRemove");
 
 const remover = async (inputs) => {
+  // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
+  let i = 0;
+  const localDecomojiList = getLocalJson(inputs.configs, inputs.log);
+  const localDecomojiListLength = localDecomojiList.length;
+
   const _remove = async (inputs) => {
     const TIME = inputs.time;
 
@@ -18,14 +23,11 @@ const remover = async (inputs) => {
     // カスタム絵文字管理画面へ遷移する
     inputs = await goToEmojiPage(page, inputs);
 
-    const removableDecomojiList = await getRemovableDecomojiList(page, inputs);
-    const removableDecomojiLength = removableDecomojiList.length;
-    let i = 0;
     let error = false;
     let ratelimited = false;
 
     // 削除可能なものがない場合は終わり
-    if (removableDecomojiLength === 0) {
+    if (localDecomojiListLength === 0) {
       console.info("All decomoji has already been removed!");
       if (!inputs.debug) {
         await browser.close();
@@ -34,20 +36,24 @@ const remover = async (inputs) => {
     }
 
     TIME && console.time("[Remove time]");
-    while (i < removableDecomojiLength) {
-      const { name } = removableDecomojiList[i];
+    while (i < localDecomojiListLength) {
+      const { name } = localDecomojiList[i];
       const currentIdx = i + 1;
 
       const result = await postEmojiRemove(page, inputs.workspace, name);
 
       console.info(
-        `${currentIdx}/${removableDecomojiLength}: ${
-          result.ok ? "removed" : result.error
+        `${currentIdx}/${localDecomojiListLength}: ${
+          result.ok
+            ? "removed"
+            : result.error === "no_permission"
+            ? "skipped(no permission or already removed)"
+            : result.error
         } ${name}.`
       );
 
-      // エラーがあればループを抜ける
-      if (result.error) {
+      // result が ok 以外でかつ no_permission 以外のエラーあればループを抜ける
+      if (!result.ok && result.error !== "no_permission") {
         // ratelimited の場合、2FAを利用しているなら3秒待って再開、そうでなければ再ログインのためのフラグを立てる
         if (result.error === "ratelimited") {
           if (inputs.twofactor_code) {
