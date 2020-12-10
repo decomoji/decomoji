@@ -1,10 +1,15 @@
 const puppeteer = require("puppeteer");
 
 const goToEmojiPage = require("./goToEmojiPage");
-const getUploadableDecomojiList = require("./getUploadableDecomojiList");
+const getLocalJson = require("./getLocalJson");
 const postEmojiAdd = require("./postEmojiAdd");
 
 const uploader = async (inputs) => {
+  // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
+  let i = 0;
+  const localDecomojiList = getLocalJson(inputs.configs, inputs.log);
+  const localDecomojiListLength = localDecomojiList.length;
+
   const _upload = async (inputs) => {
     const TIME = inputs.time;
 
@@ -18,17 +23,11 @@ const uploader = async (inputs) => {
     // カスタム絵文字管理画面へ遷移する
     inputs = await goToEmojiPage(page, inputs);
 
-    const uploadableDecomojiList = await getUploadableDecomojiList(
-      page,
-      inputs
-    );
-    const uploadableDecomojiLength = uploadableDecomojiList.length;
-    let i = 0;
     let error = false;
     let ratelimited = false;
 
     // アップロード可能なものがない場合は終わり
-    if (uploadableDecomojiLength === 0) {
+    if (localDecomojiListLength === 0) {
       console.info("All decomoji has already been uploaded!");
       if (!inputs.debug) {
         await browser.close();
@@ -37,14 +36,14 @@ const uploader = async (inputs) => {
     }
 
     TIME && console.time("[Upload time]");
-    while (i < uploadableDecomojiLength) {
-      const { name, path } = uploadableDecomojiList[i];
+    while (i < localDecomojiListLength) {
+      const { name, path } = localDecomojiList[i];
       const currentIdx = i + 1;
 
       const result = await postEmojiAdd(page, inputs.workspace, name, path);
 
       console.info(
-        `${currentIdx}/${uploadableDecomojiLength}: ${
+        `${currentIdx}/${localDecomojiListLength}: ${
           result.ok
             ? "uploaded"
             : result.error === "error_name_taken"
