@@ -5,17 +5,26 @@ const getLocalJson = require("./getLocalJson");
 const postEmojiRemove = require("./postEmojiRemove");
 
 const remover = async (inputs) => {
-  // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
-  let i = 0;
-  const localDecomojiList = getLocalJson(inputs.configs, inputs.log);
+  const {
+    browser: BROWSER,
+    configs: CONFIGS,
+    debug: DEBUG,
+    log: LOG,
+    time: TIME,
+    twofactor_code: TWOFACTOR_CODE,
+    workspace: WORKSPACE,
+  } = inputs;
+
+  let i = 0; // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
+  let ERROR = false;
+  let RATELIMITED = false;
+  const localDecomojiList = getLocalJson(CONFIGS, LOG);
   const localDecomojiListLength = localDecomojiList.length;
 
   const _remove = async (inputs) => {
-    const TIME = inputs.time;
-
     // puppeteer でブラウザを起動する
     const browser = await puppeteer.launch({
-      devtools: inputs.browser,
+      devtools: BROWSER,
     });
     // ページを追加する
     const page = await browser.newPage();
@@ -23,27 +32,20 @@ const remover = async (inputs) => {
     // カスタム絵文字管理画面へ遷移する
     inputs = await goToEmojiPage(page, inputs);
 
-    let error = false;
-    let ratelimited = false;
-
-    // 削除可能なものがない場合は終わり
+    // ローカルのデコモジが存在しなかったらエラーにして終了する
     if (localDecomojiListLength === 0) {
-      console.info("All decomoji has already been removed!");
-      if (!inputs.debug) {
-        await browser.close();
-      }
+      console.error("[ERROR]No decomoji items.");
+      !DEBUG && (await browser.close());
       return;
     }
 
     TIME && console.time("[Remove time]");
     while (i < localDecomojiListLength) {
       const { name } = localDecomojiList[i];
-      const currentIdx = i + 1;
-
-      const result = await postEmojiRemove(page, inputs.workspace, name);
+      const result = await postEmojiRemove(page, WORKSPACE, name);
 
       console.info(
-        `${currentIdx}/${localDecomojiListLength}: ${
+        `${i + 1}/${localDecomojiListLength}: ${
           result.ok
             ? "removed"
             : result.error === "no_permission"
@@ -56,43 +58,43 @@ const remover = async (inputs) => {
       if (!result.ok && result.error !== "no_permission") {
         // ratelimited の場合、2FAを利用しているなら3秒待って再開、そうでなければ再ログインのためのフラグを立てる
         if (result.error === "ratelimited") {
-          if (inputs.twofactor_code) {
+          if (TWOFACTOR_CODE) {
             console.info("Waiting...");
             await page.waitFor(3000);
             continue;
           }
-          ratelimited = true;
+          RATELIMITED = true;
         } else {
-          error = true;
+          ERROR = true;
         }
         break;
       }
 
       // インデックスを進める
-      error = false;
-      ratelimited = false;
       i++;
+      // ステータスをリセットする
+      ERROR = false;
+      RATELIMITED = false;
     }
     TIME && console.timeEnd("[Remove time]");
 
     // ブラウザを閉じる
-    if (!inputs.debug) {
+    if (!DEBUG) {
       await browser.close();
     }
 
     // ratelimited なら再帰する
-    if (ratelimited) {
+    if (RATELIMITED) {
       TIME && console.timeLog("[Total time]");
       console.info("Reconnecting...");
       return await _remove(inputs);
     }
 
     // 削除中に ratelimited にならなかった場合ここまで到達する
-    if (error) {
+    if (ERROR) {
       console.error("[ERROR]Remove failed.");
-    } else {
-      console.info("Remove completed!");
     }
+    console.info("Remove completed!");
     return;
   };
 

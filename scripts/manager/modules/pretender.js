@@ -5,17 +5,26 @@ const getLocalJson = require("./getLocalJson");
 const postEmojiAlias = require("./postEmojiAlias");
 
 const pretender = async (inputs) => {
-  // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
-  let i = 0;
-  const localDecomojiList = getLocalJson(inputs.configs, inputs.log);
+  const {
+    browser: BROWSER,
+    configs: CONFIGS,
+    debug: DEBUG,
+    log: LOG,
+    time: TIME,
+    twofactor_code: TWOFACTOR_CODE,
+    workspace: WORKSPACE,
+  } = inputs;
+
+  let i = 0; // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
+  let ERROR = false;
+  let RATELIMITED = false;
+  const localDecomojiList = getLocalJson(CONFIGS, LOG);
   const localDecomojiListLength = localDecomojiList.length;
 
   const _pretend = async (inputs) => {
-    const TIME = inputs.time;
-
     // puppeteer でブラウザを起動する
     const browser = await puppeteer.launch({
-      devtools: inputs.browser,
+      devtools: BROWSER,
     });
     // ページを追加する
     const page = await browser.newPage();
@@ -23,32 +32,20 @@ const pretender = async (inputs) => {
     // カスタム絵文字管理画面へ遷移する
     inputs = await goToEmojiPage(page, inputs);
 
-    let error = false;
-    let ratelimited = false;
-
-    // アップロード可能なものがない場合は終わり
+    // ローカルのデコモジが存在しなかったらエラーにして終了する
     if (localDecomojiListLength === 0) {
-      console.info("All alias has already been registered!");
-      if (!inputs.debug) {
-        await browser.close();
-      }
+      console.error("[ERROR]No decomoji items.");
+      !DEBUG && (await browser.close());
       return;
     }
 
     TIME && console.time("[Register time]");
     while (i < localDecomojiListLength) {
       const { name, alias_for } = localDecomojiList[i];
-      const currentIdx = i + 1;
-
-      const result = await postEmojiAlias(
-        page,
-        inputs.workspace,
-        name,
-        alias_for
-      );
+      const result = await postEmojiAlias(page, WORKSPACE, name, alias_for);
 
       console.info(
-        `${currentIdx}/${localDecomojiListLength}: ${
+        `${i + 1}/${localDecomojiListLength}: ${
           result.ok
             ? "registered"
             : result.error === "error_name_taken"
@@ -58,7 +55,7 @@ const pretender = async (inputs) => {
             : result.error === "error_invalid_alias"
             ? "skipped(target no exists)."
             : result.error
-        } ${name} -> ${alias_for}.`
+        } ${name} => ${alias_for}.`
       );
 
       // result が ok 以外でかつ error_name_taken と error_name_taken_i18n と error_invalid_alias 以外のエラーがあればループを抜ける
@@ -70,43 +67,43 @@ const pretender = async (inputs) => {
       ) {
         // ratelimited の場合、2FAを利用しているなら3秒待って再開、そうでなければ再ログインのためのフラグを立てる
         if (result.error === "ratelimited") {
-          if (inputs.twofactor_code) {
+          if (TWOFACTOR_CODE) {
             console.info("Waiting...");
             await page.waitFor(3000);
             continue;
           }
-          ratelimited = true;
+          RATELIMITED = true;
         } else {
-          error = true;
+          ERROR = true;
         }
         break;
       }
 
       // インデックスを進める
-      error = false;
-      ratelimited = false;
       i++;
+      // ステータスをリセットする
+      ERROR = false;
+      RATELIMITED = false;
     }
     TIME && console.timeEnd("[Register time]");
 
     // ブラウザを閉じる
-    if (!inputs.debug) {
+    if (!DEBUG) {
       await browser.close();
     }
 
     // ratelimited なら再帰する
-    if (ratelimited) {
+    if (RATELIMITED) {
       TIME && console.timeLog("[Total time]");
       console.info("Reconnecting...");
       return await _pretend(inputs);
     }
 
     // 追加中に ratelimited にならなかった場合ここまで到達する
-    if (error) {
+    if (ERROR) {
       console.error("[ERROR]Register failed.");
-    } else {
-      console.info("Register completed!");
     }
+    console.info("Register completed!");
     return;
   };
 
