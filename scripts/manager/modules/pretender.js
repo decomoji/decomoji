@@ -1,10 +1,15 @@
 const puppeteer = require("puppeteer");
 
 const goToEmojiPage = require("./goToEmojiPage");
-const getPretendableDecomojiList = require("./getPretendableDecomojiList");
+const getLocalJson = require("./getLocalJson");
 const postEmojiAlias = require("./postEmojiAlias");
 
 const pretender = async (inputs) => {
+  // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
+  let i = 0;
+  const localDecomojiList = getLocalJson(inputs.configs, inputs.log);
+  const localDecomojiListLength = localDecomojiList.length;
+
   const _pretend = async (inputs) => {
     const TIME = inputs.time;
 
@@ -18,17 +23,11 @@ const pretender = async (inputs) => {
     // カスタム絵文字管理画面へ遷移する
     inputs = await goToEmojiPage(page, inputs);
 
-    const pretendableDecomojiList = await getPretendableDecomojiList(
-      page,
-      inputs
-    );
-    const pretendableDecomojiLength = pretendableDecomojiList.length;
-    let i = 0;
     let error = false;
     let ratelimited = false;
 
     // アップロード可能なものがない場合は終わり
-    if (pretendableDecomojiLength === 0) {
+    if (localDecomojiListLength === 0) {
       console.info("All alias has already been registered!");
       if (!inputs.debug) {
         await browser.close();
@@ -37,8 +36,8 @@ const pretender = async (inputs) => {
     }
 
     TIME && console.time("[Register time]");
-    while (i < pretendableDecomojiLength) {
-      const { name, alias_for } = pretendableDecomojiList[i];
+    while (i < localDecomojiListLength) {
+      const { name, alias_for } = localDecomojiList[i];
       const currentIdx = i + 1;
 
       const result = await postEmojiAlias(
@@ -49,22 +48,25 @@ const pretender = async (inputs) => {
       );
 
       console.info(
-        `${currentIdx}/${pretendableDecomojiLength}: ${
+        `${currentIdx}/${localDecomojiListLength}: ${
           result.ok
             ? "registered"
             : result.error === "error_name_taken"
             ? "skipped(already exists)."
             : result.error === "error_name_taken_i18n"
             ? "skipped(international emoji set already includes)."
+            : result.error === "error_invalid_alias"
+            ? "skipped(target no exists)."
             : result.error
         } ${name} -> ${alias_for}.`
       );
 
-      // result が ok 以外でかつ error_name_taken と error_name_taken_i18n 以外のエラーがあればループを抜ける
+      // result が ok 以外でかつ error_name_taken と error_name_taken_i18n と error_invalid_alias 以外のエラーがあればループを抜ける
       if (
         !result.ok &&
         result.error !== "error_name_taken" &&
-        result.error !== "error_name_taken_i18n"
+        result.error !== "error_name_taken_i18n" &&
+        result.error !== "error_invalid_alias"
       ) {
         // ratelimited の場合、2FAを利用しているなら3秒待って再開、そうでなければ再ログインのためのフラグを立てる
         if (result.error === "ratelimited") {
