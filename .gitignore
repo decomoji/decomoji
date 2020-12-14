@@ -10,3 +10,4 @@ decomoji/explicit_tmp
 decomoji/tmp
 inputs.json
 inputs.*.json
+*_tmp_*
