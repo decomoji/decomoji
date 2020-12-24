@@ -25246,6 +25246,12 @@
     "path": "decomoji/extra/jamstack.png",
     "created": "v5.7.0"
   },
+  {
+    "name": "joinsiyo",
+    "path": "decomoji/extra/joinsiyo.png",
+    "created": "v5.0.0",
+    "updated": "v5.14.1"
+  },
   { "name": "js", "path": "decomoji/extra/js.png", "created": "v5.5.0" },
   {
     "name": "jsgori",
@@ -90353,11 +90359,6 @@
     "created": "v5.7.0"
   },
   { "name": "zyoa", "path": "decomoji/extra/zyoa.png", "created": "v5.4.2" },
-  {
-    "name": "zyoinsiyo",
-    "path": "decomoji/extra/zyoinsiyo.png",
-    "created": "v5.4.2"
-  },
   {
     "name": "zyonnzyonnenndosonnsonn",
     "path": "decomoji/extra/zyonnzyonnenndosonnsonn.png",
