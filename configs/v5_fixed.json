@@ -129,6 +129,11 @@
     "removed": "v5.4.2"
   },
   {
+    "name": "buruburu",
+    "path": "decomoji/extra/buruburu.png",
+    "updated": "v5.15.0"
+  },
+  {
     "name": "cssinjs",
     "path": "decomoji/extra/cssinjs.png",
     "updated": "v5.3.1"
@@ -299,6 +304,16 @@
     "removed": "v5.2.0"
   },
   {
+    "name": "fannkusyoranai",
+    "path": "decomoji/extra/fannkusyoranai.png",
+    "updated": "v5.15.0"
+  },
+  {
+    "name": "gabagaba",
+    "path": "decomoji/extra/gabagaba.png",
+    "updated": "v5.15.0"
+  },
+  {
     "name": "gakurekisijou",
     "path": "decomoji/extra/gakurekisijou.png",
     "removed": "v5.4.2"
@@ -324,6 +339,11 @@
     "removed": "v5.4.2"
   },
   {
+    "name": "ginnginn",
+    "path": "decomoji/extra/ginnginn.png",
+    "updated": "v5.15.0"
+  },
+  {
     "name": "girigirideikou",
     "path": "decomoji/extra/girigirideikou.png",
     "updated": "v5.3.1"
@@ -344,9 +364,19 @@
     "updated": "v5.3.1"
   },
   {
+    "name": "gorigori",
+    "path": "decomoji/extra/gorigori.png",
+    "updated": "v5.15.0"
+  },
+  {
     "name": "gyoukaihyoujunn",
     "path": "decomoji/basic/gyoukaihyoujunn.png",
     "removed": "v5.4.2"
+  },
+  {
+    "name": "harahara",
+    "path": "decomoji/extra/harahara.png",
+    "updated": "v5.15.0"
   },
   {
     "name": "harajukusaikyou",
@@ -372,6 +402,11 @@
     "name": "hitoridehakikennja",
     "path": "decomoji/extra/hitoridehakikennja.png",
     "removed": "v5.4.2"
+  },
+  {
+    "name": "hiyahiya",
+    "path": "decomoji/extra/hiyahiya.png",
+    "updated": "v5.15.0"
   },
   {
     "name": "honnninntoujou",
@@ -779,6 +814,11 @@
     "removed": "v5.4.2"
   },
   {
+    "name": "kinnkinn",
+    "path": "decomoji/extra/kinnkinn.png",
+    "updated": "v5.15.0"
+  },
+  {
     "name": "kodomonozijou",
     "path": "decomoji/extra/kodomonozijou.png",
     "removed": "v5.4.2"
@@ -910,6 +950,11 @@
     "removed": "v5.4.2"
   },
   {
+    "name": "nekowoagameyo",
+    "path": "decomoji/extra/nekowoagameyo.png",
+    "updated": "v5.15.0"
+  },
+  {
     "name": "noburisuoburi-ju",
     "path": "decomoji/extra/noburisuoburi-ju.png",
     "removed": "v5.4.2"
@@ -951,9 +996,39 @@
     "removed": "v5.4.2"
   },
   {
+    "name": "oreore",
+    "path": "decomoji/extra/oreore.png",
+    "updated": "v5.15.0"
+  },
+  {
     "name": "otonanozijou",
     "path": "decomoji/basic/otonanozijou.png",
     "removed": "v5.4.2"
+  },
+  {
+    "name": "patupatu",
+    "path": "decomoji/extra/patupatu.png",
+    "updated": "v5.15.0"
+  },
+  {
+    "name": "payapaya",
+    "path": "decomoji/extra/payapaya.png",
+    "updated": "v5.15.0"
+  },
+  {
+    "name": "perapera",
+    "path": "decomoji/extra/perapera.png",
+    "updated": "v5.15.0"
+  },
+  {
+    "name": "peropero",
+    "path": "decomoji/extra/peropero.png",
+    "updated": "v5.15.0"
+  },
+  {
+    "name": "petipeti",
+    "path": "decomoji/extra/petipeti.png",
+    "updated": "v5.15.0"
   },
   {
     "name": "ra-men",
@@ -1721,5 +1796,10 @@
     "name": "zyoinsiyo",
     "path": "decomoji/extra/zyoinsiyo.png",
     "removed": "v5.14.1"
+  },
+  {
+    "name": "zyozyo",
+    "path": "decomoji/extra/zyozyo.png",
+    "updated": "v5.15.0"
   }
 ]
