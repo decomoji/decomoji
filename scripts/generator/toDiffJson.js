@@ -15,8 +15,18 @@ const CATEGORY_INCLUDE_ITEMS = [
     created: "v5.0.0",
     updated: "v5.14.1",
   },
+  {
+    name: "jojo",
+    path: "decomoji/extra/jojo.png",
+    created: "v5.15.0",
+  },
 ];
-const RENAME_INCLUDE_ITEMS = [{ name: "euc_jp", alias_for: "euc-jp" }];
+const RENAME_INCLUDE_ITEMS = [
+  {
+    name: "euc_jp",
+    alias_for: "euc-jp",
+  },
+];
 const RENAME_EXCLUDE_ITEMS = ["nasca\\343\\201\\247", "joinsiyo", "zyoinsiyo"];
 
 // デコモジオブジェクトの格納先
