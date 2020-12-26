@@ -47,6 +47,14 @@ const goToEmojiPage = async (page, inputs) => {
     // 再帰処理をスタートする
     await _retry(inputs.workspace);
   }
+  // Recaptcha があるかをチェックする
+  if (await page.$("#slack_captcha").then((res) => !!res)) {
+    // Recaptcha があったら無理なので諦める
+    console.error(
+      "[ERROR]Oops, you might judged a bot. Please wait and try again."
+    );
+    await browser.close();
+  }
   // ログイン email を入力する
   await page.type("#email", inputs.email);
   // パスワードを入力する
@@ -87,7 +95,6 @@ const goToEmojiPage = async (page, inputs) => {
           );
           await browser.close();
         }
-
         // フォームに再入力して submit する
         const $email = await page.$("#email");
         await $email.click({ clickCount: 3 });
@@ -153,7 +160,6 @@ const goToEmojiPage = async (page, inputs) => {
     // 再帰処理をスタートする
     await _auth();
   }
-
   // グローバル変数 boot_data と、カスタム絵文字セクションが見つかるまで待つ
   await Promise.all([
     page.waitForXPath("//script[contains(text(), 'boot_data')]"),
