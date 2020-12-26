@@ -60,9 +60,6 @@ const goToEmojiPage = async (page, inputs) => {
   if (await page.$(".c-input_text--with_error").then((res) => !!res)) {
     // ログインエラーなら inquirer を起動して email と password を再入力させる
     const _retry = async (tried) => {
-      // 前の入力を空にしておく
-      await page.$eval("#email", (e) => (e.value = ""));
-      await page.$eval("#password", (e) => (e.value = ""));
       // ログイン試行
       try {
         const retry = await inquirer.prompt([
@@ -90,9 +87,14 @@ const goToEmojiPage = async (page, inputs) => {
           );
           await browser.close();
         }
+
         // フォームに再入力して submit する
-        await page.type("#email", retry.email);
-        await page.type("#password", retry.password);
+        const $email = await page.$("#email");
+        await $email.click({ clickCount: 3 });
+        await $email.type(retry.email);
+        const $password = await page.$("#password");
+        await $password.click({ clickCount: 3 });
+        await $password.type(retry.password);
         await Promise.all([
           page.click("#signin_btn"),
           page.waitForNavigation({ waitUntil: "networkidle2" }),
