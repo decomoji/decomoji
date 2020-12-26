@@ -57,7 +57,7 @@ const goToEmojiPage = async (page, inputs) => {
     page.waitForSelector("#list_emoji_section"),
   ]);
   // ログインエラーになっているかをチェックする
-  if (await page.$(".alert_error").then((res) => !!res)) {
+  if (await page.$(".c-input_text--with_error").then((res) => !!res)) {
     // ログインエラーなら inquirer を起動して email と password を再入力させる
     const _retry = async (tried) => {
       // 前の入力を空にしておく
