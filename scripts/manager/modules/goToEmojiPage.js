@@ -54,7 +54,7 @@ const goToEmojiPage = async (page, inputs) => {
   // 「サインイン」する
   await Promise.all([
     page.click("#signin_btn"),
-    page.waitForNavigation({ waitUntil: ["load", "networkidle2"] }),
+    page.waitForSelector("#list_emoji_section"),
   ]);
   // ログインエラーになっているかをチェックする
   if (await page.$(".alert_error").then((res) => !!res)) {
@@ -95,7 +95,7 @@ const goToEmojiPage = async (page, inputs) => {
         await page.type("#password", retry.password);
         await Promise.all([
           page.click("#signin_btn"),
-          page.waitForNavigation({ waitUntil: "networkidle0" }),
+          page.waitForSelector("#list_emoji_section"),
         ]);
         // #signin_form がなかったらログインできたと見なして再帰処理を抜ける
         if (await page.$("#signin_form").then((res) => !res)) {
@@ -133,7 +133,7 @@ const goToEmojiPage = async (page, inputs) => {
         await page.type('[name="2fa_code"]', twofactor_code);
         await Promise.all([
           page.click("#signin_btn"),
-          page.waitForNavigation({ waitUntil: "networkidle0" }),
+          page.waitForSelector("#list_emoji_section"),
         ]);
         // 2FA入力欄がなかったら2FA認証できたと見なして再帰処理を抜ける
         if (await page.$('[name="2fa_code"]').then((res) => !res)) {
