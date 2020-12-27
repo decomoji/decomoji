@@ -3,6 +3,7 @@ const inquirer = require("inquirer");
 const isEmail = require("../../utilities/isEmail");
 const isInputs = require("../../utilities/isInputs");
 const recursiveInputWorkspace = require("./recursiveInputWorkspace");
+const recursiveInputAccount = require("./recursiveInputAccount");
 
 const goToEmojiPage = async (browser, page, inputs) => {
   const TIME = inputs.time;
@@ -37,64 +38,10 @@ const goToEmojiPage = async (browser, page, inputs) => {
     page.click("#signin_btn"),
     page.waitForNavigation({ waitUntil: ["load", "networkidle2"] }),
   ]);
-  // ログインエラーになっているかをチェックする
+
+  // ログインエラーになっていたら email と password を再入力させる
   if (await page.$(".c-input_text--with_error").then((res) => !!res)) {
-    // ログインエラーなら inquirer を起動して email と password を再入力させる
-    const _retry = async (tried) => {
-      // ログイン試行
-      try {
-        const retry = await inquirer.prompt([
-          {
-            type: "input",
-            name: "email",
-            message:
-              "ログインに失敗しました。正しいメールアドレスを入力してください:",
-            validate: isEmail,
-            default: tried.email,
-          },
-          {
-            type: "password",
-            name: "password",
-            mask: "*",
-            message: "正しいパスワードを入力してください:",
-            validate: isInputs,
-          },
-        ]);
-        // Recaptcha があるかをチェックする
-        if (await page.$("#slack_captcha").then((res) => !!res)) {
-          // Recaptcha があったら無理なので諦める
-          console.error(
-            "[ERROR]Oops, you might judged a bot. Please wait and try again."
-          );
-          await browser.close();
-        }
-        // フォームに再入力して submit する
-        const $email = await page.$("#email");
-        await $email.click({ clickCount: 3 });
-        await $email.type(retry.email);
-        const $password = await page.$("#password");
-        await $password.click({ clickCount: 3 });
-        await $password.type(retry.password);
-        await Promise.all([
-          page.click("#signin_btn"),
-          page.waitForNavigation({ waitUntil: "networkidle2" }),
-        ]);
-        // #signin_form がなかったらログインできたと見なして再帰処理を抜ける
-        if (await page.$("#signin_form").then((res) => !res)) {
-          console.info("Login successful!");
-          // email と password を保存し直す
-          inputs.email = retry.email;
-          inputs.password = retry.password;
-          return;
-        }
-        // ログインできるまで何度でもトライ！
-        await _retry(retry);
-      } catch (e) {
-        return e;
-      }
-    };
-    // 再帰処理をスタートする
-    await _retry(inputs);
+    inputs = await recursiveInputAccount(browser, page, inputs);
   }
   // 2FA入力欄があるかをチェックする
   if (await page.$('[name="2fa_code"]').then((res) => !!res)) {
