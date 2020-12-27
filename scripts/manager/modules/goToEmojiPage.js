@@ -4,6 +4,7 @@ const isEmail = require("../../utilities/isEmail");
 const isInputs = require("../../utilities/isInputs");
 const recursiveInputWorkspace = require("./recursiveInputWorkspace");
 const recursiveInputAccount = require("./recursiveInputAccount");
+const recursiveInput2FA = require("./recursiveInput2FA");
 
 const goToEmojiPage = async (browser, page, inputs) => {
   const TIME = inputs.time;
@@ -43,42 +44,10 @@ const goToEmojiPage = async (browser, page, inputs) => {
   if (await page.$(".c-input_text--with_error").then((res) => !!res)) {
     inputs = await recursiveInputAccount(browser, page, inputs);
   }
-  // 2FA入力欄があるかをチェックする
+
+  // 2FA入力欄があったら入力させる
   if (await page.$('[name="2fa_code"]').then((res) => !!res)) {
-    // 2FA入力欄があれば inquirer を起動して入力させる
-    const _auth = async () => {
-      // 前の入力を空にしておく
-      await page.$eval('[name="2fa_code"]', (e) => (e.value = ""));
-      // 2FA試行
-      try {
-        const { twofactor_code } = await inquirer.prompt({
-          type: "password",
-          name: "twofactor_code",
-          mask: "*",
-          message: "2FA コードを入力してください:",
-          validate: isInputs,
-        });
-        // フォームに入力して submit する
-        await page.type('[name="2fa_code"]', twofactor_code);
-        await Promise.all([
-          page.click("#signin_btn"),
-          page.waitForNavigation({ waitUntil: "networkidle0" }),
-        ]);
-        // 2FA入力欄がなかったら2FA認証できたと見なして再帰処理を抜ける
-        if (await page.$('[name="2fa_code"]').then((res) => !res)) {
-          console.info("2FA Verified!");
-          // 2FA 利用のフラグを立てる
-          inputs.twofactor_code = true;
-          return;
-        }
-        // 2FA認証できるまで何度でもトライ！
-        await _auth();
-      } catch (e) {
-        return e;
-      }
-    };
-    // 再帰処理をスタートする
-    await _auth();
+    inputs = await recursiveInput2FA(browser, page, inputs);
   }
   // グローバル変数 boot_data と、カスタム絵文字セクションが見つかるまで待つ
   await Promise.all([
