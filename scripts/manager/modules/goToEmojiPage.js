@@ -1,7 +1,3 @@
-const inquirer = require("inquirer");
-
-const isEmail = require("../../utilities/isEmail");
-const isInputs = require("../../utilities/isInputs");
 const recursiveInputWorkspace = require("./recursiveInputWorkspace");
 const recursiveInputAccount = require("./recursiveInputAccount");
 const recursiveInput2FA = require("./recursiveInput2FA");
@@ -22,19 +18,18 @@ const goToEmojiPage = async (browser, page, inputs) => {
   if (await page.$("#signin_form").then((res) => !res)) {
     inputs = await recursiveInputWorkspace(page, inputs);
   }
-  // Recaptcha があるかをチェックする
+
+  // CAPTCHA が出ていたら諦めて終了する
   if (await page.$("#slack_captcha").then((res) => !!res)) {
-    // Recaptcha があったら無理なので諦める
     console.error(
       "[ERROR]Oops, you might judged a bot. Please wait and try again."
     );
     await browser.close();
   }
-  // ログイン email を入力する
+
+  // email とパスワードを入力してサインインする
   await page.type("#email", inputs.email);
-  // パスワードを入力する
   await page.type("#password", inputs.password);
-  // 「サインイン」する
   await Promise.all([
     page.click("#signin_btn"),
     page.waitForNavigation({ waitUntil: ["load", "networkidle2"] }),
