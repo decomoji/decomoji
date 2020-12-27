@@ -27,7 +27,12 @@ const RENAME_INCLUDE_ITEMS = [
     alias_for: "euc-jp",
   },
 ];
-const RENAME_EXCLUDE_ITEMS = ["nasca\\343\\201\\247", "joinsiyo", "zyoinsiyo"];
+const RENAME_EXCLUDE_ITEMS = [
+  "nasca\\343\\201\\247",
+  "joinsiyo",
+  "zyoinsiyo",
+  "true false",
+];
 
 // デコモジオブジェクトの格納先
 const Seeds = {

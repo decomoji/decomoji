@@ -11,8 +11,6 @@ const remover = async (inputs) => {
     debug: DEBUG,
     log: LOG,
     time: TIME,
-    twofactor_code: TWOFACTOR_CODE,
-    workspace: WORKSPACE,
   } = inputs;
 
   let i = 0; // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
@@ -30,7 +28,10 @@ const remover = async (inputs) => {
     const page = await browser.newPage();
 
     // カスタム絵文字管理画面へ遷移する
-    inputs = await goToEmojiPage(page, inputs);
+    inputs = await goToEmojiPage(browser, page, inputs);
+
+    // 再入力されているかもしれないので取り直す
+    const { twofactor_code: TWOFACTOR_CODE, workspace: WORKSPACE } = inputs;
 
     // ローカルのデコモジが存在しなかったらエラーにして終了する
     if (localDecomojiListLength === 0) {
