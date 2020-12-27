@@ -2,6 +2,7 @@ const inquirer = require("inquirer");
 
 const isEmail = require("../../utilities/isEmail");
 const isInputs = require("../../utilities/isInputs");
+const recursiveInputWorkspace = require("./recursiveInputWorkspace");
 
 const goToEmojiPage = async (browser, page, inputs) => {
   const TIME = inputs.time;
@@ -14,38 +15,10 @@ const goToEmojiPage = async (browser, page, inputs) => {
       waitUntil: "domcontentloaded",
     }
   );
-  // ログイン画面に遷移できたかをチェックする
+
+  // チームが存在しない場合、workspace を再入力させる
   if (await page.$("#signin_form").then((res) => !res)) {
-    // おそらくチームが存在しない場合なので inquirer を起動して workspace を再入力させる
-    const _retry = async (failedWorkspace) => {
-      try {
-        const retry = await inquirer.prompt({
-          type: "input",
-          name: "workspace",
-          message: `${failedWorkspace} は見つかりませんでした。ワークスペースを再度入力してください:`,
-          validate: isInputs,
-        });
-        // ログイン画面に再び遷移する
-        await page.goto(
-          `https://${retry.workspace}.slack.com/?redir=%2Fcustomize%2Femoji#/`,
-          {
-            waitUntil: "domcontentloaded",
-          }
-        );
-        // ログイン画面に遷移できたかを再びチェックし、できていたら再帰処理を抜ける
-        if (await page.$("#signin_form").then((res) => !!res)) {
-          // チーム名を保存し直す
-          inputs.workspace = retry.workspace;
-          return;
-        }
-        // ログインページに到達できるまで何度でもトライ！
-        await _retry(retry.workspace);
-      } catch (e) {
-        return e;
-      }
-    };
-    // 再帰処理をスタートする
-    await _retry(inputs.workspace);
+    inputs = await recursiveInputWorkspace(page, inputs);
   }
   // Recaptcha があるかをチェックする
   if (await page.$("#slack_captcha").then((res) => !!res)) {
