@@ -3,7 +3,7 @@ const inquirer = require("inquirer");
 const isEmail = require("../../utilities/isEmail");
 const isInputs = require("../../utilities/isInputs");
 
-const goToEmojiPage = async (page, inputs) => {
+const goToEmojiPage = async (browser, page, inputs) => {
   const TIME = inputs.time;
 
   TIME && console.time("[Login time]");

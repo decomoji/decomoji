@@ -30,7 +30,7 @@ const pretender = async (inputs) => {
     const page = await browser.newPage();
 
     // カスタム絵文字管理画面へ遷移する
-    inputs = await goToEmojiPage(page, inputs);
+    inputs = await goToEmojiPage(browser, page, inputs);
 
     // ローカルのデコモジが存在しなかったらエラーにして終了する
     if (localDecomojiListLength === 0) {
