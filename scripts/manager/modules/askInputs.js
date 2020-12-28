@@ -1,9 +1,29 @@
 const inquirer = require("inquirer");
 
 const convertToLowerCasedArray = require("../../utilities/convertToLowerCasedArray");
+const getGitTagArray = require("../../utilities/getGitTagArray");
 const isEmail = require("../../utilities/isEmail");
 const isInputs = require("../../utilities/isInputs");
 const isSelects = require("../../utilities/isSelects");
+
+
+// リポジトリのタグから minor バージョンごとの選択肢を作る
+const VERSION_ITEMS = getGitTagArray("v5")
+  .sort((a, b) => b.localeCompare(a, undefined, { numeric: true }))
+  .reduce((acc, tag, i, original) => {
+    const c_minor = tag.split(".")[1];
+    const o_minor = i > 0 && original[i - 1].split(".")[1];
+    // 同じマイナーバージョンならその value[] に追加する
+    if (c_minor === o_minor) {
+      acc[acc.length - 1].value.push(tag);
+      return acc;
+    }
+    // 新しいマイナーバージョンなら新しいオブジェクトを accumulator に追加する
+    return acc.concat({
+      name: `v5.${c_minor}.x`,
+      value: [tag],
+    });
+  }, []);
 
 // inquirer Setting
 const questions = [
@@ -55,50 +75,29 @@ const questions = [
   },
   {
     when: (answers) => {
-      return answers.mode === "upload";
+      return answers.mode === "upload" || answers.mode === "remove";
     },
-    type: "checkbox",
-    message: "登録するカテゴリーを選択してください:",
-    name: "configs",
+    type: "list",
+    message: "対象タイプを選択してください:",
+    name: "term",
     choices: [
       {
-        name: "基本セット",
-        value: "v5_basic",
+        name: "カテゴリー（basic, extra, explict のいずれかを選択）",
+        value: "category",
       },
       {
-        name: "拡張セット",
-        value: "v5_extra",
-      },
-      {
-        name: "露骨セット",
-        value: "v5_explicit",
+        name: "バージョン（ v5.*.* ごとに選択可能）",
+        value: "version",
       },
     ],
-    filter: convertToLowerCasedArray,
     validate: isSelects,
   },
   {
     when: (answers) => {
-      return answers.mode === "alias";
+      return answers.term === "category";
     },
     type: "checkbox",
-    name: "configs",
-    message: "登録するエイリアスを選択してください:",
-    choices: [
-      {
-        name: "v5 以降でファイル名を修正したもの",
-        value: "v5_rename",
-      },
-    ],
-    validate: isSelects,
-    filter: convertToLowerCasedArray,
-  },
-  {
-    when: (answers) => {
-      return answers.mode === "remove";
-    },
-    type: "checkbox",
-    message: "削除するカテゴリーを選択してください:",
+    message: "カテゴリーを選択してください:",
     name: "configs",
     choices: [
       {
@@ -116,6 +115,33 @@ const questions = [
       {
         name: "v5 以降でファイル名にミスがあったもの",
         value: "v5_fixed",
+      },
+    ],
+    filter: convertToLowerCasedArray,
+    validate: isSelects,
+  },
+  {
+    when: (answers) => {
+      return answers.term === "version";
+    },
+    type: "checkbox",
+    message: "バージョンを選択してください:",
+    name: "configs",
+    choices: [new inquirer.Separator(), ...VERSION_ITEMS],
+    validate: isSelects,
+    filter: convertToLowerCasedArray,
+  },
+  {
+    when: (answers) => {
+      return answers.mode === "alias";
+    },
+    type: "checkbox",
+    name: "configs",
+    message: "エイリアスを選択してください:",
+    choices: [
+      {
+        name: "v5 以降でファイル名を修正したもの",
+        value: "v5_rename",
       },
     ],
     filter: convertToLowerCasedArray,
