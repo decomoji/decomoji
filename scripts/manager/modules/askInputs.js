@@ -42,10 +42,6 @@ const CATEGORY_ITEMS = [
     name: "露骨セット",
     value: "v5_explicit",
   },
-  {
-    name: "v5 以降でファイル名にミスがあったもの",
-    value: "v5_fixed",
-  },
 ];
 
 // リポジトリのタグから minor バージョンごとの選択肢を作る
@@ -119,7 +115,17 @@ const questions = [
     type: "checkbox",
     message: "カテゴリーを選択してください:",
     name: "configs",
-    choices: CATEGORY_ITEMS,
+    choices: ({ mode }) => {
+      return mode === "remove"
+        ? [
+            ...CATEGORY_ITEMS,
+            {
+              name: "v5 以降でファイル名にミスがあったもの",
+              value: "v5_fixed",
+            },
+          ]
+        : CATEGORY_ITEMS;
+    },
     filter: convertToLowerCasedArray,
     validate: isSelects,
   },
