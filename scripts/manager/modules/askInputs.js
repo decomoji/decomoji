@@ -1,6 +1,5 @@
 const inquirer = require("inquirer");
 
-const convertToLowerCasedArray = require("../../utilities/convertToLowerCasedArray");
 const getGitTagArray = require("../../utilities/getGitTagArray");
 const isEmail = require("../../utilities/isEmail");
 const isInputs = require("../../utilities/isInputs");
@@ -153,7 +152,6 @@ const questions = [
         value: "v5_rename",
       },
     ],
-    filter: convertToLowerCasedArray,
     validate: isSelects,
   },
   // {
