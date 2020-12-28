@@ -6,6 +6,47 @@ const isEmail = require("../../utilities/isEmail");
 const isInputs = require("../../utilities/isInputs");
 const isSelects = require("../../utilities/isSelects");
 
+const MODE_ITEMS = [
+  {
+    name: "更新",
+    value: "update",
+  },
+  {
+    name: "登録",
+    value: "upload",
+  },
+  {
+    name: "削除",
+    value: "remove",
+  },
+  {
+    name: "エイリアス登録",
+    value: "alias",
+  },
+  {
+    name: "移行（v4 を v5 に置換）",
+    value: "migration",
+  },
+];
+
+const CATEGORY_ITEMS = [
+  {
+    name: "基本セット",
+    value: "v5_basic",
+  },
+  {
+    name: "拡張セット",
+    value: "v5_extra",
+  },
+  {
+    name: "露骨セット",
+    value: "v5_explicit",
+  },
+  {
+    name: "v5 以降でファイル名にミスがあったもの",
+    value: "v5_fixed",
+  },
+];
 
 // リポジトリのタグから minor バージョンごとの選択肢を作る
 const VERSION_ITEMS = getGitTagArray("v5")
@@ -50,28 +91,7 @@ const questions = [
     type: "list",
     name: "mode",
     message: "モードを選択してください:",
-    choices: [
-      {
-        name: "更新",
-        value: "update",
-      },
-      {
-        name: "登録",
-        value: "upload",
-      },
-      {
-        name: "削除",
-        value: "remove",
-      },
-      {
-        name: "エイリアス登録",
-        value: "alias",
-      },
-      {
-        name: "移行（v4 を v5 に置換）",
-        value: "migration",
-      },
-    ],
+    choices: MODE_ITEMS,
   },
   {
     when: (answers) => {
@@ -99,24 +119,7 @@ const questions = [
     type: "checkbox",
     message: "カテゴリーを選択してください:",
     name: "configs",
-    choices: [
-      {
-        name: "基本セット",
-        value: "v5_basic",
-      },
-      {
-        name: "拡張セット",
-        value: "v5_extra",
-      },
-      {
-        name: "露骨セット",
-        value: "v5_explicit",
-      },
-      {
-        name: "v5 以降でファイル名にミスがあったもの",
-        value: "v5_fixed",
-      },
-    ],
+    choices: CATEGORY_ITEMS,
     filter: convertToLowerCasedArray,
     validate: isSelects,
   },
