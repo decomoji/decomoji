@@ -89,28 +89,24 @@ const questions = [
     choices: MODE_ITEMS,
   },
   {
-    when: (answers) => {
-      return answers.mode === "upload" || answers.mode === "remove";
-    },
+    when: ({ mode }) => mode === "upload" || mode === "remove",
     type: "list",
     message: "対象タイプを選択してください:",
     name: "term",
     choices: [
       {
-        name: "カテゴリー（basic, extra, explict のいずれかを選択）",
+        name: "カテゴリーごと",
         value: "category",
       },
       {
-        name: "バージョン（ v5.*.* ごとに選択可能）",
+        name: "バージョンごと",
         value: "version",
       },
     ],
     validate: isSelects,
   },
   {
-    when: (answers) => {
-      return answers.term === "category";
-    },
+    when: ({ term }) => term === "category",
     type: "checkbox",
     message: "カテゴリーを選択してください:",
     name: "configs",
@@ -125,24 +121,18 @@ const questions = [
           ]
         : CATEGORY_ITEMS;
     },
-    filter: convertToLowerCasedArray,
     validate: isSelects,
   },
   {
-    when: (answers) => {
-      return answers.term === "version";
-    },
+    when: ({ term }) => term === "version",
     type: "checkbox",
     message: "バージョンを選択してください:",
     name: "configs",
     choices: [new inquirer.Separator(), ...VERSION_ITEMS],
     validate: isSelects,
-    filter: convertToLowerCasedArray,
   },
   {
-    when: (answers) => {
-      return answers.mode === "alias";
-    },
+    when: ({ mode }) => mode === "alias",
     type: "checkbox",
     name: "configs",
     message: "エイリアスを選択してください:",
