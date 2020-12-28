@@ -144,33 +144,6 @@ const questions = [
     ],
     validate: isSelects,
   },
-  // {
-  //   type: "list",
-  //   name: "suffix",
-  //   message: "Select suffix mode.",
-  //   choices: [
-  //     {
-  //       name: "nothing",
-  //       value: false,
-  //     },
-  //     {
-  //       name: "recommended ('_dcmj')",
-  //       value: true,
-  //     },
-  //     {
-  //       name: "custom",
-  //     },
-  //   ],
-  //   default: true,
-  // },
-  // {
-  //   type: "input",
-  //   name: "customSuffix",
-  //   message: "Enter your suffix.",
-  //   when: function (answers) {
-  //     return answers.suffix === "custom";
-  //   },
-  // },
 ];
 
 module.exports = (callback) => {
