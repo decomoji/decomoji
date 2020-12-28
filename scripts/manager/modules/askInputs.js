@@ -144,6 +144,24 @@ const questions = [
     ],
     validate: isSelects,
   },
+  {
+    when: ({ mode }) =>
+      mode === "update" || mode === "remove" || mode === "migration",
+    type: "list",
+    message: "削除の強さを選択してください:",
+    name: "forceRemove",
+    choices: [
+      {
+        name: "強（権限があれば他メンバーが登録したデコモジも消す）",
+        value: true,
+      },
+      {
+        name: "弱（自分が登録したデコモジだけ消す）",
+        value: false,
+      },
+    ],
+    validate: isSelects,
+  },
 ];
 
 module.exports = (callback) => {
