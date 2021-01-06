@@ -7,32 +7,7 @@ const getMergedDiffOfCategories = require("../utilities/getMergedDiffOfCategorie
 const getMergedDiffOfManages = require("../utilities/getMergedDiffOfManages");
 const writeJsonFileSync = require("../utilities/writeJsonFileSync");
 
-// 固定値
-const CATEGORY_INCLUDE_ITEMS = [
-  {
-    name: "joinsiyo",
-    path: "decomoji/extra/joinsiyo.png",
-    created: "v5.0.0",
-    updated: "v5.14.1",
-  },
-  {
-    name: "jojo",
-    path: "decomoji/extra/jojo.png",
-    created: "v5.15.0",
-  },
-];
-const RENAME_INCLUDE_ITEMS = [
-  {
-    name: "euc_jp",
-    alias_for: "euc-jp",
-  },
-];
-const RENAME_EXCLUDE_ITEMS = [
-  "nasca\\343\\201\\247",
-  "joinsiyo",
-  "zyoinsiyo",
-  "true false",
-];
+const { ADDITIONALS } = require("../models/constants");
 
 // デコモジオブジェクトの格納先
 const Seeds = {
@@ -91,7 +66,7 @@ Object.entries(Seeds.categories).forEach((entry) => {
   if (list.length < 1) return;
   const _list =
     category === "extra" || category === "all"
-      ? list.concat(CATEGORY_INCLUDE_ITEMS)
+      ? list.concat(ADDITIONALS.extra)
       : list;
   writeJsonFileSync(
     _list
@@ -104,12 +79,7 @@ Object.entries(Seeds.categories).forEach((entry) => {
 // v5_fixed.json, v5_rename.json を作る
 Object.entries(Seeds.manages).forEach((entry) => {
   const [manage, list] = entry;
-  const _list =
-    manage === "rename"
-      ? list
-          .concat(RENAME_INCLUDE_ITEMS)
-          .filter(({ name }) => !RENAME_EXCLUDE_ITEMS.includes(name))
-      : list;
+  const _list = manage === "rename" ? list.concat(ADDITIONALS.rename) : list;
   writeJsonFileSync(
     _list.sort((a, b) => a.name.localeCompare(b.name)),
     `./configs/${v(TAG_PREFIX)}_${manage}.json`
