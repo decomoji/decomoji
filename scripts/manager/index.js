@@ -81,10 +81,15 @@ mode       : ${_inputs.mode}`);
       console.log("All migration step has completed!");
       break;
     case "update":
-      console.log("Remove 'v5_fixed' starting...");
+      const removeConfigs =
+        _inputs.term === "version" ? _inputs.configs : ["v5_fixed"];
+      console.log(`Remove "${removeConfigs}" starting...`);
       await remover({
         ..._inputs,
-        ...{ mode: "remove", configs: ["v5_fixed"] },
+        ...{
+          mode: "remove",
+          configs: removeConfigs,
+        },
       });
       console.log("Upload 'v5_basic, v5_extra' starting...");
       await uploader({
