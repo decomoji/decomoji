@@ -89,7 +89,8 @@ const questions = [
     choices: MODE_ITEMS,
   },
   {
-    when: ({ mode }) => mode === "upload" || mode === "remove",
+    when: ({ mode }) =>
+      mode === "update" || mode === "upload" || mode === "remove",
     type: "list",
     message: "対象タイプを選択してください:",
     name: "term",
