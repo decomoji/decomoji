@@ -1,5 +1,6 @@
 const convertFilepathToBasename = require("./convertFilepathToBasename");
 const convertToDecomojiObject = require("./convertToDecomojiObject");
+const { IGNORES } = require("../models/constants");
 
 // diff-filter の結果を { fixed, upload, rename } に再分配したオブジェクトを返す
 const getDecomojiDiffAsFilterMode = (diff, tag) => {
@@ -46,9 +47,15 @@ const getDecomojiDiffAsFilterMode = (diff, tag) => {
   });
 
   return {
-    fixed: fixed.sort((a, b) => a.name.localeCompare(b.name)),
-    upload: upload.sort((a, b) => a.name.localeCompare(b.name)),
-    rename: rename.sort((a, b) => a.name.localeCompare(b.name)),
+    fixed: fixed
+      .filter(({ name }) => !IGNORES.extra.includes(name))
+      .sort((a, b) => a.name.localeCompare(b.name)),
+    upload: upload
+      .filter(({ name }) => !IGNORES.extra.includes(name))
+      .sort((a, b) => a.name.localeCompare(b.name)),
+    rename: rename
+      .filter(({ name }) => !IGNORES.rename.includes(name))
+      .sort((a, b) => a.name.localeCompare(b.name)),
   };
 };
 
