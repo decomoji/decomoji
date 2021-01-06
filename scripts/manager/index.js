@@ -29,6 +29,7 @@ const main = async (inputs) => {
     email: inputs.email,
     password: inputs.password,
     mode: inputs.mode,
+    updateMode: inputs.mode === "update",
     term: inputs.term,
     configs: inputs.configs,
     forceRemove: inputs.forceRemove,
@@ -44,6 +45,7 @@ const main = async (inputs) => {
 workspace  : https://${_inputs.workspace}.slack.com/
 email      : ${_inputs.email}
 mode       : ${_inputs.mode}`);
+  _inputs.updateMode && console.info(`updateMode : ${_inputs.updateMode}`);
   _inputs.term && console.info(`term       : ${_inputs.term}`);
   _inputs.configs && console.info(`configs    : ${_inputs.configs}`);
   _inputs.forceRemove && console.info(`forceRemove: ${_inputs.forceRemove}`);
