@@ -12,6 +12,7 @@ const remover = async (inputs) => {
     log: LOG,
     term: TERM,
     time: TIME,
+    updateMode: UPDATE,
   } = inputs;
 
   let i = 0; // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
@@ -20,7 +21,7 @@ const remover = async (inputs) => {
   const localDecomojiList = getLocalJson(
     CONFIGS,
     TERM,
-    ["fixed", "upload"],
+    UPDATE ? ["fixed"] : ["fixed", "upload"],
     LOG
   );
   const localDecomojiListLength = localDecomojiList.length;
