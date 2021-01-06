@@ -91,12 +91,12 @@ mode       : ${_inputs.mode}`);
           configs: removeConfigs,
         },
       });
-      console.log("Upload 'v5_basic, v5_extra' starting...");
+      console.log(`Upload "${_inputs.configs}" starting...`);
       await uploader({
         ..._inputs,
-        ...{ mode: "upload", configs: ["v5_basic", "v5_extra"] },
+        ...{ mode: "upload" },
       });
-      console.log("Register 'v5_rename' starting...");
+      console.log(`Register "${_inputs.configs}" starting...`);
       await pretender({
         ..._inputs,
         ...{ mode: "alias", configs: ["v5_rename"] },
