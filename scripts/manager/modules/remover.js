@@ -22,6 +22,7 @@ const remover = async (inputs) => {
     CONFIGS,
     TERM,
     UPDATE ? ["fixed"] : ["fixed", "upload"],
+    "remover",
     LOG
   );
   const localDecomojiListLength = localDecomojiList.length;
