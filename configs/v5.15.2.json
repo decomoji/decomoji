@@ -1,11 +1,5 @@
 {
-  "fixed": [
-    {
-      "name": "true false",
-      "path": "decomoji/extra/true false.png",
-      "removed": "v5.15.2"
-    }
-  ],
+  "fixed": [],
   "upload": [
     {
       "name": "truefalse",
@@ -13,5 +7,5 @@
       "created": "v5.15.2"
     }
   ],
-  "rename": [{ "name": "true false", "alias_for": "truefalse" }]
+  "rename": []
 }
