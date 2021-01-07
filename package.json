@@ -22,8 +22,9 @@
   "homepage": "https://github.com/decomoji/decomoji#readme",
   "devDependencies": {
     "commander": "^5.1.0",
-    "commitizen": "^4.1.2",
+    "commitizen": "^4.2.2",
     "cz-customizable": "^6.2.0",
+    "date-fns": "^2.16.1",
     "email-validator": "^2.0.4",
     "husky": "^4.2.5",
     "imagemin": "^7.0.1",
