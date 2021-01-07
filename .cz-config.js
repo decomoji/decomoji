@@ -50,6 +50,7 @@ module.exports = {
     { name: "docs" },
     { name: "generator" },
     { name: "manager" },
+    { name: "models" },
     { name: "utilities" },
     { name: "_" }, // その他
   ],
