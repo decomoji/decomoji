@@ -2,6 +2,7 @@ const inquirer = require("inquirer");
 const format = require("date-fns/format");
 
 const getGitTagArray = require("../../utilities/getGitTagArray");
+const getGitTaggingDateArray = require("../../utilities/getGitTaggingDateArray");
 const isEmail = require("../../utilities/isEmail");
 const isInputs = require("../../utilities/isInputs");
 const isSelects = require("../../utilities/isSelects");
@@ -58,6 +59,22 @@ const MONTH_LIST = [
   "Nov",
   "Dec",
 ];
+
+const V5_TAGGING_DATES = getGitTaggingDateArray()
+  .filter((v) => /^v5/.test(v))
+  .map((v) => {
+    const [tag, ...dates] = v.split(" ");
+    const [week, month, day, time, year, diff] = dates.filter((v) => v !== "");
+    const mn = MONTH_LIST.indexOf(month);
+    return [tag, format(new Date(year, mn, day), "yyyy年M月d日公開")];
+  })
+  .reduce(
+    (acc, value) => ({
+      ...acc,
+      ...{ [value[0]]: value[1] },
+    }),
+    {}
+  );
 // inquirer Setting
 const questions = [
   {
