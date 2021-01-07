@@ -1,4 +1,5 @@
 const inquirer = require("inquirer");
+const format = require("date-fns/format");
 
 const getGitTagArray = require("../../utilities/getGitTagArray");
 const isEmail = require("../../utilities/isEmail");
@@ -42,24 +43,6 @@ const CATEGORY_ITEMS = [
     value: "v5_explicit",
   },
 ];
-
-// リポジトリのタグから minor バージョンごとの選択肢を作る
-const VERSION_ITEMS = getGitTagArray("v5")
-  .sort((a, b) => b.localeCompare(a, undefined, { numeric: true }))
-  .reduce((acc, tag, i, original) => {
-    const c_minor = tag.split(".")[1];
-    const o_minor = i > 0 && original[i - 1].split(".")[1];
-    // 同じマイナーバージョンならその value[] に追加する
-    if (c_minor === o_minor) {
-      acc[acc.length - 1].value.push(tag);
-      return acc;
-    }
-    // 新しいマイナーバージョンなら新しいオブジェクトを accumulator に追加する
-    return acc.concat({
-      name: `v5.${c_minor}.x`,
-      value: [tag],
-    });
-  }, []);
 
 // inquirer Setting
 const questions = [
@@ -129,7 +112,7 @@ const questions = [
     type: "checkbox",
     message: "バージョンを選択してください:",
     name: "configs",
-    choices: [new inquirer.Separator(), ...VERSION_ITEMS],
+    choices: [new inquirer.Separator(), ...[]],
     validate: isSelects,
   },
   {
