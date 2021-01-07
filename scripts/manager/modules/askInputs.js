@@ -151,7 +151,7 @@ const questions = [
     type: "checkbox",
     message: "バージョンを選択してください:",
     name: "configs",
-    choices: [new inquirer.Separator(), ...[]],
+    choices: [new inquirer.Separator(), ...FULL_VERSIONS_ITEMS],
     validate: isSelects,
   },
   {
