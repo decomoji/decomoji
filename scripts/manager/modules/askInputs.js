@@ -75,6 +75,14 @@ const V5_TAGGING_DATES = getGitTaggingDateArray()
     }),
     {}
   );
+
+const FULL_VERSIONS_ITEMS = getGitTagArray("v5")
+  .sort((a, b) => b.localeCompare(a, undefined, { numeric: true }))
+  .map((tag) => ({
+    name: `${tag}（${V5_TAGGING_DATES[tag]}）`,
+    value: tag,
+  }));
+
 // inquirer Setting
 const questions = [
   {
