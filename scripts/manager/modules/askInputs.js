@@ -171,7 +171,12 @@ const questions = [
     when: ({ mode }) =>
       mode === "update" || mode === "remove" || mode === "migration",
     type: "list",
-    message: "削除の強さを選択してください:",
+    message: ({ mode }) => {
+      const common = "削除の強さを選択してください:";
+      const upgrade =
+        "更新及び移行モードでは修正された古いデコモジを削除します。";
+      return mode === "remove" ? `${common}` : `${upgrade}${common}`;
+    },
     name: "forceRemove",
     choices: [
       {
