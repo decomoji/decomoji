@@ -2427,7 +2427,11 @@
       "path": "decomoji/extra/tanntekizumi.png",
       "created": "v5.12.0"
     },
-    { "name": "toho", "path": "decomoji/extra/toho.png", "created": "v5.12.0" },
+    {
+      "name": "toho",
+      "path": "decomoji/extra/toho.png",
+      "created": "v5.12.0"
+    },
     {
       "name": "tohoari",
       "path": "decomoji/extra/tohoari.png",
@@ -3803,7 +3807,11 @@
       "path": "decomoji/extra/watasinoyure.png",
       "created": "v5.12.0"
     },
-    { "name": "yoti", "path": "decomoji/extra/yoti.png", "created": "v5.12.0" },
+    {
+      "name": "yoti",
+      "path": "decomoji/extra/yoti.png",
+      "created": "v5.12.0"
+    },
     {
       "name": "yotiaru",
       "path": "decomoji/extra/yotiaru.png",
@@ -4579,7 +4587,11 @@
       "path": "decomoji/extra/yurasite.png",
       "created": "v5.12.0"
     },
-    { "name": "yure", "path": "decomoji/extra/yure.png", "created": "v5.12.0" },
+    {
+      "name": "yure",
+      "path": "decomoji/extra/yure.png",
+      "created": "v5.12.0"
+    },
     {
       "name": "yureari",
       "path": "decomoji/extra/yureari.png",

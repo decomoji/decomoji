@@ -5,7 +5,11 @@
       "path": "decomoji/extra/moukannsenn.png",
       "updated": "v5.3.0"
     },
-    { "name": "yasei", "path": "decomoji/extra/yasei.png", "updated": "v5.3.0" }
+    {
+      "name": "yasei",
+      "path": "decomoji/extra/yasei.png",
+      "updated": "v5.3.0"
+    }
   ],
   "upload": [
     {
@@ -363,7 +367,11 @@
       "path": "decomoji/extra/arupaka.png",
       "created": "v5.3.0"
     },
-    { "name": "arya", "path": "decomoji/extra/arya.png", "created": "v5.3.0" },
+    {
+      "name": "arya",
+      "path": "decomoji/extra/arya.png",
+      "created": "v5.3.0"
+    },
     {
       "name": "asahahima",
       "path": "decomoji/extra/asahahima.png",
@@ -784,7 +792,11 @@
       "path": "decomoji/extra/badoenn.png",
       "created": "v5.3.0"
     },
-    { "name": "bae", "path": "decomoji/extra/bae.png", "created": "v5.3.0" },
+    {
+      "name": "bae",
+      "path": "decomoji/extra/bae.png",
+      "created": "v5.3.0"
+    },
     {
       "name": "baenarabi",
       "path": "decomoji/extra/baenarabi.png",
@@ -1400,8 +1412,16 @@
       "path": "decomoji/extra/byoudehusai.png",
       "created": "v5.3.0"
     },
-    { "name": "comp", "path": "decomoji/extra/comp.png", "created": "v5.3.0" },
-    { "name": "css", "path": "decomoji/extra/css.png", "created": "v5.3.0" },
+    {
+      "name": "comp",
+      "path": "decomoji/extra/comp.png",
+      "created": "v5.3.0"
+    },
+    {
+      "name": "css",
+      "path": "decomoji/extra/css.png",
+      "created": "v5.3.0"
+    },
     {
       "name": "cssdeyaro",
       "path": "decomoji/extra/cssdeyaro.png",
@@ -2112,7 +2132,11 @@
       "path": "decomoji/extra/donataka.png",
       "created": "v5.3.0"
     },
-    { "name": "done", "path": "decomoji/extra/done.png", "created": "v5.3.0" },
+    {
+      "name": "done",
+      "path": "decomoji/extra/done.png",
+      "created": "v5.3.0"
+    },
     {
       "name": "donnnahuku",
       "path": "decomoji/extra/donnnahuku.png",
@@ -2343,7 +2367,11 @@
       "path": "decomoji/extra/doudou.png",
       "created": "v5.3.0"
     },
-    { "name": "doui", "path": "decomoji/extra/doui.png", "created": "v5.3.0" },
+    {
+      "name": "doui",
+      "path": "decomoji/extra/doui.png",
+      "created": "v5.3.0"
+    },
     {
       "name": "douiari",
       "path": "decomoji/extra/douiari.png",
@@ -2869,7 +2897,11 @@
       "path": "decomoji/extra/fabotteowari.png",
       "created": "v5.3.0"
     },
-    { "name": "faia", "path": "decomoji/extra/faia.png", "created": "v5.3.0" },
+    {
+      "name": "faia",
+      "path": "decomoji/extra/faia.png",
+      "created": "v5.3.0"
+    },
     {
       "name": "famiri-taimu",
       "path": "decomoji/extra/famiri-taimu.png",
@@ -2925,7 +2957,11 @@
       "path": "decomoji/extra/gannnenn.png",
       "created": "v5.3.0"
     },
-    { "name": "gari", "path": "decomoji/extra/gari.png", "created": "v5.3.0" },
+    {
+      "name": "gari",
+      "path": "decomoji/extra/gari.png",
+      "created": "v5.3.0"
+    },
     {
       "name": "gatai",
       "path": "decomoji/extra/gatai.png",
@@ -3336,7 +3372,11 @@
       "path": "decomoji/extra/gyoumuitaku.png",
       "created": "v5.3.0"
     },
-    { "name": "h5bp", "path": "decomoji/extra/h5bp.png", "created": "v5.3.0" },
+    {
+      "name": "h5bp",
+      "path": "decomoji/extra/h5bp.png",
+      "created": "v5.3.0"
+    },
     {
       "name": "ha-domo-do",
       "path": "decomoji/extra/ha-domo-do.png",
@@ -3572,7 +3612,11 @@
       "path": "decomoji/extra/hayasakosopawa-.png",
       "created": "v5.3.0"
     },
-    { "name": "hayo", "path": "decomoji/extra/hayo.png", "created": "v5.3.0" },
+    {
+      "name": "hayo",
+      "path": "decomoji/extra/hayo.png",
+      "created": "v5.3.0"
+    },
     {
       "name": "hazimetekiita",
       "path": "decomoji/extra/hazimetekiita.png",
@@ -3703,13 +3747,21 @@
       "path": "decomoji/extra/himetui.png",
       "created": "v5.3.0"
     },
-    { "name": "himo", "path": "decomoji/extra/himo.png", "created": "v5.3.0" },
+    {
+      "name": "himo",
+      "path": "decomoji/extra/himo.png",
+      "created": "v5.3.0"
+    },
     {
       "name": "hinemosu",
       "path": "decomoji/extra/hinemosu.png",
       "created": "v5.3.0"
     },
-    { "name": "hinn", "path": "decomoji/extra/hinn.png", "created": "v5.3.0" },
+    {
+      "name": "hinn",
+      "path": "decomoji/extra/hinn.png",
+      "created": "v5.3.0"
+    },
     {
       "name": "hitowonikunndetumiwonikumazu",
       "path": "decomoji/extra/hitowonikunndetumiwonikumazu.png",
@@ -3840,7 +3892,11 @@
       "path": "decomoji/extra/hukuri.png",
       "created": "v5.3.0"
     },
-    { "name": "ieie", "path": "decomoji/extra/ieie.png", "created": "v5.3.0" },
+    {
+      "name": "ieie",
+      "path": "decomoji/extra/ieie.png",
+      "created": "v5.3.0"
+    },
     {
       "name": "itibuassyuku",
       "path": "decomoji/extra/itibuassyuku.png",
@@ -4526,7 +4582,11 @@
       "path": "decomoji/extra/otesuuokakesimasugananitozoyorosikuonegaimousiagemasu.png",
       "created": "v5.3.0"
     },
-    { "name": "seya", "path": "decomoji/extra/seya.png", "created": "v5.3.0" },
+    {
+      "name": "seya",
+      "path": "decomoji/extra/seya.png",
+      "created": "v5.3.0"
+    },
     {
       "name": "seyade",
       "path": "decomoji/extra/seyade.png",

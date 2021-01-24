@@ -651,7 +651,11 @@
       "path": "decomoji/extra/donozenngaku.png",
       "created": "v5.6.0"
     },
-    { "name": "eko", "path": "decomoji/extra/eko.png", "created": "v5.6.0" },
+    {
+      "name": "eko",
+      "path": "decomoji/extra/eko.png",
+      "created": "v5.6.0"
+    },
     {
       "name": "ekoari",
       "path": "decomoji/extra/ekoari.png",
@@ -2577,7 +2581,11 @@
       "path": "decomoji/extra/hebinokokyuu.png",
       "created": "v5.6.0"
     },
-    { "name": "hima", "path": "decomoji/extra/hima.png", "created": "v5.6.0" },
+    {
+      "name": "hima",
+      "path": "decomoji/extra/hima.png",
+      "created": "v5.6.0"
+    },
     {
       "name": "himaari",
       "path": "decomoji/extra/himaari.png",
@@ -3003,7 +3011,11 @@
       "path": "decomoji/extra/ienotyousei.png",
       "created": "v5.6.0"
     },
-    { "name": "iesu", "path": "decomoji/extra/iesu.png", "created": "v5.6.0" },
+    {
+      "name": "iesu",
+      "path": "decomoji/extra/iesu.png",
+      "created": "v5.6.0"
+    },
     {
       "name": "inunokokyuu",
       "path": "decomoji/extra/inunokokyuu.png",
@@ -3814,7 +3826,11 @@
       "path": "decomoji/extra/nikunokokyuu.png",
       "created": "v5.6.0"
     },
-    { "name": "no-", "path": "decomoji/extra/no-.png", "created": "v5.6.0" },
+    {
+      "name": "no-",
+      "path": "decomoji/extra/no-.png",
+      "created": "v5.6.0"
+    },
     {
       "name": "oninobata-",
       "path": "decomoji/extra/oninobata-.png",

@@ -511,7 +511,11 @@
       "path": "decomoji/extra/hitorizumi.png",
       "created": "v5.9.0"
     },
-    { "name": "hogo", "path": "decomoji/extra/hogo.png", "created": "v5.9.0" },
+    {
+      "name": "hogo",
+      "path": "decomoji/extra/hogo.png",
+      "created": "v5.9.0"
+    },
     {
       "name": "hogoari",
       "path": "decomoji/extra/hogoari.png",
@@ -2157,7 +2161,11 @@
       "path": "decomoji/extra/kakinnsasero.png",
       "created": "v5.9.0"
     },
-    { "name": "kako", "path": "decomoji/extra/kako.png", "created": "v5.9.0" },
+    {
+      "name": "kako",
+      "path": "decomoji/extra/kako.png",
+      "created": "v5.9.0"
+    },
     {
       "name": "kakoari",
       "path": "decomoji/extra/kakoari.png",
@@ -4408,7 +4416,11 @@
       "path": "decomoji/extra/watasinozyunnkyo.png",
       "created": "v5.9.0"
     },
-    { "name": "yami", "path": "decomoji/extra/yami.png", "created": "v5.9.0" },
+    {
+      "name": "yami",
+      "path": "decomoji/extra/yami.png",
+      "created": "v5.9.0"
+    },
     {
       "name": "yamimomata",
       "path": "decomoji/extra/yamimomata.png",

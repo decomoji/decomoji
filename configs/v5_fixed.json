@@ -1,5 +1,9 @@
 [
-  { "name": "10bai", "path": "decomoji/extra/10bai.png", "updated": "v5.2.0" },
+  {
+    "name": "10bai",
+    "path": "decomoji/extra/10bai.png",
+    "updated": "v5.2.0"
+  },
   {
     "name": "10baimasi",
     "path": "decomoji/extra/10baimasi.png",
@@ -40,7 +44,11 @@
     "path": "decomoji/extra/8kterebi.png",
     "updated": "v5.1.1"
   },
-  { "name": "a-ne", "path": "decomoji/basic/a-ne.png", "removed": "v5.1.0" },
+  {
+    "name": "a-ne",
+    "path": "decomoji/basic/a-ne.png",
+    "removed": "v5.1.0"
+  },
   {
     "name": "ajairu",
     "path": "decomoji/extra/ajairu.png",
@@ -86,13 +94,21 @@
     "path": "decomoji/extra/bajetto.png",
     "removed": "v5.4.2"
   },
-  { "name": "bau", "path": "decomoji/extra/bau.png", "removed": "v5.4.1" },
+  {
+    "name": "bau",
+    "path": "decomoji/extra/bau.png",
+    "removed": "v5.4.1"
+  },
   {
     "name": "bekkakujoukyuusei",
     "path": "decomoji/extra/bekkakujoukyuusei.png",
     "removed": "v5.4.2"
   },
-  { "name": "bienn", "path": "decomoji/extra/bienn.png", "removed": "v5.4.2" },
+  {
+    "name": "bienn",
+    "path": "decomoji/extra/bienn.png",
+    "removed": "v5.4.2"
+  },
   {
     "name": "bijarilunn",
     "path": "decomoji/extra/bijarilunn.png",
@@ -473,7 +489,11 @@
     "path": "decomoji/extra/ittannkaijo.png",
     "removed": "v5.4.2"
   },
-  { "name": "ja-zi", "path": "decomoji/extra/ja-zi.png", "removed": "v5.4.2" },
+  {
+    "name": "ja-zi",
+    "path": "decomoji/extra/ja-zi.png",
+    "removed": "v5.4.2"
+  },
   {
     "name": "jaakudesu",
     "path": "decomoji/extra/jaakudesu.png",
@@ -524,7 +544,11 @@
     "path": "decomoji/extra/jabujabu.png",
     "removed": "v5.4.2"
   },
-  { "name": "jakku", "path": "decomoji/extra/jakku.png", "removed": "v5.4.2" },
+  {
+    "name": "jakku",
+    "path": "decomoji/extra/jakku.png",
+    "removed": "v5.4.2"
+  },
   {
     "name": "jasutoaidea",
     "path": "decomoji/extra/jasutoaidea.png",
@@ -540,13 +564,21 @@
     "path": "decomoji/extra/jeikueri.png",
     "removed": "v5.4.2"
   },
-  { "name": "joa", "path": "decomoji/extra/joa.png", "removed": "v5.4.2" },
+  {
+    "name": "joa",
+    "path": "decomoji/extra/joa.png",
+    "removed": "v5.4.2"
+  },
   {
     "name": "joinsiyo",
     "path": "decomoji/extra/joinsiyo.png",
     "removed": "v5.4.2"
   },
-  { "name": "jojo", "path": "decomoji/extra/jojo.png", "removed": "v5.4.2" },
+  {
+    "name": "jojo",
+    "path": "decomoji/extra/jojo.png",
+    "removed": "v5.4.2"
+  },
   {
     "name": "josuli",
     "path": "decomoji/extra/josuli.png",
@@ -617,7 +649,11 @@
     "path": "decomoji/extra/jugemuyatu.png",
     "removed": "v5.4.2"
   },
-  { "name": "junia", "path": "decomoji/extra/junia.png", "removed": "v5.4.2" },
+  {
+    "name": "junia",
+    "path": "decomoji/extra/junia.png",
+    "removed": "v5.4.2"
+  },
   {
     "name": "junikatu",
     "path": "decomoji/extra/junikatu.png",
@@ -893,7 +929,11 @@
     "path": "decomoji/extra/matasakujo.png",
     "removed": "v5.4.2"
   },
-  { "name": "meja-", "path": "decomoji/extra/meja-.png", "removed": "v5.4.2" },
+  {
+    "name": "meja-",
+    "path": "decomoji/extra/meja-.png",
+    "removed": "v5.4.2"
+  },
   {
     "name": "meja-debyu-",
     "path": "decomoji/extra/meja-debyu-.png",
@@ -959,7 +999,11 @@
     "path": "decomoji/extra/nyuujoukisei.png",
     "removed": "v5.4.2"
   },
-  { "name": "ojann", "path": "decomoji/extra/ojann.png", "removed": "v5.4.2" },
+  {
+    "name": "ojann",
+    "path": "decomoji/extra/ojann.png",
+    "removed": "v5.4.2"
+  },
   {
     "name": "ojouzudesune",
     "path": "decomoji/extra/ojouzudesune.png",
@@ -1050,7 +1094,11 @@
     "path": "decomoji/extra/ryouhousakujo.png",
     "removed": "v5.4.2"
   },
-  { "name": "sake", "path": "decomoji/extra/sake.png", "removed": "v5.9.3" },
+  {
+    "name": "sake",
+    "path": "decomoji/extra/sake.png",
+    "removed": "v5.9.3"
+  },
   {
     "name": "sakujo",
     "path": "decomoji/extra/sakujo.png",
@@ -1446,7 +1494,11 @@
     "path": "decomoji/extra/yasaiju-su.png",
     "removed": "v5.4.2"
   },
-  { "name": "yasei", "path": "decomoji/extra/yasei.png", "updated": "v5.3.0" },
+  {
+    "name": "yasei",
+    "path": "decomoji/extra/yasei.png",
+    "updated": "v5.3.0"
+  },
   {
     "name": "yonnjuubyoude",
     "path": "decomoji/extra/yonnjuubyoude.png",

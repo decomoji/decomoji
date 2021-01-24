@@ -1,246 +1,948 @@
 [
-  { "name": "50onnjunn", "alias_for": "50onnzyunn" },
-  { "name": "a-ne", "alias_for": "a-ne_" },
-  { "name": "ajairu", "alias_for": "azyairu" },
-  { "name": "ajenndawo", "alias_for": "azyenndawo" },
-  { "name": "anosakujo", "alias_for": "anosakuzyo" },
-  { "name": "arufabettojunn", "alias_for": "arufabettozyunn" },
-  { "name": "asanojunnbi", "alias_for": "asanozyunnbi" },
-  { "name": "bajetto", "alias_for": "bazyetto" },
-  { "name": "bau", "alias_for": "bau_" },
-  { "name": "bekkakujoukyuusei", "alias_for": "bekkakuzyoukyuusei" },
-  { "name": "bienn", "alias_for": "pienn" },
-  { "name": "bijarilunn", "alias_for": "bizyarilunn" },
-  { "name": "bijonari-", "alias_for": "bizyonari-" },
-  { "name": "bijonnsaikopasu", "alias_for": "bizyonnsaikopasu" },
-  { "name": "bijuarujouzumann", "alias_for": "bizyuaruzyouzumann" },
-  { "name": "bokunosakujo", "alias_for": "bokunosakuzyo" },
-  { "name": "bosutaijou", "alias_for": "bosutaizyou" },
-  { "name": "bosutoujou", "alias_for": "bosutouzyou" },
-  { "name": "daigekijou", "alias_for": "daigekizyou" },
-  { "name": "daigekijouohirome", "alias_for": "daigekizyouohirome" },
-  { "name": "daijobanai", "alias_for": "daizyobanai" },
-  { "name": "daijoubu", "alias_for": "daizyoubu" },
-  { "name": "daijoubu_", "alias_for": "daizyoubu_" },
-  { "name": "daijoubuda", "alias_for": "daizyoubuda" },
-  { "name": "daijoubuka", "alias_for": "daizyoubuka" },
-  { "name": "daijoubune", "alias_for": "daizyoubune" },
-  { "name": "daijoubuyo", "alias_for": "daizyoubuyo" },
-  { "name": "dakarajanaiga", "alias_for": "dakarazyanaiga" },
-  { "name": "dassuisyoujou", "alias_for": "dassuisyouzyou" },
-  { "name": "debagguzinja", "alias_for": "debagguzinnzya" },
-  { "name": "desunejanaiga", "alias_for": "desunezyanaiga" },
-  { "name": "dhite-ruwojuusi", "alias_for": "dhite-ruwozyuusi" },
-  { "name": "donosakujo", "alias_for": "donosakuzyo" },
-  { "name": "doujousikanai", "alias_for": "douzyousikanai" },
-  { "name": "eejanaika", "alias_for": "eezyanaika" },
-  { "name": "eimugajouzu", "alias_for": "eimugazyouzu" },
-  { "name": "ennjou", "alias_for": "ennzyou" },
-  { "name": "ennjouannkenn", "alias_for": "ennzyouannkenn" },
-  { "name": "ennjoumazoku", "alias_for": "ennzyoumazoku" },
-  { "name": "ennjousyouhou", "alias_for": "ennzyousyouhou" },
-  { "name": "ennoouhuka", "alias_for": "ennpouhuka" },
-  { "name": "euc_jp", "alias_for": "euc-jp" },
-  { "name": "gakurekisijou", "alias_for": "gakurekisizyou" },
-  { "name": "geijutu", "alias_for": "geizyutu" },
-  { "name": "gijutuhusai", "alias_for": "gizyutuhusai" },
-  { "name": "gijutupapa", "alias_for": "gizyutupapa" },
-  { "name": "gijutusyotenn", "alias_for": "gizyutusyotenn" },
-  { "name": "gyoukaihyoujunn", "alias_for": "gyoukaihyouzyunn" },
-  { "name": "harajukusaikyou", "alias_for": "harazyukusaikyou" },
-  { "name": "hattenntojou", "alias_for": "hattenntozyou" },
-  { "name": "hissujoukenn", "alias_for": "hissuzyoukenn" },
-  { "name": "hitoridehakikennja", "alias_for": "hitoridehakikennzya" },
-  { "name": "honnninntoujou", "alias_for": "honnninntouzyou" },
-  { "name": "hunnikiyamero", "alias_for": "hunnikideyaro" },
-  { "name": "iijann", "alias_for": "iizyann" },
-  { "name": "iinnjanaikana", "alias_for": "iinnzyanaikana" },
-  { "name": "ijoudesu", "alias_for": "izyoudesu" },
-  { "name": "ijourepossu", "alias_for": "izyourepossu" },
-  { "name": "ikokujoutyo", "alias_for": "ikokuzyoutyo" },
-  { "name": "imajasutonoomoituki", "alias_for": "imazyasutonoomoituki" },
-  { "name": "innta-nettojoutai", "alias_for": "innta-nettozyoutai" },
-  { "name": "irunndesujanaiga", "alias_for": "irunndesuzyanaiga" },
-  { "name": "itibusakujo", "alias_for": "itibusakuzyo" },
+  {
+    "name": "50onnjunn",
+    "alias_for": "50onnzyunn"
+  },
+  {
+    "name": "a-ne",
+    "alias_for": "a-ne_"
+  },
+  {
+    "name": "ajairu",
+    "alias_for": "azyairu"
+  },
+  {
+    "name": "ajenndawo",
+    "alias_for": "azyenndawo"
+  },
+  {
+    "name": "anosakujo",
+    "alias_for": "anosakuzyo"
+  },
+  {
+    "name": "arufabettojunn",
+    "alias_for": "arufabettozyunn"
+  },
+  {
+    "name": "asanojunnbi",
+    "alias_for": "asanozyunnbi"
+  },
+  {
+    "name": "bajetto",
+    "alias_for": "bazyetto"
+  },
+  {
+    "name": "bau",
+    "alias_for": "bau_"
+  },
+  {
+    "name": "bekkakujoukyuusei",
+    "alias_for": "bekkakuzyoukyuusei"
+  },
+  {
+    "name": "bienn",
+    "alias_for": "pienn"
+  },
+  {
+    "name": "bijarilunn",
+    "alias_for": "bizyarilunn"
+  },
+  {
+    "name": "bijonari-",
+    "alias_for": "bizyonari-"
+  },
+  {
+    "name": "bijonnsaikopasu",
+    "alias_for": "bizyonnsaikopasu"
+  },
+  {
+    "name": "bijuarujouzumann",
+    "alias_for": "bizyuaruzyouzumann"
+  },
+  {
+    "name": "bokunosakujo",
+    "alias_for": "bokunosakuzyo"
+  },
+  {
+    "name": "bosutaijou",
+    "alias_for": "bosutaizyou"
+  },
+  {
+    "name": "bosutoujou",
+    "alias_for": "bosutouzyou"
+  },
+  {
+    "name": "daigekijou",
+    "alias_for": "daigekizyou"
+  },
+  {
+    "name": "daigekijouohirome",
+    "alias_for": "daigekizyouohirome"
+  },
+  {
+    "name": "daijobanai",
+    "alias_for": "daizyobanai"
+  },
+  {
+    "name": "daijoubu",
+    "alias_for": "daizyoubu"
+  },
+  {
+    "name": "daijoubu_",
+    "alias_for": "daizyoubu_"
+  },
+  {
+    "name": "daijoubuda",
+    "alias_for": "daizyoubuda"
+  },
+  {
+    "name": "daijoubuka",
+    "alias_for": "daizyoubuka"
+  },
+  {
+    "name": "daijoubune",
+    "alias_for": "daizyoubune"
+  },
+  {
+    "name": "daijoubuyo",
+    "alias_for": "daizyoubuyo"
+  },
+  {
+    "name": "dakarajanaiga",
+    "alias_for": "dakarazyanaiga"
+  },
+  {
+    "name": "dassuisyoujou",
+    "alias_for": "dassuisyouzyou"
+  },
+  {
+    "name": "debagguzinja",
+    "alias_for": "debagguzinnzya"
+  },
+  {
+    "name": "desunejanaiga",
+    "alias_for": "desunezyanaiga"
+  },
+  {
+    "name": "dhite-ruwojuusi",
+    "alias_for": "dhite-ruwozyuusi"
+  },
+  {
+    "name": "donosakujo",
+    "alias_for": "donosakuzyo"
+  },
+  {
+    "name": "doujousikanai",
+    "alias_for": "douzyousikanai"
+  },
+  {
+    "name": "eejanaika",
+    "alias_for": "eezyanaika"
+  },
+  {
+    "name": "eimugajouzu",
+    "alias_for": "eimugazyouzu"
+  },
+  {
+    "name": "ennjou",
+    "alias_for": "ennzyou"
+  },
+  {
+    "name": "ennjouannkenn",
+    "alias_for": "ennzyouannkenn"
+  },
+  {
+    "name": "ennjoumazoku",
+    "alias_for": "ennzyoumazoku"
+  },
+  {
+    "name": "ennjousyouhou",
+    "alias_for": "ennzyousyouhou"
+  },
+  {
+    "name": "ennoouhuka",
+    "alias_for": "ennpouhuka"
+  },
+  {
+    "name": "euc_jp",
+    "alias_for": "euc-jp"
+  },
+  {
+    "name": "gakurekisijou",
+    "alias_for": "gakurekisizyou"
+  },
+  {
+    "name": "geijutu",
+    "alias_for": "geizyutu"
+  },
+  {
+    "name": "gijutuhusai",
+    "alias_for": "gizyutuhusai"
+  },
+  {
+    "name": "gijutupapa",
+    "alias_for": "gizyutupapa"
+  },
+  {
+    "name": "gijutusyotenn",
+    "alias_for": "gizyutusyotenn"
+  },
+  {
+    "name": "gyoukaihyoujunn",
+    "alias_for": "gyoukaihyouzyunn"
+  },
+  {
+    "name": "harajukusaikyou",
+    "alias_for": "harazyukusaikyou"
+  },
+  {
+    "name": "hattenntojou",
+    "alias_for": "hattenntozyou"
+  },
+  {
+    "name": "hissujoukenn",
+    "alias_for": "hissuzyoukenn"
+  },
+  {
+    "name": "hitoridehakikennja",
+    "alias_for": "hitoridehakikennzya"
+  },
+  {
+    "name": "honnninntoujou",
+    "alias_for": "honnninntouzyou"
+  },
+  {
+    "name": "hunnikiyamero",
+    "alias_for": "hunnikideyaro"
+  },
+  {
+    "name": "iijann",
+    "alias_for": "iizyann"
+  },
+  {
+    "name": "iinnjanaikana",
+    "alias_for": "iinnzyanaikana"
+  },
+  {
+    "name": "ijoudesu",
+    "alias_for": "izyoudesu"
+  },
+  {
+    "name": "ijourepossu",
+    "alias_for": "izyourepossu"
+  },
+  {
+    "name": "ikokujoutyo",
+    "alias_for": "ikokuzyoutyo"
+  },
+  {
+    "name": "imajasutonoomoituki",
+    "alias_for": "imazyasutonoomoituki"
+  },
+  {
+    "name": "innta-nettojoutai",
+    "alias_for": "innta-nettozyoutai"
+  },
+  {
+    "name": "irunndesujanaiga",
+    "alias_for": "irunndesuzyanaiga"
+  },
+  {
+    "name": "itibusakujo",
+    "alias_for": "itibusakuzyo"
+  },
   {
     "name": "itinitijuuutaiodottesyannpannakete",
     "alias_for": "itinitizyuuutaiodottesyannpannakete"
   },
-  { "name": "ittannkaijo", "alias_for": "ittannkaizyo" },
-  { "name": "ja-zi", "alias_for": "zya-zi" },
-  { "name": "jaakudesu", "alias_for": "zyaakudesu" },
-  { "name": "jaakukaiwai", "alias_for": "zyaakukaiwai" },
-  { "name": "jaakukana", "alias_for": "zyaakukana" },
-  { "name": "jaakumazoku", "alias_for": "zyaakumazoku" },
-  { "name": "jaakusiyo", "alias_for": "zyaakusiyo" },
-  { "name": "jaaok_", "alias_for": "zyaaok_" },
-  { "name": "jaasorede", "alias_for": "zyaasorede" },
-  { "name": "jabaniki", "alias_for": "zyabaniki" },
-  { "name": "jabatanienn", "alias_for": "zyabatanienn" },
-  { "name": "jabujabu", "alias_for": "zyabuzyabu" },
-  { "name": "jakku", "alias_for": "zyakku" },
-  { "name": "jasutoaidea", "alias_for": "zyasutoaidea" },
-  { "name": "jawatanienn", "alias_for": "zyawatanienn" },
-  { "name": "jeikueri", "alias_for": "zyeikueri" },
-  { "name": "joa", "alias_for": "zyoa" },
-  { "name": "jojo", "alias_for": "zyozyo" },
-  { "name": "josuli", "alias_for": "zyosuli" },
-  { "name": "joudannhayosikotyann", "alias_for": "zyoudannhayosikotyann" },
-  { "name": "jouhouhassinn", "alias_for": "zyouhouhassinn" },
-  { "name": "jouhourouei", "alias_for": "zyouhourouei" },
-  { "name": "jouhousyuusei", "alias_for": "zyouhousyuusei" },
-  { "name": "joukyuukokuminn", "alias_for": "zyoukyuukokuminn" },
-  { "name": "joukyuumazoku", "alias_for": "zyoukyuumazoku" },
-  { "name": "joukyuusei", "alias_for": "zyoukyuusei" },
-  { "name": "joukyuusyayo", "alias_for": "zyoukyuusyayo" },
-  { "name": "jounoutisissu", "alias_for": "zyounoutisissu" },
-  { "name": "jousisiyo", "alias_for": "zyousisiyo" },
-  { "name": "jousyamuri", "alias_for": "zyousyamuri" },
-  { "name": "jugemuyatu", "alias_for": "zyugemuyatu" },
-  { "name": "junia", "alias_for": "zyunia" },
-  { "name": "junikatu", "alias_for": "zyunikatu" },
-  { "name": "junite", "alias_for": "zyunite" },
-  { "name": "junnbibanntann", "alias_for": "zyunnbibanntann" },
-  { "name": "junnbibusoku", "alias_for": "zyunnbibusoku" },
-  { "name": "junnbihuyou", "alias_for": "zyunnbihuyou" },
-  { "name": "junnbiok", "alias_for": "zyunnbiok" },
-  { "name": "junnnameta", "alias_for": "zyunnnameta" },
-  { "name": "junnsuimazoku", "alias_for": "zyunnsuimazoku" },
-  { "name": "junnsuinatuyosa", "alias_for": "zyunnsuinatuyosa" },
-  { "name": "junnsuisabunn", "alias_for": "zyunnsuisabunn" },
-  { "name": "junnzisaikai", "alias_for": "zyunnzisaikai" },
-  { "name": "jusinnsennyou", "alias_for": "zyusinnsennyou" },
-  { "name": "jutakumakai", "alias_for": "zyutakumakai" },
-  { "name": "jutakumaou", "alias_for": "zyutakumaou" },
-  { "name": "jutakumazo", "alias_for": "zyutakumazo" },
-  { "name": "jutakumazoku", "alias_for": "zyutakumazoku" },
-  { "name": "jutakunoyami", "alias_for": "zyutakunoyami" },
-  { "name": "jutakuyuusya", "alias_for": "zyutakuyuusya" },
-  { "name": "juubakonosumi", "alias_for": "zyuubakonosumi" },
-  { "name": "juudaihappyou", "alias_for": "zyuudaihappyou" },
-  { "name": "juudaikyokumenn", "alias_for": "zyuudaikyokumenn" },
-  { "name": "juudennsiyo", "alias_for": "zyuudennsiyo" },
-  { "name": "juujuurikai", "alias_for": "zyuuzyuurikai" },
-  { "name": "juujuusyouti", "alias_for": "zyuuzyuusyouti" },
-  { "name": "juuninntoiro", "alias_for": "zyuuninntoiro" },
-  { "name": "kaijosiyo", "alias_for": "kaizyosiyo" },
+  {
+    "name": "ittannkaijo",
+    "alias_for": "ittannkaizyo"
+  },
+  {
+    "name": "ja-zi",
+    "alias_for": "zya-zi"
+  },
+  {
+    "name": "jaakudesu",
+    "alias_for": "zyaakudesu"
+  },
+  {
+    "name": "jaakukaiwai",
+    "alias_for": "zyaakukaiwai"
+  },
+  {
+    "name": "jaakukana",
+    "alias_for": "zyaakukana"
+  },
+  {
+    "name": "jaakumazoku",
+    "alias_for": "zyaakumazoku"
+  },
+  {
+    "name": "jaakusiyo",
+    "alias_for": "zyaakusiyo"
+  },
+  {
+    "name": "jaaok_",
+    "alias_for": "zyaaok_"
+  },
+  {
+    "name": "jaasorede",
+    "alias_for": "zyaasorede"
+  },
+  {
+    "name": "jabaniki",
+    "alias_for": "zyabaniki"
+  },
+  {
+    "name": "jabatanienn",
+    "alias_for": "zyabatanienn"
+  },
+  {
+    "name": "jabujabu",
+    "alias_for": "zyabuzyabu"
+  },
+  {
+    "name": "jakku",
+    "alias_for": "zyakku"
+  },
+  {
+    "name": "jasutoaidea",
+    "alias_for": "zyasutoaidea"
+  },
+  {
+    "name": "jawatanienn",
+    "alias_for": "zyawatanienn"
+  },
+  {
+    "name": "jeikueri",
+    "alias_for": "zyeikueri"
+  },
+  {
+    "name": "joa",
+    "alias_for": "zyoa"
+  },
+  {
+    "name": "jojo",
+    "alias_for": "zyozyo"
+  },
+  {
+    "name": "josuli",
+    "alias_for": "zyosuli"
+  },
+  {
+    "name": "joudannhayosikotyann",
+    "alias_for": "zyoudannhayosikotyann"
+  },
+  {
+    "name": "jouhouhassinn",
+    "alias_for": "zyouhouhassinn"
+  },
+  {
+    "name": "jouhourouei",
+    "alias_for": "zyouhourouei"
+  },
+  {
+    "name": "jouhousyuusei",
+    "alias_for": "zyouhousyuusei"
+  },
+  {
+    "name": "joukyuukokuminn",
+    "alias_for": "zyoukyuukokuminn"
+  },
+  {
+    "name": "joukyuumazoku",
+    "alias_for": "zyoukyuumazoku"
+  },
+  {
+    "name": "joukyuusei",
+    "alias_for": "zyoukyuusei"
+  },
+  {
+    "name": "joukyuusyayo",
+    "alias_for": "zyoukyuusyayo"
+  },
+  {
+    "name": "jounoutisissu",
+    "alias_for": "zyounoutisissu"
+  },
+  {
+    "name": "jousisiyo",
+    "alias_for": "zyousisiyo"
+  },
+  {
+    "name": "jousyamuri",
+    "alias_for": "zyousyamuri"
+  },
+  {
+    "name": "jugemuyatu",
+    "alias_for": "zyugemuyatu"
+  },
+  {
+    "name": "junia",
+    "alias_for": "zyunia"
+  },
+  {
+    "name": "junikatu",
+    "alias_for": "zyunikatu"
+  },
+  {
+    "name": "junite",
+    "alias_for": "zyunite"
+  },
+  {
+    "name": "junnbibanntann",
+    "alias_for": "zyunnbibanntann"
+  },
+  {
+    "name": "junnbibusoku",
+    "alias_for": "zyunnbibusoku"
+  },
+  {
+    "name": "junnbihuyou",
+    "alias_for": "zyunnbihuyou"
+  },
+  {
+    "name": "junnbiok",
+    "alias_for": "zyunnbiok"
+  },
+  {
+    "name": "junnnameta",
+    "alias_for": "zyunnnameta"
+  },
+  {
+    "name": "junnsuimazoku",
+    "alias_for": "zyunnsuimazoku"
+  },
+  {
+    "name": "junnsuinatuyosa",
+    "alias_for": "zyunnsuinatuyosa"
+  },
+  {
+    "name": "junnsuisabunn",
+    "alias_for": "zyunnsuisabunn"
+  },
+  {
+    "name": "junnzisaikai",
+    "alias_for": "zyunnzisaikai"
+  },
+  {
+    "name": "jusinnsennyou",
+    "alias_for": "zyusinnsennyou"
+  },
+  {
+    "name": "jutakumakai",
+    "alias_for": "zyutakumakai"
+  },
+  {
+    "name": "jutakumaou",
+    "alias_for": "zyutakumaou"
+  },
+  {
+    "name": "jutakumazo",
+    "alias_for": "zyutakumazo"
+  },
+  {
+    "name": "jutakumazoku",
+    "alias_for": "zyutakumazoku"
+  },
+  {
+    "name": "jutakunoyami",
+    "alias_for": "zyutakunoyami"
+  },
+  {
+    "name": "jutakuyuusya",
+    "alias_for": "zyutakuyuusya"
+  },
+  {
+    "name": "juubakonosumi",
+    "alias_for": "zyuubakonosumi"
+  },
+  {
+    "name": "juudaihappyou",
+    "alias_for": "zyuudaihappyou"
+  },
+  {
+    "name": "juudaikyokumenn",
+    "alias_for": "zyuudaikyokumenn"
+  },
+  {
+    "name": "juudennsiyo",
+    "alias_for": "zyuudennsiyo"
+  },
+  {
+    "name": "juujuurikai",
+    "alias_for": "zyuuzyuurikai"
+  },
+  {
+    "name": "juujuusyouti",
+    "alias_for": "zyuuzyuusyouti"
+  },
+  {
+    "name": "juuninntoiro",
+    "alias_for": "zyuuninntoiro"
+  },
+  {
+    "name": "kaijosiyo",
+    "alias_for": "kaizyosiyo"
+  },
   {
     "name": "kaisyahagakkoujanelenndayo",
     "alias_for": "kaisyahagakkouzyanelenndayo"
   },
-  { "name": "kajuarumenndann", "alias_for": "kazyuarumenndann" },
-  { "name": "kajuarusarasi", "alias_for": "kazyuarusarasi" },
-  { "name": "kajuarutaisyoku", "alias_for": "kazyuarutaisyoku" },
-  { "name": "kajuarutennsyoku", "alias_for": "kazyuarutennsyoku" },
-  { "name": "kannsokusijousaikyou", "alias_for": "kannsokusizyousaikyou" },
-  { "name": "karyokujuusi", "alias_for": "karyokuzyuusi" },
-  { "name": "kateinozijou", "alias_for": "kateinozizyou" },
-  { "name": "keiyakukaijo", "alias_for": "keiyakukaizyo" },
-  { "name": "kihyousyojo", "alias_for": "kihyousyozyo" },
-  { "name": "kiminosakujo", "alias_for": "kiminosakuzyo" },
-  { "name": "kodomonozijou", "alias_for": "kodomonozizyou" },
-  { "name": "kokoronojunnbi", "alias_for": "kokoronozyunnbi" },
-  { "name": "konosakujo", "alias_for": "konosakuzyo" },
-  { "name": "koukuunaihoukaijou", "alias_for": "koukuunaihoukaizyou" },
-  { "name": "kutigajouzu", "alias_for": "kutigazyouzu" },
-  { "name": "kuukannjokinn", "alias_for": "kuukannzyokinn" },
-  { "name": "madasakujo", "alias_for": "madasakuzyo" },
-  { "name": "maisakujo", "alias_for": "maisakuzyo" },
-  { "name": "mannjouitti", "alias_for": "mannzyouitti" },
-  { "name": "manosakujo", "alias_for": "manosakuzyo" },
-  { "name": "mataennjou", "alias_for": "mataennzyou" },
-  { "name": "matajaaku", "alias_for": "matazyaaku" },
-  { "name": "matasakujo", "alias_for": "matasakuzyo" },
-  { "name": "meja-", "alias_for": "mezya-" },
-  { "name": "meja-debyu-", "alias_for": "mezya-debyu-" },
-  { "name": "mokugekijouhou", "alias_for": "mokugekizyouhou" },
-  { "name": "moujaaku", "alias_for": "mouzyaaku" },
-  { "name": "mousakujo", "alias_for": "mousakuzyo" },
-  { "name": "mugennninomero", "alias_for": "mugennninomeru" },
-  { "name": "mujunn", "alias_for": "muzyunn" },
-  { "name": "nazonobijo", "alias_for": "nazonobizyo" },
-  { "name": "noburisuoburi-ju", "alias_for": "noburisuoburi-zyu" },
-  { "name": "nyuujoukisei", "alias_for": "nyuuzyoukisei" },
-  { "name": "ojann", "alias_for": "ozyann" },
-  { "name": "ojouzudesune", "alias_for": "ozyouzudesune" },
-  { "name": "okbokujou", "alias_for": "okbokuzyou" },
-  { "name": "okumanntyouja", "alias_for": "okumanntyouzya" },
-  { "name": "oninosakujo", "alias_for": "oninosakuzyo" },
-  { "name": "oowaraikaisuiyokujou", "alias_for": "oowaraikaisuiyokuzyou" },
-  { "name": "orenosakujo", "alias_for": "orenosakuzyo" },
-  { "name": "otonanozijou", "alias_for": "otonanozizyou" },
-  { "name": "ra-men", "alias_for": "ra-menn" },
-  { "name": "reikijoutai", "alias_for": "reikizyoutai" },
-  { "name": "ryouhousakujo", "alias_for": "ryouhousakuzyo" },
-  { "name": "sake", "alias_for": "sake_" },
-  { "name": "sakujo", "alias_for": "sakuzyo" },
-  { "name": "sakujoari", "alias_for": "sakuzyoari" },
-  { "name": "sakujoaru", "alias_for": "sakuzyoaru" },
-  { "name": "sakujodake", "alias_for": "sakuzyodake" },
-  { "name": "sakujodana", "alias_for": "sakuzyodana" },
-  { "name": "sakujodane", "alias_for": "sakuzyodane" },
-  { "name": "sakujodayo", "alias_for": "sakuzyodayo" },
-  { "name": "sakujodeha", "alias_for": "sakuzyodeha" },
-  { "name": "sakujodesu", "alias_for": "sakuzyodesu" },
-  { "name": "sakujokaiwai", "alias_for": "sakuzyokaiwai" },
-  { "name": "sakujokamo", "alias_for": "sakuzyokamo" },
-  { "name": "sakujokana", "alias_for": "sakuzyokana" },
-  { "name": "sakujokayo", "alias_for": "sakuzyokayo" },
-  { "name": "sakujokeisatu", "alias_for": "sakuzyokeisatu" },
-  { "name": "sakujomati", "alias_for": "sakuzyomati" },
-  { "name": "sakujomazoku", "alias_for": "sakuzyomazoku" },
-  { "name": "sakujomore", "alias_for": "sakuzyomore" },
-  { "name": "sakujonai", "alias_for": "sakuzyonai" },
-  { "name": "sakujonasi", "alias_for": "sakuzyonasi" },
-  { "name": "sakujonooni", "alias_for": "sakuzyonooni" },
-  { "name": "sakujosiro", "alias_for": "sakuzyosiro" },
-  { "name": "sakujosita", "alias_for": "sakuzyosita" },
-  { "name": "sakujosite", "alias_for": "sakuzyosite" },
-  { "name": "sakujosiyo", "alias_for": "sakuzyosiyo" },
-  { "name": "sakujosuru", "alias_for": "sakuzyosuru" },
-  { "name": "sakujotarou", "alias_for": "sakuzyotarou" },
-  { "name": "sakujowasure", "alias_for": "sakuzyowasure" },
-  { "name": "sakujozumi", "alias_for": "sakuzyozumi" },
-  { "name": "seijakuannnei", "alias_for": "seizyakuannnei" },
-  { "name": "seijouhukki", "alias_for": "seizyouhukki" },
-  { "name": "senneijasyu", "alias_for": "senneizyasyu" },
-  { "name": "sennja", "alias_for": "sennzya" },
-  { "name": "sennseijann", "alias_for": "sennseizyann" },
-  { "name": "sigusinu", "alias_for": "sugusinu" },
-  { "name": "sinngosennennsatu", "alias_for": "sinngosennenn" },
-  { "name": "sinnitimannennsatu", "alias_for": "sinnitimannenn" },
-  { "name": "sinnjaoro-su-", "alias_for": "sinnzyaoro-su-" },
-  { "name": "sinnjukusaikyou", "alias_for": "sinnzyukusaikyou" },
-  { "name": "sinnoukubosaikyou", "alias_for": "sinnookubosaikyou" },
-  { "name": "sinnsennennsatu", "alias_for": "sinnsennenn" },
-  { "name": "sonosakujo", "alias_for": "sonosakuzyo" },
-  { "name": "soreijouikenai", "alias_for": "soreizyouikenai" },
-  { "name": "soseisyujutu", "alias_for": "soseisyuzyutu" },
-  { "name": "soujukennyou", "alias_for": "souzyukennyou" },
-  { "name": "soutaijourenn", "alias_for": "soutaizyourenn" },
-  { "name": "suguennjou", "alias_for": "suguennzyou" },
-  { "name": "sugujaaku", "alias_for": "suguzyaaku" },
-  { "name": "sugujoutyou", "alias_for": "suguzyoutyou" },
-  { "name": "sugukaijo", "alias_for": "sugukaizyo" },
-  { "name": "sugusakujo", "alias_for": "sugusakuzyo" },
-  { "name": "suiminnnojuuyousei", "alias_for": "suiminnnozyuuyousei" },
-  { "name": "sukuro-rujakku", "alias_for": "sukuro-ruzyakku" },
-  { "name": "syojokana", "alias_for": "syozyokana" },
-  { "name": "syokujuukinnsetu", "alias_for": "syokuzyuukinnsetu" },
-  { "name": "syokuzinojuuyousei", "alias_for": "syokuzinozyuuyousei" },
-  { "name": "syuu5dejoutyuu", "alias_for": "syuu5dezyoutyuu" },
-  { "name": "syuugodekaosaiyou", "alias_for": "syuu5dekaosaiyou" },
-  { "name": "syuugodenomikai", "alias_for": "syuu5denomikai" },
-  { "name": "syuukyoujounoriyuu", "alias_for": "syuukyouzyounoriyuu" },
-  { "name": "tannjunnsyozi", "alias_for": "tannzyunnsyozi" },
-  { "name": "tannkatakaijou", "alias_for": "tannkatakaizyou" },
-  { "name": "tennjoutennge", "alias_for": "tennzyoutennge" },
-  { "name": "tennshyokusijou", "alias_for": "tennsyokusijou" },
-  { "name": "tennsyokusijou", "alias_for": "tennsyokusizyou" },
-  { "name": "tokusyujoutai", "alias_for": "tokusyuzyoutai" },
-  { "name": "tomarunnjanelezo", "alias_for": "tomarunnzyanelezo" },
-  { "name": "torihikisijou", "alias_for": "torihikisizyou" },
-  { "name": "toujouzinnbutu", "alias_for": "touzyouzinnbutu" },
+  {
+    "name": "kajuarumenndann",
+    "alias_for": "kazyuarumenndann"
+  },
+  {
+    "name": "kajuarusarasi",
+    "alias_for": "kazyuarusarasi"
+  },
+  {
+    "name": "kajuarutaisyoku",
+    "alias_for": "kazyuarutaisyoku"
+  },
+  {
+    "name": "kajuarutennsyoku",
+    "alias_for": "kazyuarutennsyoku"
+  },
+  {
+    "name": "kannsokusijousaikyou",
+    "alias_for": "kannsokusizyousaikyou"
+  },
+  {
+    "name": "karyokujuusi",
+    "alias_for": "karyokuzyuusi"
+  },
+  {
+    "name": "kateinozijou",
+    "alias_for": "kateinozizyou"
+  },
+  {
+    "name": "keiyakukaijo",
+    "alias_for": "keiyakukaizyo"
+  },
+  {
+    "name": "kihyousyojo",
+    "alias_for": "kihyousyozyo"
+  },
+  {
+    "name": "kiminosakujo",
+    "alias_for": "kiminosakuzyo"
+  },
+  {
+    "name": "kodomonozijou",
+    "alias_for": "kodomonozizyou"
+  },
+  {
+    "name": "kokoronojunnbi",
+    "alias_for": "kokoronozyunnbi"
+  },
+  {
+    "name": "konosakujo",
+    "alias_for": "konosakuzyo"
+  },
+  {
+    "name": "koukuunaihoukaijou",
+    "alias_for": "koukuunaihoukaizyou"
+  },
+  {
+    "name": "kutigajouzu",
+    "alias_for": "kutigazyouzu"
+  },
+  {
+    "name": "kuukannjokinn",
+    "alias_for": "kuukannzyokinn"
+  },
+  {
+    "name": "madasakujo",
+    "alias_for": "madasakuzyo"
+  },
+  {
+    "name": "maisakujo",
+    "alias_for": "maisakuzyo"
+  },
+  {
+    "name": "mannjouitti",
+    "alias_for": "mannzyouitti"
+  },
+  {
+    "name": "manosakujo",
+    "alias_for": "manosakuzyo"
+  },
+  {
+    "name": "mataennjou",
+    "alias_for": "mataennzyou"
+  },
+  {
+    "name": "matajaaku",
+    "alias_for": "matazyaaku"
+  },
+  {
+    "name": "matasakujo",
+    "alias_for": "matasakuzyo"
+  },
+  {
+    "name": "meja-",
+    "alias_for": "mezya-"
+  },
+  {
+    "name": "meja-debyu-",
+    "alias_for": "mezya-debyu-"
+  },
+  {
+    "name": "mokugekijouhou",
+    "alias_for": "mokugekizyouhou"
+  },
+  {
+    "name": "moujaaku",
+    "alias_for": "mouzyaaku"
+  },
+  {
+    "name": "mousakujo",
+    "alias_for": "mousakuzyo"
+  },
+  {
+    "name": "mugennninomero",
+    "alias_for": "mugennninomeru"
+  },
+  {
+    "name": "mujunn",
+    "alias_for": "muzyunn"
+  },
+  {
+    "name": "nazonobijo",
+    "alias_for": "nazonobizyo"
+  },
+  {
+    "name": "noburisuoburi-ju",
+    "alias_for": "noburisuoburi-zyu"
+  },
+  {
+    "name": "nyuujoukisei",
+    "alias_for": "nyuuzyoukisei"
+  },
+  {
+    "name": "ojann",
+    "alias_for": "ozyann"
+  },
+  {
+    "name": "ojouzudesune",
+    "alias_for": "ozyouzudesune"
+  },
+  {
+    "name": "okbokujou",
+    "alias_for": "okbokuzyou"
+  },
+  {
+    "name": "okumanntyouja",
+    "alias_for": "okumanntyouzya"
+  },
+  {
+    "name": "oninosakujo",
+    "alias_for": "oninosakuzyo"
+  },
+  {
+    "name": "oowaraikaisuiyokujou",
+    "alias_for": "oowaraikaisuiyokuzyou"
+  },
+  {
+    "name": "orenosakujo",
+    "alias_for": "orenosakuzyo"
+  },
+  {
+    "name": "otonanozijou",
+    "alias_for": "otonanozizyou"
+  },
+  {
+    "name": "ra-men",
+    "alias_for": "ra-menn"
+  },
+  {
+    "name": "reikijoutai",
+    "alias_for": "reikizyoutai"
+  },
+  {
+    "name": "ryouhousakujo",
+    "alias_for": "ryouhousakuzyo"
+  },
+  {
+    "name": "sake",
+    "alias_for": "sake_"
+  },
+  {
+    "name": "sakujo",
+    "alias_for": "sakuzyo"
+  },
+  {
+    "name": "sakujoari",
+    "alias_for": "sakuzyoari"
+  },
+  {
+    "name": "sakujoaru",
+    "alias_for": "sakuzyoaru"
+  },
+  {
+    "name": "sakujodake",
+    "alias_for": "sakuzyodake"
+  },
+  {
+    "name": "sakujodana",
+    "alias_for": "sakuzyodana"
+  },
+  {
+    "name": "sakujodane",
+    "alias_for": "sakuzyodane"
+  },
+  {
+    "name": "sakujodayo",
+    "alias_for": "sakuzyodayo"
+  },
+  {
+    "name": "sakujodeha",
+    "alias_for": "sakuzyodeha"
+  },
+  {
+    "name": "sakujodesu",
+    "alias_for": "sakuzyodesu"
+  },
+  {
+    "name": "sakujokaiwai",
+    "alias_for": "sakuzyokaiwai"
+  },
+  {
+    "name": "sakujokamo",
+    "alias_for": "sakuzyokamo"
+  },
+  {
+    "name": "sakujokana",
+    "alias_for": "sakuzyokana"
+  },
+  {
+    "name": "sakujokayo",
+    "alias_for": "sakuzyokayo"
+  },
+  {
+    "name": "sakujokeisatu",
+    "alias_for": "sakuzyokeisatu"
+  },
+  {
+    "name": "sakujomati",
+    "alias_for": "sakuzyomati"
+  },
+  {
+    "name": "sakujomazoku",
+    "alias_for": "sakuzyomazoku"
+  },
+  {
+    "name": "sakujomore",
+    "alias_for": "sakuzyomore"
+  },
+  {
+    "name": "sakujonai",
+    "alias_for": "sakuzyonai"
+  },
+  {
+    "name": "sakujonasi",
+    "alias_for": "sakuzyonasi"
+  },
+  {
+    "name": "sakujonooni",
+    "alias_for": "sakuzyonooni"
+  },
+  {
+    "name": "sakujosiro",
+    "alias_for": "sakuzyosiro"
+  },
+  {
+    "name": "sakujosita",
+    "alias_for": "sakuzyosita"
+  },
+  {
+    "name": "sakujosite",
+    "alias_for": "sakuzyosite"
+  },
+  {
+    "name": "sakujosiyo",
+    "alias_for": "sakuzyosiyo"
+  },
+  {
+    "name": "sakujosuru",
+    "alias_for": "sakuzyosuru"
+  },
+  {
+    "name": "sakujotarou",
+    "alias_for": "sakuzyotarou"
+  },
+  {
+    "name": "sakujowasure",
+    "alias_for": "sakuzyowasure"
+  },
+  {
+    "name": "sakujozumi",
+    "alias_for": "sakuzyozumi"
+  },
+  {
+    "name": "seijakuannnei",
+    "alias_for": "seizyakuannnei"
+  },
+  {
+    "name": "seijouhukki",
+    "alias_for": "seizyouhukki"
+  },
+  {
+    "name": "senneijasyu",
+    "alias_for": "senneizyasyu"
+  },
+  {
+    "name": "sennja",
+    "alias_for": "sennzya"
+  },
+  {
+    "name": "sennseijann",
+    "alias_for": "sennseizyann"
+  },
+  {
+    "name": "sigusinu",
+    "alias_for": "sugusinu"
+  },
+  {
+    "name": "sinngosennennsatu",
+    "alias_for": "sinngosennenn"
+  },
+  {
+    "name": "sinnitimannennsatu",
+    "alias_for": "sinnitimannenn"
+  },
+  {
+    "name": "sinnjaoro-su-",
+    "alias_for": "sinnzyaoro-su-"
+  },
+  {
+    "name": "sinnjukusaikyou",
+    "alias_for": "sinnzyukusaikyou"
+  },
+  {
+    "name": "sinnoukubosaikyou",
+    "alias_for": "sinnookubosaikyou"
+  },
+  {
+    "name": "sinnsennennsatu",
+    "alias_for": "sinnsennenn"
+  },
+  {
+    "name": "sonosakujo",
+    "alias_for": "sonosakuzyo"
+  },
+  {
+    "name": "soreijouikenai",
+    "alias_for": "soreizyouikenai"
+  },
+  {
+    "name": "soseisyujutu",
+    "alias_for": "soseisyuzyutu"
+  },
+  {
+    "name": "soujukennyou",
+    "alias_for": "souzyukennyou"
+  },
+  {
+    "name": "soutaijourenn",
+    "alias_for": "soutaizyourenn"
+  },
+  {
+    "name": "suguennjou",
+    "alias_for": "suguennzyou"
+  },
+  {
+    "name": "sugujaaku",
+    "alias_for": "suguzyaaku"
+  },
+  {
+    "name": "sugujoutyou",
+    "alias_for": "suguzyoutyou"
+  },
+  {
+    "name": "sugukaijo",
+    "alias_for": "sugukaizyo"
+  },
+  {
+    "name": "sugusakujo",
+    "alias_for": "sugusakuzyo"
+  },
+  {
+    "name": "suiminnnojuuyousei",
+    "alias_for": "suiminnnozyuuyousei"
+  },
+  {
+    "name": "sukuro-rujakku",
+    "alias_for": "sukuro-ruzyakku"
+  },
+  {
+    "name": "syojokana",
+    "alias_for": "syozyokana"
+  },
+  {
+    "name": "syokujuukinnsetu",
+    "alias_for": "syokuzyuukinnsetu"
+  },
+  {
+    "name": "syokuzinojuuyousei",
+    "alias_for": "syokuzinozyuuyousei"
+  },
+  {
+    "name": "syuu5dejoutyuu",
+    "alias_for": "syuu5dezyoutyuu"
+  },
+  {
+    "name": "syuugodekaosaiyou",
+    "alias_for": "syuu5dekaosaiyou"
+  },
+  {
+    "name": "syuugodenomikai",
+    "alias_for": "syuu5denomikai"
+  },
+  {
+    "name": "syuukyoujounoriyuu",
+    "alias_for": "syuukyouzyounoriyuu"
+  },
+  {
+    "name": "tannjunnsyozi",
+    "alias_for": "tannzyunnsyozi"
+  },
+  {
+    "name": "tannkatakaijou",
+    "alias_for": "tannkatakaizyou"
+  },
+  {
+    "name": "tennjoutennge",
+    "alias_for": "tennzyoutennge"
+  },
+  {
+    "name": "tennshyokusijou",
+    "alias_for": "tennsyokusijou"
+  },
+  {
+    "name": "tennsyokusijou",
+    "alias_for": "tennsyokusizyou"
+  },
+  {
+    "name": "tokusyujoutai",
+    "alias_for": "tokusyuzyoutai"
+  },
+  {
+    "name": "tomarunnjanelezo",
+    "alias_for": "tomarunnzyanelezo"
+  },
+  {
+    "name": "torihikisijou",
+    "alias_for": "torihikisizyou"
+  },
+  {
+    "name": "toujouzinnbutu",
+    "alias_for": "touzyouzinnbutu"
+  },
   {
     "name": "toujouzinnbutuzenninnakuninn",
     "alias_for": "touzyouzinnbutuzenninnakuninn"
@@ -249,83 +951,308 @@
     "name": "toujouzinnbutuzenninnnoukinn",
     "alias_for": "touzyouzinnbutuzenninnnoukinn"
   },
-  { "name": "tourokusakujo", "alias_for": "tourokusakuzyo" },
-  { "name": "tukaene-jane-ka", "alias_for": "tukaene-zyane-ka" },
-  { "name": "unndounojuuyousei", "alias_for": "unndounozyuuyousei" },
-  { "name": "unnkijousyou", "alias_for": "unnkizyousyou" },
-  { "name": "wakarukaradaijoubu", "alias_for": "wakarukaradaizyoubu" },
-  { "name": "watasinosakujo", "alias_for": "watasinosakuzyo" },
-  { "name": "yamikituennjo", "alias_for": "yamikituennzyo" },
-  { "name": "yasaiju-su", "alias_for": "yasaizyu-su" },
-  { "name": "yonnjuubyoude", "alias_for": "yonnzyuubyoude" },
+  {
+    "name": "tourokusakujo",
+    "alias_for": "tourokusakuzyo"
+  },
+  {
+    "name": "tukaene-jane-ka",
+    "alias_for": "tukaene-zyane-ka"
+  },
+  {
+    "name": "unndounojuuyousei",
+    "alias_for": "unndounozyuuyousei"
+  },
+  {
+    "name": "unnkijousyou",
+    "alias_for": "unnkizyousyou"
+  },
+  {
+    "name": "wakarukaradaijoubu",
+    "alias_for": "wakarukaradaizyoubu"
+  },
+  {
+    "name": "watasinosakujo",
+    "alias_for": "watasinosakuzyo"
+  },
+  {
+    "name": "yamikituennjo",
+    "alias_for": "yamikituennzyo"
+  },
+  {
+    "name": "yasaiju-su",
+    "alias_for": "yasaizyu-su"
+  },
+  {
+    "name": "yonnjuubyoude",
+    "alias_for": "yonnzyuubyoude"
+  },
   {
     "name": "youkaijuubakosumitutuki",
     "alias_for": "youkaizyuubakosumitutuki"
   },
-  { "name": "yozijukugo", "alias_for": "yozizyukugo" },
-  { "name": "yu-joaru", "alias_for": "yu-zyoaru" },
-  { "name": "yu-juaru", "alias_for": "yu-zyuaru" },
-  { "name": "yumenosakujo", "alias_for": "yumenosakuzyo" },
-  { "name": "yuujoukonnbo", "alias_for": "yuuzyoukonnbo" },
-  { "name": "yuumeizinnjann", "alias_for": "yuumeizinnzyann" },
-  { "name": "zairyokujuusi", "alias_for": "zairyokuzyuusi" },
-  { "name": "zennbusakujo", "alias_for": "zennbusakuzyo" },
-  { "name": "zenninnennjou", "alias_for": "zenninnennzyou" },
-  { "name": "zenninnsakujo", "alias_for": "zenninnsakuzyo" },
-  { "name": "zennkannumotteta", "alias_for": "zennkannmotteta" },
-  { "name": "zijouari", "alias_for": "zizyouari" },
-  { "name": "zijouhukuzatu", "alias_for": "zizyouhukuzatu" },
-  { "name": "zijounasi", "alias_for": "zizyounasi" },
-  { "name": "zijounoarukuso", "alias_for": "zizyounoarukuso" },
-  { "name": "zinnseijouhou", "alias_for": "zinnseizyouhou" },
-  { "name": "zizitujounoakumu", "alias_for": "zizituzyounoakumu" },
-  { "name": "zizitujounoassenn", "alias_for": "zizituzyounoassenn" },
-  { "name": "zizitujounogennkyuu", "alias_for": "zizituzyounogennkyuu" },
-  { "name": "zizitujounogennzitu", "alias_for": "zizituzyounogennzitu" },
-  { "name": "zizitujounogimu", "alias_for": "zizituzyounogimu" },
-  { "name": "zizitujounohaijo", "alias_for": "zizituzyounohaizyo" },
-  { "name": "zizitujounohaiseki", "alias_for": "zizituzyounohaiseki" },
-  { "name": "zizitujounohannzai", "alias_for": "zizituzyounohannzai" },
-  { "name": "zizitujounohouka", "alias_for": "zizituzyounohouka" },
-  { "name": "zizitujounohouritu", "alias_for": "zizituzyounohouritu" },
-  { "name": "zizitujounohyougenn", "alias_for": "zizituzyounohyougenn" },
-  { "name": "zizitujounoihann", "alias_for": "zizituzyounoihann" },
-  { "name": "zizitujounoinnsyoku", "alias_for": "zizituzyounoinnsyoku" },
-  { "name": "zizitujounoinnsyu", "alias_for": "zizituzyounoinnsyu" },
-  { "name": "zizitujounokaihatu", "alias_for": "zizituzyounokaihatu" },
-  { "name": "zizitujounokaiwai", "alias_for": "zizituzyounokaiwai" },
-  { "name": "zizitujounokannkei", "alias_for": "zizituzyounokannkei" },
-  { "name": "zizitujounokannyuu", "alias_for": "zizituzyounokannyuu" },
-  { "name": "zizitujounokeihi", "alias_for": "zizituzyounokeihi" },
-  { "name": "zizitujounokennetu", "alias_for": "zizituzyounokennetu" },
-  { "name": "zizitujounokisei", "alias_for": "zizituzyounokisei" },
-  { "name": "zizitujounokitaku", "alias_for": "zizituzyounokitaku" },
-  { "name": "zizitujounokokuu", "alias_for": "zizituzyounokokuu" },
-  { "name": "zizitujounokoukai", "alias_for": "zizituzyounokoukai" },
-  { "name": "zizitujounokyomu", "alias_for": "zizituzyounokyomu" },
-  { "name": "zizitujounokyuuka", "alias_for": "zizituzyounokyuuka" },
-  { "name": "zizitujounomahou", "alias_for": "zizituzyounomahou" },
-  { "name": "zizitujounomazoku", "alias_for": "zizituzyounomazoku" },
-  { "name": "zizitujounomitatu", "alias_for": "zizituzyounomitatu" },
-  { "name": "zizitujounonyuusya", "alias_for": "zizituzyounonyuusya" },
-  { "name": "zizitujounonyuuyoku", "alias_for": "zizituzyounonyuuyoku" },
-  { "name": "zizitujounoouryou", "alias_for": "zizituzyounoouryou" },
-  { "name": "zizitujounosabetu", "alias_for": "zizituzyounosabetu" },
-  { "name": "zizitujounosaiyou", "alias_for": "zizituzyounosaiyou" },
-  { "name": "zizitujounoseigenn", "alias_for": "zizituzyounoseigenn" },
-  { "name": "zizitujounoseikou", "alias_for": "zizituzyounoseikou" },
-  { "name": "zizitujounosekininn", "alias_for": "zizituzyounosekininn" },
-  { "name": "zizitujounosippai", "alias_for": "zizituzyounosippai" },
-  { "name": "zizitujounosousa", "alias_for": "zizituzyounosousa" },
-  { "name": "zizitujounosyakkinn", "alias_for": "zizituzyounosyakkinn" },
-  { "name": "zizitujounosyouri", "alias_for": "zizituzyounosyouri" },
-  { "name": "zizitujounosyukkinn", "alias_for": "zizituzyounosyukkinn" },
-  { "name": "zizitujounotassei", "alias_for": "zizituzyounotassei" },
-  { "name": "zizitujounotousi", "alias_for": "zizituzyounotousi" },
-  { "name": "zizitujounotuihou", "alias_for": "zizituzyounotuihou" },
-  { "name": "zizitujounotuikyuu", "alias_for": "zizituzyounotuikyuu" },
-  { "name": "zizitujounounndou", "alias_for": "zizituzyounounndou" },
-  { "name": "zizitujounounntenn", "alias_for": "zizituzyounounntenn" },
-  { "name": "zizitujounoyuukyuu", "alias_for": "zizituzyounoyuukyuu" },
-  { "name": "zizitujounozissou", "alias_for": "zizituzyounozissou" }
+  {
+    "name": "yozijukugo",
+    "alias_for": "yozizyukugo"
+  },
+  {
+    "name": "yu-joaru",
+    "alias_for": "yu-zyoaru"
+  },
+  {
+    "name": "yu-juaru",
+    "alias_for": "yu-zyuaru"
+  },
+  {
+    "name": "yumenosakujo",
+    "alias_for": "yumenosakuzyo"
+  },
+  {
+    "name": "yuujoukonnbo",
+    "alias_for": "yuuzyoukonnbo"
+  },
+  {
+    "name": "yuumeizinnjann",
+    "alias_for": "yuumeizinnzyann"
+  },
+  {
+    "name": "zairyokujuusi",
+    "alias_for": "zairyokuzyuusi"
+  },
+  {
+    "name": "zennbusakujo",
+    "alias_for": "zennbusakuzyo"
+  },
+  {
+    "name": "zenninnennjou",
+    "alias_for": "zenninnennzyou"
+  },
+  {
+    "name": "zenninnsakujo",
+    "alias_for": "zenninnsakuzyo"
+  },
+  {
+    "name": "zennkannumotteta",
+    "alias_for": "zennkannmotteta"
+  },
+  {
+    "name": "zijouari",
+    "alias_for": "zizyouari"
+  },
+  {
+    "name": "zijouhukuzatu",
+    "alias_for": "zizyouhukuzatu"
+  },
+  {
+    "name": "zijounasi",
+    "alias_for": "zizyounasi"
+  },
+  {
+    "name": "zijounoarukuso",
+    "alias_for": "zizyounoarukuso"
+  },
+  {
+    "name": "zinnseijouhou",
+    "alias_for": "zinnseizyouhou"
+  },
+  {
+    "name": "zizitujounoakumu",
+    "alias_for": "zizituzyounoakumu"
+  },
+  {
+    "name": "zizitujounoassenn",
+    "alias_for": "zizituzyounoassenn"
+  },
+  {
+    "name": "zizitujounogennkyuu",
+    "alias_for": "zizituzyounogennkyuu"
+  },
+  {
+    "name": "zizitujounogennzitu",
+    "alias_for": "zizituzyounogennzitu"
+  },
+  {
+    "name": "zizitujounogimu",
+    "alias_for": "zizituzyounogimu"
+  },
+  {
+    "name": "zizitujounohaijo",
+    "alias_for": "zizituzyounohaizyo"
+  },
+  {
+    "name": "zizitujounohaiseki",
+    "alias_for": "zizituzyounohaiseki"
+  },
+  {
+    "name": "zizitujounohannzai",
+    "alias_for": "zizituzyounohannzai"
+  },
+  {
+    "name": "zizitujounohouka",
+    "alias_for": "zizituzyounohouka"
+  },
+  {
+    "name": "zizitujounohouritu",
+    "alias_for": "zizituzyounohouritu"
+  },
+  {
+    "name": "zizitujounohyougenn",
+    "alias_for": "zizituzyounohyougenn"
+  },
+  {
+    "name": "zizitujounoihann",
+    "alias_for": "zizituzyounoihann"
+  },
+  {
+    "name": "zizitujounoinnsyoku",
+    "alias_for": "zizituzyounoinnsyoku"
+  },
+  {
+    "name": "zizitujounoinnsyu",
+    "alias_for": "zizituzyounoinnsyu"
+  },
+  {
+    "name": "zizitujounokaihatu",
+    "alias_for": "zizituzyounokaihatu"
+  },
+  {
+    "name": "zizitujounokaiwai",
+    "alias_for": "zizituzyounokaiwai"
+  },
+  {
+    "name": "zizitujounokannkei",
+    "alias_for": "zizituzyounokannkei"
+  },
+  {
+    "name": "zizitujounokannyuu",
+    "alias_for": "zizituzyounokannyuu"
+  },
+  {
+    "name": "zizitujounokeihi",
+    "alias_for": "zizituzyounokeihi"
+  },
+  {
+    "name": "zizitujounokennetu",
+    "alias_for": "zizituzyounokennetu"
+  },
+  {
+    "name": "zizitujounokisei",
+    "alias_for": "zizituzyounokisei"
+  },
+  {
+    "name": "zizitujounokitaku",
+    "alias_for": "zizituzyounokitaku"
+  },
+  {
+    "name": "zizitujounokokuu",
+    "alias_for": "zizituzyounokokuu"
+  },
+  {
+    "name": "zizitujounokoukai",
+    "alias_for": "zizituzyounokoukai"
+  },
+  {
+    "name": "zizitujounokyomu",
+    "alias_for": "zizituzyounokyomu"
+  },
+  {
+    "name": "zizitujounokyuuka",
+    "alias_for": "zizituzyounokyuuka"
+  },
+  {
+    "name": "zizitujounomahou",
+    "alias_for": "zizituzyounomahou"
+  },
+  {
+    "name": "zizitujounomazoku",
+    "alias_for": "zizituzyounomazoku"
+  },
+  {
+    "name": "zizitujounomitatu",
+    "alias_for": "zizituzyounomitatu"
+  },
+  {
+    "name": "zizitujounonyuusya",
+    "alias_for": "zizituzyounonyuusya"
+  },
+  {
+    "name": "zizitujounonyuuyoku",
+    "alias_for": "zizituzyounonyuuyoku"
+  },
+  {
+    "name": "zizitujounoouryou",
+    "alias_for": "zizituzyounoouryou"
+  },
+  {
+    "name": "zizitujounosabetu",
+    "alias_for": "zizituzyounosabetu"
+  },
+  {
+    "name": "zizitujounosaiyou",
+    "alias_for": "zizituzyounosaiyou"
+  },
+  {
+    "name": "zizitujounoseigenn",
+    "alias_for": "zizituzyounoseigenn"
+  },
+  {
+    "name": "zizitujounoseikou",
+    "alias_for": "zizituzyounoseikou"
+  },
+  {
+    "name": "zizitujounosekininn",
+    "alias_for": "zizituzyounosekininn"
+  },
+  {
+    "name": "zizitujounosippai",
+    "alias_for": "zizituzyounosippai"
+  },
+  {
+    "name": "zizitujounosousa",
+    "alias_for": "zizituzyounosousa"
+  },
+  {
+    "name": "zizitujounosyakkinn",
+    "alias_for": "zizituzyounosyakkinn"
+  },
+  {
+    "name": "zizitujounosyouri",
+    "alias_for": "zizituzyounosyouri"
+  },
+  {
+    "name": "zizitujounosyukkinn",
+    "alias_for": "zizituzyounosyukkinn"
+  },
+  {
+    "name": "zizitujounotassei",
+    "alias_for": "zizituzyounotassei"
+  },
+  {
+    "name": "zizitujounotousi",
+    "alias_for": "zizituzyounotousi"
+  },
+  {
+    "name": "zizitujounotuihou",
+    "alias_for": "zizituzyounotuihou"
+  },
+  {
+    "name": "zizitujounotuikyuu",
+    "alias_for": "zizituzyounotuikyuu"
+  },
+  {
+    "name": "zizitujounounndou",
+    "alias_for": "zizituzyounounndou"
+  },
+  {
+    "name": "zizitujounounntenn",
+    "alias_for": "zizituzyounounntenn"
+  },
+  {
+    "name": "zizitujounoyuukyuu",
+    "alias_for": "zizituzyounoyuukyuu"
+  },
+  {
+    "name": "zizitujounozissou",
+    "alias_for": "zizituzyounozissou"
+  }
 ]

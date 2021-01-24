@@ -391,7 +391,11 @@
       "path": "decomoji/extra/birukao.png",
       "created": "v5.5.0"
     },
-    { "name": "bk", "path": "decomoji/extra/bk.png", "created": "v5.5.0" },
+    {
+      "name": "bk",
+      "path": "decomoji/extra/bk.png",
+      "created": "v5.5.0"
+    },
     {
       "name": "bodhigasinnda",
       "path": "decomoji/extra/bodhigasinnda.png",
@@ -707,7 +711,11 @@
       "path": "decomoji/extra/egosa.png",
       "created": "v5.5.0"
     },
-    { "name": "eipa", "path": "decomoji/extra/eipa.png", "created": "v5.5.0" },
+    {
+      "name": "eipa",
+      "path": "decomoji/extra/eipa.png",
+      "created": "v5.5.0"
+    },
     {
       "name": "ekusutori-mu",
       "path": "decomoji/extra/ekusutori-mu.png",
@@ -1123,7 +1131,11 @@
       "path": "decomoji/extra/hisyakaisinndo.png",
       "created": "v5.5.0"
     },
-    { "name": "hito", "path": "decomoji/extra/hito.png", "created": "v5.5.0" },
+    {
+      "name": "hito",
+      "path": "decomoji/extra/hito.png",
+      "created": "v5.5.0"
+    },
     {
       "name": "hitobasirateki",
       "path": "decomoji/extra/hitobasirateki.png",
@@ -1444,7 +1456,11 @@
       "path": "decomoji/extra/ittannsakuzyo.png",
       "created": "v5.5.0"
     },
-    { "name": "js", "path": "decomoji/extra/js.png", "created": "v5.5.0" },
+    {
+      "name": "js",
+      "path": "decomoji/extra/js.png",
+      "created": "v5.5.0"
+    },
     {
       "name": "kagegaaru",
       "path": "decomoji/extra/kagegaaru.png",
@@ -1775,7 +1791,11 @@
       "path": "decomoji/extra/muzyakinafann.png",
       "created": "v5.5.0"
     },
-    { "name": "naem", "path": "decomoji/extra/naem.png", "created": "v5.5.0" },
+    {
+      "name": "naem",
+      "path": "decomoji/extra/naem.png",
+      "created": "v5.5.0"
+    },
     {
       "name": "nageyou",
       "path": "decomoji/extra/nageyou.png",
@@ -2091,7 +2111,11 @@
       "path": "decomoji/extra/pare-tonohousoku.png",
       "created": "v5.5.0"
     },
-    { "name": "pdf", "path": "decomoji/extra/pdf.png", "created": "v5.5.0" },
+    {
+      "name": "pdf",
+      "path": "decomoji/extra/pdf.png",
+      "created": "v5.5.0"
+    },
     {
       "name": "pokapoka",
       "path": "decomoji/extra/pokapoka.png",
@@ -2437,7 +2461,11 @@
       "path": "decomoji/extra/tikarawonuko.png",
       "created": "v5.5.0"
     },
-    { "name": "tkgc", "path": "decomoji/extra/tkgc.png", "created": "v5.5.0" },
+    {
+      "name": "tkgc",
+      "path": "decomoji/extra/tkgc.png",
+      "created": "v5.5.0"
+    },
     {
       "name": "todouhukenn",
       "path": "decomoji/extra/todouhukenn.png",

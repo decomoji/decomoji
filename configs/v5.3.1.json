@@ -154,7 +154,13 @@
     }
   ],
   "rename": [
-    { "name": "syuugodekaosaiyou", "alias_for": "syuu5dekaosaiyou" },
-    { "name": "syuugodenomikai", "alias_for": "syuu5denomikai" }
+    {
+      "name": "syuugodekaosaiyou",
+      "alias_for": "syuu5dekaosaiyou"
+    },
+    {
+      "name": "syuugodenomikai",
+      "alias_for": "syuu5denomikai"
+    }
   ]
 }

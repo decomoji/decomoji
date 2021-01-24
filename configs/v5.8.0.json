@@ -136,13 +136,21 @@
       "path": "decomoji/extra/haikonntekisutonokatamari.png",
       "created": "v5.8.0"
     },
-    { "name": "help", "path": "decomoji/extra/help.png", "created": "v5.8.0" },
+    {
+      "name": "help",
+      "path": "decomoji/extra/help.png",
+      "created": "v5.8.0"
+    },
     {
       "name": "hitorimoinai",
       "path": "decomoji/extra/hitorimoinai.png",
       "created": "v5.8.0"
     },
-    { "name": "http", "path": "decomoji/extra/http.png", "created": "v5.8.0" },
+    {
+      "name": "http",
+      "path": "decomoji/extra/http.png",
+      "created": "v5.8.0"
+    },
     {
       "name": "huguri",
       "path": "decomoji/explicit/huguri.png",
@@ -158,7 +166,11 @@
       "path": "decomoji/extra/hure-mu.png",
       "created": "v5.8.0"
     },
-    { "name": "i-tu", "path": "decomoji/extra/i-tu.png", "created": "v5.8.0" },
+    {
+      "name": "i-tu",
+      "path": "decomoji/extra/i-tu.png",
+      "created": "v5.8.0"
+    },
     {
       "name": "ienoatonosekai",
       "path": "decomoji/extra/ienoatonosekai.png",
@@ -699,7 +711,11 @@
       "path": "decomoji/extra/osouzitaimu.png",
       "created": "v5.8.0"
     },
-    { "name": "ossu", "path": "decomoji/extra/ossu.png", "created": "v5.8.0" },
+    {
+      "name": "ossu",
+      "path": "decomoji/extra/ossu.png",
+      "created": "v5.8.0"
+    },
     {
       "name": "oswaninatteoriamsu",
       "path": "decomoji/extra/oswaninatteoriamsu.png",
@@ -920,7 +936,11 @@
       "path": "decomoji/extra/patapata.png",
       "created": "v5.8.0"
     },
-    { "name": "patu", "path": "decomoji/extra/patu.png", "created": "v5.8.0" },
+    {
+      "name": "patu",
+      "path": "decomoji/extra/patu.png",
+      "created": "v5.8.0"
+    },
     {
       "name": "pawa-obu",
       "path": "decomoji/extra/pawa-obu.png",
@@ -976,7 +996,11 @@
       "path": "decomoji/extra/petipa-.png",
       "created": "v5.8.0"
     },
-    { "name": "pi_", "path": "decomoji/extra/pi_.png", "created": "v5.8.0" },
+    {
+      "name": "pi_",
+      "path": "decomoji/extra/pi_.png",
+      "created": "v5.8.0"
+    },
     {
       "name": "piennpiennnopienn",
       "path": "decomoji/extra/piennpiennnopienn.png",
@@ -997,8 +1021,16 @@
       "path": "decomoji/extra/pitipiti.png",
       "created": "v5.8.0"
     },
-    { "name": "po_", "path": "decomoji/extra/po_.png", "created": "v5.8.0" },
-    { "name": "poge", "path": "decomoji/extra/poge.png", "created": "v5.8.0" },
+    {
+      "name": "po_",
+      "path": "decomoji/extra/po_.png",
+      "created": "v5.8.0"
+    },
+    {
+      "name": "poge",
+      "path": "decomoji/extra/poge.png",
+      "created": "v5.8.0"
+    },
     {
       "name": "poinnto",
       "path": "decomoji/extra/poinnto.png",
@@ -1044,7 +1076,11 @@
       "path": "decomoji/extra/pozithibuniumidasu.png",
       "created": "v5.8.0"
     },
-    { "name": "ptal", "path": "decomoji/extra/ptal.png", "created": "v5.8.0" },
+    {
+      "name": "ptal",
+      "path": "decomoji/extra/ptal.png",
+      "created": "v5.8.0"
+    },
     {
       "name": "punnpunn",
       "path": "decomoji/extra/punnpunn.png",
@@ -1190,7 +1226,11 @@
       "path": "decomoji/extra/raisyuuhahima.png",
       "created": "v5.8.0"
     },
-    { "name": "raku", "path": "decomoji/extra/raku.png", "created": "v5.8.0" },
+    {
+      "name": "raku",
+      "path": "decomoji/extra/raku.png",
+      "created": "v5.8.0"
+    },
     {
       "name": "rakuraku",
       "path": "decomoji/extra/rakuraku.png",
@@ -1576,7 +1616,11 @@
       "path": "decomoji/extra/sakananokakuni.png",
       "created": "v5.8.0"
     },
-    { "name": "sake", "path": "decomoji/extra/sake.png", "created": "v5.8.0" },
+    {
+      "name": "sake",
+      "path": "decomoji/extra/sake.png",
+      "created": "v5.8.0"
+    },
     {
       "name": "sakenokakuni",
       "path": "decomoji/extra/sakenokakuni.png",
@@ -2562,7 +2606,11 @@
       "path": "decomoji/extra/sotugyoubunnsyuu.png",
       "created": "v5.8.0"
     },
-    { "name": "sou_", "path": "decomoji/extra/sou_.png", "created": "v5.8.0" },
+    {
+      "name": "sou_",
+      "path": "decomoji/extra/sou_.png",
+      "created": "v5.8.0"
+    },
     {
       "name": "soudawa",
       "path": "decomoji/extra/soudawa.png",
@@ -3898,7 +3946,11 @@
       "path": "decomoji/extra/titinorinngi.png",
       "created": "v5.8.0"
     },
-    { "name": "tkts", "path": "decomoji/extra/tkts.png", "created": "v5.8.0" },
+    {
+      "name": "tkts",
+      "path": "decomoji/extra/tkts.png",
+      "created": "v5.8.0"
+    },
     {
       "name": "tobirawoakerutoyagi",
       "path": "decomoji/extra/tobirawoakerutoyagi.png",
@@ -3984,7 +4036,11 @@
       "path": "decomoji/extra/toubunnkininaru.png",
       "created": "v5.8.0"
     },
-    { "name": "tpwk", "path": "decomoji/extra/tpwk.png", "created": "v5.8.0" },
+    {
+      "name": "tpwk",
+      "path": "decomoji/extra/tpwk.png",
+      "created": "v5.8.0"
+    },
     {
       "name": "tte-nn",
       "path": "decomoji/extra/tte-nn.png",
@@ -4285,7 +4341,11 @@
       "path": "decomoji/extra/ultuudega.png",
       "created": "v5.8.0"
     },
-    { "name": "umai", "path": "decomoji/extra/umai.png", "created": "v5.8.0" },
+    {
+      "name": "umai",
+      "path": "decomoji/extra/umai.png",
+      "created": "v5.8.0"
+    },
     {
       "name": "umaimesi",
       "path": "decomoji/extra/umaimesi.png",
@@ -4536,7 +4596,11 @@
       "path": "decomoji/extra/yakumann.png",
       "created": "v5.8.0"
     },
-    { "name": "yala", "path": "decomoji/extra/yala.png", "created": "v5.8.0" },
+    {
+      "name": "yala",
+      "path": "decomoji/extra/yala.png",
+      "created": "v5.8.0"
+    },
     {
       "name": "yameyou",
       "path": "decomoji/extra/yameyou.png",
@@ -4932,7 +4996,11 @@
       "path": "decomoji/extra/zyonnzyonnenndosonnsonn.png",
       "created": "v5.8.0"
     },
-    { "name": "zyunn", "path": "decomoji/extra/zyunn.png", "created": "v5.8.0" }
+    {
+      "name": "zyunn",
+      "path": "decomoji/extra/zyunn.png",
+      "created": "v5.8.0"
+    }
   ],
   "rename": []
 }

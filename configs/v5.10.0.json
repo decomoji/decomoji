@@ -1066,7 +1066,11 @@
       "path": "decomoji/extra/kannsyazumi.png",
       "created": "v5.10.0"
     },
-    { "name": "kea", "path": "decomoji/extra/kea.png", "created": "v5.10.0" },
+    {
+      "name": "kea",
+      "path": "decomoji/extra/kea.png",
+      "created": "v5.10.0"
+    },
     {
       "name": "keaari",
       "path": "decomoji/extra/keaari.png",
@@ -3667,7 +3671,11 @@
       "path": "decomoji/explicit/messatukaikonn.png",
       "created": "v5.10.0"
     },
-    { "name": "meta", "path": "decomoji/extra/meta.png", "created": "v5.10.0" },
+    {
+      "name": "meta",
+      "path": "decomoji/extra/meta.png",
+      "created": "v5.10.0"
+    },
     {
       "name": "metaari",
       "path": "decomoji/extra/metaari.png",

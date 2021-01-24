@@ -5,7 +5,11 @@
       "path": "decomoji/extra/anatanihasiyoudagawatasinihabagu.png",
       "updated": "v5.4.1"
     },
-    { "name": "bau", "path": "decomoji/extra/bau.png", "removed": "v5.4.1" },
+    {
+      "name": "bau",
+      "path": "decomoji/extra/bau.png",
+      "removed": "v5.4.1"
+    },
     {
       "name": "raitote-ma",
       "path": "decomoji/extra/raitote-ma.png",
@@ -18,12 +22,21 @@
       "path": "decomoji/extra/anatanihasiyoudagawatasinihabagu.png",
       "updated": "v5.4.1"
     },
-    { "name": "bau_", "path": "decomoji/extra/bau_.png", "created": "v5.4.1" },
+    {
+      "name": "bau_",
+      "path": "decomoji/extra/bau_.png",
+      "created": "v5.4.1"
+    },
     {
       "name": "raitote-ma",
       "path": "decomoji/extra/raitote-ma.png",
       "updated": "v5.4.1"
     }
   ],
-  "rename": [{ "name": "bau", "alias_for": "bau_" }]
+  "rename": [
+    {
+      "name": "bau",
+      "alias_for": "bau_"
+    }
+  ]
 }

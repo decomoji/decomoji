@@ -82,8 +82,16 @@
       "path": "decomoji/extra/10waririkai.png",
       "updated": "v5.2.0"
     },
-    { "name": "a-a", "path": "decomoji/extra/a-a.png", "created": "v5.2.0" },
-    { "name": "a-a-", "path": "decomoji/extra/a-a-.png", "created": "v5.2.0" },
+    {
+      "name": "a-a",
+      "path": "decomoji/extra/a-a.png",
+      "created": "v5.2.0"
+    },
+    {
+      "name": "a-a-",
+      "path": "decomoji/extra/a-a-.png",
+      "created": "v5.2.0"
+    },
     {
       "name": "a-hai",
       "path": "decomoji/extra/a-hai.png",
@@ -119,7 +127,11 @@
       "path": "decomoji/extra/abusoru-tori-yu-ni-ku.png",
       "created": "v5.2.0"
     },
-    { "name": "ada", "path": "decomoji/extra/ada.png", "created": "v5.2.0" },
+    {
+      "name": "ada",
+      "path": "decomoji/extra/ada.png",
+      "created": "v5.2.0"
+    },
     {
       "name": "adeasonn",
       "path": "decomoji/extra/adeasonn.png",
@@ -335,7 +347,11 @@
       "path": "decomoji/extra/autorainnzero.png",
       "created": "v5.2.0"
     },
-    { "name": "bagu", "path": "decomoji/extra/bagu.png", "created": "v5.2.0" },
+    {
+      "name": "bagu",
+      "path": "decomoji/extra/bagu.png",
+      "created": "v5.2.0"
+    },
     {
       "name": "baguari",
       "path": "decomoji/extra/baguari.png",
@@ -586,7 +602,11 @@
       "path": "decomoji/extra/bokunozigyaku.png",
       "created": "v5.2.0"
     },
-    { "name": "bonn", "path": "decomoji/extra/bonn.png", "created": "v5.2.0" },
+    {
+      "name": "bonn",
+      "path": "decomoji/extra/bonn.png",
+      "created": "v5.2.0"
+    },
     {
       "name": "bunngouyadotteru",
       "path": "decomoji/extra/bunngouyadotteru.png",
@@ -742,7 +762,11 @@
       "path": "decomoji/extra/dekinari.png",
       "created": "v5.2.0"
     },
-    { "name": "demo", "path": "decomoji/extra/demo.png", "created": "v5.2.0" },
+    {
+      "name": "demo",
+      "path": "decomoji/extra/demo.png",
+      "created": "v5.2.0"
+    },
     {
       "name": "demoyarunndayo",
       "path": "decomoji/extra/demoyarunndayo.png",
@@ -868,7 +892,11 @@
       "path": "decomoji/extra/euc-jp.png",
       "created": "v5.2.0"
     },
-    { "name": "gaba", "path": "decomoji/extra/gaba.png", "created": "v5.2.0" },
+    {
+      "name": "gaba",
+      "path": "decomoji/extra/gaba.png",
+      "created": "v5.2.0"
+    },
     {
       "name": "gabagaba",
       "path": "decomoji/extra/gabagaba.png",
@@ -1704,7 +1732,11 @@
       "path": "decomoji/extra/iryouyou.png",
       "created": "v5.2.0"
     },
-    { "name": "isai", "path": "decomoji/extra/isai.png", "created": "v5.2.0" },
+    {
+      "name": "isai",
+      "path": "decomoji/extra/isai.png",
+      "created": "v5.2.0"
+    },
     {
       "name": "isame",
       "path": "decomoji/extra/isame.png",
@@ -1720,7 +1752,11 @@
       "path": "decomoji/extra/isasi.png",
       "created": "v5.2.0"
     },
-    { "name": "isha", "path": "decomoji/extra/isha.png", "created": "v5.2.0" },
+    {
+      "name": "isha",
+      "path": "decomoji/extra/isha.png",
+      "created": "v5.2.0"
+    },
     {
       "name": "ishara",
       "path": "decomoji/extra/ishara.png",
@@ -1736,7 +1772,11 @@
       "path": "decomoji/extra/ishyou.png",
       "created": "v5.2.0"
     },
-    { "name": "isi", "path": "decomoji/extra/isi.png", "created": "v5.2.0" },
+    {
+      "name": "isi",
+      "path": "decomoji/extra/isi.png",
+      "created": "v5.2.0"
+    },
     {
       "name": "isiatama",
       "path": "decomoji/extra/isiatama.png",
@@ -1752,7 +1792,11 @@
       "path": "decomoji/extra/iskane.png",
       "created": "v5.2.0"
     },
-    { "name": "iski", "path": "decomoji/extra/iski.png", "created": "v5.2.0" },
+    {
+      "name": "iski",
+      "path": "decomoji/extra/iski.png",
+      "created": "v5.2.0"
+    },
     {
       "name": "iskome",
       "path": "decomoji/extra/iskome.png",
@@ -1773,7 +1817,11 @@
       "path": "decomoji/extra/ismannzi.png",
       "created": "v5.2.0"
     },
-    { "name": "isme", "path": "decomoji/extra/isme.png", "created": "v5.2.0" },
+    {
+      "name": "isme",
+      "path": "decomoji/extra/isme.png",
+      "created": "v5.2.0"
+    },
     {
       "name": "ismigi",
       "path": "decomoji/extra/ismigi.png",
@@ -1789,7 +1837,11 @@
       "path": "decomoji/extra/ismizu.png",
       "created": "v5.2.0"
     },
-    { "name": "ismu", "path": "decomoji/extra/ismu.png", "created": "v5.2.0" },
+    {
+      "name": "ismu",
+      "path": "decomoji/extra/ismu.png",
+      "created": "v5.2.0"
+    },
     {
       "name": "ismuti",
       "path": "decomoji/extra/ismuti.png",
@@ -1825,7 +1877,11 @@
       "path": "decomoji/extra/isoiso.png",
       "created": "v5.2.0"
     },
-    { "name": "isou", "path": "decomoji/extra/isou.png", "created": "v5.2.0" },
+    {
+      "name": "isou",
+      "path": "decomoji/extra/isou.png",
+      "created": "v5.2.0"
+    },
     {
       "name": "issake",
       "path": "decomoji/extra/issake.png",
@@ -1861,7 +1917,11 @@
       "path": "decomoji/extra/istamago.png",
       "created": "v5.2.0"
     },
-    { "name": "iste", "path": "decomoji/extra/iste.png", "created": "v5.2.0" },
+    {
+      "name": "iste",
+      "path": "decomoji/extra/iste.png",
+      "created": "v5.2.0"
+    },
     {
       "name": "istyping",
       "path": "decomoji/extra/istyping.png",
@@ -1872,7 +1932,11 @@
       "path": "decomoji/extra/isude.png",
       "created": "v5.2.0"
     },
-    { "name": "isue", "path": "decomoji/extra/isue.png", "created": "v5.2.0" },
+    {
+      "name": "isue",
+      "path": "decomoji/extra/isue.png",
+      "created": "v5.2.0"
+    },
     {
       "name": "isura",
       "path": "decomoji/extra/isura.png",
@@ -3128,7 +3192,11 @@
       "path": "decomoji/extra/matazigyaku.png",
       "created": "v5.2.0"
     },
-    { "name": "misu", "path": "decomoji/extra/misu.png", "created": "v5.2.0" },
+    {
+      "name": "misu",
+      "path": "decomoji/extra/misu.png",
+      "created": "v5.2.0"
+    },
     {
       "name": "misuari",
       "path": "decomoji/extra/misuari.png",
@@ -3339,7 +3407,11 @@
       "path": "decomoji/extra/mouzigyaku.png",
       "created": "v5.2.0"
     },
-    { "name": "ms", "path": "decomoji/extra/ms.png", "created": "v5.2.0" },
+    {
+      "name": "ms",
+      "path": "decomoji/extra/ms.png",
+      "created": "v5.2.0"
+    },
     {
       "name": "msari",
       "path": "decomoji/extra/msari.png",
@@ -3665,13 +3737,21 @@
       "path": "decomoji/extra/osorosia.png",
       "created": "v5.2.0"
     },
-    { "name": "ossl", "path": "decomoji/extra/ossl.png", "created": "v5.2.0" },
+    {
+      "name": "ossl",
+      "path": "decomoji/extra/ossl.png",
+      "created": "v5.2.0"
+    },
     {
       "name": "rubaru",
       "path": "decomoji/extra/rubaru.png",
       "created": "v5.2.0"
     },
-    { "name": "rubi", "path": "decomoji/extra/rubi.png", "created": "v5.2.0" },
+    {
+      "name": "rubi",
+      "path": "decomoji/extra/rubi.png",
+      "created": "v5.2.0"
+    },
     {
       "name": "rubiari",
       "path": "decomoji/extra/rubiari.png",

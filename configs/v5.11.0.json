@@ -1486,7 +1486,11 @@
       "path": "decomoji/extra/oninosyoutyou.png",
       "created": "v5.11.0"
     },
-    { "name": "opo", "path": "decomoji/extra/opo.png", "created": "v5.11.0" },
+    {
+      "name": "opo",
+      "path": "decomoji/extra/opo.png",
+      "created": "v5.11.0"
+    },
     {
       "name": "opoari",
       "path": "decomoji/extra/opoari.png",
@@ -2007,7 +2011,11 @@
       "path": "decomoji/extra/ra-mennzumi.png",
       "created": "v5.11.0"
     },
-    { "name": "rogu", "path": "decomoji/extra/rogu.png", "created": "v5.11.0" },
+    {
+      "name": "rogu",
+      "path": "decomoji/extra/rogu.png",
+      "created": "v5.11.0"
+    },
     {
       "name": "roguari",
       "path": "decomoji/extra/roguari.png",

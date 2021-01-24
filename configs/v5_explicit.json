@@ -294,7 +294,11 @@
     "path": "decomoji/explicit/gyoukaimikeikennoogatasinnzinn.png",
     "created": "v5.0.0"
   },
-  { "name": "ha_", "path": "decomoji/explicit/ha_.png", "created": "v5.0.0" },
+  {
+    "name": "ha_",
+    "path": "decomoji/explicit/ha_.png",
+    "created": "v5.0.0"
+  },
   {
     "name": "habomarionn",
     "path": "decomoji/explicit/habomarionn.png",
@@ -440,7 +444,11 @@
     "path": "decomoji/explicit/kusaimononihuta.png",
     "created": "v5.7.0"
   },
-  { "name": "kuso", "path": "decomoji/explicit/kuso.png", "created": "v5.0.0" },
+  {
+    "name": "kuso",
+    "path": "decomoji/explicit/kuso.png",
+    "created": "v5.0.0"
+  },
   {
     "name": "kusomonogatari",
     "path": "decomoji/explicit/kusomonogatari.png",
@@ -931,14 +939,26 @@
     "path": "decomoji/explicit/uruseeyoba-ka.png",
     "created": "v5.5.0"
   },
-  { "name": "ussa", "path": "decomoji/explicit/ussa.png", "created": "v5.0.0" },
-  { "name": "uzai", "path": "decomoji/explicit/uzai.png", "created": "v5.0.0" },
+  {
+    "name": "ussa",
+    "path": "decomoji/explicit/ussa.png",
+    "created": "v5.0.0"
+  },
+  {
+    "name": "uzai",
+    "path": "decomoji/explicit/uzai.png",
+    "created": "v5.0.0"
+  },
   {
     "name": "uzaizo",
     "path": "decomoji/explicit/uzaizo.png",
     "created": "v5.0.0"
   },
-  { "name": "uzza", "path": "decomoji/explicit/uzza.png", "created": "v5.0.0" },
+  {
+    "name": "uzza",
+    "path": "decomoji/explicit/uzza.png",
+    "created": "v5.0.0"
+  },
   {
     "name": "watasinobenni",
     "path": "decomoji/explicit/watasinobenni.png",

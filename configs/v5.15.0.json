@@ -297,7 +297,11 @@
       "path": "decomoji/extra/baibai.png",
       "created": "v5.15.0"
     },
-    { "name": "baki", "path": "decomoji/extra/baki.png", "created": "v5.15.0" },
+    {
+      "name": "baki",
+      "path": "decomoji/extra/baki.png",
+      "created": "v5.15.0"
+    },
     {
       "name": "bakiari",
       "path": "decomoji/extra/bakiari.png",
@@ -768,13 +772,21 @@
       "path": "decomoji/extra/dakudaku.png",
       "created": "v5.15.0"
     },
-    { "name": "dane", "path": "decomoji/extra/dane.png", "created": "v5.15.0" },
+    {
+      "name": "dane",
+      "path": "decomoji/extra/dane.png",
+      "created": "v5.15.0"
+    },
     {
       "name": "daradara",
       "path": "decomoji/extra/daradara.png",
       "created": "v5.15.0"
     },
-    { "name": "dare", "path": "decomoji/extra/dare.png", "created": "v5.15.0" },
+    {
+      "name": "dare",
+      "path": "decomoji/extra/dare.png",
+      "created": "v5.15.0"
+    },
     {
       "name": "deizi-tye-nn",
       "path": "decomoji/extra/deizi-tye-nn.png",
@@ -805,7 +817,11 @@
       "path": "decomoji/extra/dhisuko.png",
       "created": "v5.15.0"
     },
-    { "name": "dm", "path": "decomoji/extra/dm.png", "created": "v5.15.0" },
+    {
+      "name": "dm",
+      "path": "decomoji/extra/dm.png",
+      "created": "v5.15.0"
+    },
     {
       "name": "dmdeohennzi",
       "path": "decomoji/extra/dmdeohennzi.png",
@@ -986,7 +1002,11 @@
       "path": "decomoji/extra/giragira.png",
       "created": "v5.15.0"
     },
-    { "name": "go-", "path": "decomoji/extra/go-.png", "created": "v5.15.0" },
+    {
+      "name": "go-",
+      "path": "decomoji/extra/go-.png",
+      "created": "v5.15.0"
+    },
     {
       "name": "go-1zigenn",
       "path": "decomoji/extra/go-1zigenn.png",
@@ -1517,7 +1537,11 @@
       "path": "decomoji/extra/gotugotu.png",
       "created": "v5.15.0"
     },
-    { "name": "gou", "path": "decomoji/extra/gou.png", "created": "v5.15.0" },
+    {
+      "name": "gou",
+      "path": "decomoji/extra/gou.png",
+      "created": "v5.15.0"
+    },
     {
       "name": "guigui",
       "path": "decomoji/extra/guigui.png",
@@ -1738,7 +1762,11 @@
       "path": "decomoji/extra/ituitu.png",
       "created": "v5.15.0"
     },
-    { "name": "jojo", "path": "decomoji/extra/jojo.png", "created": "v5.15.0" },
+    {
+      "name": "jojo",
+      "path": "decomoji/extra/jojo.png",
+      "created": "v5.15.0"
+    },
     {
       "name": "jojoari",
       "path": "decomoji/extra/jojoari.png",
@@ -2309,7 +2337,11 @@
       "path": "decomoji/extra/kyattohanndo.png",
       "created": "v5.15.0"
     },
-    { "name": "mac", "path": "decomoji/extra/mac.png", "created": "v5.15.0" },
+    {
+      "name": "mac",
+      "path": "decomoji/extra/mac.png",
+      "created": "v5.15.0"
+    },
     {
       "name": "madabaki",
       "path": "decomoji/extra/madabaki.png",
@@ -2610,8 +2642,16 @@
       "path": "decomoji/extra/mazimau.png",
       "created": "v5.15.0"
     },
-    { "name": "mba", "path": "decomoji/extra/mba.png", "created": "v5.15.0" },
-    { "name": "mbp", "path": "decomoji/extra/mbp.png", "created": "v5.15.0" },
+    {
+      "name": "mba",
+      "path": "decomoji/extra/mba.png",
+      "created": "v5.15.0"
+    },
+    {
+      "name": "mbp",
+      "path": "decomoji/extra/mbp.png",
+      "created": "v5.15.0"
+    },
     {
       "name": "megasubetta",
       "path": "decomoji/extra/megasubetta.png",
@@ -2637,7 +2677,11 @@
       "path": "decomoji/extra/minasannnoreikannwosimaikonndekudasai.png",
       "created": "v5.15.0"
     },
-    { "name": "mixi", "path": "decomoji/extra/mixi.png", "created": "v5.15.0" },
+    {
+      "name": "mixi",
+      "path": "decomoji/extra/mixi.png",
+      "created": "v5.15.0"
+    },
     {
       "name": "monnmonn",
       "path": "decomoji/extra/monnmonn.png",
@@ -4508,7 +4552,11 @@
       "path": "decomoji/extra/watasinoyuusyoku.png",
       "created": "v5.15.0"
     },
-    { "name": "win", "path": "decomoji/extra/win.png", "created": "v5.15.0" },
+    {
+      "name": "win",
+      "path": "decomoji/extra/win.png",
+      "created": "v5.15.0"
+    },
     {
       "name": "wizukorona",
       "path": "decomoji/extra/wizukorona.png",
