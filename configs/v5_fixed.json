@@ -325,6 +325,11 @@
     "updated": "v5.15.0"
   },
   {
+    "name": "fansa",
+    "path": "decomoji/extra/fansa.png",
+    "removed": "v5.17.0"
+  },
+  {
     "name": "gabagaba",
     "path": "decomoji/extra/gabagaba.png",
     "updated": "v5.15.0"
@@ -463,6 +468,11 @@
     "name": "imajasutonoomoituki",
     "path": "decomoji/extra/imajasutonoomoituki.png",
     "removed": "v5.4.2"
+  },
+  {
+    "name": "innsidento",
+    "path": "decomoji/extra/innsidento.png",
+    "removed": "v5.17.0"
   },
   {
     "name": "innta-nettojoutai",

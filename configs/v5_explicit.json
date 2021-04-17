@@ -30,6 +30,11 @@
     "created": "v5.0.0"
   },
   {
+    "name": "ataoka",
+    "path": "decomoji/explicit/ataoka.png",
+    "created": "v5.17.0"
+  },
+  {
     "name": "benni",
     "path": "decomoji/explicit/benni.png",
     "created": "v5.13.0"
@@ -425,6 +430,11 @@
     "created": "v5.15.0"
   },
   {
+    "name": "korosiao",
+    "path": "decomoji/explicit/korosiao.png",
+    "created": "v5.17.0"
+  },
+  {
     "name": "korosukarakannkeinai",
     "path": "decomoji/explicit/korosukarakannkeinai.png",
     "created": "v5.10.0"
@@ -533,6 +543,11 @@
     "name": "mataomutu",
     "path": "decomoji/explicit/mataomutu.png",
     "created": "v5.15.0"
+  },
+  {
+    "name": "mazafakka",
+    "path": "decomoji/explicit/mazafakka.png",
+    "created": "v5.17.0"
   },
   {
     "name": "meimeigasukebe",
@@ -865,6 +880,11 @@
     "created": "v5.4.2"
   },
   {
+    "name": "sinnzyau",
+    "path": "decomoji/explicit/sinnzyau.png",
+    "created": "v5.17.0"
+  },
+  {
     "name": "sinosabaki",
     "path": "decomoji/explicit/sinosabaki.png",
     "created": "v5.0.0"
@@ -958,6 +978,11 @@
     "name": "uzza",
     "path": "decomoji/explicit/uzza.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "wannnai",
+    "path": "decomoji/explicit/wannnai.png",
+    "created": "v5.17.0"
   },
   {
     "name": "watasinobenni",
