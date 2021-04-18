@@ -51,6 +51,11 @@ const remover = async (inputs) => {
     TIME && console.time("[Remove time]");
     while (i < localDecomojiListLength) {
       const { name } = localDecomojiList[i];
+      // name が falsy の時は FAILED フラグを立ててループを抜ける
+      if (!name) {
+        FAILED = true;
+        break;
+      }
       const result = await postEmojiRemove(page, WORKSPACE, name);
 
       console.info(
