@@ -1,4 +1,5 @@
-const program = require("commander");
+const commander = require("commander");
+const program = new commander.Command();
 
 const isStringOfNotEmpty = require("../utilities/isStringOfNotEmpty");
 
@@ -11,15 +12,17 @@ const DEFAULT_INPUT_NAME = "inputs.json";
 
 // コマンドライン引数の定義
 program
-  .option("-i, --inputs [value]", "input setting json file")
+  .option("-i, --inputs <type>", "input setting json file")
   .option("-b, --browser", "open browser")
   .option("-l, --log", "output data log")
   .option("-t, --time", "output running time")
   .option(
     "-d, --debug",
     "full debugging mode (open browser, output data log, output running time)"
-  )
-  .parse(process.argv);
+  );
+
+program.parse(process.argv);
+const options = program.opts()
 
 // 自動処理を実行する
 const main = async (inputs) => {
@@ -33,10 +36,10 @@ const main = async (inputs) => {
     term: inputs.term,
     configs: inputs.configs,
     forceRemove: inputs.forceRemove,
-    browser: program.browser || program.debug,
-    log: program.log || program.debug,
-    time: program.time || program.debug,
-    debug: program.debug,
+    browser: options.browser || options.debug,
+    log: options.log || options.debug,
+    time: options.time || options.debug,
+    debug: options.debug,
   };
 
   const TIME = _inputs.time;
@@ -110,11 +113,11 @@ mode       : ${_inputs.mode}`);
   TIME && console.timeEnd("[Total time]");
 };
 
-if (program.inputs) {
+if (options.inputs) {
   // --inputs inputs.hoge.json などのファイルパスが指定されていたらそれを require し、
   // --inputs オプションがキーのみの場合はデフォルトで `./inputs.json` を require する
-  const FILE = isStringOfNotEmpty(program.inputs)
-    ? program.inputs
+  const FILE = isStringOfNotEmpty(options.inputs)
+    ? options.inputs
     : DEFAULT_INPUT_NAME;
   const INPUT = require(`./${FILE}`);
   main(INPUT);
