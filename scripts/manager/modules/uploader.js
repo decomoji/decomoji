@@ -50,6 +50,11 @@ const uploader = async (inputs) => {
     TIME && console.time("[Upload time]");
     while (i < localDecomojiListLength) {
       const { name, path } = localDecomojiList[i];
+      // name か path が falsy の時は FAILED フラグを立ててループを抜ける
+      if (!name || !path) {
+        FAILED = true;
+        break;
+      }
       const result = await postEmojiAdd(page, WORKSPACE, name, path);
 
       console.info(
