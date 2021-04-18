@@ -50,6 +50,11 @@ const pretender = async (inputs) => {
     TIME && console.time("[Register time]");
     while (i < localDecomojiListLength) {
       const { name, alias_for } = localDecomojiList[i];
+      // name か alias_for が falsy の時は FAILED フラグを立ててループを抜ける
+      if (!name || !alias_for) {
+        FAILED = true;
+        break;
+      }
       const result = await postEmojiAlias(page, WORKSPACE, name, alias_for);
 
       console.info(
