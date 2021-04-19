@@ -86,6 +86,8 @@ mode       : ${_inputs.mode}`);
     case "update":
       const removeConfigs =
         _inputs.term === "version" ? _inputs.configs : ["v5_fixed"];
+      const aliasConfigs =
+        _inputs.term === "version" ? _inputs.configs : ["v5_rename"];
       console.log(`Remove "${removeConfigs}" starting...`);
       await remover({
         ..._inputs,
@@ -99,10 +101,13 @@ mode       : ${_inputs.mode}`);
         ..._inputs,
         ...{ mode: "upload" },
       });
-      console.log(`Register "${_inputs.configs}" starting...`);
+      console.log(`Register "${aliasConfigs}" starting...`);
       await pretender({
         ..._inputs,
-        ...{ mode: "alias", configs: ["v5_rename"] },
+        ...{
+          mode: "alias",
+          configs: aliasConfigs,
+        },
       });
       console.log("All update step has completed!");
       break;
