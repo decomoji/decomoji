@@ -22,7 +22,7 @@ program
   );
 
 program.parse(process.argv);
-const options = program.opts()
+const options = program.opts();
 
 // 自動処理を実行する
 const main = async (inputs) => {
