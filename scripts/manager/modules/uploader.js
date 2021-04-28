@@ -29,6 +29,7 @@ const uploader = async (inputs) => {
   const _upload = async (inputs) => {
     // puppeteer でブラウザを起動する
     const browser = await puppeteer.launch({
+      executablePath: "/opt/homebrew/bin/chromium",
       devtools: BROWSER,
     });
     // ページを追加する
