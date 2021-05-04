@@ -1,8 +1,8 @@
 "use strict";
 
-const imagemin = require("imagemin");
-const imageminPngquant = require("imagemin-pngquant");
-const imageminOptipng = require("imagemin-optipng");
+import imagemin from "imagemin";
+import imageminPngquant from "imagemin-pngquant";
+import imageminOptipng from "imagemin-optipng";
 
 async function optimize(category) {
   console.log(`./decomoji/${category}_tmp/**.png is optimizing...`);
