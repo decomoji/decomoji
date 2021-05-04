@@ -37,18 +37,12 @@
     "pretty-quick": "^3.1.0",
     "puppeteer": "^9.1.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged",
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
-    }
-  },
   "config": {
     "commitizen": {
       "path": "node_modules/cz-customizable"
     },
     "cz-customizable": {
-      "config": "./.cz-config.js"
+      "config": ".cz-config.js"
     }
   }
 }
