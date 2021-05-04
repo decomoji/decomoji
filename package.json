@@ -27,13 +27,13 @@
     "date-fns": "^2.21.1",
     "email-validator": "^2.0.4",
     "husky": "^4.3.8",
-    "imagemin": "^7.0.1",
+    "imagemin": "^8.0.0",
     "imagemin-optipng": "^8.0.0",
     "imagemin-pngquant": "^9.0.2",
     "inquirer": "^8.0.0",
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0",
-    "puppeteer": "^8.0.0"
+    "puppeteer": "^9.1.0"
   },
   "husky": {
     "hooks": {
