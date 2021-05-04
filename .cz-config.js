@@ -52,6 +52,7 @@ module.exports = {
     { name: "manager" },
     { name: "models" },
     { name: "utilities" },
+    { name: "env" },
     { name: "_" }, // その他
   ],
   messages: {
