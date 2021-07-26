@@ -26,17 +26,21 @@ program.parse(process.argv);
 const options = program.opts();
 
 // 自動処理を実行する
-const main = async (inputs) => {
+const main = async (INPUTS) => {
   // コマンドオプションと inquirer から必要なものだけ取り出す
   const _inputs = {
-    workspace: inputs.workspace,
-    email: inputs.email,
-    password: inputs.password,
-    mode: inputs.mode,
-    updateMode: inputs.mode === "update",
-    term: inputs.term,
-    configs: inputs.configs,
-    forceRemove: inputs.forceRemove,
+    workspace: INPUTS.workspace,
+    email: INPUTS.email,
+    password: INPUTS.password,
+    mode: INPUTS.mode,
+    updateMode: INPUTS.mode === "update",
+    term: INPUTS.term,
+    configs: INPUTS.configs,
+    forceRemove: INPUTS.forceRemove || false,
+    excludeExplicit:
+      typeof INPUTS.excludeExplicit === "undefined"
+        ? true
+        : INPUTS.excludeExplicit,
     browser: options.browser || options.debug,
     log: options.log || options.debug,
     time: options.time || options.debug,
@@ -46,14 +50,17 @@ const main = async (inputs) => {
   const TIME = _inputs.time;
 
   console.info(`
-workspace  : https://${_inputs.workspace}.slack.com/
-email      : ${_inputs.email}
-mode       : ${_inputs.mode}`);
-  _inputs.updateMode && console.info(`updateMode : ${_inputs.updateMode}`);
-  _inputs.term && console.info(`term       : ${_inputs.term}`);
-  _inputs.configs && console.info(`configs    : ${_inputs.configs}`);
-  _inputs.forceRemove && console.info(`forceRemove: ${_inputs.forceRemove}`);
-  console.info("\nConnecting...");
+workspace      : https://${_inputs.workspace}.slack.com/
+email          : ${_inputs.email}
+mode           : ${_inputs.mode}
+updateMode     : ${_inputs.updateMode}
+term           : ${_inputs.term}
+configs        : ${_inputs.configs}
+forceRemove    : ${_inputs.forceRemove}`);
+  (_inputs.mode === "update" || _inputs.mode === "upload") &&
+    _inputs.term === "version" &&
+    console.info(`excludeExplicit: ${_inputs.excludeExplicit}`);
+  console.info(`\nConnecting...\n`);
 
   TIME && console.time("[Total time]");
   switch (_inputs.mode) {
@@ -125,8 +132,8 @@ if (options.inputs) {
   const FILE = isStringOfNotEmpty(options.inputs)
     ? options.inputs
     : DEFAULT_INPUT_NAME;
-  const INPUT = require(`./${FILE}`);
-  main(INPUT);
+  const INPUTS = require(`./${FILE}`);
+  main(INPUTS);
 } else {
   // --inputs オプション がない場合は inquirer を起動して対話的にオプションを作る
   askInputs((inputs) => main(inputs), options.additional);
