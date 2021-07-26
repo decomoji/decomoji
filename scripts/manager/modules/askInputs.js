@@ -84,7 +84,7 @@ const FULL_VERSIONS_ITEMS = getGitTagArray("v5")
   }));
 
 // inquirer Setting
-const questions = [
+const questions = (additional) => [
   {
     type: "input",
     name: "workspace",
@@ -151,7 +151,15 @@ const questions = [
     type: "checkbox",
     message: "バージョンを選択してください:",
     name: "configs",
-    choices: [new inquirer.Separator(), ...FULL_VERSIONS_ITEMS],
+    choices: () => {
+      if (additional) {
+        FULL_VERSIONS_ITEMS.unshift({
+          name: `${additional}（ユーザーが追加したバージョン）`,
+          value: additional,
+        });
+      }
+      return [new inquirer.Separator(), ...FULL_VERSIONS_ITEMS];
+    },
     validate: isSelects,
   },
   {
@@ -192,6 +200,6 @@ const questions = [
   },
 ];
 
-module.exports = (callback) => {
-  inquirer.prompt(questions).then(callback);
+module.exports = (callback, additional) => {
+  inquirer.prompt(questions(additional)).then(callback);
 };

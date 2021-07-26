@@ -13,6 +13,7 @@ const DEFAULT_INPUT_NAME = "inputs.json";
 // コマンドライン引数の定義
 program
   .option("-i, --inputs [type]", "input setting json file")
+  .option("-a, --additional [version]", "additional custom version name")
   .option("-b, --browser", "open browser")
   .option("-l, --log", "output data log")
   .option("-t, --time", "output running time")
@@ -128,5 +129,5 @@ if (options.inputs) {
   main(INPUT);
 } else {
   // --inputs オプション がない場合は inquirer を起動して対話的にオプションを作る
-  askInputs((inputs) => main(inputs));
+  askInputs((inputs) => main(inputs), options.additional);
 }
