@@ -162,6 +162,23 @@ const questions = (additional) => [
     },
     validate: isSelects,
   },
+  // {
+  //   when: ({ mode, term }) => (mode === "update" || mode === "upload") && term === "version",
+  //   type: "list",
+  //   message: "選択したバージョンに含まれる「露骨」カテゴリーのデコモジを追加対象に含めますか？:",
+  //   name: "excludeExplicit",
+  //   choices: [
+  //     {
+  //       name: "含めない",
+  //       value: false,
+  //     },
+  //     {
+  //       name: "含める（「露骨」カテゴリの中身を理解していますか？　していない場合、含めない方が良いです）",
+  //       value: true
+  //     },
+  //   ],
+  //   validate: isSelects,
+  // },
   {
     when: ({ mode }) => mode === "alias",
     type: "checkbox",
