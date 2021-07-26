@@ -4,12 +4,15 @@ const goToEmojiPage = require("./goToEmojiPage");
 const getLocalJson = require("./getLocalJson");
 const postEmojiAdd = require("./postEmojiAdd");
 
+const outputLogJson = require("../../utilities/outputLogJson");
+
 const uploader = async (inputs) => {
   const {
     browser: BROWSER,
     configs: CONFIGS,
     debug: DEBUG,
     log: LOG,
+    excludeExplicit: EXCLUDE_EXPLICIT,
     term: TERM,
     time: TIME,
   } = inputs;
@@ -17,14 +20,25 @@ const uploader = async (inputs) => {
   let i = 0; // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
   let FAILED = false;
   let RELOGIN = false;
-  const localDecomojiList = getLocalJson(
+  const rawLocalDecomojiList = getLocalJson(
     CONFIGS,
     TERM,
     ["upload"],
     "uploder",
     LOG
   );
+  // バージョンごとに追加するとき、excludeExplicit=true なら explicit デコモジを取り除く
+  const localDecomojiList =
+    TERM === "version" && EXCLUDE_EXPLICIT
+      ? rawLocalDecomojiList.filter(
+          ({ path }) => !RegExp("explicit").test(path)
+        )
+      : rawLocalDecomojiList;
   const localDecomojiListLength = localDecomojiList.length;
+
+  TERM === "version" &&
+    LOG &&
+    outputLogJson(localDecomojiList, "filtered", "uploder");
 
   const _upload = async (inputs) => {
     // puppeteer でブラウザを起動する
