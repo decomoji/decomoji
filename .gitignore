@@ -10,4 +10,5 @@ decomoji/explicit_tmp
 decomoji/tmp
 inputs.json
 inputs.*.json
+!inputs.example.json
 *_tmp_*
