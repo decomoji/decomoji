@@ -5,6 +5,7 @@ const getLocalJson = require("./getLocalJson");
 const postEmojiRemove = require("./postEmojiRemove");
 
 const outputLogJson = require("../../utilities/outputLogJson");
+const outputResultJson = require("../../utilities/outputResultJson");
 
 const remover = async (inputs) => {
   const {
@@ -32,6 +33,17 @@ const remover = async (inputs) => {
   TERM === "version" &&
     LOG &&
     outputLogJson(localDecomojiList, "list", "remover");
+
+  const result = {
+    error: [],
+    no_permission: [],
+    ok: [],
+  };
+  const messages = {
+    ok: "uploaded",
+    no_permission: "skipped(no permission or already removed)",
+  };
+
   const _remove = async (inputs) => {
     // puppeteer でブラウザを起動する
     const browser = await puppeteer.launch({
@@ -61,16 +73,25 @@ const remover = async (inputs) => {
         FAILED = true;
         break;
       }
+
+      const res = await postEmojiRemove(page, WORKSPACE, name);
+
       console.info(
         `${i + 1}/${localDecomojiListLength}: ${
-          result.ok
-            ? "removed"
-            : result.error === "no_permission"
-            ? "skipped(no permission or already removed)"
-            : result.error
+          res.ok
+            ? messages.ok
+            : res.error === "no_permission"
+            ? messages[res.error]
+            : res.error
         } ${name}.`
       );
-      const res = await postEmojiRemove(page, WORKSPACE, name);
+
+      // ログファイルに結果を入れる
+      res.ok
+        ? result.ok.push(name)
+        : res.error === "no_permission"
+        ? result[res.error].push(name)
+        : result.error.push({ name, message: res.error });
 
       // ratelimited エラーの場合
       if (res.error === "ratelimited") {
@@ -119,6 +140,7 @@ const remover = async (inputs) => {
       console.error("[ERROR]Remove failed.");
     }
     console.info("Remove completed!");
+    outputResultJson(result, "result", "remover");
     return;
   };
 
