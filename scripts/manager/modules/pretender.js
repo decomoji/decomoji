@@ -61,8 +61,6 @@ const pretender = async (inputs) => {
         FAILED = true;
         break;
       }
-      const result = await postEmojiAlias(page, WORKSPACE, name, alias_for);
-
       console.info(
         `${i + 1}/${localDecomojiListLength}: ${
           result.ok
@@ -76,9 +74,10 @@ const pretender = async (inputs) => {
             : result.error
         } ${name} => ${alias_for}.`
       );
+      const res = await postEmojiAlias(page, WORKSPACE, name, alias_for);
 
       // ratelimited エラーの場合
-      if (result.error === "ratelimited") {
+      if (res.error === "ratelimited") {
         // 2FA 利用しているならば 3秒待って同じ i でループを再開する
         if (TWOFACTOR_CODE) {
           console.info("Waiting...");
@@ -92,10 +91,10 @@ const pretender = async (inputs) => {
 
       // 特定のエラー以外は失敗フラグを立てる
       if (
-        result.error &&
-        result.error !== "error_name_taken" && // 登録済みのエラー
-        result.error !== "error_name_taken_i18n" && // i18n と競合するエラー
-        result.error !== "error_invalid_alias" // エイリアスを貼る先が見つからないエラー
+        res.error &&
+        res.error !== "error_name_taken" && // 登録済みのエラー
+        res.error !== "error_name_taken_i18n" && // i18n と競合するエラー
+        res.error !== "error_invalid_alias" // エイリアスを貼る先が見つからないエラー
       ) {
         FAILED = true;
         break;
