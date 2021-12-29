@@ -150,6 +150,11 @@
     "removed": "v5.4.2"
   },
   {
+    "name": "bk",
+    "path": "decomoji/extra/bk.png",
+    "updated": "v5.19.0"
+  },
+  {
     "name": "bokunosakujo",
     "path": "decomoji/extra/bokunosakujo.png",
     "removed": "v5.4.2"
@@ -260,6 +265,11 @@
     "removed": "v5.4.2"
   },
   {
+    "name": "dm",
+    "path": "decomoji/extra/dm.png",
+    "updated": "v5.19.0"
+  },
+  {
     "name": "donosakujo",
     "path": "decomoji/extra/donosakujo.png",
     "removed": "v5.4.2"
@@ -308,6 +318,11 @@
     "name": "doujousikanai",
     "path": "decomoji/extra/doujousikanai.png",
     "removed": "v5.4.2"
+  },
+  {
+    "name": "ds",
+    "path": "decomoji/extra/ds.png",
+    "updated": "v5.19.0"
   },
   {
     "name": "eejanaika",
@@ -685,6 +700,11 @@
     "removed": "v5.4.2"
   },
   {
+    "name": "js",
+    "path": "decomoji/extra/js.png",
+    "updated": "v5.19.0"
+  },
+  {
     "name": "jstukao",
     "path": "decomoji/extra/jstukao.png",
     "updated": "v5.2.0"
@@ -950,6 +970,11 @@
     "removed": "v5.4.3"
   },
   {
+    "name": "m1",
+    "path": "decomoji/extra/m1.png",
+    "updated": "v5.19.0"
+  },
+  {
     "name": "madasakujo",
     "path": "decomoji/extra/madasakujo.png",
     "removed": "v5.4.2"
@@ -993,6 +1018,11 @@
     "name": "meja-debyu-",
     "path": "decomoji/extra/meja-debyu-.png",
     "removed": "v5.4.2"
+  },
+  {
+    "name": "mentarugasinnda",
+    "path": "decomoji/extra/mentarugasinnda.png",
+    "removed": "v5.19.0"
   },
   {
     "name": "minnnagayatteru",
@@ -1078,6 +1108,11 @@
     "name": "oninosakujo",
     "path": "decomoji/extra/oninosakujo.png",
     "removed": "v5.4.2"
+  },
+  {
+    "name": "oobane",
+    "path": "decomoji/extra/oobane.png",
+    "updated": "v5.19.0"
   },
   {
     "name": "oowaraikaisuiyokujou",
