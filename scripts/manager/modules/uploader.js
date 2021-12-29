@@ -5,6 +5,7 @@ const getLocalJson = require("./getLocalJson");
 const postEmojiAdd = require("./postEmojiAdd");
 
 const outputLogJson = require("../../utilities/outputLogJson");
+const outputResultJson = require("../../utilities/outputResultJson");
 
 const uploader = async (inputs) => {
   const {
@@ -40,6 +41,18 @@ const uploader = async (inputs) => {
     LOG &&
     outputLogJson(localDecomojiList, "filtered", "uploder");
 
+  const result = {
+    error: [],
+    error_name_taken: [],
+    error_name_taken_18n: [],
+    ok: [],
+  };
+  const messages = {
+    ok: "uploaded",
+    error_name_taken: "skipped(already exists)",
+    error_name_taken_i18n: "skipped(international emoji set already includes)",
+  };
+
   const _upload = async (inputs) => {
     // puppeteer でブラウザを起動する
     const browser = await puppeteer.launch({
@@ -69,18 +82,27 @@ const uploader = async (inputs) => {
         FAILED = true;
         break;
       }
+
+      const res = await postEmojiAdd(page, WORKSPACE, name, path);
+
       console.info(
         `${i + 1}/${localDecomojiListLength}: ${
-          result.ok
-            ? "uploaded"
-            : result.error === "error_name_taken"
-            ? "skipped(already exists)."
-            : result.error === "error_name_taken_i18n"
-            ? "skipped(international emoji set already includes)."
-            : result.error
+          res.ok
+            ? messages.ok
+            : res.error === "error_name_taken" ||
+              res.error === "error_name_taken_i18n"
+            ? messages[res.error]
+            : res.error
         } ${name}.`
       );
-      const res = await postEmojiAdd(page, WORKSPACE, name, path);
+
+      // ログファイルに結果を入れる
+      res.ok
+        ? result.ok.push(name)
+        : res.error === "error_name_taken" ||
+          res.error === "error_name_taken_i18n"
+        ? result[res.error].push(name)
+        : result.error.push({ name, message: res.error });
 
       // ratelimited エラーの場合
       if (res.error === "ratelimited") {
@@ -130,6 +152,7 @@ const uploader = async (inputs) => {
       console.error("[ERROR]Upload failed.");
     }
     console.info("Upload completed!");
+    outputResultJson(result, "result", "uploder");
     return;
   };
 
