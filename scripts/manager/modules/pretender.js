@@ -4,6 +4,8 @@ const goToEmojiPage = require("./goToEmojiPage");
 const getLocalJson = require("./getLocalJson");
 const postEmojiAlias = require("./postEmojiAlias");
 
+const outputLogJson = require("../../utilities/outputLogJson");
+
 const pretender = async (inputs) => {
   const {
     browser: BROWSER,
@@ -25,6 +27,10 @@ const pretender = async (inputs) => {
     LOG
   );
   const localDecomojiListLength = localDecomojiList.length;
+
+  TERM === "version" &&
+    LOG &&
+    outputLogJson(localDecomojiList, "list", "pretender");
 
   const _pretend = async (inputs) => {
     // puppeteer でブラウザを起動する
