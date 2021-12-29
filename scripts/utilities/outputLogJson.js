@@ -1,5 +1,3 @@
-const fs = require("fs");
-
 const writeJsonFileSync = require("./writeJsonFileSync");
 
 const outputLogJson = (data, name, INVOKER) => {
