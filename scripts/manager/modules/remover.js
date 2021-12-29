@@ -61,8 +61,6 @@ const remover = async (inputs) => {
         FAILED = true;
         break;
       }
-      const result = await postEmojiRemove(page, WORKSPACE, name);
-
       console.info(
         `${i + 1}/${localDecomojiListLength}: ${
           result.ok
@@ -72,9 +70,10 @@ const remover = async (inputs) => {
             : result.error
         } ${name}.`
       );
+      const res = await postEmojiRemove(page, WORKSPACE, name);
 
       // ratelimited エラーの場合
-      if (result.error === "ratelimited") {
+      if (res.error === "ratelimited") {
         // 2FA 利用しているならば 3秒待って同じ i でループを再開する
         if (TWOFACTOR_CODE) {
           console.info("Waiting...");
@@ -88,8 +87,8 @@ const remover = async (inputs) => {
 
       // 特定のエラー以外は失敗フラグを立てる
       if (
-        result.error &&
-        result.error !== "no_permission" // 削除する対象が見つからないエラー
+        res.error &&
+        res.error !== "no_permission" // 削除する対象が見つからないエラー
       ) {
         FAILED = true;
         break;
