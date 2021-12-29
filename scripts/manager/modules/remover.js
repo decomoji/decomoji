@@ -4,6 +4,8 @@ const goToEmojiPage = require("./goToEmojiPage");
 const getLocalJson = require("./getLocalJson");
 const postEmojiRemove = require("./postEmojiRemove");
 
+const outputLogJson = require("../../utilities/outputLogJson");
+
 const remover = async (inputs) => {
   const {
     browser: BROWSER,
@@ -27,6 +29,9 @@ const remover = async (inputs) => {
   );
   const localDecomojiListLength = localDecomojiList.length;
 
+  TERM === "version" &&
+    LOG &&
+    outputLogJson(localDecomojiList, "list", "remover");
   const _remove = async (inputs) => {
     // puppeteer でブラウザを起動する
     const browser = await puppeteer.launch({
