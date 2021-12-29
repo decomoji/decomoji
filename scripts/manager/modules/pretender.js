@@ -5,6 +5,7 @@ const getLocalJson = require("./getLocalJson");
 const postEmojiAlias = require("./postEmojiAlias");
 
 const outputLogJson = require("../../utilities/outputLogJson");
+const outputResultJson = require("../../utilities/outputResultJson");
 
 const pretender = async (inputs) => {
   const {
@@ -31,6 +32,20 @@ const pretender = async (inputs) => {
   TERM === "version" &&
     LOG &&
     outputLogJson(localDecomojiList, "list", "pretender");
+
+  const result = {
+    error: [],
+    error_invalid_alias: [],
+    error_name_taken: [],
+    error_name_taken_18n: [],
+    ok: [],
+  };
+  const messages = {
+    ok: "uploaded",
+    error_invalid_alias: "skipped(target no exists)",
+    error_name_taken: "skipped(already exists)",
+    error_name_taken_i18n: "skipped(international emoji set already includes)",
+  };
 
   const _pretend = async (inputs) => {
     // puppeteer でブラウザを起動する
@@ -61,20 +76,29 @@ const pretender = async (inputs) => {
         FAILED = true;
         break;
       }
+
+      const res = await postEmojiAlias(page, WORKSPACE, name, alias_for);
+
       console.info(
         `${i + 1}/${localDecomojiListLength}: ${
-          result.ok
-            ? "registered"
-            : result.error === "error_name_taken"
-            ? "skipped(already exists)."
-            : result.error === "error_name_taken_i18n"
-            ? "skipped(international emoji set already includes)."
-            : result.error === "error_invalid_alias"
-            ? "skipped(target no exists)."
-            : result.error
-        } ${name} => ${alias_for}.`
+          res.ok
+            ? messages.ok
+            : res.error === "error_name_taken" ||
+              res.error === "error_name_taken_i18n" ||
+              res.error === "error_invalid_alias"
+            ? messages[res.error]
+            : res.error
+        } ${name}.`
       );
-      const res = await postEmojiAlias(page, WORKSPACE, name, alias_for);
+
+      // ログファイルに結果を入れる
+      res.ok
+        ? result.ok.push(name)
+        : res.error === "error_name_taken" ||
+          res.error === "error_name_taken_i18n" ||
+          res.error === "error_invalid_alias"
+        ? result[res.error].push(name)
+        : result.error.push({ name, message: res.error });
 
       // ratelimited エラーの場合
       if (res.error === "ratelimited") {
@@ -125,6 +149,7 @@ const pretender = async (inputs) => {
       console.error("[ERROR]Register failed.");
     }
     console.info("Register completed!");
+    outputResultJson(result, "result", "pretender");
     return;
   };
 
