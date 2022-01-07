@@ -91,6 +91,8 @@ const remover = async (inputs) => {
         ? result.ok.push(name)
         : res.error === "no_permission"
         ? result[res.error].push(name)
+        : res.error === "ratelimited" // ratelimited エラーの場合はログに残さない
+        ? void 0
         : result.error.push({ name, message: res.error });
 
       // ratelimited エラーの場合
