@@ -102,6 +102,8 @@ const uploader = async (inputs) => {
         : res.error === "error_name_taken" ||
           res.error === "error_name_taken_i18n"
         ? result[res.error].push(name)
+        : res.error === "ratelimited" // ratelimited エラーの場合はログに残さない
+        ? void 0
         : result.error.push({ name, message: res.error });
 
       // ratelimited エラーの場合
