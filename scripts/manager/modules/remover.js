@@ -40,7 +40,7 @@ const remover = async (inputs) => {
     ok: [],
   };
   const messages = {
-    ok: "uploaded",
+    ok: "removed",
     no_permission: "skipped(no permission or already removed)",
   };
 
