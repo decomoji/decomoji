@@ -41,7 +41,7 @@ const pretender = async (inputs) => {
     ok: [],
   };
   const messages = {
-    ok: "uploaded",
+    ok: "registered",
     error_invalid_alias: "skipped(target no exists)",
     error_name_taken: "skipped(already exists)",
     error_name_taken_i18n: "skipped(international emoji set already includes)",
