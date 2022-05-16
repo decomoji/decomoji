@@ -605,9 +605,39 @@
     "created": "v5.18.0"
   },
   {
+    "name": "kimmo",
+    "path": "decomoji/explicit/kimmo.png",
+    "created": "v5.20.0"
+  },
+  {
+    "name": "kimoi",
+    "path": "decomoji/explicit/kimoi.png",
+    "created": "v5.20.0"
+  },
+  {
+    "name": "kimoiwa",
+    "path": "decomoji/explicit/kimoiwa.png",
+    "created": "v5.20.0"
+  },
+  {
     "name": "kimoizo",
     "path": "decomoji/explicit/kimoizo.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "kinnmo",
+    "path": "decomoji/explicit/kinnmo.png",
+    "created": "v5.20.0"
+  },
+  {
+    "name": "kissyo",
+    "path": "decomoji/explicit/kissyo.png",
+    "created": "v5.20.0"
+  },
+  {
+    "name": "kisyoi",
+    "path": "decomoji/explicit/kisyoi.png",
+    "created": "v5.20.0"
   },
   {
     "name": "kobaekorosita",
@@ -1238,6 +1268,11 @@
     "name": "tanakaraomutu",
     "path": "decomoji/explicit/tanakaraomutu.png",
     "created": "v5.15.0"
+  },
+  {
+    "name": "tanndokusann",
+    "path": "decomoji/explicit/tanndokusann.png",
+    "created": "v5.20.0"
   },
   {
     "name": "tikubiga",
