@@ -75,6 +75,38 @@ scripst/manager の削除スクリプトは、デフォルトでは自分が登�
 
 このオプションは追加か更新モード（`mode === "upload" || mode === "update"`）でかつ対象タイプがバージョン（`term === "version"`）の時のみ有効です。
 
+## タギングされていないオリジナルのバージョンを登録する
+
+登録スクリプトに `--aditional` オプション（または `-a`）を付与すると、バージョン別の選択肢に git でタギングされていないバージョンを含められます。
+
+このバージョンの中身は toDiffJson.js であらかじめ `configs/` に出力しておいてください。
+
+```bash
+node scripts/generator/toDiffJson.js v5.100.0
+```
+
+指定のバージョンを `--additinal` オプションに渡すと、
+
+```bash
+node scripts/manager --additional v5.100.0
+```
+
+登録スクリプト実行時のバージョン選択に「ユーザーが追加したバージョン」として表示されます。
+
+```bash
+% node scripts/manager -a v5.100.0
+? ワークスペースのサブドメインを入力してください: decomoji-dev
+? メールアドレスを入力してください: otiext@gmail.com
+? パスワードを入力してください: **********
+? モードを選択してください: 更新
+? 対象タイプを選択してください: バージョンごと
+? バージョンを選択してください: (Press <space> to select, <a> to toggle all, <i> to invert selection)
+ ──────────────
+❯◯ v5.100.0（ユーザーが追加したバージョン）
+ ◯ v5.19.1（2022年1月7日公開）
+ ◯ v5.19.0（2021年12月30日公開）
+```
+
 ## オリジナルのエイリアスを登録する
 
 `configs/` に下記のフォーマットで my-alias.json ファイルを置き、inputs.json に設定を追記してください。
