@@ -4,7 +4,7 @@
 
 ログイン情報や実行モードの設定を JSON ファイルに保存すると、対話式の設定入力を省略できます。
 
-まず scripts/manager/inputs.json.example を雛形に scripts/manager/inputs.json を保存してください。
+まず scripts/manager/inputs.example.json を雛形に scripts/manager/inputs.json を保存してください。
 
 値の型については後述しています。
 
