@@ -1,8 +1,10 @@
 const writeJsonFileSync = require("./writeJsonFileSync");
+const getFormatedDateTime = require("./getFormatedDateTime");
 
 const outputLogJson = (data, name, INVOKER) => {
-  writeJsonFileSync(data, `./configs/_${INVOKER}_tmp_${name}.json`);
-  console.log(`_${INVOKER}_tmp_${name}.json length:`, data.length);
+  const filename = `_${INVOKER}_tmp_${name}_${getFormatedDateTime()}.json`;
+  writeJsonFileSync(data, `./configs/${filename}`);
+  console.log(`${filename} length:`, data.length);
 };
 
 module.exports = outputLogJson;
