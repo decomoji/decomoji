@@ -37,7 +37,7 @@ const pretender = async (inputs) => {
     error: [],
     error_invalid_alias: [],
     error_name_taken: [],
-    error_name_taken_18n: [],
+    error_name_taken_i18n: [],
     ok: [],
   };
   const messages = {
