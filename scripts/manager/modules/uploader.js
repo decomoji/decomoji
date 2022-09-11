@@ -44,7 +44,7 @@ const uploader = async (inputs) => {
   const result = {
     error: [],
     error_name_taken: [],
-    error_name_taken_18n: [],
+    error_name_taken_i18n: [],
     ok: [],
   };
   const messages = {
