@@ -20,8 +20,12 @@ module.exports.ADDITIONALS = {
   ],
 };
 
+// バージョン別の JSON に加えないファイル名のコレクション
 module.exports.IGNORES = {
+  basic: [],
+  explicit: [],
   extra: ["nasca\\343\\201\\247", "true false"],
+  fixed: ["nasca\\343\\201\\247", "true false"],
   rename: [
     "nasca\\343\\201\\247",
     "joinsiyo",
