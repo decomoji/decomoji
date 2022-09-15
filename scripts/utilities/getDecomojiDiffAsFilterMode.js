@@ -48,10 +48,12 @@ const getDecomojiDiffAsFilterMode = (diff, tag) => {
 
   return {
     fixed: fixed
-      .filter(({ name }) => !IGNORES.extra.includes(name))
+      .filter(({ name }) => !IGNORES.fixed.includes(name))
       .sort((a, b) => a.name.localeCompare(b.name)),
     upload: upload
+      .filter(({ name }) => !IGNORES.basic.includes(name))
       .filter(({ name }) => !IGNORES.extra.includes(name))
+      .filter(({ name }) => !IGNORES.explicit.includes(name))
       .sort((a, b) => a.name.localeCompare(b.name)),
     rename: rename
       .filter(({ name }) => !IGNORES.rename.includes(name))
