@@ -24,7 +24,7 @@ module.exports.ADDITIONALS = {
 module.exports.IGNORES = {
   basic: [],
   explicit: [],
-  extra: ["nasca\\343\\201\\247", "true false"],
+  extra: ["nasca\\343\\201\\247", "true false", "genntennkaikinotikubi"],
   fixed: ["nasca\\343\\201\\247", "true false"],
   rename: [
     "nasca\\343\\201\\247",
