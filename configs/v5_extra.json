@@ -20887,7 +20887,8 @@
   {
     "name": "ekusupekutopatoro-namu",
     "path": "decomoji/extra/ekusupekutopatoro-namu.png",
-    "created": "v5.21.0"
+    "created": "v5.21.0",
+    "updated": "v5.21.1"
   },
   {
     "name": "ekusuperia-musu",
@@ -24565,11 +24566,6 @@
     "name": "genntenn",
     "path": "decomoji/extra/genntenn.png",
     "created": "v5.9.0"
-  },
-  {
-    "name": "genntennkaikinotikubi",
-    "path": "decomoji/extra/genntennkaikinotikubi.png",
-    "created": "v5.21.0"
   },
   {
     "name": "genntikaisann",
@@ -131175,7 +131171,8 @@
   {
     "name": "winnga-dhiamurevio-sa",
     "path": "decomoji/extra/winnga-dhiamurevio-sa.png",
-    "created": "v5.21.0"
+    "created": "v5.21.0",
+    "updated": "v5.21.1"
   },
   {
     "name": "winnwinn",

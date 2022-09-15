@@ -1,0 +1,37 @@
+{
+  "fixed": [
+    {
+      "name": "ekusupekutopatoro-namu",
+      "path": "decomoji/extra/ekusupekutopatoro-namu.png",
+      "updated": "v5.21.1"
+    },
+    {
+      "name": "genntennkaikinotikubi",
+      "path": "decomoji/extra/genntennkaikinotikubi.png",
+      "removed": "v5.21.1"
+    },
+    {
+      "name": "winnga-dhiamurevio-sa",
+      "path": "decomoji/extra/winnga-dhiamurevio-sa.png",
+      "updated": "v5.21.1"
+    }
+  ],
+  "upload": [
+    {
+      "name": "ekusupekutopatoro-namu",
+      "path": "decomoji/extra/ekusupekutopatoro-namu.png",
+      "updated": "v5.21.1"
+    },
+    {
+      "name": "genntennkaikinotikubi",
+      "path": "decomoji/explicit/genntennkaikinotikubi.png",
+      "created": "v5.21.1"
+    },
+    {
+      "name": "winnga-dhiamurevio-sa",
+      "path": "decomoji/extra/winnga-dhiamurevio-sa.png",
+      "updated": "v5.21.1"
+    }
+  ],
+  "rename": []
+}

@@ -365,6 +365,11 @@
     "removed": "v5.4.2"
   },
   {
+    "name": "ekusupekutopatoro-namu",
+    "path": "decomoji/extra/ekusupekutopatoro-namu.png",
+    "updated": "v5.21.1"
+  },
+  {
     "name": "ennjou",
     "path": "decomoji/extra/ennjou.png",
     "removed": "v5.4.2"
@@ -423,6 +428,11 @@
     "name": "geijutu",
     "path": "decomoji/basic/geijutu.png",
     "removed": "v5.4.2"
+  },
+  {
+    "name": "genntennkaikinotikubi",
+    "path": "decomoji/extra/genntennkaikinotikubi.png",
+    "removed": "v5.21.1"
   },
   {
     "name": "gijutuhusai",
@@ -1703,6 +1713,11 @@
     "name": "wigwig",
     "path": "decomoji/extra/wigwig.png",
     "updated": "v5.20.0"
+  },
+  {
+    "name": "winnga-dhiamurevio-sa",
+    "path": "decomoji/extra/winnga-dhiamurevio-sa.png",
+    "updated": "v5.21.1"
   },
   {
     "name": "wiswis",
