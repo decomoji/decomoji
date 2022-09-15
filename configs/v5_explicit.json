@@ -715,6 +715,11 @@
     "created": "v5.0.0"
   },
   {
+    "name": "kusosomurie",
+    "path": "decomoji/explicit/kusosomurie.png",
+    "created": "v5.21.0"
+  },
+  {
     "name": "kusoyarou",
     "path": "decomoji/explicit/kusoyarou.png",
     "created": "v5.0.0"
@@ -1085,6 +1090,11 @@
     "created": "v5.0.0"
   },
   {
+    "name": "oppaisomurie",
+    "path": "decomoji/explicit/oppaisomurie.png",
+    "created": "v5.21.0"
+  },
+  {
     "name": "orenobenni",
     "path": "decomoji/explicit/orenobenni.png",
     "created": "v5.13.0"
@@ -1128,6 +1138,11 @@
     "name": "pinnkubonn",
     "path": "decomoji/explicit/pinnkubonn.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "saisenntannzisedaitikubi",
+    "path": "decomoji/explicit/saisenntannzisedaitikubi.png",
+    "created": "v5.21.0"
   },
   {
     "name": "sasetarou",
@@ -1278,6 +1293,16 @@
     "name": "tikubiga",
     "path": "decomoji/explicit/tikubiga.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "tikubisomurie",
+    "path": "decomoji/explicit/tikubisomurie.png",
+    "created": "v5.21.0"
+  },
+  {
+    "name": "tinnkosomurie",
+    "path": "decomoji/explicit/tinnkosomurie.png",
+    "created": "v5.21.0"
   },
   {
     "name": "titiyatu",
@@ -1493,6 +1518,16 @@
     "name": "yaramiso",
     "path": "decomoji/explicit/yaramiso.png",
     "created": "v5.8.0"
+  },
+  {
+    "name": "yarareoppai",
+    "path": "decomoji/explicit/yarareoppai.png",
+    "created": "v5.21.0"
+  },
+  {
+    "name": "yararetikubi",
+    "path": "decomoji/explicit/yararetikubi.png",
+    "created": "v5.21.0"
   },
   {
     "name": "yarayoso",
