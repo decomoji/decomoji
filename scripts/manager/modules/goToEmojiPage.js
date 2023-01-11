@@ -8,7 +8,7 @@ const goToEmojiPage = async (browser, page, inputs) => {
   TIME && console.time("[Login time]");
   // ログイン画面に遷移する（チームのカスタム絵文字管理画面へのリダイレクトパラメータ付き）
   await page.goto(
-    `https://${inputs.workspace}.slack.com/?redir=%2Fcustomize%2Femoji#/`,
+    `https://${inputs.workspace}.slack.com/sign_in_with_password?redir=%2Fcustomize%2Femoji#/`,
     {
       waitUntil: "domcontentloaded",
     }
