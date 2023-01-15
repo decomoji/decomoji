@@ -32,7 +32,10 @@ const goToEmojiPage = async (browser, page, inputs) => {
   await page.type("#password", inputs.password);
   await Promise.all([
     page.click("#signin_btn"),
-    page.waitForNavigation({ waitUntil: ["load", "networkidle2"] }),
+    page.waitForNavigation({
+      waitUntil: ["load", "networkidle2"],
+      timeout: 60000,
+    }),
   ]);
 
   // ログインエラーになっていたら email と password を再入力させる
