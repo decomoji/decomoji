@@ -1030,6 +1030,11 @@
     "removed": "v5.4.3"
   },
   {
+    "name": "kyouhabati",
+    "path": "decomoji/extra/kyouhabati.png",
+    "removed": "v5.22.0"
+  },
+  {
     "name": "m1",
     "path": "decomoji/extra/m1.png",
     "updated": "v5.19.0"
@@ -1043,6 +1048,11 @@
     "name": "madasakujo",
     "path": "decomoji/extra/madasakujo.png",
     "removed": "v5.4.2"
+  },
+  {
+    "name": "maikai",
+    "path": "decomoji/extra/maikai.png",
+    "updated": "v5.22.0"
   },
   {
     "name": "maisakujo",
@@ -1083,6 +1093,11 @@
     "name": "meja-debyu-",
     "path": "decomoji/extra/meja-debyu-.png",
     "removed": "v5.4.2"
+  },
+  {
+    "name": "mennbaa",
+    "path": "decomoji/extra/mennbaa.png",
+    "removed": "v5.22.0"
   },
   {
     "name": "mentarugasinnda",
@@ -1430,6 +1445,26 @@
     "updated": "v5.1.1"
   },
   {
+    "name": "senndenn10punn",
+    "path": "decomoji/extra/senndenn10punn.png",
+    "updated": "v5.22.0"
+  },
+  {
+    "name": "senndenn15hunn",
+    "path": "decomoji/extra/senndenn15hunn.png",
+    "updated": "v5.22.0"
+  },
+  {
+    "name": "senndenn30punn",
+    "path": "decomoji/extra/senndenn30punn.png",
+    "updated": "v5.22.0"
+  },
+  {
+    "name": "senndenn60punn",
+    "path": "decomoji/extra/senndenn60punn.png",
+    "updated": "v5.22.0"
+  },
+  {
     "name": "senneijasyu",
     "path": "decomoji/extra/senneijasyu.png",
     "removed": "v5.4.2"
@@ -1758,6 +1793,11 @@
     "name": "yasei",
     "path": "decomoji/extra/yasei.png",
     "updated": "v5.3.0"
+  },
+  {
+    "name": "yaudeyanngu",
+    "path": "decomoji/extra/yaudeyanngu.png",
+    "removed": "v5.22.0"
   },
   {
     "name": "yonnjuubyoude",
