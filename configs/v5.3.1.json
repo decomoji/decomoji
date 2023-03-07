@@ -2,76 +2,91 @@
   "fixed": [
     {
       "name": "apuripowaze",
+      "category": "extra",
       "path": "decomoji/extra/apuripowaze.png",
       "updated": "v5.3.1"
     },
     {
       "name": "cssinjs",
+      "category": "extra",
       "path": "decomoji/extra/cssinjs.png",
       "updated": "v5.3.1"
     },
     {
       "name": "doredetukuro",
+      "category": "extra",
       "path": "decomoji/extra/doredetukuro.png",
       "updated": "v5.3.1"
     },
     {
       "name": "doredetukuru",
+      "category": "extra",
       "path": "decomoji/extra/doredetukuru.png",
       "updated": "v5.3.1"
     },
     {
       "name": "dorehatukuro",
+      "category": "extra",
       "path": "decomoji/extra/dorehatukuro.png",
       "updated": "v5.3.1"
     },
     {
       "name": "dorehatukuru",
+      "category": "extra",
       "path": "decomoji/extra/dorehatukuru.png",
       "updated": "v5.3.1"
     },
     {
       "name": "dorekatukuro",
+      "category": "extra",
       "path": "decomoji/extra/dorekatukuro.png",
       "updated": "v5.3.1"
     },
     {
       "name": "dorekatukuru",
+      "category": "extra",
       "path": "decomoji/extra/dorekatukuru.png",
       "updated": "v5.3.1"
     },
     {
       "name": "dorewotukuro",
+      "category": "extra",
       "path": "decomoji/extra/dorewotukuro.png",
       "updated": "v5.3.1"
     },
     {
       "name": "dorewotukuru",
+      "category": "extra",
       "path": "decomoji/extra/dorewotukuru.png",
       "updated": "v5.3.1"
     },
     {
       "name": "girigirideikou",
+      "category": "extra",
       "path": "decomoji/extra/girigirideikou.png",
       "updated": "v5.3.1"
     },
     {
       "name": "girigiriwoikiteyagaru",
+      "category": "extra",
       "path": "decomoji/extra/girigiriwoikiteyagaru.png",
       "updated": "v5.3.1"
     },
     {
       "name": "girigiriwotanosinndeyagaru",
+      "category": "extra",
       "path": "decomoji/extra/girigiriwotanosinndeyagaru.png",
       "updated": "v5.3.1"
     },
     {
       "name": "syuugodekaosaiyou",
+      "category": "extra",
       "path": "decomoji/extra/syuugodekaosaiyou.png",
       "removed": "v5.3.1"
     },
     {
       "name": "syuugodenomikai",
+      "category": "extra",
       "path": "decomoji/extra/syuugodenomikai.png",
       "removed": "v5.3.1"
     }
@@ -79,76 +94,91 @@
   "upload": [
     {
       "name": "apuripowaze",
+      "category": "extra",
       "path": "decomoji/extra/apuripowaze.png",
       "updated": "v5.3.1"
     },
     {
       "name": "cssinjs",
+      "category": "extra",
       "path": "decomoji/extra/cssinjs.png",
       "updated": "v5.3.1"
     },
     {
       "name": "doredetukuro",
+      "category": "extra",
       "path": "decomoji/extra/doredetukuro.png",
       "updated": "v5.3.1"
     },
     {
       "name": "doredetukuru",
+      "category": "extra",
       "path": "decomoji/extra/doredetukuru.png",
       "updated": "v5.3.1"
     },
     {
       "name": "dorehatukuro",
+      "category": "extra",
       "path": "decomoji/extra/dorehatukuro.png",
       "updated": "v5.3.1"
     },
     {
       "name": "dorehatukuru",
+      "category": "extra",
       "path": "decomoji/extra/dorehatukuru.png",
       "updated": "v5.3.1"
     },
     {
       "name": "dorekatukuro",
+      "category": "extra",
       "path": "decomoji/extra/dorekatukuro.png",
       "updated": "v5.3.1"
     },
     {
       "name": "dorekatukuru",
+      "category": "extra",
       "path": "decomoji/extra/dorekatukuru.png",
       "updated": "v5.3.1"
     },
     {
       "name": "dorewotukuro",
+      "category": "extra",
       "path": "decomoji/extra/dorewotukuro.png",
       "updated": "v5.3.1"
     },
     {
       "name": "dorewotukuru",
+      "category": "extra",
       "path": "decomoji/extra/dorewotukuru.png",
       "updated": "v5.3.1"
     },
     {
       "name": "girigirideikou",
+      "category": "extra",
       "path": "decomoji/extra/girigirideikou.png",
       "updated": "v5.3.1"
     },
     {
       "name": "girigiriwoikiteyagaru",
+      "category": "extra",
       "path": "decomoji/extra/girigiriwoikiteyagaru.png",
       "updated": "v5.3.1"
     },
     {
       "name": "girigiriwotanosinndeyagaru",
+      "category": "extra",
       "path": "decomoji/extra/girigiriwotanosinndeyagaru.png",
       "updated": "v5.3.1"
     },
     {
       "name": "syuu5dekaosaiyou",
+      "category": "extra",
       "path": "decomoji/extra/syuu5dekaosaiyou.png",
       "created": "v5.3.1"
     },
     {
       "name": "syuu5denomikai",
+      "category": "extra",
       "path": "decomoji/extra/syuu5denomikai.png",
       "created": "v5.3.1"
     }

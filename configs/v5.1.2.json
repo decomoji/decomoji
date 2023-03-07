@@ -2,11 +2,13 @@
   "fixed": [
     {
       "name": "hennkenn",
+      "category": "extra",
       "path": "decomoji/extra/hennkenn.png",
       "updated": "v5.1.2"
     },
     {
       "name": "kuukikannsenn",
+      "category": "extra",
       "path": "decomoji/extra/kuukikannsenn.png",
       "updated": "v5.1.2"
     }
@@ -14,11 +16,13 @@
   "upload": [
     {
       "name": "hennkenn",
+      "category": "extra",
       "path": "decomoji/extra/hennkenn.png",
       "updated": "v5.1.2"
     },
     {
       "name": "kuukikannsenn",
+      "category": "extra",
       "path": "decomoji/extra/kuukikannsenn.png",
       "updated": "v5.1.2"
     }

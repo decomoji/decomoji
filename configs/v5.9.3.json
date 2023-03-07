@@ -2,6 +2,7 @@
   "fixed": [
     {
       "name": "sake",
+      "category": "extra",
       "path": "decomoji/extra/sake.png",
       "removed": "v5.9.3"
     }
@@ -9,6 +10,7 @@
   "upload": [
     {
       "name": "sake_",
+      "category": "extra",
       "path": "decomoji/extra/sake_.png",
       "created": "v5.9.3"
     }

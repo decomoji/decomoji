@@ -2,6 +2,7 @@
   "fixed": [
     {
       "name": "zyoinsiyo",
+      "category": "extra",
       "path": "decomoji/extra/zyoinsiyo.png",
       "removed": "v5.14.1"
     }
@@ -9,6 +10,7 @@
   "upload": [
     {
       "name": "joinsiyo",
+      "category": "extra",
       "path": "decomoji/extra/joinsiyo.png",
       "created": "v5.14.1"
     }
