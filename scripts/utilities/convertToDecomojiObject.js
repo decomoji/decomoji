@@ -4,6 +4,7 @@ const convertFilepathToBasename = require("./convertFilepathToBasename");
 const convertToDecomojiObject = (path, tag, mode) => {
   return {
     name: convertFilepathToBasename(path),
+    category: /.+\/(.+)\//.exec(path)[1],
     path,
     ...(mode === "upload" ? { created: tag } : {}),
     ...(mode === "modify" ? { updated: tag } : {}),
