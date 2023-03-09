@@ -16,7 +16,10 @@ const goToEmojiPage = async (browser, page, inputs) => {
 
   // チームが存在しない場合、workspace を再入力させる
   if (await page.$("#signin_form").then((res) => !res)) {
-    inputs = await recursiveInputWorkspace(page, inputs);
+    inputs = await recursiveInputWorkspace(page, inputs).catch((error) => {
+      console.error(error);
+      process.exit(1);
+    });
   }
 
   // CAPTCHA が出ていたら諦めて終了する
@@ -40,12 +43,20 @@ const goToEmojiPage = async (browser, page, inputs) => {
 
   // ログインエラーになっていたら email と password を再入力させる
   if (await page.$(".c-input_text--with_error").then((res) => !!res)) {
-    inputs = await recursiveInputAccount(browser, page, inputs);
+    inputs = await recursiveInputAccount(browser, page, inputs).catch(
+      (error) => {
+        console.error(error);
+        process.exit(1);
+      }
+    );
   }
 
   // 2FA入力欄があったら入力させる
   if (await page.$('[name="2fa_code"]').then((res) => !!res)) {
-    inputs = await recursiveInput2FA(browser, page, inputs);
+    inputs = await recursiveInput2FA(browser, page, inputs).catch((error) => {
+      console.error(error);
+      process.exit(1);
+    });
   }
   // グローバル変数 boot_data と、カスタム絵文字セクションが見つかるまで待つ
   await Promise.all([
