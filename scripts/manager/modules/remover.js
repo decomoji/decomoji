@@ -62,7 +62,7 @@ const remover = async (inputs) => {
     if (localDecomojiListLength === 0) {
       console.error("[ERROR]No decomoji items.");
       !DEBUG && (await browser.close());
-      return;
+      return inputs;
     }
 
     TIME && console.time("[Remove time]");
@@ -143,11 +143,12 @@ const remover = async (inputs) => {
     }
     console.info("Remove completed!");
     outputResultJson(result, "result", "remover");
-    return;
+    // 入力し直したかもしれないので返す
+    return inputs;
   };
 
   // 再帰処理をスタートする
-  await _remove(inputs);
+  return await _remove(inputs);
 };
 
 module.exports = remover;

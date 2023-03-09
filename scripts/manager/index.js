@@ -97,7 +97,7 @@ forceRemove    : ${_inputs.forceRemove}`);
       const aliasConfigs =
         _inputs.term === "version" ? _inputs.configs : ["v5_rename"];
       console.log(`Remove "${removeConfigs}" starting...`);
-      await remover({
+      const _inputs1 = await remover({
         ..._inputs,
         ...{
           mode: "remove",
@@ -105,13 +105,13 @@ forceRemove    : ${_inputs.forceRemove}`);
         },
       });
       console.log(`Upload "${_inputs.configs}" starting...`);
-      await uploader({
-        ..._inputs,
+      const _inputs2 = await uploader({
+        ..._inputs1,
         ...{ mode: "upload" },
       });
       console.log(`Register "${aliasConfigs}" starting...`);
       await pretender({
-        ..._inputs,
+        ..._inputs2,
         ...{
           mode: "alias",
           configs: aliasConfigs,

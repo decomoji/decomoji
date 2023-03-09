@@ -71,7 +71,7 @@ const uploader = async (inputs) => {
     if (localDecomojiListLength === 0) {
       console.error("[ERROR]No decomoji items.");
       !DEBUG && (await browser.close());
-      return;
+      return inputs;
     }
 
     TIME && console.time("[Upload time]");
@@ -155,11 +155,12 @@ const uploader = async (inputs) => {
     }
     console.info("Upload completed!");
     outputResultJson(result, "result", "uploder");
-    return;
+    // 入力し直したかもしれないので返す
+    return inputs;
   };
 
   // 再帰処理をスタートする
-  await _upload(inputs);
+  return await _upload(inputs);
 };
 
 module.exports = uploader;

@@ -65,7 +65,7 @@ const pretender = async (inputs) => {
     if (localDecomojiListLength === 0) {
       console.error("[ERROR]No decomoji items.");
       !DEBUG && (await browser.close());
-      return;
+      return inputs;
     }
 
     TIME && console.time("[Register time]");
@@ -152,11 +152,12 @@ const pretender = async (inputs) => {
     }
     console.info("Register completed!");
     outputResultJson(result, "result", "pretender");
-    return;
+    // 入力し直したかもしれないので返す
+    return inputs;
   };
 
   // 再帰処理をスタートする
-  await _pretend(inputs);
+  return await _pretend(inputs);
 };
 
 module.exports = pretender;
