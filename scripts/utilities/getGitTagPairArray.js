@@ -1,7 +1,7 @@
-const getGitTagArray = require("./getGitTagArray");
+import { getGitTagArray } from "./getGitTagArray";
 
 // git のタグ一覧において自身と次のバージョンのペアオブジェクトを配列で返す
-const getGitTagPairArray = (start, versionPrefix, end) => {
+export const getGitTagPairArray = (start, versionPrefix, end) => {
   const tagArray = getGitTagArray(versionPrefix);
   const tags = start ? [start, ...tagArray] : tagArray;
   return tags.reduce((memo, from, i, versions) => {
@@ -10,5 +10,3 @@ const getGitTagPairArray = (start, versionPrefix, end) => {
     return to ? [...memo, { from, to }] : memo;
   }, []);
 };
-
-module.exports = getGitTagPairArray;

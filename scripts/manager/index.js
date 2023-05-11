@@ -1,13 +1,11 @@
-const commander = require("commander");
+import commander from "commander";
+import { isStringOfNotEmpty } from "../utilities/isStringOfNotEmpty";
+import { askInputs } from "./modules/askInputs";
+import { uploader } from "./modules/uploader";
+import { pretender } from "./modules/pretender";
+import { remover } from "./modules/remover";
+
 const program = new commander.Command();
-
-const isStringOfNotEmpty = require("../utilities/isStringOfNotEmpty");
-
-const askInputs = require("./modules/askInputs");
-const uploader = require("./modules/uploader");
-const pretender = require("./modules/pretender");
-const remover = require("./modules/remover");
-
 const DEFAULT_INPUT_NAME = "inputs.json";
 
 // コマンドライン引数の定義

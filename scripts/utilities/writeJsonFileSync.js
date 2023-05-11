@@ -1,7 +1,7 @@
-const fs = require("fs");
+import fs from "fs";
 
 // fs.writeFileSync() を try catch する
-const writeJsonFileSync = (buffer, filepath, silent) => {
+export const writeJsonFileSync = (buffer, filepath, silent) => {
   try {
     const data = JSON.stringify(buffer, null, 2);
     fs.writeFileSync(`${filepath}`, data);
@@ -11,5 +11,3 @@ const writeJsonFileSync = (buffer, filepath, silent) => {
     throw err;
   }
 };
-
-module.exports = writeJsonFileSync;

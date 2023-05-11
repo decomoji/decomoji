@@ -1,4 +1,4 @@
-const postEmojiAlias = async (page, workspace, emojiName, aliasFor) => {
+export const postEmojiAlias = async (page, workspace, emojiName, aliasFor) => {
   // 埋め込んだ情報をもとにAPIにアクセスする
   const result = await page.evaluate(
     async (workspace, emojiName, aliasFor) => {
@@ -27,5 +27,3 @@ const postEmojiAlias = async (page, workspace, emojiName, aliasFor) => {
 
   return result;
 };
-
-module.exports = postEmojiAlias;

@@ -1,8 +1,8 @@
-const inquirer = require("inquirer");
-const isInputs = require("../../utilities/isInputs");
+import inquirer from "inquirer";
+import { isInputs } from "../../utilities/isInputs";
 
 // ワークスペースが見つからない時の再帰処理
-const recursiveInputWorkspace = async (page, inputs) => {
+export const recursiveInputWorkspace = async (page, inputs) => {
   try {
     const { workspace } = await inquirer.prompt({
       type: "input",
@@ -29,5 +29,3 @@ const recursiveInputWorkspace = async (page, inputs) => {
     return e;
   }
 };
-
-module.exports = recursiveInputWorkspace;

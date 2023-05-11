@@ -1,4 +1,4 @@
-const getFormatedDateTime = (date) => {
+export const getFormatedDateTime = (date) => {
   date = date ?? new Date();
   const year = date.getFullYear();
   const month = String(date.getMonth() + 1).padStart(2, "0");
@@ -8,5 +8,3 @@ const getFormatedDateTime = (date) => {
   const second = String(date.getSeconds()).padStart(2, "0");
   return `${year}_${month}_${day}_${hour}_${minute}_${second}`;
 };
-
-module.exports = getFormatedDateTime;

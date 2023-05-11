@@ -1,8 +1,7 @@
-const fs = require("fs");
+import fs from "fs";
+import { outputLogJson } from "../../utilities/outputLogJson";
 
-const outputLogJson = require("../../utilities/outputLogJson");
-
-const getLocalJson = (CONFIGS, TERM, KEYS, INVOKER, LOG) => {
+export const getLocalJson = (CONFIGS, TERM, KEYS, INVOKER, LOG) => {
   LOG && console.log("getLocalJson(", { CONFIGS, TERM, INVOKER, KEYS }, ")");
   // term=category では [tag1, tag2]、term=version では [[tag1, tag2], [tag3, tag4]] で CONFIGS が渡ってくるのでどちらとも構わず平たくする
   const combined = CONFIGS.flat().flatMap((target) =>
@@ -18,4 +17,3 @@ const getLocalJson = (CONFIGS, TERM, KEYS, INVOKER, LOG) => {
   LOG && outputLogJson(flatten, "flatten", INVOKER);
   return flatten;
 };
-module.exports = getLocalJson;

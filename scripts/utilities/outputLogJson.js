@@ -1,9 +1,7 @@
-const writeJsonFileSync = require("./writeJsonFileSync");
-const getFormatedDateTime = require("./getFormatedDateTime");
+import { writeJsonFileSync } from "./writeJsonFileSync";
+import { getFormatedDateTime } from "./getFormatedDateTime";
 
-const outputLogJson = (data, name, INVOKER) => {
+export const outputLogJson = (data, name, INVOKER) => {
   const filename = `_${INVOKER}_tmp_${name}_${getFormatedDateTime()}.json`;
   writeJsonFileSync(data, `./configs/${filename}`);
 };
-
-module.exports = outputLogJson;

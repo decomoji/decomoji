@@ -1,7 +1,7 @@
-const getDecomojiCategory = require("./getDecomojiCategory");
+import { getDecomojiCategory } from "./getDecomojiCategory";
 
 // `getDecomojiDiffAsFilterMode()` の結果からバージョンを統合して { basic, extra, explicit } に再分配したオブジェクトを返す
-const getDecomojiDiffAsCategory = (diffAsMode) => {
+export const getDecomojiDiffAsCategory = (diffAsMode) => {
   const categories = {
     basic: [],
     explicit: [],
@@ -32,5 +32,3 @@ const getDecomojiDiffAsCategory = (diffAsMode) => {
   });
   return categories;
 };
-
-module.exports = getDecomojiDiffAsCategory;

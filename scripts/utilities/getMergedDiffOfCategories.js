@@ -1,5 +1,5 @@
 // categories にデコモジオブジェクトを push （場合によってはアイテムをマージ）し、オブジェクトを返す
-const getMergedDiffOfCategories = (diffAsCategory, categories) => {
+export const getMergedDiffOfCategories = (diffAsCategory, categories) => {
   const _categories = categories;
   Object.entries(diffAsCategory).forEach((entry) => {
     const [categoryName, list] = entry;
@@ -31,5 +31,3 @@ const getMergedDiffOfCategories = (diffAsCategory, categories) => {
   });
   return _categories;
 };
-
-module.exports = getMergedDiffOfCategories;

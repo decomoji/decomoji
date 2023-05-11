@@ -1,4 +1,4 @@
-const postEmojiAdd = async (page, workspace, emojiName, emojiPath) => {
+export const postEmojiAdd = async (page, workspace, emojiName, emojiPath) => {
   const uploadFormId = "decomoji_upload_form";
 
   // 1度だけページにアップロード用の form 要素を挿入する
@@ -48,5 +48,3 @@ const postEmojiAdd = async (page, workspace, emojiName, emojiPath) => {
 
   return result;
 };
-
-module.exports = postEmojiAdd;

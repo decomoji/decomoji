@@ -1,4 +1,4 @@
-module.exports.ADDITIONALS = {
+export const ADDITIONALS = {
   extra: [
     {
       name: "joinsiyo",
@@ -21,7 +21,7 @@ module.exports.ADDITIONALS = {
 };
 
 // バージョン別の JSON に加えないファイル名のコレクション
-module.exports.IGNORES = {
+export const IGNORES = {
   basic: [],
   explicit: [],
   extra: ["nasca\\343\\201\\247", "true false", "genntennkaikinotikubi"],

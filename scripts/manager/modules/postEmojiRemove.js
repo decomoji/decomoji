@@ -1,4 +1,4 @@
-const postEmojiRemove = async (page, workspace, emojiName) => {
+export const postEmojiRemove = async (page, workspace, emojiName) => {
   // 埋め込んだ情報をもとにAPIにアクセスする
   const result = await page.evaluate(
     async (workspace, emojiName) => {
@@ -24,5 +24,3 @@ const postEmojiRemove = async (page, workspace, emojiName) => {
 
   return result;
 };
-
-module.exports = postEmojiRemove;

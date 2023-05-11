@@ -1,10 +1,10 @@
-const { execSync } = require("child_process");
-const convertBufferToArray = require("./convertBufferToArray");
-const getGitTagArray = require("./getGitTagArray");
+import { execSync } from "child_process";
+import { convertBufferToArray } from "./convertBufferToArray";
+import { getGitTagArray } from "./getGitTagArray";
 
 // git で rename したものの from と to の差分を返す
 // to がない場合、from だけで差分を取得して返す。
-const getGitDiffOfRenameArray = (from, to) => {
+export const getGitDiffOfRenameArray = (from, to) => {
   const cmd = getGitTagArray().includes(to)
     ? `git diff ${from}...${to} --name-status --diff-filter=R`
     : `git diff ${from} --name-status --diff-filter=R`;
@@ -14,5 +14,3 @@ const getGitDiffOfRenameArray = (from, to) => {
     v.replace("R100\t", "").split("\t")
   );
 };
-
-module.exports = getGitDiffOfRenameArray;

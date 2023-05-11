@@ -1,5 +1,5 @@
-const fs = require("fs");
-const convertFilepathToBasename = require("../utilities/convertFilepathToBasename");
+import fs from "fs";
+import { convertFilepathToBasename } from "../utilities/convertFilepathToBasename";
 
 const contents = {
   basic: `# デコモジ基本セット\n\nすぐに使えて Slack が楽しくなるセットです。\n\n`,

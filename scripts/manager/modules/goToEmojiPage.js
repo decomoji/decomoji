@@ -1,8 +1,8 @@
-const recursiveInputWorkspace = require("./recursiveInputWorkspace");
-const recursiveInputAccount = require("./recursiveInputAccount");
-const recursiveInput2FA = require("./recursiveInput2FA");
+import { recursiveInputWorkspace } from "./recursiveInputWorkspace";
+import { recursiveInputAccount } from "./recursiveInputAccount";
+import { recursiveInput2FA } from "./recursiveInput2FA";
 
-const goToEmojiPage = async (browser, page, inputs) => {
+export const goToEmojiPage = async (browser, page, inputs) => {
   const TIME = inputs.time;
 
   TIME && console.time("[Login time]");
@@ -69,5 +69,3 @@ const goToEmojiPage = async (browser, page, inputs) => {
   // workspace が変更されている可能性があるので返しておく
   return inputs;
 };
-
-module.exports = goToEmojiPage;

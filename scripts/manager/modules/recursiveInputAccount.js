@@ -1,9 +1,9 @@
-const inquirer = require("inquirer");
-const isEmail = require("../../utilities/isEmail");
-const isInputs = require("../../utilities/isInputs");
+import inquirer from "inquirer";
+import { isEmail } from "../../utilities/isEmail";
+import { isInputs } from "../../utilities/isInputs";
 
 // ログインエラーの時の再帰処理
-const recursiveInputAccount = async (browser, page, inputs) => {
+export const recursiveInputAccount = async (browser, page, inputs) => {
   // ログイン試行
   try {
     const { email, password } = await inquirer.prompt([
@@ -55,5 +55,3 @@ const recursiveInputAccount = async (browser, page, inputs) => {
     return e;
   }
 };
-
-module.exports = recursiveInputAccount;

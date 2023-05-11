@@ -1,11 +1,10 @@
-const inquirer = require("inquirer");
-const format = require("date-fns/format");
-
-const getGitTagArray = require("../../utilities/getGitTagArray");
-const getGitTaggingDateArray = require("../../utilities/getGitTaggingDateArray");
-const isEmail = require("../../utilities/isEmail");
-const isInputs = require("../../utilities/isInputs");
-const isSelects = require("../../utilities/isSelects");
+import inquirer from "inquirer";
+import format from "date-fns/format";
+import { getGitTagArray } from "../../utilities/getGitTagArray";
+import { getGitTaggingDateArray } from "../../utilities/getGitTaggingDateArray";
+import { isEmail } from "../../utilities/isEmail";
+import { isInputs } from "../../utilities/isInputs";
+import { isSelects } from "../../utilities/isSelects";
 
 const MODE_ITEMS = [
   {
@@ -217,6 +216,6 @@ const questions = (additional) => [
   },
 ];
 
-module.exports = (callback, additional) => {
+export const askInputs = (callback, additional) => {
   inquirer.prompt(questions(additional)).then(callback);
 };

@@ -1,7 +1,7 @@
-const writeJsonFileSync = require("./writeJsonFileSync");
-const getFormatedDateTime = require("./getFormatedDateTime");
+import { writeJsonFileSync } from "./writeJsonFileSync";
+import { getFormatedDateTime } from "./getFormatedDateTime";
 
-const outputResultJson = (data, name, INVOKER) => {
+export const outputResultJson = (data, name, INVOKER) => {
   writeJsonFileSync(
     data,
     `./configs/_${INVOKER}_tmp_${name}_${getFormatedDateTime()}.json`
@@ -10,5 +10,3 @@ const outputResultJson = (data, name, INVOKER) => {
     console.log(`${key}: ${data[key].length}`);
   });
 };
-
-module.exports = outputResultJson;

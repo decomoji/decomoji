@@ -1,4 +1,4 @@
-const fs = require("fs");
+import fs from "fs";
 
 const copyByJson = (jsonPath, destDir, mode) => {
   const fileList = JSON.parse(fs.readFileSync(jsonPath));

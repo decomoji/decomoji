@@ -1,13 +1,11 @@
-const puppeteer = require("puppeteer");
+import puppeteer from "puppeteer";
+import { goToEmojiPage } from "./goToEmojiPage";
+import { getLocalJson } from "./getLocalJson";
+import { postEmojiAlias } from "./postEmojiAlias";
+import { outputLogJson } from "../../utilities/outputLogJson";
+import { outputResultJson } from "../../utilities/outputResultJson";
 
-const goToEmojiPage = require("./goToEmojiPage");
-const getLocalJson = require("./getLocalJson");
-const postEmojiAlias = require("./postEmojiAlias");
-
-const outputLogJson = require("../../utilities/outputLogJson");
-const outputResultJson = require("../../utilities/outputResultJson");
-
-const pretender = async (inputs) => {
+export const pretender = async (inputs) => {
   const {
     browser: BROWSER,
     configs: CONFIGS,
@@ -159,5 +157,3 @@ const pretender = async (inputs) => {
   // 再帰処理をスタートする
   return await _pretend(inputs);
 };
-
-module.exports = pretender;

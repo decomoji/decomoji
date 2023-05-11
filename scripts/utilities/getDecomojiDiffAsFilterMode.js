@@ -1,9 +1,9 @@
-const convertFilepathToBasename = require("./convertFilepathToBasename");
-const convertToDecomojiObject = require("./convertToDecomojiObject");
-const { IGNORES } = require("../models/constants");
+import { convertFilepathToBasename } from "./convertFilepathToBasename";
+import { convertToDecomojiObject } from "./convertToDecomojiObject";
+import { IGNORES } from "../models/constants";
 
 // diff-filter の結果を { fixed, upload, rename } に再分配したオブジェクトを返す
-const getDecomojiDiffAsFilterMode = (diff, tag) => {
+export const getDecomojiDiffAsFilterMode = (diff, tag) => {
   const isFirstOfMajorVerison = /\.0\.0$/.test(tag);
   const upload = [];
   const fixed = [];
@@ -60,5 +60,3 @@ const getDecomojiDiffAsFilterMode = (diff, tag) => {
       .sort((a, b) => a.name.localeCompare(b.name)),
   };
 };
-
-module.exports = getDecomojiDiffAsFilterMode;

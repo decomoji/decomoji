@@ -1,9 +1,9 @@
-const getGitDiffArray = require("./getGitDiffArray");
-const getGitDiffOfRenameArray = require("./getGitDiffOfRenameArray");
-const isDecomojiFile = require("./isDecomojiFile");
+import { getGitDiffArray } from "./getGitDiffArray";
+import { getGitDiffOfRenameArray } from "./getGitDiffOfRenameArray";
+import { isDecomojiFile } from "./isDecomojiFile";
 
 // diff-filter-mode をキーにして差分を配列で持つオブジェクトをタグごとに持ったオブジェクトを返す
-const getDecomojiGitDiffAsTag = (tagPairs) => {
+export const getDecomojiGitDiffAsTag = (tagPairs) => {
   /**
    * {
    *  <tag>: {"upload: [...]", "modify": [...], "rename": [...], "delete": [...]},
@@ -37,5 +37,3 @@ const getDecomojiGitDiffAsTag = (tagPairs) => {
     return { ..._log, [to]: log };
   }, {});
 };
-
-module.exports = getDecomojiGitDiffAsTag;

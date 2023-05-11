@@ -1,7 +1,7 @@
-const convertFilepathToBasename = require("./convertFilepathToBasename");
+import { convertFilepathToBasename } from "./convertFilepathToBasename";
 
 // デコモジファインダー用のフォーマットに変換する
-const convertToDecomojiObject = (path, tag, mode) => {
+export const convertToDecomojiObject = (path, tag, mode) => {
   return {
     name: convertFilepathToBasename(path),
     category: /.+\/(.+)\//.exec(path)[1],
@@ -11,5 +11,3 @@ const convertToDecomojiObject = (path, tag, mode) => {
     ...(mode === "delete" ? { removed: tag } : {}),
   };
 };
-
-module.exports = convertToDecomojiObject;

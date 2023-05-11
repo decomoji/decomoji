@@ -1,8 +1,8 @@
-const inquirer = require("inquirer");
-const isInputs = require("../../utilities/isInputs");
+import inquirer from "inquirer";
+import { isInputs } from "../../utilities/isInputs";
 
 // 2FA利用時の再帰処理
-const recursiveInput2FA = async (browser, page, inputs) => {
+export const recursiveInput2FA = async (browser, page, inputs) => {
   // 前の入力を空にしておく
   await page.$eval('[name="2fa_code"]', (e) => (e.value = ""));
   // 2FA試行
@@ -35,5 +35,3 @@ const recursiveInput2FA = async (browser, page, inputs) => {
     return e;
   }
 };
-
-module.exports = recursiveInput2FA;
