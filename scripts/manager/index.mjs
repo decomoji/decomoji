@@ -14,11 +14,11 @@ program
   .option("-b, --browser", "open browser")
   .option(
     "-d, --debug",
-    "full debugging mode (open browser, output data log, output running time)"
+    "full debugging mode (open browser, output data log, output up time, If an error then stand by without exiting.)"
   )
   .option("-i, --inputs [type]", "input setting json file")
   .option("-l, --log", "output data log")
-  .option("-t, --time", "output running time");
+  .option("-t, --time", "output up time");
 
 program.parse(process.argv);
 const options = program.opts();
