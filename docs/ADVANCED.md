@@ -23,7 +23,7 @@
 登録スクリプトに `--inputs` オプション（または `-i`）を付与することで `inputs.json` の情報がログインに使われます。
 
 ```bash
-node scripts/manager --inputs
+node scripts/manager/index.mjs --inputs
 ```
 
 ## 削除時に自分以外のメンバーが登録したカスタム絵文字も強制的に削除する
@@ -88,13 +88,13 @@ node scripts/generator/toDiffJson.js v5.100.0
 指定のバージョンを `--additinal` オプションに渡すと、
 
 ```bash
-node scripts/manager --additional v5.100.0
+node scripts/manager/index.mjs --additional v5.100.0
 ```
 
 登録スクリプト実行時のバージョン選択に「ユーザーが追加したバージョン」として表示されます。
 
 ```bash
-% node scripts/manager -a v5.100.0
+% node scripts/manager/index.mjs -a v5.100.0
 ? ワークスペースのサブドメインを入力してください: decomoji-dev
 ? メールアドレスを入力してください: otiext@gmail.com
 ? パスワードを入力してください: **********
@@ -132,7 +132,7 @@ node scripts/manager --additional v5.100.0
 }
 ```
 
-`node scripts/manager -i` を実行して登録が完了すると、`:ナルホド:` を入力して `:naruhodo:` と同じカスタム絵文字が引き当てられるようになります。
+`/index.mjs -i` を実行して登録が完了すると、`:ナルホド:` を入力して `:naruhodo:` と同じカスタム絵文字が引き当てられるようになります。
 
 エイリアス名に登録しようとしている文字列が、エイリアスなのかカスタム絵文字自体なのかに関わらず、ワークスペースにすでに登録されている場合には、そのエイリアスは登録されません。
 
