@@ -1,11 +1,11 @@
-import commander from "commander";
+import { Command } from "commander";
 import { isStringOfNotEmpty } from "../utilities/isStringOfNotEmpty.mjs";
 import { askInputs } from "./modules/askInputs.mjs";
 import { uploader } from "./modules/uploader.mjs";
 import { pretender } from "./modules/pretender.mjs";
 import { remover } from "./modules/remover.mjs";
 
-const program = new commander.Command();
+const program = new Command();
 const DEFAULT_INPUT_NAME = "inputs.json";
 
 // コマンドライン引数の定義
