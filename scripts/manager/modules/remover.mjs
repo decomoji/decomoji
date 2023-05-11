@@ -46,7 +46,7 @@ export const remover = async (inputs) => {
     // puppeteer でブラウザを起動する
     const browser = await puppeteer.launch({
       devtools: BROWSER || DEBUG,
-      headless: BROWSER ? false : "new",
+      headless: BROWSER || DEBUG ? false : "new",
     });
     // ページを追加する
     const page = await browser.newPage();
