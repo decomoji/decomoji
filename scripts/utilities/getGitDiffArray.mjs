@@ -1,6 +1,6 @@
 import { execSync } from "child_process";
-import { convertBufferToArray } from "./convertBufferToArray";
-import { getGitTagArray } from "./getGitTagArray";
+import { convertBufferToArray } from "./convertBufferToArray.mjs";
+import { getGitTagArray } from "./getGitTagArray.mjs";
 
 // git で from と to の差分を mode で diff-filter した結果を配列を返す。
 // to がない場合、from だけで差分を取得して返す。

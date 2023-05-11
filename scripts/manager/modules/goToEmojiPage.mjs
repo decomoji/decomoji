@@ -1,6 +1,6 @@
-import { recursiveInputWorkspace } from "./recursiveInputWorkspace";
-import { recursiveInputAccount } from "./recursiveInputAccount";
-import { recursiveInput2FA } from "./recursiveInput2FA";
+import { recursiveInputWorkspace } from "./recursiveInputWorkspace.mjs";
+import { recursiveInputAccount } from "./recursiveInputAccount.mjs";
+import { recursiveInput2FA } from "./recursiveInput2FA.mjs";
 
 export const goToEmojiPage = async (browser, page, inputs) => {
   const TIME = inputs.time;

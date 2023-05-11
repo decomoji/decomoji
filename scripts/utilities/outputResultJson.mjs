@@ -1,5 +1,5 @@
-import { writeJsonFileSync } from "./writeJsonFileSync";
-import { getFormatedDateTime } from "./getFormatedDateTime";
+import { writeJsonFileSync } from "./writeJsonFileSync.mjs";
+import { getFormatedDateTime } from "./getFormatedDateTime.mjs";
 
 export const outputResultJson = (data, name, INVOKER) => {
   writeJsonFileSync(

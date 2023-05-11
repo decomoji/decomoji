@@ -1,5 +1,5 @@
 import { execSync } from "child_process";
-import { convertBufferToArray } from "./convertBufferToArray";
+import { convertBufferToArray } from "./convertBufferToArray.mjs";
 
 // git でタグ一覧を配列で返す
 export const getGitTagArray = (versionPrefix) => {

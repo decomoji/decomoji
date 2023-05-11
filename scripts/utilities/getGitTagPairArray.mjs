@@ -1,4 +1,4 @@
-import { getGitTagArray } from "./getGitTagArray";
+import { getGitTagArray } from "./getGitTagArray.mjs";
 
 // git のタグ一覧において自身と次のバージョンのペアオブジェクトを配列で返す
 export const getGitTagPairArray = (start, versionPrefix, end) => {

@@ -1,5 +1,5 @@
 import { execSync } from "child_process";
-import { convertBufferToArray } from "./convertBufferToArray";
+import { convertBufferToArray } from "./convertBufferToArray.mjs";
 
 // タグとタギングした日付を返す
 export const getGitTaggingDateArray = () => {

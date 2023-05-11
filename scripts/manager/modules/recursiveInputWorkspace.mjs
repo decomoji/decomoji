@@ -1,5 +1,5 @@
 import inquirer from "inquirer";
-import { isInputs } from "../../utilities/isInputs";
+import { isInputs } from "../../utilities/isInputs.mjs";
 
 // ワークスペースが見つからない時の再帰処理
 export const recursiveInputWorkspace = async (page, inputs) => {

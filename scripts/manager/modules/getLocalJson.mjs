@@ -1,5 +1,5 @@
 import fs from "fs";
-import { outputLogJson } from "../../utilities/outputLogJson";
+import { outputLogJson } from "../../utilities/outputLogJson.mjs";
 
 export const getLocalJson = (CONFIGS, TERM, KEYS, INVOKER, LOG) => {
   LOG && console.log("getLocalJson(", { CONFIGS, TERM, INVOKER, KEYS }, ")");

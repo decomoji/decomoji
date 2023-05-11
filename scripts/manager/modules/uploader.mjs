@@ -1,16 +1,17 @@
 import puppeteer from "puppeteer";
-import { goToEmojiPage } from "./goToEmojiPage";
-import { getLocalJson } from "./getLocalJson";
-import { postEmojiAlias } from "./postEmojiAlias";
-import { outputLogJson } from "../../utilities/outputLogJson";
-import { outputResultJson } from "../../utilities/outputResultJson";
+import { goToEmojiPage } from "./goToEmojiPage.mjs";
+import { getLocalJson } from "./getLocalJson.mjs";
+import { postEmojiAdd } from "./postEmojiAdd.mjs";
+import { outputLogJson } from "../../utilities/outputLogJson.mjs";
+import { outputResultJson } from "../../utilities/outputResultJson.mjs";
 
-export const pretender = async (inputs) => {
+export const uploader = async (inputs) => {
   const {
     browser: BROWSER,
     configs: CONFIGS,
     debug: DEBUG,
     log: LOG,
+    excludeExplicit: EXCLUDE_EXPLICIT,
     term: TERM,
     time: TIME,
   } = inputs;
@@ -18,34 +19,39 @@ export const pretender = async (inputs) => {
   let i = 0; // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
   let FAILED = false;
   let RELOGIN = false;
-  const localDecomojiList = getLocalJson(
+  const rawLocalDecomojiList = getLocalJson(
     CONFIGS,
     TERM,
-    ["rename"],
-    "pretender",
+    ["upload"],
+    "uploder",
     LOG
   );
+  // バージョンごとに追加するとき、excludeExplicit=true なら explicit デコモジを取り除く
+  const localDecomojiList =
+    TERM === "version" && EXCLUDE_EXPLICIT
+      ? rawLocalDecomojiList.filter(
+          ({ path }) => !RegExp("explicit").test(path)
+        )
+      : rawLocalDecomojiList;
   const localDecomojiListLength = localDecomojiList.length;
 
   TERM === "version" &&
     LOG &&
-    outputLogJson(localDecomojiList, "list", "pretender");
+    outputLogJson(localDecomojiList, "filtered", "uploder");
 
   const result = {
     error: [],
-    error_invalid_alias: [],
     error_name_taken: [],
     error_name_taken_i18n: [],
     ok: [],
   };
   const messages = {
-    ok: "registered",
-    error_invalid_alias: "skipped(target no exists)",
+    ok: "uploaded",
     error_name_taken: "skipped(already exists)",
     error_name_taken_i18n: "skipped(international emoji set already includes)",
   };
 
-  const _pretend = async (inputs) => {
+  const _upload = async (inputs) => {
     // puppeteer でブラウザを起動する
     const browser = await puppeteer.launch({
       devtools: BROWSER,
@@ -66,24 +72,23 @@ export const pretender = async (inputs) => {
       return inputs;
     }
 
-    TIME && console.time("[Register time]");
+    TIME && console.time("[Upload time]");
     while (i < localDecomojiListLength) {
-      const { name, alias_for } = localDecomojiList[i];
-      // name か alias_for が falsy の時は FAILED フラグを立ててループを抜ける
-      if (!name || !alias_for) {
+      const { name, path } = localDecomojiList[i];
+      // name か path が falsy の時は FAILED フラグを立ててループを抜ける
+      if (!name || !path) {
         FAILED = true;
         break;
       }
 
-      const res = await postEmojiAlias(page, WORKSPACE, name, alias_for);
+      const res = await postEmojiAdd(page, WORKSPACE, name, path);
 
       console.info(
         `${i + 1}/${localDecomojiListLength}: ${
           res.ok
             ? messages.ok
             : res.error === "error_name_taken" ||
-              res.error === "error_name_taken_i18n" ||
-              res.error === "error_invalid_alias"
+              res.error === "error_name_taken_i18n"
             ? messages[res.error]
             : res.error
         } ${name}.`
@@ -93,8 +98,7 @@ export const pretender = async (inputs) => {
       res.ok
         ? result.ok.push(name)
         : res.error === "error_name_taken" ||
-          res.error === "error_name_taken_i18n" ||
-          res.error === "error_invalid_alias"
+          res.error === "error_name_taken_i18n"
         ? result[res.error].push(name)
         : res.error === "ratelimited" // ratelimited エラーの場合はログに残さない
         ? void 0
@@ -117,8 +121,7 @@ export const pretender = async (inputs) => {
       if (
         res.error &&
         res.error !== "error_name_taken" && // 登録済みのエラー
-        res.error !== "error_name_taken_i18n" && // i18n と競合するエラー
-        res.error !== "error_invalid_alias" // エイリアスを貼る先が見つからないエラー
+        res.error !== "error_name_taken_i18n" // i18n と競合するエラー
       ) {
         FAILED = true;
         break;
@@ -130,7 +133,7 @@ export const pretender = async (inputs) => {
       FAILED = false;
       RELOGIN = false;
     }
-    TIME && console.timeEnd("[Register time]");
+    TIME && console.timeEnd("[Upload time]");
 
     // ブラウザを閉じる
     if (!DEBUG) {
@@ -141,19 +144,19 @@ export const pretender = async (inputs) => {
     if (RELOGIN) {
       TIME && console.timeLog("[Total time]");
       console.info("Reconnecting...");
-      return await _pretend(inputs);
+      return await _upload(inputs);
     }
 
     // 追加中に ratelimited にならなかった場合ここまで到達する
     if (FAILED) {
-      console.error("[ERROR]Register failed.");
+      console.error("[ERROR]Upload failed.");
     }
-    console.info("Register completed!");
-    outputResultJson(result, "result", "pretender");
+    console.info("Upload completed!");
+    outputResultJson(result, "result", "uploder");
     // 入力し直したかもしれないので返す
     return inputs;
   };
 
   // 再帰処理をスタートする
-  return await _pretend(inputs);
+  return await _upload(inputs);
 };

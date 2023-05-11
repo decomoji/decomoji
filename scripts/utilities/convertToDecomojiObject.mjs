@@ -1,4 +1,4 @@
-import { convertFilepathToBasename } from "./convertFilepathToBasename";
+import { convertFilepathToBasename } from "./convertFilepathToBasename.mjs";
 
 // デコモジファインダー用のフォーマットに変換する
 export const convertToDecomojiObject = (path, tag, mode) => {

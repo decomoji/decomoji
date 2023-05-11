@@ -1,4 +1,4 @@
-import { getDecomojiCategory } from "./getDecomojiCategory";
+import { getDecomojiCategory } from "./getDecomojiCategory.mjs";
 
 // `getDecomojiDiffAsFilterMode()` の結果からバージョンを統合して { basic, extra, explicit } に再分配したオブジェクトを返す
 export const getDecomojiDiffAsCategory = (diffAsMode) => {

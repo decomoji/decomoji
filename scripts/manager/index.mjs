@@ -1,9 +1,9 @@
 import commander from "commander";
-import { isStringOfNotEmpty } from "../utilities/isStringOfNotEmpty";
-import { askInputs } from "./modules/askInputs";
-import { uploader } from "./modules/uploader";
-import { pretender } from "./modules/pretender";
-import { remover } from "./modules/remover";
+import { isStringOfNotEmpty } from "../utilities/isStringOfNotEmpty.mjs";
+import { askInputs } from "./modules/askInputs.mjs";
+import { uploader } from "./modules/uploader.mjs";
+import { pretender } from "./modules/pretender.mjs";
+import { remover } from "./modules/remover.mjs";
 
 const program = new commander.Command();
 const DEFAULT_INPUT_NAME = "inputs.json";

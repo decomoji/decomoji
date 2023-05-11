@@ -1,10 +1,10 @@
 import inquirer from "inquirer";
 import format from "date-fns/format";
-import { getGitTagArray } from "../../utilities/getGitTagArray";
-import { getGitTaggingDateArray } from "../../utilities/getGitTaggingDateArray";
-import { isEmail } from "../../utilities/isEmail";
-import { isInputs } from "../../utilities/isInputs";
-import { isSelects } from "../../utilities/isSelects";
+import { getGitTagArray } from "../../utilities/getGitTagArray.mjs";
+import { getGitTaggingDateArray } from "../../utilities/getGitTaggingDateArray.mjs";
+import { isEmail } from "../../utilities/isEmail.mjs";
+import { isInputs } from "../../utilities/isInputs.mjs";
+import { isSelects } from "../../utilities/isSelects.mjs";
 
 const MODE_ITEMS = [
   {

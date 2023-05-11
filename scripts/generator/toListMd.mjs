@@ -1,5 +1,5 @@
 import fs from "fs";
-import { convertFilepathToBasename } from "../utilities/convertFilepathToBasename";
+import { convertFilepathToBasename } from "../utilities/convertFilepathToBasename.mjs";
 
 const contents = {
   basic: `# デコモジ基本セット\n\nすぐに使えて Slack が楽しくなるセットです。\n\n`,

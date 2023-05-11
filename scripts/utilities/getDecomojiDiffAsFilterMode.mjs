@@ -1,6 +1,6 @@
-import { convertFilepathToBasename } from "./convertFilepathToBasename";
-import { convertToDecomojiObject } from "./convertToDecomojiObject";
-import { IGNORES } from "../models/constants";
+import { convertFilepathToBasename } from "./convertFilepathToBasename.mjs";
+import { convertToDecomojiObject } from "./convertToDecomojiObject.mjs";
+import { IGNORES } from "../models/constants.mjs";
 
 // diff-filter の結果を { fixed, upload, rename } に再分配したオブジェクトを返す
 export const getDecomojiDiffAsFilterMode = (diff, tag) => {

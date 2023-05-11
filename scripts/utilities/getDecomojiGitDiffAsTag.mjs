@@ -1,6 +1,6 @@
-import { getGitDiffArray } from "./getGitDiffArray";
-import { getGitDiffOfRenameArray } from "./getGitDiffOfRenameArray";
-import { isDecomojiFile } from "./isDecomojiFile";
+import { getGitDiffArray } from "./getGitDiffArray.mjs";
+import { getGitDiffOfRenameArray } from "./getGitDiffOfRenameArray.mjs";
+import { isDecomojiFile } from "./isDecomojiFile.mjs";
 
 // diff-filter-mode をキーにして差分を配列で持つオブジェクトをタグごとに持ったオブジェクトを返す
 export const getDecomojiGitDiffAsTag = (tagPairs) => {

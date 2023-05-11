@@ -1,9 +1,9 @@
 import puppeteer from "puppeteer";
-import { goToEmojiPage } from "./goToEmojiPage";
-import { getLocalJson } from "./getLocalJson";
-import { postEmojiRemove } from "./postEmojiRemove";
-import { outputLogJson } from "../../utilities/outputLogJson";
-import { outputResultJson } from "../../utilities/outputResultJson";
+import { goToEmojiPage } from "./goToEmojiPage.mjs";
+import { getLocalJson } from "./getLocalJson.mjs";
+import { postEmojiRemove } from "./postEmojiRemove.mjs";
+import { outputLogJson } from "../../utilities/outputLogJson.mjs";
+import { outputResultJson } from "../../utilities/outputResultJson.mjs";
 
 export const remover = async (inputs) => {
   const {

@@ -1,5 +1,5 @@
 import inquirer from "inquirer";
-import { isInputs } from "../../utilities/isInputs";
+import { isInputs } from "../../utilities/isInputs.mjs";
 
 // 2FA利用時の再帰処理
 export const recursiveInput2FA = async (browser, page, inputs) => {

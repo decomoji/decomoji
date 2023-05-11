@@ -1,13 +1,13 @@
-import { convertToVPrefixedVersion } from "../utilities/convertToVPrefixedVersion";
-import { getDecomojiDiffAsCategory } from "../utilities/getDecomojiDiffAsCategory";
-import { getDecomojiDiffAsFilterMode } from "../utilities/getDecomojiDiffAsFilterMode";
-import { getDecomojiGitDiffAsTag } from "../utilities/getDecomojiGitDiffAsTag";
-import { getGitTagPairArray } from "../utilities/getGitTagPairArray";
-import { getMergedDiffOfCategories } from "../utilities/getMergedDiffOfCategories";
-import { getMergedDiffOfManages } from "../utilities/getMergedDiffOfManages";
-import { writeJsonFileSync } from "../utilities/writeJsonFileSync";
+import { convertToVPrefixedVersion } from "../utilities/convertToVPrefixedVersion.mjs";
+import { getDecomojiDiffAsCategory } from "../utilities/getDecomojiDiffAsCategory.mjs";
+import { getDecomojiDiffAsFilterMode } from "../utilities/getDecomojiDiffAsFilterMode.mjs";
+import { getDecomojiGitDiffAsTag } from "../utilities/getDecomojiGitDiffAsTag.mjs";
+import { getGitTagPairArray } from "../utilities/getGitTagPairArray.mjs";
+import { getMergedDiffOfCategories } from "../utilities/getMergedDiffOfCategories.mjs";
+import { getMergedDiffOfManages } from "../utilities/getMergedDiffOfManages.mjs";
+import { writeJsonFileSync } from "../utilities/writeJsonFileSync.mjs";
 
-import { ADDITIONALS } from "../models/constants";
+import { ADDITIONALS } from "../models/constants.mjs";
 
 // デコモジオブジェクトの格納先
 const Seeds = {
