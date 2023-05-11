@@ -1,5 +1,5 @@
 import inquirer from "inquirer";
-import format from "date-fns/format";
+import format from "date-fns/format/index.js";
 import { getGitTagArray } from "../../utilities/getGitTagArray.mjs";
 import { getGitTaggingDateArray } from "../../utilities/getGitTaggingDateArray.mjs";
 import { isEmail } from "../../utilities/isEmail.mjs";
