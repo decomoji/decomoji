@@ -15,7 +15,9 @@ export const getDecomojiDiffAsFilterMode = (diff, tag) => {
       const M = filterMode === "modify";
       const D = filterMode === "delete";
       const R = filterMode === "rename";
-      const decomoji = R ? {} : convertToDecomojiObject(path, tag, filterMode);
+      const decomoji = R
+        ? {}
+        : convertToDecomojiObject({ path, tag, mode: filterMode });
 
       // x.0.0 では upload と modify だけ扱う
       if (isFirstOfMajorVerison) {
