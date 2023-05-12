@@ -154,7 +154,11 @@ export const pretender = async (inputs) => {
       console.error("[ERROR]Register failed.");
     }
     console.info("Register completed!");
-    outputResultJson(result, "result", "pretender");
+    await outputResultJson({
+      data: result,
+      name: "result",
+      invoker: "pretender",
+    });
     // 入力し直したかもしれないので返す
     return inputs;
   };

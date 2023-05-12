@@ -157,7 +157,11 @@ export const uploader = async (inputs) => {
       console.error("[ERROR]Upload failed.");
     }
     console.info("Upload completed!");
-    outputResultJson(result, "result", "uploder");
+    await outputResultJson({
+      data: result,
+      name: "result",
+      invoker: "uploder",
+    });
     // 入力し直したかもしれないので返す
     return inputs;
   };

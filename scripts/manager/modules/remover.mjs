@@ -145,7 +145,11 @@ export const remover = async (inputs) => {
       console.error("[ERROR]Remove failed.");
     }
     console.info("Remove completed!");
-    outputResultJson(result, "result", "remover");
+    await outputResultJson({
+      data: result,
+      name: "result",
+      invoker: "remover",
+    });
     // 入力し直したかもしれないので返す
     return inputs;
   };
