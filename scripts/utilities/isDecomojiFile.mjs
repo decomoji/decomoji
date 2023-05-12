@@ -1,4 +1,2 @@
 // ファイル名がデコモジかどうか返す
-export const isDecomojiFile = (file) => {
-  return /decomoji\/.*\.png/.test(file);
-};
+export const isDecomojiFile = (file) => /decomoji\/.*\.png/.test(file);
