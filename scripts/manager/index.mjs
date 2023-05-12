@@ -4,6 +4,7 @@ import { askInputs } from "./modules/askInputs.mjs";
 import { uploader } from "./modules/uploader.mjs";
 import { pretender } from "./modules/pretender.mjs";
 import { remover } from "./modules/remover.mjs";
+import { getParsedJson } from "../utilities/getParsedJson.mjs";
 
 const program = new Command();
 const DEFAULT_INPUT_NAME = "inputs.json";
@@ -125,13 +126,12 @@ forceRemove    : ${_inputs.forceRemove}`);
 };
 
 if (options.inputs) {
-  // --inputs inputs.hoge.json などのファイルパスが指定されていたらそれを require し、
-  // --inputs オプションがキーのみの場合はデフォルトで `./inputs.json` を require する
+  // --inputs inputs.hoge.json などのファイルパスが指定されていたらそれを import し、
+  // --inputs オプションがキーのみの場合はデフォルトで `./inputs.json` を import する
   const FILE = isStringOfNotEmpty(options.inputs)
     ? options.inputs
     : DEFAULT_INPUT_NAME;
-  const INPUTS = require(`./${FILE}`);
-  main(INPUTS);
+  main(await getParsedJson(`../manager/${FILE}`));
 } else {
   // --inputs オプション がない場合は inquirer を起動して対話的にオプションを作る
   askInputs((inputs) => main(inputs), options.additional);
