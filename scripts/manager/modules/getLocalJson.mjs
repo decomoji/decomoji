@@ -1,11 +1,11 @@
-import fs from "fs";
+import { getParsedJson } from "../../utilities/getParsedJson.mjs";
 import { outputLogJson } from "../../utilities/outputLogJson.mjs";
 
 export const getLocalJson = async (CONFIGS, TERM, KEYS, INVOKER, LOG) => {
   LOG && console.log("getLocalJson(", { CONFIGS, TERM, INVOKER, KEYS }, ")");
   // term=category では [tag1, tag2]、term=version では [[tag1, tag2], [tag3, tag4]] で CONFIGS が渡ってくるのでどちらとも構わず平たくする
-  const combined = CONFIGS.flat().flatMap((target) =>
-    JSON.parse(fs.readFileSync(`./configs/${target}.json`, "utf8"))
+  const combined = CONFIGS.flat().flatMap(
+    async (target) => await getParsedJson(`../../configs/${target}.json`)
   );
   LOG &&
     (await outputLogJson({
