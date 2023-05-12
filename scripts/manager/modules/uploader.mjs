@@ -37,7 +37,11 @@ export const uploader = async (inputs) => {
 
   TERM === "version" &&
     LOG &&
-    outputLogJson(localDecomojiList, "filtered", "uploder");
+    (await outputLogJson({
+      data: localDecomojiList,
+      name: "filtered",
+      invoker: "uploder",
+    }));
 
   const result = {
     error: [],

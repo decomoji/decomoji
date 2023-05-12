@@ -1,7 +1,8 @@
 import { writeJsonFile } from "./writeJsonFile.mjs";
 import { getFormatedDateTime } from "./getFormatedDateTime.mjs";
 
-export const outputLogJson = (data, name, INVOKER) => {
-  const filename = `_${INVOKER}_tmp_${name}_${getFormatedDateTime()}.json`;
-  writeJsonFile(data, `./configs/${filename}`);
-};
+export const outputLogJson = async ({ data, name, invoker }) =>
+  writeJsonFile(
+    data,
+    `./configs/_tmp_${invoker}_${name}_${getFormatedDateTime()}.json`
+  );

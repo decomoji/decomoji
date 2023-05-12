@@ -29,7 +29,11 @@ export const pretender = async (inputs) => {
 
   TERM === "version" &&
     LOG &&
-    outputLogJson(localDecomojiList, "list", "pretender");
+    (await outputLogJson({
+      data: localDecomojiList,
+      name: "list",
+      invoker: "pretender",
+    }));
 
   const result = {
     error: [],

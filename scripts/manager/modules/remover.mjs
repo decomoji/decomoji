@@ -30,7 +30,11 @@ export const remover = async (inputs) => {
 
   TERM === "version" &&
     LOG &&
-    outputLogJson(localDecomojiList, "list", "remover");
+    (await outputLogJson({
+      data: localDecomojiList,
+      name: "list",
+      invoker: "remover",
+    }));
 
   const result = {
     error: [],
