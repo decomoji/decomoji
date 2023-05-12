@@ -32,8 +32,8 @@ export const remover = async (inputs) => {
     LOG &&
     (await outputLogJson({
       data: localDecomojiList,
-      name: "list",
       invoker: "remover",
+      name: "list",
     }));
 
   const result = {
@@ -147,8 +147,8 @@ export const remover = async (inputs) => {
     console.info("Remove completed!");
     await outputResultJson({
       data: result,
-      name: "result",
       invoker: "remover",
+      name: "result",
     });
     // 入力し直したかもしれないので返す
     return inputs;

@@ -10,8 +10,8 @@ export const getLocalJson = async (CONFIGS, TERM, KEYS, INVOKER, LOG) => {
   LOG &&
     (await outputLogJson({
       data: combined,
-      name: "combined",
       invoker: INVOKER,
+      name: "combined",
     }));
   // term=version の時、[{ "fixed": [...], "upload": [...], "rename": [...] }, { "fixed": [...], "upload": [...], "rename": [...] }, ...] という、
   // filterMode 別のオブジェクトが v5.x.y ごとに配列になっているので、これから KEYS のプロパティだけ抽出して平たくする
@@ -22,8 +22,8 @@ export const getLocalJson = async (CONFIGS, TERM, KEYS, INVOKER, LOG) => {
   LOG &&
     (await outputLogJson({
       data: flatten,
-      name: "flatten",
       invoker: INVOKER,
+      name: "flatten",
     }));
   return flatten;
 };

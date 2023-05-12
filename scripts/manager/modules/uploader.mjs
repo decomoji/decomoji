@@ -39,8 +39,8 @@ export const uploader = async (inputs) => {
     LOG &&
     (await outputLogJson({
       data: localDecomojiList,
-      name: "filtered",
       invoker: "uploder",
+      name: "filtered",
     }));
 
   const result = {
@@ -159,8 +159,8 @@ export const uploader = async (inputs) => {
     console.info("Upload completed!");
     await outputResultJson({
       data: result,
-      name: "result",
       invoker: "uploder",
+      name: "result",
     });
     // 入力し直したかもしれないので返す
     return inputs;

@@ -31,8 +31,8 @@ export const pretender = async (inputs) => {
     LOG &&
     (await outputLogJson({
       data: localDecomojiList,
-      name: "list",
       invoker: "pretender",
+      name: "list",
     }));
 
   const result = {
@@ -156,8 +156,8 @@ export const pretender = async (inputs) => {
     console.info("Register completed!");
     await outputResultJson({
       data: result,
-      name: "result",
       invoker: "pretender",
+      name: "result",
     });
     // 入力し直したかもしれないので返す
     return inputs;

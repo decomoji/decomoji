@@ -1,7 +1,7 @@
 import { writeJsonFile } from "./writeJsonFile.mjs";
 import { getFormatedDateTime } from "./getFormatedDateTime.mjs";
 
-export const outputResultJson = async ({ data, name, invoker }) => {
+export const outputResultJson = async ({ data, invoker, name }) => {
   await writeJsonFile(
     data,
     `./configs/_tmp_${invoker}_${name}_${getFormatedDateTime()}.json`
