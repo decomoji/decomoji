@@ -1,4 +1,4 @@
-import { convertToVPrefixedVersion } from "../utilities/convertToVPrefixedVersion.mjs";
+import { convertToVPrefixedVersion as v } from "../utilities/convertToVPrefixedVersion.mjs";
 import { getDecomojiDiffAsCategory } from "../utilities/getDecomojiDiffAsCategory.mjs";
 import { getDecomojiDiffAsFilterMode } from "../utilities/getDecomojiDiffAsFilterMode.mjs";
 import { getDecomojiGitDiffAsTag } from "../utilities/getDecomojiGitDiffAsTag.mjs";
@@ -38,7 +38,7 @@ const tagPairs = getGitTagPairArray(TAG_PREV, TAG_PREFIX, TAG_UPDATE_CANDIDATE);
 
 // git tag ごとの差分を保存する
 const gitDiffAsTag = getDecomojiGitDiffAsTag(tagPairs);
-// writeJsonFile(gitDiffAsTag, `./configs/${convertToVPrefixedVersion(TAG_PREFIX)}_diff.json`);
+// writeJsonFile(gitDiffAsTag, `./configs/${v(TAG_PREFIX)}_diff.json`);
 
 // 実行！
 Object.entries(gitDiffAsTag)
@@ -46,10 +46,7 @@ Object.entries(gitDiffAsTag)
     const [tag, list] = entry;
     // diff-filter の結果を { fixed, upload, rename } に再分配し JSON に書き出す
     const diffAsFilterMode = getDecomojiDiffAsFilterMode(list, tag);
-    writeJsonFile(
-      diffAsFilterMode,
-      `./configs/${convertToVPrefixedVersion(tag)}.json`
-    );
+    writeJsonFile(diffAsFilterMode, `./configs/${v(tag)}.json`);
     return diffAsFilterMode;
   })
   .forEach((diffAsFilterMode) => {
@@ -75,7 +72,7 @@ Object.entries(Seeds.categories).forEach((entry) => {
     _list
       .filter(({ removed }) => !removed)
       .sort((a, b) => a.name.localeCompare(b.name)),
-    `./configs/${convertToVPrefixedVersion(TAG_PREFIX)}_${category}.json`
+    `./configs/${v(TAG_PREFIX)}_${category}.json`
   );
 });
 
@@ -85,6 +82,6 @@ Object.entries(Seeds.manages).forEach((entry) => {
   const _list = manage === "rename" ? list.concat(ADDITIONALS.rename) : list;
   writeJsonFile(
     _list.sort((a, b) => a.name.localeCompare(b.name)),
-    `./configs/${convertToVPrefixedVersion(TAG_PREFIX)}_${manage}.json`
+    `./configs/${v(TAG_PREFIX)}_${manage}.json`
   );
 });
