@@ -19,13 +19,13 @@ export const remover = async (inputs) => {
   let i = 0; // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
   let FAILED = false;
   let RELOGIN = false;
-  const localDecomojiList = getLocalJson(
+  const localDecomojiList = getLocalJson({
     CONFIGS,
     TERM,
-    UPDATE ? ["fixed"] : ["fixed", "upload"],
-    "remover",
-    LOG
-  );
+    KEYS: UPDATE ? ["fixed"] : ["fixed", "upload"],
+    INVOKER: "remover",
+    LOG,
+  });
   const localDecomojiListLength = localDecomojiList.length;
 
   TERM === "version" &&

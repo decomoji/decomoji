@@ -19,13 +19,13 @@ export const uploader = async (inputs) => {
   let i = 0; // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
   let FAILED = false;
   let RELOGIN = false;
-  const rawLocalDecomojiList = getLocalJson(
+  const rawLocalDecomojiList = getLocalJson({
     CONFIGS,
     TERM,
-    ["upload"],
-    "uploder",
-    LOG
-  );
+    KEYS: ["upload"],
+    INVOKER: "uploder",
+    LOG,
+  });
   // バージョンごとに追加するとき、excludeExplicit=true なら explicit デコモジを取り除く
   const localDecomojiList =
     TERM === "version" && EXCLUDE_EXPLICIT
