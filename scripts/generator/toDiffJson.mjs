@@ -38,7 +38,7 @@ const tagPairs = getGitTagPairArray(TAG_PREV, TAG_PREFIX, TAG_UPDATE_CANDIDATE);
 
 // git tag ごとの差分を保存する
 const gitDiffAsTag = getDecomojiGitDiffAsTag(tagPairs);
-// writeJsonFile(gitDiffAsTag, `./configs/${v(TAG_PREFIX)}_diff.json`);
+// await writeJsonFile(gitDiffAsTag, `./configs/${v(TAG_PREFIX)}_diff.json`);
 
 // 実行！
 Object.entries(gitDiffAsTag)
@@ -61,14 +61,14 @@ Object.entries(gitDiffAsTag)
   });
 
 // v5_all.json, v5_basic.json, v5_extra.json, v5_explicit.json を作る
-Object.entries(Seeds.categories).forEach((entry) => {
+Object.entries(Seeds.categories).forEach(async (entry) => {
   const [category, list] = entry;
   if (list.length < 1) return;
   const _list =
     category === "extra" || category === "all"
       ? list.concat(ADDITIONALS.extra)
       : list;
-  writeJsonFile(
+  await writeJsonFile(
     _list
       .filter(({ removed }) => !removed)
       .sort((a, b) => a.name.localeCompare(b.name)),
@@ -77,10 +77,10 @@ Object.entries(Seeds.categories).forEach((entry) => {
 });
 
 // v5_fixed.json, v5_rename.json を作る
-Object.entries(Seeds.manages).forEach((entry) => {
+Object.entries(Seeds.manages).forEach(async (entry) => {
   const [manage, list] = entry;
   const _list = manage === "rename" ? list.concat(ADDITIONALS.rename) : list;
-  writeJsonFile(
+  await writeJsonFile(
     _list.sort((a, b) => a.name.localeCompare(b.name)),
     `./configs/${v(TAG_PREFIX)}_${manage}.json`
   );
