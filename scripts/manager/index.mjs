@@ -1,4 +1,5 @@
 import { Command } from "commander";
+import fs from "fs/promises";
 import { isStringOfNotEmpty } from "../utilities/isStringOfNotEmpty.mjs";
 import { askInputs } from "./modules/askInputs.mjs";
 import { uploader } from "./modules/uploader.mjs";
@@ -124,6 +125,10 @@ forceRemove    : ${_inputs.forceRemove}`);
   }
   TIME && console.timeEnd("[Total time]");
 };
+
+if (options.log) {
+  await fs.mkdir("logs", { recursive: true });
+}
 
 if (options.inputs) {
   // --inputs inputs.hoge.json などのファイルパスが指定されていたらそれを import し、
