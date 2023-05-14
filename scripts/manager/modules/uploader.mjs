@@ -1,6 +1,6 @@
 import puppeteer from "puppeteer";
+import { getConfigJson } from "./getConfigJson.mjs";
 import { goToEmojiPage } from "./goToEmojiPage.mjs";
-import { getLocalJson } from "./getLocalJson.mjs";
 import { postEmojiAdd } from "./postEmojiAdd.mjs";
 import { outputLogJson } from "../../utilities/outputLogJson.mjs";
 import { outputResultJson } from "../../utilities/outputResultJson.mjs";
@@ -19,7 +19,7 @@ export const uploader = async (inputs) => {
   let i = 0; // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
   let FAILED = false;
   let RELOGIN = false;
-  const rawLocalDecomojiList = await getLocalJson({
+  const rawLocalDecomojiList = await getConfigJson({
     CONFIGS,
     TERM,
     KEYS: ["upload"],
