@@ -3,5 +3,6 @@
   "email": "<email>",
   "password": "<password>",
   "mode": "upload",
+  "term": "category",
   "configs": ["v5_basic", "v5_extra"]
 }
