@@ -19,7 +19,7 @@ export const uploader = async (inputs) => {
   let i = 0; // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
   let FAILED = false;
   let RELOGIN = false;
-  const rawLocalDecomojiList = getLocalJson({
+  const rawLocalDecomojiList = await getLocalJson({
     CONFIGS,
     TERM,
     KEYS: ["upload"],
