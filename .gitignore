@@ -11,4 +11,5 @@ decomoji/tmp
 inputs.json
 inputs.*.json
 !inputs.example.json
-*_tmp_*
+_tmp_*.json
+logs

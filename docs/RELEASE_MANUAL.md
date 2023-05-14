@@ -23,16 +23,16 @@ node scripts/generator/optimize.mjs explicit
 `fix(decomoji): xxxx の画像を修正した`
 
 # 4. json を更新する
-node scripts/generator/toDiffJson.js v5.x.0
+node scripts/generator/toDiffJson.mjs v5.x.0
 コマンドに更新する予定のバージョン名が必要。
 
 # 5. `--additinal` オプションで登録スクリプトを実行し、登録がうまくいくか確認する
-node scripts/manager -l -t --additional v5.x.0
+node scripts/manager/index.mjs -l -t --additional v5.x.0
 
 `error_name_taken_i18n` エラーなどになったら適宜ファイル名を変更する。
 
 # 6. LIST-***.md を更新する
-node scripts/generator/toListMd.js
+node scripts/generator/toListMd.mjs
 
 # 7. Prettier の意志のままに整形する
 npx prettier --write .

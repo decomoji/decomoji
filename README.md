@@ -64,7 +64,7 @@
 git clone git@github.com:decomoji/decomoji.git
 cd decomoji
 npm ci
-node scripts/manager
+node scripts/manager/index.mjs
 ```
 
 ### スクリプトでできること
