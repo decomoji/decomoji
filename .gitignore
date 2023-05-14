@@ -12,3 +12,4 @@ inputs.json
 inputs.*.json
 !inputs.example.json
 _tmp_*.json
+logs
