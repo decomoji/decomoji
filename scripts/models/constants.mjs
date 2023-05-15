@@ -34,3 +34,7 @@ export const IGNORES = {
     "genntennkaikinotikubi",
   ],
 };
+
+export const FIRST_LETTERS = Array.from(
+  "_0123456789abcdefghijklmnopqrstuvwxyz"
+);
