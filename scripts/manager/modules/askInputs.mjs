@@ -5,6 +5,7 @@ import { getGitTaggingDateArray } from "../../utilities/getGitTaggingDateArray.m
 import { isEmail } from "../../utilities/isEmail.mjs";
 import { isInputs } from "../../utilities/isInputs.mjs";
 import { isSelects } from "../../utilities/isSelects.mjs";
+import { FIRST_LETTERS } from "../../models/constants.mjs";
 
 const MODE_ITEMS = [
   {
@@ -160,6 +161,26 @@ const questions = (additional) => [
         value: true,
       },
     ],
+    validate: isSelects,
+  },
+  {
+    when: ({ first_letter_mode }) => first_letter_mode,
+    type: "checkbox",
+    message: "頭文字を選択してください:",
+    name: "selected_first_letters",
+    choices: () => {
+      return [
+        new inquirer.Separator(),
+        {
+          name: "全て",
+          value: "all",
+        },
+        ...FIRST_LETTERS.map((v) => ({
+          name: `${v}...`,
+          value: v,
+        })),
+      ];
+    },
     validate: isSelects,
   },
   {
