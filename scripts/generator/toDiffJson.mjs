@@ -6,9 +6,7 @@ import { getGitTagPairArray } from "../utilities/getGitTagPairArray.mjs";
 import { getMergedDiffOfCategories } from "../utilities/getMergedDiffOfCategories.mjs";
 import { getMergedDiffOfManages } from "../utilities/getMergedDiffOfManages.mjs";
 import { writeJsonFile } from "../utilities/writeJsonFile.mjs";
-import { ADDITIONALS } from "../models/constants.mjs";
-
-const FIRST_LETTERS = Array.from("_0123456789abcdefghijklmnopqrstuvwxyz");
+import { ADDITIONALS, FIRST_LETTERS } from "../models/constants.mjs";
 
 // デコモジオブジェクトの格納先
 const Seeds = {
