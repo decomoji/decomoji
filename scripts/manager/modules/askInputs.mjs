@@ -146,6 +146,23 @@ const questions = (additional) => [
     validate: isSelects,
   },
   {
+    when: ({ term }) => term === "category",
+    type: "list",
+    message: "頭文字を選んで登録しますか？:",
+    name: "first_letter_mode",
+    choices: [
+      {
+        name: "選択しない",
+        value: false,
+      },
+      {
+        name: "選択する",
+        value: true,
+      },
+    ],
+    validate: isSelects,
+  },
+  {
     when: ({ term }) => term === "version",
     type: "checkbox",
     message: "バージョンを選択してください:",
