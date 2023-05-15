@@ -6,8 +6,9 @@ import { getGitTagPairArray } from "../utilities/getGitTagPairArray.mjs";
 import { getMergedDiffOfCategories } from "../utilities/getMergedDiffOfCategories.mjs";
 import { getMergedDiffOfManages } from "../utilities/getMergedDiffOfManages.mjs";
 import { writeJsonFile } from "../utilities/writeJsonFile.mjs";
-
 import { ADDITIONALS } from "../models/constants.mjs";
+
+const FIRST_LETTERS = Array.from("_0123456789abcdefghijklmnopqrstuvwxyz");
 
 // デコモジオブジェクトの格納先
 const Seeds = {
@@ -38,7 +39,7 @@ const tagPairs = getGitTagPairArray(TAG_PREV, TAG_PREFIX, TAG_UPDATE_CANDIDATE);
 
 // git tag ごとの差分を保存する
 const gitDiffAsTag = getDecomojiGitDiffAsTag(tagPairs);
-// await writeJsonFile(gitDiffAsTag, `./configs/${v(TAG_PREFIX)}_diff.json`);
+// await writeJsonFile(gitDiffAsTag, `configs/${v(TAG_PREFIX)}_diff.json`);
 
 // 実行！
 Object.entries(gitDiffAsTag)
@@ -46,7 +47,7 @@ Object.entries(gitDiffAsTag)
     const [tag, list] = entry;
     // diff-filter の結果を { fixed, upload, rename } に再分配し JSON に書き出す
     const diffAsFilterMode = getDecomojiDiffAsFilterMode(list, tag);
-    writeJsonFile(diffAsFilterMode, `./configs/${v(tag)}.json`);
+    writeJsonFile(diffAsFilterMode, `configs/${v(tag)}.json`);
     return diffAsFilterMode;
   })
   .forEach((diffAsFilterMode) => {
@@ -64,24 +65,37 @@ Object.entries(gitDiffAsTag)
 Object.entries(Seeds.categories).forEach(async (entry) => {
   const [category, list] = entry;
   if (list.length < 1) return;
-  const _list =
+  const _list = (
     category === "extra" || category === "all"
       ? list.concat(ADDITIONALS.extra)
-      : list;
-  await writeJsonFile(
-    _list
-      .filter(({ removed }) => !removed)
-      .sort((a, b) => a.name.localeCompare(b.name)),
-    `./configs/${v(TAG_PREFIX)}_${category}.json`
-  );
+      : list
+  )
+    .filter(({ removed }) => !removed)
+    .sort((a, b) => a.name.localeCompare(b.name));
+  await writeJsonFile(_list, `configs/${v(TAG_PREFIX)}_${category}.json`);
+
+  FIRST_LETTERS.map(async (letter) => {
+    const _filtered = _list.filter(({ name }) => name.slice(0, 1) === letter);
+    await writeJsonFile(
+      _filtered,
+      `configs/${v(TAG_PREFIX)}_${category}_${letter}.json`
+    );
+  });
 });
 
 // v5_fixed.json, v5_rename.json を作る
 Object.entries(Seeds.manages).forEach(async (entry) => {
   const [manage, list] = entry;
-  const _list = manage === "rename" ? list.concat(ADDITIONALS.rename) : list;
-  await writeJsonFile(
-    _list.sort((a, b) => a.name.localeCompare(b.name)),
-    `./configs/${v(TAG_PREFIX)}_${manage}.json`
-  );
+  const _list = (
+    manage === "rename" ? list.concat(ADDITIONALS.rename) : list
+  ).sort((a, b) => a.name.localeCompare(b.name));
+  await writeJsonFile(_list, `configs/${v(TAG_PREFIX)}_${manage}.json`);
+
+  FIRST_LETTERS.map(async (letter) => {
+    const _filtered = _list.filter(({ name }) => name.slice(0, 1) === letter);
+    await writeJsonFile(
+      _filtered,
+      `configs/${v(TAG_PREFIX)}_${manage}_${letter}.json`
+    );
+  });
 });
