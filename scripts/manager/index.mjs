@@ -56,7 +56,7 @@ const main = async (INPUTS) => {
     _inputs.first_letter_mode &&
     !_inputs.selected_first_letters.includes("all")
   ) {
-    _inputs.configs = _inputs.selected_first_letters.map((cafl) =>
+    _inputs.configs = _inputs.selected_first_letters.flatMap((cafl) =>
       _inputs.configs.map((config) => `${config}_${cafl}`)
     );
   }
