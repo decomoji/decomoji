@@ -72,7 +72,10 @@ Object.entries(Seeds.categories).forEach(async (entry) => {
     .sort((a, b) => a.name.localeCompare(b.name));
   await writeJsonFile(_list, `configs/${v(TAG_PREFIX)}_${category}.json`);
 
-  FIRST_LETTERS.map(async (letter) => {
+  FIRST_LETTERS.flatMap(async (letter) => {
+    if (category === "all") {
+      return [];
+    }
     const _filtered = _list.filter(({ name }) => name.slice(0, 1) === letter);
     await writeJsonFile(
       _filtered,
@@ -88,12 +91,4 @@ Object.entries(Seeds.manages).forEach(async (entry) => {
     manage === "rename" ? list.concat(ADDITIONALS.rename) : list
   ).sort((a, b) => a.name.localeCompare(b.name));
   await writeJsonFile(_list, `configs/${v(TAG_PREFIX)}_${manage}.json`);
-
-  FIRST_LETTERS.map(async (letter) => {
-    const _filtered = _list.filter(({ name }) => name.slice(0, 1) === letter);
-    await writeJsonFile(
-      _filtered,
-      `configs/${v(TAG_PREFIX)}_${manage}_${letter}.json`
-    );
-  });
 });
