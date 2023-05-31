@@ -36,6 +36,8 @@ const main = async (INPUTS) => {
     updateMode: INPUTS.mode === "update",
     term: INPUTS.term,
     configs: INPUTS.configs,
+    first_letter_mode: INPUTS.first_letter_mode,
+    selected_first_letters: INPUTS.selected_first_letters,
     forceRemove: INPUTS.forceRemove || false,
     excludeExplicit:
       typeof INPUTS.excludeExplicit === "undefined"
@@ -49,18 +51,27 @@ const main = async (INPUTS) => {
 
   const TIME = _inputs.time;
 
+  // 頭文字ごとに登録する場合、 configs を上書きする
+  if (
+    _inputs.first_letter_mode &&
+    !_inputs.selected_first_letters.includes("all")
+  ) {
+    _inputs.configs = _inputs.selected_first_letters.flatMap((cafl) =>
+      _inputs.configs.map((config) => `${config}_${cafl}`)
+    );
+  }
+
   console.info(`
-workspace      : https://${_inputs.workspace}.slack.com/
-email          : ${_inputs.email}
-mode           : ${_inputs.mode}
-updateMode     : ${_inputs.updateMode}
-term           : ${_inputs.term}
-configs        : ${_inputs.configs}
-forceRemove    : ${_inputs.forceRemove}`);
-  (_inputs.mode === "update" || _inputs.mode === "upload") &&
-    _inputs.term === "version" &&
-    console.info(`excludeExplicit: ${_inputs.excludeExplicit}`);
-  console.info(`\nConnecting...\n`);
+workspace        : https://${_inputs.workspace}.slack.com/
+email            : ${_inputs.email}
+mode             : ${_inputs.mode}
+updateMode       : ${_inputs.updateMode}
+term             : ${_inputs.term}
+configs          : ${_inputs.configs}
+excludeExplicit  : ${_inputs.excludeExplicit}
+
+Connecting...
+`);
 
   TIME && console.time("[Total time]");
   switch (_inputs.mode) {
