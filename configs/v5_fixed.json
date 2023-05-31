@@ -216,6 +216,12 @@
     "updated": "v5.19.0"
   },
   {
+    "name": "bokunodoui_1",
+    "category": "extra",
+    "path": "decomoji/extra/bokunodoui_1.png",
+    "removed": "v5.23.0"
+  },
+  {
     "name": "bokunosakujo",
     "category": "extra",
     "path": "decomoji/extra/bokunosakujo.png",
@@ -244,6 +250,12 @@
     "category": "extra",
     "path": "decomoji/extra/buruburu.png",
     "updated": "v5.15.0"
+  },
+  {
+    "name": "butaniyatteru_1",
+    "category": "extra",
+    "path": "decomoji/extra/butaniyatteru_1.png",
+    "removed": "v5.23.0"
   },
   {
     "name": "constwovarnisurutougoku",
@@ -340,6 +352,12 @@
     "category": "extra",
     "path": "decomoji/extra/desunejanaiga.png",
     "removed": "v5.4.2"
+  },
+  {
+    "name": "desutorakutyarinngubaindhinngupa-rannzunoobuzyekutosyo-tohannzu",
+    "category": "extra",
+    "path": "decomoji/extra/desutorakutyarinngubaindhinngupa-rannzunoobuzyekutosyo-tohannzu.png",
+    "removed": "v5.23.0"
   },
   {
     "name": "dhite-ruwojuusi",
@@ -600,6 +618,12 @@
     "removed": "v5.4.2"
   },
   {
+    "name": "heeanntamonanatteiunnda",
+    "category": "extra",
+    "path": "decomoji/extra/heeanntamonanatteiunnda.png",
+    "updated": "v5.23.0"
+  },
+  {
     "name": "help",
     "category": "extra",
     "path": "decomoji/extra/help.png",
@@ -616,6 +640,12 @@
     "category": "extra",
     "path": "decomoji/extra/hissujoukenn.png",
     "removed": "v5.4.2"
+  },
+  {
+    "name": "hitoniyatteru_1",
+    "category": "extra",
+    "path": "decomoji/extra/hitoniyatteru_1.png",
+    "removed": "v5.23.0"
   },
   {
     "name": "hitoridehakikennja",
@@ -636,6 +666,12 @@
     "removed": "v5.4.2"
   },
   {
+    "name": "hosiniyatteru_1",
+    "category": "extra",
+    "path": "decomoji/extra/hosiniyatteru_1.png",
+    "removed": "v5.23.0"
+  },
+  {
     "name": "http",
     "category": "extra",
     "path": "decomoji/extra/http.png",
@@ -652,6 +688,12 @@
     "category": "extra",
     "path": "decomoji/extra/huseijukyuu.png",
     "removed": "v5.18.0"
+  },
+  {
+    "name": "hyura-ritesutaossanndonaisitemannnenn",
+    "category": "extra",
+    "path": "decomoji/extra/hyura-ritesutaossanndonaisitemannnenn.png",
+    "removed": "v5.23.0"
   },
   {
     "name": "iijann",
@@ -708,10 +750,22 @@
     "removed": "v5.20.0"
   },
   {
+    "name": "inuniyatteru_1",
+    "category": "extra",
+    "path": "decomoji/extra/inuniyatteru_1.png",
+    "removed": "v5.23.0"
+  },
+  {
     "name": "irunndesujanaiga",
     "category": "extra",
     "path": "decomoji/extra/irunndesujanaiga.png",
     "removed": "v5.4.2"
+  },
+  {
+    "name": "issita_1",
+    "category": "extra",
+    "path": "decomoji/extra/issita_1.png",
+    "removed": "v5.23.0"
   },
   {
     "name": "itibusakujo",
@@ -1128,6 +1182,12 @@
     "removed": "v5.4.2"
   },
   {
+    "name": "kaneniyatteru_1",
+    "category": "extra",
+    "path": "decomoji/extra/kaneniyatteru_1.png",
+    "removed": "v5.23.0"
+  },
+  {
     "name": "kannsokusijousaikyou",
     "category": "extra",
     "path": "decomoji/extra/kannsokusijousaikyou.png",
@@ -1152,6 +1212,12 @@
     "removed": "v5.4.2"
   },
   {
+    "name": "kazeniyatteru_1",
+    "category": "extra",
+    "path": "decomoji/extra/kazeniyatteru_1.png",
+    "removed": "v5.23.0"
+  },
+  {
     "name": "keiyakukaijo",
     "category": "extra",
     "path": "decomoji/extra/keiyakukaijo.png",
@@ -1170,6 +1236,12 @@
     "updated": "v5.2.0"
   },
   {
+    "name": "kiminodoui_1",
+    "category": "extra",
+    "path": "decomoji/extra/kiminodoui_1.png",
+    "removed": "v5.23.0"
+  },
+  {
     "name": "kiminosakujo",
     "category": "extra",
     "path": "decomoji/extra/kiminosakujo.png",
@@ -1180,6 +1252,12 @@
     "category": "extra",
     "path": "decomoji/extra/kinnkinn.png",
     "updated": "v5.15.0"
+  },
+  {
+    "name": "kiriganai_1",
+    "category": "extra",
+    "path": "decomoji/extra/kiriganai_1.png",
+    "removed": "v5.23.0"
   },
   {
     "name": "kodomonozijou",
@@ -1206,10 +1284,28 @@
     "updated": "v5.18.0"
   },
   {
+    "name": "koroso",
+    "category": "extra",
+    "path": "decomoji/extra/koroso.png",
+    "removed": "v5.23.0"
+  },
+  {
     "name": "koukuunaihoukaijou",
     "category": "extra",
     "path": "decomoji/extra/koukuunaihoukaijou.png",
     "removed": "v5.4.2"
+  },
+  {
+    "name": "kowasunnggi",
+    "category": "extra",
+    "path": "decomoji/extra/kowasunnggi.png",
+    "removed": "v5.23.0"
+  },
+  {
+    "name": "kumaniyatteru_1",
+    "category": "extra",
+    "path": "decomoji/extra/kumaniyatteru_1.png",
+    "removed": "v5.23.0"
   },
   {
     "name": "kutigajouzu",
@@ -1332,6 +1428,12 @@
     "updated": "v5.4.0"
   },
   {
+    "name": "mizuniyatteru_1",
+    "category": "extra",
+    "path": "decomoji/extra/mizuniyatteru_1.png",
+    "removed": "v5.23.0"
+  },
+  {
     "name": "mokugekijouhou",
     "category": "extra",
     "path": "decomoji/extra/mokugekijouhou.png",
@@ -1374,16 +1476,34 @@
     "removed": "v5.4.2"
   },
   {
+    "name": "nawakenainndayonala",
+    "category": "extra",
+    "path": "decomoji/extra/nawakenainndayonala.png",
+    "updated": "v5.23.0"
+  },
+  {
     "name": "nazonobijo",
     "category": "extra",
     "path": "decomoji/extra/nazonobijo.png",
     "removed": "v5.4.2"
   },
   {
+    "name": "nekoniyatteru_1",
+    "category": "extra",
+    "path": "decomoji/extra/nekoniyatteru_1.png",
+    "removed": "v5.23.0"
+  },
+  {
     "name": "nekowoagameyo",
     "category": "extra",
     "path": "decomoji/extra/nekowoagameyo.png",
     "updated": "v5.15.0"
+  },
+  {
+    "name": "nikuniyatteru_1",
+    "category": "extra",
+    "path": "decomoji/extra/nikuniyatteru_1.png",
+    "removed": "v5.23.0"
   },
   {
     "name": "noburisuoburi-ju",
@@ -1444,6 +1564,12 @@
     "category": "extra",
     "path": "decomoji/extra/oowaraikaisuiyokujou.png",
     "removed": "v5.4.2"
+  },
+  {
+    "name": "orenodoui_1",
+    "category": "extra",
+    "path": "decomoji/extra/orenodoui_1.png",
+    "removed": "v5.23.0"
   },
   {
     "name": "orenosakujo",
@@ -1530,6 +1656,12 @@
     "updated": "v5.4.2"
   },
   {
+    "name": "rimo-tokinntai_1",
+    "category": "extra",
+    "path": "decomoji/extra/rimo-tokinntai_1.png",
+    "removed": "v5.23.0"
+  },
+  {
     "name": "rubinsii",
     "category": "extra",
     "path": "decomoji/extra/rubinsii.png",
@@ -1542,10 +1674,22 @@
     "removed": "v5.4.2"
   },
   {
+    "name": "sakananiyatteru_1",
+    "category": "extra",
+    "path": "decomoji/extra/sakananiyatteru_1.png",
+    "removed": "v5.23.0"
+  },
+  {
     "name": "sake",
     "category": "extra",
     "path": "decomoji/extra/sake.png",
     "removed": "v5.9.3"
+  },
+  {
+    "name": "sakeniyatteru_1",
+    "category": "extra",
+    "path": "decomoji/extra/sakeniyatteru_1.png",
+    "removed": "v5.23.0"
   },
   {
     "name": "sakujo",
@@ -1716,6 +1860,12 @@
     "removed": "v5.4.2"
   },
   {
+    "name": "saruniyatteru_1",
+    "category": "extra",
+    "path": "decomoji/extra/saruniyatteru_1.png",
+    "removed": "v5.23.0"
+  },
+  {
     "name": "seijakuannnei",
     "category": "extra",
     "path": "decomoji/extra/seijakuannnei.png",
@@ -1842,6 +1992,12 @@
     "removed": "v5.4.2"
   },
   {
+    "name": "soraniyatteru_1",
+    "category": "extra",
+    "path": "decomoji/extra/soraniyatteru_1.png",
+    "removed": "v5.23.0"
+  },
+  {
     "name": "soregasubetesa",
     "category": "extra",
     "path": "decomoji/extra/soregasubetesa.png",
@@ -1938,6 +2094,12 @@
     "removed": "v5.4.2"
   },
   {
+    "name": "syudousyasyoku_1",
+    "category": "extra",
+    "path": "decomoji/extra/syudousyasyoku_1.png",
+    "removed": "v5.23.0"
+  },
+  {
     "name": "syuu5dejoutyuu",
     "category": "extra",
     "path": "decomoji/extra/syuu5dejoutyuu.png",
@@ -1998,6 +2160,12 @@
     "removed": "v5.4.2"
   },
   {
+    "name": "tenntyou_1",
+    "category": "extra",
+    "path": "decomoji/extra/tenntyou_1.png",
+    "removed": "v5.23.0"
+  },
+  {
     "name": "tiennkana",
     "category": "extra",
     "path": "decomoji/extra/tiennkana.png",
@@ -2026,6 +2194,12 @@
     "category": "extra",
     "path": "decomoji/extra/torihikisijou.png",
     "removed": "v5.4.2"
+  },
+  {
+    "name": "toriniyatteru_1",
+    "category": "extra",
+    "path": "decomoji/extra/toriniyatteru_1.png",
+    "removed": "v5.23.0"
   },
   {
     "name": "toujouzinnbutu",
@@ -2076,6 +2250,12 @@
     "removed": "v5.4.2"
   },
   {
+    "name": "wa-i_1",
+    "category": "extra",
+    "path": "decomoji/extra/wa-i_1.png",
+    "removed": "v5.23.0"
+  },
+  {
     "name": "wakariminojutu",
     "category": "extra",
     "path": "decomoji/extra/wakariminojutu.png",
@@ -2086,6 +2266,18 @@
     "category": "extra",
     "path": "decomoji/extra/wakarukaradaijoubu.png",
     "removed": "v5.4.2"
+  },
+  {
+    "name": "watasigakiku",
+    "category": "extra",
+    "path": "decomoji/extra/watasigakiku.png",
+    "updated": "v5.23.0"
+  },
+  {
+    "name": "watasinodoui_1",
+    "category": "extra",
+    "path": "decomoji/extra/watasinodoui_1.png",
+    "removed": "v5.23.0"
   },
   {
     "name": "watasinosakujo",
@@ -2154,6 +2346,12 @@
     "updated": "v5.3.0"
   },
   {
+    "name": "yattemasu_1",
+    "category": "extra",
+    "path": "decomoji/extra/yattemasu_1.png",
+    "removed": "v5.23.0"
+  },
+  {
     "name": "yaudeyanngu",
     "category": "extra",
     "path": "decomoji/extra/yaudeyanngu.png",
@@ -2218,6 +2416,12 @@
     "category": "extra",
     "path": "decomoji/extra/zairyokujuusi.png",
     "removed": "v5.4.2"
+  },
+  {
+    "name": "zennbuhima_1",
+    "category": "extra",
+    "path": "decomoji/extra/zennbuhima_1.png",
+    "removed": "v5.23.0"
   },
   {
     "name": "zennbusakujo",

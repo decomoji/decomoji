@@ -68,6 +68,10 @@
     "alias_for": "bizyuaruzyouzumann"
   },
   {
+    "name": "bokunodoui_1",
+    "alias_for": "bokuhadoui"
+  },
+  {
     "name": "bokunosakujo",
     "alias_for": "bokunosakuzyo"
   },
@@ -130,6 +134,10 @@
   {
     "name": "desunejanaiga",
     "alias_for": "desunezyanaiga"
+  },
+  {
+    "name": "desutorakutyarinngubaindhinngupa-rannzunoobuzyekutosyo-tohannzu",
+    "alias_for": "desutorakutyarinngubainndhinngupa-rannzunoobuzyekutosyo-tohannzu"
   },
   {
     "name": "dhite-ruwojuusi",
@@ -552,6 +560,10 @@
     "alias_for": "kihyousyozyo"
   },
   {
+    "name": "kiminodoui_1",
+    "alias_for": "kimihadoui"
+  },
+  {
     "name": "kiminosakujo",
     "alias_for": "kiminosakuzyo"
   },
@@ -568,8 +580,16 @@
     "alias_for": "konosakuzyo"
   },
   {
+    "name": "koroso",
+    "alias_for": "koroso"
+  },
+  {
     "name": "koukuunaihoukaijou",
     "alias_for": "koukuunaihoukaizyou"
+  },
+  {
+    "name": "kowasunnggi",
+    "alias_for": "kowasunngi"
   },
   {
     "name": "kutigajouzu",
@@ -688,6 +708,10 @@
     "alias_for": "oowaraikaisuiyokuzyou"
   },
   {
+    "name": "orenodoui_1",
+    "alias_for": "orehadoui"
+  },
+  {
     "name": "orenosakujo",
     "alias_for": "orenosakuzyo"
   },
@@ -702,6 +726,10 @@
   {
     "name": "reikijoutai",
     "alias_for": "reikizyoutai"
+  },
+  {
+    "name": "rimo-tokinntai_1",
+    "alias_for": "rimo-totaikinn"
   },
   {
     "name": "rubinsii",
@@ -940,6 +968,10 @@
     "alias_for": "syokuzinozyuuyousei"
   },
   {
+    "name": "syudousyasyoku_1",
+    "alias_for": "zidousyasyoku"
+  },
+  {
     "name": "syuu5dejoutyuu",
     "alias_for": "syuu5dezyoutyuu"
   },
@@ -1020,12 +1052,20 @@
     "alias_for": "unnkizyousyou"
   },
   {
+    "name": "wa-i_1",
+    "alias_for": "wa-"
+  },
+  {
     "name": "wakariminojutu",
     "alias_for": "wakariminozyutu"
   },
   {
     "name": "wakarukaradaijoubu",
     "alias_for": "wakarukaradaizyoubu"
+  },
+  {
+    "name": "watasinodoui_1",
+    "alias_for": "watasihadoui"
   },
   {
     "name": "watasinosakujo",
