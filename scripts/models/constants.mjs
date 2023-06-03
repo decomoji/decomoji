@@ -24,7 +24,7 @@ export const ADDITIONALS = {
 export const IGNORES = {
   basic: [],
   explicit: [],
-  extra: ["nasca\\343\\201\\247", "true false", "genntennkaikinotikubi"],
+  extra: ["nasca\\343\\201\\247", "true false"],
   fixed: ["nasca\\343\\201\\247", "true false"],
   rename: [
     "nasca\\343\\201\\247",
