@@ -120,6 +120,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "ebigatame",
+    "category": "extra",
+    "path": "decomoji/extra/ebigatame.png",
+    "created": "v5.24.0"
+  },
+  {
     "name": "ebina",
     "category": "extra",
     "path": "decomoji/extra/ebina.png",
@@ -526,6 +532,12 @@
     "category": "extra",
     "path": "decomoji/extra/eiyade.png",
     "created": "v5.4.0"
+  },
+  {
+    "name": "eizoutuika",
+    "category": "extra",
+    "path": "decomoji/extra/eizoutuika.png",
+    "created": "v5.24.0"
   },
   {
     "name": "eketyenn",
@@ -949,6 +961,12 @@
     "created": "v5.21.0"
   },
   {
+    "name": "ennpitunamename",
+    "category": "extra",
+    "path": "decomoji/extra/ennpitunamename.png",
+    "created": "v5.24.0"
+  },
+  {
     "name": "ennpouhenotousou",
     "category": "extra",
     "path": "decomoji/extra/ennpouhenotousou.png",
@@ -1265,6 +1283,12 @@
     "category": "extra",
     "path": "decomoji/extra/ennziyou.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "ennzuigiri",
+    "category": "extra",
+    "path": "decomoji/extra/ennzuigiri.png",
+    "created": "v5.24.0"
   },
   {
     "name": "ennzyou",
@@ -1601,6 +1625,30 @@
     "category": "extra",
     "path": "decomoji/extra/eritora.png",
     "created": "v5.18.0"
+  },
+  {
+    "name": "erubo-",
+    "category": "extra",
+    "path": "decomoji/extra/erubo-.png",
+    "created": "v5.24.0"
+  },
+  {
+    "name": "erubo-doroppu",
+    "category": "extra",
+    "path": "decomoji/extra/erubo-doroppu.png",
+    "created": "v5.24.0"
+  },
+  {
+    "name": "erubo-paddo",
+    "category": "extra",
+    "path": "decomoji/extra/erubo-paddo.png",
+    "created": "v5.24.0"
+  },
+  {
+    "name": "erubo-sumassyu",
+    "category": "extra",
+    "path": "decomoji/extra/erubo-sumassyu.png",
+    "created": "v5.24.0"
   },
   {
     "name": "eruda-ga-dhiann",

@@ -564,6 +564,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "goumannkasu",
+    "category": "explicit",
+    "path": "decomoji/explicit/goumannkasu.png",
+    "created": "v5.24.0"
+  },
+  {
     "name": "gyoukaimikeikennoogatasinnzinn",
     "category": "explicit",
     "path": "decomoji/explicit/gyoukaimikeikennoogatasinnzinn.png",
@@ -688,6 +694,12 @@
     "category": "explicit",
     "path": "decomoji/explicit/kennkoutekinaseiyoku.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "ketumomi",
+    "category": "explicit",
+    "path": "decomoji/explicit/ketumomi.png",
+    "created": "v5.24.0"
   },
   {
     "name": "kihyoudoutei",
@@ -828,10 +840,22 @@
     "created": "v5.0.0"
   },
   {
+    "name": "kouatukasu",
+    "category": "explicit",
+    "path": "decomoji/explicit/kouatukasu.png",
+    "created": "v5.24.0"
+  },
+  {
     "name": "kukkorose",
     "category": "explicit",
     "path": "decomoji/explicit/kukkorose.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "kurimomi",
+    "category": "explicit",
+    "path": "decomoji/explicit/kurimomi.png",
+    "created": "v5.24.0"
   },
   {
     "name": "kusaimononihuta",
@@ -958,6 +982,12 @@
     "category": "explicit",
     "path": "decomoji/explicit/maityakui.png",
     "created": "v5.18.0"
+  },
+  {
+    "name": "mannmomi",
+    "category": "explicit",
+    "path": "decomoji/explicit/mannmomi.png",
+    "created": "v5.24.0"
   },
   {
     "name": "manobenni",
@@ -1114,6 +1144,12 @@
     "category": "explicit",
     "path": "decomoji/explicit/nobaka_.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "nomikasu",
+    "category": "explicit",
+    "path": "decomoji/explicit/nomikasu.png",
+    "created": "v5.24.0"
   },
   {
     "name": "omutu",
@@ -1392,6 +1428,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "paimomi",
+    "category": "explicit",
+    "path": "decomoji/explicit/paimomi.png",
+    "created": "v5.24.0"
+  },
+  {
     "name": "pinnkubonn",
     "category": "explicit",
     "path": "decomoji/explicit/pinnkubonn.png",
@@ -1402,6 +1444,12 @@
     "category": "explicit",
     "path": "decomoji/explicit/saisenntannzisedaitikubi.png",
     "created": "v5.21.0"
+  },
+  {
+    "name": "sakekasu",
+    "category": "explicit",
+    "path": "decomoji/explicit/sakekasu.png",
+    "created": "v5.24.0"
   },
   {
     "name": "sasetarou",
@@ -1566,6 +1614,12 @@
     "created": "v5.18.0"
   },
   {
+    "name": "tamamomi",
+    "category": "explicit",
+    "path": "decomoji/explicit/tamamomi.png",
+    "created": "v5.24.0"
+  },
+  {
     "name": "tanakaraomutu",
     "category": "explicit",
     "path": "decomoji/explicit/tanakaraomutu.png",
@@ -1590,10 +1644,22 @@
     "created": "v5.21.0"
   },
   {
+    "name": "tikumomi",
+    "category": "explicit",
+    "path": "decomoji/explicit/tikumomi.png",
+    "created": "v5.24.0"
+  },
+  {
     "name": "tinnkosomurie",
     "category": "explicit",
     "path": "decomoji/explicit/tinnkosomurie.png",
     "created": "v5.21.0"
+  },
+  {
+    "name": "tinnmomi",
+    "category": "explicit",
+    "path": "decomoji/explicit/tinnmomi.png",
+    "created": "v5.24.0"
   },
   {
     "name": "titiyatu",
@@ -1840,6 +1906,12 @@
     "category": "explicit",
     "path": "decomoji/explicit/watasinotyakui.png",
     "created": "v5.18.0"
+  },
+  {
+    "name": "yanikasu",
+    "category": "explicit",
+    "path": "decomoji/explicit/yanikasu.png",
+    "created": "v5.24.0"
   },
   {
     "name": "yarahata",

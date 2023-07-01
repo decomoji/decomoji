@@ -1272,6 +1272,12 @@
     "removed": "v5.4.2"
   },
   {
+    "name": "konnziru",
+    "category": "extra",
+    "path": "decomoji/extra/konnziru.png",
+    "updated": "v5.24.0"
+  },
+  {
     "name": "konosakujo",
     "category": "extra",
     "path": "decomoji/extra/konosakujo.png",
@@ -1294,6 +1300,12 @@
     "category": "extra",
     "path": "decomoji/extra/koukuunaihoukaijou.png",
     "removed": "v5.4.2"
+  },
+  {
+    "name": "kousikimod",
+    "category": "extra",
+    "path": "decomoji/extra/kousikimod.png",
+    "updated": "v5.24.0"
   },
   {
     "name": "kowasunnggi",
@@ -1462,6 +1474,12 @@
     "category": "extra",
     "path": "decomoji/extra/mousakujo.png",
     "removed": "v5.4.2"
+  },
+  {
+    "name": "mousiwakeonenote",
+    "category": "extra",
+    "path": "decomoji/extra/mousiwakeonenote.png",
+    "updated": "v5.24.0"
   },
   {
     "name": "mugennninomero",

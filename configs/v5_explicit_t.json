@@ -1,5 +1,11 @@
 [
   {
+    "name": "tamamomi",
+    "category": "explicit",
+    "path": "decomoji/explicit/tamamomi.png",
+    "created": "v5.24.0"
+  },
+  {
     "name": "tanakaraomutu",
     "category": "explicit",
     "path": "decomoji/explicit/tanakaraomutu.png",
@@ -24,10 +30,22 @@
     "created": "v5.21.0"
   },
   {
+    "name": "tikumomi",
+    "category": "explicit",
+    "path": "decomoji/explicit/tikumomi.png",
+    "created": "v5.24.0"
+  },
+  {
     "name": "tinnkosomurie",
     "category": "explicit",
     "path": "decomoji/explicit/tinnkosomurie.png",
     "created": "v5.21.0"
+  },
+  {
+    "name": "tinnmomi",
+    "category": "explicit",
+    "path": "decomoji/explicit/tinnmomi.png",
+    "created": "v5.24.0"
   },
   {
     "name": "titiyatu",
