@@ -60,6 +60,12 @@
     "created": "v5.16.0"
   },
   {
+    "name": "100nenngo",
+    "category": "extra",
+    "path": "decomoji/extra/100nenngo.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "100nennni1ppikinotennsaidoggu",
     "category": "extra",
     "path": "decomoji/extra/100nennni1ppikinotennsaidoggu.png",
@@ -114,6 +120,12 @@
     "category": "extra",
     "path": "decomoji/extra/10gatu.png",
     "created": "v5.6.0"
+  },
+  {
+    "name": "10nenngo",
+    "category": "extra",
+    "path": "decomoji/extra/10nenngo.png",
+    "created": "v5.25.0"
   },
   {
     "name": "10nennhayai",
@@ -538,6 +550,12 @@
     "path": "decomoji/extra/1mozi2pxkurai.png",
     "created": "v5.17.0",
     "updated": "v5.17.1"
+  },
+  {
+    "name": "1nenngo",
+    "category": "extra",
+    "path": "decomoji/extra/1nenngo.png",
+    "created": "v5.25.0"
   },
   {
     "name": "1niti",

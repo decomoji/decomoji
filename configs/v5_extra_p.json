@@ -1151,6 +1151,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "prtazei",
+    "category": "extra",
+    "path": "decomoji/extra/prtazei.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "psdnosaigenn",
     "category": "extra",
     "path": "decomoji/extra/psdnosaigenn.png",
@@ -1297,6 +1303,24 @@
     "created": "v5.8.0"
   },
   {
+    "name": "purebyu-birudo",
+    "category": "extra",
+    "path": "decomoji/extra/purebyu-birudo.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "purebyu-birudomati",
+    "category": "extra",
+    "path": "decomoji/extra/purebyu-birudomati.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "purebyu-birudosiyo",
+    "category": "extra",
+    "path": "decomoji/extra/purebyu-birudosiyo.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "pureido",
     "category": "extra",
     "path": "decomoji/extra/pureido.png",
@@ -1397,6 +1421,12 @@
     "category": "extra",
     "path": "decomoji/extra/purodeza.png",
     "created": "v5.8.0"
+  },
+  {
+    "name": "purogure",
+    "category": "extra",
+    "path": "decomoji/extra/purogure.png",
+    "created": "v5.25.0"
   },
   {
     "name": "puroguressibuennhannsumennto",
@@ -1523,6 +1553,12 @@
     "category": "extra",
     "path": "decomoji/extra/pvp.png",
     "created": "v5.19.0"
+  },
+  {
+    "name": "pvpzei",
+    "category": "extra",
+    "path": "decomoji/extra/pvpzei.png",
+    "created": "v5.25.0"
   },
   {
     "name": "pyo-nn",

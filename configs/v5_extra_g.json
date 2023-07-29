@@ -2563,6 +2563,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "gennkouhann",
+    "category": "extra",
+    "path": "decomoji/extra/gennkouhann.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "gennkoukaita_",
     "category": "extra",
     "path": "decomoji/extra/gennkoukaita_.png",
@@ -5364,6 +5370,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "gomiseki",
+    "category": "extra",
+    "path": "decomoji/extra/gomiseki.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "gomurinasarazu",
     "category": "extra",
     "path": "decomoji/extra/gomurinasarazu.png",
@@ -6413,6 +6425,12 @@
     "category": "extra",
     "path": "decomoji/extra/gps.png",
     "created": "v5.18.0"
+  },
+  {
+    "name": "gsap",
+    "category": "extra",
+    "path": "decomoji/extra/gsap.png",
+    "created": "v5.25.0"
   },
   {
     "name": "gu-sura",

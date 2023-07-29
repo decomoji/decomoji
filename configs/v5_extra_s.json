@@ -84,6 +84,12 @@
     "created": "v5.18.0"
   },
   {
+    "name": "sabaibaruzei",
+    "category": "extra",
+    "path": "decomoji/extra/sabaibaruzei.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "sabaibu",
     "category": "extra",
     "path": "decomoji/extra/sabaibu.png",
@@ -304,6 +310,12 @@
     "category": "extra",
     "path": "decomoji/extra/saidoka-.png",
     "created": "v5.5.0"
+  },
+  {
+    "name": "saienn",
+    "category": "extra",
+    "path": "decomoji/extra/saienn.png",
+    "created": "v5.25.0"
   },
   {
     "name": "saiennnohito",
@@ -2580,6 +2592,12 @@
     "created": "v5.13.0"
   },
   {
+    "name": "sakkasann",
+    "category": "extra",
+    "path": "decomoji/extra/sakkasann.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "sakoku",
     "category": "extra",
     "path": "decomoji/extra/sakoku.png",
@@ -3906,6 +3924,12 @@
     "created": "v5.1.0"
   },
   {
+    "name": "saraba",
+    "category": "extra",
+    "path": "decomoji/extra/saraba.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "saranaruhukamihe",
     "category": "extra",
     "path": "decomoji/extra/saranaruhukamihe.png",
@@ -4776,6 +4800,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "saunagamuryou",
+    "category": "extra",
+    "path": "decomoji/extra/saunagamuryou.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "sawa",
     "category": "extra",
     "path": "decomoji/extra/sawa.png",
@@ -5593,6 +5623,12 @@
     "created": "v5.8.0"
   },
   {
+    "name": "seiseinuritubusi",
+    "category": "extra",
+    "path": "decomoji/extra/seiseinuritubusi.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "seisikimeisyou",
     "category": "extra",
     "path": "decomoji/extra/seisikimeisyou.png",
@@ -5657,6 +5693,12 @@
     "category": "extra",
     "path": "decomoji/extra/seitekikatatuke.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "seitizei",
+    "category": "extra",
+    "path": "decomoji/extra/seitizei.png",
+    "created": "v5.25.0"
   },
   {
     "name": "seityoukyokusenn",
@@ -5783,6 +5825,12 @@
     "category": "extra",
     "path": "decomoji/extra/sekaitoro.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "sekakiti",
+    "category": "extra",
+    "path": "decomoji/extra/sekakiti.png",
+    "created": "v5.25.0"
   },
   {
     "name": "sekanndari-",
@@ -6881,6 +6929,54 @@
     "created": "v5.19.0"
   },
   {
+    "name": "senntakuatu",
+    "category": "extra",
+    "path": "decomoji/extra/senntakuatu.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "senntakukenn",
+    "category": "extra",
+    "path": "decomoji/extra/senntakukenn.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "senntakukennari",
+    "category": "extra",
+    "path": "decomoji/extra/senntakukennari.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "senntakukennnasi",
+    "category": "extra",
+    "path": "decomoji/extra/senntakukennnasi.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "senntakusei",
+    "category": "extra",
+    "path": "decomoji/extra/senntakusei.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "senntakusi",
+    "category": "extra",
+    "path": "decomoji/extra/senntakusi.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "senntakusiari",
+    "category": "extra",
+    "path": "decomoji/extra/senntakusiari.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "senntakusinasi",
+    "category": "extra",
+    "path": "decomoji/extra/senntakusinasi.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "senntehissyou",
     "category": "extra",
     "path": "decomoji/extra/senntehissyou.png",
@@ -7324,6 +7420,12 @@
     "category": "extra",
     "path": "decomoji/extra/seyakedo.png",
     "created": "v5.3.0"
+  },
+  {
+    "name": "seyakke",
+    "category": "extra",
+    "path": "decomoji/extra/seyakke.png",
+    "created": "v5.25.0"
   },
   {
     "name": "seyami",
@@ -10758,6 +10860,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "sirusaisaisai",
+    "category": "extra",
+    "path": "decomoji/extra/sirusaisaisai.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "siryoutuika",
     "category": "extra",
     "path": "decomoji/extra/siryoutuika.png",
@@ -10828,6 +10936,12 @@
     "category": "extra",
     "path": "decomoji/extra/sisoudesinai.png",
     "created": "v5.20.0"
+  },
+  {
+    "name": "sisoutuyoi",
+    "category": "extra",
+    "path": "decomoji/extra/sisoutuyoi.png",
+    "created": "v5.25.0"
   },
   {
     "name": "sissinnkakuninn",
@@ -11500,6 +11614,12 @@
     "category": "extra",
     "path": "decomoji/extra/sizennnotikara.png",
     "created": "v5.18.0"
+  },
+  {
+    "name": "sizennsenntaku",
+    "category": "extra",
+    "path": "decomoji/extra/sizennsenntaku.png",
+    "created": "v5.25.0"
   },
   {
     "name": "sizidoori",
@@ -12919,6 +13039,12 @@
     "created": "v5.6.0"
   },
   {
+    "name": "sonohassann",
+    "category": "extra",
+    "path": "decomoji/extra/sonohassann.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "sonohatunetu",
     "category": "extra",
     "path": "decomoji/extra/sonohatunetu.png",
@@ -13073,6 +13199,12 @@
     "category": "extra",
     "path": "decomoji/extra/sonohukusei.png",
     "created": "v5.17.0"
+  },
+  {
+    "name": "sonohukuzatu",
+    "category": "extra",
+    "path": "decomoji/extra/sonohukuzatu.png",
+    "created": "v5.25.0"
   },
   {
     "name": "sonohumei",
@@ -14203,6 +14335,12 @@
     "created": "v5.12.0"
   },
   {
+    "name": "sonosyuusoku",
+    "category": "extra",
+    "path": "decomoji/extra/sonosyuusoku.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "sonotaigenn",
     "category": "extra",
     "path": "decomoji/extra/sonotaigenn.png",
@@ -14267,6 +14405,12 @@
     "category": "extra",
     "path": "decomoji/extra/sonotannteki.png",
     "created": "v5.12.0"
+  },
+  {
+    "name": "sonotannzyunn",
+    "category": "extra",
+    "path": "decomoji/extra/sonotannzyunn.png",
+    "created": "v5.25.0"
   },
   {
     "name": "sonotega",
@@ -14491,6 +14635,12 @@
     "created": "v5.20.0"
   },
   {
+    "name": "sonoyohaku",
+    "category": "extra",
+    "path": "decomoji/extra/sonoyohaku.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "sonoyokenn",
     "category": "extra",
     "path": "decomoji/extra/sonoyokenn.png",
@@ -14641,6 +14791,12 @@
     "created": "v5.13.0"
   },
   {
+    "name": "sonozissya",
+    "category": "extra",
+    "path": "decomoji/extra/sonozissya.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "sonozissyoku",
     "category": "extra",
     "path": "decomoji/extra/sonozissyoku.png",
@@ -14699,6 +14855,12 @@
     "category": "extra",
     "path": "decomoji/extra/sonozyoudann.png",
     "created": "v5.9.0"
+  },
+  {
+    "name": "sonozyoukenn",
+    "category": "extra",
+    "path": "decomoji/extra/sonozyoukenn.png",
+    "created": "v5.25.0"
   },
   {
     "name": "sonozyunnkyo",
@@ -15704,6 +15866,12 @@
     "created": "v5.4.0"
   },
   {
+    "name": "soro",
+    "category": "extra",
+    "path": "decomoji/extra/soro.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "sorobann",
     "category": "extra",
     "path": "decomoji/extra/sorobann.png",
@@ -16422,6 +16590,12 @@
     "category": "extra",
     "path": "decomoji/extra/sounannda.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "sounanndayone",
+    "category": "extra",
+    "path": "decomoji/extra/sounanndayone.png",
+    "created": "v5.25.0"
   },
   {
     "name": "sounanndesu",
@@ -17210,6 +17384,18 @@
     "created": "v5.0.0"
   },
   {
+    "name": "sseki",
+    "category": "extra",
+    "path": "decomoji/extra/sseki.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "ssseki",
+    "category": "extra",
+    "path": "decomoji/extra/ssseki.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "starsiteta",
     "category": "extra",
     "path": "decomoji/extra/starsiteta.png",
@@ -17490,6 +17676,12 @@
     "category": "extra",
     "path": "decomoji/extra/sudeniaru.png",
     "created": "v5.14.0"
+  },
+  {
+    "name": "sudenisumi",
+    "category": "extra",
+    "path": "decomoji/extra/sudenisumi.png",
+    "created": "v5.25.0"
   },
   {
     "name": "sudosiyo",
@@ -18291,6 +18483,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "suguhassann",
+    "category": "extra",
+    "path": "decomoji/extra/suguhassann.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "suguhatunetu",
     "category": "extra",
     "path": "decomoji/extra/suguhatunetu.png",
@@ -18475,6 +18673,12 @@
     "category": "extra",
     "path": "decomoji/extra/suguhukusei.png",
     "created": "v5.17.0"
+  },
+  {
+    "name": "suguhukuzatu",
+    "category": "extra",
+    "path": "decomoji/extra/suguhukuzatu.png",
+    "created": "v5.25.0"
   },
   {
     "name": "suguhumei",
@@ -20043,6 +20247,12 @@
     "created": "v5.12.0"
   },
   {
+    "name": "sugusyuusoku",
+    "category": "extra",
+    "path": "decomoji/extra/sugusyuusoku.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "sugutaigenn",
     "category": "extra",
     "path": "decomoji/extra/sugutaigenn.png",
@@ -20125,6 +20335,12 @@
     "category": "extra",
     "path": "decomoji/extra/sugutannteki.png",
     "created": "v5.12.0"
+  },
+  {
+    "name": "sugutannzyunn",
+    "category": "extra",
+    "path": "decomoji/extra/sugutannzyunn.png",
+    "created": "v5.25.0"
   },
   {
     "name": "sugutapi",
@@ -20445,6 +20661,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "suguyohaku",
+    "category": "extra",
+    "path": "decomoji/extra/suguyohaku.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "suguyokenn",
     "category": "extra",
     "path": "decomoji/extra/suguyokenn.png",
@@ -20637,6 +20859,12 @@
     "created": "v5.13.0"
   },
   {
+    "name": "suguzissya",
+    "category": "extra",
+    "path": "decomoji/extra/suguzissya.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "suguzissyoku",
     "category": "extra",
     "path": "decomoji/extra/suguzissyoku.png",
@@ -20701,6 +20929,12 @@
     "category": "extra",
     "path": "decomoji/extra/suguzyoudann.png",
     "created": "v5.9.0"
+  },
+  {
+    "name": "suguzyoukenn",
+    "category": "extra",
+    "path": "decomoji/extra/suguzyoukenn.png",
+    "created": "v5.25.0"
   },
   {
     "name": "suguzyoutyou",
@@ -22851,6 +23085,12 @@
     "created": "v5.8.0"
   },
   {
+    "name": "syannsyann",
+    "category": "extra",
+    "path": "decomoji/extra/syannsyann.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "syarakusele",
     "category": "extra",
     "path": "decomoji/extra/syarakusele.png",
@@ -23149,6 +23389,12 @@
     "category": "extra",
     "path": "decomoji/extra/syodousapuraizu.png",
     "created": "v5.9.0"
+  },
+  {
+    "name": "syoenn",
+    "category": "extra",
+    "path": "decomoji/extra/syoenn.png",
+    "created": "v5.25.0"
   },
   {
     "name": "syoennnohito",
@@ -24031,6 +24277,12 @@
     "category": "extra",
     "path": "decomoji/extra/syoumetubagu.png",
     "created": "v5.22.0"
+  },
+  {
+    "name": "syoumetunuritubusi",
+    "category": "extra",
+    "path": "decomoji/extra/syoumetunuritubusi.png",
+    "created": "v5.25.0"
   },
   {
     "name": "syoumouhissi",
@@ -26295,6 +26547,12 @@
     "created": "v5.19.0"
   },
   {
+    "name": "syuurennsinnka",
+    "category": "extra",
+    "path": "decomoji/extra/syuurennsinnka.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "syuuroku",
     "category": "extra",
     "path": "decomoji/extra/syuuroku.png",
@@ -26497,6 +26755,174 @@
     "category": "extra",
     "path": "decomoji/extra/syuusinnnooni.png",
     "created": "v5.23.0"
+  },
+  {
+    "name": "syuusoku",
+    "category": "extra",
+    "path": "decomoji/extra/syuusoku.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "syuusokuari",
+    "category": "extra",
+    "path": "decomoji/extra/syuusokuari.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "syuusokuaru",
+    "category": "extra",
+    "path": "decomoji/extra/syuusokuaru.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "syuusokudake",
+    "category": "extra",
+    "path": "decomoji/extra/syuusokudake.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "syuusokudana",
+    "category": "extra",
+    "path": "decomoji/extra/syuusokudana.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "syuusokudane",
+    "category": "extra",
+    "path": "decomoji/extra/syuusokudane.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "syuusokudayo",
+    "category": "extra",
+    "path": "decomoji/extra/syuusokudayo.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "syuusokudeha",
+    "category": "extra",
+    "path": "decomoji/extra/syuusokudeha.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "syuusokudesu",
+    "category": "extra",
+    "path": "decomoji/extra/syuusokudesu.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "syuusokukaiwai",
+    "category": "extra",
+    "path": "decomoji/extra/syuusokukaiwai.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "syuusokukamo",
+    "category": "extra",
+    "path": "decomoji/extra/syuusokukamo.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "syuusokukana",
+    "category": "extra",
+    "path": "decomoji/extra/syuusokukana.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "syuusokukayo",
+    "category": "extra",
+    "path": "decomoji/extra/syuusokukayo.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "syuusokukeisatu",
+    "category": "extra",
+    "path": "decomoji/extra/syuusokukeisatu.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "syuusokumati",
+    "category": "extra",
+    "path": "decomoji/extra/syuusokumati.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "syuusokumazoku",
+    "category": "extra",
+    "path": "decomoji/extra/syuusokumazoku.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "syuusokumore",
+    "category": "extra",
+    "path": "decomoji/extra/syuusokumore.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "syuusokunai",
+    "category": "extra",
+    "path": "decomoji/extra/syuusokunai.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "syuusokunasi",
+    "category": "extra",
+    "path": "decomoji/extra/syuusokunasi.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "syuusokunooni",
+    "category": "extra",
+    "path": "decomoji/extra/syuusokunooni.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "syuusokusiro",
+    "category": "extra",
+    "path": "decomoji/extra/syuusokusiro.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "syuusokusita",
+    "category": "extra",
+    "path": "decomoji/extra/syuusokusita.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "syuusokusite",
+    "category": "extra",
+    "path": "decomoji/extra/syuusokusite.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "syuusokusiyo",
+    "category": "extra",
+    "path": "decomoji/extra/syuusokusiyo.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "syuusokusuru",
+    "category": "extra",
+    "path": "decomoji/extra/syuusokusuru.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "syuusokutarou",
+    "category": "extra",
+    "path": "decomoji/extra/syuusokutarou.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "syuusokuwasure",
+    "category": "extra",
+    "path": "decomoji/extra/syuusokuwasure.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "syuusokuzumi",
+    "category": "extra",
+    "path": "decomoji/extra/syuusokuzumi.png",
+    "created": "v5.25.0"
   },
   {
     "name": "syuusyoku",

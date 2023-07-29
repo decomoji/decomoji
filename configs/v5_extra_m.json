@@ -656,6 +656,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "madahassann",
+    "category": "extra",
+    "path": "decomoji/extra/madahassann.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "madahatunetu",
     "category": "extra",
     "path": "decomoji/extra/madahatunetu.png",
@@ -810,6 +816,12 @@
     "category": "extra",
     "path": "decomoji/extra/madahukusei.png",
     "created": "v5.17.0"
+  },
+  {
+    "name": "madahukuzatu",
+    "category": "extra",
+    "path": "decomoji/extra/madahukuzatu.png",
+    "created": "v5.25.0"
   },
   {
     "name": "madahumei",
@@ -2000,6 +2012,12 @@
     "created": "v5.12.0"
   },
   {
+    "name": "madasyuusoku",
+    "category": "extra",
+    "path": "decomoji/extra/madasyuusoku.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "madataigenn",
     "category": "extra",
     "path": "decomoji/extra/madataigenn.png",
@@ -2070,6 +2088,12 @@
     "category": "extra",
     "path": "decomoji/extra/madatannteki.png",
     "created": "v5.12.0"
+  },
+  {
+    "name": "madatannzyunn",
+    "category": "extra",
+    "path": "decomoji/extra/madatannzyunn.png",
+    "created": "v5.25.0"
   },
   {
     "name": "madatapi",
@@ -2288,6 +2312,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "madayohaku",
+    "category": "extra",
+    "path": "decomoji/extra/madayohaku.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "madayokenn",
     "category": "extra",
     "path": "decomoji/extra/madayokenn.png",
@@ -2456,6 +2486,12 @@
     "created": "v5.13.0"
   },
   {
+    "name": "madazissya",
+    "category": "extra",
+    "path": "decomoji/extra/madazissya.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "madazissyoku",
     "category": "extra",
     "path": "decomoji/extra/madazissyoku.png",
@@ -2514,6 +2550,12 @@
     "category": "extra",
     "path": "decomoji/extra/madazyoudann.png",
     "created": "v5.9.0"
+  },
+  {
+    "name": "madazyoukenn",
+    "category": "extra",
+    "path": "decomoji/extra/madazyoukenn.png",
+    "created": "v5.25.0"
   },
   {
     "name": "madazyunnkyo",
@@ -3434,6 +3476,12 @@
     "created": "v5.6.0"
   },
   {
+    "name": "maihassann",
+    "category": "extra",
+    "path": "decomoji/extra/maihassann.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "maihatunetu",
     "category": "extra",
     "path": "decomoji/extra/maihatunetu.png",
@@ -3576,6 +3624,12 @@
     "category": "extra",
     "path": "decomoji/extra/maihukusei.png",
     "created": "v5.17.0"
+  },
+  {
+    "name": "maihukuzatu",
+    "category": "extra",
+    "path": "decomoji/extra/maihukuzatu.png",
+    "created": "v5.25.0"
   },
   {
     "name": "maihumei",
@@ -4689,6 +4743,12 @@
     "created": "v5.15.0"
   },
   {
+    "name": "maipe-zi",
+    "category": "extra",
+    "path": "decomoji/extra/maipe-zi.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "maira-menn",
     "category": "extra",
     "path": "decomoji/extra/maira-menn.png",
@@ -5199,6 +5259,12 @@
     "created": "v5.22.0"
   },
   {
+    "name": "maisyuusoku",
+    "category": "extra",
+    "path": "decomoji/extra/maisyuusoku.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "maisyuusuru",
     "category": "extra",
     "path": "decomoji/extra/maisyuusuru.png",
@@ -5287,6 +5353,12 @@
     "category": "extra",
     "path": "decomoji/extra/maitannteki.png",
     "created": "v5.12.0"
+  },
+  {
+    "name": "maitannzyunn",
+    "category": "extra",
+    "path": "decomoji/extra/maitannzyunn.png",
+    "created": "v5.25.0"
   },
   {
     "name": "maiteigi",
@@ -5823,6 +5895,12 @@
     "created": "v5.20.0"
   },
   {
+    "name": "maiyohaku",
+    "category": "extra",
+    "path": "decomoji/extra/maiyohaku.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "maiyokenn",
     "category": "extra",
     "path": "decomoji/extra/maiyokenn.png",
@@ -5973,6 +6051,12 @@
     "created": "v5.13.0"
   },
   {
+    "name": "maizissya",
+    "category": "extra",
+    "path": "decomoji/extra/maizissya.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "maizissyoku",
     "category": "extra",
     "path": "decomoji/extra/maizissyoku.png",
@@ -6031,6 +6115,12 @@
     "category": "extra",
     "path": "decomoji/extra/maizyoudann.png",
     "created": "v5.9.0"
+  },
+  {
+    "name": "maizyoukenn",
+    "category": "extra",
+    "path": "decomoji/extra/maizyoukenn.png",
+    "created": "v5.25.0"
   },
   {
     "name": "maizyunnkyo",
@@ -7287,6 +7377,12 @@
     "created": "v5.6.0"
   },
   {
+    "name": "manohassann",
+    "category": "extra",
+    "path": "decomoji/extra/manohassann.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "manohatunetu",
     "category": "extra",
     "path": "decomoji/extra/manohatunetu.png",
@@ -7429,6 +7525,12 @@
     "category": "extra",
     "path": "decomoji/extra/manohukusei.png",
     "created": "v5.17.0"
+  },
+  {
+    "name": "manohukuzatu",
+    "category": "extra",
+    "path": "decomoji/extra/manohukuzatu.png",
+    "created": "v5.25.0"
   },
   {
     "name": "manohumei",
@@ -8463,6 +8565,12 @@
     "created": "v5.12.0"
   },
   {
+    "name": "manosyuusoku",
+    "category": "extra",
+    "path": "decomoji/extra/manosyuusoku.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "manotaigenn",
     "category": "extra",
     "path": "decomoji/extra/manotaigenn.png",
@@ -8527,6 +8635,12 @@
     "category": "extra",
     "path": "decomoji/extra/manotannteki.png",
     "created": "v5.12.0"
+  },
+  {
+    "name": "manotannzyunn",
+    "category": "extra",
+    "path": "decomoji/extra/manotannzyunn.png",
+    "created": "v5.25.0"
   },
   {
     "name": "manoteigi",
@@ -8709,6 +8823,12 @@
     "created": "v5.20.0"
   },
   {
+    "name": "manoyohaku",
+    "category": "extra",
+    "path": "decomoji/extra/manoyohaku.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "manoyokenn",
     "category": "extra",
     "path": "decomoji/extra/manoyokenn.png",
@@ -8859,6 +8979,12 @@
     "created": "v5.13.0"
   },
   {
+    "name": "manozissya",
+    "category": "extra",
+    "path": "decomoji/extra/manozissya.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "manozissyoku",
     "category": "extra",
     "path": "decomoji/extra/manozissyoku.png",
@@ -8917,6 +9043,12 @@
     "category": "extra",
     "path": "decomoji/extra/manozyoudann.png",
     "created": "v5.9.0"
+  },
+  {
+    "name": "manozyoukenn",
+    "category": "extra",
+    "path": "decomoji/extra/manozyoukenn.png",
+    "created": "v5.25.0"
   },
   {
     "name": "manozyunnkyo",
@@ -9717,6 +9849,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "matahassann",
+    "category": "extra",
+    "path": "decomoji/extra/matahassann.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "matahatumeisitesimatta",
     "category": "extra",
     "path": "decomoji/extra/matahatumeisitesimatta.png",
@@ -9895,6 +10033,12 @@
     "category": "extra",
     "path": "decomoji/extra/matahukusei.png",
     "created": "v5.17.0"
+  },
+  {
+    "name": "matahukuzatu",
+    "category": "extra",
+    "path": "decomoji/extra/matahukuzatu.png",
+    "created": "v5.25.0"
   },
   {
     "name": "matahumei",
@@ -11235,6 +11379,12 @@
     "created": "v5.12.0"
   },
   {
+    "name": "matasyuusoku",
+    "category": "extra",
+    "path": "decomoji/extra/matasyuusoku.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "matatabi",
     "category": "extra",
     "path": "decomoji/extra/matatabi.png",
@@ -11323,6 +11473,12 @@
     "category": "extra",
     "path": "decomoji/extra/matatannteki.png",
     "created": "v5.12.0"
+  },
+  {
+    "name": "matatannzyunn",
+    "category": "extra",
+    "path": "decomoji/extra/matatannzyunn.png",
+    "created": "v5.25.0"
   },
   {
     "name": "matatapi",
@@ -11583,6 +11739,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "matayohaku",
+    "category": "extra",
+    "path": "decomoji/extra/matayohaku.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "matayokenn",
     "category": "extra",
     "path": "decomoji/extra/matayokenn.png",
@@ -11769,6 +11931,12 @@
     "created": "v5.13.0"
   },
   {
+    "name": "matazissya",
+    "category": "extra",
+    "path": "decomoji/extra/matazissya.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "matazissyoku",
     "category": "extra",
     "path": "decomoji/extra/matazissyoku.png",
@@ -11833,6 +12001,12 @@
     "category": "extra",
     "path": "decomoji/extra/matazyoudann.png",
     "created": "v5.9.0"
+  },
+  {
+    "name": "matazyoukenn",
+    "category": "extra",
+    "path": "decomoji/extra/matazyoukenn.png",
+    "created": "v5.25.0"
   },
   {
     "name": "matazyunnkyo",
@@ -12391,6 +12565,18 @@
     "category": "extra",
     "path": "decomoji/extra/meatti.png",
     "created": "v5.22.0"
+  },
+  {
+    "name": "mebiusanai",
+    "category": "extra",
+    "path": "decomoji/extra/mebiusanai.png",
+    "created": "v5.25.0"
+  },
+  {
+    "name": "mebiusu",
+    "category": "extra",
+    "path": "decomoji/extra/mebiusu.png",
+    "created": "v5.25.0"
   },
   {
     "name": "mece",
@@ -13009,6 +13195,12 @@
     "category": "extra",
     "path": "decomoji/extra/meiwakuaru.png",
     "created": "v5.22.0"
+  },
+  {
+    "name": "meiwakubousizyoureiihann",
+    "category": "extra",
+    "path": "decomoji/extra/meiwakubousizyoureiihann.png",
+    "created": "v5.25.0"
   },
   {
     "name": "meiwakudake",
@@ -16985,6 +17177,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "mototoppu",
+    "category": "extra",
+    "path": "decomoji/extra/mototoppu.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "mottaibuttahitokoto",
     "category": "extra",
     "path": "decomoji/extra/mottaibuttahitokoto.png",
@@ -17759,6 +17957,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "mouhassann",
+    "category": "extra",
+    "path": "decomoji/extra/mouhassann.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "mouhatunetu",
     "category": "extra",
     "path": "decomoji/extra/mouhatunetu.png",
@@ -17925,6 +18129,12 @@
     "category": "extra",
     "path": "decomoji/extra/mouhukusei.png",
     "created": "v5.17.0"
+  },
+  {
+    "name": "mouhukuzatu",
+    "category": "extra",
+    "path": "decomoji/extra/mouhukuzatu.png",
+    "created": "v5.25.0"
   },
   {
     "name": "mouhumei",
@@ -19441,6 +19651,12 @@
     "created": "v5.12.0"
   },
   {
+    "name": "mousyuusoku",
+    "category": "extra",
+    "path": "decomoji/extra/mousyuusoku.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "moutaigenn",
     "category": "extra",
     "path": "decomoji/extra/moutaigenn.png",
@@ -19517,6 +19733,12 @@
     "category": "extra",
     "path": "decomoji/extra/moutannteki.png",
     "created": "v5.12.0"
+  },
+  {
+    "name": "moutannzyunn",
+    "category": "extra",
+    "path": "decomoji/extra/moutannzyunn.png",
+    "created": "v5.25.0"
   },
   {
     "name": "moutapi",
@@ -19717,6 +19939,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "moutukaretyatte",
+    "category": "extra",
+    "path": "decomoji/extra/moutukaretyatte.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "moutukutta",
     "category": "extra",
     "path": "decomoji/extra/moutukutta.png",
@@ -19823,6 +20051,12 @@
     "category": "extra",
     "path": "decomoji/extra/mouyaro.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "mouyohaku",
+    "category": "extra",
+    "path": "decomoji/extra/mouyohaku.png",
+    "created": "v5.25.0"
   },
   {
     "name": "mouyokenn",
@@ -20011,6 +20245,12 @@
     "created": "v5.13.0"
   },
   {
+    "name": "mouzissya",
+    "category": "extra",
+    "path": "decomoji/extra/mouzissya.png",
+    "created": "v5.25.0"
+  },
+  {
     "name": "mouzissyoku",
     "category": "extra",
     "path": "decomoji/extra/mouzissyoku.png",
@@ -20075,6 +20315,12 @@
     "category": "extra",
     "path": "decomoji/extra/mouzyoudann.png",
     "created": "v5.9.0"
+  },
+  {
+    "name": "mouzyoukenn",
+    "category": "extra",
+    "path": "decomoji/extra/mouzyoukenn.png",
+    "created": "v5.25.0"
   },
   {
     "name": "mouzyunnkyo",
@@ -21503,6 +21749,12 @@
     "category": "extra",
     "path": "decomoji/extra/musuko.png",
     "created": "v5.7.0"
+  },
+  {
+    "name": "musumeyaku",
+    "category": "extra",
+    "path": "decomoji/extra/musumeyaku.png",
+    "created": "v5.25.0"
   },
   {
     "name": "musyokusotugyou",
