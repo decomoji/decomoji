@@ -8,7 +8,23 @@ export const writeJsonFile = async (buffer, filepath) => {
       console.error(error);
       throw error;
     });
-    console.log(`${filepath}(length: ${data.length}) has been saved!`);
+
+    const parsedData = JSON.parse(data);
+    const parsedDataType = Object.prototype.toString.call(parsedData);
+    switch (parsedDataType) {
+      case "[object Array]":
+        console.log(`${filepath}, ${parsedData.length}`);
+        break;
+      case "[object Object]":
+        Object.keys(parsedData).forEach((key) => {
+          console.log(
+            `${filepath}, ${key.padEnd(6)}: ${parsedData[key].length}`
+          );
+        });
+        break;
+      default:
+        break;
+    }
   } catch (error) {
     console.error(error);
     throw error;
