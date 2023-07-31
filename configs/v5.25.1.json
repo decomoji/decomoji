@@ -1,0 +1,24 @@
+{
+  "fixed": [
+    {
+      "name": "imawanakitori",
+      "category": "extra",
+      "path": "decomoji/extra/imawanakitori.png",
+      "removed": "v5.25.1"
+    }
+  ],
+  "upload": [
+    {
+      "name": "imahaanakitori",
+      "category": "extra",
+      "path": "decomoji/extra/imahaanakitori.png",
+      "created": "v5.25.1"
+    }
+  ],
+  "rename": [
+    {
+      "name": "imawanakitori",
+      "alias_for": "imahaanakitori"
+    }
+  ]
+}

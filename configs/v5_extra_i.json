@@ -1428,6 +1428,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "imahaanakitori",
+    "category": "extra",
+    "path": "decomoji/extra/imahaanakitori.png",
+    "created": "v5.25.1"
+  },
+  {
     "name": "imahahima",
     "category": "extra",
     "path": "decomoji/extra/imahahima.png",
@@ -1594,12 +1600,6 @@
     "category": "extra",
     "path": "decomoji/extra/imasu.png",
     "created": "v5.19.0"
-  },
-  {
-    "name": "imawanakitori",
-    "category": "extra",
-    "path": "decomoji/extra/imawanakitori.png",
-    "created": "v5.25.0"
   },
   {
     "name": "imawoikiyou",
