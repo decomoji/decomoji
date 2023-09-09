@@ -246,6 +246,12 @@
     "updated": "v5.18.0"
   },
   {
+    "name": "bouennsuru",
+    "category": "extra",
+    "path": "decomoji/extra/bouennsuru.png",
+    "updated": "v5.26.0"
+  },
+  {
     "name": "buruburu",
     "category": "extra",
     "path": "decomoji/extra/buruburu.png",
@@ -2388,6 +2394,12 @@
     "removed": "v5.4.2"
   },
   {
+    "name": "yonnzyuubyoude",
+    "category": "extra",
+    "path": "decomoji/extra/yonnzyuubyoude.png",
+    "removed": "v5.26.0"
+  },
+  {
     "name": "yoshinaryoku",
     "category": "extra",
     "path": "decomoji/extra/yoshinaryoku.png",
@@ -2434,6 +2446,12 @@
     "category": "extra",
     "path": "decomoji/extra/yuumeizinnjann.png",
     "removed": "v5.4.2"
+  },
+  {
+    "name": "yuureipo",
+    "category": "extra",
+    "path": "decomoji/extra/yuureipo.png",
+    "removed": "v5.26.0"
   },
   {
     "name": "zairyokujuusi",
@@ -2500,6 +2518,12 @@
     "category": "basic",
     "path": "decomoji/basic/zinnseijouhou.png",
     "removed": "v5.4.2"
+  },
+  {
+    "name": "zipdekure",
+    "category": "extra",
+    "path": "decomoji/extra/zipdekure.png",
+    "updated": "v5.26.0"
   },
   {
     "name": "zizitujounoakumu",
@@ -2812,5 +2836,11 @@
     "category": "extra",
     "path": "decomoji/extra/zyozyo.png",
     "updated": "v5.15.0"
+  },
+  {
+    "name": "zyunnsuisabunn",
+    "category": "extra",
+    "path": "decomoji/extra/zyunnsuisabunn.png",
+    "updated": "v5.26.0"
   }
 ]

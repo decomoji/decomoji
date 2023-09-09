@@ -990,6 +990,12 @@
     "created": "v5.18.0"
   },
   {
+    "name": "zennbueikyuuhumetu",
+    "category": "extra",
+    "path": "decomoji/extra/zennbueikyuuhumetu.png",
+    "created": "v5.26.0"
+  },
+  {
     "name": "zennbueko",
     "category": "extra",
     "path": "decomoji/extra/zennbueko.png",
@@ -1078,6 +1084,12 @@
     "category": "extra",
     "path": "decomoji/extra/zennbugennmitu.png",
     "created": "v5.14.0"
+  },
+  {
+    "name": "zennbugenntei",
+    "category": "extra",
+    "path": "decomoji/extra/zennbugenntei.png",
+    "created": "v5.26.0"
   },
   {
     "name": "zennbugisiki",
@@ -1222,6 +1234,12 @@
     "category": "extra",
     "path": "decomoji/extra/zennbuhennsenn.png",
     "created": "v5.20.0"
+  },
+  {
+    "name": "zennbuhennsoku",
+    "category": "extra",
+    "path": "decomoji/extra/zennbuhennsoku.png",
+    "created": "v5.26.0"
   },
   {
     "name": "zennbuhigaasa",
@@ -1618,6 +1636,12 @@
     "category": "extra",
     "path": "decomoji/extra/zennbukeikoku.png",
     "created": "v5.22.0"
+  },
+  {
+    "name": "zennbukeisann",
+    "category": "extra",
+    "path": "decomoji/extra/zennbukeisann.png",
+    "created": "v5.26.0"
   },
   {
     "name": "zennbukeisatu",
@@ -2214,6 +2238,12 @@
     "created": "v5.17.0"
   },
   {
+    "name": "zennburakurai",
+    "category": "extra",
+    "path": "decomoji/extra/zennburakurai.png",
+    "created": "v5.26.0"
+  },
+  {
     "name": "zennburea",
     "category": "extra",
     "path": "decomoji/extra/zennburea.png",
@@ -2230,6 +2260,12 @@
     "category": "extra",
     "path": "decomoji/extra/zennbureiteki.png",
     "created": "v5.17.0"
+  },
+  {
+    "name": "zennburennraku",
+    "category": "extra",
+    "path": "decomoji/extra/zennburennraku.png",
+    "created": "v5.26.0"
   },
   {
     "name": "zennburikonn",
@@ -2350,6 +2386,12 @@
     "category": "extra",
     "path": "decomoji/extra/zennbusennsou.png",
     "created": "v5.11.0"
+  },
+  {
+    "name": "zennbusenntaku",
+    "category": "extra",
+    "path": "decomoji/extra/zennbusenntaku.png",
+    "created": "v5.26.0"
   },
   {
     "name": "zennbusessyu",
@@ -2692,6 +2734,12 @@
     "category": "extra",
     "path": "decomoji/extra/zennbuteigi.png",
     "created": "v5.22.0"
+  },
+  {
+    "name": "zennbuteirei",
+    "category": "extra",
+    "path": "decomoji/extra/zennbuteirei.png",
+    "created": "v5.26.0"
   },
   {
     "name": "zennbuteisi",
@@ -3606,6 +3654,12 @@
     "created": "v5.18.0"
   },
   {
+    "name": "zenninneikyuuhumetu",
+    "category": "extra",
+    "path": "decomoji/extra/zenninneikyuuhumetu.png",
+    "created": "v5.26.0"
+  },
+  {
     "name": "zenninneko",
     "category": "extra",
     "path": "decomoji/extra/zenninneko.png",
@@ -3700,6 +3754,12 @@
     "category": "extra",
     "path": "decomoji/extra/zenninngennmitu.png",
     "created": "v5.14.0"
+  },
+  {
+    "name": "zenninngenntei",
+    "category": "extra",
+    "path": "decomoji/extra/zenninngenntei.png",
+    "created": "v5.26.0"
   },
   {
     "name": "zenninngisiki",
@@ -3826,6 +3886,12 @@
     "category": "extra",
     "path": "decomoji/extra/zenninnhennsenn.png",
     "created": "v5.20.0"
+  },
+  {
+    "name": "zenninnhennsoku",
+    "category": "extra",
+    "path": "decomoji/extra/zenninnhennsoku.png",
+    "created": "v5.26.0"
   },
   {
     "name": "zenninnhigaasa",
@@ -4174,6 +4240,12 @@
     "category": "extra",
     "path": "decomoji/extra/zenninnkeikoku.png",
     "created": "v5.22.0"
+  },
+  {
+    "name": "zenninnkeisann",
+    "category": "extra",
+    "path": "decomoji/extra/zenninnkeisann.png",
+    "created": "v5.26.0"
   },
   {
     "name": "zenninnkeisyou",
@@ -4722,6 +4794,12 @@
     "created": "v5.17.0"
   },
   {
+    "name": "zenninnrakurai",
+    "category": "extra",
+    "path": "decomoji/extra/zenninnrakurai.png",
+    "created": "v5.26.0"
+  },
+  {
     "name": "zenninnrea",
     "category": "extra",
     "path": "decomoji/extra/zenninnrea.png",
@@ -4732,6 +4810,12 @@
     "category": "extra",
     "path": "decomoji/extra/zenninnreiteki.png",
     "created": "v5.17.0"
+  },
+  {
+    "name": "zenninnrennraku",
+    "category": "extra",
+    "path": "decomoji/extra/zenninnrennraku.png",
+    "created": "v5.26.0"
   },
   {
     "name": "zenninnrikonn",
@@ -4852,6 +4936,12 @@
     "category": "extra",
     "path": "decomoji/extra/zenninnsennsou.png",
     "created": "v5.11.0"
+  },
+  {
+    "name": "zenninnsenntaku",
+    "category": "extra",
+    "path": "decomoji/extra/zenninnsenntaku.png",
+    "created": "v5.26.0"
   },
   {
     "name": "zenninnsessyu",
@@ -5164,6 +5254,12 @@
     "category": "extra",
     "path": "decomoji/extra/zenninnteigi.png",
     "created": "v5.22.0"
+  },
+  {
+    "name": "zenninnteirei",
+    "category": "extra",
+    "path": "decomoji/extra/zenninnteirei.png",
+    "created": "v5.26.0"
   },
   {
     "name": "zenninnteisi",
@@ -6184,6 +6280,12 @@
     "category": "extra",
     "path": "decomoji/extra/zerokyori.png",
     "created": "v5.8.0"
+  },
+  {
+    "name": "zerorenntaru",
+    "category": "extra",
+    "path": "decomoji/extra/zerorenntaru.png",
+    "created": "v5.26.0"
   },
   {
     "name": "zerowann",
@@ -7602,6 +7704,12 @@
     "created": "v5.22.0"
   },
   {
+    "name": "zinnseisusumeta",
+    "category": "extra",
+    "path": "decomoji/extra/zinnseisusumeta.png",
+    "created": "v5.26.0"
+  },
+  {
     "name": "zinntairennsei",
     "category": "extra",
     "path": "decomoji/extra/zinntairennsei.png",
@@ -7719,7 +7827,8 @@
     "name": "zipdekure",
     "category": "extra",
     "path": "decomoji/extra/zipdekure.png",
-    "created": "v5.25.0"
+    "created": "v5.25.0",
+    "updated": "v5.26.0"
   },
   {
     "name": "zipdesu",
@@ -10566,6 +10675,12 @@
     "created": "v5.4.2"
   },
   {
+    "name": "zizituzyousibou",
+    "category": "extra",
+    "path": "decomoji/extra/zizituzyousibou.png",
+    "created": "v5.26.0"
+  },
+  {
     "name": "zizyouari",
     "category": "extra",
     "path": "decomoji/extra/zizyouari.png",
@@ -11778,6 +11893,12 @@
     "created": "v5.21.0"
   },
   {
+    "name": "zya-mane",
+    "category": "extra",
+    "path": "decomoji/extra/zya-mane.png",
+    "created": "v5.26.0"
+  },
+  {
     "name": "zya-mannsu-purekkusu",
     "category": "extra",
     "path": "decomoji/extra/zya-mannsu-purekkusu.png",
@@ -12408,6 +12529,12 @@
     "created": "v5.5.0"
   },
   {
+    "name": "zyouhoukaikinn",
+    "category": "extra",
+    "path": "decomoji/extra/zyouhoukaikinn.png",
+    "created": "v5.26.0"
+  },
+  {
     "name": "zyouhoukoukann",
     "category": "extra",
     "path": "decomoji/extra/zyouhoukoukann.png",
@@ -12478,6 +12605,12 @@
     "category": "extra",
     "path": "decomoji/extra/zyouigainenn.png",
     "created": "v5.18.0"
+  },
+  {
+    "name": "zyouikatatu",
+    "category": "extra",
+    "path": "decomoji/extra/zyouikatatu.png",
+    "created": "v5.26.0"
   },
   {
     "name": "zyouisonnzai",
@@ -12730,6 +12863,12 @@
     "category": "extra",
     "path": "decomoji/extra/zyounoutisissu.png",
     "created": "v5.4.2"
+  },
+  {
+    "name": "zyouonnzyouatutyoudenndou",
+    "category": "extra",
+    "path": "decomoji/extra/zyouonnzyouatutyoudenndou.png",
+    "created": "v5.26.0"
   },
   {
     "name": "zyousigausotuki",
@@ -13084,7 +13223,8 @@
     "name": "zyunnsuisabunn",
     "category": "extra",
     "path": "decomoji/extra/zyunnsuisabunn.png",
-    "created": "v5.4.2"
+    "created": "v5.4.2",
+    "updated": "v5.26.0"
   },
   {
     "name": "zyunnzisaikai",

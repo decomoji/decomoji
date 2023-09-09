@@ -1038,6 +1038,18 @@
     "created": "v5.0.0"
   },
   {
+    "name": "yarukohusuki-kouka",
+    "category": "extra",
+    "path": "decomoji/extra/yarukohusuki-kouka.png",
+    "created": "v5.26.0"
+  },
+  {
+    "name": "yarukototakusannarinunnthiusu",
+    "category": "extra",
+    "path": "decomoji/extra/yarukototakusannarinunnthiusu.png",
+    "created": "v5.26.0"
+  },
+  {
     "name": "yarunarayaraneba",
     "category": "extra",
     "path": "decomoji/extra/yarunarayaraneba.png",
@@ -2657,12 +2669,6 @@
     "category": "extra",
     "path": "decomoji/extra/yonnsimai.png",
     "created": "v5.20.0"
-  },
-  {
-    "name": "yonnzyuubyoude",
-    "category": "extra",
-    "path": "decomoji/extra/yonnzyuubyoude.png",
-    "created": "v5.4.2"
   },
   {
     "name": "yononakakane",
@@ -4519,6 +4525,12 @@
     "created": "v5.18.0"
   },
   {
+    "name": "yumenoeikyuuhumetu",
+    "category": "extra",
+    "path": "decomoji/extra/yumenoeikyuuhumetu.png",
+    "created": "v5.26.0"
+  },
+  {
     "name": "yumenoeko",
     "category": "extra",
     "path": "decomoji/extra/yumenoeko.png",
@@ -4607,6 +4619,12 @@
     "category": "extra",
     "path": "decomoji/extra/yumenogennmitu.png",
     "created": "v5.14.0"
+  },
+  {
+    "name": "yumenogenntei",
+    "category": "extra",
+    "path": "decomoji/extra/yumenogenntei.png",
+    "created": "v5.26.0"
   },
   {
     "name": "yumenogisiki",
@@ -4727,6 +4745,12 @@
     "category": "extra",
     "path": "decomoji/extra/yumenohennsenn.png",
     "created": "v5.20.0"
+  },
+  {
+    "name": "yumenohennsoku",
+    "category": "extra",
+    "path": "decomoji/extra/yumenohennsoku.png",
+    "created": "v5.26.0"
   },
   {
     "name": "yumenohigaasa",
@@ -5063,6 +5087,12 @@
     "category": "extra",
     "path": "decomoji/extra/yumenokeikoku.png",
     "created": "v5.22.0"
+  },
+  {
+    "name": "yumenokeisann",
+    "category": "extra",
+    "path": "decomoji/extra/yumenokeisann.png",
+    "created": "v5.26.0"
   },
   {
     "name": "yumenokeisyou",
@@ -5581,6 +5611,12 @@
     "created": "v5.17.0"
   },
   {
+    "name": "yumenorakurai",
+    "category": "extra",
+    "path": "decomoji/extra/yumenorakurai.png",
+    "created": "v5.26.0"
+  },
+  {
     "name": "yumenorea",
     "category": "extra",
     "path": "decomoji/extra/yumenorea.png",
@@ -5591,6 +5627,12 @@
     "category": "extra",
     "path": "decomoji/extra/yumenoreiteki.png",
     "created": "v5.17.0"
+  },
+  {
+    "name": "yumenorennraku",
+    "category": "extra",
+    "path": "decomoji/extra/yumenorennraku.png",
+    "created": "v5.26.0"
   },
   {
     "name": "yumenorikonn",
@@ -5711,6 +5753,12 @@
     "category": "extra",
     "path": "decomoji/extra/yumenosennsou.png",
     "created": "v5.11.0"
+  },
+  {
+    "name": "yumenosenntaku",
+    "category": "extra",
+    "path": "decomoji/extra/yumenosenntaku.png",
+    "created": "v5.26.0"
   },
   {
     "name": "yumenosessyu",
@@ -5987,6 +6035,12 @@
     "category": "extra",
     "path": "decomoji/extra/yumenoteigi.png",
     "created": "v5.22.0"
+  },
+  {
+    "name": "yumenoteirei",
+    "category": "extra",
+    "path": "decomoji/extra/yumenoteirei.png",
+    "created": "v5.26.0"
   },
   {
     "name": "yumenoteisi",
@@ -7285,10 +7339,10 @@
     "created": "v5.0.0"
   },
   {
-    "name": "yuureipo",
+    "name": "yuureipoi",
     "category": "extra",
-    "path": "decomoji/extra/yuureipo.png",
-    "created": "v5.0.0"
+    "path": "decomoji/extra/yuureipoi.png",
+    "created": "v5.26.0"
   },
   {
     "name": "yuureisann",
