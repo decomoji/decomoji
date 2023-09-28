@@ -91,7 +91,7 @@ export const pretender = async (inputs) => {
               res.error === "error_invalid_alias"
             ? messages[res.error]
             : res.error
-        } ${name} -> ${alias_for}.`
+        } ${name} -> ${alias_for}`
       );
 
       // ログファイルに結果を入れる
