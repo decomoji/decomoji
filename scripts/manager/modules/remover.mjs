@@ -86,7 +86,7 @@ export const remover = async (inputs) => {
             : res.error === "no_permission"
             ? messages[res.error]
             : res.error
-        } ${name}.`
+        } ${name}`
       );
 
       // ログファイルに結果を入れる
