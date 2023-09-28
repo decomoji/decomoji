@@ -10,7 +10,8 @@
   ],
   "main": "",
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "manager": "node scripts/manager/index.mjs -lt"
   },
   "repository": {
     "type": "git",
