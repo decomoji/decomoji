@@ -150,5 +150,8 @@ if (options.inputs) {
   main(await getParsedJson(`../manager/${FILE}`));
 } else {
   // --inputs オプション がない場合は inquirer を起動して対話的にオプションを作る
-  askInputs((inputs) => main(inputs), options.additional);
+  askInputs(
+    (inputs) => main({ ...inputs, configs: inputs.configs.reverse() }),
+    options.additional
+  );
 }
