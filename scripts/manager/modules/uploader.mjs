@@ -96,7 +96,7 @@ export const uploader = async (inputs) => {
               res.error === "error_name_taken_i18n"
             ? messages[res.error]
             : res.error
-        } ${name}.`
+        } ${name}`
       );
 
       // ログファイルに結果を入れる
