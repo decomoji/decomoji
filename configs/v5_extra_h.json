@@ -156,6 +156,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "hagedou",
+    "category": "extra",
+    "path": "decomoji/extra/hagedou.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "hagesii_",
     "category": "extra",
     "path": "decomoji/extra/hagesii_.png",
@@ -564,6 +570,12 @@
     "created": "v5.23.0"
   },
   {
+    "name": "hairennzi",
+    "category": "extra",
+    "path": "decomoji/extra/hairennzi.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "hairetu",
     "category": "extra",
     "path": "decomoji/extra/hairetu.png",
@@ -960,6 +972,12 @@
     "created": "v5.23.0"
   },
   {
+    "name": "haisutoresu",
+    "category": "extra",
+    "path": "decomoji/extra/haisutoresu.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "haisyou",
     "category": "extra",
     "path": "decomoji/extra/haisyou.png",
@@ -1132,6 +1150,12 @@
     "category": "extra",
     "path": "decomoji/extra/hamunida.png",
     "created": "v5.21.0"
+  },
+  {
+    "name": "hana_",
+    "category": "extra",
+    "path": "decomoji/extra/hana_.png",
+    "created": "v5.27.0"
   },
   {
     "name": "hanadakehisaro",
@@ -2058,6 +2082,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "hannsinnnoare",
+    "category": "extra",
+    "path": "decomoji/extra/hannsinnnoare.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "hannsyaunndou",
     "category": "extra",
     "path": "decomoji/extra/hannsyaunndou.png",
@@ -2231,6 +2261,12 @@
     "category": "extra",
     "path": "decomoji/extra/harunomugitya.png",
     "created": "v5.20.0"
+  },
+  {
+    "name": "harunoyonoyume",
+    "category": "extra",
+    "path": "decomoji/extra/harunoyonoyume.png",
+    "created": "v5.27.0"
   },
   {
     "name": "harunoyoru",
@@ -3007,6 +3043,18 @@
     "created": "v5.24.0"
   },
   {
+    "name": "heddohuru",
+    "category": "extra",
+    "path": "decomoji/extra/heddohuru.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "heddoresu",
+    "category": "extra",
+    "path": "decomoji/extra/heddoresu.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "heddorokku",
     "category": "extra",
     "path": "decomoji/extra/heddorokku.png",
@@ -3260,6 +3308,12 @@
     "path": "decomoji/extra/hennkenn.png",
     "created": "v5.1.0",
     "updated": "v5.1.2"
+  },
+  {
+    "name": "hennkouazasu",
+    "category": "extra",
+    "path": "decomoji/extra/hennkouazasu.png",
+    "created": "v5.27.0"
   },
   {
     "name": "hennkoumazoku",
@@ -4318,6 +4372,18 @@
     "created": "v5.17.0"
   },
   {
+    "name": "hikarase",
+    "category": "extra",
+    "path": "decomoji/extra/hikarase.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "hikarasou",
+    "category": "extra",
+    "path": "decomoji/extra/hikarasou.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "hikarie",
     "category": "extra",
     "path": "decomoji/extra/hikarie.png",
@@ -5008,6 +5074,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "hinotamasutore-to",
+    "category": "extra",
+    "path": "decomoji/extra/hinotamasutore-to.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "hinyu-tonn",
     "category": "extra",
     "path": "decomoji/extra/hinyu-tonn.png",
@@ -5194,6 +5266,18 @@
     "created": "v5.2.0"
   },
   {
+    "name": "hissiari",
+    "category": "extra",
+    "path": "decomoji/extra/hissiari.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "hissiaru",
+    "category": "extra",
+    "path": "decomoji/extra/hissiaru.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "hissidake",
     "category": "extra",
     "path": "decomoji/extra/hissidake.png",
@@ -5276,6 +5360,18 @@
     "category": "extra",
     "path": "decomoji/extra/hissimore.png",
     "created": "v5.2.0"
+  },
+  {
+    "name": "hissinai",
+    "category": "extra",
+    "path": "decomoji/extra/hissinai.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "hissinasi",
+    "category": "extra",
+    "path": "decomoji/extra/hissinasi.png",
+    "created": "v5.27.0"
   },
   {
     "name": "hissinooni",
@@ -5582,6 +5678,12 @@
     "category": "extra",
     "path": "decomoji/extra/hito.png",
     "created": "v5.5.0"
+  },
+  {
+    "name": "hito_",
+    "category": "extra",
+    "path": "decomoji/extra/hito_.png",
+    "created": "v5.27.0"
   },
   {
     "name": "hitobasira",
@@ -6779,6 +6881,12 @@
     "created": "v5.17.0"
   },
   {
+    "name": "hodohodononaru",
+    "category": "extra",
+    "path": "decomoji/extra/hodohodononaru.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "hoge",
     "category": "extra",
     "path": "decomoji/extra/hoge.png",
@@ -7071,6 +7179,12 @@
     "category": "extra",
     "path": "decomoji/extra/homerurennsyuu.png",
     "created": "v5.3.0"
+  },
+  {
+    "name": "hometaiga-",
+    "category": "extra",
+    "path": "decomoji/extra/hometaiga-.png",
+    "created": "v5.27.0"
   },
   {
     "name": "homunnkurusu",
@@ -8345,6 +8459,168 @@
     "created": "v5.17.0"
   },
   {
+    "name": "hora-ari",
+    "category": "extra",
+    "path": "decomoji/extra/hora-ari.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "hora-aru",
+    "category": "extra",
+    "path": "decomoji/extra/hora-aru.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "hora-dake",
+    "category": "extra",
+    "path": "decomoji/extra/hora-dake.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "hora-dana",
+    "category": "extra",
+    "path": "decomoji/extra/hora-dana.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "hora-dane",
+    "category": "extra",
+    "path": "decomoji/extra/hora-dane.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "hora-dayo",
+    "category": "extra",
+    "path": "decomoji/extra/hora-dayo.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "hora-deha",
+    "category": "extra",
+    "path": "decomoji/extra/hora-deha.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "hora-desu",
+    "category": "extra",
+    "path": "decomoji/extra/hora-desu.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "hora-kaiwai",
+    "category": "extra",
+    "path": "decomoji/extra/hora-kaiwai.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "hora-kamo",
+    "category": "extra",
+    "path": "decomoji/extra/hora-kamo.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "hora-kana",
+    "category": "extra",
+    "path": "decomoji/extra/hora-kana.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "hora-kayo",
+    "category": "extra",
+    "path": "decomoji/extra/hora-kayo.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "hora-keisatu",
+    "category": "extra",
+    "path": "decomoji/extra/hora-keisatu.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "hora-mati",
+    "category": "extra",
+    "path": "decomoji/extra/hora-mati.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "hora-mazoku",
+    "category": "extra",
+    "path": "decomoji/extra/hora-mazoku.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "hora-more",
+    "category": "extra",
+    "path": "decomoji/extra/hora-more.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "hora-nai",
+    "category": "extra",
+    "path": "decomoji/extra/hora-nai.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "hora-nasi",
+    "category": "extra",
+    "path": "decomoji/extra/hora-nasi.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "hora-nooni",
+    "category": "extra",
+    "path": "decomoji/extra/hora-nooni.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "hora-siro",
+    "category": "extra",
+    "path": "decomoji/extra/hora-siro.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "hora-sita",
+    "category": "extra",
+    "path": "decomoji/extra/hora-sita.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "hora-site",
+    "category": "extra",
+    "path": "decomoji/extra/hora-site.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "hora-siyo",
+    "category": "extra",
+    "path": "decomoji/extra/hora-siyo.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "hora-suru",
+    "category": "extra",
+    "path": "decomoji/extra/hora-suru.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "hora-tarou",
+    "category": "extra",
+    "path": "decomoji/extra/hora-tarou.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "hora-wasure",
+    "category": "extra",
+    "path": "decomoji/extra/hora-wasure.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "hora-zumi",
+    "category": "extra",
+    "path": "decomoji/extra/hora-zumi.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "horahora",
     "category": "extra",
     "path": "decomoji/extra/horahora.png",
@@ -8361,6 +8637,12 @@
     "category": "extra",
     "path": "decomoji/extra/horohoro.png",
     "created": "v5.15.0"
+  },
+  {
+    "name": "hosi_",
+    "category": "extra",
+    "path": "decomoji/extra/hosi_.png",
+    "created": "v5.27.0"
   },
   {
     "name": "hosideyatteru",
@@ -11442,6 +11724,12 @@
     "created": "v5.23.0"
   },
   {
+    "name": "hurune-mu",
+    "category": "extra",
+    "path": "decomoji/extra/hurune-mu.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "huruo-punnha",
     "category": "extra",
     "path": "decomoji/extra/huruo-punnha.png",
@@ -11482,6 +11770,18 @@
     "category": "extra",
     "path": "decomoji/extra/husaide-.png",
     "created": "v5.21.0"
+  },
+  {
+    "name": "husannkada",
+    "category": "extra",
+    "path": "decomoji/extra/husannkada.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "husannkade",
+    "category": "extra",
+    "path": "decomoji/extra/husannkade.png",
+    "created": "v5.27.0"
   },
   {
     "name": "huseikai",

@@ -997,6 +997,12 @@
     "created": "v5.18.0"
   },
   {
+    "name": "emohuru",
+    "category": "extra",
+    "path": "decomoji/extra/emohuru.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "emoisuto",
     "category": "extra",
     "path": "decomoji/extra/emoisuto.png",
@@ -1763,6 +1769,12 @@
     "category": "extra",
     "path": "decomoji/extra/erabukennri.png",
     "created": "v5.20.0"
+  },
+  {
+    "name": "erainnko",
+    "category": "extra",
+    "path": "decomoji/extra/erainnko.png",
+    "created": "v5.27.0"
   },
   {
     "name": "erakokyuu",

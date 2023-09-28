@@ -252,10 +252,10 @@
     "created": "v5.21.0"
   },
   {
-    "name": "rahuresu",
+    "name": "rahunesu",
     "category": "extra",
-    "path": "decomoji/extra/rahuresu.png",
-    "created": "v5.8.0"
+    "path": "decomoji/extra/rahunesu.png",
+    "created": "v5.27.0"
   },
   {
     "name": "raibuhaisinn",
@@ -1375,6 +1375,12 @@
     "created": "v5.25.0"
   },
   {
+    "name": "rebyu-azasu",
+    "category": "extra",
+    "path": "decomoji/extra/rebyu-azasu.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "rebyu-simasu",
     "category": "extra",
     "path": "decomoji/extra/rebyu-simasu.png",
@@ -1399,6 +1405,12 @@
     "created": "v5.23.0"
   },
   {
+    "name": "reddobonn",
+    "category": "extra",
+    "path": "decomoji/extra/reddobonn.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "reddohotto",
     "category": "extra",
     "path": "decomoji/extra/reddohotto.png",
@@ -1409,6 +1421,12 @@
     "category": "extra",
     "path": "decomoji/extra/reddoo-syann.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "reddosukai",
+    "category": "extra",
+    "path": "decomoji/extra/reddosukai.png",
+    "created": "v5.27.0"
   },
   {
     "name": "reddosuto-nn",
@@ -1445,6 +1463,168 @@
     "category": "extra",
     "path": "decomoji/extra/reiatu.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "reiatuari",
+    "category": "extra",
+    "path": "decomoji/extra/reiatuari.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "reiatuaru",
+    "category": "extra",
+    "path": "decomoji/extra/reiatuaru.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "reiatudake",
+    "category": "extra",
+    "path": "decomoji/extra/reiatudake.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "reiatudana",
+    "category": "extra",
+    "path": "decomoji/extra/reiatudana.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "reiatudane",
+    "category": "extra",
+    "path": "decomoji/extra/reiatudane.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "reiatudayo",
+    "category": "extra",
+    "path": "decomoji/extra/reiatudayo.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "reiatudeha",
+    "category": "extra",
+    "path": "decomoji/extra/reiatudeha.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "reiatudesu",
+    "category": "extra",
+    "path": "decomoji/extra/reiatudesu.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "reiatukaiwai",
+    "category": "extra",
+    "path": "decomoji/extra/reiatukaiwai.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "reiatukamo",
+    "category": "extra",
+    "path": "decomoji/extra/reiatukamo.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "reiatukana",
+    "category": "extra",
+    "path": "decomoji/extra/reiatukana.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "reiatukayo",
+    "category": "extra",
+    "path": "decomoji/extra/reiatukayo.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "reiatukeisatu",
+    "category": "extra",
+    "path": "decomoji/extra/reiatukeisatu.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "reiatumati",
+    "category": "extra",
+    "path": "decomoji/extra/reiatumati.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "reiatumazoku",
+    "category": "extra",
+    "path": "decomoji/extra/reiatumazoku.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "reiatumore",
+    "category": "extra",
+    "path": "decomoji/extra/reiatumore.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "reiatunai",
+    "category": "extra",
+    "path": "decomoji/extra/reiatunai.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "reiatunasi",
+    "category": "extra",
+    "path": "decomoji/extra/reiatunasi.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "reiatunooni",
+    "category": "extra",
+    "path": "decomoji/extra/reiatunooni.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "reiatusiro",
+    "category": "extra",
+    "path": "decomoji/extra/reiatusiro.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "reiatusita",
+    "category": "extra",
+    "path": "decomoji/extra/reiatusita.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "reiatusite",
+    "category": "extra",
+    "path": "decomoji/extra/reiatusite.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "reiatusiyo",
+    "category": "extra",
+    "path": "decomoji/extra/reiatusiyo.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "reiatusuru",
+    "category": "extra",
+    "path": "decomoji/extra/reiatusuru.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "reiatutarou",
+    "category": "extra",
+    "path": "decomoji/extra/reiatutarou.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "reiatuwasure",
+    "category": "extra",
+    "path": "decomoji/extra/reiatuwasure.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "reiatuzumi",
+    "category": "extra",
+    "path": "decomoji/extra/reiatuzumi.png",
+    "created": "v5.27.0"
   },
   {
     "name": "reiautoanime-syonn",
@@ -3236,6 +3416,12 @@
     "created": "v5.18.0"
   },
   {
+    "name": "ro-rennzi",
+    "category": "extra",
+    "path": "decomoji/extra/ro-rennzi.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "ro-ruappu",
     "category": "extra",
     "path": "decomoji/extra/ro-ruappu.png",
@@ -3258,6 +3444,12 @@
     "category": "extra",
     "path": "decomoji/extra/ro-sute.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "ro-sutoresu",
+    "category": "extra",
+    "path": "decomoji/extra/ro-sutoresu.png",
+    "created": "v5.27.0"
   },
   {
     "name": "ro-tonn",
@@ -3818,6 +4010,18 @@
     "created": "v5.14.0"
   },
   {
+    "name": "ronnguhanndo",
+    "category": "extra",
+    "path": "decomoji/extra/ronnguhanndo.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "ronngurennzi",
+    "category": "extra",
+    "path": "decomoji/extra/ronngurennzi.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "ronngusera-",
     "category": "extra",
     "path": "decomoji/extra/ronngusera-.png",
@@ -4002,6 +4206,18 @@
     "category": "extra",
     "path": "decomoji/extra/rosokutai.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "rosuhuru",
+    "category": "extra",
+    "path": "decomoji/extra/rosuhuru.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "rosuresu",
+    "category": "extra",
+    "path": "decomoji/extra/rosuresu.png",
+    "created": "v5.27.0"
   },
   {
     "name": "roudenntaisaku",

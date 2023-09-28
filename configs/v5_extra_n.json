@@ -1380,6 +1380,12 @@
     "created": "v5.20.0"
   },
   {
+    "name": "nani_",
+    "category": "extra",
+    "path": "decomoji/extra/nani_.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "naniare",
     "category": "extra",
     "path": "decomoji/extra/naniare.png",
@@ -1774,6 +1780,12 @@
     "category": "extra",
     "path": "decomoji/extra/nanndaiiruno.png",
     "created": "v5.21.0"
+  },
+  {
+    "name": "nanndaimano",
+    "category": "extra",
+    "path": "decomoji/extra/nanndaimano.png",
+    "created": "v5.27.0"
   },
   {
     "name": "nanndakanala",
@@ -2512,6 +2524,12 @@
     "category": "extra",
     "path": "decomoji/extra/narabumazoku.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "naraku",
+    "category": "extra",
+    "path": "decomoji/extra/naraku.png",
+    "created": "v5.27.0"
   },
   {
     "name": "naramuri",
@@ -3415,6 +3433,12 @@
     "created": "v5.4.0"
   },
   {
+    "name": "neko_",
+    "category": "extra",
+    "path": "decomoji/extra/neko_.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "nekodaizennsyuu",
     "category": "extra",
     "path": "decomoji/extra/nekodaizennsyuu.png",
@@ -3750,6 +3774,12 @@
     "category": "extra",
     "path": "decomoji/extra/nekowosagase.png",
     "created": "v5.21.0"
+  },
+  {
+    "name": "nekowowakaiseyo",
+    "category": "extra",
+    "path": "decomoji/extra/nekowowakaiseyo.png",
+    "created": "v5.27.0"
   },
   {
     "name": "nekoyanekoya",
@@ -4988,6 +5018,12 @@
     "created": "v5.7.0"
   },
   {
+    "name": "nihonnsousauna",
+    "category": "extra",
+    "path": "decomoji/extra/nihonnsousauna.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "nihonnsyoku",
     "category": "extra",
     "path": "decomoji/extra/nihonnsyoku.png",
@@ -5034,6 +5070,12 @@
     "category": "extra",
     "path": "decomoji/extra/nikoniko.png",
     "created": "v5.4.0"
+  },
+  {
+    "name": "niku_",
+    "category": "extra",
+    "path": "decomoji/extra/niku_.png",
+    "created": "v5.27.0"
   },
   {
     "name": "nikudanikuda",
@@ -5118,6 +5160,12 @@
     "category": "extra",
     "path": "decomoji/extra/nikukasakanaka.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "nikukirihonetatu",
+    "category": "extra",
+    "path": "decomoji/extra/nikukirihonetatu.png",
+    "created": "v5.27.0"
   },
   {
     "name": "nikumenikume",
@@ -5274,6 +5322,12 @@
     "category": "extra",
     "path": "decomoji/extra/nikuyonikuyo.png",
     "created": "v5.18.0"
+  },
+  {
+    "name": "nikuzannkotudann",
+    "category": "extra",
+    "path": "decomoji/extra/nikuzannkotudann.png",
+    "created": "v5.27.0"
   },
   {
     "name": "nikuzannmai",
@@ -6410,6 +6464,12 @@
     "created": "v5.2.0"
   },
   {
+    "name": "no-kyassyu",
+    "category": "extra",
+    "path": "decomoji/extra/no-kyassyu.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "no-ma-ku",
     "category": "extra",
     "path": "decomoji/extra/no-ma-ku.png",
@@ -6486,6 +6546,18 @@
     "category": "extra",
     "path": "decomoji/extra/nobennkyoukai.png",
     "created": "v5.7.0"
+  },
+  {
+    "name": "nobisiro",
+    "category": "extra",
+    "path": "decomoji/extra/nobisiro.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "nobisirogaaru",
+    "category": "extra",
+    "path": "decomoji/extra/nobisirogaaru.png",
+    "created": "v5.27.0"
   },
   {
     "name": "nobiteru",
@@ -6656,10 +6728,22 @@
     "created": "v5.0.0"
   },
   {
+    "name": "nonnrennzi",
+    "category": "extra",
+    "path": "decomoji/extra/nonnrennzi.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "nonnsutoppubasu",
     "category": "extra",
     "path": "decomoji/extra/nonnsutoppubasu.png",
     "created": "v5.4.0"
+  },
+  {
+    "name": "nonnsutoresu",
+    "category": "extra",
+    "path": "decomoji/extra/nonnsutoresu.png",
+    "created": "v5.27.0"
   },
   {
     "name": "norann",
@@ -6684,6 +6768,18 @@
     "category": "extra",
     "path": "decomoji/extra/norinori.png",
     "created": "v5.5.0"
+  },
+  {
+    "name": "norisiro",
+    "category": "extra",
+    "path": "decomoji/extra/norisiro.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "norisirogaaru",
+    "category": "extra",
+    "path": "decomoji/extra/norisirogaaru.png",
+    "created": "v5.27.0"
   },
   {
     "name": "noroi",
@@ -8010,6 +8106,12 @@
     "category": "extra",
     "path": "decomoji/extra/nukeyou.png",
     "created": "v5.20.0"
+  },
+  {
+    "name": "nukumorithi",
+    "category": "extra",
+    "path": "decomoji/extra/nukumorithi.png",
+    "created": "v5.27.0"
   },
   {
     "name": "nukunuku",

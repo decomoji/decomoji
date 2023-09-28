@@ -30,6 +30,24 @@
     "created": "v5.22.0"
   },
   {
+    "name": "no-bura",
+    "category": "explicit",
+    "path": "decomoji/explicit/no-bura.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "no-habo",
+    "category": "explicit",
+    "path": "decomoji/explicit/no-habo.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "no-pann",
+    "category": "explicit",
+    "path": "decomoji/explicit/no-pann.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "nobaka_",
     "category": "explicit",
     "path": "decomoji/explicit/nobaka_.png",

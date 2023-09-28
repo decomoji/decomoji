@@ -18,6 +18,12 @@
     "created": "v5.15.0"
   },
   {
+    "name": "ba-nnauto",
+    "category": "extra",
+    "path": "decomoji/extra/ba-nnauto.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "ba-tyaronn",
     "category": "extra",
     "path": "decomoji/extra/ba-tyaronn.png",
@@ -622,6 +628,12 @@
     "category": "extra",
     "path": "decomoji/extra/baikaru.png",
     "created": "v5.19.0"
+  },
+  {
+    "name": "baikarutyuraru",
+    "category": "extra",
+    "path": "decomoji/extra/baikarutyuraru.png",
+    "created": "v5.27.0"
   },
   {
     "name": "baikukinnsi",
@@ -4346,6 +4358,12 @@
     "created": "v5.9.0"
   },
   {
+    "name": "bokunohora-",
+    "category": "extra",
+    "path": "decomoji/extra/bokunohora-.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "bokunohoukoku",
     "category": "extra",
     "path": "decomoji/extra/bokunohoukoku.png",
@@ -4722,6 +4740,12 @@
     "category": "extra",
     "path": "decomoji/extra/bokunokioku.png",
     "created": "v5.14.0"
+  },
+  {
+    "name": "bokunokitiku",
+    "category": "extra",
+    "path": "decomoji/extra/bokunokitiku.png",
+    "created": "v5.27.0"
   },
   {
     "name": "bokunokoa",
@@ -5168,6 +5192,12 @@
     "created": "v5.21.0"
   },
   {
+    "name": "bokunoreiatu",
+    "category": "extra",
+    "path": "decomoji/extra/bokunoreiatu.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "bokunoreiteki",
     "category": "extra",
     "path": "decomoji/extra/bokunoreiteki.png",
@@ -5328,6 +5358,12 @@
     "category": "extra",
     "path": "decomoji/extra/bokunosigoto.png",
     "created": "v5.2.0"
+  },
+  {
+    "name": "bokunosinnkokyuu",
+    "category": "extra",
+    "path": "decomoji/extra/bokunosinnkokyuu.png",
+    "created": "v5.27.0"
   },
   {
     "name": "bokunosinnnenn",
@@ -5850,6 +5886,12 @@
     "category": "extra",
     "path": "decomoji/extra/bokunozanntei.png",
     "created": "v5.21.0"
+  },
+  {
+    "name": "bokunozasetu",
+    "category": "extra",
+    "path": "decomoji/extra/bokunozasetu.png",
+    "created": "v5.27.0"
   },
   {
     "name": "bokunozatu",
@@ -7324,10 +7366,22 @@
     "created": "v5.0.0"
   },
   {
+    "name": "buru-bonn",
+    "category": "extra",
+    "path": "decomoji/extra/buru-bonn.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "buru-o-syann",
     "category": "extra",
     "path": "decomoji/extra/buru-o-syann.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "buru-sukai",
+    "category": "extra",
+    "path": "decomoji/extra/buru-sukai.png",
+    "created": "v5.27.0"
   },
   {
     "name": "buruburu",
@@ -7533,6 +7587,12 @@
     "category": "extra",
     "path": "decomoji/extra/busukete.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "buta_",
+    "category": "extra",
+    "path": "decomoji/extra/buta_.png",
+    "created": "v5.27.0"
   },
   {
     "name": "butadabutada",

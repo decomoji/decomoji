@@ -378,6 +378,12 @@
     "updated": "v5.19.0"
   },
   {
+    "name": "dodekaminnsutorongu",
+    "category": "extra",
+    "path": "decomoji/extra/dodekaminnsutorongu.png",
+    "removed": "v5.27.0"
+  },
+  {
     "name": "donosakujo",
     "category": "extra",
     "path": "decomoji/extra/donosakujo.png",
@@ -1666,6 +1672,12 @@
     "category": "basic",
     "path": "decomoji/basic/ra-men.png",
     "removed": "v5.4.0"
+  },
+  {
+    "name": "rahuresu",
+    "category": "extra",
+    "path": "decomoji/extra/rahuresu.png",
+    "removed": "v5.27.0"
   },
   {
     "name": "raitote-ma",

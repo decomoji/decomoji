@@ -18,6 +18,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "da-kusukai",
+    "category": "extra",
+    "path": "decomoji/extra/da-kusukai.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "da-kute-ma",
     "category": "extra",
     "path": "decomoji/extra/da-kute-ma.png",
@@ -472,6 +478,12 @@
     "category": "extra",
     "path": "decomoji/extra/daizyoubune.png",
     "created": "v5.4.2"
+  },
+  {
+    "name": "daizyouburakkutaiga-",
+    "category": "extra",
+    "path": "decomoji/extra/daizyouburakkutaiga-.png",
+    "created": "v5.27.0"
   },
   {
     "name": "daizyoubusou",
@@ -1140,10 +1152,22 @@
     "created": "v5.15.0"
   },
   {
+    "name": "dare_",
+    "category": "extra",
+    "path": "decomoji/extra/dare_.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "dareda__",
     "category": "extra",
     "path": "decomoji/extra/dareda__.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "daredaimano",
+    "category": "extra",
+    "path": "decomoji/extra/daredaimano.png",
+    "created": "v5.27.0"
   },
   {
     "name": "daredemo",
@@ -1630,6 +1654,24 @@
     "category": "extra",
     "path": "decomoji/extra/daroune.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "darru",
+    "category": "extra",
+    "path": "decomoji/extra/darru.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "darui",
+    "category": "extra",
+    "path": "decomoji/extra/darui.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "daruiwa",
+    "category": "extra",
+    "path": "decomoji/extra/daruiwa.png",
+    "created": "v5.27.0"
   },
   {
     "name": "darusou",
@@ -3703,6 +3745,12 @@
     "created": "v5.3.0"
   },
   {
+    "name": "desyoune",
+    "category": "extra",
+    "path": "decomoji/extra/desyoune.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "detaiousimasu",
     "category": "extra",
     "path": "decomoji/extra/detaiousimasu.png",
@@ -4100,10 +4148,10 @@
     "created": "v5.15.0"
   },
   {
-    "name": "dodekaminnsutorongu",
+    "name": "dodekaminnsutoronngu",
     "category": "extra",
-    "path": "decomoji/extra/dodekaminnsutorongu.png",
-    "created": "v5.0.0"
+    "path": "decomoji/extra/dodekaminnsutoronngu.png",
+    "created": "v5.27.0"
   },
   {
     "name": "dodododo",
@@ -4650,6 +4698,12 @@
     "category": "extra",
     "path": "decomoji/extra/donnkannzumi.png",
     "created": "v5.18.0"
+  },
+  {
+    "name": "donnkoumazoku",
+    "category": "extra",
+    "path": "decomoji/extra/donnkoumazoku.png",
+    "created": "v5.27.0"
   },
   {
     "name": "donnmai",
@@ -5276,6 +5330,12 @@
     "created": "v5.9.0"
   },
   {
+    "name": "donohora-",
+    "category": "extra",
+    "path": "decomoji/extra/donohora-.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "donohoukoku",
     "category": "extra",
     "path": "decomoji/extra/donohoukoku.png",
@@ -5588,6 +5648,12 @@
     "created": "v5.17.0"
   },
   {
+    "name": "donokenntou",
+    "category": "extra",
+    "path": "decomoji/extra/donokenntou.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "donokessann",
     "category": "extra",
     "path": "decomoji/extra/donokessann.png",
@@ -5640,6 +5706,12 @@
     "category": "extra",
     "path": "decomoji/extra/donokioku.png",
     "created": "v5.14.0"
+  },
+  {
+    "name": "donokitiku",
+    "category": "extra",
+    "path": "decomoji/extra/donokitiku.png",
+    "created": "v5.27.0"
   },
   {
     "name": "donokoa",
@@ -6086,6 +6158,12 @@
     "created": "v5.21.0"
   },
   {
+    "name": "donoreiatu",
+    "category": "extra",
+    "path": "decomoji/extra/donoreiatu.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "donoreiteki",
     "category": "extra",
     "path": "decomoji/extra/donoreiteki.png",
@@ -6246,6 +6324,12 @@
     "category": "extra",
     "path": "decomoji/extra/donosigoto.png",
     "created": "v5.2.0"
+  },
+  {
+    "name": "donosinnkokyuu",
+    "category": "extra",
+    "path": "decomoji/extra/donosinnkokyuu.png",
+    "created": "v5.27.0"
   },
   {
     "name": "donosinnnenn",
@@ -6756,6 +6840,12 @@
     "category": "extra",
     "path": "decomoji/extra/donozanntei.png",
     "created": "v5.21.0"
+  },
+  {
+    "name": "donozasetu",
+    "category": "extra",
+    "path": "decomoji/extra/donozasetu.png",
+    "created": "v5.27.0"
   },
   {
     "name": "donozatu",

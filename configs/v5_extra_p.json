@@ -216,6 +216,12 @@
     "created": "v5.18.0"
   },
   {
+    "name": "pannsuperumiasetu",
+    "category": "extra",
+    "path": "decomoji/extra/pannsuperumiasetu.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "panntarou",
     "category": "extra",
     "path": "decomoji/extra/panntarou.png",
@@ -523,10 +529,22 @@
     "created": "v5.0.0"
   },
   {
+    "name": "pawahuru",
+    "category": "extra",
+    "path": "decomoji/extra/pawahuru.png",
+    "created": "v5.27.0"
+  },
+  {
     "name": "pawapoyamete",
     "category": "extra",
     "path": "decomoji/extra/pawapoyamete.png",
     "created": "v5.19.0"
+  },
+  {
+    "name": "pawaresu",
+    "category": "extra",
+    "path": "decomoji/extra/pawaresu.png",
+    "created": "v5.27.0"
   },
   {
     "name": "payapaya",
@@ -558,6 +576,18 @@
     "category": "extra",
     "path": "decomoji/extra/pe-pa-.png",
     "created": "v5.8.0"
+  },
+  {
+    "name": "pe-pa-huru",
+    "category": "extra",
+    "path": "decomoji/extra/pe-pa-huru.png",
+    "created": "v5.27.0"
+  },
+  {
+    "name": "pe-pa-resu",
+    "category": "extra",
+    "path": "decomoji/extra/pe-pa-resu.png",
+    "created": "v5.27.0"
   },
   {
     "name": "pe-zinairinku",
@@ -1125,6 +1155,12 @@
     "category": "extra",
     "path": "decomoji/extra/pptnosaigenn.png",
     "created": "v5.1.0"
+  },
+  {
+    "name": "prazasu",
+    "category": "extra",
+    "path": "decomoji/extra/prazasu.png",
+    "created": "v5.27.0"
   },
   {
     "name": "prdayo",
