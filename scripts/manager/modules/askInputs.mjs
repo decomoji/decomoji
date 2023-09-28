@@ -118,12 +118,12 @@ const questions = (additional) => [
     name: "term",
     choices: [
       {
-        name: "カテゴリーごと",
-        value: "category",
-      },
-      {
         name: "バージョンごと",
         value: "version",
+      },
+      {
+        name: "カテゴリーごと",
+        value: "category",
       },
     ],
     validate: isSelects,
