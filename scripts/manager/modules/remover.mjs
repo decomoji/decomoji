@@ -38,12 +38,12 @@ export const remover = async (inputs) => {
 
   const result = {
     error: [],
-    no_permission: [],
+    emoji_not_found: [],
     ok: [],
   };
   const messages = {
     ok: "removed",
-    no_permission: "skipped(no permission or already removed)",
+    emoji_not_found: "skipped(no permission or already removed)",
   };
 
   const _remove = async (inputs) => {
@@ -83,7 +83,7 @@ export const remover = async (inputs) => {
         `${i + 1}/${localDecomojiListLength}: ${
           res.ok
             ? messages.ok
-            : res.error === "no_permission"
+            : res.error === "emoji_not_found"
             ? messages[res.error]
             : res.error
         } ${name}`
@@ -92,7 +92,7 @@ export const remover = async (inputs) => {
       // ログファイルに結果を入れる
       res.ok
         ? result.ok.push(name)
-        : res.error === "no_permission"
+        : res.error === "emoji_not_found"
         ? result[res.error].push(name)
         : res.error === "ratelimited" // ratelimited エラーの場合はログに残さない
         ? void 0
@@ -114,7 +114,7 @@ export const remover = async (inputs) => {
       // 特定のエラー以外は失敗フラグを立てる
       if (
         res.error &&
-        res.error !== "no_permission" // 削除する対象が見つからないエラー
+        res.error !== "emoji_not_found" // 削除する対象が見つからないエラー
       ) {
         FAILED = true;
         break;
