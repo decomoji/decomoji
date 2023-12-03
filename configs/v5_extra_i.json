@@ -1314,6 +1314,12 @@
     "created": "v5.9.0"
   },
   {
+    "name": "ikkituukann",
+    "category": "extra",
+    "path": "decomoji/extra/ikkituukann.png",
+    "created": "v5.28.0"
+  },
+  {
     "name": "ikkiuti",
     "category": "extra",
     "path": "decomoji/extra/ikkiuti.png",
@@ -2082,6 +2088,12 @@
     "created": "v5.9.0"
   },
   {
+    "name": "innsyudennto",
+    "category": "extra",
+    "path": "decomoji/extra/innsyudennto.png",
+    "created": "v5.28.0"
+  },
+  {
     "name": "innsyurannsu",
     "category": "extra",
     "path": "decomoji/extra/innsyurannsu.png",
@@ -2142,10 +2154,22 @@
     "created": "v5.7.0"
   },
   {
+    "name": "innta-nettorouzinnkai",
+    "category": "extra",
+    "path": "decomoji/extra/innta-nettorouzinnkai.png",
+    "created": "v5.28.0"
+  },
+  {
     "name": "innta-nettoyamenaide",
     "category": "extra",
     "path": "decomoji/extra/innta-nettoyamenaide.png",
     "created": "v5.21.0"
+  },
+  {
+    "name": "innta-nettoyamero",
+    "category": "extra",
+    "path": "decomoji/extra/innta-nettoyamero.png",
+    "created": "v5.28.0"
   },
   {
     "name": "innta-nettoyatteru",
@@ -3516,6 +3540,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "issyoudaremogamiseinenn",
+    "category": "extra",
+    "path": "decomoji/extra/issyoudaremogamiseinenn.png",
+    "created": "v5.28.0"
+  },
+  {
     "name": "issyourennkyuu",
     "category": "extra",
     "path": "decomoji/extra/issyourennkyuu.png",
@@ -3748,6 +3778,12 @@
     "category": "extra",
     "path": "decomoji/extra/itamaesusi.png",
     "created": "v5.20.0"
+  },
+  {
+    "name": "itanoka",
+    "category": "extra",
+    "path": "decomoji/extra/itanoka.png",
+    "created": "v5.28.0"
   },
   {
     "name": "itanopuro",
@@ -4042,6 +4078,12 @@
     "category": "extra",
     "path": "decomoji/extra/itibudouzi.png",
     "created": "v5.18.0"
+  },
+  {
+    "name": "itibuebidenn",
+    "category": "extra",
+    "path": "decomoji/extra/itibuebidenn.png",
+    "created": "v5.28.0"
   },
   {
     "name": "itibueikyuuhumetu",
@@ -5034,6 +5076,12 @@
     "created": "v5.4.0"
   },
   {
+    "name": "itibunamaniku",
+    "category": "extra",
+    "path": "decomoji/extra/itibunamaniku.png",
+    "created": "v5.28.0"
+  },
+  {
     "name": "itibunennkinn",
     "category": "extra",
     "path": "decomoji/extra/itibunennkinn.png",
@@ -5050,6 +5098,18 @@
     "category": "extra",
     "path": "decomoji/extra/itibunennryou.png",
     "created": "v5.13.0"
+  },
+  {
+    "name": "itibunikugann",
+    "category": "extra",
+    "path": "decomoji/extra/itibunikugann.png",
+    "created": "v5.28.0"
+  },
+  {
+    "name": "itibunikusei",
+    "category": "extra",
+    "path": "decomoji/extra/itibunikusei.png",
+    "created": "v5.28.0"
   },
   {
     "name": "itibuninngenn",
@@ -5524,6 +5584,12 @@
     "category": "extra",
     "path": "decomoji/extra/itibutaigenn.png",
     "created": "v5.13.0"
+  },
+  {
+    "name": "itibutaigi",
+    "category": "extra",
+    "path": "decomoji/extra/itibutaigi.png",
+    "created": "v5.28.0"
   },
   {
     "name": "itibutaihenn",
@@ -6012,6 +6078,12 @@
     "created": "v5.25.0"
   },
   {
+    "name": "itibuzyunnai",
+    "category": "extra",
+    "path": "decomoji/extra/itibuzyunnai.png",
+    "created": "v5.28.0"
+  },
+  {
     "name": "itibuzyunnkyo",
     "category": "extra",
     "path": "decomoji/extra/itibuzyunnkyo.png",
@@ -6348,6 +6420,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "ittanoka",
+    "category": "extra",
+    "path": "decomoji/extra/ittanoka.png",
+    "created": "v5.28.0"
+  },
+  {
     "name": "ittehayai",
     "category": "extra",
     "path": "decomoji/extra/ittehayai.png",
@@ -6370,6 +6448,12 @@
     "category": "extra",
     "path": "decomoji/extra/ittennsyuutyuu.png",
     "created": "v5.7.0"
+  },
+  {
+    "name": "itteokitai",
+    "category": "extra",
+    "path": "decomoji/extra/itteokitai.png",
+    "created": "v5.28.0"
   },
   {
     "name": "itteooi",
@@ -6748,6 +6832,12 @@
     "category": "extra",
     "path": "decomoji/extra/iyoiyo.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "iyokutekinadezainn",
+    "category": "extra",
+    "path": "decomoji/extra/iyokutekinadezainn.png",
+    "created": "v5.28.0"
   },
   {
     "name": "iyonohayamagari",

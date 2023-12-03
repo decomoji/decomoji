@@ -492,6 +492,12 @@
     "created": "v5.8.0"
   },
   {
+    "name": "unionegaisimasu",
+    "category": "extra",
+    "path": "decomoji/extra/unionegaisimasu.png",
+    "created": "v5.28.0"
+  },
+  {
     "name": "unn_unn",
     "category": "extra",
     "path": "decomoji/extra/unn_unn.png",
@@ -856,6 +862,18 @@
     "category": "extra",
     "path": "decomoji/extra/uradeyaro.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "uragiri",
+    "category": "extra",
+    "path": "decomoji/extra/uragiri.png",
+    "created": "v5.28.0"
+  },
+  {
+    "name": "uragirimono",
+    "category": "extra",
+    "path": "decomoji/extra/uragirimono.png",
+    "created": "v5.28.0"
   },
   {
     "name": "uramairi",

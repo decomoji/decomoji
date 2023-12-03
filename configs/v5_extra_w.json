@@ -2125,6 +2125,12 @@
     "created": "v5.23.0"
   },
   {
+    "name": "watasihaikanainodesirimasenn",
+    "category": "extra",
+    "path": "decomoji/extra/watasihaikanainodesirimasenn.png",
+    "created": "v5.28.0"
+  },
+  {
     "name": "watasihakamo",
     "category": "extra",
     "path": "decomoji/extra/watasihakamo.png",
@@ -2597,6 +2603,12 @@
     "category": "extra",
     "path": "decomoji/extra/watasinodouzi.png",
     "created": "v5.18.0"
+  },
+  {
+    "name": "watasinoebidenn",
+    "category": "extra",
+    "path": "decomoji/extra/watasinoebidenn.png",
+    "created": "v5.28.0"
   },
   {
     "name": "watasinoeikyuuhumetu",
@@ -3241,6 +3253,12 @@
     "created": "v5.17.0"
   },
   {
+    "name": "watasinokenntou",
+    "category": "extra",
+    "path": "decomoji/extra/watasinokenntou.png",
+    "created": "v5.28.0"
+  },
+  {
     "name": "watasinokessann",
     "category": "extra",
     "path": "decomoji/extra/watasinokessann.png",
@@ -3601,6 +3619,12 @@
     "created": "v5.1.0"
   },
   {
+    "name": "watasinonamaniku",
+    "category": "extra",
+    "path": "decomoji/extra/watasinonamaniku.png",
+    "created": "v5.28.0"
+  },
+  {
     "name": "watasinonennkinn",
     "category": "extra",
     "path": "decomoji/extra/watasinonennkinn.png",
@@ -3623,6 +3647,18 @@
     "category": "extra",
     "path": "decomoji/extra/watasinonennsyuu.png",
     "created": "v5.8.0"
+  },
+  {
+    "name": "watasinonikugann",
+    "category": "extra",
+    "path": "decomoji/extra/watasinonikugann.png",
+    "created": "v5.28.0"
+  },
+  {
+    "name": "watasinonikusei",
+    "category": "extra",
+    "path": "decomoji/extra/watasinonikusei.png",
+    "created": "v5.28.0"
   },
   {
     "name": "watasinoninngenn",
@@ -4109,6 +4145,12 @@
     "category": "extra",
     "path": "decomoji/extra/watasinotaigenn.png",
     "created": "v5.13.0"
+  },
+  {
+    "name": "watasinotaigi",
+    "category": "extra",
+    "path": "decomoji/extra/watasinotaigi.png",
+    "created": "v5.28.0"
   },
   {
     "name": "watasinotaihenn",
@@ -4607,6 +4649,12 @@
     "category": "extra",
     "path": "decomoji/extra/watasinozyoukenn.png",
     "created": "v5.25.0"
+  },
+  {
+    "name": "watasinozyunnai",
+    "category": "extra",
+    "path": "decomoji/extra/watasinozyunnai.png",
+    "created": "v5.28.0"
   },
   {
     "name": "watasinozyunnkyo",

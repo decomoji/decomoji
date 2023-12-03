@@ -1380,6 +1380,12 @@
     "updated": "v5.20.0"
   },
   {
+    "name": "mada30dai",
+    "category": "extra",
+    "path": "decomoji/extra/mada30dai.png",
+    "updated": "v5.28.0"
+  },
+  {
     "name": "madasakujo",
     "category": "extra",
     "path": "decomoji/extra/madasakujo.png",
@@ -1534,6 +1540,12 @@
     "category": "extra",
     "path": "decomoji/extra/nekowoagameyo.png",
     "updated": "v5.15.0"
+  },
+  {
+    "name": "nekowowakaiseyo",
+    "category": "extra",
+    "path": "decomoji/extra/nekowowakaiseyo.png",
+    "updated": "v5.28.0"
   },
   {
     "name": "nikuniyatteru_1",

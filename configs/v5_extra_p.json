@@ -1,5 +1,11 @@
 [
   {
+    "name": "pa-none",
+    "category": "extra",
+    "path": "decomoji/extra/pa-none.png",
+    "created": "v5.28.0"
+  },
+  {
     "name": "pa-rinai",
     "category": "extra",
     "path": "decomoji/extra/pa-rinai.png",
@@ -394,6 +400,12 @@
     "category": "extra",
     "path": "decomoji/extra/pasifikkumuri.png",
     "created": "v5.4.0"
+  },
+  {
+    "name": "pasodobure",
+    "category": "extra",
+    "path": "decomoji/extra/pasodobure.png",
+    "created": "v5.28.0"
   },
   {
     "name": "pasokonngannbaro",
@@ -983,6 +995,12 @@
     "created": "v5.15.0"
   },
   {
+    "name": "ponntie",
+    "category": "extra",
+    "path": "decomoji/extra/ponntie.png",
+    "created": "v5.28.0"
+  },
+  {
     "name": "ponnzu",
     "category": "extra",
     "path": "decomoji/extra/ponnzu.png",
@@ -1211,6 +1229,12 @@
     "path": "decomoji/extra/puipuimigaaru.png",
     "created": "v5.17.0",
     "updated": "v5.17.1"
+  },
+  {
+    "name": "punipuninohapuninngu",
+    "category": "extra",
+    "path": "decomoji/extra/punipuninohapuninngu.png",
+    "created": "v5.28.0"
   },
   {
     "name": "punnpunn",

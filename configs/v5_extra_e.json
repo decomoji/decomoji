@@ -114,10 +114,178 @@
     "created": "v5.0.0"
   },
   {
+    "name": "ebidenn",
+    "category": "extra",
+    "path": "decomoji/extra/ebidenn.png",
+    "created": "v5.28.0"
+  },
+  {
+    "name": "ebidennari",
+    "category": "extra",
+    "path": "decomoji/extra/ebidennari.png",
+    "created": "v5.28.0"
+  },
+  {
+    "name": "ebidennaru",
+    "category": "extra",
+    "path": "decomoji/extra/ebidennaru.png",
+    "created": "v5.28.0"
+  },
+  {
+    "name": "ebidenndake",
+    "category": "extra",
+    "path": "decomoji/extra/ebidenndake.png",
+    "created": "v5.28.0"
+  },
+  {
+    "name": "ebidenndana",
+    "category": "extra",
+    "path": "decomoji/extra/ebidenndana.png",
+    "created": "v5.28.0"
+  },
+  {
+    "name": "ebidenndane",
+    "category": "extra",
+    "path": "decomoji/extra/ebidenndane.png",
+    "created": "v5.28.0"
+  },
+  {
+    "name": "ebidenndayo",
+    "category": "extra",
+    "path": "decomoji/extra/ebidenndayo.png",
+    "created": "v5.28.0"
+  },
+  {
+    "name": "ebidenndeha",
+    "category": "extra",
+    "path": "decomoji/extra/ebidenndeha.png",
+    "created": "v5.28.0"
+  },
+  {
+    "name": "ebidenndesu",
+    "category": "extra",
+    "path": "decomoji/extra/ebidenndesu.png",
+    "created": "v5.28.0"
+  },
+  {
+    "name": "ebidennkaiwai",
+    "category": "extra",
+    "path": "decomoji/extra/ebidennkaiwai.png",
+    "created": "v5.28.0"
+  },
+  {
+    "name": "ebidennkamo",
+    "category": "extra",
+    "path": "decomoji/extra/ebidennkamo.png",
+    "created": "v5.28.0"
+  },
+  {
+    "name": "ebidennkana",
+    "category": "extra",
+    "path": "decomoji/extra/ebidennkana.png",
+    "created": "v5.28.0"
+  },
+  {
+    "name": "ebidennkayo",
+    "category": "extra",
+    "path": "decomoji/extra/ebidennkayo.png",
+    "created": "v5.28.0"
+  },
+  {
+    "name": "ebidennkeisatu",
+    "category": "extra",
+    "path": "decomoji/extra/ebidennkeisatu.png",
+    "created": "v5.28.0"
+  },
+  {
+    "name": "ebidennmati",
+    "category": "extra",
+    "path": "decomoji/extra/ebidennmati.png",
+    "created": "v5.28.0"
+  },
+  {
+    "name": "ebidennmazoku",
+    "category": "extra",
+    "path": "decomoji/extra/ebidennmazoku.png",
+    "created": "v5.28.0"
+  },
+  {
+    "name": "ebidennmore",
+    "category": "extra",
+    "path": "decomoji/extra/ebidennmore.png",
+    "created": "v5.28.0"
+  },
+  {
+    "name": "ebidennnai",
+    "category": "extra",
+    "path": "decomoji/extra/ebidennnai.png",
+    "created": "v5.28.0"
+  },
+  {
+    "name": "ebidennnasi",
+    "category": "extra",
+    "path": "decomoji/extra/ebidennnasi.png",
+    "created": "v5.28.0"
+  },
+  {
+    "name": "ebidennnooni",
+    "category": "extra",
+    "path": "decomoji/extra/ebidennnooni.png",
+    "created": "v5.28.0"
+  },
+  {
+    "name": "ebidennsiro",
+    "category": "extra",
+    "path": "decomoji/extra/ebidennsiro.png",
+    "created": "v5.28.0"
+  },
+  {
+    "name": "ebidennsita",
+    "category": "extra",
+    "path": "decomoji/extra/ebidennsita.png",
+    "created": "v5.28.0"
+  },
+  {
+    "name": "ebidennsite",
+    "category": "extra",
+    "path": "decomoji/extra/ebidennsite.png",
+    "created": "v5.28.0"
+  },
+  {
+    "name": "ebidennsiyo",
+    "category": "extra",
+    "path": "decomoji/extra/ebidennsiyo.png",
+    "created": "v5.28.0"
+  },
+  {
     "name": "ebidennsukinn",
     "category": "extra",
     "path": "decomoji/extra/ebidennsukinn.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "ebidennsuru",
+    "category": "extra",
+    "path": "decomoji/extra/ebidennsuru.png",
+    "created": "v5.28.0"
+  },
+  {
+    "name": "ebidenntarou",
+    "category": "extra",
+    "path": "decomoji/extra/ebidenntarou.png",
+    "created": "v5.28.0"
+  },
+  {
+    "name": "ebidennwasure",
+    "category": "extra",
+    "path": "decomoji/extra/ebidennwasure.png",
+    "created": "v5.28.0"
+  },
+  {
+    "name": "ebidennzumi",
+    "category": "extra",
+    "path": "decomoji/extra/ebidennzumi.png",
+    "created": "v5.28.0"
   },
   {
     "name": "ebigatame",
@@ -628,6 +796,12 @@
     "category": "extra",
     "path": "decomoji/extra/eikyuuhumetuzumi.png",
     "created": "v5.26.0"
+  },
+  {
+    "name": "eikyuutoudo",
+    "category": "extra",
+    "path": "decomoji/extra/eikyuutoudo.png",
+    "created": "v5.28.0"
   },
   {
     "name": "eiminngu",
