@@ -43,7 +43,7 @@ export const remover = async (inputs) => {
   };
   const messages = {
     ok: "removed",
-    emoji_not_found: "skipped(no permission or already removed)",
+    emoji_not_found: "skipped(emoji_not_found)",
   };
 
   const _remove = async (inputs) => {
