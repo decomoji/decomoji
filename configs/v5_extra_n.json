@@ -1248,6 +1248,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "nalazenalaze",
+    "category": "extra",
+    "path": "decomoji/extra/nalazenalaze.png",
+    "created": "v5.29.0"
+  },
+  {
     "name": "namade-ta",
     "category": "extra",
     "path": "decomoji/extra/namade-ta.png",
@@ -2040,6 +2046,12 @@
     "created": "v5.21.0"
   },
   {
+    "name": "nanndekawakarann",
+    "category": "extra",
+    "path": "decomoji/extra/nanndekawakarann.png",
+    "created": "v5.29.0"
+  },
+  {
     "name": "nanndekounatteruno",
     "category": "extra",
     "path": "decomoji/extra/nanndekounatteruno.png",
@@ -2056,6 +2068,12 @@
     "category": "extra",
     "path": "decomoji/extra/nanndemoapi.png",
     "created": "v5.7.0"
+  },
+  {
+    "name": "nanndemoari-na",
+    "category": "extra",
+    "path": "decomoji/extra/nanndemoari-na.png",
+    "created": "v5.29.0"
   },
   {
     "name": "nanndemoaru",
@@ -3078,6 +3096,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "natunoasa",
+    "category": "extra",
+    "path": "decomoji/extra/natunoasa.png",
+    "created": "v5.29.0"
+  },
+  {
     "name": "natunomugitya",
     "category": "extra",
     "path": "decomoji/extra/natunomugitya.png",
@@ -3088,6 +3112,12 @@
     "category": "extra",
     "path": "decomoji/extra/natunoyoru.png",
     "created": "v5.25.0"
+  },
+  {
+    "name": "natunozidai",
+    "category": "extra",
+    "path": "decomoji/extra/natunozidai.png",
+    "created": "v5.29.0"
   },
   {
     "name": "natutabasukogreat",
@@ -4351,6 +4381,12 @@
     "category": "extra",
     "path": "decomoji/extra/nennmatunasi.png",
     "created": "v5.13.0"
+  },
+  {
+    "name": "nennmatunennsi",
+    "category": "extra",
+    "path": "decomoji/extra/nennmatunennsi.png",
+    "created": "v5.29.0"
   },
   {
     "name": "nennmatunooni",
@@ -8431,6 +8467,174 @@
     "category": "extra",
     "path": "decomoji/extra/nousyukukanngenn.png",
     "created": "v5.7.0"
+  },
+  {
+    "name": "noutann",
+    "category": "extra",
+    "path": "decomoji/extra/noutann.png",
+    "created": "v5.29.0"
+  },
+  {
+    "name": "noutannari",
+    "category": "extra",
+    "path": "decomoji/extra/noutannari.png",
+    "created": "v5.29.0"
+  },
+  {
+    "name": "noutannaru",
+    "category": "extra",
+    "path": "decomoji/extra/noutannaru.png",
+    "created": "v5.29.0"
+  },
+  {
+    "name": "noutanndake",
+    "category": "extra",
+    "path": "decomoji/extra/noutanndake.png",
+    "created": "v5.29.0"
+  },
+  {
+    "name": "noutanndana",
+    "category": "extra",
+    "path": "decomoji/extra/noutanndana.png",
+    "created": "v5.29.0"
+  },
+  {
+    "name": "noutanndane",
+    "category": "extra",
+    "path": "decomoji/extra/noutanndane.png",
+    "created": "v5.29.0"
+  },
+  {
+    "name": "noutanndayo",
+    "category": "extra",
+    "path": "decomoji/extra/noutanndayo.png",
+    "created": "v5.29.0"
+  },
+  {
+    "name": "noutanndeha",
+    "category": "extra",
+    "path": "decomoji/extra/noutanndeha.png",
+    "created": "v5.29.0"
+  },
+  {
+    "name": "noutanndesu",
+    "category": "extra",
+    "path": "decomoji/extra/noutanndesu.png",
+    "created": "v5.29.0"
+  },
+  {
+    "name": "noutannkaiwai",
+    "category": "extra",
+    "path": "decomoji/extra/noutannkaiwai.png",
+    "created": "v5.29.0"
+  },
+  {
+    "name": "noutannkamo",
+    "category": "extra",
+    "path": "decomoji/extra/noutannkamo.png",
+    "created": "v5.29.0"
+  },
+  {
+    "name": "noutannkana",
+    "category": "extra",
+    "path": "decomoji/extra/noutannkana.png",
+    "created": "v5.29.0"
+  },
+  {
+    "name": "noutannkayo",
+    "category": "extra",
+    "path": "decomoji/extra/noutannkayo.png",
+    "created": "v5.29.0"
+  },
+  {
+    "name": "noutannkeisatu",
+    "category": "extra",
+    "path": "decomoji/extra/noutannkeisatu.png",
+    "created": "v5.29.0"
+  },
+  {
+    "name": "noutannmati",
+    "category": "extra",
+    "path": "decomoji/extra/noutannmati.png",
+    "created": "v5.29.0"
+  },
+  {
+    "name": "noutannmazoku",
+    "category": "extra",
+    "path": "decomoji/extra/noutannmazoku.png",
+    "created": "v5.29.0"
+  },
+  {
+    "name": "noutannmore",
+    "category": "extra",
+    "path": "decomoji/extra/noutannmore.png",
+    "created": "v5.29.0"
+  },
+  {
+    "name": "noutannnai",
+    "category": "extra",
+    "path": "decomoji/extra/noutannnai.png",
+    "created": "v5.29.0"
+  },
+  {
+    "name": "noutannnasi",
+    "category": "extra",
+    "path": "decomoji/extra/noutannnasi.png",
+    "created": "v5.29.0"
+  },
+  {
+    "name": "noutannnooni",
+    "category": "extra",
+    "path": "decomoji/extra/noutannnooni.png",
+    "created": "v5.29.0"
+  },
+  {
+    "name": "noutannsiro",
+    "category": "extra",
+    "path": "decomoji/extra/noutannsiro.png",
+    "created": "v5.29.0"
+  },
+  {
+    "name": "noutannsita",
+    "category": "extra",
+    "path": "decomoji/extra/noutannsita.png",
+    "created": "v5.29.0"
+  },
+  {
+    "name": "noutannsite",
+    "category": "extra",
+    "path": "decomoji/extra/noutannsite.png",
+    "created": "v5.29.0"
+  },
+  {
+    "name": "noutannsiyo",
+    "category": "extra",
+    "path": "decomoji/extra/noutannsiyo.png",
+    "created": "v5.29.0"
+  },
+  {
+    "name": "noutannsuru",
+    "category": "extra",
+    "path": "decomoji/extra/noutannsuru.png",
+    "created": "v5.29.0"
+  },
+  {
+    "name": "noutanntarou",
+    "category": "extra",
+    "path": "decomoji/extra/noutanntarou.png",
+    "created": "v5.29.0"
+  },
+  {
+    "name": "noutannwasure",
+    "category": "extra",
+    "path": "decomoji/extra/noutannwasure.png",
+    "created": "v5.29.0"
+  },
+  {
+    "name": "noutannzumi",
+    "category": "extra",
+    "path": "decomoji/extra/noutannzumi.png",
+    "created": "v5.29.0"
   },
   {
     "name": "noyoake",

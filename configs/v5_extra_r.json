@@ -2479,12 +2479,6 @@
     "created": "v5.26.0"
   },
   {
-    "name": "rennrakuzumi_1",
-    "category": "extra",
-    "path": "decomoji/extra/rennrakuzumi_1.png",
-    "created": "v5.26.0"
-  },
-  {
     "name": "renntaru",
     "category": "extra",
     "path": "decomoji/extra/renntaru.png",
@@ -3168,6 +3162,12 @@
     "category": "extra",
     "path": "decomoji/extra/rinnsenntaisei.png",
     "created": "v5.20.0"
+  },
+  {
+    "name": "rinnta-",
+    "category": "extra",
+    "path": "decomoji/extra/rinnta-.png",
+    "created": "v5.29.0"
   },
   {
     "name": "rinnzikyuukou",
@@ -4314,6 +4314,12 @@
     "category": "extra",
     "path": "decomoji/extra/rousuitaisaku.png",
     "created": "v5.21.0"
+  },
+  {
+    "name": "rozettozyoinnto",
+    "category": "extra",
+    "path": "decomoji/extra/rozettozyoinnto.png",
+    "created": "v5.29.0"
   },
   {
     "name": "rozikku",

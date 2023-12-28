@@ -606,6 +606,12 @@
     "updated": "v5.15.0"
   },
   {
+    "name": "guunonemodenai_1",
+    "category": "extra",
+    "path": "decomoji/extra/guunonemodenai_1.png",
+    "removed": "v5.29.0"
+  },
+  {
     "name": "gyoukaihyoujunn",
     "category": "basic",
     "path": "decomoji/basic/gyoukaihyoujunn.png",
@@ -1704,6 +1710,12 @@
     "removed": "v5.4.2"
   },
   {
+    "name": "rennrakuzumi_1",
+    "category": "extra",
+    "path": "decomoji/extra/rennrakuzumi_1.png",
+    "removed": "v5.29.0"
+  },
+  {
     "name": "rezinn",
     "category": "extra",
     "path": "decomoji/extra/rezinn.png",
@@ -1912,6 +1924,12 @@
     "category": "extra",
     "path": "decomoji/extra/sakujozumi.png",
     "removed": "v5.4.2"
+  },
+  {
+    "name": "sakuseikannryou_1",
+    "category": "extra",
+    "path": "decomoji/extra/sakuseikannryou_1.png",
+    "removed": "v5.29.0"
   },
   {
     "name": "saruniyatteru_1",

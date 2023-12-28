@@ -775,6 +775,12 @@
     "created": "v5.23.0"
   },
   {
+    "name": "gannbatte_",
+    "category": "extra",
+    "path": "decomoji/extra/gannbatte_.png",
+    "created": "v5.29.0"
+  },
+  {
     "name": "ganngann",
     "category": "extra",
     "path": "decomoji/extra/ganngann.png",
@@ -1673,6 +1679,18 @@
     "category": "extra",
     "path": "decomoji/extra/geizyutuninntei.png",
     "created": "v5.9.0"
+  },
+  {
+    "name": "geizyututennhikui",
+    "category": "extra",
+    "path": "decomoji/extra/geizyututennhikui.png",
+    "created": "v5.29.0"
+  },
+  {
+    "name": "geizyututenntakai",
+    "category": "extra",
+    "path": "decomoji/extra/geizyututenntakai.png",
+    "created": "v5.29.0"
   },
   {
     "name": "gekiatu",
@@ -4104,6 +4122,12 @@
     "created": "v5.19.0"
   },
   {
+    "name": "glitch",
+    "category": "extra",
+    "path": "decomoji/extra/glitch.png",
+    "created": "v5.29.0"
+  },
+  {
     "name": "go-",
     "category": "extra",
     "path": "decomoji/extra/go-.png",
@@ -5700,6 +5724,12 @@
     "created": "v5.6.0"
   },
   {
+    "name": "gomamayokyannseru",
+    "category": "extra",
+    "path": "decomoji/extra/gomamayokyannseru.png",
+    "created": "v5.29.0"
+  },
+  {
     "name": "gomennne",
     "category": "extra",
     "path": "decomoji/extra/gomennne.png",
@@ -7279,15 +7309,15 @@
     "created": "v5.24.0"
   },
   {
+    "name": "guunone",
+    "category": "extra",
+    "path": "decomoji/extra/guunone.png",
+    "created": "v5.29.0"
+  },
+  {
     "name": "guunonemodenai",
     "category": "extra",
     "path": "decomoji/extra/guunonemodenai.png",
-    "created": "v5.28.0"
-  },
-  {
-    "name": "guunonemodenai_1",
-    "category": "extra",
-    "path": "decomoji/extra/guunonemodenai_1.png",
     "created": "v5.28.0"
   },
   {
