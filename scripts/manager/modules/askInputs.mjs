@@ -1,5 +1,5 @@
 import inquirer from "inquirer";
-import format from "date-fns/format/index.js";
+import { format } from "date-fns";
 import { getGitTagArray } from "../../utilities/getGitTagArray.mjs";
 import { getGitTaggingDateArray } from "../../utilities/getGitTaggingDateArray.mjs";
 import { isEmail } from "../../utilities/isEmail.mjs";
@@ -73,7 +73,7 @@ const V5_TAGGING_DATES = getGitTaggingDateArray()
       ...acc,
       ...{ [value[0]]: value[1] },
     }),
-    {}
+    {},
   );
 
 const FULL_VERSIONS_ITEMS = getGitTagArray("v5")
