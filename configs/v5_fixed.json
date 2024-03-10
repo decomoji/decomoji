@@ -90,6 +90,12 @@
     "updated": "v5.4.1"
   },
   {
+    "name": "anodassou",
+    "category": "extra",
+    "path": "decomoji/extra/anodassou.png",
+    "updated": "v5.30.0"
+  },
+  {
     "name": "anosakujo",
     "category": "extra",
     "path": "decomoji/extra/anosakujo.png",
@@ -216,6 +222,12 @@
     "updated": "v5.19.0"
   },
   {
+    "name": "bokunodassou",
+    "category": "extra",
+    "path": "decomoji/extra/bokunodassou.png",
+    "updated": "v5.30.0"
+  },
+  {
     "name": "bokunodoui_1",
     "category": "extra",
     "path": "decomoji/extra/bokunodoui_1.png",
@@ -336,6 +348,174 @@
     "removed": "v5.4.2"
   },
   {
+    "name": "dassou",
+    "category": "extra",
+    "path": "decomoji/extra/dassou.png",
+    "updated": "v5.30.0"
+  },
+  {
+    "name": "dassouari",
+    "category": "extra",
+    "path": "decomoji/extra/dassouari.png",
+    "updated": "v5.30.0"
+  },
+  {
+    "name": "dassouaru",
+    "category": "extra",
+    "path": "decomoji/extra/dassouaru.png",
+    "updated": "v5.30.0"
+  },
+  {
+    "name": "dassoudake",
+    "category": "extra",
+    "path": "decomoji/extra/dassoudake.png",
+    "updated": "v5.30.0"
+  },
+  {
+    "name": "dassoudana",
+    "category": "extra",
+    "path": "decomoji/extra/dassoudana.png",
+    "updated": "v5.30.0"
+  },
+  {
+    "name": "dassoudane",
+    "category": "extra",
+    "path": "decomoji/extra/dassoudane.png",
+    "updated": "v5.30.0"
+  },
+  {
+    "name": "dassoudayo",
+    "category": "extra",
+    "path": "decomoji/extra/dassoudayo.png",
+    "updated": "v5.30.0"
+  },
+  {
+    "name": "dassoudeha",
+    "category": "extra",
+    "path": "decomoji/extra/dassoudeha.png",
+    "updated": "v5.30.0"
+  },
+  {
+    "name": "dassoudesu",
+    "category": "extra",
+    "path": "decomoji/extra/dassoudesu.png",
+    "updated": "v5.30.0"
+  },
+  {
+    "name": "dassoukaiwai",
+    "category": "extra",
+    "path": "decomoji/extra/dassoukaiwai.png",
+    "updated": "v5.30.0"
+  },
+  {
+    "name": "dassoukamo",
+    "category": "extra",
+    "path": "decomoji/extra/dassoukamo.png",
+    "updated": "v5.30.0"
+  },
+  {
+    "name": "dassoukana",
+    "category": "extra",
+    "path": "decomoji/extra/dassoukana.png",
+    "updated": "v5.30.0"
+  },
+  {
+    "name": "dassoukayo",
+    "category": "extra",
+    "path": "decomoji/extra/dassoukayo.png",
+    "updated": "v5.30.0"
+  },
+  {
+    "name": "dassoukeisatu",
+    "category": "extra",
+    "path": "decomoji/extra/dassoukeisatu.png",
+    "updated": "v5.30.0"
+  },
+  {
+    "name": "dassoumati",
+    "category": "extra",
+    "path": "decomoji/extra/dassoumati.png",
+    "updated": "v5.30.0"
+  },
+  {
+    "name": "dassoumazoku",
+    "category": "extra",
+    "path": "decomoji/extra/dassoumazoku.png",
+    "updated": "v5.30.0"
+  },
+  {
+    "name": "dassoumore",
+    "category": "extra",
+    "path": "decomoji/extra/dassoumore.png",
+    "updated": "v5.30.0"
+  },
+  {
+    "name": "dassounai",
+    "category": "extra",
+    "path": "decomoji/extra/dassounai.png",
+    "updated": "v5.30.0"
+  },
+  {
+    "name": "dassounasi",
+    "category": "extra",
+    "path": "decomoji/extra/dassounasi.png",
+    "updated": "v5.30.0"
+  },
+  {
+    "name": "dassounooni",
+    "category": "extra",
+    "path": "decomoji/extra/dassounooni.png",
+    "updated": "v5.30.0"
+  },
+  {
+    "name": "dassousiro",
+    "category": "extra",
+    "path": "decomoji/extra/dassousiro.png",
+    "updated": "v5.30.0"
+  },
+  {
+    "name": "dassousita",
+    "category": "extra",
+    "path": "decomoji/extra/dassousita.png",
+    "updated": "v5.30.0"
+  },
+  {
+    "name": "dassousite",
+    "category": "extra",
+    "path": "decomoji/extra/dassousite.png",
+    "updated": "v5.30.0"
+  },
+  {
+    "name": "dassousiyo",
+    "category": "extra",
+    "path": "decomoji/extra/dassousiyo.png",
+    "updated": "v5.30.0"
+  },
+  {
+    "name": "dassousuru",
+    "category": "extra",
+    "path": "decomoji/extra/dassousuru.png",
+    "updated": "v5.30.0"
+  },
+  {
+    "name": "dassoutarou",
+    "category": "extra",
+    "path": "decomoji/extra/dassoutarou.png",
+    "updated": "v5.30.0"
+  },
+  {
+    "name": "dassouwasure",
+    "category": "extra",
+    "path": "decomoji/extra/dassouwasure.png",
+    "updated": "v5.30.0"
+  },
+  {
+    "name": "dassouzumi",
+    "category": "extra",
+    "path": "decomoji/extra/dassouzumi.png",
+    "updated": "v5.30.0"
+  },
+  {
     "name": "dassuisyoujou",
     "category": "extra",
     "path": "decomoji/extra/dassuisyoujou.png",
@@ -382,6 +562,12 @@
     "category": "extra",
     "path": "decomoji/extra/dodekaminnsutorongu.png",
     "removed": "v5.27.0"
+  },
+  {
+    "name": "donodassou",
+    "category": "extra",
+    "path": "decomoji/extra/donodassou.png",
+    "updated": "v5.30.0"
   },
   {
     "name": "donosakujo",
@@ -790,6 +976,12 @@
     "category": "extra",
     "path": "decomoji/extra/issita_1.png",
     "removed": "v5.23.0"
+  },
+  {
+    "name": "itibudassou",
+    "category": "extra",
+    "path": "decomoji/extra/itibudassou.png",
+    "updated": "v5.30.0"
   },
   {
     "name": "itibusakujo",
@@ -1260,6 +1452,12 @@
     "updated": "v5.2.0"
   },
   {
+    "name": "kiminodassou",
+    "category": "extra",
+    "path": "decomoji/extra/kiminodassou.png",
+    "updated": "v5.30.0"
+  },
+  {
     "name": "kiminodoui_1",
     "category": "extra",
     "path": "decomoji/extra/kiminodoui_1.png",
@@ -1300,6 +1498,12 @@
     "category": "extra",
     "path": "decomoji/extra/konnziru.png",
     "updated": "v5.24.0"
+  },
+  {
+    "name": "konodassou",
+    "category": "extra",
+    "path": "decomoji/extra/konodassou.png",
+    "updated": "v5.30.0"
   },
   {
     "name": "konosakujo",
@@ -1392,10 +1596,22 @@
     "updated": "v5.28.0"
   },
   {
+    "name": "madadassou",
+    "category": "extra",
+    "path": "decomoji/extra/madadassou.png",
+    "updated": "v5.30.0"
+  },
+  {
     "name": "madasakujo",
     "category": "extra",
     "path": "decomoji/extra/madasakujo.png",
     "removed": "v5.4.2"
+  },
+  {
+    "name": "maidassou",
+    "category": "extra",
+    "path": "decomoji/extra/maidassou.png",
+    "updated": "v5.30.0"
   },
   {
     "name": "maikai",
@@ -1416,10 +1632,22 @@
     "removed": "v5.4.2"
   },
   {
+    "name": "manodassou",
+    "category": "extra",
+    "path": "decomoji/extra/manodassou.png",
+    "updated": "v5.30.0"
+  },
+  {
     "name": "manosakujo",
     "category": "extra",
     "path": "decomoji/extra/manosakujo.png",
     "removed": "v5.4.2"
+  },
+  {
+    "name": "matadassou",
+    "category": "extra",
+    "path": "decomoji/extra/matadassou.png",
+    "updated": "v5.30.0"
   },
   {
     "name": "mataennjou",
@@ -1486,6 +1714,12 @@
     "category": "extra",
     "path": "decomoji/extra/monnthiho-ru.png",
     "updated": "v5.12.0"
+  },
+  {
+    "name": "moudassou",
+    "category": "extra",
+    "path": "decomoji/extra/moudassou.png",
+    "updated": "v5.30.0"
   },
   {
     "name": "moujaaku",
@@ -1602,6 +1836,12 @@
     "removed": "v5.4.2"
   },
   {
+    "name": "oninodassou",
+    "category": "extra",
+    "path": "decomoji/extra/oninodassou.png",
+    "updated": "v5.30.0"
+  },
+  {
     "name": "oninosakujo",
     "category": "extra",
     "path": "decomoji/extra/oninosakujo.png",
@@ -1618,6 +1858,12 @@
     "category": "extra",
     "path": "decomoji/extra/oowaraikaisuiyokujou.png",
     "removed": "v5.4.2"
+  },
+  {
+    "name": "orenodassou",
+    "category": "extra",
+    "path": "decomoji/extra/orenodassou.png",
+    "updated": "v5.30.0"
   },
   {
     "name": "orenodoui_1",
@@ -2058,6 +2304,12 @@
     "updated": "v5.17.1"
   },
   {
+    "name": "sonodassou",
+    "category": "extra",
+    "path": "decomoji/extra/sonodassou.png",
+    "updated": "v5.30.0"
+  },
+  {
     "name": "sonosakujo",
     "category": "extra",
     "path": "decomoji/extra/sonosakujo.png",
@@ -2104,6 +2356,12 @@
     "category": "extra",
     "path": "decomoji/extra/sudosiyo.png",
     "updated": "v5.17.1"
+  },
+  {
+    "name": "sugudassou",
+    "category": "extra",
+    "path": "decomoji/extra/sugudassou.png",
+    "updated": "v5.30.0"
   },
   {
     "name": "suguennjou",
@@ -2346,6 +2604,12 @@
     "updated": "v5.23.0"
   },
   {
+    "name": "watasinodassou",
+    "category": "extra",
+    "path": "decomoji/extra/watasinodassou.png",
+    "updated": "v5.30.0"
+  },
+  {
     "name": "watasinodoui_1",
     "category": "extra",
     "path": "decomoji/extra/watasinodoui_1.png",
@@ -2472,6 +2736,12 @@
     "removed": "v5.4.2"
   },
   {
+    "name": "yumenodassou",
+    "category": "extra",
+    "path": "decomoji/extra/yumenodassou.png",
+    "updated": "v5.30.0"
+  },
+  {
     "name": "yumenosakujo",
     "category": "extra",
     "path": "decomoji/extra/yumenosakujo.png",
@@ -2502,6 +2772,12 @@
     "removed": "v5.4.2"
   },
   {
+    "name": "zennbudassou",
+    "category": "extra",
+    "path": "decomoji/extra/zennbudassou.png",
+    "updated": "v5.30.0"
+  },
+  {
     "name": "zennbuhima_1",
     "category": "extra",
     "path": "decomoji/extra/zennbuhima_1.png",
@@ -2512,6 +2788,12 @@
     "category": "extra",
     "path": "decomoji/extra/zennbusakujo.png",
     "removed": "v5.4.2"
+  },
+  {
+    "name": "zenninndassou",
+    "category": "extra",
+    "path": "decomoji/extra/zenninndassou.png",
+    "updated": "v5.30.0"
   },
   {
     "name": "zenninnennjou",

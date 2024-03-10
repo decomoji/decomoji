@@ -6,9 +6,33 @@
     "created": "v5.0.0"
   },
   {
+    "name": "eroikamo",
+    "category": "explicit",
+    "path": "decomoji/explicit/eroikamo.png",
+    "created": "v5.30.0"
+  },
+  {
+    "name": "eroina",
+    "category": "explicit",
+    "path": "decomoji/explicit/eroina.png",
+    "created": "v5.30.0"
+  },
+  {
     "name": "erosugi",
     "category": "explicit",
     "path": "decomoji/explicit/erosugi.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "ettida",
+    "category": "explicit",
+    "path": "decomoji/explicit/ettida.png",
+    "created": "v5.30.0"
+  },
+  {
+    "name": "ettisugiru",
+    "category": "explicit",
+    "path": "decomoji/explicit/ettisugiru.png",
+    "created": "v5.30.0"
   }
 ]

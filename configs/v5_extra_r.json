@@ -312,6 +312,12 @@
     "created": "v5.22.0"
   },
   {
+    "name": "raiki",
+    "category": "extra",
+    "path": "decomoji/extra/raiki.png",
+    "created": "v5.30.0"
+  },
+  {
     "name": "raikudeohennzi",
     "category": "extra",
     "path": "decomoji/extra/raikudeohennzi.png",
@@ -2503,6 +2509,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "rennzokutassei",
+    "category": "extra",
+    "path": "decomoji/extra/rennzokutassei.png",
+    "created": "v5.30.0"
+  },
+  {
     "name": "rennzuhurea",
     "category": "extra",
     "path": "decomoji/extra/rennzuhurea.png",
@@ -2726,10 +2738,22 @@
     "created": "v5.8.0"
   },
   {
+    "name": "riekiyuudou",
+    "category": "extra",
+    "path": "decomoji/extra/riekiyuudou.png",
+    "created": "v5.30.0"
+  },
+  {
     "name": "rifakutaou",
     "category": "extra",
     "path": "decomoji/extra/rifakutaou.png",
     "created": "v5.9.0"
+  },
+  {
+    "name": "rifararusaiyou",
+    "category": "extra",
+    "path": "decomoji/extra/rifararusaiyou.png",
+    "created": "v5.30.0"
   },
   {
     "name": "rifarasupamu",
@@ -3140,6 +3164,12 @@
     "created": "v5.18.0"
   },
   {
+    "name": "rinnkiouhenn",
+    "category": "extra",
+    "path": "decomoji/extra/rinnkiouhenn.png",
+    "created": "v5.30.0"
+  },
+  {
     "name": "rinnkuhuri-",
     "category": "extra",
     "path": "decomoji/extra/rinnkuhuri-.png",
@@ -3198,6 +3228,12 @@
     "category": "extra",
     "path": "decomoji/extra/ripi-ta-.png",
     "created": "v5.18.0"
+  },
+  {
+    "name": "ripi-to",
+    "category": "extra",
+    "path": "decomoji/extra/ripi-to.png",
+    "created": "v5.30.0"
   },
   {
     "name": "ripode-",
@@ -3396,6 +3432,12 @@
     "category": "extra",
     "path": "decomoji/extra/rittu.png",
     "created": "v5.21.0"
+  },
+  {
+    "name": "riyousinnsei",
+    "category": "extra",
+    "path": "decomoji/extra/riyousinnsei.png",
+    "created": "v5.30.0"
   },
   {
     "name": "riyuuhanai",

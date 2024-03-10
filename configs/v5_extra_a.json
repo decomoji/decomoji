@@ -564,6 +564,12 @@
     "created": "v5.18.0"
   },
   {
+    "name": "aihoukai",
+    "category": "extra",
+    "path": "decomoji/extra/aihoukai.png",
+    "created": "v5.30.0"
+  },
+  {
     "name": "aii-",
     "category": "extra",
     "path": "decomoji/extra/aii-.png",
@@ -820,6 +826,12 @@
     "category": "extra",
     "path": "decomoji/extra/akannnoka.png",
     "created": "v5.2.0"
+  },
+  {
+    "name": "akannnoka_",
+    "category": "extra",
+    "path": "decomoji/extra/akannnoka_.png",
+    "created": "v5.30.0"
   },
   {
     "name": "akaruimirai",
@@ -1633,6 +1645,12 @@
     "created": "v5.5.0"
   },
   {
+    "name": "anaza-wann",
+    "category": "extra",
+    "path": "decomoji/extra/anaza-wann.png",
+    "created": "v5.30.0"
+  },
+  {
     "name": "andmore",
     "category": "extra",
     "path": "decomoji/extra/andmore.png",
@@ -1775,6 +1793,18 @@
     "category": "extra",
     "path": "decomoji/extra/annnadekomoziga.png",
     "created": "v5.20.0"
+  },
+  {
+    "name": "annnakinouda",
+    "category": "extra",
+    "path": "decomoji/extra/annnakinouda.png",
+    "created": "v5.30.0"
+  },
+  {
+    "name": "annnakinouga",
+    "category": "extra",
+    "path": "decomoji/extra/annnakinouga.png",
+    "created": "v5.30.0"
   },
   {
     "name": "annneinoti",
@@ -2557,6 +2587,12 @@
     "created": "v5.3.0"
   },
   {
+    "name": "anobunnkatu",
+    "category": "extra",
+    "path": "decomoji/extra/anobunnkatu.png",
+    "created": "v5.30.0"
+  },
+  {
     "name": "anobunnya",
     "category": "extra",
     "path": "decomoji/extra/anobunnya.png",
@@ -2596,7 +2632,14 @@
     "name": "anodassou",
     "category": "extra",
     "path": "decomoji/extra/anodassou.png",
-    "created": "v5.22.0"
+    "created": "v5.22.0",
+    "updated": "v5.30.0"
+  },
+  {
+    "name": "anodennsetu",
+    "category": "extra",
+    "path": "decomoji/extra/anodennsetu.png",
+    "created": "v5.30.0"
   },
   {
     "name": "anodennti",
@@ -2665,6 +2708,12 @@
     "created": "v5.3.0"
   },
   {
+    "name": "anoeienn",
+    "category": "extra",
+    "path": "decomoji/extra/anoeienn.png",
+    "created": "v5.30.0"
+  },
+  {
     "name": "anoeikyuuhumetu",
     "category": "extra",
     "path": "decomoji/extra/anoeikyuuhumetu.png",
@@ -2675,6 +2724,12 @@
     "category": "extra",
     "path": "decomoji/extra/anoeko.png",
     "created": "v5.6.0"
+  },
+  {
+    "name": "anoennsei",
+    "category": "extra",
+    "path": "decomoji/extra/anoennsei.png",
+    "created": "v5.30.0"
   },
   {
     "name": "anoennzai",
@@ -3097,6 +3152,12 @@
     "created": "v5.15.0"
   },
   {
+    "name": "anokagayaki",
+    "category": "extra",
+    "path": "decomoji/extra/anokagayaki.png",
+    "created": "v5.30.0"
+  },
+  {
     "name": "anokahunn",
     "category": "extra",
     "path": "decomoji/extra/anokahunn.png",
@@ -3169,10 +3230,22 @@
     "created": "v5.10.0"
   },
   {
+    "name": "anokani",
+    "category": "extra",
+    "path": "decomoji/extra/anokani.png",
+    "created": "v5.30.0"
+  },
+  {
     "name": "anokanndou",
     "category": "extra",
     "path": "decomoji/extra/anokanndou.png",
     "created": "v5.3.0"
+  },
+  {
+    "name": "anokannkei",
+    "category": "extra",
+    "path": "decomoji/extra/anokannkei.png",
+    "created": "v5.30.0"
   },
   {
     "name": "anokannnenn",
@@ -3577,6 +3650,12 @@
     "created": "v5.22.0"
   },
   {
+    "name": "anomennkyo",
+    "category": "extra",
+    "path": "decomoji/extra/anomennkyo.png",
+    "created": "v5.30.0"
+  },
+  {
     "name": "anomennte",
     "category": "extra",
     "path": "decomoji/extra/anomennte.png",
@@ -3745,6 +3824,12 @@
     "created": "v5.29.0"
   },
   {
+    "name": "anonouzei",
+    "category": "extra",
+    "path": "decomoji/extra/anonouzei.png",
+    "created": "v5.30.0"
+  },
+  {
     "name": "anoo-punn",
     "category": "extra",
     "path": "decomoji/extra/anoo-punn.png",
@@ -3895,6 +3980,12 @@
     "created": "v5.3.0"
   },
   {
+    "name": "anosaidai",
+    "category": "extra",
+    "path": "decomoji/extra/anosaidai.png",
+    "created": "v5.30.0"
+  },
+  {
     "name": "anosaikai",
     "category": "extra",
     "path": "decomoji/extra/anosaikai.png",
@@ -3905,6 +3996,18 @@
     "category": "extra",
     "path": "decomoji/extra/anosaisinn.png",
     "created": "v5.16.0"
+  },
+  {
+    "name": "anosaisyou",
+    "category": "extra",
+    "path": "decomoji/extra/anosaisyou.png",
+    "created": "v5.30.0"
+  },
+  {
+    "name": "anosaiyou",
+    "category": "extra",
+    "path": "decomoji/extra/anosaiyou.png",
+    "created": "v5.30.0"
   },
   {
     "name": "anosakkaku",
@@ -4459,6 +4562,12 @@
     "created": "v5.15.0"
   },
   {
+    "name": "anoukatu",
+    "category": "extra",
+    "path": "decomoji/extra/anoukatu.png",
+    "created": "v5.30.0"
+  },
+  {
     "name": "anounndou",
     "category": "extra",
     "path": "decomoji/extra/anounndou.png",
@@ -4643,6 +4752,12 @@
     "category": "extra",
     "path": "decomoji/extra/anozisseki.png",
     "created": "v5.13.0"
+  },
+  {
+    "name": "anozissenn",
+    "category": "extra",
+    "path": "decomoji/extra/anozissenn.png",
+    "created": "v5.30.0"
   },
   {
     "name": "anozissou",
@@ -5968,6 +6083,18 @@
     "created": "v5.0.0"
   },
   {
+    "name": "ariyorinoinoki",
+    "category": "extra",
+    "path": "decomoji/extra/ariyorinoinoki.png",
+    "created": "v5.30.0"
+  },
+  {
+    "name": "ariyorinokani",
+    "category": "extra",
+    "path": "decomoji/extra/ariyorinokani.png",
+    "created": "v5.30.0"
+  },
+  {
     "name": "ariyorinonasi",
     "category": "extra",
     "path": "decomoji/extra/ariyorinonasi.png",
@@ -6206,6 +6333,12 @@
     "category": "extra",
     "path": "decomoji/extra/arukubieredoraibu.png",
     "created": "v5.24.0"
+  },
+  {
+    "name": "arukuhodou",
+    "category": "extra",
+    "path": "decomoji/extra/arukuhodou.png",
+    "created": "v5.30.0"
   },
   {
     "name": "arukuhougann",
@@ -6604,6 +6737,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "ase",
+    "category": "extra",
+    "path": "decomoji/extra/ase.png",
+    "created": "v5.30.0"
+  },
+  {
     "name": "asease",
     "category": "extra",
     "path": "decomoji/extra/asease.png",
@@ -6620,6 +6759,18 @@
     "category": "extra",
     "path": "decomoji/extra/aseki.png",
     "created": "v5.25.0"
+  },
+  {
+    "name": "aserazu-",
+    "category": "extra",
+    "path": "decomoji/extra/aserazu-.png",
+    "created": "v5.30.0"
+  },
+  {
+    "name": "asetirukorinn",
+    "category": "extra",
+    "path": "decomoji/extra/asetirukorinn.png",
+    "created": "v5.30.0"
   },
   {
     "name": "asgorira",
@@ -8125,6 +8276,12 @@
     "created": "v5.25.0"
   },
   {
+    "name": "awatezu-",
+    "category": "extra",
+    "path": "decomoji/extra/awatezu-.png",
+    "created": "v5.30.0"
+  },
+  {
     "name": "awayokuba",
     "category": "extra",
     "path": "decomoji/extra/awayokuba.png",
@@ -8345,6 +8502,12 @@
     "category": "extra",
     "path": "decomoji/extra/ayaui.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "aye",
+    "category": "extra",
+    "path": "decomoji/extra/aye.png",
+    "created": "v5.30.0"
   },
   {
     "name": "ayoy",

@@ -534,10 +534,34 @@
     "created": "v5.0.0"
   },
   {
+    "name": "eroikamo",
+    "category": "explicit",
+    "path": "decomoji/explicit/eroikamo.png",
+    "created": "v5.30.0"
+  },
+  {
+    "name": "eroina",
+    "category": "explicit",
+    "path": "decomoji/explicit/eroina.png",
+    "created": "v5.30.0"
+  },
+  {
     "name": "erosugi",
     "category": "explicit",
     "path": "decomoji/explicit/erosugi.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "ettida",
+    "category": "explicit",
+    "path": "decomoji/explicit/ettida.png",
+    "created": "v5.30.0"
+  },
+  {
+    "name": "ettisugiru",
+    "category": "explicit",
+    "path": "decomoji/explicit/ettisugiru.png",
+    "created": "v5.30.0"
   },
   {
     "name": "ga-ruhurenndo",
@@ -1500,6 +1524,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "sedebeya",
+    "category": "explicit",
+    "path": "decomoji/explicit/sedebeya.png",
+    "created": "v5.30.0"
+  },
+  {
     "name": "seidesyoumou",
     "category": "explicit",
     "path": "decomoji/explicit/seidesyoumou.png",
@@ -1660,6 +1690,12 @@
     "category": "explicit",
     "path": "decomoji/explicit/sugutyakui.png",
     "created": "v5.18.0"
+  },
+  {
+    "name": "sukebe_",
+    "category": "explicit",
+    "path": "decomoji/explicit/sukebe_.png",
+    "created": "v5.30.0"
   },
   {
     "name": "tamamomi",
