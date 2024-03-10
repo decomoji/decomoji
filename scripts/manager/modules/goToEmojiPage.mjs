@@ -11,7 +11,7 @@ export const goToEmojiPage = async (browser, page, inputs) => {
     `https://${inputs.workspace}.slack.com/sign_in_with_password?redir=%2Fcustomize%2Femoji#/`,
     {
       waitUntil: "domcontentloaded",
-    }
+    },
   );
 
   // チームが存在しない場合、workspace を再入力させる
@@ -25,7 +25,7 @@ export const goToEmojiPage = async (browser, page, inputs) => {
   // CAPTCHA が出ていたら諦めて終了する
   if (await page.$("#slack_captcha").then((res) => !!res)) {
     console.error(
-      "[ERROR]Oops, you might judged a bot. Please wait and try again."
+      "[ERROR]Oops, you might judged a bot. Please wait and try again.",
     );
     await browser.close();
   }
@@ -47,7 +47,7 @@ export const goToEmojiPage = async (browser, page, inputs) => {
       (error) => {
         console.error(error);
         process.exit(1);
-      }
+      },
     );
   }
 
@@ -58,11 +58,8 @@ export const goToEmojiPage = async (browser, page, inputs) => {
       process.exit(1);
     });
   }
-  // グローバル変数 boot_data と、カスタム絵文字セクションが見つかるまで待つ
-  await Promise.all([
-    page.waitForXPath("//script[contains(text(), 'boot_data')]"),
-    page.waitForSelector("#list_emoji_section"),
-  ]);
+  // ページ遷移とカスタム絵文字セクションが見つかるまで待つ
+  await page.waitForSelector("#list_emoji_section");
 
   TIME && console.timeEnd("[Login time]");
 
