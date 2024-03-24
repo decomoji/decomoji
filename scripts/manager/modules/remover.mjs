@@ -84,19 +84,19 @@ export const remover = async (inputs) => {
           res.ok
             ? messages.ok
             : res.error === "emoji_not_found"
-            ? messages[res.error]
-            : res.error
-        } ${name}`
+              ? messages[res.error]
+              : res.error
+        } ${name}`,
       );
 
       // ログファイルに結果を入れる
       res.ok
         ? result.ok.push(name)
         : res.error === "emoji_not_found"
-        ? result[res.error].push(name)
-        : res.error === "ratelimited" // ratelimited エラーの場合はログに残さない
-        ? void 0
-        : result.error.push({ name, message: res.error });
+          ? result[res.error].push(name)
+          : res.error === "ratelimited" // ratelimited エラーの場合はログに残さない
+            ? void 0
+            : result.error.push({ name, message: res.error });
 
       // ratelimited エラーの場合
       if (res.error === "ratelimited") {

@@ -34,7 +34,7 @@ export const postEmojiAdd = async (page, workspace, emojiName, emojiPath) => {
             mode: "cors",
             credentials: "include",
             body: formData,
-          }
+          },
         );
         return await response.json();
       } catch (error) {
@@ -43,7 +43,7 @@ export const postEmojiAdd = async (page, workspace, emojiName, emojiPath) => {
     },
     workspace,
     uploadFormId,
-    emojiName
+    emojiName,
   );
 
   return result;

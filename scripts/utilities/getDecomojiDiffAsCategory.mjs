@@ -17,7 +17,7 @@ export const getDecomojiDiffAsCategory = (diffAsMode) => {
       const categoryName = getDecomojiCategory(decomoji.path);
       const category = categories[categoryName];
       const indexOfCategory = category.findIndex(
-        (v) => v.name === decomoji.name
+        (v) => v.name === decomoji.name,
       );
       // 同じ名前があったらマージして置き換える
       if (indexOfCategory > -1) {

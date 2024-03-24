@@ -54,7 +54,7 @@ Object.entries(gitDiffAsTag)
     // Seeds に差分をマージしてまとめる
     Seeds.categories = getMergedDiffOfCategories(
       diffAsCategory,
-      Seeds.categories
+      Seeds.categories,
     );
     Seeds.manages = getMergedDiffOfManages(diffAsFilterMode, Seeds.manages);
   });
@@ -76,7 +76,7 @@ Object.entries(Seeds.categories).forEach(async (entry) => {
     const _filtered = _list.filter(({ name }) => name.slice(0, 1) === letter);
     await writeJsonFile(
       _filtered,
-      `configs/${v(TAG_PREFIX)}_${category}_${letter}.json`
+      `configs/${v(TAG_PREFIX)}_${category}_${letter}.json`,
     );
   });
 });

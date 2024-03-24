@@ -16,7 +16,7 @@ program
   .option("-b, --browser", "open browser")
   .option(
     "-d, --debug",
-    "full debugging mode (open browser, output data log, output up time, If an error then stand by without exiting.)"
+    "full debugging mode (open browser, output data log, output up time, If an error then stand by without exiting.)",
   )
   .option("-i, --inputs [type]", "input setting json file")
   .option("-l, --log", "output data log")
@@ -57,7 +57,7 @@ const main = async (INPUTS) => {
     !_inputs.selected_first_letters.includes("all")
   ) {
     _inputs.configs = _inputs.selected_first_letters.flatMap((cafl) =>
-      _inputs.configs.map((config) => `${config}_${cafl}`)
+      _inputs.configs.map((config) => `${config}_${cafl}`),
     );
   }
 
@@ -152,6 +152,6 @@ if (options.inputs) {
   // --inputs オプション がない場合は inquirer を起動して対話的にオプションを作る
   askInputs(
     (inputs) => main({ ...inputs, configs: inputs.configs.reverse() }),
-    options.additional
+    options.additional,
   );
 }

@@ -87,23 +87,23 @@ export const pretender = async (inputs) => {
           res.ok
             ? messages.ok
             : res.error === "error_name_taken" ||
-              res.error === "error_name_taken_i18n" ||
-              res.error === "error_invalid_alias"
-            ? messages[res.error]
-            : res.error
-        } ${name} -> ${alias_for}`
+                res.error === "error_name_taken_i18n" ||
+                res.error === "error_invalid_alias"
+              ? messages[res.error]
+              : res.error
+        } ${name} -> ${alias_for}`,
       );
 
       // ログファイルに結果を入れる
       res.ok
         ? result.ok.push(name)
         : res.error === "error_name_taken" ||
-          res.error === "error_name_taken_i18n" ||
-          res.error === "error_invalid_alias"
-        ? result[res.error].push({ name, alias_for })
-        : res.error === "ratelimited" // ratelimited エラーの場合はログに残さない
-        ? void 0
-        : result.error.push({ name, alias_for, message: res.error });
+            res.error === "error_name_taken_i18n" ||
+            res.error === "error_invalid_alias"
+          ? result[res.error].push({ name, alias_for })
+          : res.error === "ratelimited" // ratelimited エラーの場合はログに残さない
+            ? void 0
+            : result.error.push({ name, alias_for, message: res.error });
 
       // ratelimited エラーの場合
       if (res.error === "ratelimited") {

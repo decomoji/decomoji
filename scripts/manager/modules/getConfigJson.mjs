@@ -5,8 +5,8 @@ export const getConfigJson = async ({ CONFIGS, TERM, KEYS, INVOKER, LOG }) => {
   LOG && console.log("getConfigJson(", { CONFIGS, TERM, KEYS, INVOKER }, ")");
   const combined = await Promise.all(
     CONFIGS.map(
-      async (name) => await getParsedJson(`../../configs/${name}.json`)
-    )
+      async (name) => await getParsedJson(`../../configs/${name}.json`),
+    ),
   );
   LOG &&
     (await outputLogJson({

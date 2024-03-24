@@ -30,7 +30,7 @@ export const uploader = async (inputs) => {
   const localDecomojiList =
     TERM === "version" && EXCLUDE_EXPLICIT
       ? rawLocalDecomojiList.filter(
-          ({ path }) => !RegExp("explicit").test(path)
+          ({ path }) => !RegExp("explicit").test(path),
         )
       : rawLocalDecomojiList;
   const localDecomojiListLength = localDecomojiList.length;
@@ -93,21 +93,21 @@ export const uploader = async (inputs) => {
           res.ok
             ? messages.ok
             : res.error === "error_name_taken" ||
-              res.error === "error_name_taken_i18n"
-            ? messages[res.error]
-            : res.error
-        } ${name}`
+                res.error === "error_name_taken_i18n"
+              ? messages[res.error]
+              : res.error
+        } ${name}`,
       );
 
       // ログファイルに結果を入れる
       res.ok
         ? result.ok.push(name)
         : res.error === "error_name_taken" ||
-          res.error === "error_name_taken_i18n"
-        ? result[res.error].push(name)
-        : res.error === "ratelimited" // ratelimited エラーの場合はログに残さない
-        ? void 0
-        : result.error.push({ name, message: res.error });
+            res.error === "error_name_taken_i18n"
+          ? result[res.error].push(name)
+          : res.error === "ratelimited" // ratelimited エラーの場合はログに残さない
+            ? void 0
+            : result.error.push({ name, message: res.error });
 
       // ratelimited エラーの場合
       if (res.error === "ratelimited") {

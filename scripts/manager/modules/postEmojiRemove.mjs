@@ -11,7 +11,7 @@ export const postEmojiRemove = async (page, workspace, emojiName) => {
           {
             method: "POST",
             body: formData,
-          }
+          },
         );
         return await response.json();
       } catch (error) {
@@ -19,7 +19,7 @@ export const postEmojiRemove = async (page, workspace, emojiName) => {
       }
     },
     workspace,
-    emojiName
+    emojiName,
   );
 
   return result;

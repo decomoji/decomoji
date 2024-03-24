@@ -24,7 +24,7 @@ export const getDecomojiGitDiffAsTag = (tagPairs) => {
           : getGitDiffArray(from, to, symbol);
       const filterdDiff = diff.filter(isDecomojiFile);
       console.log(
-        `Diff[ ${symbol} ][ ${from}...${to} ]: ${filterdDiff.length}`
+        `Diff[ ${symbol} ][ ${from}...${to} ]: ${filterdDiff.length}`,
       );
       // "<diff-filter-mode>": [<filepath>, <filepath>, ...]
       return {

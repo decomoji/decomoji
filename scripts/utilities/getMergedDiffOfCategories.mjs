@@ -7,7 +7,7 @@ export const getMergedDiffOfCategories = (diffAsCategory, categories) => {
       // カテゴリー別に配列に格納する
       const category = _categories[categoryName];
       const indexOfCategory = category.findIndex(
-        (v) => v.name === decomoji.name
+        (v) => v.name === decomoji.name,
       );
       if (indexOfCategory > -1) {
         // 同じ名前があったらマージして置き換える

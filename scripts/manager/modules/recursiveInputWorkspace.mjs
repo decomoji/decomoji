@@ -17,7 +17,7 @@ export const recursiveInputWorkspace = async (page, inputs) => {
       `https://${workspace}.slack.com/?redir=%2Fcustomize%2Femoji#/`,
       {
         waitUntil: "domcontentloaded",
-      }
+      },
     );
     // ログイン画面に遷移できたかを再びチェックし、できていたら再帰処理を抜ける
     if (await page.$("#signin_form").then((res) => !!res)) {

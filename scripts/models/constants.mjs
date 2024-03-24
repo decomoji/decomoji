@@ -51,5 +51,5 @@ export const IGNORES = {
 };
 
 export const FIRST_LETTERS = Array.from(
-  "_0123456789abcdefghijklmnopqrstuvwxyz"
+  "_0123456789abcdefghijklmnopqrstuvwxyz",
 );

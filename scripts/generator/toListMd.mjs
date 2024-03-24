@@ -14,7 +14,7 @@ const toListMd = async (category) => {
       files.forEach((file) => {
         if (file === ".DS_Store") return;
         contents[category] += `![${convertFilepathToBasename(
-          file
+          file,
         )}](../decomoji/${category}/${file})`;
       });
     })

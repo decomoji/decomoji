@@ -13,7 +13,7 @@ export const postEmojiAlias = async (page, workspace, emojiName, aliasFor) => {
           {
             method: "POST",
             body: formData,
-          }
+          },
         );
         return await response.json();
       } catch (error) {
@@ -22,7 +22,7 @@ export const postEmojiAlias = async (page, workspace, emojiName, aliasFor) => {
     },
     workspace,
     emojiName,
-    aliasFor
+    aliasFor,
   );
 
   return result;

@@ -39,10 +39,10 @@ export const getDecomojiDiffAsFilterMode = (diff, tag) => {
       if (R) {
         const [before, after] = path;
         fixed.push(
-          convertToDecomojiObject({ path: before, tag, mode: "delete" })
+          convertToDecomojiObject({ path: before, tag, mode: "delete" }),
         );
         upload.push(
-          convertToDecomojiObject({ path: after, tag, mode: "upload" })
+          convertToDecomojiObject({ path: after, tag, mode: "upload" }),
         );
         rename.push({
           name: convertFilepathToBasename(before),
