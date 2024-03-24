@@ -1,5 +1,6 @@
 // git 操作に失敗した子達
 export const ADDITIONALS = {
+  basic: [],
   extra: [
     {
       name: "joinsiyo",
@@ -14,6 +15,8 @@ export const ADDITIONALS = {
       path: "decomoji/extra/jojo.png",
       created: "v5.15.0",
     },
+  ],
+  explicit: [
     {
       name: "genntennkaikinotikubi",
       category: "explicit",
