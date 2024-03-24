@@ -1,15 +1,30 @@
+// git 操作に失敗した子達
 export const ADDITIONALS = {
   extra: [
     {
       name: "joinsiyo",
+      category: "extra",
       path: "decomoji/extra/joinsiyo.png",
       created: "v5.0.0",
       updated: "v5.14.1",
     },
     {
       name: "jojo",
+      category: "extra",
       path: "decomoji/extra/jojo.png",
       created: "v5.15.0",
+    },
+    {
+      name: "genntennkaikinotikubi",
+      category: "explicit",
+      path: "decomoji/explicit/genntennkaikinotikubi.png",
+      created: "v5.21.1",
+    },
+    {
+      name: "koroso",
+      category: "explicit",
+      path: "decomoji/explicit/koroso.png",
+      created: "v5.23.0",
     },
   ],
   rename: [
