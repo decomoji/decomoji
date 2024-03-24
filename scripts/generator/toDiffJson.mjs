@@ -64,9 +64,14 @@ Object.entries(Seeds.categories).forEach(async (entry) => {
   const [category, list] = entry;
   if (list.length < 1) return;
   const _list = (
-    category === "extra" || category === "all"
-      ? list.concat(ADDITIONALS.extra)
-      : list
+    category === "all"
+      ? [
+          ...list,
+          ...ADDITIONALS.basic,
+          ...ADDITIONALS.extra,
+          ...ADDITIONALS.explicit,
+        ]
+      : [...list, ...ADDITIONALS[category]]
   )
     .filter(({ removed }) => !removed)
     .sort((a, b) => a.name.localeCompare(b.name));
