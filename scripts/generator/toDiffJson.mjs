@@ -73,9 +73,6 @@ Object.entries(Seeds.categories).forEach(async (entry) => {
   await writeJsonFile(_list, `configs/${v(TAG_PREFIX)}_${category}.json`);
 
   FIRST_LETTERS.flatMap(async (letter) => {
-    if (category === "all") {
-      return [];
-    }
     const _filtered = _list.filter(({ name }) => name.slice(0, 1) === letter);
     await writeJsonFile(
       _filtered,
