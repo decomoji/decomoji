@@ -654,6 +654,12 @@
     "updated": "v5.19.0"
   },
   {
+    "name": "ebiden",
+    "category": "extra",
+    "path": "decomoji/extra/ebiden.png",
+    "updated": "v5.30.3"
+  },
+  {
     "name": "eejanaika",
     "category": "extra",
     "path": "decomoji/extra/eejanaika.png",
@@ -1380,6 +1386,12 @@
     "removed": "v5.4.2"
   },
   {
+    "name": "kaitenngaragara",
+    "category": "extra",
+    "path": "decomoji/extra/kaitenngaragara.png",
+    "updated": "v5.30.3"
+  },
+  {
     "name": "kaiteta",
     "category": "extra",
     "path": "decomoji/extra/kaiteta.png",
@@ -1414,6 +1426,12 @@
     "category": "extra",
     "path": "decomoji/extra/kaneniyatteru_1.png",
     "removed": "v5.23.0"
+  },
+  {
+    "name": "kanngakudana",
+    "category": "extra",
+    "path": "decomoji/extra/kanngakudana.png",
+    "updated": "v5.30.3"
   },
   {
     "name": "kannsokusijousaikyou",
@@ -1492,6 +1510,12 @@
     "category": "extra",
     "path": "decomoji/extra/kiriganai_1.png",
     "removed": "v5.23.0"
+  },
+  {
+    "name": "kodaikana",
+    "category": "extra",
+    "path": "decomoji/extra/kodaikana.png",
+    "updated": "v5.30.3"
   },
   {
     "name": "kodomonozijou",
@@ -1666,6 +1690,12 @@
     "category": "basic",
     "path": "decomoji/basic/mataennjou.png",
     "removed": "v5.4.2"
+  },
+  {
+    "name": "matagenetu",
+    "category": "extra",
+    "path": "decomoji/extra/matagenetu.png",
+    "updated": "v5.30.3"
   },
   {
     "name": "matajaaku",
@@ -2208,6 +2238,12 @@
     "removed": "v5.4.2"
   },
   {
+    "name": "seikatimati",
+    "category": "extra",
+    "path": "decomoji/extra/seikatimati.png",
+    "updated": "v5.30.3"
+  },
+  {
     "name": "seimeiutyuusositebannbutunituitenokyuukyokunogimonnnokotae",
     "category": "extra",
     "path": "decomoji/extra/seimeiutyuusositebannbutunituitenokyuukyokunogimonnnokotae.png",
@@ -2308,6 +2344,12 @@
     "category": "extra",
     "path": "decomoji/extra/sinnsennennsatu.png",
     "removed": "v5.4.2"
+  },
+  {
+    "name": "situdogaumi",
+    "category": "extra",
+    "path": "decomoji/extra/situdogaumi.png",
+    "updated": "v5.30.3"
   },
   {
     "name": "sokuresunokatamukokyuu",
@@ -2782,6 +2824,12 @@
     "category": "extra",
     "path": "decomoji/extra/zairyokujuusi.png",
     "removed": "v5.4.2"
+  },
+  {
+    "name": "zatunagimonn",
+    "category": "extra",
+    "path": "decomoji/extra/zatunagimonn.png",
+    "updated": "v5.30.3"
   },
   {
     "name": "zennbudassou",

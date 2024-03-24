@@ -588,6 +588,12 @@
     "created": "v5.21.1"
   },
   {
+    "name": "genntennkaikinotikubi",
+    "category": "explicit",
+    "path": "decomoji/explicit/genntennkaikinotikubi.png",
+    "created": "v5.21.1"
+  },
+  {
     "name": "gesuyarou",
     "category": "explicit",
     "path": "decomoji/explicit/gesuyarou.png",
@@ -862,6 +868,12 @@
     "category": "explicit",
     "path": "decomoji/explicit/korosiao.png",
     "created": "v5.17.0"
+  },
+  {
+    "name": "koroso",
+    "category": "explicit",
+    "path": "decomoji/explicit/koroso.png",
+    "created": "v5.23.0"
   },
   {
     "name": "koroso",
