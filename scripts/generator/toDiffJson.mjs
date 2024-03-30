@@ -40,6 +40,10 @@ const gitDiffAsTag = getDecomojiGitDiffAsTag(tagPairs);
 // await writeJsonFile(gitDiffAsTag, `configs/${v(TAG_PREFIX)}_diff.json`);
 
 // 実行！
+writeJsonFile(
+  tagPairs.map((v) => v.to),
+  `configs/v5_versions.json`,
+);
 Object.entries(gitDiffAsTag)
   .map((entry) => {
     const [tag, list] = entry;
