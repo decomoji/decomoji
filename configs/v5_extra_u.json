@@ -600,6 +600,12 @@
     "created": "v5.21.0"
   },
   {
+    "name": "umami",
+    "category": "extra",
+    "path": "decomoji/extra/umami.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "umaretatenokozika",
     "category": "extra",
     "path": "decomoji/extra/umaretatenokozika.png",
@@ -618,16 +624,52 @@
     "created": "v5.21.0"
   },
   {
+    "name": "umatoma",
+    "category": "extra",
+    "path": "decomoji/extra/umatoma.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "umigairu",
+    "category": "extra",
+    "path": "decomoji/extra/umigairu.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "umigatobu",
+    "category": "extra",
+    "path": "decomoji/extra/umigatobu.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "umihatobu",
+    "category": "extra",
+    "path": "decomoji/extra/umihatobu.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "umihaziyuu",
     "category": "extra",
     "path": "decomoji/extra/umihaziyuu.png",
     "created": "v5.18.0"
   },
   {
+    "name": "umimi-mu",
+    "category": "extra",
+    "path": "decomoji/extra/umimi-mu.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "uminntyu",
     "category": "extra",
     "path": "decomoji/extra/uminntyu.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "uminokurusimi",
+    "category": "extra",
+    "path": "decomoji/extra/uminokurusimi.png",
+    "created": "v5.31.0"
   },
   {
     "name": "umma",
@@ -1524,10 +1566,22 @@
     "created": "v5.4.0"
   },
   {
+    "name": "utaunndamura",
+    "category": "extra",
+    "path": "decomoji/extra/utaunndamura.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "utauzisyo",
     "category": "extra",
     "path": "decomoji/extra/utauzisyo.png",
     "created": "v5.22.0"
+  },
+  {
+    "name": "utawanainndamura",
+    "category": "extra",
+    "path": "decomoji/extra/utawanainndamura.png",
+    "created": "v5.31.0"
   },
   {
     "name": "utf-8",

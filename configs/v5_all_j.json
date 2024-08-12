@@ -236,10 +236,22 @@
     "created": "v5.21.0"
   },
   {
+    "name": "json",
+    "category": "extra",
+    "path": "decomoji/extra/json.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "jsonn",
     "category": "extra",
     "path": "decomoji/extra/jsonn.png",
     "created": "v5.20.0"
+  },
+  {
+    "name": "jsonp",
+    "category": "extra",
+    "path": "decomoji/extra/jsonp.png",
+    "created": "v5.31.0"
   },
   {
     "name": "jstukao",

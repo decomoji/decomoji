@@ -30,6 +30,12 @@
     "created": "v5.16.0"
   },
   {
+    "name": "cfo",
+    "category": "extra",
+    "path": "decomoji/extra/cfo.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "channtei",
     "category": "extra",
     "path": "decomoji/extra/channtei.png",
@@ -296,9 +302,21 @@
     "created": "v5.21.0"
   },
   {
+    "name": "csv",
+    "category": "extra",
+    "path": "decomoji/extra/csv.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "cto",
     "category": "extra",
     "path": "decomoji/extra/cto.png",
     "created": "v5.16.0"
+  },
+  {
+    "name": "cxo",
+    "category": "extra",
+    "path": "decomoji/extra/cxo.png",
+    "created": "v5.31.0"
   }
 ]

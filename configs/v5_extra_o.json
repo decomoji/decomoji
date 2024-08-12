@@ -372,6 +372,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "o-tokutyu-ru",
+    "category": "extra",
+    "path": "decomoji/extra/o-tokutyu-ru.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "o-tosukuro-rupanoramagyarari-",
     "category": "extra",
     "path": "decomoji/extra/o-tosukuro-rupanoramagyarari-.png",
@@ -1440,6 +1446,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "omaehananimowakattenele",
+    "category": "extra",
+    "path": "decomoji/extra/omaehananimowakattenele.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "omaehaoreka",
     "category": "extra",
     "path": "decomoji/extra/omaehaoreka.png",
@@ -1812,16 +1824,46 @@
     "created": "v5.20.0"
   },
   {
+    "name": "omonaseihinn",
+    "category": "extra",
+    "path": "decomoji/extra/omonaseihinn.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "omonnpakari",
     "category": "extra",
     "path": "decomoji/extra/omonnpakari.png",
     "created": "v5.0.0"
   },
   {
+    "name": "omorigairu",
+    "category": "extra",
+    "path": "decomoji/extra/omorigairu.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "omorigatobu",
+    "category": "extra",
+    "path": "decomoji/extra/omorigatobu.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "omorihatobu",
+    "category": "extra",
+    "path": "decomoji/extra/omorihatobu.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "omorihaziyuu",
     "category": "extra",
     "path": "decomoji/extra/omorihaziyuu.png",
     "created": "v5.18.0"
+  },
+  {
+    "name": "omorimi-mu",
+    "category": "extra",
+    "path": "decomoji/extra/omorimi-mu.png",
+    "created": "v5.31.0"
   },
   {
     "name": "omorosia",
@@ -1834,6 +1876,12 @@
     "category": "extra",
     "path": "decomoji/extra/omorow.png",
     "created": "v5.20.0"
+  },
+  {
+    "name": "omosann",
+    "category": "extra",
+    "path": "decomoji/extra/omosann.png",
+    "created": "v5.31.0"
   },
   {
     "name": "omosiro",
@@ -2382,6 +2430,12 @@
     "created": "v5.30.0"
   },
   {
+    "name": "oninobunnsinn",
+    "category": "extra",
+    "path": "decomoji/extra/oninobunnsinn.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "oninobunnya",
     "category": "extra",
     "path": "decomoji/extra/oninobunnya.png",
@@ -2423,6 +2477,12 @@
     "path": "decomoji/extra/oninodassou.png",
     "created": "v5.22.0",
     "updated": "v5.30.0"
+  },
+  {
+    "name": "oninodekinn",
+    "category": "extra",
+    "path": "decomoji/extra/oninodekinn.png",
+    "created": "v5.31.0"
   },
   {
     "name": "oninodennsetu",
@@ -2659,6 +2719,12 @@
     "created": "v5.6.0"
   },
   {
+    "name": "oninogosa",
+    "category": "extra",
+    "path": "decomoji/extra/oninogosa.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "oninogouinn",
     "category": "extra",
     "path": "decomoji/extra/oninogouinn.png",
@@ -2711,6 +2777,12 @@
     "category": "extra",
     "path": "decomoji/extra/oninohanngaku.png",
     "created": "v5.6.0"
+  },
+  {
+    "name": "oninohannpuku",
+    "category": "extra",
+    "path": "decomoji/extra/oninohannpuku.png",
+    "created": "v5.31.0"
   },
   {
     "name": "oninohassann",
@@ -2905,6 +2977,12 @@
     "created": "v5.9.0"
   },
   {
+    "name": "oninohusai",
+    "category": "extra",
+    "path": "decomoji/extra/oninohusai.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "oninohusetu",
     "category": "extra",
     "path": "decomoji/extra/oninohusetu.png",
@@ -2933,6 +3011,18 @@
     "category": "extra",
     "path": "decomoji/extra/oninoia.png",
     "created": "v5.19.0"
+  },
+  {
+    "name": "oninoigyou",
+    "category": "extra",
+    "path": "decomoji/extra/oninoigyou.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "oninoinnbou",
+    "category": "extra",
+    "path": "decomoji/extra/oninoinnbou.png",
+    "created": "v5.31.0"
   },
   {
     "name": "oninoissyo",
@@ -2981,6 +3071,12 @@
     "category": "extra",
     "path": "decomoji/extra/oninokaihou.png",
     "created": "v5.2.0"
+  },
+  {
+    "name": "oninokairi",
+    "category": "extra",
+    "path": "decomoji/extra/oninokairi.png",
+    "created": "v5.31.0"
   },
   {
     "name": "oninokaisi",
@@ -3205,6 +3301,12 @@
     "created": "v5.19.0"
   },
   {
+    "name": "oninokinnsetu",
+    "category": "extra",
+    "path": "decomoji/extra/oninokinnsetu.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "oninokinnsi",
     "category": "extra",
     "path": "decomoji/extra/oninokinnsi.png",
@@ -3343,10 +3445,22 @@
     "created": "v5.19.0"
   },
   {
+    "name": "oninokyouenn",
+    "category": "extra",
+    "path": "decomoji/extra/oninokyouenn.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "oninokyouiku",
     "category": "extra",
     "path": "decomoji/extra/oninokyouiku.png",
     "created": "v5.21.0"
+  },
+  {
+    "name": "oninokyouzyaku",
+    "category": "extra",
+    "path": "decomoji/extra/oninokyouzyaku.png",
+    "created": "v5.31.0"
   },
   {
     "name": "oninokyuukei",
@@ -3413,6 +3527,12 @@
     "category": "extra",
     "path": "decomoji/extra/oninomakuro.png",
     "created": "v5.16.0"
+  },
+  {
+    "name": "oninomakyou",
+    "category": "extra",
+    "path": "decomoji/extra/oninomakyou.png",
+    "created": "v5.31.0"
   },
   {
     "name": "oninomannseki",
@@ -3505,6 +3625,12 @@
     "created": "v5.20.0"
   },
   {
+    "name": "oninomuryoku",
+    "category": "extra",
+    "path": "decomoji/extra/oninomuryoku.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "oninomuzai",
     "category": "extra",
     "path": "decomoji/extra/oninomuzai.png",
@@ -3521,6 +3647,12 @@
     "category": "extra",
     "path": "decomoji/extra/oninonai.png",
     "created": "v5.23.0"
+  },
+  {
+    "name": "oninonakami",
+    "category": "extra",
+    "path": "decomoji/extra/oninonakami.png",
+    "created": "v5.31.0"
   },
   {
     "name": "oninonakamoto",
@@ -3649,6 +3781,12 @@
     "created": "v5.11.0"
   },
   {
+    "name": "oninoosaki",
+    "category": "extra",
+    "path": "decomoji/extra/oninoosaki.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "oninootoiawase",
     "category": "extra",
     "path": "decomoji/extra/oninootoiawase.png",
@@ -3737,6 +3875,12 @@
     "category": "extra",
     "path": "decomoji/extra/oninorogu.png",
     "created": "v5.11.0"
+  },
+  {
+    "name": "oninorokuga",
+    "category": "extra",
+    "path": "decomoji/extra/oninorokuga.png",
+    "created": "v5.31.0"
   },
   {
     "name": "oninort",
@@ -3841,6 +3985,12 @@
     "created": "v5.11.0"
   },
   {
+    "name": "oninoseiretu",
+    "category": "extra",
+    "path": "decomoji/extra/oninoseiretu.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "oninoseiri",
     "category": "extra",
     "path": "decomoji/extra/oninoseiri.png",
@@ -3863,6 +4013,12 @@
     "category": "extra",
     "path": "decomoji/extra/oninosenntaku.png",
     "created": "v5.26.0"
+  },
+  {
+    "name": "oninosennyou",
+    "category": "extra",
+    "path": "decomoji/extra/oninosennyou.png",
+    "created": "v5.31.0"
   },
   {
     "name": "oninosessyu",
@@ -3893,6 +4049,12 @@
     "category": "extra",
     "path": "decomoji/extra/oninosimebi.png",
     "created": "v5.29.0"
+  },
+  {
+    "name": "oninosinndann",
+    "category": "extra",
+    "path": "decomoji/extra/oninosinndann.png",
+    "created": "v5.31.0"
   },
   {
     "name": "oninosinnkokyuu",
@@ -3929,6 +4091,12 @@
     "category": "extra",
     "path": "decomoji/extra/oninosinntaku.png",
     "created": "v5.18.0"
+  },
+  {
+    "name": "oninosinnwa",
+    "category": "extra",
+    "path": "decomoji/extra/oninosinnwa.png",
+    "created": "v5.31.0"
   },
   {
     "name": "oninosippai",
@@ -3973,6 +4141,12 @@
     "created": "v5.11.0"
   },
   {
+    "name": "oninosotomi",
+    "category": "extra",
+    "path": "decomoji/extra/oninosotomi.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "oninosoudann",
     "category": "extra",
     "path": "decomoji/extra/oninosoudann.png",
@@ -4013,6 +4187,12 @@
     "category": "extra",
     "path": "decomoji/extra/oninosyosetu.png",
     "created": "v5.2.0"
+  },
+  {
+    "name": "oninosyosi",
+    "category": "extra",
+    "path": "decomoji/extra/oninosyosi.png",
+    "created": "v5.31.0"
   },
   {
     "name": "oninosyoutyou",
@@ -4175,6 +4355,12 @@
     "category": "extra",
     "path": "decomoji/extra/oninoteisi.png",
     "created": "v5.19.0"
+  },
+  {
+    "name": "oninotennsi",
+    "category": "extra",
+    "path": "decomoji/extra/oninotennsi.png",
+    "created": "v5.31.0"
   },
   {
     "name": "oninotennsyoku",
@@ -4363,6 +4549,12 @@
     "created": "v5.29.0"
   },
   {
+    "name": "oninoyasai",
+    "category": "extra",
+    "path": "decomoji/extra/oninoyasai.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "oninoyohaku",
     "category": "extra",
     "path": "decomoji/extra/oninoyohaku.png",
@@ -4415,6 +4607,12 @@
     "category": "extra",
     "path": "decomoji/extra/oninoyutyaku.png",
     "created": "v5.15.0"
+  },
+  {
+    "name": "oninoyuudou",
+    "category": "extra",
+    "path": "decomoji/extra/oninoyuudou.png",
+    "created": "v5.31.0"
   },
   {
     "name": "oninoyuusi",
@@ -4471,6 +4669,12 @@
     "created": "v5.13.0"
   },
   {
+    "name": "oninozidai",
+    "category": "extra",
+    "path": "decomoji/extra/oninozidai.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "oninozigyaku",
     "category": "extra",
     "path": "decomoji/extra/oninozigyaku.png",
@@ -4499,6 +4703,12 @@
     "category": "extra",
     "path": "decomoji/extra/oninozirai.png",
     "created": "v5.23.0"
+  },
+  {
+    "name": "oninozisa",
+    "category": "extra",
+    "path": "decomoji/extra/oninozisa.png",
+    "created": "v5.31.0"
   },
   {
     "name": "oninozisaku",
@@ -4705,6 +4915,12 @@
     "created": "v5.8.0"
   },
   {
+    "name": "onnnozi",
+    "category": "extra",
+    "path": "decomoji/extra/onnnozi.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "onnrainn",
     "category": "extra",
     "path": "decomoji/extra/onnrainn.png",
@@ -4727,6 +4943,12 @@
     "category": "extra",
     "path": "decomoji/extra/onnsennnyuuryoku.png",
     "created": "v5.8.0"
+  },
+  {
+    "name": "onnsi",
+    "category": "extra",
+    "path": "decomoji/extra/onnsi.png",
+    "created": "v5.31.0"
   },
   {
     "name": "onnsuku",
@@ -5450,6 +5672,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "oregairu",
+    "category": "extra",
+    "path": "decomoji/extra/oregairu.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "oregakamo",
     "category": "extra",
     "path": "decomoji/extra/oregakamo.png",
@@ -5496,6 +5724,12 @@
     "category": "extra",
     "path": "decomoji/extra/oregasiranai.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "oregatobu",
+    "category": "extra",
+    "path": "decomoji/extra/oregatobu.png",
+    "created": "v5.31.0"
   },
   {
     "name": "oregawaiya-da",
@@ -5612,6 +5846,12 @@
     "created": "v5.8.0"
   },
   {
+    "name": "orehatobu",
+    "category": "extra",
+    "path": "decomoji/extra/orehatobu.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "orehayaruze",
     "category": "extra",
     "path": "decomoji/extra/orehayaruze.png",
@@ -5652,6 +5892,12 @@
     "category": "extra",
     "path": "decomoji/extra/oremeoreme.png",
     "created": "v5.18.0"
+  },
+  {
+    "name": "oremi-mu",
+    "category": "extra",
+    "path": "decomoji/extra/oremi-mu.png",
+    "created": "v5.31.0"
   },
   {
     "name": "oremo",
@@ -5954,6 +6200,12 @@
     "created": "v5.30.0"
   },
   {
+    "name": "orenobunnsinn",
+    "category": "extra",
+    "path": "decomoji/extra/orenobunnsinn.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "orenobunnya",
     "category": "extra",
     "path": "decomoji/extra/orenobunnya.png",
@@ -6019,6 +6271,12 @@
     "category": "extra",
     "path": "decomoji/extra/orenodayo.png",
     "created": "v5.1.0"
+  },
+  {
+    "name": "orenodekinn",
+    "category": "extra",
+    "path": "decomoji/extra/orenodekinn.png",
+    "created": "v5.31.0"
   },
   {
     "name": "orenodennsetu",
@@ -6255,6 +6513,12 @@
     "created": "v5.6.0"
   },
   {
+    "name": "orenogosa",
+    "category": "extra",
+    "path": "decomoji/extra/orenogosa.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "orenogouinn",
     "category": "extra",
     "path": "decomoji/extra/orenogouinn.png",
@@ -6307,6 +6571,12 @@
     "category": "extra",
     "path": "decomoji/extra/orenohanngaku.png",
     "created": "v5.6.0"
+  },
+  {
+    "name": "orenohannpuku",
+    "category": "extra",
+    "path": "decomoji/extra/orenohannpuku.png",
+    "created": "v5.31.0"
   },
   {
     "name": "orenohassann",
@@ -6495,6 +6765,12 @@
     "created": "v5.9.0"
   },
   {
+    "name": "orenohusai",
+    "category": "extra",
+    "path": "decomoji/extra/orenohusai.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "orenohusetu",
     "category": "extra",
     "path": "decomoji/extra/orenohusetu.png",
@@ -6523,6 +6799,18 @@
     "category": "extra",
     "path": "decomoji/extra/orenoia.png",
     "created": "v5.19.0"
+  },
+  {
+    "name": "orenoigyou",
+    "category": "extra",
+    "path": "decomoji/extra/orenoigyou.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "orenoinnbou",
+    "category": "extra",
+    "path": "decomoji/extra/orenoinnbou.png",
+    "created": "v5.31.0"
   },
   {
     "name": "orenoissyo",
@@ -6571,6 +6859,12 @@
     "category": "extra",
     "path": "decomoji/extra/orenokaihou.png",
     "created": "v5.2.0"
+  },
+  {
+    "name": "orenokairi",
+    "category": "extra",
+    "path": "decomoji/extra/orenokairi.png",
+    "created": "v5.31.0"
   },
   {
     "name": "orenokaisi",
@@ -6801,6 +7095,12 @@
     "created": "v5.19.0"
   },
   {
+    "name": "orenokinnsetu",
+    "category": "extra",
+    "path": "decomoji/extra/orenokinnsetu.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "orenokinnsi",
     "category": "extra",
     "path": "decomoji/extra/orenokinnsi.png",
@@ -6939,10 +7239,22 @@
     "created": "v5.19.0"
   },
   {
+    "name": "orenokyouenn",
+    "category": "extra",
+    "path": "decomoji/extra/orenokyouenn.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "orenokyouiku",
     "category": "extra",
     "path": "decomoji/extra/orenokyouiku.png",
     "created": "v5.21.0"
+  },
+  {
+    "name": "orenokyouzyaku",
+    "category": "extra",
+    "path": "decomoji/extra/orenokyouzyaku.png",
+    "created": "v5.31.0"
   },
   {
     "name": "orenokyuukei",
@@ -7009,6 +7321,12 @@
     "category": "extra",
     "path": "decomoji/extra/orenomakuro.png",
     "created": "v5.16.0"
+  },
+  {
+    "name": "orenomakyou",
+    "category": "extra",
+    "path": "decomoji/extra/orenomakyou.png",
+    "created": "v5.31.0"
   },
   {
     "name": "orenomannseki",
@@ -7101,6 +7419,12 @@
     "created": "v5.20.0"
   },
   {
+    "name": "orenomuryoku",
+    "category": "extra",
+    "path": "decomoji/extra/orenomuryoku.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "orenomuzai",
     "category": "extra",
     "path": "decomoji/extra/orenomuzai.png",
@@ -7117,6 +7441,12 @@
     "category": "extra",
     "path": "decomoji/extra/orenonai.png",
     "created": "v5.23.0"
+  },
+  {
+    "name": "orenonakami",
+    "category": "extra",
+    "path": "decomoji/extra/orenonakami.png",
+    "created": "v5.31.0"
   },
   {
     "name": "orenonakamoto",
@@ -7263,6 +7593,12 @@
     "created": "v5.18.0"
   },
   {
+    "name": "orenoosaki",
+    "category": "extra",
+    "path": "decomoji/extra/orenoosaki.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "orenootoiawase",
     "category": "extra",
     "path": "decomoji/extra/orenootoiawase.png",
@@ -7357,6 +7693,12 @@
     "category": "extra",
     "path": "decomoji/extra/orenorogu.png",
     "created": "v5.11.0"
+  },
+  {
+    "name": "orenorokuga",
+    "category": "extra",
+    "path": "decomoji/extra/orenorokuga.png",
+    "created": "v5.31.0"
   },
   {
     "name": "orenort",
@@ -7473,6 +7815,12 @@
     "created": "v5.11.0"
   },
   {
+    "name": "orenoseiretu",
+    "category": "extra",
+    "path": "decomoji/extra/orenoseiretu.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "orenosenndenn",
     "category": "extra",
     "path": "decomoji/extra/orenosenndenn.png",
@@ -7489,6 +7837,12 @@
     "category": "extra",
     "path": "decomoji/extra/orenosenntaku.png",
     "created": "v5.26.0"
+  },
+  {
+    "name": "orenosennyou",
+    "category": "extra",
+    "path": "decomoji/extra/orenosennyou.png",
+    "created": "v5.31.0"
   },
   {
     "name": "orenosessyu",
@@ -7519,6 +7873,12 @@
     "category": "extra",
     "path": "decomoji/extra/orenosimebi.png",
     "created": "v5.29.0"
+  },
+  {
+    "name": "orenosinndann",
+    "category": "extra",
+    "path": "decomoji/extra/orenosinndann.png",
+    "created": "v5.31.0"
   },
   {
     "name": "orenosinnkokyuu",
@@ -7555,6 +7915,12 @@
     "category": "extra",
     "path": "decomoji/extra/orenosinntaku.png",
     "created": "v5.18.0"
+  },
+  {
+    "name": "orenosinnwa",
+    "category": "extra",
+    "path": "decomoji/extra/orenosinnwa.png",
+    "created": "v5.31.0"
   },
   {
     "name": "orenosippai",
@@ -7597,6 +7963,12 @@
     "category": "extra",
     "path": "decomoji/extra/orenosoramimi.png",
     "created": "v5.11.0"
+  },
+  {
+    "name": "orenosotomi",
+    "category": "extra",
+    "path": "decomoji/extra/orenosotomi.png",
+    "created": "v5.31.0"
   },
   {
     "name": "orenosotoni",
@@ -7645,6 +8017,12 @@
     "category": "extra",
     "path": "decomoji/extra/orenosyosetu.png",
     "created": "v5.2.0"
+  },
+  {
+    "name": "orenosyosi",
+    "category": "extra",
+    "path": "decomoji/extra/orenosyosi.png",
+    "created": "v5.31.0"
   },
   {
     "name": "orenosyoutyou",
@@ -7813,6 +8191,12 @@
     "category": "extra",
     "path": "decomoji/extra/orenoteisi.png",
     "created": "v5.19.0"
+  },
+  {
+    "name": "orenotennsi",
+    "category": "extra",
+    "path": "decomoji/extra/orenotennsi.png",
+    "created": "v5.31.0"
   },
   {
     "name": "orenotennsyoku",
@@ -8013,6 +8397,12 @@
     "created": "v5.29.0"
   },
   {
+    "name": "orenoyasai",
+    "category": "extra",
+    "path": "decomoji/extra/orenoyasai.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "orenoyohaku",
     "category": "extra",
     "path": "decomoji/extra/orenoyohaku.png",
@@ -8065,6 +8455,12 @@
     "category": "extra",
     "path": "decomoji/extra/orenoyutyaku.png",
     "created": "v5.15.0"
+  },
+  {
+    "name": "orenoyuudou",
+    "category": "extra",
+    "path": "decomoji/extra/orenoyuudou.png",
+    "created": "v5.31.0"
   },
   {
     "name": "orenoyuusi",
@@ -8121,6 +8517,12 @@
     "created": "v5.13.0"
   },
   {
+    "name": "orenozidai",
+    "category": "extra",
+    "path": "decomoji/extra/orenozidai.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "orenozigyaku",
     "category": "extra",
     "path": "decomoji/extra/orenozigyaku.png",
@@ -8149,6 +8551,12 @@
     "category": "extra",
     "path": "decomoji/extra/orenozirai.png",
     "created": "v5.23.0"
+  },
+  {
+    "name": "orenozisa",
+    "category": "extra",
+    "path": "decomoji/extra/orenozisa.png",
+    "created": "v5.31.0"
   },
   {
     "name": "orenozisaku",
@@ -8380,6 +8788,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "oretueee",
+    "category": "extra",
+    "path": "decomoji/extra/oretueee.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "orewodaha",
     "category": "extra",
     "path": "decomoji/extra/orewodaha.png",
@@ -8506,6 +8920,12 @@
     "created": "v5.8.0"
   },
   {
+    "name": "orinnpikku",
+    "category": "extra",
+    "path": "decomoji/extra/orinnpikku.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "oriori",
     "category": "extra",
     "path": "decomoji/extra/oriori.png",
@@ -8534,6 +8954,12 @@
     "category": "extra",
     "path": "decomoji/extra/orosi-.png",
     "created": "v5.20.0"
+  },
+  {
+    "name": "orutaneito",
+    "category": "extra",
+    "path": "decomoji/extra/orutaneito.png",
+    "created": "v5.31.0"
   },
   {
     "name": "orz",
@@ -8584,6 +9010,114 @@
     "created": "v5.30.0"
   },
   {
+    "name": "osakiari",
+    "category": "extra",
+    "path": "decomoji/extra/osakiari.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "osakiaru",
+    "category": "extra",
+    "path": "decomoji/extra/osakiaru.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "osakidake",
+    "category": "extra",
+    "path": "decomoji/extra/osakidake.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "osakidana",
+    "category": "extra",
+    "path": "decomoji/extra/osakidana.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "osakidane",
+    "category": "extra",
+    "path": "decomoji/extra/osakidane.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "osakidayo",
+    "category": "extra",
+    "path": "decomoji/extra/osakidayo.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "osakideha",
+    "category": "extra",
+    "path": "decomoji/extra/osakideha.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "osakidesu",
+    "category": "extra",
+    "path": "decomoji/extra/osakidesu.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "osakikaiwai",
+    "category": "extra",
+    "path": "decomoji/extra/osakikaiwai.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "osakikamo",
+    "category": "extra",
+    "path": "decomoji/extra/osakikamo.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "osakikana",
+    "category": "extra",
+    "path": "decomoji/extra/osakikana.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "osakikayo",
+    "category": "extra",
+    "path": "decomoji/extra/osakikayo.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "osakikeisatu",
+    "category": "extra",
+    "path": "decomoji/extra/osakikeisatu.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "osakimati",
+    "category": "extra",
+    "path": "decomoji/extra/osakimati.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "osakimazoku",
+    "category": "extra",
+    "path": "decomoji/extra/osakimazoku.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "osakimore",
+    "category": "extra",
+    "path": "decomoji/extra/osakimore.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "osakinai",
+    "category": "extra",
+    "path": "decomoji/extra/osakinai.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "osakinasi",
+    "category": "extra",
+    "path": "decomoji/extra/osakinasi.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "osakini",
     "category": "extra",
     "path": "decomoji/extra/osakini.png",
@@ -8596,10 +9130,64 @@
     "created": "v5.4.0"
   },
   {
+    "name": "osakinooni",
+    "category": "extra",
+    "path": "decomoji/extra/osakinooni.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "osakisiro",
+    "category": "extra",
+    "path": "decomoji/extra/osakisiro.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "osakisita",
+    "category": "extra",
+    "path": "decomoji/extra/osakisita.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "osakisite",
+    "category": "extra",
+    "path": "decomoji/extra/osakisite.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "osakisiyo",
+    "category": "extra",
+    "path": "decomoji/extra/osakisiyo.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "osakissu",
     "category": "extra",
     "path": "decomoji/extra/osakissu.png",
     "created": "v5.30.0"
+  },
+  {
+    "name": "osakisuru",
+    "category": "extra",
+    "path": "decomoji/extra/osakisuru.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "osakitarou",
+    "category": "extra",
+    "path": "decomoji/extra/osakitarou.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "osakiwasure",
+    "category": "extra",
+    "path": "decomoji/extra/osakiwasure.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "osakizumi",
+    "category": "extra",
+    "path": "decomoji/extra/osakizumi.png",
+    "created": "v5.31.0"
   },
   {
     "name": "osanaidake",
@@ -8704,6 +9292,12 @@
     "created": "v5.19.0"
   },
   {
+    "name": "osihenn",
+    "category": "extra",
+    "path": "decomoji/extra/osihenn.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "osii",
     "category": "extra",
     "path": "decomoji/extra/osii.png",
@@ -8746,10 +9340,28 @@
     "created": "v5.8.0"
   },
   {
+    "name": "osinoennzyou",
+    "category": "extra",
+    "path": "decomoji/extra/osinoennzyou.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "osinokokuhou",
     "category": "extra",
     "path": "decomoji/extra/osinokokuhou.png",
     "created": "v5.22.0"
+  },
+  {
+    "name": "osinosotugyou",
+    "category": "extra",
+    "path": "decomoji/extra/osinosotugyou.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "osinotaidann",
+    "category": "extra",
+    "path": "decomoji/extra/osinotaidann.png",
+    "created": "v5.31.0"
   },
   {
     "name": "osiraraikudasai",
@@ -8828,6 +9440,12 @@
     "category": "extra",
     "path": "decomoji/extra/osorosiiyousai.png",
     "created": "v5.18.0"
+  },
+  {
+    "name": "osorosikuhayaisyutou",
+    "category": "extra",
+    "path": "decomoji/extra/osorosikuhayaisyutou.png",
+    "created": "v5.31.0"
   },
   {
     "name": "osorurunakare",
@@ -8962,6 +9580,12 @@
     "created": "v5.4.0"
   },
   {
+    "name": "otaimu",
+    "category": "extra",
+    "path": "decomoji/extra/otaimu.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "otamesiare_",
     "category": "extra",
     "path": "decomoji/extra/otamesiare_.png",
@@ -9080,6 +9704,12 @@
     "category": "extra",
     "path": "decomoji/extra/otodeotode.png",
     "created": "v5.18.0"
+  },
+  {
+    "name": "otogaderu",
+    "category": "extra",
+    "path": "decomoji/extra/otogaderu.png",
+    "created": "v5.31.0"
   },
   {
     "name": "otogaotoga",
@@ -9374,6 +10004,12 @@
     "category": "extra",
     "path": "decomoji/extra/otoniotoni.png",
     "created": "v5.18.0"
+  },
+  {
+    "name": "otonoderusagyou",
+    "category": "extra",
+    "path": "decomoji/extra/otonoderusagyou.png",
+    "created": "v5.31.0"
   },
   {
     "name": "otonokokyuu",

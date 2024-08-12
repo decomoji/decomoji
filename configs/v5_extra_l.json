@@ -60,6 +60,24 @@
     "created": "v5.29.0"
   },
   {
+    "name": "llm",
+    "category": "extra",
+    "path": "decomoji/extra/llm.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "lms",
+    "category": "extra",
+    "path": "decomoji/extra/lms.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "lo-fi",
+    "category": "extra",
+    "path": "decomoji/extra/lo-fi.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "longdesc",
     "category": "extra",
     "path": "decomoji/extra/longdesc.png",
@@ -76,5 +94,11 @@
     "category": "extra",
     "path": "decomoji/extra/lsep.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "ltu",
+    "category": "extra",
+    "path": "decomoji/extra/ltu.png",
+    "created": "v5.31.0"
   }
 ]

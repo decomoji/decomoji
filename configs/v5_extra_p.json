@@ -48,6 +48,12 @@
     "created": "v5.30.0"
   },
   {
+    "name": "paas",
+    "category": "extra",
+    "path": "decomoji/extra/paas.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "pabubyu",
     "category": "extra",
     "path": "decomoji/extra/pabubyu.png",
@@ -318,6 +324,12 @@
     "created": "v5.17.0"
   },
   {
+    "name": "pararinnpikku",
+    "category": "extra",
+    "path": "decomoji/extra/pararinnpikku.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "parasoru",
     "category": "extra",
     "path": "decomoji/extra/parasoru.png",
@@ -328,6 +340,12 @@
     "category": "extra",
     "path": "decomoji/extra/pare-tonohousoku.png",
     "created": "v5.5.0"
+  },
+  {
+    "name": "pare-tosaiteki",
+    "category": "extra",
+    "path": "decomoji/extra/pare-tosaiteki.png",
+    "created": "v5.31.0"
   },
   {
     "name": "parienai",
@@ -541,6 +559,12 @@
     "created": "v5.8.0"
   },
   {
+    "name": "pawa-taipu",
+    "category": "extra",
+    "path": "decomoji/extra/pawa-taipu.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "pawa-toizu",
     "category": "extra",
     "path": "decomoji/extra/pawa-toizu.png",
@@ -696,6 +720,12 @@
     "category": "extra",
     "path": "decomoji/extra/pennpenn.png",
     "created": "v5.15.0"
+  },
+  {
+    "name": "pennro-zukatei",
+    "category": "extra",
+    "path": "decomoji/extra/pennro-zukatei.png",
+    "created": "v5.31.0"
   },
   {
     "name": "penntetu",

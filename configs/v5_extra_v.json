@@ -72,6 +72,12 @@
     "created": "v5.18.0"
   },
   {
+    "name": "versionbro",
+    "category": "extra",
+    "path": "decomoji/extra/versionbro.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "veruta-suorizinaru",
     "category": "extra",
     "path": "decomoji/extra/veruta-suorizinaru.png",
@@ -94,6 +100,24 @@
     "category": "extra",
     "path": "decomoji/extra/vivarudhi.png",
     "created": "v5.20.0"
+  },
+  {
+    "name": "vp",
+    "category": "extra",
+    "path": "decomoji/extra/vp.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "vpod",
+    "category": "extra",
+    "path": "decomoji/extra/vpod.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "vpoe",
+    "category": "extra",
+    "path": "decomoji/extra/vpoe.png",
+    "created": "v5.31.0"
   },
   {
     "name": "vr",

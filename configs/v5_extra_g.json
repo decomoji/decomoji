@@ -30,6 +30,12 @@
     "created": "v5.19.0"
   },
   {
+    "name": "gaas",
+    "category": "extra",
+    "path": "decomoji/extra/gaas.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "gaba",
     "category": "extra",
     "path": "decomoji/extra/gaba.png",
@@ -41,6 +47,12 @@
     "path": "decomoji/extra/gabagaba.png",
     "created": "v5.2.0",
     "updated": "v5.15.0"
+  },
+  {
+    "name": "gabakikku",
+    "category": "extra",
+    "path": "decomoji/extra/gabakikku.png",
+    "created": "v5.31.0"
   },
   {
     "name": "gabanannsu",
@@ -385,10 +397,22 @@
     "created": "v5.0.0"
   },
   {
+    "name": "gaizennsei",
+    "category": "extra",
+    "path": "decomoji/extra/gaizennsei.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "gake",
     "category": "extra",
     "path": "decomoji/extra/gake.png",
     "created": "v5.22.0"
+  },
+  {
+    "name": "gakkouhouzinn",
+    "category": "extra",
+    "path": "decomoji/extra/gakkouhouzinn.png",
+    "created": "v5.31.0"
   },
   {
     "name": "gakkouniyama",
@@ -757,6 +781,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "gannbaro",
+    "category": "extra",
+    "path": "decomoji/extra/gannbaro.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "gannbarou",
     "category": "extra",
     "path": "decomoji/extra/gannbarou.png",
@@ -1109,6 +1139,24 @@
     "category": "extra",
     "path": "decomoji/extra/gatimikeikenn.png",
     "created": "v5.18.0"
+  },
+  {
+    "name": "gatimisu",
+    "category": "extra",
+    "path": "decomoji/extra/gatimisu.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "gatinokusa",
+    "category": "extra",
+    "path": "decomoji/extra/gatinokusa.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "gatinomisudesita",
+    "category": "extra",
+    "path": "decomoji/extra/gatinomisudesita.png",
+    "created": "v5.31.0"
   },
   {
     "name": "gatisatori",
@@ -1667,6 +1715,12 @@
     "category": "extra",
     "path": "decomoji/extra/ge-towei.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "geddann",
+    "category": "extra",
+    "path": "decomoji/extra/geddann.png",
+    "created": "v5.31.0"
   },
   {
     "name": "gedou",
@@ -3403,16 +3457,64 @@
     "created": "v5.9.0"
   },
   {
+    "name": "genntidesuka_",
+    "category": "extra",
+    "path": "decomoji/extra/genntidesuka_.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "genntidesune_",
+    "category": "extra",
+    "path": "decomoji/extra/genntidesune_.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "genntihouzinn",
+    "category": "extra",
+    "path": "decomoji/extra/genntihouzinn.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "genntikaisann",
     "category": "extra",
     "path": "decomoji/extra/genntikaisann.png",
     "created": "v5.0.0"
   },
   {
+    "name": "genntikakuninn",
+    "category": "extra",
+    "path": "decomoji/extra/genntikakuninn.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "genntinonaikonnkyo",
+    "category": "extra",
+    "path": "decomoji/extra/genntinonaikonnkyo.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "genntisyuugou",
     "category": "extra",
     "path": "decomoji/extra/genntisyuugou.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "genntitoreta",
+    "category": "extra",
+    "path": "decomoji/extra/genntitoreta.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "genntitorimasita",
+    "category": "extra",
+    "path": "decomoji/extra/genntitorimasita.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "genntitoro",
+    "category": "extra",
+    "path": "decomoji/extra/genntitoro.png",
+    "created": "v5.31.0"
   },
   {
     "name": "genntityoutatu",
@@ -3587,6 +3689,12 @@
     "category": "extra",
     "path": "decomoji/extra/getuyouni.png",
     "created": "v5.1.0"
+  },
+  {
+    "name": "getuyounoasamadekinnyoubi",
+    "category": "extra",
+    "path": "decomoji/extra/getuyounoasamadekinnyoubi.png",
+    "created": "v5.31.0"
   },
   {
     "name": "getuyousyukuzitu",
@@ -3864,6 +3972,12 @@
     "created": "v5.3.0"
   },
   {
+    "name": "gironnnosaikaihatu",
+    "category": "extra",
+    "path": "decomoji/extra/gironnnosaikaihatu.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "gironnnoyotigaaru",
     "category": "extra",
     "path": "decomoji/extra/gironnnoyotigaaru.png",
@@ -4084,6 +4198,12 @@
     "category": "extra",
     "path": "decomoji/extra/gissiri.png",
     "created": "v5.17.0"
+  },
+  {
+    "name": "gitigiti",
+    "category": "extra",
+    "path": "decomoji/extra/gitigiti.png",
+    "created": "v5.31.0"
   },
   {
     "name": "gitoko",
@@ -5845,6 +5965,18 @@
     "created": "v5.0.0"
   },
   {
+    "name": "gorinn",
+    "category": "extra",
+    "path": "decomoji/extra/gorinn.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "gorinnpikku",
+    "category": "extra",
+    "path": "decomoji/extra/gorinnpikku.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "gorinntyuusi",
     "category": "extra",
     "path": "decomoji/extra/gorinntyuusi.png",
@@ -6055,10 +6187,178 @@
     "created": "v5.6.0"
   },
   {
+    "name": "gosa",
+    "category": "extra",
+    "path": "decomoji/extra/gosa.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "gosaari",
+    "category": "extra",
+    "path": "decomoji/extra/gosaari.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "gosaaru",
+    "category": "extra",
+    "path": "decomoji/extra/gosaaru.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "gosadake",
+    "category": "extra",
+    "path": "decomoji/extra/gosadake.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "gosadana",
+    "category": "extra",
+    "path": "decomoji/extra/gosadana.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "gosadane",
+    "category": "extra",
+    "path": "decomoji/extra/gosadane.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "gosadayo",
+    "category": "extra",
+    "path": "decomoji/extra/gosadayo.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "gosadeha",
+    "category": "extra",
+    "path": "decomoji/extra/gosadeha.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "gosadesu",
+    "category": "extra",
+    "path": "decomoji/extra/gosadesu.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "gosadou",
     "category": "extra",
     "path": "decomoji/extra/gosadou.png",
     "created": "v5.21.0"
+  },
+  {
+    "name": "gosakaiwai",
+    "category": "extra",
+    "path": "decomoji/extra/gosakaiwai.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "gosakamo",
+    "category": "extra",
+    "path": "decomoji/extra/gosakamo.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "gosakana",
+    "category": "extra",
+    "path": "decomoji/extra/gosakana.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "gosakayo",
+    "category": "extra",
+    "path": "decomoji/extra/gosakayo.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "gosakeisatu",
+    "category": "extra",
+    "path": "decomoji/extra/gosakeisatu.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "gosamati",
+    "category": "extra",
+    "path": "decomoji/extra/gosamati.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "gosamazoku",
+    "category": "extra",
+    "path": "decomoji/extra/gosamazoku.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "gosamore",
+    "category": "extra",
+    "path": "decomoji/extra/gosamore.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "gosanai",
+    "category": "extra",
+    "path": "decomoji/extra/gosanai.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "gosanasi",
+    "category": "extra",
+    "path": "decomoji/extra/gosanasi.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "gosanooni",
+    "category": "extra",
+    "path": "decomoji/extra/gosanooni.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "gosasiro",
+    "category": "extra",
+    "path": "decomoji/extra/gosasiro.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "gosasita",
+    "category": "extra",
+    "path": "decomoji/extra/gosasita.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "gosasite",
+    "category": "extra",
+    "path": "decomoji/extra/gosasite.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "gosasiyo",
+    "category": "extra",
+    "path": "decomoji/extra/gosasiyo.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "gosasuru",
+    "category": "extra",
+    "path": "decomoji/extra/gosasuru.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "gosatarou",
+    "category": "extra",
+    "path": "decomoji/extra/gosatarou.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "gosawasure",
+    "category": "extra",
+    "path": "decomoji/extra/gosawasure.png",
+    "created": "v5.31.0"
+  },
+  {
+    "name": "gosazumi",
+    "category": "extra",
+    "path": "decomoji/extra/gosazumi.png",
+    "created": "v5.31.0"
   },
   {
     "name": "goseisakudasai",
@@ -6529,10 +6829,22 @@
     "created": "v5.22.0"
   },
   {
+    "name": "goukinn",
+    "category": "extra",
+    "path": "decomoji/extra/goukinn.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "goumadenndeakumagattai",
     "category": "extra",
     "path": "decomoji/extra/goumadenndeakumagattai.png",
     "created": "v5.19.0"
+  },
+  {
+    "name": "goumeigaisya",
+    "category": "extra",
+    "path": "decomoji/extra/goumeigaisya.png",
+    "created": "v5.31.0"
   },
   {
     "name": "goumokutekisei",
@@ -6719,6 +7031,12 @@
     "category": "extra",
     "path": "decomoji/extra/gousetutitai.png",
     "created": "v5.14.0"
+  },
+  {
+    "name": "gousigaisya",
+    "category": "extra",
+    "path": "decomoji/extra/gousigaisya.png",
+    "created": "v5.31.0"
   },
   {
     "name": "gouyoku",
@@ -7163,6 +7481,12 @@
     "category": "extra",
     "path": "decomoji/extra/guninaru.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "gunn",
+    "category": "extra",
+    "path": "decomoji/extra/gunn.png",
+    "created": "v5.31.0"
   },
   {
     "name": "gunngunn",
@@ -7685,6 +8009,12 @@
     "category": "extra",
     "path": "decomoji/extra/gyoumuyou.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "gyouseisyosihouzinn",
+    "category": "extra",
+    "path": "decomoji/extra/gyouseisyosihouzinn.png",
+    "created": "v5.31.0"
   },
   {
     "name": "gyousyayobo",

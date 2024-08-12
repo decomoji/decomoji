@@ -24,6 +24,12 @@
     "created": "v5.4.0"
   },
   {
+    "name": "qr",
+    "category": "extra",
+    "path": "decomoji/extra/qr.png",
+    "created": "v5.31.0"
+  },
+  {
     "name": "qt",
     "category": "extra",
     "path": "decomoji/extra/qt.png",
