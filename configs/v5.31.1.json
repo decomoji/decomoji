@@ -1,0 +1,43 @@
+{
+  "fixed": [
+    {
+      "name": "ipaas",
+      "category": "extra",
+      "path": "decomoji/extra/ipaas.png",
+      "updated": "v5.31.1"
+    },
+    {
+      "name": "kyouennsiro",
+      "category": "extra",
+      "path": "decomoji/extra/kyouennsiro.png",
+      "updated": "v5.31.1"
+    },
+    {
+      "name": "rokugawasure",
+      "category": "extra",
+      "path": "decomoji/extra/rokugawasure.png",
+      "updated": "v5.31.1"
+    }
+  ],
+  "upload": [
+    {
+      "name": "ipaas",
+      "category": "extra",
+      "path": "decomoji/extra/ipaas.png",
+      "updated": "v5.31.1"
+    },
+    {
+      "name": "kyouennsiro",
+      "category": "extra",
+      "path": "decomoji/extra/kyouennsiro.png",
+      "updated": "v5.31.1"
+    },
+    {
+      "name": "rokugawasure",
+      "category": "extra",
+      "path": "decomoji/extra/rokugawasure.png",
+      "updated": "v5.31.1"
+    }
+  ],
+  "rename": []
+}

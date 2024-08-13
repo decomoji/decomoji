@@ -984,6 +984,12 @@
     "removed": "v5.23.0"
   },
   {
+    "name": "ipaas",
+    "category": "extra",
+    "path": "decomoji/extra/ipaas.png",
+    "updated": "v5.31.1"
+  },
+  {
     "name": "irunndesujanaiga",
     "category": "extra",
     "path": "decomoji/extra/irunndesujanaiga.png",
@@ -1608,6 +1614,12 @@
     "removed": "v5.4.3"
   },
   {
+    "name": "kyouennsiro",
+    "category": "extra",
+    "path": "decomoji/extra/kyouennsiro.png",
+    "updated": "v5.31.1"
+  },
+  {
     "name": "kyouhabati",
     "category": "extra",
     "path": "decomoji/extra/kyouhabati.png",
@@ -2014,6 +2026,12 @@
     "category": "extra",
     "path": "decomoji/extra/rimo-tokinntai_1.png",
     "removed": "v5.23.0"
+  },
+  {
+    "name": "rokugawasure",
+    "category": "extra",
+    "path": "decomoji/extra/rokugawasure.png",
+    "updated": "v5.31.1"
   },
   {
     "name": "rubinsii",
