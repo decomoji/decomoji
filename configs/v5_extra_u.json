@@ -1,5 +1,11 @@
 [
   {
+    "name": "u",
+    "category": "extra",
+    "path": "decomoji/extra/u.png",
+    "created": "v5.32.0"
+  },
+  {
     "name": "u-",
     "category": "extra",
     "path": "decomoji/extra/u-.png",
@@ -160,6 +166,12 @@
     "category": "extra",
     "path": "decomoji/extra/uhharaga.png",
     "created": "v5.8.0"
+  },
+  {
+    "name": "uhho_",
+    "category": "extra",
+    "path": "decomoji/extra/uhho_.png",
+    "created": "v5.32.0"
   },
   {
     "name": "uhhosiga",
@@ -660,6 +672,12 @@
     "created": "v5.31.0"
   },
   {
+    "name": "uminikannsya",
+    "category": "extra",
+    "path": "decomoji/extra/uminikannsya.png",
+    "created": "v5.32.0"
+  },
+  {
     "name": "uminntyu",
     "category": "extra",
     "path": "decomoji/extra/uminntyu.png",
@@ -934,6 +952,12 @@
     "category": "extra",
     "path": "decomoji/extra/unneiripu.png",
     "created": "v5.15.0"
+  },
+  {
+    "name": "unngenn",
+    "category": "extra",
+    "path": "decomoji/extra/unngenn.png",
+    "created": "v5.32.0"
   },
   {
     "name": "unnkikakou",

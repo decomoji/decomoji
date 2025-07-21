@@ -1,5 +1,17 @@
 [
   {
+    "name": "x1",
+    "category": "extra",
+    "path": "decomoji/extra/x1.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "x2",
+    "category": "extra",
+    "path": "decomoji/extra/x2.png",
+    "created": "v5.32.0"
+  },
+  {
     "name": "xml",
     "category": "extra",
     "path": "decomoji/extra/xml.png",

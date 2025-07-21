@@ -1,5 +1,11 @@
 [
   {
+    "name": "e",
+    "category": "extra",
+    "path": "decomoji/extra/e.png",
+    "created": "v5.32.0"
+  },
+  {
     "name": "e-gekai",
     "category": "extra",
     "path": "decomoji/extra/e-gekai.png",
@@ -1346,6 +1352,60 @@
     "created": "v5.18.0"
   },
   {
+    "name": "emo",
+    "category": "extra",
+    "path": "decomoji/extra/emo.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "emoari",
+    "category": "extra",
+    "path": "decomoji/extra/emoari.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "emoaru",
+    "category": "extra",
+    "path": "decomoji/extra/emoaru.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "emodake",
+    "category": "extra",
+    "path": "decomoji/extra/emodake.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "emodana",
+    "category": "extra",
+    "path": "decomoji/extra/emodana.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "emodane",
+    "category": "extra",
+    "path": "decomoji/extra/emodane.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "emodayo",
+    "category": "extra",
+    "path": "decomoji/extra/emodayo.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "emodeha",
+    "category": "extra",
+    "path": "decomoji/extra/emodeha.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "emodesu",
+    "category": "extra",
+    "path": "decomoji/extra/emodesu.png",
+    "created": "v5.32.0"
+  },
+  {
     "name": "emohuru",
     "category": "extra",
     "path": "decomoji/extra/emohuru.png",
@@ -1358,10 +1418,76 @@
     "created": "v5.17.0"
   },
   {
+    "name": "emokaiwai",
+    "category": "extra",
+    "path": "decomoji/extra/emokaiwai.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "emokamo",
+    "category": "extra",
+    "path": "decomoji/extra/emokamo.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "emokana",
+    "category": "extra",
+    "path": "decomoji/extra/emokana.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "emokayo",
+    "category": "extra",
+    "path": "decomoji/extra/emokayo.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "emokeisatu",
+    "category": "extra",
+    "path": "decomoji/extra/emokeisatu.png",
+    "created": "v5.32.0"
+  },
+  {
     "name": "emokunattemoiizyanai",
     "category": "extra",
     "path": "decomoji/extra/emokunattemoiizyanai.png",
     "created": "v5.8.0"
+  },
+  {
+    "name": "emomati",
+    "category": "extra",
+    "path": "decomoji/extra/emomati.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "emomazoku",
+    "category": "extra",
+    "path": "decomoji/extra/emomazoku.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "emomore",
+    "category": "extra",
+    "path": "decomoji/extra/emomore.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "emonai",
+    "category": "extra",
+    "path": "decomoji/extra/emonai.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "emonasi",
+    "category": "extra",
+    "path": "decomoji/extra/emonasi.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "emonooni",
+    "category": "extra",
+    "path": "decomoji/extra/emonooni.png",
+    "created": "v5.32.0"
   },
   {
     "name": "emoresu",
@@ -1370,10 +1496,46 @@
     "created": "v5.0.0"
   },
   {
+    "name": "emosiro",
+    "category": "extra",
+    "path": "decomoji/extra/emosiro.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "emosita",
+    "category": "extra",
+    "path": "decomoji/extra/emosita.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "emosite",
+    "category": "extra",
+    "path": "decomoji/extra/emosite.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "emosiyo",
+    "category": "extra",
+    "path": "decomoji/extra/emosiyo.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "emosuru",
+    "category": "extra",
+    "path": "decomoji/extra/emosuru.png",
+    "created": "v5.32.0"
+  },
+  {
     "name": "emotarou",
     "category": "extra",
     "path": "decomoji/extra/emotarou.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "emowasure",
+    "category": "extra",
+    "path": "decomoji/extra/emowasure.png",
+    "created": "v5.32.0"
   },
   {
     "name": "emoyose",
@@ -1386,6 +1548,12 @@
     "category": "extra",
     "path": "decomoji/extra/emoyougo.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "emozumi",
+    "category": "extra",
+    "path": "decomoji/extra/emozumi.png",
+    "created": "v5.32.0"
   },
   {
     "name": "enadori",
@@ -2396,6 +2564,12 @@
     "created": "v5.22.0"
   },
   {
+    "name": "erumoniaerumonn",
+    "category": "extra",
+    "path": "decomoji/extra/erumoniaerumonn.png",
+    "created": "v5.32.0"
+  },
+  {
     "name": "eruni-nyo",
     "category": "extra",
     "path": "decomoji/extra/eruni-nyo.png",
@@ -2642,6 +2816,12 @@
     "created": "v5.3.0"
   },
   {
+    "name": "etowa-ru",
+    "category": "extra",
+    "path": "decomoji/extra/etowa-ru.png",
+    "created": "v5.32.0"
+  },
+  {
     "name": "eturann",
     "category": "extra",
     "path": "decomoji/extra/eturann.png",
@@ -2850,5 +3030,11 @@
     "category": "extra",
     "path": "decomoji/extra/ezzike-su.png",
     "created": "v5.5.0"
+  },
+  {
+    "name": "ezziwa-sukaipa-beruto",
+    "category": "extra",
+    "path": "decomoji/extra/ezziwa-sukaipa-beruto.png",
+    "created": "v5.32.0"
   }
 ]

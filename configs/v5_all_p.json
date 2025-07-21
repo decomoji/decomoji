@@ -6,6 +6,12 @@
     "created": "v5.28.0"
   },
   {
+    "name": "pa-pasu",
+    "category": "extra",
+    "path": "decomoji/extra/pa-pasu.png",
+    "created": "v5.32.0"
+  },
+  {
     "name": "pa-peki",
     "category": "basic",
     "path": "decomoji/basic/pa-peki.png",
@@ -750,6 +756,12 @@
     "category": "extra",
     "path": "decomoji/extra/pennro-zukatei.png",
     "created": "v5.31.0"
+  },
+  {
+    "name": "pennro-zupointo",
+    "category": "extra",
+    "path": "decomoji/extra/pennro-zupointo.png",
+    "created": "v5.32.0"
   },
   {
     "name": "penntetu",
@@ -1787,6 +1799,12 @@
     "category": "extra",
     "path": "decomoji/extra/pyuaninaku.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "pyuaninaro",
+    "category": "extra",
+    "path": "decomoji/extra/pyuaninaro.png",
+    "created": "v5.32.0"
   },
   {
     "name": "pyuarare",

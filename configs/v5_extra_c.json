@@ -42,6 +42,12 @@
     "created": "v5.20.0"
   },
   {
+    "name": "chatpgt",
+    "category": "extra",
+    "path": "decomoji/extra/chatpgt.png",
+    "created": "v5.32.0"
+  },
+  {
     "name": "chura",
     "category": "extra",
     "path": "decomoji/extra/chura.png",
@@ -222,6 +228,18 @@
     "created": "v5.28.0"
   },
   {
+    "name": "claude",
+    "category": "extra",
+    "path": "decomoji/extra/claude.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "cline",
+    "category": "extra",
+    "path": "decomoji/extra/cline.png",
+    "created": "v5.32.0"
+  },
+  {
     "name": "cmo",
     "category": "extra",
     "path": "decomoji/extra/cmo.png",
@@ -306,6 +324,12 @@
     "category": "extra",
     "path": "decomoji/extra/cto.png",
     "created": "v5.16.0"
+  },
+  {
+    "name": "cursor",
+    "category": "extra",
+    "path": "decomoji/extra/cursor.png",
+    "created": "v5.32.0"
   },
   {
     "name": "cxo",

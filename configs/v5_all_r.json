@@ -300,6 +300,12 @@
     "created": "v5.8.0"
   },
   {
+    "name": "raigetunikitai",
+    "category": "extra",
+    "path": "decomoji/extra/raigetunikitai.png",
+    "created": "v5.32.0"
+  },
+  {
     "name": "raihennhahima",
     "category": "extra",
     "path": "decomoji/extra/raihennhahima.png",
@@ -456,6 +462,12 @@
     "created": "v5.19.0"
   },
   {
+    "name": "rainennnikitai",
+    "category": "extra",
+    "path": "decomoji/extra/rainennnikitai.png",
+    "created": "v5.32.0"
+  },
+  {
     "name": "rainennnooni",
     "category": "extra",
     "path": "decomoji/extra/rainennnooni.png",
@@ -580,6 +592,12 @@
     "category": "extra",
     "path": "decomoji/extra/raisyuuhahima.png",
     "created": "v5.8.0"
+  },
+  {
+    "name": "raisyuunikitai",
+    "category": "extra",
+    "path": "decomoji/extra/raisyuunikitai.png",
+    "created": "v5.32.0"
   },
   {
     "name": "raisyuuyaro",
@@ -1355,6 +1373,12 @@
     "category": "extra",
     "path": "decomoji/extra/rebburu.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "reberudezainn",
+    "category": "extra",
+    "path": "decomoji/extra/reberudezainn.png",
+    "created": "v5.32.0"
   },
   {
     "name": "reberunotakaisigoto",
@@ -2311,10 +2335,178 @@
     "created": "v5.31.0"
   },
   {
+    "name": "rennkyuu",
+    "category": "extra",
+    "path": "decomoji/extra/rennkyuu.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "rennkyuuari",
+    "category": "extra",
+    "path": "decomoji/extra/rennkyuuari.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "rennkyuuaru",
+    "category": "extra",
+    "path": "decomoji/extra/rennkyuuaru.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "rennkyuudake",
+    "category": "extra",
+    "path": "decomoji/extra/rennkyuudake.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "rennkyuudana",
+    "category": "extra",
+    "path": "decomoji/extra/rennkyuudana.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "rennkyuudane",
+    "category": "extra",
+    "path": "decomoji/extra/rennkyuudane.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "rennkyuudayo",
+    "category": "extra",
+    "path": "decomoji/extra/rennkyuudayo.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "rennkyuudeha",
+    "category": "extra",
+    "path": "decomoji/extra/rennkyuudeha.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "rennkyuudesu",
+    "category": "extra",
+    "path": "decomoji/extra/rennkyuudesu.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "rennkyuukaiwai",
+    "category": "extra",
+    "path": "decomoji/extra/rennkyuukaiwai.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "rennkyuukamo",
+    "category": "extra",
+    "path": "decomoji/extra/rennkyuukamo.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "rennkyuukana",
+    "category": "extra",
+    "path": "decomoji/extra/rennkyuukana.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "rennkyuukayo",
+    "category": "extra",
+    "path": "decomoji/extra/rennkyuukayo.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "rennkyuukeisatu",
+    "category": "extra",
+    "path": "decomoji/extra/rennkyuukeisatu.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "rennkyuumati",
+    "category": "extra",
+    "path": "decomoji/extra/rennkyuumati.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "rennkyuumazoku",
+    "category": "extra",
+    "path": "decomoji/extra/rennkyuumazoku.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "rennkyuumore",
+    "category": "extra",
+    "path": "decomoji/extra/rennkyuumore.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "rennkyuunai",
+    "category": "extra",
+    "path": "decomoji/extra/rennkyuunai.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "rennkyuunasi",
+    "category": "extra",
+    "path": "decomoji/extra/rennkyuunasi.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "rennkyuunooni",
+    "category": "extra",
+    "path": "decomoji/extra/rennkyuunooni.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "rennkyuusiro",
+    "category": "extra",
+    "path": "decomoji/extra/rennkyuusiro.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "rennkyuusita",
+    "category": "extra",
+    "path": "decomoji/extra/rennkyuusita.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "rennkyuusite",
+    "category": "extra",
+    "path": "decomoji/extra/rennkyuusite.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "rennkyuusiyo",
+    "category": "extra",
+    "path": "decomoji/extra/rennkyuusiyo.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "rennkyuusuru",
+    "category": "extra",
+    "path": "decomoji/extra/rennkyuusuru.png",
+    "created": "v5.32.0"
+  },
+  {
     "name": "rennkyuusyuuryou",
     "category": "extra",
     "path": "decomoji/extra/rennkyuusyuuryou.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "rennkyuutarou",
+    "category": "extra",
+    "path": "decomoji/extra/rennkyuutarou.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "rennkyuuwasure",
+    "category": "extra",
+    "path": "decomoji/extra/rennkyuuwasure.png",
+    "created": "v5.32.0"
+  },
+  {
+    "name": "rennkyuuzumi",
+    "category": "extra",
+    "path": "decomoji/extra/rennkyuuzumi.png",
+    "created": "v5.32.0"
   },
   {
     "name": "rennnyuu",
@@ -2617,6 +2809,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "rest",
+    "category": "extra",
+    "path": "decomoji/extra/rest.png",
+    "created": "v5.32.0"
+  },
+  {
     "name": "resuhuyou",
     "category": "extra",
     "path": "decomoji/extra/resuhuyou.png",
@@ -2653,6 +2851,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "rettoukann",
+    "category": "extra",
+    "path": "decomoji/extra/rettoukann.png",
+    "created": "v5.32.0"
+  },
+  {
     "name": "retturago-",
     "category": "extra",
     "path": "decomoji/extra/retturago-.png",
@@ -2670,6 +2874,12 @@
     "path": "decomoji/extra/rezinn.png",
     "created": "v5.0.0",
     "updated": "v5.4.2"
+  },
+  {
+    "name": "reziriennsu",
+    "category": "extra",
+    "path": "decomoji/extra/reziriennsu.png",
+    "created": "v5.32.0"
   },
   {
     "name": "rezityoisu",
@@ -2864,6 +3074,12 @@
     "created": "v5.22.0"
   },
   {
+    "name": "rikaihunou",
+    "category": "extra",
+    "path": "decomoji/extra/rikaihunou.png",
+    "created": "v5.32.0"
+  },
+  {
     "name": "rikaikannryou",
     "category": "extra",
     "path": "decomoji/extra/rikaikannryou.png",
@@ -2886,6 +3102,12 @@
     "category": "extra",
     "path": "decomoji/extra/rikaisyanikannsya.png",
     "created": "v5.4.0"
+  },
+  {
+    "name": "rikei",
+    "category": "extra",
+    "path": "decomoji/extra/rikei.png",
+    "created": "v5.32.0"
   },
   {
     "name": "rikigaku",
@@ -3108,6 +3330,12 @@
     "category": "extra",
     "path": "decomoji/extra/rikumi-mu.png",
     "created": "v5.31.0"
+  },
+  {
+    "name": "rikunikannsya",
+    "category": "extra",
+    "path": "decomoji/extra/rikunikannsya.png",
+    "created": "v5.32.0"
   },
   {
     "name": "rimo-tokinntai",
@@ -4268,6 +4496,12 @@
     "created": "v5.31.0"
   },
   {
+    "name": "rokugamiyo",
+    "category": "extra",
+    "path": "decomoji/extra/rokugamiyo.png",
+    "created": "v5.32.0"
+  },
+  {
     "name": "rokugamore",
     "category": "extra",
     "path": "decomoji/extra/rokugamore.png",
@@ -4320,6 +4554,12 @@
     "category": "extra",
     "path": "decomoji/extra/rokugasuru.png",
     "created": "v5.31.0"
+  },
+  {
+    "name": "rokugatanomu",
+    "category": "extra",
+    "path": "decomoji/extra/rokugatanomu.png",
+    "created": "v5.32.0"
   },
   {
     "name": "rokugatarou",
