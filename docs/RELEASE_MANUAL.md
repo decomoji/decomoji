@@ -20,21 +20,37 @@ node scripts/generator/optimize.mjs extra
 node scripts/generator/optimize.mjs explicit
 
 # 3. 既存のデコモジを変更した場合は一つずつコミットする
-`fix(decomoji): xxxx の画像を修正した`
+`fix: xxxx の画像を修正した`
 
-# 4. json を更新する
+# 4. 追加したデコモジはカテゴリごとに一括コミットする
+`feat: extra のデコモジを追加した`
+
+# 5. 差分JSONを更新する
 node scripts/generator/toDiffJson.mjs v5.x.0
 コマンドに更新する予定のバージョン名が必要。
 
-# 5. `--additinal` オプションで登録スクリプトを実行し、登録がうまくいくか確認する
+# 6. `--additinal` オプションで登録スクリプトを実行し、登録がうまくいくか確認する
 node scripts/manager/index.mjs -l -t --additional v5.x.0
 
 `error_name_taken_i18n` エラーなどになったら適宜ファイル名を変更する。
 
-# 6. LIST-***.md を更新する
+# 6-a. エラーがあればリネームで解消し、コミットを巻き戻し、コミットをまとめる
+## デコモジを追加したコミットまで戻る
+git reset --soft HEAD~1
+
+## 適宜リネームする
+git mv decomoji/extra/a.png decomoji/extra/a_.png
+
+## デコモジ追加コミットに混ぜる
+git commit --amend
+
+## 差分JSONを更新しなおす
+node scripts/generator/toDiffJson.mjs v5.x.0
+
+# 7. LIST-***.md を更新する
 node scripts/generator/toListMd.mjs
 
-# 7. Prettier の意志のままに整形する
+# 8. Prettier の意志のままに整形する
 npx prettier --write .
 ```
 
