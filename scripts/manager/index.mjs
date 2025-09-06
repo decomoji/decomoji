@@ -1,3 +1,6 @@
+/**
+ * 自動スクリプトのインデックス
+ */
 import { Command } from "commander";
 import fs from "fs/promises";
 import { isStringOfNotEmpty } from "../utilities/isStringOfNotEmpty.mjs";
@@ -25,7 +28,7 @@ program
 program.parse(process.argv);
 const options = program.opts();
 
-// 自動処理を実行する
+// 自動スクリプトを実行する
 const main = async (INPUTS) => {
   // コマンドオプションと inquirer から必要なものだけ取り出す
   const _inputs = {
@@ -36,8 +39,8 @@ const main = async (INPUTS) => {
     updateMode: INPUTS.mode === "update",
     term: INPUTS.term,
     configs: INPUTS.configs,
-    first_letter_mode: INPUTS.first_letter_mode,
-    selected_first_letters: INPUTS.selected_first_letters,
+    // first_letter_mode: INPUTS.first_letter_mode,
+    // selected_first_letters: INPUTS.selected_first_letters,
     forceRemove: INPUTS.forceRemove || false,
     excludeExplicit:
       typeof INPUTS.excludeExplicit === "undefined"
@@ -51,15 +54,16 @@ const main = async (INPUTS) => {
 
   const TIME = _inputs.time;
 
+  // TODO: v6ではアルファベットごととの登録はない想定なので後で消す
   // 頭文字ごとに登録する場合、 configs を上書きする
-  if (
-    _inputs.first_letter_mode &&
-    !_inputs.selected_first_letters.includes("all")
-  ) {
-    _inputs.configs = _inputs.selected_first_letters.flatMap((cafl) =>
-      _inputs.configs.map((config) => `${config}_${cafl}`),
-    );
-  }
+  // if (
+  //   _inputs.first_letter_mode &&
+  //   !_inputs.selected_first_letters.includes("all")
+  // ) {
+  //   _inputs.configs = _inputs.selected_first_letters.flatMap((cafl) =>
+  //     _inputs.configs.map((config) => `${config}_${cafl}`),
+  //   );
+  // }
 
   console.info(`
 workspace        : https://${_inputs.workspace}.slack.com/
@@ -74,61 +78,72 @@ Connecting...
 `);
 
   TIME && console.time("[Total time]");
+
+  const updater = async (_inputs) => {
+    // version タームの場合は指定されたバージョンのみを対象にし、
+    const removeConfigs =
+      _inputs.term === "version" ? _inputs.configs : ["v5_fixed"];
+    // alias は version タームの場合は指定されたバージョン、 first_letter タームの場合は v5_rename のみを対象にする
+    const aliasConfigs =
+      _inputs.term === "version" ? _inputs.configs : ["v5_rename"];
+    console.log(`Remove "${removeConfigs}" starting...`);
+    const _inputs1 = await remover({
+      ..._inputs,
+      ...{
+        mode: "remove",
+        configs: removeConfigs,
+      },
+    });
+    console.log(`Upload "${_inputs.configs}" starting...`);
+    const _inputs2 = await uploader({
+      ..._inputs1,
+      ...{ mode: "upload" },
+    });
+    console.log(`Register "${aliasConfigs}" starting...`);
+    await pretender({
+      ..._inputs2,
+      ...{
+        mode: "alias",
+        configs: aliasConfigs,
+      },
+    });
+    console.log("All update step has completed!");
+  };
+
+  const migrator = async (_inputs) => {
+    console.log("Remove 'v4_all' starting...");
+    await remover({
+      ..._inputs,
+      ...{ mode: "remove", configs: ["v4_all"] },
+    });
+    console.log("Upload 'v5_basic, v5_extra' starting...");
+    await uploader({
+      ..._inputs,
+      ...{ mode: "upload", configs: ["v5_basic", "v5_extra"] },
+    });
+    console.log("Register 'v4_rename, v5_rename' starting...");
+    await pretender({
+      ..._inputs,
+      ...{ mode: "alias", configs: ["v4_rename", "v5_rename"] },
+    });
+    console.log("All migration step has completed!");
+  };
+
   switch (_inputs.mode) {
+    case "update":
+      await updater(_inputs);
+      break;
     case "upload":
       await uploader(_inputs);
-      break;
-    case "alias":
-      await pretender(_inputs);
       break;
     case "remove":
       await remover(_inputs);
       break;
-    case "migration":
-      console.log("Remove 'v4_all' starting...");
-      await remover({
-        ..._inputs,
-        ...{ mode: "remove", configs: ["v4_all"] },
-      });
-      console.log("Upload 'v5_basic, v5_extra' starting...");
-      await uploader({
-        ..._inputs,
-        ...{ mode: "upload", configs: ["v5_basic", "v5_extra"] },
-      });
-      console.log("Register 'v4_rename, v5_rename' starting...");
-      await pretender({
-        ..._inputs,
-        ...{ mode: "alias", configs: ["v4_rename", "v5_rename"] },
-      });
-      console.log("All migration step has completed!");
+    case "alias":
+      await pretender(_inputs);
       break;
-    case "update":
-      const removeConfigs =
-        _inputs.term === "version" ? _inputs.configs : ["v5_fixed"];
-      const aliasConfigs =
-        _inputs.term === "version" ? _inputs.configs : ["v5_rename"];
-      console.log(`Remove "${removeConfigs}" starting...`);
-      const _inputs1 = await remover({
-        ..._inputs,
-        ...{
-          mode: "remove",
-          configs: removeConfigs,
-        },
-      });
-      console.log(`Upload "${_inputs.configs}" starting...`);
-      const _inputs2 = await uploader({
-        ..._inputs1,
-        ...{ mode: "upload" },
-      });
-      console.log(`Register "${aliasConfigs}" starting...`);
-      await pretender({
-        ..._inputs2,
-        ...{
-          mode: "alias",
-          configs: aliasConfigs,
-        },
-      });
-      console.log("All update step has completed!");
+    case "migration":
+      await migrator(_inputs);
       break;
     default:
       console.error("[ERROR]Unknown script mode. please confirm 'mode' value.");

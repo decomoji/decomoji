@@ -1,3 +1,6 @@
+/**
+ *　inquirer で実行に必要な設定ファイルを作る
+ */
 import inquirer from "inquirer";
 import { format } from "date-fns";
 import { getGitTagArray } from "../../utilities/getGitTagArray.mjs";
@@ -6,44 +9,6 @@ import { isEmail } from "../../utilities/isEmail.mjs";
 import { isInputs } from "../../utilities/isInputs.mjs";
 import { isSelects } from "../../utilities/isSelects.mjs";
 import { FIRST_LETTERS } from "../../models/constants.mjs";
-
-const MODE_ITEMS = [
-  {
-    name: "更新",
-    value: "update",
-  },
-  {
-    name: "登録",
-    value: "upload",
-  },
-  {
-    name: "削除",
-    value: "remove",
-  },
-  {
-    name: "エイリアス登録",
-    value: "alias",
-  },
-  {
-    name: "移行（v4 を v5 に置換）",
-    value: "migration",
-  },
-];
-
-const CATEGORY_ITEMS = [
-  {
-    name: "基本セット",
-    value: "v5_basic",
-  },
-  {
-    name: "拡張セット",
-    value: "v5_extra",
-  },
-  {
-    name: "露骨セット",
-    value: "v5_explicit",
-  },
-];
 
 const MONTH_LIST = [
   "Jan",
@@ -107,8 +72,29 @@ const questions = (additional) => [
   {
     type: "list",
     name: "mode",
-    message: "モードを選択してください:",
-    choices: MODE_ITEMS,
+    message: "実行モードを選択してください:",
+    choices: [
+      {
+        name: "v6間で差分更新",
+        value: "update",
+      },
+      {
+        name: "v6を追加",
+        value: "upload",
+      },
+      {
+        name: "v6を削除",
+        value: "remove",
+      },
+      {
+        name: "v6をエイリアス登録",
+        value: "alias",
+      },
+      {
+        name: "v5からv6へ移行",
+        value: "migration",
+      },
+    ],
   },
   {
     when: ({ mode }) =>
@@ -134,61 +120,77 @@ const questions = (additional) => [
     message: "カテゴリーを選択してください:",
     name: "configs",
     choices: ({ mode }) => {
+      const items = [
+        {
+          name: "基本セット",
+          value: "basic",
+        },
+        {
+          name: "拡張セット",
+          value: "extra",
+        },
+        {
+          name: "露骨セット",
+          value: "explicit",
+        },
+      ];
       return mode === "remove"
-        ? [
-            ...CATEGORY_ITEMS,
+        ? // 削除モードの場合、ファイル名にミスがあったものも選択肢に追加する
+          [
+            ...items,
             {
-              name: "v5 以降でファイル名にミスがあったもの",
-              value: "v5_fixed",
+              name: "ファイル名にミスがあったもの",
+              value: "fixed",
             },
           ]
-        : CATEGORY_ITEMS;
+        : items;
     },
     validate: isSelects,
   },
-  {
-    when: ({ term }) => term === "category",
-    type: "list",
-    message: "頭文字を選んで登録しますか？:",
-    name: "first_letter_mode",
-    choices: [
-      {
-        name: "選択しない",
-        value: false,
-      },
-      {
-        name: "選択する",
-        value: true,
-      },
-    ],
-    validate: isSelects,
-  },
-  {
-    when: ({ first_letter_mode }) => first_letter_mode,
-    type: "checkbox",
-    message: "頭文字を選択してください:",
-    name: "selected_first_letters",
-    choices: () => {
-      return [
-        new inquirer.Separator(),
-        {
-          name: "全て",
-          value: "all",
-        },
-        ...FIRST_LETTERS.map((v) => ({
-          name: `${v}...`,
-          value: v,
-        })),
-      ];
-    },
-    validate: isSelects,
-  },
+  // {
+  //   when: ({ term }) => term === "category",
+  //   type: "list",
+  //   message: "頭文字を選んで登録しますか？:",
+  //   name: "first_letter_mode",
+  //   choices: [
+  //     {
+  //       name: "選択しない",
+  //       value: false,
+  //     },
+  //     {
+  //       name: "選択する",
+  //       value: true,
+  //     },
+  //   ],
+  //   validate: isSelects,
+  // },
+  // {
+  //   when: ({ first_letter_mode }) => first_letter_mode,
+  //   type: "checkbox",
+  //   message: "頭文字を選択してください:",
+  //   name: "selected_first_letters",
+  //   choices: () => {
+  //     return [
+  //       new inquirer.Separator(),
+  //       {
+  //         name: "全て",
+  //         value: "all",
+  //       },
+  //       ...FIRST_LETTERS.map((v) => ({
+  //         name: `${v}...`,
+  //         value: v,
+  //       })),
+  //     ];
+  //   },
+  //   validate: isSelects,
+  // },
   {
     when: ({ term }) => term === "version",
     type: "checkbox",
     message: "バージョンを選択してください:",
     name: "configs",
     choices: () => {
+      // TODO: `additional` という変数名をやめる。toBeVer とか
       if (additional) {
         FULL_VERSIONS_ITEMS.unshift({
           name: `${additional}（ユーザーが追加したバージョン）`,
