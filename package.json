@@ -20,7 +20,7 @@
   },
   "main": "",
   "scripts": {
-    "manager": "node scripts/manager/index.mjs -lt"
+    "launch": "node scripts/launcher/index.mjs"
   },
   "devDependencies": {
     "commander": "^15.0.0",
