@@ -10,7 +10,6 @@ export const pretender = async (inputs) => {
     browser: BROWSER,
     configs: CONFIGS,
     debug: DEBUG,
-    log: LOG,
     term: TERM,
   } = inputs;
 
@@ -22,12 +21,10 @@ export const pretender = async (inputs) => {
     TERM,
     KEYS: ["rename"],
     INVOKER: "pretender",
-    LOG,
   });
   const localDecomojiListLength = localDecomojiList.length;
 
   TERM === "version" &&
-    LOG &&
     (await outputLogJson({
       data: localDecomojiList,
       invoker: "pretender",

@@ -10,7 +10,6 @@ export const uploader = async (inputs) => {
     browser: BROWSER,
     configs: CONFIGS,
     debug: DEBUG,
-    log: LOG,
     excludeExplicit: EXCLUDE_EXPLICIT,
     term: TERM,
   } = inputs;
@@ -23,7 +22,6 @@ export const uploader = async (inputs) => {
     TERM,
     KEYS: ["upload"],
     INVOKER: "uploder",
-    LOG,
   });
   // バージョンごとに追加するとき、excludeExplicit=true なら explicit デコモジを取り除く
   const localDecomojiList =
@@ -35,7 +33,6 @@ export const uploader = async (inputs) => {
   const localDecomojiListLength = localDecomojiList.length;
 
   TERM === "version" &&
-    LOG &&
     (await outputLogJson({
       data: localDecomojiList,
       invoker: "uploder",

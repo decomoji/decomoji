@@ -18,8 +18,7 @@ program
     "-d, --debug",
     "full debugging mode (open browser, output data log, output up time, If an error then stand by without exiting.)",
   )
-  .option("-i, --inputs [type]", "input setting json file")
-  .option("-l, --log", "output data log")
+  .option("-i, --inputs [type]", "input setting json file");
 
 program.parse(process.argv);
 const options = program.opts();
@@ -41,7 +40,6 @@ const main = async (INPUTS) => {
         ? true
         : INPUTS.excludeExplicit,
     browser: options.browser || options.debug,
-    log: options.log || options.debug,
     debug: options.debug,
   };
 
@@ -69,29 +67,24 @@ Connecting...
       await remover(_inputs);
       break;
     case "migration":
-      console.log("Remove 'v4_all' starting...");
       await remover({
         ..._inputs,
         ...{ mode: "remove", configs: ["v4_all"] },
       });
-      console.log("Upload 'v5_basic, v5_extra' starting...");
       await uploader({
         ..._inputs,
         ...{ mode: "upload", configs: ["v5_basic", "v5_extra"] },
       });
-      console.log("Register 'v4_rename, v5_rename' starting...");
       await pretender({
         ..._inputs,
         ...{ mode: "alias", configs: ["v4_rename", "v5_rename"] },
       });
-      console.log("All migration step has completed!");
       break;
     case "update":
       const removeConfigs =
         _inputs.term === "version" ? _inputs.configs : ["v5_fixed"];
       const aliasConfigs =
         _inputs.term === "version" ? _inputs.configs : ["v5_rename"];
-      console.log(`Remove "${removeConfigs}" starting...`);
       const _inputs1 = await remover({
         ..._inputs,
         ...{
@@ -99,12 +92,10 @@ Connecting...
           configs: removeConfigs,
         },
       });
-      console.log(`Upload "${_inputs.configs}" starting...`);
       const _inputs2 = await uploader({
         ..._inputs1,
         ...{ mode: "upload" },
       });
-      console.log(`Register "${aliasConfigs}" starting...`);
       await pretender({
         ..._inputs2,
         ...{
@@ -121,9 +112,7 @@ Connecting...
   console.timeEnd("[Total time]");
 };
 
-if (options.log) {
-  await fs.mkdir("logs", { recursive: true });
-}
+await fs.mkdir("logs", { recursive: true });
 
 if (options.inputs) {
   // --inputs inputs.hoge.json などのファイルパスが指定されていたらそれを import し、
