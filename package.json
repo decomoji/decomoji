@@ -24,16 +24,16 @@
   },
   "homepage": "https://github.com/decomoji/decomoji#readme",
   "devDependencies": {
-    "commander": "^12.0.0",
-    "date-fns": "^3.3.1",
+    "commander": "^14.0.2",
+    "date-fns": "^4.1.0",
     "email-validator": "^2.0.4",
-    "husky": "^8.0.3",
-    "imagemin": "^8.0.1",
+    "husky": "^9.1.7",
+    "imagemin": "^9.0.1",
     "imagemin-optipng": "^8.0.0",
-    "imagemin-pngquant": "^9.0.2",
-    "inquirer": "^9.3.8",
-    "prettier": "^3.2.5",
-    "pretty-quick": "^4.0.0",
-    "puppeteer": "^22.11.2"
+    "imagemin-pngquant": "^10.0.0",
+    "inquirer": "^13.1.0",
+    "prettier": "^3.7.4",
+    "pretty-quick": "^4.2.2",
+    "puppeteer": "^24.34.0"
   }
 }
