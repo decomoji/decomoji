@@ -17,8 +17,8 @@ const MODE_ITEMS = [
     value: "install",
   },
   {
-    name: "削除",
-    value: "remove",
+    name: "アンインストール",
+    value: "uninstall",
   },
   {
     name: "エイリアス登録",
@@ -111,7 +111,7 @@ const questions = (adhoc) => [
     choices: MODE_ITEMS,
   },
   {
-    when: ({ mode }) => mode === "update" || mode === "install" || mode === "remove",
+    when: ({ mode }) => mode === "update" || mode === "install" || mode === "uninstall",
     type: "rawlist",
     message: "対象タイプを選択してください:",
     name: "term",
@@ -133,7 +133,7 @@ const questions = (adhoc) => [
     message: "カテゴリーを選択してください:",
     name: "configs",
     choices: ({ mode }) => {
-      return mode === "remove"
+      return mode === "uninstall"
         ? [
             ...CATEGORY_ITEMS,
             {
@@ -175,12 +175,12 @@ const questions = (adhoc) => [
     validate: isSelects,
   },
   {
-    when: ({ mode }) => mode === "update" || mode === "remove" || mode === "migration",
+    when: ({ mode }) => mode === "update" || mode === "uninstall" || mode === "migration",
     type: "rawlist",
     message: ({ mode }) => {
       const common = "削除の強さを選択してください:";
       const upgrade = "更新及び移行モードでは修正された古いデコモジを削除します。";
-      return mode === "remove" ? `${common}` : `${upgrade}${common}`;
+      return mode === "uninstall" ? `${common}` : `${upgrade}${common}`;
     },
     name: "forceRemove",
     choices: [
