@@ -12,7 +12,6 @@ export const uploader = async (inputs) => {
     log: LOG,
     excludeExplicit: EXCLUDE_EXPLICIT,
     term: TERM,
-    time: TIME,
   } = inputs;
 
   let i = 0; // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
@@ -73,7 +72,7 @@ export const uploader = async (inputs) => {
       return inputs;
     }
 
-    TIME && console.time("[Upload time]");
+    console.time("[Installation time]");
     while (i < localDecomojiListLength) {
       const { name, path } = localDecomojiList[i];
       // name か path が falsy の時は FAILED フラグを立ててループを抜ける
@@ -132,7 +131,7 @@ export const uploader = async (inputs) => {
       FAILED = false;
       RELOGIN = false;
     }
-    TIME && console.timeEnd("[Upload time]");
+    console.timeEnd("[Installation time]");
 
     // ブラウザを閉じる
     if (!DEBUG) {
@@ -141,7 +140,7 @@ export const uploader = async (inputs) => {
 
     // ratelimited なら再帰する
     if (RELOGIN) {
-      TIME && console.timeLog("[Total time]");
+      console.timeLog("[Total time]");
       console.info("Reconnecting...");
       return await _upload(inputs);
     }

@@ -12,9 +12,7 @@ const exitWithError = async (browser, error) => {
 };
 
 export const goToEmojiPage = async (browser, page, inputs) => {
-  const TIME = inputs.time;
-
-  TIME && console.time("[Login time]");
+  console.time("[Login time]");
   // ログイン画面に遷移する（チームのカスタム絵文字管理画面へのリダイレクトパラメータ付き）
   await goToSignInPage(page, inputs.workspace);
 
@@ -63,7 +61,7 @@ export const goToEmojiPage = async (browser, page, inputs) => {
   // ページ遷移とカスタム絵文字セクションが見つかるまで待つ
   await page.waitForSelector("#list_emoji_section");
 
-  TIME && console.timeEnd("[Login time]");
+  console.timeEnd("[Login time]");
 
   // workspace が変更されている可能性があるので返しておく
   return inputs;
