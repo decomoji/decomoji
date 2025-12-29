@@ -30,22 +30,11 @@ const main = async ({
   mode,
   term,
   configs,
-  excludeExplicit,
+  includeExplicit,
   debug,
 }) => {
   // 自動実行に必要な設定ファイルを作る
   const _inputs = {
-<<<<<<< HEAD
-    workspace: INPUTS.workspace,
-    email: INPUTS.email,
-    password: INPUTS.password,
-    mode: INPUTS.mode,
-    updateMode: INPUTS.mode === "update",
-    term: INPUTS.term,
-    configs: INPUTS.configs,
-    excludeExplicit: typeof INPUTS.excludeExplicit === "undefined" ? true : INPUTS.excludeExplicit,
-    debug: options.debug,
-=======
     workspace,
     email,
     password,
@@ -53,9 +42,8 @@ const main = async ({
     updateMode: mode === "update",
     term,
     configs,
-    excludeExplicit: !!excludeExplicit,
+    includeExplicit,
     debug,
->>>>>>> 1b395feb (refactor: 処理を簡略化した)
   };
 
   console.info(`
