@@ -7,11 +7,11 @@ import { pretender } from "./modules/pretender.mjs";
 import { remover } from "./modules/remover.mjs";
 import { getParsedJson } from "../utilities/getParsedJson.mjs";
 
-const program = new Command();
+const command = new Command();
 const DEFAULT_INPUT_NAME = "inputs.json";
 
 // コマンドライン引数の定義
-program
+command
   .option("-i, --inputs <name>", "inputs.jsonなどのファイル名を指定します")
   .option(
     "-d, --debug",
@@ -19,8 +19,8 @@ program
   )
   .option("-a, --adhoc <version>", "ad hocに選択可能にしたいバージョンを指定します。");
 
-program.parse(process.argv);
-const options = program.opts();
+command.parse(process.argv);
+const opts = command.opts();
 
 // 自動処理を実行する
 const main = async (INPUTS) => {
@@ -105,10 +105,10 @@ Connecting...
 
 await fs.mkdir("logs", { recursive: true });
 
-if (options.inputs) {
+if (opts.inputs) {
   // --inputs inputs.hoge.json などのファイルパスが指定されていたらそれを import し、
   // --inputs オプションがキーのみの場合はデフォルトで `./inputs.json` を import する
-  const FILE = isStringOfNotEmpty(options.inputs) ? options.inputs : DEFAULT_INPUT_NAME;
+  const FILE = isStringOfNotEmpty(opts.inputs) ? opts.inputs : DEFAULT_INPUT_NAME;
   main(await getParsedJson(`../manager/${FILE}`));
 } else {
   // --inputs オプション がない場合は inquirer を起動して対話的にオプションを作る
