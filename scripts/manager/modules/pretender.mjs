@@ -6,7 +6,7 @@ import { outputLogJson } from "../../utilities/outputLogJson.mjs";
 import { outputResultJson } from "../../utilities/outputResultJson.mjs";
 
 export const pretender = async (inputs) => {
-  const { configs: CONFIGS, debug: DEBUG, log: LOG, term: TERM } = inputs;
+  const { configs: CONFIGS, debug: DEBUG, term: TERM } = inputs;
 
   let i = 0; // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
   let FAILED = false;
@@ -16,12 +16,10 @@ export const pretender = async (inputs) => {
     TERM,
     KEYS: ["rename"],
     INVOKER: "pretender",
-    LOG,
   });
   const localDecomojiListLength = localDecomojiList.length;
 
   TERM === "version" &&
-    LOG &&
     (await outputLogJson({
       data: localDecomojiList,
       invoker: "pretender",
