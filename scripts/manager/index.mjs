@@ -1,7 +1,7 @@
 import { Command } from "commander";
 import fs from "fs/promises";
 import { isStringOfNotEmpty } from "../utilities/isStringOfNotEmpty.mjs";
-import { askInputs } from "./modules/askInputs.mjs";
+import { dialog } from "./modules/dialog.mjs";
 import { uploader } from "./modules/uploader.mjs";
 import { pretender } from "./modules/pretender.mjs";
 import { remover } from "./modules/remover.mjs";
@@ -112,5 +112,5 @@ if (options.inputs) {
   main(await getParsedJson(`../manager/${FILE}`));
 } else {
   // --inputs オプション がない場合は inquirer を起動して対話的にオプションを作る
-  askInputs((inputs) => main({ ...inputs, configs: inputs.configs.reverse() }), options.adhoc);
+  dialog((inputs) => main({ ...inputs, configs: inputs.configs.reverse() }), opts.adhoc);
 }
