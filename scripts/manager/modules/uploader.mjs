@@ -149,9 +149,9 @@ export const uploader = async (inputs) => {
 
     // 追加中に ratelimited にならなかった場合ここまで到達する
     if (FAILED) {
-      console.error("[ERROR]Upload failed.");
+      console.error("[ERROR]Installation is failed.");
     }
-    console.info("Upload completed!");
+    console.info("Installation is completed!");
     await outputResultJson({
       data: result,
       invoker: "uploder",

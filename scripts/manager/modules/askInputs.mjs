@@ -12,8 +12,8 @@ const MODE_ITEMS = [
     value: "update",
   },
   {
-    name: "登録",
-    value: "upload",
+    name: "初回インストール",
+    value: "install",
   },
   {
     name: "削除",
@@ -111,7 +111,7 @@ const questions = (additional) => [
   },
   {
     when: ({ mode }) =>
-      mode === "update" || mode === "upload" || mode === "remove",
+      mode === "update" || mode === "install" || mode === "remove",
     type: "list",
     message: "対象タイプを選択してください:",
     name: "term",

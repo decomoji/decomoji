@@ -52,7 +52,7 @@ Connecting...
 
   console.time("[Total time]");
   switch (_inputs.mode) {
-    case "upload":
+    case "install":
       await uploader(_inputs);
       break;
     case "alias":
@@ -68,7 +68,7 @@ Connecting...
       });
       await uploader({
         ..._inputs,
-        ...{ mode: "upload", configs: ["v5_basic", "v5_extra"] },
+        ...{ mode: "install", configs: ["v5_basic", "v5_extra"] },
       });
       await pretender({
         ..._inputs,
@@ -89,7 +89,7 @@ Connecting...
       });
       const _inputs2 = await uploader({
         ..._inputs1,
-        ...{ mode: "upload" },
+        ...{ mode: "install" },
       });
       await pretender({
         ..._inputs2,
