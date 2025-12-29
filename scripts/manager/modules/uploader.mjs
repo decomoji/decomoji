@@ -7,7 +7,6 @@ import { outputResultJson } from "../../utilities/outputResultJson.mjs";
 
 export const uploader = async (inputs) => {
   const {
-    browser: BROWSER,
     configs: CONFIGS,
     debug: DEBUG,
     excludeExplicit: EXCLUDE_EXPLICIT,
@@ -54,8 +53,8 @@ export const uploader = async (inputs) => {
   const _upload = async (inputs) => {
     // puppeteer でブラウザを起動する
     const browser = await puppeteer.launch({
-      devtools: BROWSER || DEBUG,
-      headless: BROWSER || DEBUG ? false : "new",
+      devtools: DEBUG,
+      headless: DEBUG ? false : "new",
     });
     // ページを追加する
     const page = await browser.newPage();

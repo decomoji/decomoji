@@ -13,11 +13,7 @@ const DEFAULT_INPUT_NAME = "inputs.json";
 // コマンドライン引数の定義
 program
   .option("-a, --additional [version]", "additional custom version name")
-  .option("-b, --browser", "open browser")
-  .option(
-    "-d, --debug",
-    "full debugging mode (open browser, output data log, output up time, If an error then stand by without exiting.)",
-  )
+  .option("-d, --debug", "show browser mode")
   .option("-i, --inputs [type]", "input setting json file");
 
 program.parse(process.argv);
@@ -39,7 +35,6 @@ const main = async (INPUTS) => {
       typeof INPUTS.excludeExplicit === "undefined"
         ? true
         : INPUTS.excludeExplicit,
-    browser: options.browser || options.debug,
     debug: options.debug,
   };
 

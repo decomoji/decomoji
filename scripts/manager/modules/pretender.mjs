@@ -6,12 +6,7 @@ import { outputLogJson } from "../../utilities/outputLogJson.mjs";
 import { outputResultJson } from "../../utilities/outputResultJson.mjs";
 
 export const pretender = async (inputs) => {
-  const {
-    browser: BROWSER,
-    configs: CONFIGS,
-    debug: DEBUG,
-    term: TERM,
-  } = inputs;
+  const { configs: CONFIGS, debug: DEBUG, term: TERM } = inputs;
 
   let i = 0; // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
   let FAILED = false;
@@ -48,8 +43,8 @@ export const pretender = async (inputs) => {
   const _pretend = async (inputs) => {
     // puppeteer でブラウザを起動する
     const browser = await puppeteer.launch({
-      devtools: BROWSER || DEBUG,
-      headless: BROWSER || DEBUG ? false : "new",
+      devtools: DEBUG,
+      headless: DEBUG ? false : "new",
     });
     // ページを追加する
     const page = await browser.newPage();
