@@ -20,7 +20,6 @@ program
   )
   .option("-i, --inputs [type]", "input setting json file")
   .option("-l, --log", "output data log")
-  .option("-t, --time", "output up time");
 
 program.parse(process.argv);
 const options = program.opts();
@@ -43,11 +42,8 @@ const main = async (INPUTS) => {
         : INPUTS.excludeExplicit,
     browser: options.browser || options.debug,
     log: options.log || options.debug,
-    time: options.time || options.debug,
     debug: options.debug,
   };
-
-  const TIME = _inputs.time;
 
   console.info(`
 workspace        : https://${_inputs.workspace}.slack.com/
@@ -61,7 +57,7 @@ excludeExplicit  : ${_inputs.excludeExplicit}
 Connecting...
 `);
 
-  TIME && console.time("[Total time]");
+  console.time("[Total time]");
   switch (_inputs.mode) {
     case "upload":
       await uploader(_inputs);
@@ -122,7 +118,7 @@ Connecting...
       console.error("[ERROR]Unknown script mode. please confirm 'mode' value.");
       break;
   }
-  TIME && console.timeEnd("[Total time]");
+  console.timeEnd("[Total time]");
 };
 
 if (options.log) {
