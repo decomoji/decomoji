@@ -82,7 +82,7 @@ const FULL_VERSIONS_ITEMS = getGitTagArray("v5")
     value: tag,
   }));
 
-// inquirer Setting
+// inquirer 用の質問群を返す関数
 const questions = (additional) => [
   {
     type: "input",
@@ -176,6 +176,6 @@ const questions = (additional) => [
   },
 ];
 
-export const askInputs = (callback, additional) => {
+export const dialog = (callback, additional) => {
   inquirer.prompt(questions(additional)).then(callback);
 };
