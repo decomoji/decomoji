@@ -58,13 +58,13 @@ Connecting...
     case "alias":
       await pretender(_inputs);
       break;
-    case "remove":
+    case "uninstall":
       await remover(_inputs);
       break;
     case "migration":
       await remover({
         ..._inputs,
-        ...{ mode: "remove", configs: ["v4_all"] },
+        ...{ mode: "uninstall", configs: ["v4_all"] },
       });
       await uploader({
         ..._inputs,
@@ -76,15 +76,15 @@ Connecting...
       });
       break;
     case "update":
-      const removeConfigs =
+      const uninstallConfigs =
         _inputs.term === "version" ? _inputs.configs : ["v5_fixed"];
       const aliasConfigs =
         _inputs.term === "version" ? _inputs.configs : ["v5_rename"];
       const _inputs1 = await remover({
         ..._inputs,
         ...{
-          mode: "remove",
-          configs: removeConfigs,
+          mode: "uninstall",
+          configs: uninstallConfigs,
         },
       });
       const _inputs2 = await uploader({

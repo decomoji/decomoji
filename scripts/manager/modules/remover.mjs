@@ -63,7 +63,7 @@ export const remover = async (inputs) => {
       return inputs;
     }
 
-    console.time("[Remove time]");
+    console.time("[Deletion time]");
     while (i < localDecomojiListLength) {
       const { name } = localDecomojiList[i];
       // name が falsy の時は FAILED フラグを立ててループを抜ける
@@ -121,7 +121,7 @@ export const remover = async (inputs) => {
       FAILED = false;
       RELOGIN = false;
     }
-    console.timeEnd("[Remove time]");
+    console.timeEnd("[Deletion time]");
 
     // ブラウザを閉じる
     if (!DEBUG) {
@@ -137,9 +137,9 @@ export const remover = async (inputs) => {
 
     // 削除中に ratelimited にならなかった場合ここまで到達する
     if (FAILED) {
-      console.error("[ERROR]Remove failed.");
+      console.error("[ERROR]Deletion is failed.");
     }
-    console.info("Remove completed!");
+    console.info("Deletion is completed!");
     await outputResultJson({
       data: result,
       invoker: "remover",
