@@ -20,31 +20,38 @@ command.parse(process.argv);
 const opts = command.opts();
 
 // 自動処理を実行する
-const main = async (INPUTS) => {
-  // コマンドオプションと inquirer から必要なものだけ取り出す
+const main = async ({
+  workspace,
+  email,
+  password,
+  mode,
+  term,
+  configs,
+  excludeExplicit,
+  debug,
+}) => {
+  // 自動実行に必要な設定ファイルを作る
   const _inputs = {
-    workspace: INPUTS.workspace,
-    email: INPUTS.email,
-    password: INPUTS.password,
-    mode: INPUTS.mode,
-    updateMode: INPUTS.mode === "update",
-    term: INPUTS.term,
-    configs: INPUTS.configs,
+    workspace,
+    email,
+    password,
+    mode,
+    updateMode: mode === "update",
+    term,
+    configs,
     excludeExplicit:
-      typeof INPUTS.excludeExplicit === "undefined"
-        ? true
-        : INPUTS.excludeExplicit,
-    debug: options.debug,
+      typeof excludeExplicit === "undefined" ? true : excludeExplicit,
+    debug,
   };
 
   console.info(`
-workspace        : https://${_inputs.workspace}.slack.com/
-email            : ${_inputs.email}
-mode             : ${_inputs.mode}
+workspace        : https://${workspace}.slack.com/
+email            : ${email}
+mode             : ${mode}
 updateMode       : ${_inputs.updateMode}
-term             : ${_inputs.term}
-configs          : ${_inputs.configs}
-excludeExplicit  : ${_inputs.excludeExplicit}
+term             : ${term}
+configs          : ${configs}
+excludeExplicit  : ${excludeExplicit}
 
 Connecting...
 `);
