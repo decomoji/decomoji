@@ -9,7 +9,7 @@ export const uploader = async (inputs) => {
   const {
     configs: CONFIGS,
     debug: DEBUG,
-    excludeExplicit: EXCLUDE_EXPLICIT,
+    includeExplicit: INCLUDE_EXPLICIT,
     term: TERM,
   } = inputs;
 
@@ -22,9 +22,9 @@ export const uploader = async (inputs) => {
     KEYS: ["upload"],
     INVOKER: "uploder",
   });
-  // バージョンごとに追加するとき、excludeExplicit=true なら explicit デコモジを取り除く
+  // バージョンごとに追加するとき、includeExplicit=false なら explicit デコモジを取り除く
   const localDecomojiList =
-    TERM === "version" && EXCLUDE_EXPLICIT
+    TERM === "version" && !INCLUDE_EXPLICIT
       ? rawLocalDecomojiList.filter(
           ({ path }) => !RegExp("explicit").test(path),
         )

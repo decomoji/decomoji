@@ -27,7 +27,7 @@ const main = async ({
   mode,
   term,
   configs,
-  excludeExplicit,
+  includeExplicit,
   debug,
 }) => {
   // 自動実行に必要な設定ファイルを作る
@@ -39,8 +39,7 @@ const main = async ({
     updateMode: mode === "update",
     term,
     configs,
-    excludeExplicit:
-      typeof excludeExplicit === "undefined" ? true : excludeExplicit,
+    includeExplicit,
     debug,
   };
 
@@ -51,7 +50,7 @@ mode             : ${mode}
 updateMode       : ${_inputs.updateMode}
 term             : ${term}
 configs          : ${configs}
-excludeExplicit  : ${excludeExplicit}
+includeExplicit  : ${includeExplicit}
 
 Connecting...
 `);
