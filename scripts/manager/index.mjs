@@ -7,17 +7,17 @@ import { pretender } from "./modules/pretender.mjs";
 import { remover } from "./modules/remover.mjs";
 import { getParsedJson } from "../utilities/getParsedJson.mjs";
 
-const program = new Command();
+const command = new Command();
 const DEFAULT_INPUT_NAME = "inputs.json";
 
 // コマンドライン引数の定義
-program
+command
   .option("-a, --additional [version]", "additional custom version name")
   .option("-d, --debug", "show browser mode")
   .option("-i, --inputs [type]", "input setting json file");
 
-program.parse(process.argv);
-const options = program.opts();
+command.parse(process.argv);
+const opts = command.opts();
 
 // 自動処理を実行する
 const main = async (INPUTS) => {
@@ -107,11 +107,11 @@ Connecting...
 
 await fs.mkdir("logs", { recursive: true });
 
-if (options.inputs) {
+if (opts.inputs) {
   // --inputs inputs.hoge.json などのファイルパスが指定されていたらそれを import し、
   // --inputs オプションがキーのみの場合はデフォルトで `./inputs.json` を import する
-  const FILE = isStringOfNotEmpty(options.inputs)
-    ? options.inputs
+  const FILE = isStringOfNotEmpty(opts.inputs)
+    ? opts.inputs
     : DEFAULT_INPUT_NAME;
   main(await getParsedJson(`../manager/${FILE}`));
 } else {
