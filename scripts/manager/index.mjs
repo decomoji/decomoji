@@ -36,8 +36,6 @@ const main = async (INPUTS) => {
     updateMode: INPUTS.mode === "update",
     term: INPUTS.term,
     configs: INPUTS.configs,
-    first_letter_mode: INPUTS.first_letter_mode,
-    selected_first_letters: INPUTS.selected_first_letters,
     forceRemove: INPUTS.forceRemove || false,
     excludeExplicit:
       typeof INPUTS.excludeExplicit === "undefined"
@@ -50,16 +48,6 @@ const main = async (INPUTS) => {
   };
 
   const TIME = _inputs.time;
-
-  // 頭文字ごとに登録する場合、 configs を上書きする
-  if (
-    _inputs.first_letter_mode &&
-    !_inputs.selected_first_letters.includes("all")
-  ) {
-    _inputs.configs = _inputs.selected_first_letters.flatMap((cafl) =>
-      _inputs.configs.map((config) => `${config}_${cafl}`),
-    );
-  }
 
   console.info(`
 workspace        : https://${_inputs.workspace}.slack.com/

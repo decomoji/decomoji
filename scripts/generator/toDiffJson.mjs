@@ -6,7 +6,7 @@ import { getGitTagPairArray } from "../utilities/getGitTagPairArray.mjs";
 import { getMergedDiffOfCategories } from "../utilities/getMergedDiffOfCategories.mjs";
 import { getMergedDiffOfManages } from "../utilities/getMergedDiffOfManages.mjs";
 import { writeJsonFile } from "../utilities/writeJsonFile.mjs";
-import { ADDITIONALS, FIRST_LETTERS } from "../models/constants.mjs";
+import { ADDITIONALS } from "../models/constants.mjs";
 
 // デコモジオブジェクトの格納先
 const Seeds = {
@@ -80,14 +80,6 @@ Object.entries(Seeds.categories).forEach(async (entry) => {
     .filter(({ removed }) => !removed)
     .sort((a, b) => a.name.localeCompare(b.name));
   await writeJsonFile(_list, `configs/${v(TAG_PREFIX)}_${category}.json`);
-
-  FIRST_LETTERS.flatMap(async (letter) => {
-    const _filtered = _list.filter(({ name }) => name.slice(0, 1) === letter);
-    await writeJsonFile(
-      _filtered,
-      `configs/${v(TAG_PREFIX)}_${category}_${letter}.json`,
-    );
-  });
 });
 
 // v5_fixed.json, v5_rename.json を作る
