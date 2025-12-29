@@ -174,29 +174,6 @@ const questions = (additional) => [
     ],
     validate: isSelects,
   },
-  {
-    when: ({ mode }) =>
-      mode === "update" || mode === "uninstall" || mode === "migration",
-    type: "list",
-    message: ({ mode }) => {
-      const common = "削除の強さを選択してください:";
-      const upgrade =
-        "更新及び移行モードでは修正された古いデコモジを削除します。";
-      return mode === "uninstall" ? `${common}` : `${upgrade}${common}`;
-    },
-    name: "forceRemove",
-    choices: [
-      {
-        name: "強（権限があれば他メンバーが登録したデコモジも消す）",
-        value: true,
-      },
-      {
-        name: "弱（自分が登録したデコモジだけ消す）",
-        value: false,
-      },
-    ],
-    validate: isSelects,
-  },
 ];
 
 export const askInputs = (callback, additional) => {

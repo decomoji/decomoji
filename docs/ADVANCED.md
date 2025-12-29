@@ -26,31 +26,6 @@
 node scripts/manager/index.mjs --inputs
 ```
 
-## 削除時に自分以外のメンバーが登録したカスタム絵文字も強制的に削除する
-
-scripst/manager の削除スクリプトは、デフォルトでは自分が登録した絵文字しか削除できない設定になっています。**あなたのアカウントに権限があれば**、他のメンバーが登録した絵文字でも強制的に削除できます。
-
-強制削除オプションは対話入力では設定できません。 inputs.json を `"mode": "uninstall"` として `"forceRemove": true` を追記してください。
-
-```json
-// scripts/manager/inputs.json
-{
-  "workspace": "<workspace>",
-  "email": "<email>",
-  "password": "<password>",
-  "mode": "uninstall",
-  "term": "category",
-  "configs": ["v5_basic", "v5_extra", "v5_fixed"],
-  "forceRemove": true
-}
-```
-
-**権限にかかわらず削除した絵文字はたとえ直後であっても復元できません。必ず削除前にバックアップするなどしてください。**
-
-バックアップには Chrome エクステンションの[Slack Custom Emoji Manager](https://chrome.google.com/webstore/detail/slack-custom-emoji-manage/cgipifjpcbhdppbjjphmgkmmgbeaggpc)が便利です。
-
-`"configs": ["v4_all", "v5_all"]` とするとデコモジが全て削除されます。
-
 ## 追加・更新モードでバージョンごとを選択した時、バージョンに含まれる「露骨」カテゴリーのデコモジを追加対象から除外する
 
 追加と更新モードでバージョンごとに実行する場合、選択したバージョンには「露骨」カテゴリーのデコモジが含まれてる可能性があります。
@@ -66,7 +41,6 @@ scripst/manager の削除スクリプトは、デフォルトでは自分が登�
   "mode": "update",
   "term": "version",
   "configs": ["v5.18.0"],
-  "forceRemove": true,
   "excludeExplicit": false
 }
 ```
@@ -140,13 +114,12 @@ Slack の仕様により、１つのエイリアス名には複数のエイリ�
 
 ## inputs.json の型
 
-| キー            | 値の型                                                                                                                                                                         | 値の凡例                                             | 注記                                                                                                                                    |
-| :-------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------- |
-| workspace       | `string`                                                                                                                                                                       | `"decomoji"`                                         | ワークスペースのサブドメインです。                                                                                                      |
-| email           | `email`                                                                                                                                                                        | `"otiext@gmail.com"`                                 |                                                                                                                                         |
-| password        | `string`                                                                                                                                                                       | `"hogehoge"`                                         |                                                                                                                                         |
+| キー            | 値の型                                                                                                                                                                         | 値の凡例                                             | 注記                                                                                                               |
+| :-------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------- |
+| workspace       | `string`                                                                                                                                                                       | `"decomoji"`                                         | ワークスペースのサブドメインです。                                                                                 |
+| email           | `email`                                                                                                                                                                        | `"otiext@gmail.com"`                                 |                                                                                                                    |
+| password        | `string`                                                                                                                                                                       | `"hogehoge"`                                         |                                                                                                                    |
 | mode            | `"install" \| "alias" \| "uninstall" \| "update"`                                                                                                                              | `"install"`                                          |
-| term            | `"category" \| "version"`                                                                                                                                                      | `"category"`                                         | デコモジをカテゴリーごとに選択するかバージョンごとに選択するか                                                                          |
-| configs         | `("v4_all" \| "v4_basic" \| "v4_extra" \| "v4_fixed" \| "v5_all" \| "v5_basic" \| "v5_extra" \| "v5_explicit" \| "v4_rename" \| "v5_rename \| <TAG_VERSION_NAME> \| string)[]` | `["v5_basic", "v5_extra"]`, `["v5.18.0", "v5.17.3"]` | configs/ に格納した json ファイル名を値にとる配列                                                                                       |
-| forceRemove     | `boolean`                                                                                                                                                                      | `false`                                              | mode="uninstall" で `true` の時、他ユーザーが登録したカスタム絵文字も削除対象に含めます。対象に含めても権限がない場合は削除されません。 |
-| excludeExplicit | `boolean`                                                                                                                                                                      | `true`                                               | mode="install" か mode="update" でかつ term="version" の時のみ有効です。デフォルトでは `true` として振る舞います。                      |
+| term            | `"category" \| "version"`                                                                                                                                                      | `"category"`                                         | デコモジをカテゴリーごとに選択するかバージョンごとに選択するか                                                     |
+| configs         | `("v4_all" \| "v4_basic" \| "v4_extra" \| "v4_fixed" \| "v5_all" \| "v5_basic" \| "v5_extra" \| "v5_explicit" \| "v4_rename" \| "v5_rename \| <TAG_VERSION_NAME> \| string)[]` | `["v5_basic", "v5_extra"]`, `["v5.18.0", "v5.17.3"]` | configs/ に格納した json ファイル名を値にとる配列                                                                  |
+| excludeExplicit | `boolean`                                                                                                                                                                      | `true`                                               | mode="install" か mode="update" でかつ term="version" の時のみ有効です。デフォルトでは `true` として振る舞います。 |
