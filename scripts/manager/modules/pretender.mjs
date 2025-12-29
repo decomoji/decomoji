@@ -141,9 +141,9 @@ export const pretender = async (inputs) => {
 
     // 追加中に ratelimited にならなかった場合ここまで到達する
     if (FAILED) {
-      console.error("[ERROR]Register failed.");
+      console.error("[ERROR]Registration is failed.");
     }
-    console.info("Register completed!");
+    console.info("Registration is completed!");
     await outputResultJson({
       data: result,
       invoker: "pretender",
