@@ -14,7 +14,6 @@ const DEFAULT_INPUT_NAME = "inputs.json";
 program
   .option("-i, --inputs <name>", "inputs.jsonなどのファイル名を指定します")
   .option("-l, --log", "ログファイルを出力します。")
-  .option("-t, --time", "実行時間を計測し、標準出力します。")
   .option(
     "-d, --debug",
     "デバッグモードで実行します。-l オプションと -t オプションに加え、ブラウザを表示して実行します。エラーが発生しても終了せず停止します。",
@@ -38,11 +37,8 @@ const main = async (INPUTS) => {
     forceRemove: INPUTS.forceRemove || false,
     excludeExplicit: typeof INPUTS.excludeExplicit === "undefined" ? true : INPUTS.excludeExplicit,
     log: options.log || options.debug,
-    time: options.time || options.debug,
     debug: options.debug,
   };
-
-  const TIME = _inputs.time;
 
   console.info(`
 workspace        : https://${_inputs.workspace}.slack.com/
@@ -56,7 +52,7 @@ excludeExplicit  : ${_inputs.excludeExplicit}
 Connecting...
 `);
 
-  TIME && console.time("[Total time]");
+  console.time("[Total time]");
   switch (_inputs.mode) {
     case "upload":
       await uploader(_inputs);
@@ -115,7 +111,7 @@ Connecting...
       console.error("[ERROR]Unknown script mode. please confirm 'mode' value.");
       break;
   }
-  TIME && console.timeEnd("[Total time]");
+  console.timeEnd("[Total time]");
 };
 
 if (options.log) {

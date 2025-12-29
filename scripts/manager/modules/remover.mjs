@@ -11,7 +11,6 @@ export const remover = async (inputs) => {
     debug: DEBUG,
     log: LOG,
     term: TERM,
-    time: TIME,
     updateMode: UPDATE,
   } = inputs;
 
@@ -66,7 +65,7 @@ export const remover = async (inputs) => {
       return inputs;
     }
 
-    TIME && console.time("[Remove time]");
+    console.time("[Remove time]");
     while (i < localDecomojiListLength) {
       const { name } = localDecomojiList[i];
       // name が falsy の時は FAILED フラグを立ててループを抜ける
@@ -120,7 +119,7 @@ export const remover = async (inputs) => {
       FAILED = false;
       RELOGIN = false;
     }
-    TIME && console.timeEnd("[Remove time]");
+    console.timeEnd("[Remove time]");
 
     // ブラウザを閉じる
     if (!DEBUG) {
@@ -129,7 +128,7 @@ export const remover = async (inputs) => {
 
     // ratelimited なら再帰する
     if (RELOGIN) {
-      TIME && console.timeLog("[Total time]");
+      console.timeLog("[Total time]");
       console.info("Reconnecting...");
       return await _remove(inputs);
     }

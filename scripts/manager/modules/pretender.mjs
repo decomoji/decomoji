@@ -6,7 +6,7 @@ import { outputLogJson } from "../../utilities/outputLogJson.mjs";
 import { outputResultJson } from "../../utilities/outputResultJson.mjs";
 
 export const pretender = async (inputs) => {
-  const { configs: CONFIGS, debug: DEBUG, log: LOG, term: TERM, time: TIME } = inputs;
+  const { configs: CONFIGS, debug: DEBUG, log: LOG, term: TERM } = inputs;
 
   let i = 0; // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
   let FAILED = false;
@@ -63,7 +63,7 @@ export const pretender = async (inputs) => {
       return inputs;
     }
 
-    TIME && console.time("[Register time]");
+    console.time("[Registration time]");
     while (i < localDecomojiListLength) {
       const { name, alias_for } = localDecomojiList[i];
       // name か alias_for が falsy の時は FAILED フラグを立ててループを抜ける
@@ -127,7 +127,7 @@ export const pretender = async (inputs) => {
       FAILED = false;
       RELOGIN = false;
     }
-    TIME && console.timeEnd("[Register time]");
+    console.timeEnd("[Registration time]");
 
     // ブラウザを閉じる
     if (!DEBUG) {
@@ -136,7 +136,7 @@ export const pretender = async (inputs) => {
 
     // ratelimited なら再帰する
     if (RELOGIN) {
-      TIME && console.timeLog("[Total time]");
+      console.timeLog("[Total time]");
       console.info("Reconnecting...");
       return await _pretend(inputs);
     }
