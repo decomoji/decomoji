@@ -83,7 +83,7 @@ const AVAILABLE_VERSION_ITEMS = (await getParsedJson("../../configs/v5_versions.
     value: tag,
   }));
 
-// inquirer Setting
+// inquirer 用の質問群を返す関数
 const questions = (adhoc) => [
   {
     type: "input",
@@ -176,6 +176,6 @@ const questions = (adhoc) => [
   },
 ];
 
-export const askInputs = (callback, adhoc) => {
+export const dialog = (callback, adhoc) => {
   inquirer.prompt(questions(adhoc)).then(callback);
 };
