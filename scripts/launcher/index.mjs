@@ -22,8 +22,8 @@ command
 command.parse(process.argv);
 const opts = command.opts();
 
-// 自動処理を実行する
-const main = async ({
+// 自動実行の本体
+const launcher = async ({
   workspace,
   email,
   password,
@@ -118,8 +118,8 @@ if (opts.inputs) {
   // --inputs inputs.hoge.json などのファイルパスが指定されていたらそれを import し、
   // --inputs オプションがキーのみの場合はデフォルトで `./inputs.json` を import する
   const FILE = isStringOfNotEmpty(opts.inputs) ? opts.inputs : DEFAULT_INPUT_NAME;
-  main(await getParsedJson(`../manager/${FILE}`));
+  launcher(await getParsedJson(`../launcher/${FILE}`));
 } else {
   // --inputs オプション がない場合は inquirer を起動して対話的にオプションを作る
-  dialog((inputs) => main({ ...inputs, configs: inputs.configs.reverse() }), opts.adhoc);
+  dialog((inputs) => launcher({ ...inputs, configs: inputs.configs.reverse() }), opts.adhoc);
 }

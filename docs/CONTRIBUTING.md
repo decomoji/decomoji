@@ -8,7 +8,7 @@
 
 もしあなたが欲しいデコモジがある場合は、[decomoji-template](https://github.com/decomoji/decomoji-template)を利用しご自分で作成なさるなどしてください。
 
-スクリプトによる自動登録時に除外したいデコモジがある場合は、`decomoji/`配下の対象ファイルを削除してから`node scripts/manager/index.mjs`を実行してください。
+スクリプトによる自動登録時に除外したいデコモジがある場合は、リポジトリをクローン後に`decomoji/`配下の対象ファイルを削除してから`npm start`を実行してください。
 
 ### このプロジェクトがやること
 
