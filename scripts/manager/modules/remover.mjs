@@ -9,7 +9,6 @@ export const remover = async (inputs) => {
   const {
     configs: CONFIGS,
     debug: DEBUG,
-    log: LOG,
     term: TERM,
     updateMode: UPDATE,
   } = inputs;
@@ -22,12 +21,10 @@ export const remover = async (inputs) => {
     TERM,
     KEYS: UPDATE ? ["fixed"] : ["fixed", "upload"],
     INVOKER: "remover",
-    LOG,
   });
   const localDecomojiListLength = localDecomojiList.length;
 
   TERM === "version" &&
-    LOG &&
     (await outputLogJson({
       data: localDecomojiList,
       invoker: "remover",
