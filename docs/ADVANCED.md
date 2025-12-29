@@ -28,9 +28,9 @@ node scripts/manager/index.mjs --inputs
 
 ## 追加・更新モードでバージョンごとを選択した時、バージョンに含まれる「露骨」カテゴリーのデコモジを追加対象から除外する
 
-追加と更新モードでバージョンごとに実行する場合、選択したバージョンには「露骨」カテゴリーのデコモジが含まれてる可能性があります。
+追加と更新モードでバージョンごとに実行する場合、選択したバージョンには「露骨」カテゴリーのデコモジが含まれてることがあります。
 
-含まれている「露骨」カテゴリーのデコモジは**デフォルトで除外されて**追加・更新が実行されますが、**意図して除外しない場合**は、`excludeExplicit: false` を追記してください。
+含まれている「露骨」カテゴリーのデコモジは**デフォルトで除外されて**追加・更新が実行されますが、**意図して除外しない場合**は、`includeExplicit: true` を追記してください。
 
 ```json
 // scripts/manager/inputs.json
@@ -41,13 +41,15 @@ node scripts/manager/index.mjs --inputs
   "mode": "update",
   "term": "version",
   "configs": ["v5.18.0"],
-  "excludeExplicit": false
+  "includeExplicit": true
 }
 ```
 
-`excludeExplicit` キーが存在しない場合、 `excludeExplicit: true` として振る舞います。
+`includeExplicit` キーが存在しない場合、 `includeExplicit: false` として振る舞います。この振る舞いはデフォルトです。
 
 このオプションは追加か更新モード（`mode === "install" || mode === "update"`）でかつ対象タイプがバージョン（`term === "version"`）の時のみ有効です。
+
+「露骨」カテゴリーを対象に追加モードを実行している時（`mode === "install"` かつ `term === "category"` かつ `configs === ["v5_explicit"]`）は、 `includeExplicit` キーの値に関係なく「露骨」カテゴリーのデコモジを追加します。
 
 ## タギングされていないオリジナルのバージョンを登録する
 
