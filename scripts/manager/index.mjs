@@ -33,7 +33,6 @@ const main = async (INPUTS) => {
     updateMode: INPUTS.mode === "update",
     term: INPUTS.term,
     configs: INPUTS.configs,
-    forceRemove: INPUTS.forceRemove || false,
     excludeExplicit: typeof INPUTS.excludeExplicit === "undefined" ? true : INPUTS.excludeExplicit,
     debug: options.debug,
   };
