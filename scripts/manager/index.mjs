@@ -98,7 +98,6 @@ Connecting...
           configs: aliasConfigs,
         },
       });
-      console.log("All update step has completed!");
       break;
     default:
       console.error("[ERROR]Unknown script mode. please confirm 'mode' value.");
