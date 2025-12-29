@@ -11,7 +11,7 @@
   "main": "",
   "scripts": {
     "prepare": "husky install",
-    "manager": "node scripts/manager/index.mjs -lt"
+    "launch": "node scripts/launcher/index.mjs"
   },
   "repository": {
     "type": "git",

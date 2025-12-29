@@ -19,8 +19,8 @@ command
 command.parse(process.argv);
 const opts = command.opts();
 
-// 自動処理を実行する
-const main = async ({
+// 自動実行の本体
+const launcher = async ({
   workspace,
   email,
   password,
@@ -119,11 +119,11 @@ if (opts.inputs) {
   const FILE = isStringOfNotEmpty(opts.inputs)
     ? opts.inputs
     : DEFAULT_INPUT_NAME;
-  main(await getParsedJson(`../manager/${FILE}`));
+  launcher(await getParsedJson(`../launcher/${FILE}`));
 } else {
   // --inputs オプション がない場合は inquirer を起動して対話的にオプションを作る
   dialog(
-    (inputs) => main({ ...inputs, configs: inputs.configs.reverse() }),
+    (inputs) => launcher({ ...inputs, configs: inputs.configs.reverse() }),
     opts.additional,
   );
 }

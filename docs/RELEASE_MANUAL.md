@@ -30,7 +30,7 @@ node scripts/generator/toDiffJson.mjs v5.x.0
 コマンドに更新する予定のバージョン名が必要。
 
 # 6. `--additinal` オプションで登録スクリプトを実行し、登録がうまくいくか確認する
-node scripts/manager/index.mjs -l -t --additional v5.x.0
+npm run launch -- -a v5.x.0
 
 `error_name_taken_i18n` エラーなどになったら適宜ファイル名を変更する。
 
@@ -42,7 +42,7 @@ git reset --soft HEAD~1
 git mv decomoji/extra/a.png decomoji/extra/a_.png
 
 ## デコモジ追加コミットに混ぜる
-git commit --amend
+git commit --amend '-S'
 
 ## 差分JSONを更新しなおす
 node scripts/generator/toDiffJson.mjs v5.x.0

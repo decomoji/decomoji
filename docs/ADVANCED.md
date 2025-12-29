@@ -4,12 +4,12 @@
 
 ログイン情報や実行モードの設定を JSON ファイルに保存すると、対話式の設定入力を省略できます。
 
-まず scripts/manager/inputs.example.json を雛形に scripts/manager/inputs.json を保存してください。
+まず scripts/launcher/inputs.example.json を雛形に scripts/launcher/inputs.json を保存してください。
 
 値の型については後述しています。
 
 ```json
-// scripts/manager/inputs.json
+// scripts/launcher/inputs.json
 {
   "workspace": "<workspace>",
   "email": "<email>",
@@ -23,7 +23,7 @@
 登録スクリプトに `--inputs` オプション（または `-i`）を付与することで `inputs.json` の情報がログインに使われます。
 
 ```bash
-node scripts/manager/index.mjs --inputs
+npm run launch --  --inputs
 ```
 
 ## 追加・更新モードでバージョンごとを選択した時、バージョンに含まれる「露骨」カテゴリーのデコモジを追加対象から除外する
@@ -33,7 +33,7 @@ node scripts/manager/index.mjs --inputs
 含まれている「露骨」カテゴリーのデコモジは**デフォルトで除外されて**追加・更新が実行されますが、**意図して除外しない場合**は、`includeExplicit: true` を追記してください。
 
 ```json
-// scripts/manager/inputs.json
+// scripts/launcher/inputs.json
 {
   "workspace": "<workspace>",
   "email": "<email>",
@@ -61,16 +61,16 @@ node scripts/manager/index.mjs --inputs
 node scripts/generator/toDiffJson.js v5.100.0
 ```
 
-指定のバージョンを `--additinal` オプションに渡すと、
+指定のバージョンを `--additinal` または `-a` オプションに渡すと、
 
 ```bash
-node scripts/manager/index.mjs --additional v5.100.0
+npm run launch --a v5.100.0
 ```
 
 登録スクリプト実行時のバージョン選択に「ユーザーが追加したバージョン」として表示されます。
 
 ```bash
-% node scripts/manager/index.mjs -a v5.100.0
+% npm run launch -a v5.100.0
 ? ワークスペースのサブドメインを入力してください: decomoji-dev
 ? メールアドレスを入力してください: otiext@gmail.com
 ? パスワードを入力してください: **********
@@ -98,7 +98,7 @@ node scripts/manager/index.mjs --additional v5.100.0
 ```
 
 ```json
-// scripts/manager/inputs.json
+// scripts/launcher/inputs.json
 {
   "workspace": "<workspace>",
   "email": "<email>",
