@@ -57,7 +57,7 @@ Connecting...
 `);
 
   console.time("[Total time]");
-  switch (_inputs.mode) {
+  switch (mode) {
     case "install":
       await uploader(_inputs);
       break;
@@ -82,13 +82,11 @@ Connecting...
       });
       break;
     case "update":
-      const uninstallConfigs = _inputs.term === "version" ? _inputs.configs : ["v5_fixed"];
-      const aliasConfigs = _inputs.term === "version" ? _inputs.configs : ["v5_rename"];
       const _inputs1 = await remover({
         ..._inputs,
         ...{
           mode: "uninstall",
-          configs: uninstallConfigs,
+          configs: term === "version" ? configs : ["v5_fixed"],
         },
       });
       const _inputs2 = await uploader({
@@ -99,7 +97,7 @@ Connecting...
         ..._inputs2,
         ...{
           mode: "alias",
-          configs: aliasConfigs,
+          configs: term === "version" ? configs : ["v5_rename"],
         },
       });
       break;
