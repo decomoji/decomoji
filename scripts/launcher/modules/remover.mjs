@@ -6,12 +6,7 @@ import { outputLogJson } from "../../utilities/outputLogJson.mjs";
 import { outputResultJson } from "../../utilities/outputResultJson.mjs";
 
 export const remover = async (inputs) => {
-  const {
-    configs: CONFIGS,
-    debug: DEBUG,
-    term: TERM,
-    updateMode: UPDATE,
-  } = inputs;
+  const { configs: CONFIGS, debug: DEBUG, mode: MODE, term: TERM } = inputs;
 
   let i = 0; // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
   let FAILED = false;
@@ -19,7 +14,7 @@ export const remover = async (inputs) => {
   const localDecomojiList = await getConfigJson({
     CONFIGS,
     TERM,
-    KEYS: UPDATE ? ["fixed"] : ["fixed", "upload"],
+    KEYS: MODE === "update" ? ["fixed"] : ["fixed", "upload"],
     INVOKER: "remover",
   });
   const localDecomojiListLength = localDecomojiList.length;
