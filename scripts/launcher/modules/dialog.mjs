@@ -8,24 +8,20 @@ import { isSelects } from "../../utilities/isSelects.mjs";
 
 const MODE_ITEMS = [
   {
+    name: "インストール",
+    value: "install",
+  },
+  {
     name: "更新",
     value: "update",
   },
   {
-    name: "初回インストール",
-    value: "install",
+    name: "移行（v5 から v6 へ）",
+    value: "migration",
   },
   {
     name: "アンインストール",
     value: "uninstall",
-  },
-  {
-    name: "エイリアス登録",
-    value: "alias",
-  },
-  {
-    name: "移行（v4 を v5 に置換）",
-    value: "migration",
   },
 ];
 
