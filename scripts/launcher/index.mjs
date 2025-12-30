@@ -39,7 +39,6 @@ const launcher = async ({
     email,
     password,
     mode,
-    updateMode: mode === "update",
     term,
     configs,
     includeExplicit,
@@ -50,7 +49,6 @@ const launcher = async ({
 workspace        : https://${workspace}.slack.com/
 email            : ${email}
 mode             : ${mode}
-updateMode       : ${_inputs.updateMode}
 term             : ${term}
 configs          : ${configs}
 excludeExplicit  : ${excludeExplicit}
