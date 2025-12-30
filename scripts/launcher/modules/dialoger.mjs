@@ -56,6 +56,7 @@ const MONTH_LIST = [
   "Dec",
 ];
 
+// TODO: バージョンを選択する機能は廃止する
 const V5_TAGGING_DATES = getGitTaggingDateArray()
   .filter((v) => /^v5/.test(v))
   .map((v) => {
@@ -172,6 +173,6 @@ const questions = (adhoc) => [
   },
 ];
 
-export const dialog = (callback, adhoc) => {
+export const dialoger = (callback, adhoc) => {
   inquirer.prompt(questions(adhoc)).then(callback);
 };
