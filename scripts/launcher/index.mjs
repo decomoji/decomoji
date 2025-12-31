@@ -1,8 +1,7 @@
 import { Command } from "commander";
 import fs from "fs/promises";
 import { dialoger } from "./modules/index.mjs";
-import { getParsedJson } from "../utilities/getParsedJson.mjs";
-import { isStringOfNotEmpty } from "../utilities/isStringOfNotEmpty.mjs";
+import { getParsedJson, isStringOfNotEmpty } from "../utilities/index.mjs";
 
 const command = new Command();
 const DEFAULT_INPUT_NAME = "inputs.json";
