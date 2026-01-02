@@ -16,6 +16,7 @@ export { getGitTagPairArray } from "./getGitTagPairArray.mjs";
 export { getMergedDiffOfCategories } from "./getMergedDiffOfCategories.mjs";
 export { getMergedDiffOfManages } from "./getMergedDiffOfManages.mjs";
 export { getParsedJson } from "./getParsedJson.mjs";
+export { getParsedSemVerObject } from "./getParsedSemVerObject.mjs";
 export { isDecomojiFile } from "./isDecomojiFile.mjs";
 export { isEmail } from "./isEmail.mjs";
 export { isInputs } from "./isInputs.mjs";
