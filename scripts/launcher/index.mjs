@@ -1,119 +1,35 @@
 import { Command } from "commander";
 import fs from "fs/promises";
-import { dialoger } from "./modules/index.mjs";
+import { assigner, dialoger } from "./modules/index.mjs";
 import { getParsedJson, isStringOfNotEmpty } from "../utilities/index.mjs";
 
 const command = new Command();
-const DEFAULT_INPUT_NAME = "inputs.json";
+const DEFAULT_INPUTS = "inputs.json";
 
 // コマンドライン引数の定義
 command
+  // TODO: 最新バージョンが何か、次のバージョンとそのデコモジは何かは自動判定できるようになるため、このオプションは廃止される見込み
   .option("-a, --additional [version]", "additional custom version name")
-  .option("-d, --debug", "show browser mode")
-  .option("-i, --inputs [type]", "input setting json file");
+  .option("-d, --debug", "デバックモードで実行する")
+  .option("-i, --inputs [<filename>]", "inputs.jsonを使って実行する");
 
 command.parse(process.argv);
-const opts = command.opts();
+const { additional, inputs } = command.opts();
 
-// 自動実行の本体
-const launcher = async ({
-  workspace,
-  email,
-  password,
-  mode,
-  term,
-  configs,
-  includeExplicit,
-  debug,
-}) => {
-  // 自動実行に必要な設定ファイルを作る
-  const _inputs = {
-    workspace,
-    email,
-    password,
-    mode,
-    term,
-    configs,
-    includeExplicit,
-    debug,
-  };
-
-  console.info(`
-workspace        : https://${workspace}.slack.com/
-email            : ${email}
-mode             : ${mode}
-term             : ${term}
-configs          : ${configs}
-includeExplicit  : ${includeExplicit}
-
-Connecting...
-`);
-
-  console.time("[Total time]");
-  switch (mode) {
-    case "install":
-      await uploader(_inputs);
-      break;
-    case "alias":
-      await pretender(_inputs);
-      break;
-    case "uninstall":
-      await remover(_inputs);
-      break;
-    case "migration":
-      await remover({
-        ..._inputs,
-        ...{ mode: "uninstall", configs: ["v4_all"] },
-      });
-      await uploader({
-        ..._inputs,
-        ...{ mode: "install", configs: ["v5_basic", "v5_extra"] },
-      });
-      await pretender({
-        ..._inputs,
-        ...{ mode: "alias", configs: ["v4_rename", "v5_rename"] },
-      });
-      break;
-    case "update":
-      const _inputs1 = await remover({
-        ..._inputs,
-        ...{
-          mode: "uninstall",
-          configs: term === "version" ? configs : ["v5_fixed"],
-        },
-      });
-      const _inputs2 = await uploader({
-        ..._inputs1,
-        ...{ mode: "install" },
-      });
-      await pretender({
-        ..._inputs2,
-        ...{
-          mode: "alias",
-          configs: term === "version" ? configs : ["v5_rename"],
-        },
-      });
-      break;
-    default:
-      console.error("[ERROR]Unknown script mode. please confirm 'mode' value.");
-      break;
-  }
-  console.timeEnd("[Total time]");
-};
-
+// logs ディレクトリを作成しておく
 await fs.mkdir("logs", { recursive: true });
 
-if (opts.inputs) {
+if (inputs) {
   // --inputs inputs.hoge.json などのファイルパスが指定されていたらそれを import し、
   // --inputs オプションがキーのみの場合はデフォルトで `./inputs.json` を import する
-  const FILE = isStringOfNotEmpty(opts.inputs)
-    ? opts.inputs
-    : DEFAULT_INPUT_NAME;
-  launcher(await getParsedJson(`../launcher/${FILE}`));
+  const INPUTS = await getParsedJson(
+    `../launcher/${isStringOfNotEmpty(inputs) ? inputs : DEFAULT_INPUTS}`,
+  );
+  assigner(INPUTS);
 } else {
   // --inputs オプション がない場合は inquirer を起動して対話的にオプションを作る
   dialoger(
-    (inputs) => launcher({ ...inputs, configs: inputs.configs.reverse() }),
-    opts.additional,
+    (inputs) => assigner({ ...inputs, configs: inputs.configs.reverse() }),
+    additional,
   );
 }
