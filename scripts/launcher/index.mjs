@@ -1,19 +1,9 @@
 import { Command } from "commander";
 import fs from "fs/promises";
-import { dialoger } from "./modules/index.mjs";
+import { assigner, dialoger } from "./modules/index.mjs";
 import { getParsedJson, isStringOfNotEmpty } from "../utilities/index.mjs";
 
 const command = new Command();
-const DEFAULT_INPUT_NAME = "inputs.json";
-
-// コマンドライン引数の定義
-command
-  .option("-i, --inputs <name>", "inputs.jsonなどのファイル名を指定します")
-  .option(
-    "-d, --debug",
-    "ブラウザを表示するデバッグモードで実行します。エラーが発生しても終了せず停止します。",
-  )
-  .option("-a, --adhoc <version>", "ad hocに選択可能にしたいバージョンを指定します。");
 
 command.parse(process.argv);
 const opts = command.opts();
@@ -104,14 +94,33 @@ Connecting...
   console.timeEnd("[Total time]");
 };
 
+// コマンドライン引数の定義
+command
+  .option("-i, --inputs <filename>", "inputs.jsonなどのファイル名を指定します")
+  .option(
+    "-d, --debug",
+    "ブラウザを表示するデバッグモードで実行します。エラーが発生しても終了せず停止します。",
+  )
+  // TODO: 最新バージョンが何か、次のバージョンとそのデコモジは何かは自動判定できるようになるため、このオプションは廃止される見込み
+  .option("-a, --adhoc <version>", "ad hocに選択可能にしたいバージョンを指定します。");
+
+command.parse(process.argv);
+const { adhoc, inputs } = command.opts();
+
+// logs ディレクトリを作成しておく
 await fs.mkdir("logs", { recursive: true });
 
-if (opts.inputs) {
+if (inputs) {
   // --inputs inputs.hoge.json などのファイルパスが指定されていたらそれを import し、
   // --inputs オプションがキーのみの場合はデフォルトで `./inputs.json` を import する
-  const FILE = isStringOfNotEmpty(opts.inputs) ? opts.inputs : DEFAULT_INPUT_NAME;
-  launcher(await getParsedJson(`../launcher/${FILE}`));
+  const INPUTS_FILE_NAME = await getParsedJson(
+    `../launcher/${isStringOfNotEmpty(inputs) ? inputs : "inputs.json"}`,
+  );
+  assigner(INPUTS_FILE_NAME);
 } else {
   // --inputs オプション がない場合は inquirer を起動して対話的にオプションを作る
-  dialoger((inputs) => launcher({ ...inputs, configs: inputs.configs.reverse() }), opts.adhoc);
+  dialoger(
+    (inputs) => assigner({ ...inputs, configs: inputs.configs.reverse() }),
+    adhoc,
+  );
 }
