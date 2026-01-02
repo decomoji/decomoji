@@ -4,6 +4,8 @@ import {
   isStringOfNotEmpty,
 } from "../../utilities/index.mjs";
 
+// TODO: history.json のファイル名が histor.json になっているのを直す
+// uploadだけならいいが、updateの場合に必要な情報が不足してないか確認する
 export const curator = async () => {
   // history.json があれば読み込む
   const history = fs.existsSync("../logs/histor.json")
