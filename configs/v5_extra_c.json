@@ -240,6 +240,12 @@
     "created": "v5.32.0"
   },
   {
+    "name": "cloudflare",
+    "category": "extra",
+    "path": "decomoji/extra/cloudflare.png",
+    "created": "v5.33.0"
+  },
+  {
     "name": "cmo",
     "category": "extra",
     "path": "decomoji/extra/cmo.png",

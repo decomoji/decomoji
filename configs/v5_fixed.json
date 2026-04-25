@@ -558,6 +558,12 @@
     "removed": "v5.23.0"
   },
   {
+    "name": "deusikaiwai",
+    "category": "extra",
+    "path": "decomoji/extra/deusikaiwai.png",
+    "removed": "v5.33.0"
+  },
+  {
     "name": "dhite-ruwojuusi",
     "category": "extra",
     "path": "decomoji/extra/dhite-ruwojuusi.png",
@@ -742,6 +748,12 @@
     "category": "extra",
     "path": "decomoji/extra/gakurekisijou.png",
     "removed": "v5.4.2"
+  },
+  {
+    "name": "garigair",
+    "category": "extra",
+    "path": "decomoji/extra/garigair.png",
+    "removed": "v5.33.0"
   },
   {
     "name": "geijutu",
@@ -1528,6 +1540,12 @@
     "category": "extra",
     "path": "decomoji/extra/kodomonozijou.png",
     "removed": "v5.4.2"
+  },
+  {
+    "name": "kokeraotosi",
+    "category": "extra",
+    "path": "decomoji/extra/kokeraotosi.png",
+    "updated": "v5.33.0"
   },
   {
     "name": "kokoronojunnbi",
@@ -2652,6 +2670,12 @@
     "removed": "v5.4.2"
   },
   {
+    "name": "versionbro",
+    "category": "extra",
+    "path": "decomoji/extra/versionbro.png",
+    "removed": "v5.33.0"
+  },
+  {
     "name": "wa-i_1",
     "category": "extra",
     "path": "decomoji/extra/wa-i_1.png",
@@ -2764,6 +2788,12 @@
     "category": "extra",
     "path": "decomoji/extra/yaudeyanngu.png",
     "removed": "v5.22.0"
+  },
+  {
+    "name": "yomimasu",
+    "category": "extra",
+    "path": "decomoji/extra/yomimasu.png",
+    "updated": "v5.33.0"
   },
   {
     "name": "yonnjuubyoude",

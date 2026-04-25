@@ -5151,6 +5151,12 @@
     "created": "v5.31.0"
   },
   {
+    "name": "bokunoiikusuridesu",
+    "category": "extra",
+    "path": "decomoji/extra/bokunoiikusuridesu.png",
+    "created": "v5.33.0"
+  },
+  {
     "name": "bokunoinnbou",
     "category": "extra",
     "path": "decomoji/extra/bokunoinnbou.png",
@@ -6781,6 +6787,12 @@
     "category": "extra",
     "path": "decomoji/extra/bokunoyasai.png",
     "created": "v5.31.0"
+  },
+  {
+    "name": "bokunoyasei",
+    "category": "extra",
+    "path": "decomoji/extra/bokunoyasei.png",
+    "created": "v5.33.0"
   },
   {
     "name": "bokunoyohaku",
@@ -9508,6 +9520,12 @@
     "category": "extra",
     "path": "decomoji/extra/buzikakutei.png",
     "created": "v5.32.0"
+  },
+  {
+    "name": "buzikannsi",
+    "category": "extra",
+    "path": "decomoji/extra/buzikannsi.png",
+    "created": "v5.33.0"
   },
   {
     "name": "buzikyougou",

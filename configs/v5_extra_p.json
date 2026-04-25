@@ -1007,6 +1007,18 @@
     "created": "v5.8.0"
   },
   {
+    "name": "poi",
+    "category": "extra",
+    "path": "decomoji/extra/poi.png",
+    "created": "v5.33.0"
+  },
+  {
+    "name": "poidesu",
+    "category": "extra",
+    "path": "decomoji/extra/poidesu.png",
+    "created": "v5.33.0"
+  },
+  {
     "name": "poinnthinngu",
     "category": "extra",
     "path": "decomoji/extra/poinnthinngu.png",
@@ -1251,6 +1263,12 @@
     "category": "extra",
     "path": "decomoji/extra/prdayo.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "prettier",
+    "category": "extra",
+    "path": "decomoji/extra/prettier.png",
+    "created": "v5.33.0"
   },
   {
     "name": "prkaiwai",
