@@ -27,13 +27,10 @@
     "commander": "^12.0.0",
     "date-fns": "^3.3.1",
     "email-validator": "^2.0.4",
-    "husky": "^8.0.3",
     "imagemin": "^8.0.1",
     "imagemin-optipng": "^8.0.0",
     "imagemin-pngquant": "^9.0.2",
     "inquirer": "^9.3.8",
-    "prettier": "^3.2.5",
-    "pretty-quick": "^4.0.0",
     "puppeteer": "^22.11.2"
   }
 }
