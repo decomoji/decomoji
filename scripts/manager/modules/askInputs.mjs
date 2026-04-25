@@ -105,7 +105,7 @@ const questions = (additional) => [
     validate: isInputs,
   },
   {
-    type: "list",
+    type: "rawlist",
     name: "mode",
     message: "モードを選択してください:",
     choices: MODE_ITEMS,
@@ -113,7 +113,7 @@ const questions = (additional) => [
   {
     when: ({ mode }) =>
       mode === "update" || mode === "upload" || mode === "remove",
-    type: "list",
+    type: "rawlist",
     message: "対象タイプを選択してください:",
     name: "term",
     choices: [
@@ -148,7 +148,7 @@ const questions = (additional) => [
   },
   {
     when: ({ term }) => term === "category",
-    type: "list",
+    type: "rawlist",
     message: "頭文字を選んで登録しますか？:",
     name: "first_letter_mode",
     choices: [
@@ -201,7 +201,7 @@ const questions = (additional) => [
   },
   // {
   //   when: ({ mode, term }) => (mode === "update" || mode === "upload") && term === "version",
-  //   type: "list",
+  //   type: "rawlist",
   //   message: "選択したバージョンに含まれる「露骨」カテゴリーのデコモジを追加対象に含めますか？:",
   //   name: "excludeExplicit",
   //   choices: [
@@ -232,7 +232,7 @@ const questions = (additional) => [
   {
     when: ({ mode }) =>
       mode === "update" || mode === "remove" || mode === "migration",
-    type: "list",
+    type: "rawlist",
     message: ({ mode }) => {
       const common = "削除の強さを選択してください:";
       const upgrade =
