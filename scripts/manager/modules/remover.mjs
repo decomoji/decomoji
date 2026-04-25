@@ -7,7 +7,6 @@ import { outputResultJson } from "../../utilities/outputResultJson.mjs";
 
 export const remover = async (inputs) => {
   const {
-    browser: BROWSER,
     configs: CONFIGS,
     debug: DEBUG,
     log: LOG,
@@ -49,8 +48,8 @@ export const remover = async (inputs) => {
   const _remove = async (inputs) => {
     // puppeteer でブラウザを起動する
     const browser = await puppeteer.launch({
-      devtools: BROWSER || DEBUG,
-      headless: BROWSER || DEBUG,
+      devtools: DEBUG,
+      headless: DEBUG,
     });
     // ページを追加する
     const page = await browser.newPage();
