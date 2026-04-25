@@ -6,7 +6,7 @@ import { getGitTagPairArray } from "../utilities/getGitTagPairArray.mjs";
 import { getMergedDiffOfCategories } from "../utilities/getMergedDiffOfCategories.mjs";
 import { getMergedDiffOfManages } from "../utilities/getMergedDiffOfManages.mjs";
 import { writeJsonFile } from "../utilities/writeJsonFile.mjs";
-import { ADDITIONALS } from "../models/constants.mjs";
+import { OVERRIDES } from "../models/constants.mjs";
 
 // デコモジオブジェクトの格納先
 const Seeds = {
@@ -84,17 +84,17 @@ Object.entries(Seeds.categories).forEach(async ([category, list]) => {
   if (list.length < 1) return;
   const _list = (
     category === "all"
-      ? [...list, ...ADDITIONALS.basic, ...ADDITIONALS.extra, ...ADDITIONALS.explicit]
-      : [...list, ...ADDITIONALS[category]]
+      ? [...list, ...OVERRIDES.basic, ...OVERRIDES.extra, ...OVERRIDES.explicit]
+      : [...list, ...OVERRIDES[category]]
   )
     .filter(({ removed }) => !removed)
     .sort((a, b) => a.name.localeCompare(b.name));
   await writeJsonFile(_list, `configs/${v(TAG_PREFIX)}_${category}.json`);
 });
 
-// Seeds.managesから v5_fixed.json, v5_rename.json を作る
+// v5_fixed.json, v5_rename.json を作る
 Object.entries(Seeds.manages).forEach(async ([manage, list]) => {
-  const _list = (manage === "rename" ? list.concat(ADDITIONALS.rename) : list).sort((a, b) =>
+  const _list = (manage === "rename" ? list.concat(OVERRIDES.rename) : list).sort((a, b) =>
     a.name.localeCompare(b.name),
   );
   await writeJsonFile(_list, `configs/${v(TAG_PREFIX)}_${manage}.json`);
