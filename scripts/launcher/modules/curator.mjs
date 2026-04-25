@@ -11,21 +11,15 @@ export const curator = async () => {
   const database = await getParsedJson("../database/v6.json");
 
   // curator 関数の文脈では history.version よりデコモジの created か updated が新しい場合にfilterすべきとして true を返す
-  const shouldBeFiltered = ({ current, history }) => {
+  const isCurrentNew = ({ current, history }) =>
     // current.major が大きいなら true
-    if (current.major > history.major) return true;
+    current.major > history.major ||
     // major が同じなら minor を見る
-    if (current.major === history.major && current.minor > history.minor) return true;
+    (current.major === history.major && current.minor > history.minor) ||
     // major と minor が同じなら patch を見る
-    if (
-      current.major === history.major &&
+    (current.major === history.major &&
       current.minor === history.minor &&
-      current.patch > history.patch
-    )
-      return true;
-    // それ以外は false
-    return false;
-  };
+      current.patch > history.patch);
 
   // history の version より新しいデコモジだけを抽出して返す
   const getCuratedDecomojis = (historyVersion) =>
@@ -41,7 +35,7 @@ export const curator = async () => {
               : item,
       )
       .filter(({ created, updated }) =>
-        shouldBeFiltered({
+        isCurrentNew({
           current: getParsedSemVerObject(isStringOfNotEmpty(updated) ? updated : created),
           history: getParsedSemVerObject(historyVersion),
         }),
