@@ -50,8 +50,8 @@ node scripts/generator/toDiffJson.mjs v5.x.0
 # 7. LIST-***.md を更新する
 node scripts/generator/toListMd.mjs
 
-# 8. Prettier の意志のままに整形する
-npx prettier --write .
+# 8. Oxfmt の意志のままに整形する
+npx oxfmt
 ```
 
 ## ドキュメント用画像の追加・修正
