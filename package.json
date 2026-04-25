@@ -23,13 +23,13 @@
   },
   "homepage": "https://github.com/decomoji/decomoji#readme",
   "devDependencies": {
-    "commander": "^12.0.0",
-    "date-fns": "^3.3.1",
+    "commander": "^14.0.3",
+    "date-fns": "^4.1.0",
     "email-validator": "^2.0.4",
-    "imagemin": "^8.0.1",
+    "imagemin": "^9.0.1",
     "imagemin-optipng": "^8.0.0",
-    "imagemin-pngquant": "^9.0.2",
-    "inquirer": "^9.3.8",
-    "puppeteer": "^22.11.2"
+    "imagemin-pngquant": "^10.0.0",
+    "inquirer": "^13.4.2",
+    "puppeteer": "^24.42.0"
   }
 }
