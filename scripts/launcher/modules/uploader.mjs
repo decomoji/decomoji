@@ -6,12 +6,7 @@ import { outputLogJson } from "../../utilities/outputLogJson.mjs";
 import { outputResultJson } from "../../utilities/outputResultJson.mjs";
 
 export const uploader = async (inputs) => {
-  const {
-    configs: CONFIGS,
-    debug: DEBUG,
-    includeExplicit: INCLUDE_EXPLICIT,
-    term: TERM,
-  } = inputs;
+  const { configs: CONFIGS, debug: DEBUG, includeExplicit: INCLUDE_EXPLICIT, term: TERM } = inputs;
 
   let i = 0; // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
   let FAILED = false;

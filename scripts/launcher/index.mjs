@@ -119,8 +119,5 @@ if (inputs) {
   assigner(INPUTS_FILE_NAME);
 } else {
   // --inputs オプション がない場合は inquirer を起動して対話的にオプションを作る
-  dialoger(
-    (inputs) => assigner({ ...inputs, configs: inputs.configs.reverse() }),
-    adhoc,
-  );
+  dialoger((inputs) => assigner({ ...inputs, configs: inputs.configs.reverse() }), adhoc);
 }

@@ -1,8 +1,5 @@
 import fs from "fs/promises";
-import {
-  getParsedSemVerObject,
-  isStringOfNotEmpty,
-} from "../../utilities/index.mjs";
+import { getParsedSemVerObject, isStringOfNotEmpty } from "../../utilities/index.mjs";
 
 // TODO: history.json のファイル名が histor.json になっているのを直す
 // uploadだけならいいが、updateの場合に必要な情報が不足してないか確認する
@@ -18,8 +15,7 @@ export const curator = async () => {
     // current.major が大きいなら true
     if (current.major > history.major) return true;
     // major が同じなら minor を見る
-    if (current.major === history.major && current.minor > history.minor)
-      return true;
+    if (current.major === history.major && current.minor > history.minor) return true;
     // major と minor が同じなら patch を見る
     if (
       current.major === history.major &&
@@ -46,9 +42,7 @@ export const curator = async () => {
       )
       .filter(({ created, updated }) =>
         shouldBeFiltered({
-          current: getParsedSemVerObject(
-            isStringOfNotEmpty(updated) ? updated : created,
-          ),
+          current: getParsedSemVerObject(isStringOfNotEmpty(updated) ? updated : created),
           history: getParsedSemVerObject(historyVersion),
         }),
       );
