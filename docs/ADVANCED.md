@@ -85,10 +85,10 @@ scripst/manager の削除スクリプトは、デフォルトでは自分が登�
 node scripts/generator/toDiffJson.js v5.100.0
 ```
 
-指定のバージョンを `--additinal` オプションに渡すと、
+指定のバージョンを `--adhoc` オプションに渡すと、
 
 ```bash
-node scripts/manager/index.mjs --additional v5.100.0
+node scripts/manager/index.mjs --adhoc v5.100.0
 ```
 
 登録スクリプト実行時のバージョン選択に「ユーザーが追加したバージョン」として表示されます。

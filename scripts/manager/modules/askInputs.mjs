@@ -84,7 +84,7 @@ const FULL_VERSIONS_ITEMS = getGitTagArray("v5")
   }));
 
 // inquirer Setting
-const questions = (additional) => [
+const questions = (adhoc) => [
   {
     type: "input",
     name: "workspace",
@@ -189,10 +189,10 @@ const questions = (additional) => [
     message: "バージョンを選択してください:",
     name: "configs",
     choices: () => {
-      if (additional) {
+      if (adhoc) {
         FULL_VERSIONS_ITEMS.unshift({
-          name: `${additional}（ユーザーが追加したバージョン）`,
-          value: additional,
+          name: `${adhoc}（ad hocなバージョン）`,
+          value: adhoc,
         });
       }
       return [new inquirer.Separator(), ...FULL_VERSIONS_ITEMS];
@@ -254,6 +254,6 @@ const questions = (additional) => [
   },
 ];
 
-export const askInputs = (callback, additional) => {
-  inquirer.prompt(questions(additional)).then(callback);
+export const askInputs = (callback, adhoc) => {
+  inquirer.prompt(questions(adhoc)).then(callback);
 };

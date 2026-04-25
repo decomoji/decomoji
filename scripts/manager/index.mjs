@@ -12,14 +12,14 @@ const DEFAULT_INPUT_NAME = "inputs.json";
 
 // コマンドライン引数の定義
 program
-  .option("-a, --additional <version>", "additional custom version name")
+  .option("-i, --inputs <name>", "inputs.jsonなどのファイル名を指定します")
+  .option("-l, --log", "ログファイルを出力します。")
+  .option("-t, --time", "実行時間を計測し、標準出力します。")
   .option(
     "-d, --debug",
-    "full debugging mode (open browser, output data log, output up time, If an error then stand by without exiting.)",
+    "デバッグモードで実行します。-l オプションと -t オプションに加え、ブラウザを表示して実行します。エラーが発生しても終了せず停止します。",
   )
-  .option("-i, --inputs <type>", "input setting json file")
-  .option("-l, --log", "output data log")
-  .option("-t, --time", "output up time");
+  .option("-a, --adhoc <version>", "ad hocに選択可能にしたいバージョンを指定します。")
 
 program.parse(process.argv);
 const options = program.opts();
@@ -150,6 +150,6 @@ if (options.inputs) {
   // --inputs オプション がない場合は inquirer を起動して対話的にオプションを作る
   askInputs(
     (inputs) => main({ ...inputs, configs: inputs.configs.reverse() }),
-    options.additional,
+    options.adhoc,
   );
 }

@@ -29,8 +29,8 @@ node scripts/generator/optimize.mjs explicit
 node scripts/generator/toDiffJson.mjs v5.x.0
 コマンドに更新する予定のバージョン名が必要。
 
-# 6. `--additinal` オプションで登録スクリプトを実行し、登録がうまくいくか確認する
-node scripts/manager/index.mjs -l -t --additional v5.x.0
+# 6. `--adhoc` オプションで登録スクリプトを実行し、登録がうまくいくか確認する
+node scripts/manager/index.mjs -lta v5.x.0
 
 `error_name_taken_i18n` エラーなどになったら適宜ファイル名を変更する。
 
