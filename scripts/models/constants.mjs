@@ -1,5 +1,5 @@
 // git 操作に失敗した子達
-export const ADDITIONALS = {
+export const OVERRIDES = {
   basic: [],
   extra: [
     {
