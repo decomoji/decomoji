@@ -80,11 +80,7 @@ export const remover = async (inputs) => {
 
       console.info(
         `${i + 1}/${localDecomojiListLength}: ${
-          res.ok
-            ? messages.ok
-            : res.error === "emoji_not_found"
-              ? messages[res.error]
-              : res.error
+          res.ok ? messages.ok : res.error === "emoji_not_found" ? messages[res.error] : res.error
         } ${name}`,
       );
 

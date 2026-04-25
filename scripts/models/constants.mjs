@@ -44,15 +44,7 @@ export const IGNORES = {
   explicit: [],
   extra: ["nasca\\343\\201\\247", "true false"],
   fixed: ["nasca\\343\\201\\247", "true false"],
-  rename: [
-    "nasca\\343\\201\\247",
-    "joinsiyo",
-    "zyoinsiyo",
-    "true false",
-    "genntennkaikinotikubi",
-  ],
+  rename: ["nasca\\343\\201\\247", "joinsiyo", "zyoinsiyo", "true false", "genntennkaikinotikubi"],
 };
 
-export const FIRST_LETTERS = Array.from(
-  "_0123456789abcdefghijklmnopqrstuvwxyz",
-);
+export const FIRST_LETTERS = Array.from("_0123456789abcdefghijklmnopqrstuvwxyz");

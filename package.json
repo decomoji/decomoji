@@ -3,25 +3,25 @@
   "version": "5.32.0",
   "description": "Slack のリアクション機能で使える最強カスタム絵文字セットです。",
   "keywords": [
-    "decomoji",
-    "slack",
     "custom emoji",
-    "emoji"
+    "decomoji",
+    "emoji",
+    "slack"
   ],
-  "main": "",
-  "scripts": {
-    "manager": "node scripts/manager/index.mjs -lt"
+  "homepage": "https://github.com/decomoji/decomoji#readme",
+  "bugs": {
+    "url": "https://github.com/decomoji/decomoji/issues"
   },
+  "license": "MIT",
+  "author": "oti",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/decomoji/decomoji.git"
   },
-  "author": "oti",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/decomoji/decomoji/issues"
+  "main": "",
+  "scripts": {
+    "manager": "node scripts/manager/index.mjs -lt"
   },
-  "homepage": "https://github.com/decomoji/decomoji#readme",
   "devDependencies": {
     "commander": "^14.0.3",
     "date-fns": "^4.1.0",

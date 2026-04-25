@@ -10,8 +10,7 @@ export const recursiveInputAccount = async (browser, page, inputs) => {
       {
         type: "input",
         name: "email",
-        message:
-          "ログインに失敗しました。正しいメールアドレスを入力してください:",
+        message: "ログインに失敗しました。正しいメールアドレスを入力してください:",
         validate: isEmail,
         default: inputs.email,
       },
@@ -28,9 +27,7 @@ export const recursiveInputAccount = async (browser, page, inputs) => {
     inputs.password = password;
     // CAPTCHA が出ていたら諦めて終了する
     if (await page.$("#slack_captcha").then((res) => !!res)) {
-      console.error(
-        "[ERROR]Oops, you might judged a bot. Please wait and try again.",
-      );
+      console.error("[ERROR]Oops, you might judged a bot. Please wait and try again.");
       await browser.close();
     }
     // フォームに再入力してサインインする

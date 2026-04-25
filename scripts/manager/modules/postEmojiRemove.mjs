@@ -6,13 +6,10 @@ export const postEmojiRemove = async (page, workspace, emojiName) => {
       formData.append("name", emojiName);
       formData.append("token", window.boot_data.api_token);
       try {
-        const response = await fetch(
-          `https://${workspace}.slack.com/api/emoji.remove`,
-          {
-            method: "POST",
-            body: formData,
-          },
-        );
+        const response = await fetch(`https://${workspace}.slack.com/api/emoji.remove`, {
+          method: "POST",
+          body: formData,
+        });
         return await response.json();
       } catch (error) {
         return error;

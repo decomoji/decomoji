@@ -8,13 +8,10 @@ export const postEmojiAlias = async (page, workspace, emojiName, aliasFor) => {
       formData.append("alias_for", aliasFor);
       formData.append("token", window.boot_data.api_token);
       try {
-        const response = await fetch(
-          `https://${workspace}.slack.com/api/emoji.add`,
-          {
-            method: "POST",
-            body: formData,
-          },
-        );
+        const response = await fetch(`https://${workspace}.slack.com/api/emoji.add`, {
+          method: "POST",
+          body: formData,
+        });
         return await response.json();
       } catch (error) {
         return error;

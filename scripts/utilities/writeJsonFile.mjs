@@ -17,9 +17,7 @@ export const writeJsonFile = async (buffer, filepath) => {
         break;
       case "[object Object]":
         Object.keys(parsedData).forEach((key) => {
-          console.log(
-            `${filepath}, ${key.padEnd(6)}: ${parsedData[key].length}`,
-          );
+          console.log(`${filepath}, ${key.padEnd(6)}: ${parsedData[key].length}`);
         });
         break;
       default:

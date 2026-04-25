@@ -111,8 +111,7 @@ const questions = (adhoc) => [
     choices: MODE_ITEMS,
   },
   {
-    when: ({ mode }) =>
-      mode === "update" || mode === "upload" || mode === "remove",
+    when: ({ mode }) => mode === "update" || mode === "upload" || mode === "remove",
     type: "rawlist",
     message: "対象タイプを選択してください:",
     name: "term",
@@ -230,13 +229,11 @@ const questions = (adhoc) => [
     validate: isSelects,
   },
   {
-    when: ({ mode }) =>
-      mode === "update" || mode === "remove" || mode === "migration",
+    when: ({ mode }) => mode === "update" || mode === "remove" || mode === "migration",
     type: "rawlist",
     message: ({ mode }) => {
       const common = "削除の強さを選択してください:";
-      const upgrade =
-        "更新及び移行モードでは修正された古いデコモジを削除します。";
+      const upgrade = "更新及び移行モードでは修正された古いデコモジを削除します。";
       return mode === "remove" ? `${common}` : `${upgrade}${common}`;
     },
     name: "forceRemove",

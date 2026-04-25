@@ -10,7 +10,5 @@ export const getGitDiffOfRenameArray = (from, to) => {
     : `git diff ${from} --name-status --diff-filter=R`;
   const resultBuffer = execSync(cmd);
   if (!resultBuffer) return;
-  return convertBufferToArray(resultBuffer).map((v) =>
-    v.replace("R100\t", "").split("\t"),
-  );
+  return convertBufferToArray(resultBuffer).map((v) => v.replace("R100\t", "").split("\t"));
 };

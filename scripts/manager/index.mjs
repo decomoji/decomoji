@@ -19,7 +19,7 @@ program
     "-d, --debug",
     "デバッグモードで実行します。-l オプションと -t オプションに加え、ブラウザを表示して実行します。エラーが発生しても終了せず停止します。",
   )
-  .option("-a, --adhoc <version>", "ad hocに選択可能にしたいバージョンを指定します。")
+  .option("-a, --adhoc <version>", "ad hocに選択可能にしたいバージョンを指定します。");
 
 program.parse(process.argv);
 const options = program.opts();
@@ -38,10 +38,7 @@ const main = async (INPUTS) => {
     first_letter_mode: INPUTS.first_letter_mode,
     selected_first_letters: INPUTS.selected_first_letters,
     forceRemove: INPUTS.forceRemove || false,
-    excludeExplicit:
-      typeof INPUTS.excludeExplicit === "undefined"
-        ? true
-        : INPUTS.excludeExplicit,
+    excludeExplicit: typeof INPUTS.excludeExplicit === "undefined" ? true : INPUTS.excludeExplicit,
     log: options.log || options.debug,
     time: options.time || options.debug,
     debug: options.debug,
@@ -50,10 +47,7 @@ const main = async (INPUTS) => {
   const TIME = _inputs.time;
 
   // 頭文字ごとに登録する場合、 configs を上書きする
-  if (
-    _inputs.first_letter_mode &&
-    !_inputs.selected_first_letters.includes("all")
-  ) {
+  if (_inputs.first_letter_mode && !_inputs.selected_first_letters.includes("all")) {
     _inputs.configs = _inputs.selected_first_letters.flatMap((cafl) =>
       _inputs.configs.map((config) => `${config}_${cafl}`),
     );
@@ -101,10 +95,8 @@ Connecting...
       console.log("All migration step has completed!");
       break;
     case "update":
-      const removeConfigs =
-        _inputs.term === "version" ? _inputs.configs : ["v5_fixed"];
-      const aliasConfigs =
-        _inputs.term === "version" ? _inputs.configs : ["v5_rename"];
+      const removeConfigs = _inputs.term === "version" ? _inputs.configs : ["v5_fixed"];
+      const aliasConfigs = _inputs.term === "version" ? _inputs.configs : ["v5_rename"];
       console.log(`Remove "${removeConfigs}" starting...`);
       const _inputs1 = await remover({
         ..._inputs,
@@ -142,14 +134,9 @@ if (options.log) {
 if (options.inputs) {
   // --inputs inputs.hoge.json などのファイルパスが指定されていたらそれを import し、
   // --inputs オプションがキーのみの場合はデフォルトで `./inputs.json` を import する
-  const FILE = isStringOfNotEmpty(options.inputs)
-    ? options.inputs
-    : DEFAULT_INPUT_NAME;
+  const FILE = isStringOfNotEmpty(options.inputs) ? options.inputs : DEFAULT_INPUT_NAME;
   main(await getParsedJson(`../manager/${FILE}`));
 } else {
   // --inputs オプション がない場合は inquirer を起動して対話的にオプションを作る
-  askInputs(
-    (inputs) => main({ ...inputs, configs: inputs.configs.reverse() }),
-    options.adhoc,
-  );
+  askInputs((inputs) => main({ ...inputs, configs: inputs.configs.reverse() }), options.adhoc);
 }

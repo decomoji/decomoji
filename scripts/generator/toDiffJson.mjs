@@ -56,10 +56,7 @@ Object.entries(gitDiffAsTag)
     // diffAsFilterMode からバージョンを統合して { basic, extra, explicit } に再分配する
     const diffAsCategory = getDecomojiDiffAsCategory(diffAsFilterMode);
     // Seeds に差分をマージしてまとめる
-    Seeds.categories = getMergedDiffOfCategories(
-      diffAsCategory,
-      Seeds.categories,
-    );
+    Seeds.categories = getMergedDiffOfCategories(diffAsCategory, Seeds.categories);
     Seeds.manages = getMergedDiffOfManages(diffAsFilterMode, Seeds.manages);
   });
 
@@ -69,12 +66,7 @@ Object.entries(Seeds.categories).forEach(async (entry) => {
   if (list.length < 1) return;
   const _list = (
     category === "all"
-      ? [
-          ...list,
-          ...ADDITIONALS.basic,
-          ...ADDITIONALS.extra,
-          ...ADDITIONALS.explicit,
-        ]
+      ? [...list, ...ADDITIONALS.basic, ...ADDITIONALS.extra, ...ADDITIONALS.explicit]
       : [...list, ...ADDITIONALS[category]]
   )
     .filter(({ removed }) => !removed)
@@ -83,18 +75,15 @@ Object.entries(Seeds.categories).forEach(async (entry) => {
 
   FIRST_LETTERS.flatMap(async (letter) => {
     const _filtered = _list.filter(({ name }) => name.slice(0, 1) === letter);
-    await writeJsonFile(
-      _filtered,
-      `configs/${v(TAG_PREFIX)}_${category}_${letter}.json`,
-    );
+    await writeJsonFile(_filtered, `configs/${v(TAG_PREFIX)}_${category}_${letter}.json`);
   });
 });
 
 // v5_fixed.json, v5_rename.json を作る
 Object.entries(Seeds.manages).forEach(async (entry) => {
   const [manage, list] = entry;
-  const _list = (
-    manage === "rename" ? list.concat(ADDITIONALS.rename) : list
-  ).sort((a, b) => a.name.localeCompare(b.name));
+  const _list = (manage === "rename" ? list.concat(ADDITIONALS.rename) : list).sort((a, b) =>
+    a.name.localeCompare(b.name),
+  );
   await writeJsonFile(_list, `configs/${v(TAG_PREFIX)}_${manage}.json`);
 });

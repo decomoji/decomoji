@@ -28,9 +28,7 @@ export const uploader = async (inputs) => {
   // バージョンごとに追加するとき、excludeExplicit=true なら explicit デコモジを取り除く
   const localDecomojiList =
     TERM === "version" && EXCLUDE_EXPLICIT
-      ? rawLocalDecomojiList.filter(
-          ({ path }) => !RegExp("explicit").test(path),
-        )
+      ? rawLocalDecomojiList.filter(({ path }) => !RegExp("explicit").test(path))
       : rawLocalDecomojiList;
   const localDecomojiListLength = localDecomojiList.length;
 
@@ -91,8 +89,7 @@ export const uploader = async (inputs) => {
         `${i + 1}/${localDecomojiListLength}: ${
           res.ok
             ? messages.ok
-            : res.error === "error_name_taken" ||
-                res.error === "error_name_taken_i18n"
+            : res.error === "error_name_taken" || res.error === "error_name_taken_i18n"
               ? messages[res.error]
               : res.error
         } ${name}`,
@@ -101,8 +98,7 @@ export const uploader = async (inputs) => {
       // ログファイルに結果を入れる
       res.ok
         ? result.ok.push(name)
-        : res.error === "error_name_taken" ||
-            res.error === "error_name_taken_i18n"
+        : res.error === "error_name_taken" || res.error === "error_name_taken_i18n"
           ? result[res.error].push(name)
           : res.error === "ratelimited" // ratelimited エラーの場合はログに残さない
             ? void 0

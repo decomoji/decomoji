@@ -27,15 +27,12 @@ export const postEmojiAdd = async (page, workspace, emojiName, emojiPath) => {
       const formData = new FormData(document.querySelector(`#${uploadFormId}`));
       formData.append("name", emojiName);
       try {
-        const response = await fetch(
-          `https://${workspace}.slack.com/api/emoji.add`,
-          {
-            method: "POST",
-            mode: "cors",
-            credentials: "include",
-            body: formData,
-          },
-        );
+        const response = await fetch(`https://${workspace}.slack.com/api/emoji.add`, {
+          method: "POST",
+          mode: "cors",
+          credentials: "include",
+          body: formData,
+        });
         return await response.json();
       } catch (error) {
         return error;

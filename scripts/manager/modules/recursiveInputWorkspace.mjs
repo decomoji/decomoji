@@ -13,12 +13,9 @@ export const recursiveInputWorkspace = async (page, inputs) => {
     // チーム名を保存し直す
     inputs.workspace = workspace;
     // ログイン画面に再び遷移する
-    await page.goto(
-      `https://${workspace}.slack.com/?redir=%2Fcustomize%2Femoji#/`,
-      {
-        waitUntil: "domcontentloaded",
-      },
-    );
+    await page.goto(`https://${workspace}.slack.com/?redir=%2Fcustomize%2Femoji#/`, {
+      waitUntil: "domcontentloaded",
+    });
     // ログイン画面に遷移できたかを再びチェックし、できていたら再帰処理を抜ける
     if (await page.$("#signin_form").then((res) => !!res)) {
       return inputs;
