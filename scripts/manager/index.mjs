@@ -12,13 +12,13 @@ const DEFAULT_INPUT_NAME = "inputs.json";
 
 // コマンドライン引数の定義
 program
-  .option("-a, --additional [version]", "additional custom version name")
+  .option("-a, --additional <version>", "additional custom version name")
   .option("-b, --browser", "open browser")
   .option(
     "-d, --debug",
     "full debugging mode (open browser, output data log, output up time, If an error then stand by without exiting.)",
   )
-  .option("-i, --inputs [type]", "input setting json file")
+  .option("-i, --inputs <type>", "input setting json file")
   .option("-l, --log", "output data log")
   .option("-t, --time", "output up time");
 
