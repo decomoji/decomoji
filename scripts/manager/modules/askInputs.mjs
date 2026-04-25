@@ -13,8 +13,8 @@ const MODE_ITEMS = [
     value: "update",
   },
   {
-    name: "登録",
-    value: "upload",
+    name: "初回インストール",
+    value: "install",
   },
   {
     name: "削除",
@@ -111,7 +111,7 @@ const questions = (adhoc) => [
     choices: MODE_ITEMS,
   },
   {
-    when: ({ mode }) => mode === "update" || mode === "upload" || mode === "remove",
+    when: ({ mode }) => mode === "update" || mode === "install" || mode === "remove",
     type: "rawlist",
     message: "対象タイプを選択してください:",
     name: "term",

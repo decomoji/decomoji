@@ -14,7 +14,7 @@
   "workspace": "<workspace>",
   "email": "<email>",
   "password": "<password>",
-  "mode": "upload",
+  "mode": "install",
   "term": "category",
   "configs": ["v5_basic", "v5_extra"]
 }
@@ -73,7 +73,7 @@ scripst/manager の削除スクリプトは、デフォルトでは自分が登�
 
 `excludeExplicit` キーが存在しない場合、 `excludeExplicit: true` として振る舞います。
 
-このオプションは追加か更新モード（`mode === "upload" || mode === "update"`）でかつ対象タイプがバージョン（`term === "version"`）の時のみ有効です。
+このオプションは追加か更新モード（`mode === "install" || mode === "update"`）でかつ対象タイプがバージョン（`term === "version"`）の時のみ有効です。
 
 ## タギングされていないオリジナルのバージョンを登録する
 
@@ -145,8 +145,8 @@ Slack の仕様により、１つのエイリアス名には複数のエイリ�
 | workspace       | `string`                                                                                                                                                                       | `"decomoji"`                                         | ワークスペースのサブドメインです。                                                                                                   |
 | email           | `email`                                                                                                                                                                        | `"otiext@gmail.com"`                                 |                                                                                                                                      |
 | password        | `string`                                                                                                                                                                       | `"hogehoge"`                                         |                                                                                                                                      |
-| mode            | `"upload" \| "alias" \| "remove" \| "update"`                                                                                                                                  | `"upload"`                                           |
+| mode            | `"install" \| "alias" \| "remove" \| "update"`                                                                                                                                 | `"install"`                                          |
 | term            | `"category" \| "version"`                                                                                                                                                      | `"category"`                                         | デコモジをカテゴリーごとに選択するかバージョンごとに選択するか                                                                       |
 | configs         | `("v4_all" \| "v4_basic" \| "v4_extra" \| "v4_fixed" \| "v5_all" \| "v5_basic" \| "v5_extra" \| "v5_explicit" \| "v4_rename" \| "v5_rename \| <TAG_VERSION_NAME> \| string)[]` | `["v5_basic", "v5_extra"]`, `["v5.18.0", "v5.17.3"]` | configs/ に格納した json ファイル名を値にとる配列                                                                                    |
 | forceRemove     | `boolean`                                                                                                                                                                      | `false`                                              | mode="remove" で `true` の時、他ユーザーが登録したカスタム絵文字も削除対象に含めます。対象に含めても権限がない場合は削除されません。 |
-| excludeExplicit | `boolean`                                                                                                                                                                      | `true`                                               | mode="upload" か mode="update" でかつ term="version" の時のみ有効です。デフォルトでは `true` として振る舞います。                    |
+| excludeExplicit | `boolean`                                                                                                                                                                      | `true`                                               | mode="install" か mode="update" でかつ term="version" の時のみ有効です。デフォルトでは `true` として振る舞います。                   |
