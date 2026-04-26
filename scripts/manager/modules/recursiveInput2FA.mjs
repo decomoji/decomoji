@@ -21,7 +21,7 @@ export const recursiveInput2FA = async (browser, page, inputs) => {
     await $2fa.type(twofactor_code);
     await page.waitForNavigation({ waitUntil: "networkidle2" });
     // 2FA入力欄がなかったら2FA認証できたと見なして再帰処理を抜ける
-    if (await page.$('[name="2fa_code"]').then((res) => !res)) {
+    if (!(await page.$('[name="2fa_code"]'))) {
       console.info("2FA Verified!");
       return inputs;
     }

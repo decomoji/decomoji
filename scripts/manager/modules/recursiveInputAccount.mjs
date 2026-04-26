@@ -26,7 +26,7 @@ export const recursiveInputAccount = async (browser, page, inputs) => {
     inputs.email = email;
     inputs.password = password;
     // CAPTCHA が出ていたら諦めて終了する
-    if (await page.$("#slack_captcha").then((res) => !!res)) {
+    if (await page.$("#slack_captcha")) {
       console.error("[ERROR]Oops, you might judged a bot. Please wait and try again.");
       await browser.close();
     }
@@ -42,7 +42,7 @@ export const recursiveInputAccount = async (browser, page, inputs) => {
       page.waitForNavigation({ waitUntil: "networkidle2" }),
     ]);
     // #signin_form がなかったらログインできたと見なして再帰処理を抜ける
-    if (await page.$("#signin_form").then((res) => !res)) {
+    if (!(await page.$("#signin_form"))) {
       console.info("Login successful!");
       return inputs;
     }

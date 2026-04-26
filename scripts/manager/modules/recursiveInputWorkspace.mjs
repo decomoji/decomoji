@@ -17,7 +17,7 @@ export const recursiveInputWorkspace = async (page, inputs) => {
       waitUntil: "domcontentloaded",
     });
     // ログイン画面に遷移できたかを再びチェックし、できていたら再帰処理を抜ける
-    if (await page.$("#signin_form").then((res) => !!res)) {
+    if (await page.$("#signin_form")) {
       return inputs;
     }
     // ログインページに到達できるまで何度でもトライ！

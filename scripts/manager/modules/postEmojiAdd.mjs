@@ -2,7 +2,7 @@ export const postEmojiAdd = async (page, workspace, emojiName, emojiPath) => {
   const uploadFormId = "decomoji_upload_form";
 
   // 1度だけページにアップロード用の form 要素を挿入する
-  if (await page.$(`#${uploadFormId}`).then((res) => !res)) {
+  if (!(await page.$(`#${uploadFormId}`))) {
     await page.evaluate(async (uploadFormId) => {
       const form = document.createElement("form");
       const token = window.boot_data.api_token;

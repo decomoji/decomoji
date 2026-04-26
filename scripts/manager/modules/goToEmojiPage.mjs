@@ -33,7 +33,7 @@ export const goToEmojiPage = async (browser, page, inputs) => {
   }
 
   // CAPTCHA が出ていたら諦めて終了する
-  if (await page.$("#slack_captcha").then((res) => !!res)) {
+  if (await page.$("#slack_captcha")) {
     console.error("[ERROR]Oops, you might judged a bot. Please wait and try again.");
     await browser.close();
   }
@@ -50,7 +50,7 @@ export const goToEmojiPage = async (browser, page, inputs) => {
   ]);
 
   // ログインエラーになっていたら email と password を再入力させる
-  if (await page.$(".c-input_text--with_error").then((res) => !!res)) {
+  if (await page.$(".c-input_text--with_error")) {
     inputs = await recursiveInputAccount(browser, page, inputs).catch((error) => {
       console.error(error);
       process.exit(1);
@@ -58,7 +58,7 @@ export const goToEmojiPage = async (browser, page, inputs) => {
   }
 
   // 2FA入力欄があったら入力させる
-  if (await page.$('[name="2fa_code"]').then((res) => !!res)) {
+  if (await page.$('[name="2fa_code"]')) {
     inputs = await recursiveInput2FA(browser, page, inputs).catch((error) => {
       console.error(error);
       process.exit(1);
