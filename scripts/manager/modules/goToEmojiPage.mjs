@@ -14,8 +14,18 @@ export const goToEmojiPage = async (browser, page, inputs) => {
     },
   );
 
-  // チームが存在しない場合、workspace を再入力させる
-  if (await page.$("#signin_form").then((res) => !res)) {
+  // SSOログインが有効なときはフォームがないのでパスワードログイン用の画面に遷移する
+  if (await page.$("form[action='/?no_sso=1']")) {
+    await page.goto(
+      `https://${inputs.workspace}.slack.com/?no_sso=1&redir=%2Fcustomize%2Femoji#/`,
+      {
+        waitUntil: "domcontentloaded",
+      },
+    );
+  }
+
+  // ログインフォームが見つからない場合、チームが存在しないと判断して workspace を再入力させる
+  if (!(await page.$("#signin_form"))) {
     inputs = await recursiveInputWorkspace(page, inputs).catch((error) => {
       console.error(error);
       process.exit(1);
