@@ -46,7 +46,6 @@ export const pretender = async (inputs) => {
     // puppeteer でブラウザを起動する
     const browser = await puppeteer.launch({
       devtools: DEBUG,
-      headless: DEBUG,
     });
     // ページを追加する
     const page = await browser.newPage();
