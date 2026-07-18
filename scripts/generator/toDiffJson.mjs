@@ -36,14 +36,32 @@ if (!TAG_UPDATE_CANDIDATE) {
 const tagPairs = getGitTagPairArray(TAG_PREV, TAG_PREFIX, TAG_UPDATE_CANDIDATE);
 
 // git tag ごとの差分を保存する
-const gitDiffAsTag = getDecomojiGitDiffAsTag(tagPairs);
+const gitDiffAsTagRaw = getDecomojiGitDiffAsTag(tagPairs);
 // await writeJsonFile(gitDiffAsTag, `configs/${v(TAG_PREFIX)}_diff.json`);
 
-// 実行！
-writeJsonFile(
-  tagPairs.map((v) => v.to),
-  `configs/v5_versions.json`,
+// デコモジファイルの変更があるバージョンのみに抽出する
+/**
+ * 例えば以下のようなバージョンを除外する
+ * "v5.33.1": {
+    "upload": [],
+    "modify": [],
+    "rename": [],
+    "delete": []
+  }
+ */
+const gitDiffAsTag = Object.fromEntries(
+  Object.entries(gitDiffAsTagRaw).filter(
+    ([_, diff]) =>
+      diff.upload.length > 0 ||
+      diff.modify.length > 0 ||
+      diff.rename.length > 0 ||
+      diff.delete.length > 0,
+  ),
 );
+
+// 有効なバージョンのリストを configs/v5_versions.json に書き出す
+writeJsonFile(Object.keys(gitDiffAsTag), `configs/${v(TAG_PREFIX)}_versions.json`);
+
 Object.entries(gitDiffAsTag)
   .map((entry) => {
     const [tag, list] = entry;
