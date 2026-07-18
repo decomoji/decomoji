@@ -2,6 +2,7 @@ import inquirer from "inquirer";
 import { format } from "date-fns";
 import { getGitTagArray } from "../../utilities/getGitTagArray.mjs";
 import { getGitTaggingDateArray } from "../../utilities/getGitTaggingDateArray.mjs";
+import { getParsedJson } from "../../utilities/getParsedJson.mjs";
 import { isEmail } from "../../utilities/isEmail.mjs";
 import { isInputs } from "../../utilities/isInputs.mjs";
 import { isSelects } from "../../utilities/isSelects.mjs";
@@ -76,7 +77,7 @@ const V5_TAGGING_DATES = getGitTaggingDateArray()
     {},
   );
 
-const FULL_VERSIONS_ITEMS = getGitTagArray("v5")
+const AVAILABLE_VERSION_ITEMS = (await getParsedJson("../../configs/v5_versions.json"))
   .sort((a, b) => b.localeCompare(a, undefined, { numeric: true }))
   .map((tag) => ({
     name: `${tag}（${V5_TAGGING_DATES[tag]}）`,
@@ -189,12 +190,12 @@ const questions = (adhoc) => [
     name: "configs",
     choices: () => {
       if (adhoc) {
-        FULL_VERSIONS_ITEMS.unshift({
+        AVAILABLE_VERSION_ITEMS.unshift({
           name: `${adhoc}（ad hocなバージョン）`,
           value: adhoc,
         });
       }
-      return [new inquirer.Separator(), ...FULL_VERSIONS_ITEMS];
+      return [new inquirer.Separator(), ...AVAILABLE_VERSION_ITEMS];
     },
     validate: isSelects,
   },
