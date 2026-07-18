@@ -23,13 +23,18 @@
     "manager": "node scripts/manager/index.mjs -lt"
   },
   "devDependencies": {
-    "commander": "^14.0.3",
-    "date-fns": "^4.1.0",
+    "commander": "^15.0.0",
+    "date-fns": "^4.4.0",
     "email-validator": "^2.0.4",
     "imagemin": "^9.0.1",
     "imagemin-optipng": "^8.0.0",
     "imagemin-pngquant": "^10.0.0",
-    "inquirer": "^13.4.2",
-    "puppeteer": "^24.42.0"
+    "inquirer": "^14.0.2",
+    "puppeteer": "^25.3.0"
+  },
+  "allowScripts": {
+    "optipng-bin@7.0.1": true,
+    "pngquant-bin@9.0.0": true,
+    "puppeteer@25.3.0": true
   }
 }
