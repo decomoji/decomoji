@@ -33,6 +33,7 @@ if (!TAG_UPDATE_CANDIDATE) {
 }
 
 // git tag のペアを作る
+// [{ "from": "4.27.0", "to": "v5.0.0" }, { "from": "5.0.0", "to": "v5.1.0" }, ...]
 const tagPairs = getGitTagPairArray(TAG_PREV, TAG_PREFIX, TAG_UPDATE_CANDIDATE);
 
 // git tag ごとの差分を保存する
@@ -62,9 +63,9 @@ const gitDiffAsTag = Object.fromEntries(
 // 有効なバージョンのリストを configs/v5_versions.json に書き出す
 writeJsonFile(Object.keys(gitDiffAsTag), `configs/${v(TAG_PREFIX)}_versions.json`);
 
+// Seeds に差分をマージしてまとめる
 Object.entries(gitDiffAsTag)
-  .map((entry) => {
-    const [tag, list] = entry;
+  .map(([tag, list]) => {
     // diff-filter の結果を { fixed, upload, rename } に再分配し JSON に書き出す
     const diffAsFilterMode = getDecomojiDiffAsFilterMode(list, tag);
     writeJsonFile(diffAsFilterMode, `configs/${v(tag)}.json`);
@@ -78,9 +79,8 @@ Object.entries(gitDiffAsTag)
     Seeds.manages = getMergedDiffOfManages(diffAsFilterMode, Seeds.manages);
   });
 
-// v5_all.json, v5_basic.json, v5_extra.json, v5_explicit.json を作る
-Object.entries(Seeds.categories).forEach(async (entry) => {
-  const [category, list] = entry;
+// Seeds.categoriesから v5_all.json, v5_basic.json, v5_extra.json, v5_explicit.json を作る
+Object.entries(Seeds.categories).forEach(async ([category, list]) => {
   if (list.length < 1) return;
   const _list = (
     category === "all"
@@ -97,9 +97,8 @@ Object.entries(Seeds.categories).forEach(async (entry) => {
   });
 });
 
-// v5_fixed.json, v5_rename.json を作る
-Object.entries(Seeds.manages).forEach(async (entry) => {
-  const [manage, list] = entry;
+// Seeds.managesから v5_fixed.json, v5_rename.json を作る
+Object.entries(Seeds.manages).forEach(async ([manage, list]) => {
   const _list = (manage === "rename" ? list.concat(ADDITIONALS.rename) : list).sort((a, b) =>
     a.name.localeCompare(b.name),
   );
