@@ -1,86 +1,50 @@
 import { curator, pretender, remover, uploader } from "./index.mjs";
 
-export const assigner = async ({
-  workspace,
-  email,
-  password,
-  mode,
-  term,
-  configs,
-  includeExplicit,
-  debug,
-}) => {
-  // 自動実行に必要な設定ファイルを作る
-  const _inputs = {
-    workspace,
-    email,
-    password,
-    mode,
-    term,
-    configs,
-    includeExplicit,
-    debug,
-  };
-
+/**
+ * inputs = {
+ *   workspace,
+ *   email,
+ *   password,
+ *   mode,
+ *   term,
+ *   configs,
+ *   includeExplicit,
+ *   debug,
+ * }
+ */
+// mode に合わせて uploader(), remover(), pretender() を呼び分ける
+export const assigner = async (inputs) => {
   console.info(`
-workspace        : https://${workspace}.slack.com/
-email            : ${email}
-mode             : ${mode}
-term             : ${term}
-configs          : ${configs}
-includeExplicit  : ${includeExplicit}
-
 Connecting...
 `);
-
-  // 処理するデコモジリストを取得
-  console.time("Curation time");
-  const curatedDecomojis = curator();
-  console.timeEnd("Curation time");
 
   console.time("[Total time]");
   switch (mode) {
     case "install":
-      await uploader(_inputs);
+      await uploader({ ...inputs, decomojis });
       break;
     case "alias":
-      await pretender(_inputs);
+      await pretender({ ...inputs, decomojis });
       break;
     case "uninstall":
-      await remover(_inputs);
+      await remover({ ...inputs, decomojis });
       break;
     case "migration":
-      await remover({
-        ..._inputs,
-        ...{ mode: "uninstall", configs: ["v4_all"] },
-      });
-      await uploader({
-        ..._inputs,
-        ...{ mode: "install", configs: ["v5_basic", "v5_extra"] },
-      });
-      await pretender({
-        ..._inputs,
-        ...{ mode: "alias", configs: ["v4_rename", "v5_rename"] },
-      });
+      // TODO: v4,v5をアンインストールして、v6をインストールし、v5_latest のエイリアスを v6 に貼る
       break;
     case "update":
-      const _inputs1 = await remover({
-        ..._inputs,
-        ...{
-          mode: "uninstall",
-          configs: term === "version" ? configs : ["v5_fixed"],
-        },
+      // 対象のデコモジを一旦アンインストールしてから入れ直す
+      const inputs1 = await remover({
+        ...inputs,
+        ...{ mode: "uninstall" },
       });
-      const _inputs2 = await uploader({
-        ..._inputs1,
+      const inputs2 = await uploader({
+        ...inputs1,
         ...{ mode: "install" },
       });
       await pretender({
-        ..._inputs2,
-        ...{
-          mode: "alias",
-          configs: term === "version" ? configs : ["v5_rename"],
-        },
+        ...inputs2,
+        ...{ mode: "alias" },
       });
       break;
     default:
