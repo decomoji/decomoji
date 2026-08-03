@@ -17,7 +17,11 @@ export const writeJsonFile = async (buffer, filepath) => {
         break;
       case "[object Object]":
         Object.keys(parsedData).forEach((key) => {
-          console.log(`${filepath}, ${key.padEnd(6)}: ${parsedData[key].length}`);
+          const value = parsedData[key];
+          // 配列なら件数を、それ以外は値そのものを出す
+          console.log(
+            `${filepath}, ${key.padEnd(6)}: ${Array.isArray(value) ? value.length : value}`,
+          );
         });
         break;
       default:

@@ -5,18 +5,24 @@ import { postEmojiRemove } from "./postEmojiRemove.mjs";
 import { outputLogJson } from "../../utilities/outputLogJson.mjs";
 import { outputResultJson } from "../../utilities/outputResultJson.mjs";
 
+// TODO: configs（v5 の JSON）ではなく assigner から渡される inputs.decomojis を使うようにする
+// ただし migration での v4,v5 のアンインストールは database/v6.json では賄えないので、その分の扱いを決めること
+// TODO: 実行結果を logs/history.json に残す
+// 実行日、実行時のデコモジ自体のバージョン、処理した mode、エラーになったもの（ファイル名被り、ファイル名違反、通信不良）
 export const remover = async (inputs) => {
   const { configs: CONFIGS, debug: DEBUG, mode: MODE, term: TERM } = inputs;
 
   let i = 0; // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
   let FAILED = false;
   let RELOGIN = false;
-  const localDecomojiList = await getConfigJson({
-    CONFIGS,
-    TERM,
-    KEYS: MODE === "update" ? ["fixed"] : ["fixed", "upload"],
-    INVOKER: "remover",
-  });
+  // const localDecomojiList = await getConfigJson({
+  //   CONFIGS,
+  //   TERM,
+  //   KEYS: MODE === "update" ? ["fixed"] : ["fixed", "upload"],
+  //   INVOKER: "remover",
+  // });
+  // 処理すべきデコモジリストを得る
+  const localDecomojiList = await curator(inputs);
   const localDecomojiListLength = localDecomojiList.length;
 
   TERM === "version" &&

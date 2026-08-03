@@ -1,27 +1,31 @@
 import puppeteer from "puppeteer";
-import { getConfigJson } from "./getConfigJson.mjs";
 import { goToEmojiPage } from "./goToEmojiPage.mjs";
 import { postEmojiAdd } from "./postEmojiAdd.mjs";
 import { outputLogJson } from "../../utilities/outputLogJson.mjs";
 import { outputResultJson } from "../../utilities/outputResultJson.mjs";
 
+// TODO: 実行結果を logs/history.json に残す
+// 実行日、実行時のデコモジ自体のバージョン、処理した mode、エラーになったもの（ファイル名被り、ファイル名違反、通信不良）
+// TODO: 同じ名前のデコモジが既にあったら、権限があれば削除してから追加する soft-override オプションを検討する
 export const uploader = async (inputs) => {
-  const { configs: CONFIGS, debug: DEBUG, includeExplicit: INCLUDE_EXPLICIT, term: TERM } = inputs;
+  const {
+    debug: DEBUG,
+    decomojis: DECOMOJIS = [],
+    includeExplicit: INCLUDE_EXPLICIT,
+    term: TERM,
+  } = inputs;
 
   let i = 0; // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
   let FAILED = false;
   let RELOGIN = false;
-  const rawLocalDecomojiList = await getConfigJson({
-    CONFIGS,
-    TERM,
-    KEYS: ["upload"],
-    INVOKER: "uploder",
-  });
   // バージョンごとに追加するとき、includeExplicit=false なら explicit デコモジを取り除く
-  const localDecomojiList =
-    TERM === "version" && !INCLUDE_EXPLICIT
-      ? rawLocalDecomojiList.filter(({ path }) => !RegExp("explicit").test(path))
-      : rawLocalDecomojiList;
+  // const localDecomojiList =
+  //   TERM === "version" && !INCLUDE_EXPLICIT
+  //     ? DECOMOJIS.filter(({ path }) => !RegExp("explicit").test(path))
+  //     : DECOMOJIS;
+
+  // 処理すべきデコモジリストを得る
+  const localDecomojiList = await curator(inputs);
   const localDecomojiListLength = localDecomojiList.length;
 
   TERM === "version" &&

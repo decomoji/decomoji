@@ -1,5 +1,4 @@
 import inquirer from "inquirer";
-import { format } from "date-fns";
 import { getGitTagArray } from "../../utilities/getGitTagArray.mjs";
 import { getGitTaggingDateArray } from "../../utilities/getGitTaggingDateArray.mjs";
 import { getParsedJson } from "../../utilities/getParsedJson.mjs";
@@ -63,7 +62,7 @@ const V5_TAGGING_DATES = getGitTaggingDateArray()
     const [tag, ...dates] = v.split(" ");
     const [week, month, day, time, year, diff] = dates.filter((v) => v !== "");
     const mn = MONTH_LIST.indexOf(month);
-    return [tag, format(new Date(year, mn, day), "yyyy年M月d日公開")];
+    return [tag, `${year}年${mn + 1}月${Number(day)}日公開`];
   })
   .reduce(
     (acc, value) => ({
@@ -81,7 +80,7 @@ const AVAILABLE_VERSION_ITEMS = (await getParsedJson("../../configs/v5_versions.
   }));
 
 // inquirer 用の質問群を返す関数
-const questions = (adhoc) => [
+const questions = (preflight) => [
   {
     type: "input",
     name: "workspace",
@@ -148,10 +147,10 @@ const questions = (adhoc) => [
     message: "バージョンを選択してください:",
     name: "configs",
     choices: () => {
-      if (adhoc) {
+      if (preflight) {
         AVAILABLE_VERSION_ITEMS.unshift({
-          name: `${adhoc}（ad hocなバージョン）`,
-          value: adhoc,
+          name: `${preflight}（リリース予定のバージョン）`,
+          value: preflight,
         });
       }
       return [new inquirer.Separator(), ...AVAILABLE_VERSION_ITEMS];
@@ -173,6 +172,5 @@ const questions = (adhoc) => [
   },
 ];
 
-export const dialoger = (callback, adhoc) => {
-  inquirer.prompt(questions(adhoc)).then(callback);
-};
+export const dialoger = async (callback, preflight) =>
+  await inquirer.prompt(questions(preflight)).then(callback);
