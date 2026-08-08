@@ -2,7 +2,7 @@
   "workspace": "<workspace>",
   "email": "<email>",
   "password": "<password>",
-  "mode": "insatall",
+  "mode": "install",
   "term": "category",
-  "configs": ["v5_basic", "v5_extra"]
+  "debug": false
 }

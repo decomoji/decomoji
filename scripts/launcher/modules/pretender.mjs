@@ -1,37 +1,25 @@
 import puppeteer from "puppeteer";
-import { getConfigJson } from "./getConfigJson.mjs";
+import { curator } from "./curator.mjs";
 import { goToEmojiPage } from "./goToEmojiPage.mjs";
 import { postEmojiAlias } from "./postEmojiAlias.mjs";
-import { outputLogJson } from "../../utilities/outputLogJson.mjs";
 import { outputResultJson } from "../../utilities/outputResultJson.mjs";
 
-// TODO: configs（v5 の JSON）ではなく assigner から渡される inputs.decomojis を使うようにする
-// エイリアス元になる v5 の name は database/v6.json に無いので、どこから持ってくるかを決めること
+// v6 では名前が database/v6.json から一意に決まるので、エイリアスは migration でしか使わない
+// TODO: エイリアス元になる v5 の name は database/v6.json に無いので、どこから持ってくるかを決めること
+// curator() は alias_for を持たないオブジェクトを返すので、その調達先が決まるまで migration は動かない
 // TODO: 実行結果を logs/history.json に残す
 // 実行日、実行時のデコモジ自体のバージョン、処理した mode、エラーになったもの（ファイル名被り、ファイル名違反、通信不良）
 // TODO: 同じ名前のエイリアスが既にあったら、権限があれば削除してから追加する soft-override オプションを検討する
 export const pretender = async (inputs) => {
-  const { configs: CONFIGS, debug: DEBUG, term: TERM } = inputs;
+  const { debug: DEBUG } = inputs;
 
   let i = 0; // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
   let FAILED = false;
   let RELOGIN = false;
-  // const localDecomojiList = await getConfigJson({
-  //   CONFIGS,
-  //   TERM,
-  //   KEYS: ["rename"],
-  //   INVOKER: "pretender",
-  // });
+
   // 処理すべきデコモジリストを得る
   const localDecomojiList = await curator(inputs);
   const localDecomojiListLength = localDecomojiList.length;
-
-  TERM === "version" &&
-    (await outputLogJson({
-      data: localDecomojiList,
-      invoker: "pretender",
-      name: "list",
-    }));
 
   const result = {
     error: [],
@@ -47,6 +35,12 @@ export const pretender = async (inputs) => {
     error_name_taken_i18n: "skipped(international emoji set already includes)",
   };
 
+  // 登録するエイリアスが無いならログインする必要も無いので終了する
+  if (localDecomojiListLength === 0) {
+    console.info("No decomoji items to alias.");
+    return { ...inputs, result };
+  }
+
   const _pretend = async (inputs) => {
     // puppeteer でブラウザを起動する
     const browser = await puppeteer.launch({
@@ -60,13 +54,6 @@ export const pretender = async (inputs) => {
 
     // 再入力されているかもしれないので取り直す
     const { twofactor_code: TWOFACTOR_CODE, workspace: WORKSPACE } = inputs;
-
-    // ローカルのデコモジが存在しなかったらエラーにして終了する
-    if (localDecomojiListLength === 0) {
-      console.error("[ERROR]No decomoji items.");
-      !DEBUG && (await browser.close());
-      return inputs;
-    }
 
     console.time("[Registration time]");
     while (i < localDecomojiListLength) {
@@ -157,7 +144,7 @@ export const pretender = async (inputs) => {
       name: "result",
     });
     // 入力し直したかもしれないので返す
-    return inputs;
+    return { ...inputs, result };
   };
 
   // 再帰処理をスタートする

@@ -1,39 +1,22 @@
 import puppeteer from "puppeteer";
+import { curator } from "./curator.mjs";
 import { goToEmojiPage } from "./goToEmojiPage.mjs";
 import { postEmojiAdd } from "./postEmojiAdd.mjs";
-import { outputLogJson } from "../../utilities/outputLogJson.mjs";
 import { outputResultJson } from "../../utilities/outputResultJson.mjs";
 
 // TODO: 実行結果を logs/history.json に残す
 // 実行日、実行時のデコモジ自体のバージョン、処理した mode、エラーになったもの（ファイル名被り、ファイル名違反、通信不良）
 // TODO: 同じ名前のデコモジが既にあったら、権限があれば削除してから追加する soft-override オプションを検討する
 export const uploader = async (inputs) => {
-  const {
-    debug: DEBUG,
-    decomojis: DECOMOJIS = [],
-    includeExplicit: INCLUDE_EXPLICIT,
-    term: TERM,
-  } = inputs;
+  const { debug: DEBUG } = inputs;
 
   let i = 0; // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
   let FAILED = false;
   let RELOGIN = false;
-  // バージョンごとに追加するとき、includeExplicit=false なら explicit デコモジを取り除く
-  // const localDecomojiList =
-  //   TERM === "version" && !INCLUDE_EXPLICIT
-  //     ? DECOMOJIS.filter(({ path }) => !RegExp("explicit").test(path))
-  //     : DECOMOJIS;
 
   // 処理すべきデコモジリストを得る
   const localDecomojiList = await curator(inputs);
   const localDecomojiListLength = localDecomojiList.length;
-
-  TERM === "version" &&
-    (await outputLogJson({
-      data: localDecomojiList,
-      invoker: "uploder",
-      name: "filtered",
-    }));
 
   const result = {
     error: [],
@@ -46,6 +29,12 @@ export const uploader = async (inputs) => {
     error_name_taken: "skipped(already exists)",
     error_name_taken_i18n: "skipped(international emoji set already includes)",
   };
+
+  // 追加するデコモジが無いならログインする必要も無いので終了する
+  if (localDecomojiListLength === 0) {
+    console.info("No decomoji items to install.");
+    return { ...inputs, result };
+  }
 
   const _upload = async (inputs) => {
     // puppeteer でブラウザを起動する
@@ -60,13 +49,6 @@ export const uploader = async (inputs) => {
 
     // 再入力されているかもしれないので取り直す
     const { twofactor_code: TWOFACTOR_CODE, workspace: WORKSPACE } = inputs;
-
-    // ローカルのデコモジが存在しなかったらエラーにして終了する
-    if (localDecomojiListLength === 0) {
-      console.error("[ERROR]No decomoji items.");
-      !DEBUG && (await browser.close());
-      return inputs;
-    }
 
     console.time("[Installation time]");
     while (i < localDecomojiListLength) {
@@ -152,7 +134,7 @@ export const uploader = async (inputs) => {
       name: "result",
     });
     // 入力し直したかもしれないので返す
-    return inputs;
+    return { ...inputs, result };
   };
 
   // 再帰処理をスタートする
