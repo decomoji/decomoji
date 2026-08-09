@@ -36,7 +36,7 @@ export const curator = async (inputs) => {
 
   const getCuratedDecomojis = () => {
     // アンインストールと移行は対象を絞らず、カテゴリーに属するものを全部処理する
-    if (mode !== "install") {
+    if (mode !== "update") {
       return targets;
     }
 

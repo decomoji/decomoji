@@ -5,8 +5,8 @@ import { remover, uploader } from "./index.mjs";
  * @param {{
  *   workspace: string;
  *   email: string;
- *   mode: "install" | "uninstall" | "migration";
- *   term: "all" | "category";
+ *   mode: "update" | "uninstall" | "migration";
+ *   term: "all";
  *   debug: boolean;
  * }} inputs
  */
@@ -20,7 +20,7 @@ Connecting...
   const result = {};
 
   switch (inputs.mode) {
-    case "install": {
+    case "update": {
       // 差し替えられたデコモジは一旦アンインストールしてから入れ直す
       const removed = await remover({ ...inputs, operation: "remove" });
       result.remover = removed.result;
@@ -36,7 +36,6 @@ Connecting...
     }
     case "migration":
       // TODO: v4,v5をアンインストールして、v6をインストールし、v5_latest のエイリアスを v6 に貼る
-      // エイリアス（pretender）の元になる v5 の name は database/v6.json に無いので、どこから持ってくるかを決めること
       console.error("[ERROR]Migration mode is not implemented yet.");
       break;
     default:
