@@ -12,7 +12,7 @@ import {
  * @param {{
  *   workspace: string;
  *   email: string;
- *   mode: "update" | "uninstall" | "migration";
+ *   mode: "update" | "uninstall" | "migration" | "compatible_migration";
  *   term: "all"; @TODO: categoryは廃止し、tagに移行する
  *   debug: boolean;
  * }} inputs

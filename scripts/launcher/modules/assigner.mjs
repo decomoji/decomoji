@@ -1,11 +1,11 @@
-import { remover, uploader } from "./index.mjs";
+import { pretender, remover, uploader } from "./index.mjs";
 
 /**
  * mode に合わせて uploader(), remover(), pretender() を呼び分ける
  * @param {{
  *   workspace: string;
  *   email: string;
- *   mode: "update" | "uninstall" | "migration";
+ *   mode: "update" | "uninstall" | "migration" | "compatible_migration";
  *   term: "all";
  *   debug: boolean;
  * }} inputs
@@ -16,30 +16,37 @@ Connecting...
 `);
 
   console.time("[Total time]");
-
-  const result = {};
-
   switch (inputs.mode) {
-    case "update": {
-      // 差し替えられたデコモジは一旦アンインストールしてから入れ直す
-      const removed = await remover({ ...inputs, operation: "remove" });
-      result.remover = removed.result;
-      // 入力し直したかもしれないので removed を引き継ぐ
-      const added = await uploader({ ...removed, operation: "add" });
-      result.uploader = added.result;
+    /**
+     * デコモジを全て削除
+     */
+    case "uninstall":
+      const { input, results } = await remover(inputs);
       break;
-    }
-    case "uninstall": {
-      const removed = await remover({ ...inputs, operation: "remove" });
-      result.remover = removed.result;
+    /**
+     * 初回インストールと通常更新
+     * 修正・変更のあったデコモジを消して、新しいデコモジを追加する
+     */
+    case "update":
+      const { input, results } = await remover(inputs);
+      const { input, results } = await uploader(inputs);
       break;
-    }
+    /**
+     * v6 への移行
+     * v4/v5 のデコモジを削除して、v6 のデコモジを追加する
+     */
     case "migration":
-      // TODO: v4,v5をアンインストールして、v6をインストールし、v5_latest のエイリアスを v6 に貼る
-      console.error("[ERROR]Migration mode is not implemented yet.");
+      const { input, results } = await remover(inputs);
+      const { input, results } = await uploader(inputs);
       break;
-    default:
-      console.error("[ERROR]Unknown launch mode. please confirm 'mode' value.");
+    /**
+     * v6 への移行
+     * v4/v5 のデコモジを削除して、v6 のデコモジを追加し、v5 -> v6 のエイリアスを登録する
+     */
+    case "compatible_migration":
+      const { input, results } = await remover(inputs);
+      const { input, results } = await uploader(inputs);
+      const { input, results } = await pretender(inputs);
       break;
   }
 
