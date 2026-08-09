@@ -4,5 +4,6 @@
   "password": "<password>",
   "mode": "update",
   "term": "all",
+  "includeNsfw": false,
   "debug": false
 }

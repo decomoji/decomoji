@@ -1,56 +1,42 @@
 import { pretender, remover, uploader } from "./index.mjs";
 
-/**
- * mode に合わせて uploader(), remover(), pretender() を呼び分ける
- * @param {{
- *   workspace: string;
- *   email: string;
- *   mode: "update" | "uninstall" | "migration" | "compatible_migration";
- *   term: "all";
- *   debug: boolean;
- * }} inputs
- */
-export const assigner = async (inputs) => {
-  console.info(`
-Connecting...
-`);
+// 追加・削除・エイリアス登録をするエージェント
+const agents = { pretender, remover, uploader };
 
-  console.time("[Total time]");
-  switch (inputs.mode) {
-    /**
-     * デコモジを全て削除
-     */
-    case "uninstall":
-      const { input, results } = await remover(inputs);
-      break;
-    /**
-     * 初回インストールと通常更新
-     * 修正・変更のあったデコモジを消して、新しいデコモジを追加する
-     */
-    case "update":
-      const { input, results } = await remover(inputs);
-      const { input, results } = await uploader(inputs);
-      break;
-    /**
-     * v6 への移行
-     * v4/v5 のデコモジを削除して、v6 のデコモジを追加する
-     */
-    case "migration":
-      const { input, results } = await remover(inputs);
-      const { input, results } = await uploader(inputs);
-      break;
-    /**
-     * v6 への移行
-     * v4/v5 のデコモジを削除して、v6 のデコモジを追加し、v5 -> v6 のエイリアスを登録する
-     */
-    case "compatible_migration":
-      const { input, results } = await remover(inputs);
-      const { input, results } = await uploader(inputs);
-      const { input, results } = await pretender(inputs);
-      break;
+// modeごとに実行するエージェントと順番
+const serials = {
+  uninstall: ["remover"],
+  update: ["remover", "uploader"],
+  migration: ["remover", "uploader"],
+  compatible_migration: ["remover", "uploader", "pretender"],
+};
+
+export const assigner = async ({ inputs: initialInputs, history }) => {
+  const serial = serials[initialInputs.mode];
+
+  // 存在しない mode の場合はエラーを返して終了する
+  if (!serial) {
+    throw new Error(
+      `[ERROR]Unknown mode: ${initialInputs.mode}. Expected one of ${Object.keys(serials).join(" | ")}.`,
+    );
   }
 
-  console.timeEnd("[Total time]");
+  // 最後に launcher() に返す結果の箱
+  const results = {
+    pretender: {},
+    remover: {},
+    uploader: {},
+  }
 
-  return result;
+  // ログイン情報を入力し直しているかもしれないので inputs を引き回す
+  let inputs = initialInputs;
+
+  // mode ごとにエージェントを実行して input を取り直しつつ結果を格納する
+  for (const name of serial) {
+    const { inputs: newInputs, result } = await agents[name]({ inputs, history });
+    inputs = newInputs;
+    results[name] = result;
+  }
+
+  return { inputs, results };
 };
