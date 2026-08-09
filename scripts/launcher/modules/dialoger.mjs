@@ -1,50 +1,7 @@
 import inquirer from "inquirer";
 import { isEmail } from "../../utilities/isEmail.mjs";
 import { isInputs } from "../../utilities/isInputs.mjs";
-import { isSelects } from "../../utilities/isSelects.mjs";
-
-// v6 では常に database/v6.json の内容（＝最新版）を対象にするので、バージョンは選ばせない
-const MODE_ITEMS = [
-  {
-    name: "追加（更新）",
-    value: "update",
-  },
-  {
-    name: "移行（v4,v5 から v6 へ）",
-    value: "migration",
-  },
-  {
-    name: "アンインストール",
-    value: "uninstall",
-  },
-];
-
-const TERM_ITEMS = [
-  {
-    name: "すべて",
-    value: "all",
-  },
-  // TODO: category は廃止し、tag に移行する
-  // {
-  //   name: "カテゴリーを指定",
-  //   value: "category",
-  // },
-];
-
-const CATEGORY_ITEMS = [
-  {
-    name: "基本セット",
-    value: "basic",
-  },
-  {
-    name: "拡張セット",
-    value: "extra",
-  },
-  {
-    name: "露骨セット",
-    value: "explicit",
-  },
-];
+import { isSelects } from "../../utilities/isSelects.mjs";;
 
 // inquirer 用の質問群
 const questions = [
@@ -70,25 +27,26 @@ const questions = [
   {
     type: "rawlist",
     name: "mode",
-    message: "モードを選択してください:",
-    choices: MODE_ITEMS,
+    message: "実行モードを選択してください:",
+    choices: [
+      {
+        name: "更新",
+        value: "update",
+      },
+      {
+        name: "全削除",
+        value: "uninstall",
+      },
+      {
+        name: "移行（v4/v5 を削除して v6 を追加）",
+        value: "migration",
+      },
+      {
+        name: "互換のある移行（移行 + v5 -> v6のエイリアス登録）",
+        value: "compatible_migration",
+      },
+    ],
   },
-  {
-    // 移行はすべてが対象になるので選ばせない
-    when: ({ mode }) => mode === "update" || mode === "uninstall",
-    type: "rawlist",
-    name: "term",
-    message: "対象を選択してください:",
-    choices: TERM_ITEMS,
-  },
-  // {
-  //   when: ({ term }) => term === "category",
-  //   type: "checkbox",
-  //   name: "configs",
-  //   message: "カテゴリーを選択してください:",
-  //   choices: CATEGORY_ITEMS,
-  //   validate: isSelects,
-  // },
   {
     type: "rawlist",
     name: "debug",
