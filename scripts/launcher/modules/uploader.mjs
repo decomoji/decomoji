@@ -4,73 +4,50 @@ import { goToEmojiPage } from "./goToEmojiPage.mjs";
 import { postEmojiAdd } from "./postEmojiAdd.mjs";
 import { outputResultJson } from "../../utilities/outputResultJson.mjs";
 
-/**
- * デコモジリスト分の追加処理を行う
- * @param {
- *   inputs: {
- *     workspace: string;
- *     email: string;
- *     mode: "update" | "uninstall" | "migration" | "compatible_migration";
- *     term: "all";
- *     debug: boolean;
- *   },
- *   results: {
- *     pretender?: {
- *       error: string[],
- *       error_invalid_alias: string[],
- *       error_name_taken: string[],
- *       error_name_taken_i18n: string[],
- *       ok: string[],
- *     },
- *     remover?: {
- *       error: string[],
- *       emoji_not_found: string[],
- *       ok: string[]
- *     },
- *     uploader?: {
- *       error: string[],
- *       error_name_taken: string[],
- *       error_name_taken_i18n: string[],
- *       ok: string[],
- *     },
- *   }
- * }
- */
-export const uploader = async ({inputs, results}) => {
-  const { debug: DEBUG } = inputs;
+export const uploader = async ({inputs, history}) => {
+  const { mode, includeNsfw, debug: DEBUG } = inputs;
+  const { initial_run, version } = history
 
-  let i = 0; // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
+  // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
+  let i = 0;
   let FAILED = false;
   let RELOGIN = false;
 
   // 処理すべきデコモジリストを得る
-  const localDecomojiList = await curator(inputs);
-  const localDecomojiListLength = localDecomojiList.length;
+  const decomojiList = await curator({
+    initial_run,
+    version,
+    mode,
+    includeNsfw,
+  });
+  const decomojiListLength = decomojiList.length;
 
+  // 実行結果の箱
   const result = {
     error: [],
     error_name_taken: [],
     error_name_taken_i18n: [],
     ok: [],
   };
+
+  // postEmojiAdd の戻り値によって変える標準出力メッセージの辞書
   const messages = {
     ok: "uploaded",
     error_name_taken: "skipped(already exists)",
     error_name_taken_i18n: "skipped(international emoji set already includes)",
   };
 
-  // 追加するデコモジが無いならログインする必要も無いので終了する
-  if (localDecomojiListLength === 0) {
-    console.info("No decomoji items to install.");
-    return { ...inputs, result };
+  // 処理すべきデコモジが無い場合、ログイン不要なので早期に返す
+  if (decomojiListLength === 0) {
+    console.error("[ERROR]No decomoji items.");
+    result.error.push({ message: "No decomoji items." })
+    return { inputs, result };
   }
 
-  const _upload = async ({ inputs, results }) => {
-    // puppeteer でブラウザを起動する
-    const browser = await puppeteer.launch({
-      devtools: DEBUG,
-    });
-    // ページを追加する
+  console.info(`\nConnecting...\n`);
+  const _upload = async (inputs) => {
+    // puppeteer を起動してページインスタンスを作成する
+    const browser = await puppeteer.launch({ devtools: DEBUG });
     const page = await browser.newPage();
 
     // カスタム絵文字管理画面へ遷移する
@@ -80,18 +57,19 @@ export const uploader = async ({inputs, results}) => {
     const { twofactor_code: TWOFACTOR_CODE, workspace: WORKSPACE } = inputs;
 
     console.time("[Installation time]");
-    while (i < localDecomojiListLength) {
-      const { name, path } = localDecomojiList[i];
+    while (i < decomojiListLength) {
+      const { name, path } = decomojiList[i];
       // name か path が falsy の時は FAILED フラグを立ててループを抜ける
       if (!name || !path) {
         FAILED = true;
         break;
       }
 
+      // Slack APIにPOSTしてレスポンスを得る
       const res = await postEmojiAdd(page, WORKSPACE, name, path);
 
       console.info(
-        `${i + 1}/${localDecomojiListLength}: ${
+        `${i + 1}/${decomojiListLength}: ${
           res.ok
             ? messages.ok
             : res.error === "error_name_taken" || res.error === "error_name_taken_i18n"
@@ -148,8 +126,8 @@ export const uploader = async ({inputs, results}) => {
     // ratelimited なら再帰する
     if (RELOGIN) {
       console.timeLog("[Total time]");
-      console.info("Reconnecting...");
-      return await _upload({ inputs, results });
+      console.info(`\nReconnecting...\n`);
+      return await _upload(inputs);
     }
 
     // 追加中に ratelimited にならなかった場合ここまで到達する
@@ -157,16 +135,16 @@ export const uploader = async ({inputs, results}) => {
       console.error("[ERROR]Installation is failed.");
     }
     console.info("Installation is completed!");
-    await outputResultJson({
-      data: result,
-      invoker: "uploder",
-      name: "result",
-    });
+    // await outputResultJson({
+    //   data: result,
+    //   invoker: "uploder",
+    //   name: "result",
+    // });
 
     // 処理完了。ログイン情報を入力し直したかもしれないので結果と一緒に返す
-    return { ...inputs, results: { ...results, uploader: result } };
+    return { inputs, result };
   };
 
   // 再帰処理をスタートする
-  return await _upload({ inputs, results });
+  return await _upload(inputs);
 };

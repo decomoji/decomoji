@@ -4,49 +4,25 @@ import { goToEmojiPage } from "./goToEmojiPage.mjs";
 import { postEmojiAlias } from "./postEmojiAlias.mjs";
 import { outputResultJson } from "../../utilities/outputResultJson.mjs";
 
-/**
- * デコモジリスト分のエイリアス登録処理を行う
- * @param {
- *   inputs: {
- *     workspace: string;
- *     email: string;
- *     mode: "update" | "uninstall" | "migration" | "compatible_migration";
- *     term: "all";
- *     debug: boolean;
- *   },
- *   results: {
- *     pretender?: {
- *       error: string[],
- *       error_invalid_alias: string[],
- *       error_name_taken: string[],
- *       error_name_taken_i18n: string[],
- *       ok: string[],
- *     },
- *     remover?: {
- *       error: string[],
- *       emoji_not_found: string[],
- *       ok: string[]
- *     },
- *     uploader?: {
- *       error: string[],
- *       error_name_taken: string[],
- *       error_name_taken_i18n: string[],
- *       ok: string[],
- *     },
- *   }
- * }
- */
-export const pretender = async ({inputs, results}) => {
-  const { debug: DEBUG } = inputs;
+export const pretender = async ({ inputs, history }) => {
+  const { mode, includeNsfw, debug: DEBUG } = inputs;
+  const { initial_run, version } = history
 
-  let i = 0; // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
+  // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
+  let i = 0;
   let FAILED = false;
   let RELOGIN = false;
 
   // 処理すべきデコモジリストを得る
-  const localDecomojiList = await curator(inputs);
-  const localDecomojiListLength = localDecomojiList.length;
+  const decomojiList = await curator({
+    initial_run,
+    version,
+    mode,
+    includeNsfw,
+  });
+  const decomojiListLength = decomojiList.length;
 
+  // 実行結果の箱
   const result = {
     error: [],
     error_invalid_alias: [],
@@ -54,6 +30,8 @@ export const pretender = async ({inputs, results}) => {
     error_name_taken_i18n: [],
     ok: [],
   };
+
+  // postEmojiAlias の戻り値によって変える標準出力メッセージの辞書
   const messages = {
     ok: "registered",
     error_invalid_alias: "skipped(target no exists)",
@@ -61,18 +39,17 @@ export const pretender = async ({inputs, results}) => {
     error_name_taken_i18n: "skipped(international emoji set already includes)",
   };
 
-  // 登録するエイリアスが無いならログインする必要も無いので終了する
-  if (localDecomojiListLength === 0) {
-    console.info("No decomoji items to alias.");
-    return { ...inputs, result };
+  // 処理すべきデコモジが無い場合、ログイン不要なので早期に返す
+  if (decomojiListLength === 0) {
+    console.error("[ERROR]No decomoji items.");
+    result.error.push({ message: "No decomoji items." })
+    return { inputs, result };
   }
 
-  const _pretend = async ({ inputs, results }) => {
-    // puppeteer でブラウザを起動する
-    const browser = await puppeteer.launch({
-      devtools: DEBUG,
-    });
-    // ページを追加する
+  console.info(`\nConnecting...\n`);
+  const _pretend = async (inputs) => {
+    // puppeteer を起動してページインスタンスを作成する
+    const browser = await puppeteer.launch({ devtools: DEBUG });
     const page = await browser.newPage();
 
     // カスタム絵文字管理画面へ遷移する
@@ -82,18 +59,19 @@ export const pretender = async ({inputs, results}) => {
     const { twofactor_code: TWOFACTOR_CODE, workspace: WORKSPACE } = inputs;
 
     console.time("[Registration time]");
-    while (i < localDecomojiListLength) {
-      const { name, alias_for } = localDecomojiList[i];
+    while (i < decomojiListLength) {
+      const { name, alias_for } = decomojiList[i];
       // name か alias_for が falsy の時は FAILED フラグを立ててループを抜ける
       if (!name || !alias_for) {
         FAILED = true;
         break;
       }
 
+      // Slack APIにPOSTしてレスポンスを得る
       const res = await postEmojiAlias(page, WORKSPACE, name, alias_for);
 
       console.info(
-        `${i + 1}/${localDecomojiListLength}: ${
+        `${i + 1}/${decomojiListLength}: ${
           res.ok
             ? messages.ok
             : res.error === "error_name_taken" ||
@@ -155,8 +133,8 @@ export const pretender = async ({inputs, results}) => {
     // ratelimited なら再帰する
     if (RELOGIN) {
       console.timeLog("[Total time]");
-      console.info("Reconnecting...");
-      return await _pretend({ inputs, results });
+      console.info(`\nReconnecting...\n`);
+      return await _pretend(inputs);
     }
 
     // 追加中に ratelimited にならなかった場合ここまで到達する
@@ -164,15 +142,16 @@ export const pretender = async ({inputs, results}) => {
       console.error("[ERROR]Registration is failed.");
     }
     console.info("Registration is completed!");
-    await outputResultJson({
-      data: result,
-      invoker: "pretender",
-      name: "result",
-    });
+    // await outputResultJson({
+    //   data: result,
+    //   invoker: "pretender",
+    //   name: "result",
+    // });
+
     // 入力し直したかもしれないので返す
-    return { ...inputs, results: { ...results, pretender: result } };
+    return { inputs, result };
   };
 
   // 再帰処理をスタートする
-  return await _pretend({ inputs, results });
+  return await _pretend(inputs);
 };
