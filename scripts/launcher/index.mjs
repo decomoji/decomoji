@@ -1,29 +1,11 @@
-import { Command } from "commander";
 import fs from "fs/promises";
 import { assigner, dialoger } from "./modules/index.mjs";
 import {
+  getInputsFilePath,
   getParsedJson,
   getTargetCategories,
-  isStringOfNotEmpty,
   outputHistoryJson,
 } from "../utilities/index.mjs";
-
-// logs ディレクトリを作成しておく
-await fs.mkdir("logs", { recursive: true });
-
-// コマンドライン引数を定義する
-const command = new Command();
-command
-  .option(
-    "-f, --file <filename>",
-    "inputs.jsonなどのファイル名を指定します。jsonは `scripts/launcher/` 配下に置いてください。",
-  );
-
-command.parse(process.argv);
-
-const { file } = command.opts();
-
-const filename = file ? (isStringOfNotEmpty(file) ? file : "inputs.json") : null;
 
 /**
  * 自動スクリプトのエントリーポイント
@@ -62,8 +44,12 @@ debug      : ${inputs.debug}
   });
 };
 
-if (filename) {
-  await launcher(await getParsedJson(`../launcher/${filename}`));
+// logs ディレクトリを作成しておく
+await fs.mkdir("logs", { recursive: true });
+const inputsFilePath = await getInputsFilePath();
+
+if (inputsFilePath) {
+  await launcher(await getParsedJson(inputsFilePath));
 } else {
   await dialoger(async (inputs) => await launcher(inputs));
 }

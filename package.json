@@ -23,7 +23,6 @@
     "launch": "node scripts/launcher/index.mjs"
   },
   "devDependencies": {
-    "commander": "^15.0.0",
     "email-validator": "^2.0.4",
     "imagemin": "^9.0.1",
     "imagemin-optipng": "^8.0.0",

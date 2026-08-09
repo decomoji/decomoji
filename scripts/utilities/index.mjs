@@ -15,6 +15,7 @@ export { getGitDiffOfRenameArray } from "./getGitDiffOfRenameArray.mjs";
 export { getGitTagArray } from "./getGitTagArray.mjs";
 export { getGitTaggingDateArray } from "./getGitTaggingDateArray.mjs";
 export { getGitTagPairArray } from "./getGitTagPairArray.mjs";
+export { getInputsFilePath } from "./getInputsFilePath.mjs";
 export { getMergedDiffOfCategories } from "./getMergedDiffOfCategories.mjs";
 export { getMergedDiffOfManages } from "./getMergedDiffOfManages.mjs";
 export { getParsedJson } from "./getParsedJson.mjs";
