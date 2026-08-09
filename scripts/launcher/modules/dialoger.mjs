@@ -7,10 +7,10 @@ import { isSelects } from "../../utilities/isSelects.mjs";
 const MODE_ITEMS = [
   {
     name: "追加（更新）",
-    value: "install",
+    value: "update",
   },
   {
-    name: "移行（v5 から v6 へ）",
+    name: "移行（v4,v5 から v6 へ）",
     value: "migration",
   },
   {
@@ -24,10 +24,11 @@ const TERM_ITEMS = [
     name: "すべて",
     value: "all",
   },
-  {
-    name: "カテゴリーを指定",
-    value: "category",
-  },
+  // TODO: category は廃止し、tag に移行する
+  // {
+  //   name: "カテゴリーを指定",
+  //   value: "category",
+  // },
 ];
 
 const CATEGORY_ITEMS = [
@@ -74,7 +75,7 @@ const questions = [
   },
   {
     // 移行はすべてが対象になるので選ばせない
-    when: ({ mode }) => mode === "install" || mode === "uninstall",
+    when: ({ mode }) => mode === "update" || mode === "uninstall",
     type: "rawlist",
     name: "term",
     message: "対象を選択してください:",

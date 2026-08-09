@@ -8,9 +8,6 @@ import {
   outputHistoryJson,
 } from "../utilities/index.mjs";
 
-// 実行日時。history ファイルはこの index.mjs を呼び出した単位で残す
-const timestamp = new Date().toISOString();
-
 // logs ディレクトリを作成しておく
 await fs.mkdir("logs", { recursive: true });
 
@@ -24,7 +21,7 @@ command
 
 command.parse(process.argv);
 
-const { debug, file } = command.opts();
+const { file } = command.opts();
 
 const filename = file ? (isStringOfNotEmpty(file) ? file : "inputs.json") : null;
 
@@ -33,8 +30,8 @@ const filename = file ? (isStringOfNotEmpty(file) ? file : "inputs.json") : null
  * @param {{
  *   workspace: string;
  *   email: string;
- *   mode: "install" | "uninstall" | "migration";
- *   term: "all" | "category";
+ *   mode: "update" | "uninstall" | "migration";
+ *   term: "all"; @TODO: categoryは廃止し、tagに移行する
  *   debug: boolean;
  * }} inputs
  */
@@ -47,30 +44,16 @@ term       : ${inputs.term}
 debug      : ${inputs.debug}
 `);
 
+  // history ファイルのためのタイムスタンプを保存する
+  const timestamp = new Date().toISOString();
+
+  // assigner() から適宜 agents を呼び出し、実行結果を受け取る
+  // TODO: result の形は要検討
   const result = await assigner(inputs);
-
-  // 実行結果を logs/ に残す
-  const database = await getParsedJson("../../database/v6.json");
-  const { installed: previous = {} } = await getParsedJson("../../logs/history.json").catch(
-    () => ({}),
-  );
-  const categories = getTargetCategories(inputs, database.decomojis);
-
-  // 次回の差分計算に使うため、カテゴリーごとに「どのバージョンを入れたか」を残す
-  // アンインストールしたカテゴリーは記録から外して未インストールに戻す
-  const installed =
-    inputs.mode === "uninstall"
-      ? Object.fromEntries(
-          Object.entries(previous).filter(([category]) => !categories.includes(category)),
-        )
-      : {
-          ...previous,
-          ...Object.fromEntries(categories.map((category) => [category, database.version])),
-        };
 
   await outputHistoryJson({
     timestamp,
-    version: database.version,
+    version: await getParsedJson("../../package.json").then(({ version }) => version),
     mode: inputs.mode,
     term: inputs.term,
     installed,

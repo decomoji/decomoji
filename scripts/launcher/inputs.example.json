@@ -2,7 +2,7 @@
   "workspace": "<workspace>",
   "email": "<email>",
   "password": "<password>",
-  "mode": "install",
-  "term": "category",
+  "mode": "update",
+  "term": "all",
   "debug": false
 }
