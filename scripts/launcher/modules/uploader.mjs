@@ -4,10 +4,39 @@ import { goToEmojiPage } from "./goToEmojiPage.mjs";
 import { postEmojiAdd } from "./postEmojiAdd.mjs";
 import { outputResultJson } from "../../utilities/outputResultJson.mjs";
 
-// TODO: 実行結果を logs/history.json に残す
-// 実行日、実行時のデコモジ自体のバージョン、処理した mode、エラーになったもの（ファイル名被り、ファイル名違反、通信不良）
-// TODO: 同じ名前のデコモジが既にあったら、権限があれば削除してから追加する soft-override オプションを検討する
-export const uploader = async (inputs) => {
+/**
+ * デコモジリスト分の追加処理を行う
+ * @param {
+ *   inputs: {
+ *     workspace: string;
+ *     email: string;
+ *     mode: "update" | "uninstall" | "migration" | "compatible_migration";
+ *     term: "all";
+ *     debug: boolean;
+ *   },
+ *   results: {
+ *     pretender?: {
+ *       error: string[],
+ *       error_invalid_alias: string[],
+ *       error_name_taken: string[],
+ *       error_name_taken_i18n: string[],
+ *       ok: string[],
+ *     },
+ *     remover?: {
+ *       error: string[],
+ *       emoji_not_found: string[],
+ *       ok: string[]
+ *     },
+ *     uploader?: {
+ *       error: string[],
+ *       error_name_taken: string[],
+ *       error_name_taken_i18n: string[],
+ *       ok: string[],
+ *     },
+ *   }
+ * }
+ */
+export const uploader = async ({inputs, results}) => {
   const { debug: DEBUG } = inputs;
 
   let i = 0; // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
@@ -36,7 +65,7 @@ export const uploader = async (inputs) => {
     return { ...inputs, result };
   }
 
-  const _upload = async (inputs) => {
+  const _upload = async ({ inputs, results }) => {
     // puppeteer でブラウザを起動する
     const browser = await puppeteer.launch({
       devtools: DEBUG,
@@ -120,7 +149,7 @@ export const uploader = async (inputs) => {
     if (RELOGIN) {
       console.timeLog("[Total time]");
       console.info("Reconnecting...");
-      return await _upload(inputs);
+      return await _upload({ inputs, results });
     }
 
     // 追加中に ratelimited にならなかった場合ここまで到達する
@@ -133,10 +162,11 @@ export const uploader = async (inputs) => {
       invoker: "uploder",
       name: "result",
     });
-    // 入力し直したかもしれないので返す
-    return { ...inputs, result };
+
+    // 処理完了。ログイン情報を入力し直したかもしれないので結果と一緒に返す
+    return { ...inputs, results: { ...results, uploader: result } };
   };
 
   // 再帰処理をスタートする
-  return await _upload(inputs);
+  return await _upload({ inputs, results });
 };

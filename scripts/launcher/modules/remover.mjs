@@ -4,10 +4,39 @@ import { goToEmojiPage } from "./goToEmojiPage.mjs";
 import { postEmojiRemove } from "./postEmojiRemove.mjs";
 import { outputResultJson } from "../../utilities/outputResultJson.mjs";
 
-// TODO: migration での v4,v5 のアンインストールは database/v6.json では賄えないので、その分の扱いを決めること
-// TODO: 実行結果を logs/history.json に残す
-// 実行日、実行時のデコモジ自体のバージョン、処理した mode、エラーになったもの（ファイル名被り、ファイル名違反、通信不良）
-export const remover = async (inputs) => {
+/**
+ * デコモジリスト分の削除処理を行う
+ * @param {
+ *   inputs: {
+ *     workspace: string;
+ *     email: string;
+ *     mode: "update" | "uninstall" | "migration" | "compatible_migration";
+ *     term: "all";
+ *     debug: boolean;
+ *   },
+ *   results: {
+ *     pretender?: {
+ *       error: string[],
+ *       error_invalid_alias: string[],
+ *       error_name_taken: string[],
+ *       error_name_taken_i18n: string[],
+ *       ok: string[],
+ *     },
+ *     remover?: {
+ *       error: string[],
+ *       emoji_not_found: string[],
+ *       ok: string[]
+ *     },
+ *     uploader?: {
+ *       error: string[],
+ *       error_name_taken: string[],
+ *       error_name_taken_i18n: string[],
+ *       ok: string[],
+ *     },
+ *   }
+ * }
+ */
+export const remover = async ({ inputs, results }) => {
   const { debug: DEBUG } = inputs;
 
   let i = 0; // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
@@ -34,7 +63,7 @@ export const remover = async (inputs) => {
     return { ...inputs, result };
   }
 
-  const _remove = async (inputs) => {
+  const _remove = async ({ inputs, results }) => {
     // puppeteer でブラウザを起動する
     const browser = await puppeteer.launch({
       devtools: DEBUG,
@@ -113,7 +142,7 @@ export const remover = async (inputs) => {
     if (RELOGIN) {
       console.timeLog("[Total time]");
       console.info("Reconnecting...");
-      return await _remove(inputs);
+      return await _remove({ inputs, results });
     }
 
     // 削除中に ratelimited にならなかった場合ここまで到達する
@@ -126,10 +155,11 @@ export const remover = async (inputs) => {
       invoker: "remover",
       name: "result",
     });
-    // 入力し直したかもしれないので返す
-    return { ...inputs, result };
+
+    // 処理完了。ログイン情報を入力し直したかもしれないので結果と一緒に返す
+    return { ...inputs, results: { ...results, remover: result } };
   };
 
   // 再帰処理をスタートする
-  return await _remove(inputs);
+  return await _remove({ inputs, results });
 };
