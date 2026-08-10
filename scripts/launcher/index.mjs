@@ -34,7 +34,7 @@ Starting
       email: null,
       mode: null,
       includeNsfw: null,
-      debug: null
+      debug: null,
     },
     results: {
       pretender: {
@@ -42,24 +42,27 @@ Starting
         error_invalid_alias: [],
         error_name_taken: [],
         error_name_taken_i18n: [],
-        ok: []
+        ok: [],
       },
       remover: {
         error: [],
         emoji_not_found: [],
-        ok: []
+        ok: [],
       },
       uploader: {
         error: [],
         error_name_taken: [],
         error_name_taken_i18n: [],
-        ok: []
-      }
-    }
+        ok: [],
+      },
+    },
   }));
 
   // assigner() で mode に応じたエージェントを実行し、結果を受け取る
-  const { inputs: { workspace, email, mode, includeNsfw }, results } = await assigner({ inputs, history });
+  const {
+    inputs: { workspace, email, mode, includeNsfw },
+    results,
+  } = await assigner({ inputs, history });
 
   // エラーなく最後まで各エージェントを実行できたら history.json を保存する
   await outputHistoryJson({
@@ -76,7 +79,7 @@ Starting
   });
 
   console.timeEnd("[Total time]");
-  console.info(`\nCompleted!`)
+  console.info(`\nCompleted!`);
 };
 
 // logs ディレクトリを作成しておく

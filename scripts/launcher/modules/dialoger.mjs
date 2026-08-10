@@ -1,7 +1,7 @@
 import inquirer from "inquirer";
 import { isEmail } from "../../utilities/isEmail.mjs";
 import { isInputs } from "../../utilities/isInputs.mjs";
-import { isSelects } from "../../utilities/isSelects.mjs";;
+import { isSelects } from "../../utilities/isSelects.mjs";
 
 // inquirer 用の質問群
 const questions = [

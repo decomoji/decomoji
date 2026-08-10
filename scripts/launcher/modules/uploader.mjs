@@ -4,9 +4,9 @@ import { goToEmojiPage } from "./goToEmojiPage.mjs";
 import { postEmojiAdd } from "./postEmojiAdd.mjs";
 import { outputResultJson } from "../../utilities/outputResultJson.mjs";
 
-export const uploader = async ({inputs, history}) => {
+export const uploader = async ({ inputs, history }) => {
   const { mode, includeNsfw, debug: DEBUG } = inputs;
-  const { initial_run, version } = history
+  const { initial_run, version } = history;
 
   // 再帰でリストの続きから処理するためにインデックスを再帰関数の外に定義する
   let i = 0;
@@ -40,7 +40,7 @@ export const uploader = async ({inputs, history}) => {
   // 処理すべきデコモジが無い場合、ログイン不要なので早期に返す
   if (decomojiListLength === 0) {
     console.error("[ERROR]No decomoji items.");
-    result.error.push({ message: "No decomoji items." })
+    result.error.push({ message: "No decomoji items." });
     return { inputs, result };
   }
 
