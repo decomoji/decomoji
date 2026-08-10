@@ -1,5 +1,5 @@
 import fs from "fs/promises";
-import { assigner, dialoger } from "./modules/index.mjs";
+import { assigner, dialoger } from "./handlers/index.mjs";
 import {
   getInputsFilePath,
   getParsedJson,

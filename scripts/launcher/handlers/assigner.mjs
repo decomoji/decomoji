@@ -1,4 +1,4 @@
-import { pretender, remover, uploader } from "./index.mjs";
+import { pretender, remover, update } from "../index.mjs"
 
 // 追加・削除・エイリアス登録をするエージェント
 const agents = { pretender, remover, uploader };

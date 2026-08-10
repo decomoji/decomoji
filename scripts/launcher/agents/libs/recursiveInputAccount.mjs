@@ -1,6 +1,5 @@
 import inquirer from "inquirer";
-import { isEmail } from "../../utilities/isEmail.mjs";
-import { isInputs } from "../../utilities/isInputs.mjs";
+import { isEmail, isInputs } from "../../../utilities/index.mjs";
 
 // ログインエラーの時の再帰処理
 export const recursiveInputAccount = async (browser, page, inputs) => {
