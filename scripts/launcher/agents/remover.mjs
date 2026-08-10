@@ -1,10 +1,8 @@
 import puppeteer from "puppeteer";
-import { curator } from "./curator.mjs";
-import { goToEmojiPage } from "./goToEmojiPage.mjs";
-import { postEmojiAdd } from "./postEmojiAdd.mjs";
-import { outputResultJson } from "../../utilities/outputResultJson.mjs";
+import { curator } from "../handlers/curator.mjs";
+import { goToEmojiPage, postEmojiRemove } from "./libs/index.mjs";
 
-export const uploader = async ({ inputs, history }) => {
+export const remover = async ({ inputs, history }) => {
   const { mode, includeNsfw, debug: DEBUG } = inputs;
   const { initial_run, version } = history;
 
@@ -19,23 +17,21 @@ export const uploader = async ({ inputs, history }) => {
     version,
     mode,
     includeNsfw,
-    invoker: "uploader",
+    invoker: "remover",
   });
   const decomojiListLength = decomojiList.length;
 
   // 実行結果の箱
   const result = {
     error: [],
-    error_name_taken: [],
-    error_name_taken_i18n: [],
+    emoji_not_found: [],
     ok: [],
   };
 
-  // postEmojiAdd の戻り値によって変える標準出力メッセージの辞書
+  // postEmojiRemove の戻り値によって変える標準出力メッセージの辞書
   const messages = {
-    ok: "uploaded",
-    error_name_taken: "skipped(already exists)",
-    error_name_taken_i18n: "skipped(international emoji set already includes)",
+    ok: "removed",
+    emoji_not_found: "skipped(emoji_not_found)",
   };
 
   // 処理すべきデコモジが無い場合、ログイン不要なので早期に返す
@@ -46,7 +42,7 @@ export const uploader = async ({ inputs, history }) => {
   }
 
   console.info(`\nConnecting...\n`);
-  const _upload = async (inputs) => {
+  const _remove = async (inputs) => {
     // puppeteer を起動してページインスタンスを作成する
     const browser = await puppeteer.launch({ devtools: DEBUG });
     const page = await browser.newPage();
@@ -57,32 +53,28 @@ export const uploader = async ({ inputs, history }) => {
     // 再入力されているかもしれないので取り直す
     const { twofactor_code: TWOFACTOR_CODE, workspace: WORKSPACE } = inputs;
 
-    console.time("[Installation time]");
+    console.time("[Deletion time]");
     while (i < decomojiListLength) {
-      const { name, path } = decomojiList[i];
-      // name か path が falsy の時は FAILED フラグを立ててループを抜ける
-      if (!name || !path) {
+      const { name } = decomojiList[i];
+      // name が falsy の時は FAILED フラグを立ててループを抜ける
+      if (!name) {
         FAILED = true;
         break;
       }
 
       // Slack APIにPOSTしてレスポンスを得る
-      const res = await postEmojiAdd(page, WORKSPACE, name, path);
+      const res = await postEmojiRemove(page, WORKSPACE, name);
 
       console.info(
         `${i + 1}/${decomojiListLength}: ${
-          res.ok
-            ? messages.ok
-            : res.error === "error_name_taken" || res.error === "error_name_taken_i18n"
-              ? messages[res.error]
-              : res.error
+          res.ok ? messages.ok : res.error === "emoji_not_found" ? messages[res.error] : res.error
         } ${name}`,
       );
 
       // ログファイルに結果を入れる
       res.ok
         ? result.ok.push(name)
-        : res.error === "error_name_taken" || res.error === "error_name_taken_i18n"
+        : res.error === "emoji_not_found"
           ? result[res.error].push(name)
           : res.error === "ratelimited" // ratelimited エラーの場合はログに残さない
             ? void 0
@@ -104,8 +96,7 @@ export const uploader = async ({ inputs, history }) => {
       // 特定のエラー以外は失敗フラグを立てる
       if (
         res.error &&
-        res.error !== "error_name_taken" && // 登録済みのエラー
-        res.error !== "error_name_taken_i18n" // i18n と競合するエラー
+        res.error !== "emoji_not_found" // 削除する対象が見つからないエラー
       ) {
         FAILED = true;
         break;
@@ -117,7 +108,7 @@ export const uploader = async ({ inputs, history }) => {
       FAILED = false;
       RELOGIN = false;
     }
-    console.timeEnd("[Installation time]");
+    console.timeEnd("[Deletion time]");
 
     // ブラウザを閉じる
     if (!DEBUG) {
@@ -128,24 +119,19 @@ export const uploader = async ({ inputs, history }) => {
     if (RELOGIN) {
       console.timeLog("[Total time]");
       console.info(`\nReconnecting...\n`);
-      return await _upload(inputs);
+      return await _remove(inputs);
     }
 
-    // 追加中に ratelimited にならなかった場合ここまで到達する
+    // 削除中に ratelimited にならなかった場合ここまで到達する
     if (FAILED) {
-      console.error("[ERROR]Installation is failed.");
+      console.error("[ERROR]Deletion is failed.");
     }
-    console.info("Installation is completed!");
-    // await outputResultJson({
-    //   data: result,
-    //   invoker: "uploder",
-    //   name: "result",
-    // });
+    console.info("Deletion is completed!");
 
     // 処理完了。ログイン情報を入力し直したかもしれないので結果と一緒に返す
     return { inputs, result };
   };
 
   // 再帰処理をスタートする
-  return await _upload(inputs);
+  return await _remove(inputs);
 };

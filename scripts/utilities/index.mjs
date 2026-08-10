@@ -4,6 +4,7 @@ export { convertToDecomojiObject } from "./convertToDecomojiObject.mjs";
 export { convertToLowerCasedArray } from "./convertToLowerCasedArray.mjs";
 export { convertToUploadObject } from "./convertToUploadObject.mjs";
 export { convertToVPrefixedVersion } from "./convertToVPrefixedVersion.mjs";
+export { getConfigJson } from "./getConfigJson.mjs"
 export { getDecomojiCategory } from "./getDecomojiCategory.mjs";
 export { getDecomojiDiffAsCategory } from "./getDecomojiDiffAsCategory.mjs";
 export { getDecomojiDiffAsFilterMode } from "./getDecomojiDiffAsFilterMode.mjs";

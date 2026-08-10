@@ -1,5 +1,5 @@
 import inquirer from "inquirer";
-import { isInputs } from "../../utilities/isInputs.mjs";
+import { isInputs } from "../../../utilities/index.mjs";
 
 // 2FAコードの入力欄（先頭の桁）を指すセレクタの候補
 // 桁ごとに input が分かれている UI とそうでない UI の両方に備える

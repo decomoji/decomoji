@@ -1,5 +1,5 @@
-import { getParsedJson } from "../../utilities/getParsedJson.mjs";
-import { outputLogJson } from "../../utilities/outputLogJson.mjs";
+import { getParsedJson } from "./getParsedJson.mjs";
+import { outputLogJson } from "./outputLogJson.mjs";
 
 export const getConfigJson = async ({ CONFIGS, TERM, KEYS, INVOKER }) => {
   console.log("getConfigJson(", { CONFIGS, TERM, KEYS, INVOKER }, ")");

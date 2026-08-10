@@ -1,8 +1,6 @@
 import puppeteer from "puppeteer";
-import { curator } from "./curator.mjs";
-import { goToEmojiPage } from "./goToEmojiPage.mjs";
-import { postEmojiAlias } from "./postEmojiAlias.mjs";
-import { outputResultJson } from "../../utilities/outputResultJson.mjs";
+import { curator } from "../handlers/curator.mjs";
+import { goToEmojiPage, postEmojiAlias } from "./libs/index.mjs";
 
 export const pretender = async ({ inputs, history }) => {
   const { mode, includeNsfw, debug: DEBUG } = inputs;
@@ -143,11 +141,6 @@ export const pretender = async ({ inputs, history }) => {
       console.error("[ERROR]Registration is failed.");
     }
     console.info("Registration is completed!");
-    // await outputResultJson({
-    //   data: result,
-    //   invoker: "pretender",
-    //   name: "result",
-    // });
 
     // 入力し直したかもしれないので返す
     return { inputs, result };
