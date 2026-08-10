@@ -25,7 +25,7 @@ const toListMd = async (category) => {
       }
     });
   return await fs
-    .writeFile(`./docs/LIST-${category}.md`, contents[category])
+    .writeFile(`./docs/LIST-${category}.md`, `${contents[category]}\n`)
     .then(() => {
       console.log(`LIST-${category}.md has been saved!`);
     })
