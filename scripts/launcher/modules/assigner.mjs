@@ -26,7 +26,7 @@ export const assigner = async ({ inputs: initialInputs, history }) => {
     pretender: {},
     remover: {},
     uploader: {},
-  }
+  };
 
   // ログイン情報を入力し直しているかもしれないので inputs を引き回す
   let inputs = initialInputs;
