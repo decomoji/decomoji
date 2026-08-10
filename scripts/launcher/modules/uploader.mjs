@@ -19,6 +19,7 @@ export const uploader = async ({ inputs, history }) => {
     version,
     mode,
     includeNsfw,
+    invoker: "uploader",
   });
   const decomojiListLength = decomojiList.length;
 

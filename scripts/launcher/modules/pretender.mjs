@@ -19,6 +19,7 @@ export const pretender = async ({ inputs, history }) => {
     version,
     mode,
     includeNsfw,
+    invoker: "pretender",
   });
   const decomojiListLength = decomojiList.length;
 

@@ -19,6 +19,7 @@ export const remover = async ({ inputs, history }) => {
     version,
     mode,
     includeNsfw,
+    invoker: "remover",
   });
   const decomojiListLength = decomojiList.length;
 
