@@ -1,4 +1,5 @@
 import inquirer from "inquirer";
+import { goToSignInPage } from "./goToSignInPage.mjs";
 import { isInputs } from "../../../utilities/index.mjs";
 
 // 再入力を促す回数の上限
