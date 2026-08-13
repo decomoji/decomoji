@@ -1,7 +1,7 @@
-import { pretender, remover, update } from "../index.mjs"
+import { pretender, remover, uploader } from "../agents/index.mjs"
 
 // 追加・削除・エイリアス登録をするエージェント
-const agents = { pretender, remover, uploader };
+const agents = { uploader, remover, pretender };
 
 // modeごとに実行するエージェントと順番
 const serials = {
