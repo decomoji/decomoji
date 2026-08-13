@@ -15,9 +15,9 @@ extra => extra_tmp
 explicit => explicit_tmp
 
 # 2. 追加したデコモジを最適化する
-node scripts/generator/optimize.mjs basic
-node scripts/generator/optimize.mjs extra
-node scripts/generator/optimize.mjs explicit
+npm run optimize -- basic
+npm run optimize -- extra
+npm run optimize -- explicit
 
 # 3. 既存のデコモジを変更した場合は一つずつコミットする
 `fix: xxxx の画像を修正した`
@@ -58,5 +58,5 @@ npx oxfmt
 
 ```bash
 # 1. ドキュメントで使っている画像を最適化する
-node scripts/generator/optimize.mjs docs
+npm run optimize -- docs
 ```

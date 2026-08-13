@@ -1,7 +1,7 @@
 {
   "name": "@decomoji/optimizer",
   "version": "1.0.0",
-  "description": "デコモジ画像をロスレスで最適化するツール",
+  "description": "デコモジ画像最適化スクリプト",
   "private": true,
   "license": "MIT",
   "author": "oti",
