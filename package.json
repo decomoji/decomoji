@@ -20,7 +20,8 @@
   },
   "main": "",
   "scripts": {
-    "launch": "node scripts/launcher/index.mjs"
+    "launch": "node scripts/launcher/index.mjs",
+    "optimize": "node scripts/generator/optimizer/index.mjs"
   },
   "devDependencies": {
     "email-validator": "^2.0.4",
