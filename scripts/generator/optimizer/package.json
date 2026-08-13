@@ -1,0 +1,15 @@
+{
+  "name": "@decomoji/optimizer",
+  "version": "1.0.0",
+  "description": "デコモジ画像をロスレスで最適化するツール",
+  "private": true,
+  "license": "MIT",
+  "author": "oti",
+  "main": "index.mjs",
+  "scripts": {
+    "optimize": "node index.mjs"
+  },
+  "dependencies": {
+    "@napi-rs/image": "^1.14.0"
+  }
+}
