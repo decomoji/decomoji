@@ -1,3 +1,4 @@
+import { goToSignInPage } from "./goToSignInPage.mjs";
 import { recursiveInputWorkspace } from "./recursiveInputWorkspace.mjs";
 import { recursiveInputAccount } from "./recursiveInputAccount.mjs";
 import { recursiveInput2FA } from "./recursiveInput2FA.mjs";
@@ -6,23 +7,8 @@ export const goToEmojiPage = async (browser, page, inputs) => {
   const TIME = inputs.time;
 
   TIME && console.time("[Login time]");
-  // ログイン画面に遷移する（チームのカスタム絵文字管理画面へのリダイレクトパラメータ付き）
-  await page.goto(
-    `https://${inputs.workspace}.slack.com/sign_in_with_password?redir=%2Fcustomize%2Femoji#/`,
-    {
-      waitUntil: "domcontentloaded",
-    },
-  );
-
-  // SSOログインが有効なときはフォームがないのでパスワードログイン用の画面に遷移する
-  if (await page.$("form[action='/?no_sso=1']")) {
-    await page.goto(
-      `https://${inputs.workspace}.slack.com/?no_sso=1&redir=%2Fcustomize%2Femoji#/`,
-      {
-        waitUntil: "domcontentloaded",
-      },
-    );
-  }
+  // ログイン画面に遷移する（SSOログインが有効なときのフォールバックも含む）
+  await goToSignInPage(page, inputs.workspace);
 
   // ログインフォームが見つからない場合、チームが存在しないと判断して workspace を再入力させる
   if (!(await page.$("#signin_form"))) {
