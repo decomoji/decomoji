@@ -22,6 +22,7 @@ export const goToEmojiPage = async (browser, page, inputs) => {
   if (await page.$("#slack_captcha")) {
     console.error("[ERROR]Oops, you might judged a bot. Please wait and try again.");
     await browser.close();
+    process.exit(1);
   }
 
   // email とパスワードを入力してサインインする
