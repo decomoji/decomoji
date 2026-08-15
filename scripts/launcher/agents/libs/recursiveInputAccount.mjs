@@ -3,7 +3,6 @@ import { isSignInFailed } from "./isSignInFailed.mjs";
 import { isEmail, isInputs } from "../../../utilities/index.mjs";
 
 // 再入力を促す回数の上限
-// 入力ミス以外の理由でサインインできないとき、無限に聞き続けないようにする
 const MAX_ATTEMPTS = 5;
 
 // ログインエラーの時の再帰処理

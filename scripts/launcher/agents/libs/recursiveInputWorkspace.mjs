@@ -3,7 +3,6 @@ import { goToSignInPage } from "./goToSignInPage.mjs";
 import { isInputs } from "../../../utilities/index.mjs";
 
 // 再入力を促す回数の上限
-// 入力ミス以外の理由でログイン画面に到達できないとき、無限に聞き続けないようにする
 const MAX_ATTEMPTS = 5;
 
 // ワークスペースが見つからない時の再帰処理
