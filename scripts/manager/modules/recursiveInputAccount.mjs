@@ -50,9 +50,9 @@ export const recursiveInputAccount = async (browser, page, inputs, attempt = 1) 
   inputs.email = email;
   inputs.password = password;
   // フォームに再入力してサインインする
-  await $email.click({ clickCount: 3 });
+  await $email.click({ count: 3 });
   await $email.type(inputs.email);
-  await $password.click({ clickCount: 3 });
+  await $password.click({ count: 3 });
   await $password.type(inputs.password);
   await Promise.all([
     // クリックする前に遷移の待ち受けを張る
