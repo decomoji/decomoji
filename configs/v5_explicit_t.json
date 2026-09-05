@@ -1,9 +1,16 @@
 [
   {
+    "name": "tamakea",
+    "category": "explicit",
+    "path": "decomoji/explicit/tamakea.png",
+    "created": "v5.35.0"
+  },
+  {
     "name": "tamamomi",
     "category": "explicit",
     "path": "decomoji/explicit/tamamomi.png",
-    "created": "v5.24.0"
+    "created": "v5.24.0",
+    "updated": "v5.35.0"
   },
   {
     "name": "tanakaraomutu",
@@ -30,10 +37,23 @@
     "created": "v5.21.0"
   },
   {
+    "name": "tikukea",
+    "category": "explicit",
+    "path": "decomoji/explicit/tikukea.png",
+    "created": "v5.35.0"
+  },
+  {
     "name": "tikumomi",
     "category": "explicit",
     "path": "decomoji/explicit/tikumomi.png",
-    "created": "v5.24.0"
+    "created": "v5.24.0",
+    "updated": "v5.35.0"
+  },
+  {
+    "name": "tinnkea",
+    "category": "explicit",
+    "path": "decomoji/explicit/tinnkea.png",
+    "created": "v5.35.0"
   },
   {
     "name": "tinnkosomurie",
@@ -45,7 +65,8 @@
     "name": "tinnmomi",
     "category": "explicit",
     "path": "decomoji/explicit/tinnmomi.png",
-    "created": "v5.24.0"
+    "created": "v5.24.0",
+    "updated": "v5.35.0"
   },
   {
     "name": "titiyatu",

@@ -126,6 +126,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "pakipaki",
+    "category": "extra",
+    "path": "decomoji/extra/pakipaki.png",
+    "created": "v5.35.0"
+  },
+  {
     "name": "pakkiri",
     "category": "extra",
     "path": "decomoji/extra/pakkiri.png",
@@ -168,10 +174,10 @@
     "created": "v5.0.0"
   },
   {
-    "name": "panedhissyon",
+    "name": "panedhissyonn",
     "category": "extra",
-    "path": "decomoji/extra/panedhissyon.png",
-    "created": "v5.0.0"
+    "path": "decomoji/extra/panedhissyonn.png",
+    "created": "v5.35.0"
   },
   {
     "name": "panekasi",
@@ -270,6 +276,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "papemape",
+    "category": "extra",
+    "path": "decomoji/extra/papemape.png",
+    "created": "v5.35.0"
+  },
+  {
     "name": "papethiakyaputyagorira",
     "category": "extra",
     "path": "decomoji/extra/papethiakyaputyagorira.png",
@@ -285,7 +297,8 @@
     "name": "papettomapetto",
     "category": "extra",
     "path": "decomoji/extra/papettomapetto.png",
-    "created": "v5.1.0"
+    "created": "v5.1.0",
+    "updated": "v5.35.0"
   },
   {
     "name": "papiko",
@@ -294,10 +307,10 @@
     "created": "v5.0.0"
   },
   {
-    "name": "paradhinng",
+    "name": "paradhinn",
     "category": "extra",
-    "path": "decomoji/extra/paradhinng.png",
-    "created": "v5.4.0"
+    "path": "decomoji/extra/paradhinn.png",
+    "created": "v5.35.0"
   },
   {
     "name": "parametaraizu",
@@ -644,10 +657,10 @@
     "created": "v5.27.0"
   },
   {
-    "name": "pe-zinairinku",
+    "name": "pe-zinairinnku",
     "category": "extra",
-    "path": "decomoji/extra/pe-zinairinku.png",
-    "created": "v5.8.0"
+    "path": "decomoji/extra/pe-zinairinnku.png",
+    "created": "v5.35.0"
   },
   {
     "name": "peapuro",
@@ -660,6 +673,12 @@
     "category": "extra",
     "path": "decomoji/extra/peatyeki.png",
     "created": "v5.21.0"
+  },
+  {
+    "name": "pedhimennto",
+    "category": "extra",
+    "path": "decomoji/extra/pedhimennto.png",
+    "created": "v5.35.0"
   },
   {
     "name": "peiittofowa-do",
@@ -716,6 +735,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "penndhuramu",
+    "category": "extra",
+    "path": "decomoji/extra/penndhuramu.png",
+    "created": "v5.35.0"
+  },
+  {
     "name": "penndhuramuwe-bu",
     "category": "extra",
     "path": "decomoji/extra/penndhuramuwe-bu.png",
@@ -734,10 +759,10 @@
     "created": "v5.31.0"
   },
   {
-    "name": "pennro-zupointo",
+    "name": "pennro-zupoinnto",
     "category": "extra",
-    "path": "decomoji/extra/pennro-zupointo.png",
-    "created": "v5.32.0"
+    "path": "decomoji/extra/pennro-zupoinnto.png",
+    "created": "v5.35.0"
   },
   {
     "name": "penntetu",
@@ -807,6 +832,18 @@
     "path": "decomoji/extra/petipeti.png",
     "created": "v5.0.0",
     "updated": "v5.15.0"
+  },
+  {
+    "name": "pettoka",
+    "category": "extra",
+    "path": "decomoji/extra/pettoka.png",
+    "created": "v5.35.0"
+  },
+  {
+    "name": "peyanngo",
+    "category": "extra",
+    "path": "decomoji/extra/peyanngo.png",
+    "created": "v5.35.0"
   },
   {
     "name": "pi_",
@@ -929,6 +966,12 @@
     "created": "v5.19.0"
   },
   {
+    "name": "pinnti",
+    "category": "extra",
+    "path": "decomoji/extra/pinnti.png",
+    "created": "v5.35.0"
+  },
+  {
     "name": "pinntyeki",
     "category": "extra",
     "path": "decomoji/extra/pinntyeki.png",
@@ -957,6 +1000,12 @@
     "category": "extra",
     "path": "decomoji/extra/piro-nn.png",
     "created": "v5.8.0"
+  },
+  {
+    "name": "pitagorasusosuu",
+    "category": "extra",
+    "path": "decomoji/extra/pitagorasusosuu.png",
+    "created": "v5.35.0"
   },
   {
     "name": "pitipiti",
@@ -1169,10 +1218,10 @@
     "created": "v5.21.0"
   },
   {
-    "name": "potipotitti",
+    "name": "potipotitto",
     "category": "extra",
-    "path": "decomoji/extra/potipotitti.png",
-    "created": "v5.19.0"
+    "path": "decomoji/extra/potipotitto.png",
+    "created": "v5.35.0"
   },
   {
     "name": "potirite",
@@ -1259,6 +1308,12 @@
     "created": "v5.27.0"
   },
   {
+    "name": "prd",
+    "category": "extra",
+    "path": "decomoji/extra/prd.png",
+    "created": "v5.35.0"
+  },
+  {
     "name": "prdayo",
     "category": "extra",
     "path": "decomoji/extra/prdayo.png",
@@ -1287,12 +1342,6 @@
     "category": "extra",
     "path": "decomoji/extra/prsiyo.png",
     "created": "v5.0.0"
-  },
-  {
-    "name": "prtazei",
-    "category": "extra",
-    "path": "decomoji/extra/prtazei.png",
-    "created": "v5.25.0"
   },
   {
     "name": "psdnosaigenn",
@@ -1567,6 +1616,12 @@
     "created": "v5.21.0"
   },
   {
+    "name": "puro",
+    "category": "extra",
+    "path": "decomoji/extra/puro.png",
+    "created": "v5.35.0"
+  },
+  {
     "name": "purodeza",
     "category": "extra",
     "path": "decomoji/extra/purodeza.png",
@@ -1583,6 +1638,12 @@
     "category": "extra",
     "path": "decomoji/extra/puroguressibuennhannsumennto.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "puronosigoto",
+    "category": "extra",
+    "path": "decomoji/extra/puronosigoto.png",
+    "created": "v5.35.0"
   },
   {
     "name": "puronoslacktukai",
@@ -1619,6 +1680,18 @@
     "category": "extra",
     "path": "decomoji/extra/puroteinn.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "purotosite",
+    "category": "extra",
+    "path": "decomoji/extra/purotosite.png",
+    "created": "v5.35.0"
+  },
+  {
+    "name": "purototaipu",
+    "category": "extra",
+    "path": "decomoji/extra/purototaipu.png",
+    "created": "v5.35.0"
   },
   {
     "name": "purudau",
@@ -1709,6 +1782,12 @@
     "category": "extra",
     "path": "decomoji/extra/pvpzei.png",
     "created": "v5.25.0"
+  },
+  {
+    "name": "pykakasi",
+    "category": "extra",
+    "path": "decomoji/extra/pykakasi.png",
+    "created": "v5.35.0"
   },
   {
     "name": "pyo-nn",

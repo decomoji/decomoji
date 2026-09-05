@@ -253,6 +253,12 @@
     "created": "v5.18.0"
   },
   {
+    "name": "fasa-do",
+    "category": "extra",
+    "path": "decomoji/extra/fasa-do.png",
+    "created": "v5.35.0"
+  },
+  {
     "name": "fasirare",
     "category": "extra",
     "path": "decomoji/extra/fasirare.png",
@@ -349,6 +355,12 @@
     "created": "v5.33.0"
   },
   {
+    "name": "feruma-sosuu",
+    "category": "extra",
+    "path": "decomoji/extra/feruma-sosuu.png",
+    "created": "v5.35.0"
+  },
+  {
     "name": "ferumisuitei",
     "category": "extra",
     "path": "decomoji/extra/ferumisuitei.png",
@@ -383,6 +395,12 @@
     "category": "extra",
     "path": "decomoji/extra/fi-dobakkusiteko.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "fibonattisosuu",
+    "category": "extra",
+    "path": "decomoji/extra/fibonattisosuu.png",
+    "created": "v5.35.0"
   },
   {
     "name": "figukyapu",

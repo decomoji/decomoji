@@ -1,9 +1,22 @@
 [
   {
+    "name": "paikea",
+    "category": "explicit",
+    "path": "decomoji/explicit/paikea.png",
+    "created": "v5.35.0"
+  },
+  {
     "name": "paimomi",
     "category": "explicit",
     "path": "decomoji/explicit/paimomi.png",
-    "created": "v5.24.0"
+    "created": "v5.24.0",
+    "updated": "v5.35.0"
+  },
+  {
+    "name": "panniti",
+    "category": "explicit",
+    "path": "decomoji/explicit/panniti.png",
+    "created": "v5.35.0"
   },
   {
     "name": "pinnkubonn",

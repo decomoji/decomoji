@@ -54,12 +54,6 @@
     "created": "v5.17.0"
   },
   {
-    "name": "eapurituuti",
-    "category": "extra",
-    "path": "decomoji/extra/eapurituuti.png",
-    "created": "v5.0.0"
-  },
-  {
     "name": "eari-",
     "category": "extra",
     "path": "decomoji/extra/eari-.png",
@@ -70,6 +64,12 @@
     "category": "extra",
     "path": "decomoji/extra/earipugorosi.png",
     "created": "v5.0.0"
+  },
+  {
+    "name": "eariputuuti",
+    "category": "extra",
+    "path": "decomoji/extra/eariputuuti.png",
+    "created": "v5.35.0"
   },
   {
     "name": "earite",
@@ -1388,6 +1388,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "ema-pusosuu",
+    "category": "extra",
+    "path": "decomoji/extra/ema-pusosuu.png",
+    "created": "v5.35.0"
+  },
+  {
     "name": "emarusyonn",
     "category": "extra",
     "path": "decomoji/extra/emarusyonn.png",
@@ -1976,6 +1982,12 @@
     "created": "v5.3.0"
   },
   {
+    "name": "enntoreinnmennto",
+    "category": "extra",
+    "path": "decomoji/extra/enntoreinnmennto.png",
+    "created": "v5.35.0"
+  },
+  {
     "name": "enntoropi-",
     "category": "extra",
     "path": "decomoji/extra/enntoropi-.png",
@@ -2396,6 +2408,12 @@
     "created": "v5.22.0"
   },
   {
+    "name": "eraberumori",
+    "category": "extra",
+    "path": "decomoji/extra/eraberumori.png",
+    "created": "v5.35.0"
+  },
+  {
     "name": "eraberumu",
     "category": "extra",
     "path": "decomoji/extra/eraberumu.png",
@@ -2417,12 +2435,6 @@
     "name": "eraberuniku",
     "category": "extra",
     "path": "decomoji/extra/eraberuniku.png",
-    "created": "v5.22.0"
-  },
-  {
-    "name": "eraberuomori",
-    "category": "extra",
-    "path": "decomoji/extra/eraberuomori.png",
     "created": "v5.22.0"
   },
   {
@@ -2454,6 +2466,12 @@
     "category": "extra",
     "path": "decomoji/extra/eraberusaru.png",
     "created": "v5.22.0"
+  },
+  {
+    "name": "eraberusora",
+    "category": "extra",
+    "path": "decomoji/extra/eraberusora.png",
+    "created": "v5.35.0"
   },
   {
     "name": "eraberute",
@@ -3090,12 +3108,6 @@
     "category": "extra",
     "path": "decomoji/extra/euc-jp.png",
     "created": "v5.2.0"
-  },
-  {
-    "name": "evezya-",
-    "category": "extra",
-    "path": "decomoji/extra/evezya-.png",
-    "created": "v5.18.0"
   },
   {
     "name": "evo-ka-",

@@ -42,10 +42,10 @@
     "created": "v5.20.0"
   },
   {
-    "name": "chatpgt",
+    "name": "chatgpt",
     "category": "extra",
-    "path": "decomoji/extra/chatpgt.png",
-    "created": "v5.32.0"
+    "path": "decomoji/extra/chatgpt.png",
+    "created": "v5.35.0"
   },
   {
     "name": "chura",
@@ -220,6 +220,12 @@
     "category": "extra",
     "path": "decomoji/extra/cizumi.png",
     "created": "v5.24.0"
+  },
+  {
+    "name": "cjm",
+    "category": "extra",
+    "path": "decomoji/extra/cjm.png",
+    "created": "v5.35.0"
   },
   {
     "name": "ckyuutoudo",

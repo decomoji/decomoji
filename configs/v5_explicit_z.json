@@ -48,6 +48,12 @@
     "created": "v5.18.0"
   },
   {
+    "name": "zennra",
+    "category": "explicit",
+    "path": "decomoji/explicit/zennra.png",
+    "created": "v5.35.0"
+  },
+  {
     "name": "zizyounoarukuso",
     "category": "explicit",
     "path": "decomoji/explicit/zizyounoarukuso.png",
@@ -64,5 +70,11 @@
     "category": "explicit",
     "path": "decomoji/explicit/zukkonnbakkonn.png",
     "created": "v5.8.0"
+  },
+  {
+    "name": "zyoura",
+    "category": "explicit",
+    "path": "decomoji/explicit/zyoura.png",
+    "created": "v5.35.0"
   }
 ]

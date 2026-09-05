@@ -45,7 +45,14 @@
     "name": "u-pa-ru-pa-su-pa-ka-",
     "category": "extra",
     "path": "decomoji/extra/u-pa-ru-pa-su-pa-ka-.png",
-    "created": "v5.8.0"
+    "created": "v5.8.0",
+    "updated": "v5.35.0"
+  },
+  {
+    "name": "u-pa-ru-pa-su-pa-ka-pa-ka-",
+    "category": "extra",
+    "path": "decomoji/extra/u-pa-ru-pa-su-pa-ka-pa-ka-.png",
+    "created": "v5.35.0"
   },
   {
     "name": "udagawanobaibusu",
@@ -220,6 +227,12 @@
     "category": "extra",
     "path": "decomoji/extra/uiteru.png",
     "created": "v5.10.0"
+  },
+  {
+    "name": "ukagaka",
+    "category": "extra",
+    "path": "decomoji/extra/ukagaka.png",
+    "created": "v5.35.0"
   },
   {
     "name": "ukatu",
@@ -484,6 +497,12 @@
     "category": "extra",
     "path": "decomoji/extra/ukkokoroga.png",
     "created": "v5.8.0"
+  },
+  {
+    "name": "ulo-rusannsannsosuu",
+    "category": "extra",
+    "path": "decomoji/extra/ulo-rusannsannsosuu.png",
+    "created": "v5.35.0"
   },
   {
     "name": "ulo-ta-sa-ba-",
@@ -1122,10 +1141,10 @@
     "created": "v5.1.0"
   },
   {
-    "name": "up-",
+    "name": "up_",
     "category": "extra",
-    "path": "decomoji/extra/up-.png",
-    "created": "v5.0.0"
+    "path": "decomoji/extra/up_.png",
+    "created": "v5.35.0"
   },
   {
     "name": "uradenouhinn",
@@ -1458,12 +1477,6 @@
     "created": "v5.5.0"
   },
   {
-    "name": "usakawaii",
-    "category": "extra",
-    "path": "decomoji/extra/usakawaii.png",
-    "created": "v5.21.0"
-  },
-  {
     "name": "usi",
     "category": "extra",
     "path": "decomoji/extra/usi.png",
@@ -1498,6 +1511,12 @@
     "category": "extra",
     "path": "decomoji/extra/usirogawa.png",
     "created": "v5.4.0"
+  },
+  {
+    "name": "usm",
+    "category": "extra",
+    "path": "decomoji/extra/usm.png",
+    "created": "v5.35.0"
   },
   {
     "name": "usodesita",
@@ -1536,6 +1555,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "usotukanaide",
+    "category": "extra",
+    "path": "decomoji/extra/usotukanaide.png",
+    "created": "v5.35.0"
+  },
+  {
     "name": "usotuki",
     "category": "extra",
     "path": "decomoji/extra/usotuki.png",
@@ -1546,6 +1571,12 @@
     "category": "extra",
     "path": "decomoji/extra/usotukihodoyokusyaberu.png",
     "created": "v5.22.0"
+  },
+  {
+    "name": "usotukimasita",
+    "category": "extra",
+    "path": "decomoji/extra/usotukimasita.png",
+    "created": "v5.35.0"
   },
   {
     "name": "usousousousokotumekawauso",
@@ -1774,5 +1805,11 @@
     "category": "extra",
     "path": "decomoji/extra/uzakawa.png",
     "created": "v5.21.0"
+  },
+  {
+    "name": "uzakawaii",
+    "category": "extra",
+    "path": "decomoji/extra/uzakawaii.png",
+    "created": "v5.35.0"
   }
 ]
