@@ -7,8 +7,8 @@ export const goToSignInPage = async (page, workspace) => {
     },
   );
 
-  // SSOログインが有効なときはフォームがないので、パスワードログイン用の画面に遷移する
-  // パスワードログインへの導線は form のことも a のこともあるので、フォームの不在そのものを条件にする
+  // SSOログインが有効なときはフォームがないのでパスワードログイン用の画面に遷移する
+  // パスワードログインへの導線は form のことも a のこともあるため、フォームの不在そのものを条件にする
   if (!(await page.$("#signin_form"))) {
     await page.goto(`https://${workspace}.slack.com/?no_sso=1&redir=%2Fcustomize%2Femoji#/`, {
       waitUntil: "domcontentloaded",

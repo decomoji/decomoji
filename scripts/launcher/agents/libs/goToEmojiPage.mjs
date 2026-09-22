@@ -34,7 +34,7 @@ export const goToEmojiPage = async (browser, page, inputs) => {
   await page.type("#email", inputs.email);
   await page.type("#password", inputs.password);
   await Promise.all([
-    // クリックする前に遷移の待ち受けを張る
+    // クリックより先に遷移の待ち受けを張る
     // 遷移しないままエラーが表示されることもあるので、待ち受けの失敗は下の状態チェックに委ねる
     page
       .waitForNavigation({

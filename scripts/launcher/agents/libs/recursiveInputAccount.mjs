@@ -1,8 +1,9 @@
 import inquirer from "inquirer";
-import { isSignInFailed } from "./isSignInFailed.mjs";
 import { isEmail, isInputs } from "../../../utilities/index.mjs";
+import { isSignInFailed } from "./isSignInFailed.mjs";
 
 // 再入力を促す回数の上限
+// 入力ミス以外の理由でサインインできないとき、無限に問い続けないようにする
 const MAX_ATTEMPTS = 5;
 
 // ログインエラーの時の再帰処理
@@ -53,7 +54,7 @@ export const recursiveInputAccount = async (browser, page, inputs, attempt = 1) 
   await $password.click({ count: 3 });
   await $password.type(inputs.password);
   await Promise.all([
-    // クリックする前に遷移の待ち受けを張る
+    // クリックより先に遷移の待ち受けを張る
     // 遷移しないままエラーが表示されることもあるので、待ち受けの失敗は下の状態チェックに委ねる
     page.waitForNavigation({ waitUntil: "networkidle2", timeout: 60000 }).catch(() => void 0),
     page.click("#signin_btn"),

@@ -6,6 +6,7 @@ import { isInputs } from "../../../utilities/index.mjs";
 const TWO_FACTOR_INPUT_SELECTORS = ['.two_factor_input_item:first-child > input', '[name="2fa_code"]'];
 
 // 再入力を促す回数の上限
+// 入力ミス以外の理由で認証できないとき、無限に問い続けないようにする
 const MAX_ATTEMPTS = 5;
 
 // 2FA利用時の再帰処理
@@ -45,7 +46,7 @@ export const recursiveInput2FA = async (browser, page, inputs, attempt = 1) => {
   // 2FA 利用のフラグを立てる
   inputs.twofactor_code = true;
   // フォームに入力する
-  // 最終桁の入力で自動サブミットされることがあるため、type する前に遷移の待ち受けを張る
+  // 最終桁の入力で自動サブミットされるため、type より先に遷移の待ち受けを張る
   await Promise.all([
     // 自動サブミットされず遷移しないこともあるので、待ち受けの失敗は下の入力欄チェックに委ねる
     page.waitForNavigation({ waitUntil: "networkidle2", timeout: 60000 }).catch(() => void 0),
