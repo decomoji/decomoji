@@ -35,9 +35,9 @@ export const remover = async ({ inputs, history }) => {
   };
 
   // 処理すべきデコモジが無い場合、ログイン不要なので早期に返す
+  // 更新では差分が無い＝削除するデコモジが無いこともありえるので、空でもエラーにはしない
   if (decomojiListLength === 0) {
-    console.error("[ERROR]No decomoji items.");
-    result.error.push({ message: "No decomoji items." });
+    console.info("No decomoji items.");
     return { inputs, result };
   }
 

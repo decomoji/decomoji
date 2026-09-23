@@ -39,9 +39,10 @@ export const pretender = async ({ inputs, history }) => {
   };
 
   // 処理すべきデコモジが無い場合、ログイン不要なので早期に返す
+  // 更新では貼り直すエイリアスが無いことも、エイリアスを持たないワークスペースであることも
+  // ありえるので、空でもエラーにはしない
   if (decomojiListLength === 0) {
-    console.error("[ERROR]No decomoji items.");
-    result.error.push({ message: "No decomoji items." });
+    console.info("No decomoji items.");
     return { inputs, result };
   }
 
