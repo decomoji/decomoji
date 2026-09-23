@@ -25,10 +25,10 @@
   },
   "devDependencies": {
     "email-validator": "^2.0.4",
-    "inquirer": "^14.0.2",
-    "puppeteer": "^25.3.0"
+    "inquirer": "^14.2.2",
+    "puppeteer": "^25.11.0"
   },
   "allowScripts": {
-    "puppeteer@25.3.0": true
+    "puppeteer@25.11.0": true
   }
 }
