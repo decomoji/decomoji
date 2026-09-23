@@ -6,12 +6,14 @@ const agents = { uploader, remover, pretender };
 // modeごとに実行するエージェントと順番
 const serials = {
   uninstall: ["remover"],
-  update: ["remover", "uploader"],
+  // 更新でも pretender を回す
+  // 互換のある移行をしたワークスペースでは、差し替えで道連れに消えたエイリアスの貼り直しが要る
+  update: ["remover", "uploader", "pretender"],
   migration: ["remover", "uploader"],
   compatible_migration: ["remover", "uploader", "pretender"],
 };
 
-export const assigner = async ({ inputs: initialInputs, history }) => {
+export const assigner = async ({ inputs: initialInputs, history, compatible }) => {
   const serial = serials[initialInputs.mode];
 
   // 存在しない mode の場合はエラーを返して終了する
@@ -33,7 +35,7 @@ export const assigner = async ({ inputs: initialInputs, history }) => {
 
   // mode ごとにエージェントを実行して input を取り直しつつ結果を格納する
   for (const name of serial) {
-    const { inputs: newInputs, result } = await agents[name]({ inputs, history });
+    const { inputs: newInputs, result } = await agents[name]({ inputs, history, compatible });
     inputs = newInputs;
     results[name] = result;
   }

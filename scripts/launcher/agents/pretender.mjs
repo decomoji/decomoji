@@ -2,7 +2,7 @@ import puppeteer from "puppeteer";
 import { curator } from "../handlers/curator.mjs";
 import { goToEmojiPage, postEmojiAlias } from "./libs/index.mjs";
 
-export const pretender = async ({ inputs, history }) => {
+export const pretender = async ({ inputs, history, compatible }) => {
   const { mode, includeNsfw, debug: DEBUG } = inputs;
   const { initial_run, version } = history;
 
@@ -15,6 +15,7 @@ export const pretender = async ({ inputs, history }) => {
   const decomojiList = await curator({
     initial_run,
     version,
+    compatible,
     mode,
     includeNsfw,
     invoker: "pretender",

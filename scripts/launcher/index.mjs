@@ -29,6 +29,7 @@ Starting
     initial_run: true,
     timestamp: null,
     version: null,
+    compatible: false,
     inputs: {
       workspace: null,
       email: null,
@@ -58,16 +59,24 @@ Starting
     },
   }));
 
+  // v5 -> v6 のエイリアスを貼って運用するワークスペースか否かを決める
+  // 更新で貼り直すために、今回の実行に適用しつつ history にも残す
+  const compatible = isCompatibleWorkspace({
+    mode: inputs.mode,
+    compatible: history.compatible,
+  });
+
   // assigner() で mode に応じたエージェントを実行し、結果を受け取る
   const {
     inputs: { workspace, email, mode, includeNsfw },
     results,
-  } = await assigner({ inputs, history });
+  } = await assigner({ inputs, history, compatible });
 
   // エラーなく最後まで各エージェントを実行できたら history.json を保存する
   await outputHistoryJson({
     timestamp,
     version: await getParsedJson("../../package.json").then(({ version }) => version),
+    compatible,
     inputs: {
       // password を除外する
       workspace,

@@ -3,9 +3,10 @@
 // 引数はそれぞれ役割が違うので、下記の順に絞り込んでいく
 //
 // 1. mode + invoker  どの母集団を見るか      -> SOURCES
-// 2. includeNsfw     どのカテゴリーを扱うか  -> isTarget()
-// 3. version         前回からの差分に絞るか  -> isTarget()（mode=update の時だけ）
-// 4. invoker         どんな形で返すか        -> FORMATTERS
+// 2. compatible      エイリアスを扱うか      -> curator()（invoker=pretender の時だけ）
+// 3. includeNsfw     どのカテゴリーを扱うか  -> isTarget()
+// 4. version         前回からの差分に絞るか  -> isTarget()（mode=update の時だけ）
+// 5. invoker         どんな形で返すか        -> FORMATTERS
 
 import {
   convertToUploadObject,
@@ -16,9 +17,9 @@ import {
   isStringOfNotEmpty,
 } from "../../utilities/index.mjs";
 
-const V6_DATABASE = "../../database/v6.json";
-const V5_HISTORY = "../../database/v5.json";
-const V4_ALL = "../../configs/v4_all.json";
+const V6_DATABASE = "database/v6.json";
+const V5_HISTORY = "database/v5.json";
+const V4_ALL = "configs/v4_all.json";
 
 // NSFW なカテゴリー。includeNsfw が false の時は追加も削除もしない
 const NSFW_CATEGORIES = ["explicit"];
@@ -116,11 +117,10 @@ const SOURCES = {
   update: {
     remover: [getV6Decomojis],
     uploader: [getV6Decomojis],
-    // TODO: 互換のある移行をした後の更新では、差し替えたデコモジを消した時に
-    // エイリアスも道連れで消えるので貼り直しが要る。
-    // それには前回の実行モード（history.inputs.mode）を curator() に渡す必要があるため、
-    // assigner() が update でも pretender を回すようになってから対応する
-    pretender: [],
+    // 差し替えたデコモジを消すとエイリアスも道連れで消えるので貼り直す
+    // 新しく追加されたデコモジには、まだ貼られていないエイリアスを貼る
+    // どちらも compatible なワークスペースだけが対象（curator() で弾く）
+    pretender: [getAliasDecomojis],
   },
   uninstall: {
     // 全削除なので v6 だけでなく v4/v5 で配ったものも消す
@@ -164,6 +164,8 @@ const isTarget = (decomoji, { initial_run, version, mode, includeNsfw, invoker }
   }
 
   // 前回より後に追加（created）されたか、差し替え（updated）されたものを追加する
+  // pretender も同じ条件でよい
+  // 追加されたものには新しくエイリアスを貼り、差し替えで道連れに消えたエイリアスは貼り直す
   if (!isRemoving) {
     return isNewerThan(created, version) || isNewerThan(updated, version);
   }
@@ -185,11 +187,17 @@ const FORMATTERS = {
   pretender: ({ name, alias_for }) => ({ name, alias_for }),
 };
 
-export const curator = async ({ initial_run, version, mode, includeNsfw, invoker }) => {
+export const curator = async ({ initial_run, version, compatible, mode, includeNsfw, invoker }) => {
   const getSources = SOURCES[mode]?.[invoker] ?? [];
 
   // 処理する母集団が無い組み合わせは、何もしないで返す
   if (getSources.length === 0) {
+    return [];
+  }
+
+  // エイリアスは互換のある移行をしたワークスペースにしか無いので、
+  // そうでなければ貼りにいかない。移行で捨てたはずの v5 の名前を更新で生やさないため
+  if (invoker === "pretender" && !compatible) {
     return [];
   }
 

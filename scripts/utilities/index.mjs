@@ -22,6 +22,7 @@ export { getMergedDiffOfManages } from "./getMergedDiffOfManages.mjs";
 export { getParsedJson } from "./getParsedJson.mjs";
 export { getParsedSemVerObject } from "./getParsedSemVerObject.mjs";
 export { getTargetCategories } from "./getTargetCategories.mjs";
+export { isCompatibleWorkspace } from "./isCompatibleWorkspace.mjs";
 export { isDecomojiFile } from "./isDecomojiFile.mjs";
 export { isEmail } from "./isEmail.mjs";
 export { isInputs } from "./isInputs.mjs";
