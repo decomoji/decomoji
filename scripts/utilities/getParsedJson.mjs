@@ -1,13 +1,11 @@
 import fs from "fs/promises";
-import { dirname, resolve } from "path";
-import { fileURLToPath } from "url";
+import { getRootPath } from "./getRootPath.mjs";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
+// JSON を読み込んでパースする
+// パスはリポジトリのルート基準で解決されるので、書き出し側（writeJsonFile）と基準が揃う
 export const getParsedJson = async (filepath) => {
   try {
-    return JSON.parse(await fs.readFile(resolve(__dirname, filepath), "utf8"));
+    return JSON.parse(await fs.readFile(getRootPath(filepath), "utf8"));
   } catch (e) {
     throw e;
   }

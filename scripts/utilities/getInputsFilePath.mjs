@@ -1,11 +1,7 @@
 import fs from "fs/promises";
-import { dirname, isAbsolute, resolve } from "path";
-import { fileURLToPath } from "url";
+import { isAbsolute, resolve } from "path";
+import { getRootPath } from "./getRootPath.mjs";
 import { isStringOfNotEmpty } from "./isStringOfNotEmpty.mjs";
-
-// このファイルは scripts/utilities/ に置かれているので、2つ上がリポジトリのルート
-// 実行時のカレントディレクトリに関係なく決まる
-const ROOT_DIR = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
 
 // 読み込めるファイルが存在するか否か
 const isReadableFile = async (filepath) =>
@@ -35,7 +31,7 @@ export const getInputsFilePath = async (filepath = process.argv[2]) => {
 
   const candidates = isAbsolute(filepath)
     ? [filepath]
-    : [resolve(process.cwd(), filepath), resolve(ROOT_DIR, filepath)];
+    : [resolve(process.cwd(), filepath), getRootPath(filepath)];
 
   for (const candidate of candidates) {
     if (await isReadableFile(candidate)) {

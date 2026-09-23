@@ -4,7 +4,7 @@ export { convertToDecomojiObject } from "./convertToDecomojiObject.mjs";
 export { convertToLowerCasedArray } from "./convertToLowerCasedArray.mjs";
 export { convertToUploadObject } from "./convertToUploadObject.mjs";
 export { convertToVPrefixedVersion } from "./convertToVPrefixedVersion.mjs";
-export { getConfigJson } from "./getConfigJson.mjs"
+export { getConfigJson } from "./getConfigJson.mjs";
 export { getDecomojiCategory } from "./getDecomojiCategory.mjs";
 export { getDecomojiDiffAsCategory } from "./getDecomojiDiffAsCategory.mjs";
 export { getDecomojiDiffAsFilterMode } from "./getDecomojiDiffAsFilterMode.mjs";
@@ -21,6 +21,7 @@ export { getMergedDiffOfCategories } from "./getMergedDiffOfCategories.mjs";
 export { getMergedDiffOfManages } from "./getMergedDiffOfManages.mjs";
 export { getParsedJson } from "./getParsedJson.mjs";
 export { getParsedSemVerObject } from "./getParsedSemVerObject.mjs";
+export { getRootPath } from "./getRootPath.mjs";
 export { getTargetCategories } from "./getTargetCategories.mjs";
 export { isCompatibleWorkspace } from "./isCompatibleWorkspace.mjs";
 export { isDecomojiFile } from "./isDecomojiFile.mjs";

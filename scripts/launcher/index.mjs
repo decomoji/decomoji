@@ -3,7 +3,8 @@ import { assigner, dialoger } from "./handlers/index.mjs";
 import {
   getInputsFilePath,
   getParsedJson,
-  getTargetCategories,
+  getRootPath,
+  isCompatibleWorkspace,
   outputHistoryJson,
 } from "../utilities/index.mjs";
 
@@ -24,7 +25,7 @@ Starting
   const timestamp = new Date().toISOString();
 
   // 既存の history を読み込む。なければ初期値を設定する
-  const history = await getParsedJson("../../logs/history.json").catch(() => ({
+  const history = await getParsedJson("logs/history.json").catch(() => ({
     // logs/history.json がない場合、v6 の初回実行として扱う
     initial_run: true,
     timestamp: null,
@@ -75,7 +76,7 @@ Starting
   // エラーなく最後まで各エージェントを実行できたら history.json を保存する
   await outputHistoryJson({
     timestamp,
-    version: await getParsedJson("../../package.json").then(({ version }) => version),
+    version: await getParsedJson("package.json").then(({ version }) => version),
     compatible,
     inputs: {
       // password を除外する
@@ -92,7 +93,7 @@ Starting
 };
 
 // logs ディレクトリを作成しておく
-await fs.mkdir("logs", { recursive: true });
+await fs.mkdir(getRootPath("logs"), { recursive: true });
 const inputsFilePath = await getInputsFilePath();
 
 if (inputsFilePath) {
