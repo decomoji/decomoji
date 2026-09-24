@@ -13,31 +13,16 @@ import {
   getDecomojiCategory,
   getDecomojiName,
   getParsedJson,
-  getParsedSemVerObject,
+  isNewerThan,
   isStringOfNotEmpty,
 } from "../../utilities/index.mjs";
 
 const V6_DATABASE = "database/v6.json";
 const V5_HISTORY = "database/v5.json";
-const V4_ALL = "configs/v4_all.json";
+const V4_ALL = "database/v4.json";
 
 // NSFW なカテゴリー。includeNsfw が false の時は追加も削除もしない
 const NSFW_CATEGORIES = ["explicit"];
-
-// semver 同士を比較して、semver が base より新しいなら true
-// どちらかが空文字（updated が無いなど）の時は比較できないので false
-const isNewerThan = (semver, base) => {
-  if (!isStringOfNotEmpty(semver) || !isStringOfNotEmpty(base)) {
-    return false;
-  }
-  const target = getParsedSemVerObject(String(semver).replace(/^v/, ""));
-  const criterion = getParsedSemVerObject(String(base).replace(/^v/, ""));
-  return target.major !== criterion.major
-    ? target.major > criterion.major
-    : target.minor !== criterion.minor
-      ? target.minor > criterion.minor
-      : target.patch > criterion.patch;
-};
 
 // 名前が重複するデコモジを間引く
 // v6 の名前がラテン文字だけになる時、v4/v5 の名前と衝突することがある

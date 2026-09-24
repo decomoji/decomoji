@@ -1,6 +1,7 @@
 import fs from "fs/promises";
 import { assigner, dialoger } from "./handlers/index.mjs";
 import {
+  getDatabaseVersion,
   getInputsFilePath,
   getParsedJson,
   getRootPath,
@@ -60,6 +61,10 @@ Starting
     },
   }));
 
+  // 配布しているデコモジセットのバージョン
+  // database の整合が崩れていたらここで落ちるので、ワークスペースを触る前に気づける
+  const databaseVersion = await getDatabaseVersion();
+
   // v5 -> v6 のエイリアスを貼って運用するワークスペースか否かを決める
   // 更新で貼り直すために、今回の実行に適用しつつ history にも残す
   const compatible = isCompatibleWorkspace({
@@ -76,7 +81,8 @@ Starting
   // エラーなく最後まで各エージェントを実行できたら history.json を保存する
   await outputHistoryJson({
     timestamp,
-    version: await getParsedJson("package.json").then(({ version }) => version),
+    // 全削除した時は null に戻り、次の更新で全件が入り直す
+    version: mode === "uninstall" ? null : databaseVersion,
     compatible,
     inputs: {
       // password を除外する
