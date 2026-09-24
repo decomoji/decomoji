@@ -21,10 +21,13 @@ const isReadableFile = async (filepath) =>
  *
  * 引数が無ければ null を返す（＝対話式に進む）
  * 渡されたのに見つからない時は、黙って対話式に落とさずエラーにする
- * @param {string}
+ *
+ * コマンドライン引数の解釈は呼び出し元に任せる
+ * ここで process.argv を直接見るとオプションをパスとして拾ってしまうため
+ * @param {string | null}
  * @returns {Promise<string | null>}
  */
-export const getInputsFilePath = async (filepath = process.argv[2]) => {
+export const getInputsFilePath = async (filepath) => {
   if (!isStringOfNotEmpty(filepath)) {
     return null;
   }

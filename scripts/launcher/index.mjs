@@ -16,6 +16,7 @@ const launcher = async (inputs) => {
 workspace : https://${inputs.workspace}.slack.com/
 email     : ${inputs.email}
 mode      : ${inputs.mode}
+nsfw      : ${inputs.includeNsfw}
 term      : ${inputs.term}
 debug     : ${inputs.debug}
 
@@ -118,10 +119,36 @@ Starting
 
 // logs ディレクトリを作成しておく
 await fs.mkdir(getRootPath("logs"), { recursive: true });
-const inputsFilePath = await getInputsFilePath();
+
+// NSFW なカテゴリーを含めて実行するオプション
+const NSFW_OPTION = "--include-nsfw";
+
+// Commander を剥がしているのでコマンドライン引数は自前で見る
+// オプションと設定ファイルのパスが混ざって渡ってくるので分ける
+const args = process.argv.slice(2);
+const options = args.filter((arg) => arg.startsWith("-"));
+
+// 打ち間違いを黙って無視すると NSFW が入らない理由に気づけないので、不明なオプションは弾く
+const unknownOptions = options.filter((option) => option !== NSFW_OPTION);
+if (unknownOptions.length > 0) {
+  throw new Error(
+    `[ERROR]不明なオプションです: ${unknownOptions.join(" ")}\n使えるのは ${NSFW_OPTION} だけです。`,
+  );
+}
+
+// オプションを付けた時だけ true にする
+// 付けなければ inputs.json の includeNsfw をそのまま使うので、無効化の手段にはならない
+const includeNsfw = options.includes(NSFW_OPTION);
+const withOptions = (inputs) => ({
+  ...inputs,
+  includeNsfw: includeNsfw || inputs.includeNsfw === true,
+});
+
+// オプションを除いた最初の引数を設定ファイルのパスとして扱う
+const inputsFilePath = await getInputsFilePath(args.find((arg) => !arg.startsWith("-")) ?? null);
 
 if (inputsFilePath) {
-  await launcher(await getParsedJson(inputsFilePath));
+  await launcher(withOptions(await getParsedJson(inputsFilePath)));
 } else {
-  await dialoger(async (inputs) => await launcher(inputs));
+  await dialoger(async (inputs) => await launcher(withOptions(inputs)));
 }
