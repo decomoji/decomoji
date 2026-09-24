@@ -14,43 +14,35 @@ basic => basic_tmp
 extra => extra_tmp
 explicit => explicit_tmp
 
-# 2. 追加したデコモジを最適化する
+# 3. 追加したデコモジを最適化する
 npm run optimize -- basic
 npm run optimize -- extra
 npm run optimize -- explicit
 
-# 3. 既存のデコモジを変更した場合は一つずつコミットする
+# 4. 既存のデコモジを変更した場合は一つずつコミットする
 `fix: xxxx の画像を修正した`
 
-# 4. 追加したデコモジはカテゴリごとに一括コミットする
+# 5. 追加したデコモジはカテゴリごとに一括コミットする
 `feat: extra のデコモジを追加した`
 
-# 5. 差分JSONを更新する
-node scripts/generator/toDiffJson.mjs v5.x.0
-コマンドに更新する予定のバージョン名が必要。
+# 6. database/v6.json にエントリを追加・修正する
+手順は検討中。
 
-# 6. `--adhoc` オプションで登録スクリプトを実行し、登録がうまくいくか確認する
-npm run launch -- -a v5.x.0
+# 7. database とスクリプトを検査する
+node scripts/inspector/index.mjs
+npm test
+
+エラーがあれば直す。警告は内容を見て判断する。
+
+# 8. 検証用のワークスペースで「更新」を実行し、登録がうまくいくか確認する
+npm run launch -- inputs.decomoji-dev.json
 
 `error_name_taken_i18n` エラーなどになったら適宜ファイル名を変更する。
 
-# 6-a. エラーがあればリネームで解消し、コミットを巻き戻し、コミットをまとめる
-## デコモジを追加したコミットまで戻る
-git reset --soft HEAD~1
-
-## 適宜リネームする
-git mv decomoji/extra/a.png decomoji/extra/a_.png
-
-## デコモジ追加コミットに混ぜる
-git commit --amend '-S'
-
-## 差分JSONを更新しなおす
-node scripts/generator/toDiffJson.mjs v5.x.0
-
-# 7. LIST-***.md を更新する
+# 9. LIST-***.md を更新する
 node scripts/generator/toListMd.mjs
 
-# 8. Oxfmt の意志のままに整形する
+# 10. Oxfmt の意志のままに整形する
 npx oxfmt
 ```
 
