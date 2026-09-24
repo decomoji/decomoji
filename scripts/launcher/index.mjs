@@ -76,13 +76,17 @@ Starting
   const {
     inputs: { workspace, email, mode, includeNsfw },
     results,
+    failed,
   } = await assigner({ inputs, history, compatible });
 
-  // エラーなく最後まで各エージェントを実行できたら history.json を保存する
+  // 失敗しても history.json は保存する
+  // どこまで処理できたかを残しておかないと、次に何をすればいいか分からなくなるため
   await outputHistoryJson({
     timestamp,
-    // 全削除した時は null に戻り、次の更新で全件が入り直す
-    version: mode === "uninstall" ? null : databaseVersion,
+    // 最後まで通らなかった時は version を進めない
+    // 進めてしまうと入れ損ねたぶんが差分から漏れて、次の更新で拾えなくなる
+    // 全削除しきった時は null に戻り、次の更新で全件が入り直す
+    version: failed ? history.version : mode === "uninstall" ? null : databaseVersion,
     compatible,
     inputs: {
       // password を除外する
@@ -95,6 +99,15 @@ Starting
   });
 
   console.timeEnd("[Total time]");
+
+  // 失敗を呼び出し元のシェルに伝える
+  // process.exit() だと出力を流しきる前に落ちるので exitCode だけ立てる
+  if (failed) {
+    process.exitCode = 1;
+    console.error(`\nFailed. logs/history.json に途中までの結果を残しました。`);
+    return;
+  }
+
   console.info(`\nCompleted!`);
 };
 

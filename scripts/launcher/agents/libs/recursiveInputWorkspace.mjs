@@ -7,7 +7,7 @@ import { goToSignInPage } from "./goToSignInPage.mjs";
 const MAX_ATTEMPTS = 5;
 
 // ワークスペースが見つからない時の再帰処理
-// エラーはtry-catchせず呼び出し元の .catch() に伝播させる
+// エラーはtry-catchせず呼び出し元に伝播させ、エージェント側で受け止めてもらう
 export const recursiveInputWorkspace = async (page, inputs, attempt = 1) => {
   // 上限に達したら諦めて呼び出し元にエラーを伝播させる
   if (attempt > MAX_ATTEMPTS) {

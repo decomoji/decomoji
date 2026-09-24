@@ -10,8 +10,8 @@ const TWO_FACTOR_INPUT_SELECTORS = ['.two_factor_input_item:first-child > input'
 const MAX_ATTEMPTS = 5;
 
 // 2FA利用時の再帰処理
-// エラーはtry-catchせず呼び出し元の .catch() に伝播させる
-export const recursiveInput2FA = async (browser, page, inputs, attempt = 1) => {
+// エラーはtry-catchせず呼び出し元に伝播させ、エージェント側で受け止めてもらう
+export const recursiveInput2FA = async (page, inputs, attempt = 1) => {
   // 上限に達したら諦めて呼び出し元にエラーを伝播させる
   if (attempt > MAX_ATTEMPTS) {
     throw new Error(`[ERROR]Failed to verify the 2FA code. (tried ${MAX_ATTEMPTS} times)`);
@@ -59,5 +59,5 @@ export const recursiveInput2FA = async (browser, page, inputs, attempt = 1) => {
   }
   // 2FA認証できるまで何度でもトライ！
   // 認証できたら再帰の結果をそのまま返す
-  return await recursiveInput2FA(browser, page, inputs, attempt + 1);
+  return await recursiveInput2FA(page, inputs, attempt + 1);
 };

@@ -32,13 +32,25 @@ export const assigner = async ({ inputs: initialInputs, history, compatible }) =
 
   // ログイン情報を入力し直しているかもしれないので inputs を引き回す
   let inputs = initialInputs;
+  let failed = false;
 
   // mode ごとにエージェントを実行して input を取り直しつつ結果を格納する
   for (const name of serial) {
-    const { inputs: newInputs, result } = await agents[name]({ inputs, history, compatible });
+    const {
+      inputs: newInputs,
+      result,
+      failed: agentFailed,
+    } = await agents[name]({ inputs, history, compatible });
     inputs = newInputs;
     results[name] = result;
+
+    // 途中で失敗したら後続のエージェントは回さない
+    // 消し終えていないまま追加すると名前が衝突するなど、ワークスペースの状態が読めなくなるため
+    if (agentFailed) {
+      failed = true;
+      break;
+    }
   }
 
-  return { inputs, results };
+  return { inputs, results, failed };
 };

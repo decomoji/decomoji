@@ -7,18 +7,16 @@ import { isSignInFailed } from "./isSignInFailed.mjs";
 const MAX_ATTEMPTS = 5;
 
 // ログインエラーの時の再帰処理
-// エラーはtry-catchせず呼び出し元の .catch() に伝播させる
-export const recursiveInputAccount = async (browser, page, inputs, attempt = 1) => {
+// エラーはtry-catchせず呼び出し元に伝播させ、エージェント側で受け止めてもらう
+export const recursiveInputAccount = async (page, inputs, attempt = 1) => {
   // 上限に達したら諦めて呼び出し元にエラーを伝播させる
   if (attempt > MAX_ATTEMPTS) {
     throw new Error(`[ERROR]Failed to sign in. (tried ${MAX_ATTEMPTS} times)`);
   }
 
-  // CAPTCHA が出ていたら再入力させても無駄なので、入力を促す前に諦めて終了する
+  // CAPTCHA が出ていたら再入力させても無駄なので、入力を促す前に諦める
   if (await page.$("#slack_captcha")) {
-    console.error("[ERROR]Oops, you might judged a bot. Please wait and try again.");
-    await browser.close();
-    process.exit(1);
+    throw new Error("[ERROR]Oops, you might judged a bot. Please wait and try again.");
   }
 
   // 入力欄が無いのは想定外の画面にいるということなので、呼び出し元にエラーを伝播させる
@@ -66,5 +64,5 @@ export const recursiveInputAccount = async (browser, page, inputs, attempt = 1) 
   }
   // ログインできるまで何度でもトライ！
   // ログインできたら再帰の結果をそのまま返す
-  return await recursiveInputAccount(browser, page, inputs, attempt + 1);
+  return await recursiveInputAccount(page, inputs, attempt + 1);
 };
