@@ -1,3 +1,5 @@
+import { getRootPath } from "../../../utilities/index.mjs";
+
 export const postEmojiAdd = async (page, workspace, emojiName, emojiPath) => {
   const uploadFormId = "decomoji_upload_form";
 
@@ -18,8 +20,10 @@ export const postEmojiAdd = async (page, workspace, emojiName, emojiPath) => {
   }
 
   // 画像ファイルをinput[type=file]にセットする
+  // uploadFile() は相対パスを実行時のカレントディレクトリから解決してしまうので、
+  // database と同じくリポジトリのルート基準に揃えてから渡す
   const fileInputHandle = await page.$("#decomoji_file_input");
-  await fileInputHandle.uploadFile(emojiPath);
+  await fileInputHandle.uploadFile(getRootPath(emojiPath));
 
   // 埋め込んだ情報をもとにAPIにアクセスする
   const result = await page.evaluate(
