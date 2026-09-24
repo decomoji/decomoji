@@ -36,17 +36,30 @@ export const assigner = async ({ inputs: initialInputs, history, compatible, nsf
 
   // mode ごとにエージェントを実行して input を取り直しつつ結果を格納する
   for (const name of serial) {
-    const {
-      inputs: newInputs,
-      result,
-      failed: agentFailed,
-    } = await agents[name]({ inputs, history, compatible, nsfwAdded });
-    inputs = newInputs;
-    results[name] = result;
+    try {
+      const {
+        inputs: newInputs,
+        result,
+        failed: agentFailed,
+      } = await agents[name]({ inputs, history, compatible, nsfwAdded });
+      inputs = newInputs;
+      results[name] = result;
 
-    // 途中で失敗したら後続のエージェントは回さない
-    // 消し終えていないまま追加すると名前が衝突するなど、ワークスペースの状態が読めなくなるため
-    if (agentFailed) {
+      // 途中で失敗したら後続のエージェントは回さない
+      // 消し終えていないまま追加すると名前が衝突するなど、ワークスペースの状態が読めなくなるため
+      if (agentFailed) {
+        failed = true;
+        break;
+      }
+    } catch (error) {
+      // エージェントが結果を返せずに投げた場合の受け止め
+      // 処理すべきリストを組む curator() やブラウザの起動は、
+      // エージェント自身の try より前にあるのでここまで上がってくる
+      //
+      // 投げ直すと launcher が history を書けず、
+      // 先に成功したエージェントの結果まで巻き添えで失われる
+      console.error(`[ERROR]${name}: ${error.message}`);
+      results[name] = { error: [{ message: error.message }] };
       failed = true;
       break;
     }
