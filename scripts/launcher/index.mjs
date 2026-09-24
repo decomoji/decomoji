@@ -117,40 +117,57 @@ Starting
   console.info(`\nCompleted!`);
 };
 
-// logs ディレクトリを作成しておく
-await fs.mkdir(getRootPath("logs"), { recursive: true });
+// ここで受けるのは、エージェントを回す前に分かる類のエラー
+// オプションの間違い、設定ファイルの不備、database の不整合など
+// 実行中の失敗は assigner() が受け止めて history に残すので、ここには来ない
+try {
+  // logs ディレクトリを作成しておく
+  await fs.mkdir(getRootPath("logs"), { recursive: true });
 
-// NSFW なカテゴリーを含めて実行するオプション
-const NSFW_OPTION = "--include-nsfw";
+  // NSFW なカテゴリーを含めて実行するオプション
+  const NSFW_OPTION = "--include-nsfw";
 
-// Commander を剥がしているのでコマンドライン引数は自前で見る
-// オプションと設定ファイルのパスが混ざって渡ってくるので分ける
-const args = process.argv.slice(2);
-const options = args.filter((arg) => arg.startsWith("-"));
+  // Commander を剥がしているのでコマンドライン引数は自前で見る
+  // オプションと設定ファイルのパスが混ざって渡ってくるので分ける
+  const args = process.argv.slice(2);
+  const options = args.filter((arg) => arg.startsWith("-"));
 
-// 打ち間違いを黙って無視すると NSFW が入らない理由に気づけないので、不明なオプションは弾く
-const unknownOptions = options.filter((option) => option !== NSFW_OPTION);
-if (unknownOptions.length > 0) {
-  throw new Error(
-    `[ERROR]不明なオプションです: ${unknownOptions.join(" ")}\n使えるのは ${NSFW_OPTION} だけです。`,
-  );
-}
+  // 打ち間違いを黙って無視すると NSFW が入らない理由に気づけないので、不明なオプションは弾く
+  const unknownOptions = options.filter((option) => option !== NSFW_OPTION);
+  if (unknownOptions.length > 0) {
+    throw new Error(
+      `[ERROR]不明なオプションです: ${unknownOptions.join(" ")}\n使えるのは ${NSFW_OPTION} だけです。`,
+    );
+  }
 
-// オプションを付けた時だけ true にする
-// 付けなければ inputs.json の includeNsfw をそのまま使うので、無効化の手段にはならない
-const includeNsfw = options.includes(NSFW_OPTION);
-const withOptions = (inputs) => ({
-  ...inputs,
-  includeNsfw: includeNsfw || inputs.includeNsfw === true,
-});
+  // オプションを付けた時だけ true にする
+  // 付けなければ inputs.json の includeNsfw をそのまま使うので、無効化の手段にはならない
+  const includeNsfw = options.includes(NSFW_OPTION);
 
-// オプションを除いた最初の引数を設定ファイルのパスとして扱う
-const inputsFilePath = await getInputsFilePath(args.find((arg) => !arg.startsWith("-")) ?? null);
+  // 真偽値で扱う値は、省略されていても undefined のままにしない
+  // 起動時の表示が undefined になるうえ、puppeteer や history にもそのまま届いてしまう
+  const withOptions = (inputs) => ({
+    ...inputs,
+    includeNsfw: includeNsfw || inputs.includeNsfw === true,
+    debug: inputs.debug === true,
+  });
 
-if (inputsFilePath) {
-  // 対話式は inquirer が入力を弾いてくれるが、設定ファイルは素通しなので確かめてから渡す
-  const inputs = getValidatedInputs(await getParsedJson(inputsFilePath), inputsFilePath);
-  await launcher(withOptions(inputs));
-} else {
-  await dialoger(async (inputs) => await launcher(withOptions(inputs)));
+  // オプションを除いた最初の引数を設定ファイルのパスとして扱う
+  const inputsFilePath = await getInputsFilePath(args.find((arg) => !arg.startsWith("-")) ?? null);
+
+  if (inputsFilePath) {
+    // 対話式は inquirer が入力を弾いてくれるが、設定ファイルは素通しなので確かめてから渡す
+    const inputs = getValidatedInputs(await getParsedJson(inputsFilePath), inputsFilePath);
+    await launcher(withOptions(inputs));
+  } else {
+    await dialoger(async (inputs) => await launcher(withOptions(inputs)));
+  }
+} catch (error) {
+  // Ctrl+C でプロンプトを閉じたのは異常ではないので、静かに終わる
+  if (error?.name !== "ExitPromptError") {
+    // [ERROR] で始まるものは利用者に向けて書いた文言なので、それだけを見せる
+    // それ以外は想定外なので、追えるようにそのまま出す
+    console.error(String(error?.message).startsWith("[ERROR]") ? error.message : error);
+    process.exitCode = 1;
+  }
 }

@@ -43,6 +43,6 @@ export const getInputsFilePath = async (filepath) => {
   }
 
   throw new Error(
-    `設定ファイルが見つかりません: ${filepath}\ninputs.json のパスを指定してください。例: node scripts/launcher/index.mjs path/to/inputs.json`,
+    `[ERROR]設定ファイルが見つかりません: ${filepath}\ninputs.json のパスを指定してください。例: node scripts/launcher/index.mjs path/to/inputs.json`,
   );
 };

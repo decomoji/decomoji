@@ -6,7 +6,10 @@ import { getRootPath } from "./getRootPath.mjs";
 export const getParsedJson = async (filepath) => {
   try {
     return JSON.parse(await fs.readFile(getRootPath(filepath), "utf8"));
-  } catch (e) {
-    throw e;
+  } catch (error) {
+    // 読めなかった時にどのファイルの話か分からないと直しようがないので、パスを添えて投げ直す
+    throw new Error(`[ERROR]JSON を読めませんでした: ${filepath}\n${error.message}`, {
+      cause: error,
+    });
   }
 };
