@@ -13,7 +13,7 @@ const serials = {
   compatible_migration: ["remover", "uploader", "pretender"],
 };
 
-export const assigner = async ({ inputs: initialInputs, history, compatible }) => {
+export const assigner = async ({ inputs: initialInputs, history, compatible, nsfwAdded }) => {
   const serial = serials[initialInputs.mode];
 
   // 存在しない mode の場合はエラーを返して終了する
@@ -40,7 +40,7 @@ export const assigner = async ({ inputs: initialInputs, history, compatible }) =
       inputs: newInputs,
       result,
       failed: agentFailed,
-    } = await agents[name]({ inputs, history, compatible });
+    } = await agents[name]({ inputs, history, compatible, nsfwAdded });
     inputs = newInputs;
     results[name] = result;
 

@@ -72,12 +72,17 @@ Starting
     compatible: history.compatible,
   });
 
+  // NSFW を扱っていなかったワークスペースが、今回から扱うようになったか
+  // 除いている間も version だけは進んでいるので、あとから有効にしても差分では拾えない
+  // その時だけ NSFW なカテゴリーを差分の絞り込みから外して、まるごと入れ直す
+  const nsfwAdded = inputs.includeNsfw === true && history.inputs?.includeNsfw !== true;
+
   // assigner() で mode に応じたエージェントを実行し、結果を受け取る
   const {
     inputs: { workspace, email, mode, includeNsfw },
     results,
     failed,
-  } = await assigner({ inputs, history, compatible });
+  } = await assigner({ inputs, history, compatible, nsfwAdded });
 
   // 失敗しても history.json は保存する
   // どこまで処理できたかを残しておかないと、次に何をすればいいか分からなくなるため

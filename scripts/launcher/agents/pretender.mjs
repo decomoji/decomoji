@@ -2,7 +2,7 @@ import puppeteer from "puppeteer";
 import { curator } from "../handlers/curator.mjs";
 import { goToEmojiPage, postEmojiAlias } from "./libs/index.mjs";
 
-export const pretender = async ({ inputs, history, compatible }) => {
+export const pretender = async ({ inputs, history, compatible, nsfwAdded }) => {
   const { mode, includeNsfw, debug: DEBUG } = inputs;
   const { initial_run, version } = history;
 
@@ -16,6 +16,7 @@ export const pretender = async ({ inputs, history, compatible }) => {
     initial_run,
     version,
     compatible,
+    nsfwAdded,
     mode,
     includeNsfw,
     invoker: "pretender",

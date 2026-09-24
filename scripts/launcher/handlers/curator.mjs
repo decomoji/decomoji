@@ -6,7 +6,8 @@
 // 2. compatible      エイリアスを扱うか      -> curator()（invoker=pretender の時だけ）
 // 3. includeNsfw     どのカテゴリーを扱うか  -> isTarget()
 // 4. version         前回からの差分に絞るか  -> isTarget()（mode=update の時だけ）
-// 5. invoker         どんな形で返すか        -> FORMATTERS
+// 5. nsfwAdded       差分の絞り込みを免除するか -> isTarget()（NSFW を扱い始めた時だけ）
+// 6. invoker         どんな形で返すか        -> FORMATTERS
 
 import {
   convertToUploadObject,
@@ -123,12 +124,13 @@ const SOURCES = {
 };
 
 // デコモジ1件が処理の対象になるか否かを判定する
-const isTarget = (decomoji, { initial_run, version, mode, includeNsfw, invoker }) => {
+const isTarget = (decomoji, { initial_run, version, nsfwAdded, mode, includeNsfw, invoker }) => {
   const { category, created, updated, deleted } = decomoji;
   const isRemoving = invoker === "remover";
+  const isNsfw = NSFW_CATEGORIES.includes(category);
 
   // includeNsfw が false の時は NSFW なカテゴリーを扱わない。追加も削除もしない
-  if (!includeNsfw && NSFW_CATEGORIES.includes(category)) {
+  if (!includeNsfw && isNsfw) {
     return false;
   }
 
@@ -146,6 +148,17 @@ const isTarget = (decomoji, { initial_run, version, mode, includeNsfw, invoker }
   // 初回実行やバージョンが不明な時は、すべてが新規追加とみなせる（消すものは無い）
   if (initial_run || !isStringOfNotEmpty(version)) {
     return !isRemoving;
+  }
+
+  // NSFW を扱っていなかったワークスペースが扱い始めた時は、
+  // NSFW なカテゴリーがまるごと未導入なのでバージョンを問わず追加する
+  // 除いている間も version だけは進んでいるので、差分では永久に拾えないため
+  //
+  // 削除側は通常の判定に任せる
+  // ここで消さずに返すと、差し替えられた NSFW を消せないまま追加しにいくことになり、
+  // 上書きできないので古いままになる
+  if (nsfwAdded && isNsfw && !isRemoving) {
+    return true;
   }
 
   // 前回より後に追加（created）されたか、差し替え（updated）されたものを追加する
@@ -172,7 +185,15 @@ const FORMATTERS = {
   pretender: ({ name, alias_for }) => ({ name, alias_for }),
 };
 
-export const curator = async ({ initial_run, version, compatible, mode, includeNsfw, invoker }) => {
+export const curator = async ({
+  initial_run,
+  version,
+  compatible,
+  nsfwAdded,
+  mode,
+  includeNsfw,
+  invoker,
+}) => {
   const getSources = SOURCES[mode]?.[invoker] ?? [];
 
   // 処理する母集団が無い組み合わせは、何もしないで返す
@@ -188,7 +209,7 @@ export const curator = async ({ initial_run, version, compatible, mode, includeN
 
   const decomojis = (await Promise.all(getSources.map((getSource) => getSource()))).flat();
   const curated = decomojis.filter((decomoji) =>
-    isTarget(decomoji, { initial_run, version, mode, includeNsfw, invoker }),
+    isTarget(decomoji, { initial_run, version, nsfwAdded, mode, includeNsfw, invoker }),
   );
 
   return uniqueByName(curated).map(FORMATTERS[invoker]);

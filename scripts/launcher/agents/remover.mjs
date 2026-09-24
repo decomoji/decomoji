@@ -2,7 +2,7 @@ import puppeteer from "puppeteer";
 import { curator } from "../handlers/curator.mjs";
 import { goToEmojiPage, postEmojiRemove } from "./libs/index.mjs";
 
-export const remover = async ({ inputs, history }) => {
+export const remover = async ({ inputs, history, nsfwAdded }) => {
   const { mode, includeNsfw, debug: DEBUG } = inputs;
   const { initial_run, version } = history;
 
@@ -15,6 +15,7 @@ export const remover = async ({ inputs, history }) => {
   const decomojiList = await curator({
     initial_run,
     version,
+    nsfwAdded,
     mode,
     includeNsfw,
     invoker: "remover",
