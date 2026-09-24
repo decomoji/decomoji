@@ -20,6 +20,7 @@
   },
   "main": "",
   "scripts": {
+    "test": "node --experimental-test-module-mocks --test",
     "launch": "node scripts/launcher/index.mjs",
     "optimize": "node scripts/generator/optimizer/index.mjs"
   },
