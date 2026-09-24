@@ -17,7 +17,6 @@ workspace : https://${inputs.workspace}.slack.com/
 email     : ${inputs.email}
 mode      : ${inputs.mode}
 nsfw      : ${inputs.includeNsfw}
-term      : ${inputs.term}
 debug     : ${inputs.debug}
 
 Starting
