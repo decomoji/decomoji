@@ -20,6 +20,7 @@ export { getMergedDiffOfManages } from "./getMergedDiffOfManages.mjs";
 export { getParsedJson } from "./getParsedJson.mjs";
 export { getParsedSemVerObject } from "./getParsedSemVerObject.mjs";
 export { getRootPath } from "./getRootPath.mjs";
+export { getValidatedInputs } from "./getValidatedInputs.mjs";
 export { isCompatibleWorkspace } from "./isCompatibleWorkspace.mjs";
 export { isDecomojiFile } from "./isDecomojiFile.mjs";
 export { isNewerThan } from "./isNewerThan.mjs";

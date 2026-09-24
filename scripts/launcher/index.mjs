@@ -5,6 +5,7 @@ import {
   getInputsFilePath,
   getParsedJson,
   getRootPath,
+  getValidatedInputs,
   isCompatibleWorkspace,
   outputHistoryJson,
 } from "../utilities/index.mjs";
@@ -147,7 +148,9 @@ const withOptions = (inputs) => ({
 const inputsFilePath = await getInputsFilePath(args.find((arg) => !arg.startsWith("-")) ?? null);
 
 if (inputsFilePath) {
-  await launcher(withOptions(await getParsedJson(inputsFilePath)));
+  // 対話式は inquirer が入力を弾いてくれるが、設定ファイルは素通しなので確かめてから渡す
+  const inputs = getValidatedInputs(await getParsedJson(inputsFilePath), inputsFilePath);
+  await launcher(withOptions(inputs));
 } else {
   await dialoger(async (inputs) => await launcher(withOptions(inputs)));
 }
