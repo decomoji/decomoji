@@ -26,7 +26,7 @@ export { isDecomojiFile } from "./isDecomojiFile.mjs";
 export { isNewerThan } from "./isNewerThan.mjs";
 export { isEmail } from "./isEmail.mjs";
 export { isInputs } from "./isInputs.mjs";
-export { isSelects } from "./isSelects.mjs";
 export { isStringOfNotEmpty } from "./isStringOfNotEmpty.mjs";
 export { outputHistoryJson } from "./outputHistoryJson.mjs";
+export { prompt } from "./prompt.mjs";
 export { writeJsonFile } from "./writeJsonFile.mjs";

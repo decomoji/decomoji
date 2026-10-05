@@ -25,7 +25,6 @@
     "optimize": "node scripts/generator/optimizer/index.mjs"
   },
   "devDependencies": {
-    "inquirer": "^14.2.2",
     "puppeteer": "^25.11.0"
   },
   "allowScripts": {

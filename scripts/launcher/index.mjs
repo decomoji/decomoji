@@ -156,7 +156,7 @@ try {
   const inputsFilePath = await getInputsFilePath(args.find((arg) => !arg.startsWith("-")) ?? null);
 
   if (inputsFilePath) {
-    // 対話式は inquirer が入力を弾いてくれるが、設定ファイルは素通しなので確かめてから渡す
+    // 対話式は prompt の validate が入力を弾いてくれるが、設定ファイルは素通しなので確かめてから渡す
     const inputs = getValidatedInputs(await getParsedJson(inputsFilePath), inputsFilePath);
     await launcher(withOptions(inputs));
   } else {
@@ -164,7 +164,7 @@ try {
   }
 } catch (error) {
   // Ctrl+C でプロンプトを閉じたのは異常ではないので、静かに終わる
-  if (error?.name !== "ExitPromptError") {
+  if (error?.name !== "PromptCanceledError") {
     // [ERROR] で始まるものは利用者に向けて書いた文言なので、それだけを見せる
     // それ以外は想定外なので、追えるようにそのまま出す
     console.error(String(error?.message).startsWith("[ERROR]") ? error.message : error);

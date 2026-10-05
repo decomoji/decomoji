@@ -1,7 +1,6 @@
-import inquirer from "inquirer";
-import { isEmail, isInputs, isSelects } from "../../utilities/index.mjs";
+import { isEmail, isInputs, prompt } from "../../utilities/index.mjs";
 
-// inquirer 用の質問群
+// 対話式の質問群
 const questions = [
   {
     type: "input",
@@ -59,8 +58,7 @@ const questions = [
         value: true,
       },
     ],
-    validate: isSelects,
   },
 ];
 
-export const dialoger = async (callback) => await inquirer.prompt(questions).then(callback);
+export const dialoger = async (callback) => await prompt(questions).then(callback);

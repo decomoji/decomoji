@@ -3,7 +3,7 @@ import { isInputs } from "./isInputs.mjs";
 
 // 設定ファイルの中身を実行前に確かめて、駄目なところをまとめて知らせる
 //
-// 対話式は inquirer の validate が弾いてくれるが、inputs.json は素通しになる
+// 対話式は prompt の validate が弾いてくれるが、inputs.json は素通しになる
 // 打ち間違いに気づくのがブラウザを起動してログイン画面に着いてからでは遅い
 //
 // mode は assigner() が自分の知っているモードと突き合わせるので、ここでは見ない

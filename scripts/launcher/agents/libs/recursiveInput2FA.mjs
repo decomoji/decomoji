@@ -1,5 +1,4 @@
-import inquirer from "inquirer";
-import { isInputs } from "../../../utilities/index.mjs";
+import { isInputs, prompt } from "../../../utilities/index.mjs";
 
 // 2FAコードの入力欄（先頭の桁）を指すセレクタの候補
 // 桁ごとに input が分かれている UI とそうでない UI の両方に備える
@@ -36,7 +35,7 @@ export const recursiveInput2FA = async (page, inputs, attempt = 1) => {
   }
 
   // 2FA試行
-  const { twofactor_code } = await inquirer.prompt({
+  const { twofactor_code } = await prompt({
     type: "password",
     name: "twofactor_code",
     mask: "*",

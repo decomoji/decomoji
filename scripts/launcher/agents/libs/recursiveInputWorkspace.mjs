@@ -1,5 +1,4 @@
-import inquirer from "inquirer";
-import { isInputs } from "../../../utilities/index.mjs";
+import { isInputs, prompt } from "../../../utilities/index.mjs";
 import { goToSignInPage } from "./goToSignInPage.mjs";
 
 // 再入力を促す回数の上限
@@ -16,7 +15,7 @@ export const recursiveInputWorkspace = async (page, inputs, attempt = 1) => {
     );
   }
 
-  const { workspace } = await inquirer.prompt({
+  const { workspace } = await prompt({
     type: "input",
     name: "workspace",
     message: `${inputs.workspace} は見つかりませんでした。ワークスペースを再度入力してください:`,

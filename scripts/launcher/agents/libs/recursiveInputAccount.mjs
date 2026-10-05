@@ -1,5 +1,4 @@
-import inquirer from "inquirer";
-import { isEmail, isInputs } from "../../../utilities/index.mjs";
+import { isEmail, isInputs, prompt } from "../../../utilities/index.mjs";
 import { isSignInFailed } from "./isSignInFailed.mjs";
 
 // 再入力を促す回数の上限
@@ -27,7 +26,7 @@ export const recursiveInputAccount = async (page, inputs, attempt = 1) => {
   }
 
   // ログイン試行
-  const { email, password } = await inquirer.prompt([
+  const { email, password } = await prompt([
     {
       type: "input",
       name: "email",
