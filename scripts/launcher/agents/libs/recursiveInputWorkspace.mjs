@@ -10,9 +10,7 @@ const MAX_ATTEMPTS = 5;
 export const recursiveInputWorkspace = async (page, inputs, attempt = 1) => {
   // 上限に達したら諦めて呼び出し元にエラーを伝播させる
   if (attempt > MAX_ATTEMPTS) {
-    throw new Error(
-      `[ERROR]Could not reach the sign in page. (tried ${MAX_ATTEMPTS} times) The workspace might be SSO only.`,
-    );
+    throw new Error(`[ERROR]Could not find the workspace. (tried ${MAX_ATTEMPTS} times)`);
   }
 
   const { workspace } = await prompt({
@@ -24,12 +22,13 @@ export const recursiveInputWorkspace = async (page, inputs, attempt = 1) => {
   // チーム名を保存し直す
   inputs.workspace = workspace;
   // ログイン画面に再び遷移する（SSO のフォールバックも含めて goToEmojiPage と同じ経路を使う）
-  await goToSignInPage(page, inputs.workspace);
-  // ログイン画面に遷移できたかを再びチェックし、できていたら再帰処理を抜ける
-  if (await page.$("#signin_form")) {
+  const { notFound } = await goToSignInPage(page, inputs.workspace);
+  // ワークスペースが存在したら再帰処理を抜ける
+  // ログインフォームの有無は呼び出し元でチェックする
+  if (!notFound) {
     return inputs;
   }
-  // ログインページに到達できるまで何度でもトライ！
+  // 存在するワークスペースが入力されるまで何度でもトライ！
   // ログインできたら再帰の結果をそのまま返す
   return await recursiveInputWorkspace(page, inputs, attempt + 1);
 };

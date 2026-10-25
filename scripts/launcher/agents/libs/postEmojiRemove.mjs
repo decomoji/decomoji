@@ -12,7 +12,8 @@ export const postEmojiRemove = async (page, workspace, emojiName) => {
         });
         return await response.json();
       } catch (error) {
-        return error;
+        // Error オブジェクトは evaluate の戻り値にするとシリアライズされて {} になるので、文字列にして返す
+        return { ok: false, error: String(error) };
       }
     },
     workspace,

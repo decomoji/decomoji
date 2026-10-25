@@ -9,16 +9,23 @@ import { recursiveInput2FA } from "./recursiveInput2FA.mjs";
 export const goToEmojiPage = async (page, inputs) => {
   console.time("[Login time]");
   // ログイン画面に遷移する（チームのカスタム絵文字管理画面へのリダイレクトパラメータ付き）
-  await goToSignInPage(page, inputs.workspace);
+  const { notFound } = await goToSignInPage(page, inputs.workspace);
 
-  // ログインフォームが見つからない場合、チームが存在しないと判断して workspace を再入力させる
-  if (!(await page.$("#signin_form"))) {
+  // ワークスペースが存在しない場合は workspace を再入力させる
+  if (notFound) {
     inputs = await recursiveInputWorkspace(page, inputs);
   }
 
   // CAPTCHA が出ていたら諦める
   if (await page.$("#slack_captcha")) {
     throw new Error("[ERROR]Oops, you might judged a bot. Please wait and try again.");
+  }
+
+  // ワークスペースは存在するのにログインフォームが見つからない場合、パスワードでログインできないので諦める
+  if (!(await page.$("#signin_form"))) {
+    throw new Error(
+      `[ERROR]Could not find the password sign in form of ${inputs.workspace}. The workspace might be SSO only.`,
+    );
   }
 
   // email とパスワードを入力してサインインする

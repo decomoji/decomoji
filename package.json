@@ -1,6 +1,6 @@
 {
   "name": "decomoji",
-  "version": "5.35.0",
+  "version": "5.37.0",
   "description": "Slack のリアクション機能で使える最強カスタム絵文字セットです。",
   "keywords": [
     "custom emoji",
@@ -25,9 +25,9 @@
     "optimize": "node scripts/generator/optimizer/index.mjs"
   },
   "devDependencies": {
-    "puppeteer": "^25.11.0"
+    "puppeteer": "^25.16.0"
   },
   "allowScripts": {
-    "puppeteer@25.11.0": true
+    "puppeteer@25.16.0": true
   }
 }

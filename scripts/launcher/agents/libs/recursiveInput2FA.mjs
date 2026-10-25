@@ -2,7 +2,10 @@ import { isInputs, prompt } from "../../../utilities/index.mjs";
 
 // 2FAコードの入力欄（先頭の桁）を指すセレクタの候補
 // 桁ごとに input が分かれている UI とそうでない UI の両方に備える
-const TWO_FACTOR_INPUT_SELECTORS = ['.two_factor_input_item:first-child > input', '[name="2fa_code"]'];
+const TWO_FACTOR_INPUT_SELECTORS = [
+  ".two_factor_input_item:first-child > input",
+  '[name="2fa_code"]',
+];
 
 // 再入力を促す回数の上限
 // 入力ミス以外の理由で認証できないとき、無限に問い続けないようにする

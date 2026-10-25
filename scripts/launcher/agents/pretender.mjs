@@ -145,8 +145,8 @@ export const pretender = async ({ inputs, history, compatible, nsfwAdded }) => {
       result.error.push({ message: error.message });
       FAILED = true;
     } finally {
-      // 途中で失敗してもブラウザは閉じる
-      if (!DEBUG) {
+      // 途中で失敗してもブラウザは閉じる（デバッグモードで失敗した時は調査できるように開いたままにする）
+      if (!(DEBUG && FAILED)) {
         await browser.close();
       }
     }
