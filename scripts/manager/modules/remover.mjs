@@ -115,8 +115,8 @@ export const remover = async (inputs) => {
     }
     TIME && console.timeEnd("[Remove time]");
 
-    // ブラウザを閉じる
-    if (!DEBUG) {
+    // ブラウザを閉じる（デバッグモードで失敗した時は調査できるように開いたままにする）
+    if (!(DEBUG && FAILED)) {
       await browser.close();
     }
 

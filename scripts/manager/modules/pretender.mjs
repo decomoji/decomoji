@@ -122,8 +122,8 @@ export const pretender = async (inputs) => {
     }
     TIME && console.timeEnd("[Register time]");
 
-    // ブラウザを閉じる
-    if (!DEBUG) {
+    // ブラウザを閉じる（デバッグモードで失敗した時は調査できるように開いたままにする）
+    if (!(DEBUG && FAILED)) {
       await browser.close();
     }
 
