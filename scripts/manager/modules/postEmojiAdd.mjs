@@ -35,7 +35,8 @@ export const postEmojiAdd = async (page, workspace, emojiName, emojiPath) => {
         });
         return await response.json();
       } catch (error) {
-        return error;
+        // Error オブジェクトは evaluate の戻り値にするとシリアライズされて {} になるので、文字列にして返す
+        return { ok: false, error: String(error) };
       }
     },
     workspace,
