@@ -189,15 +189,12 @@ const questions = (adhoc) => [
     type: "checkbox",
     message: "バージョンを選択してください:",
     name: "configs",
-    choices: () => {
-      if (adhoc) {
-        AVAILABLE_VERSION_ITEMS.unshift({
-          name: `${adhoc}（ad hocなバージョン）`,
-          value: adhoc,
-        });
-      }
-      return [new inquirer.Separator(), ...AVAILABLE_VERSION_ITEMS];
-    },
+    choices: () => [
+      new inquirer.Separator(),
+      // ad hoc なバージョンがあれば足す
+      ...(adhoc ? [{ name: `${adhoc}（ad hocなバージョン）`, value: adhoc }] : []),
+      ...AVAILABLE_VERSION_ITEMS,
+    ],
     validate: isSelects,
   },
   // {
