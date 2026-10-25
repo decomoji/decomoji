@@ -624,6 +624,12 @@
     "created": "v5.0.0"
   },
   {
+    "name": "hannra",
+    "category": "explicit",
+    "path": "decomoji/explicit/hannra.png",
+    "created": "v5.35.0"
+  },
+  {
     "name": "henntaikayo",
     "category": "explicit",
     "path": "decomoji/explicit/henntaikayo.png",
@@ -744,10 +750,17 @@
     "created": "v5.0.0"
   },
   {
+    "name": "ketukea",
+    "category": "explicit",
+    "path": "decomoji/explicit/ketukea.png",
+    "created": "v5.35.0"
+  },
+  {
     "name": "ketumomi",
     "category": "explicit",
     "path": "decomoji/explicit/ketumomi.png",
-    "created": "v5.24.0"
+    "created": "v5.24.0",
+    "updated": "v5.35.0"
   },
   {
     "name": "kihyoudoutei",
@@ -906,10 +919,17 @@
     "created": "v5.0.0"
   },
   {
+    "name": "kurikea",
+    "category": "explicit",
+    "path": "decomoji/explicit/kurikea.png",
+    "created": "v5.35.0"
+  },
+  {
     "name": "kurimomi",
     "category": "explicit",
     "path": "decomoji/explicit/kurimomi.png",
-    "created": "v5.24.0"
+    "created": "v5.24.0",
+    "updated": "v5.35.0"
   },
   {
     "name": "kusaimononihuta",
@@ -1038,10 +1058,17 @@
     "created": "v5.18.0"
   },
   {
+    "name": "mannkea",
+    "category": "explicit",
+    "path": "decomoji/explicit/mannkea.png",
+    "created": "v5.35.0"
+  },
+  {
     "name": "mannmomi",
     "category": "explicit",
     "path": "decomoji/explicit/mannmomi.png",
-    "created": "v5.24.0"
+    "created": "v5.24.0",
+    "updated": "v5.35.0"
   },
   {
     "name": "manobenni",
@@ -1228,6 +1255,12 @@
     "category": "explicit",
     "path": "decomoji/explicit/nomikasu.png",
     "created": "v5.24.0"
+  },
+  {
+    "name": "oho",
+    "category": "explicit",
+    "path": "decomoji/explicit/oho.png",
+    "created": "v5.35.0"
   },
   {
     "name": "omutu",
@@ -1506,10 +1539,23 @@
     "created": "v5.0.0"
   },
   {
+    "name": "paikea",
+    "category": "explicit",
+    "path": "decomoji/explicit/paikea.png",
+    "created": "v5.35.0"
+  },
+  {
     "name": "paimomi",
     "category": "explicit",
     "path": "decomoji/explicit/paimomi.png",
-    "created": "v5.24.0"
+    "created": "v5.24.0",
+    "updated": "v5.35.0"
+  },
+  {
+    "name": "panniti",
+    "category": "explicit",
+    "path": "decomoji/explicit/panniti.png",
+    "created": "v5.35.0"
   },
   {
     "name": "pinnkubonn",
@@ -1710,10 +1756,17 @@
     "created": "v5.30.0"
   },
   {
+    "name": "tamakea",
+    "category": "explicit",
+    "path": "decomoji/explicit/tamakea.png",
+    "created": "v5.35.0"
+  },
+  {
     "name": "tamamomi",
     "category": "explicit",
     "path": "decomoji/explicit/tamamomi.png",
-    "created": "v5.24.0"
+    "created": "v5.24.0",
+    "updated": "v5.35.0"
   },
   {
     "name": "tanakaraomutu",
@@ -1740,10 +1793,23 @@
     "created": "v5.21.0"
   },
   {
+    "name": "tikukea",
+    "category": "explicit",
+    "path": "decomoji/explicit/tikukea.png",
+    "created": "v5.35.0"
+  },
+  {
     "name": "tikumomi",
     "category": "explicit",
     "path": "decomoji/explicit/tikumomi.png",
-    "created": "v5.24.0"
+    "created": "v5.24.0",
+    "updated": "v5.35.0"
+  },
+  {
+    "name": "tinnkea",
+    "category": "explicit",
+    "path": "decomoji/explicit/tinnkea.png",
+    "created": "v5.35.0"
   },
   {
     "name": "tinnkosomurie",
@@ -1755,7 +1821,8 @@
     "name": "tinnmomi",
     "category": "explicit",
     "path": "decomoji/explicit/tinnmomi.png",
-    "created": "v5.24.0"
+    "created": "v5.24.0",
+    "updated": "v5.35.0"
   },
   {
     "name": "titiyatu",
@@ -2112,6 +2179,12 @@
     "created": "v5.18.0"
   },
   {
+    "name": "zennra",
+    "category": "explicit",
+    "path": "decomoji/explicit/zennra.png",
+    "created": "v5.35.0"
+  },
+  {
     "name": "zizyounoarukuso",
     "category": "explicit",
     "path": "decomoji/explicit/zizyounoarukuso.png",
@@ -2128,5 +2201,11 @@
     "category": "explicit",
     "path": "decomoji/explicit/zukkonnbakkonn.png",
     "created": "v5.8.0"
+  },
+  {
+    "name": "zyoura",
+    "category": "explicit",
+    "path": "decomoji/explicit/zyoura.png",
+    "created": "v5.35.0"
   }
 ]

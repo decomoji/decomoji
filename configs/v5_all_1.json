@@ -78,16 +78,16 @@
     "created": "v5.18.0"
   },
   {
-    "name": "100okuenngatya",
+    "name": "100okurenngatya",
     "category": "extra",
-    "path": "decomoji/extra/100okuenngatya.png",
-    "created": "v5.8.0"
+    "path": "decomoji/extra/100okurenngatya.png",
+    "created": "v5.35.0"
   },
   {
-    "name": "100pa-sentopuroguramagatadasii",
+    "name": "100pa-senntopuroguramagatadasii",
     "category": "extra",
-    "path": "decomoji/extra/100pa-sentopuroguramagatadasii.png",
-    "created": "v5.0.0"
+    "path": "decomoji/extra/100pa-senntopuroguramagatadasii.png",
+    "created": "v5.35.0"
   },
   {
     "name": "100saizi",
@@ -182,19 +182,21 @@
     "category": "extra",
     "path": "decomoji/extra/10waririkai.png",
     "created": "v5.1.0",
-    "updated": "v5.2.0"
+    "updated": "v5.35.0"
   },
   {
     "name": "10zikara",
     "category": "extra",
     "path": "decomoji/extra/10zikara.png",
-    "created": "v5.22.0"
+    "created": "v5.22.0",
+    "updated": "v5.35.0"
   },
   {
     "name": "10zimade",
     "category": "extra",
     "path": "decomoji/extra/10zimade.png",
-    "created": "v5.22.0"
+    "created": "v5.22.0",
+    "updated": "v5.35.0"
   },
   {
     "name": "10zisyussya",
@@ -230,13 +232,15 @@
     "name": "11zikara",
     "category": "extra",
     "path": "decomoji/extra/11zikara.png",
-    "created": "v5.22.0"
+    "created": "v5.22.0",
+    "updated": "v5.35.0"
   },
   {
     "name": "11zimade",
     "category": "extra",
     "path": "decomoji/extra/11zimade.png",
-    "created": "v5.22.0"
+    "created": "v5.22.0",
+    "updated": "v5.35.0"
   },
   {
     "name": "11zisyussya",
@@ -272,13 +276,15 @@
     "name": "12zikara",
     "category": "extra",
     "path": "decomoji/extra/12zikara.png",
-    "created": "v5.22.0"
+    "created": "v5.22.0",
+    "updated": "v5.35.0"
   },
   {
     "name": "12zimade",
     "category": "extra",
     "path": "decomoji/extra/12zimade.png",
-    "created": "v5.22.0"
+    "created": "v5.22.0",
+    "updated": "v5.35.0"
   },
   {
     "name": "12zisyussya",
@@ -302,13 +308,15 @@
     "name": "13zikara",
     "category": "extra",
     "path": "decomoji/extra/13zikara.png",
-    "created": "v5.22.0"
+    "created": "v5.22.0",
+    "updated": "v5.35.0"
   },
   {
     "name": "13zimade",
     "category": "extra",
     "path": "decomoji/extra/13zimade.png",
-    "created": "v5.22.0"
+    "created": "v5.22.0",
+    "updated": "v5.35.0"
   },
   {
     "name": "13zisyussya",
@@ -332,13 +340,15 @@
     "name": "14zikara",
     "category": "extra",
     "path": "decomoji/extra/14zikara.png",
-    "created": "v5.22.0"
+    "created": "v5.22.0",
+    "updated": "v5.35.0"
   },
   {
     "name": "14zimade",
     "category": "extra",
     "path": "decomoji/extra/14zimade.png",
-    "created": "v5.22.0"
+    "created": "v5.22.0",
+    "updated": "v5.35.0"
   },
   {
     "name": "14zisyussya",
@@ -362,13 +372,15 @@
     "name": "15zikara",
     "category": "extra",
     "path": "decomoji/extra/15zikara.png",
-    "created": "v5.22.0"
+    "created": "v5.22.0",
+    "updated": "v5.35.0"
   },
   {
     "name": "15zimade",
     "category": "extra",
     "path": "decomoji/extra/15zimade.png",
-    "created": "v5.22.0"
+    "created": "v5.22.0",
+    "updated": "v5.35.0"
   },
   {
     "name": "15zisyussya",
@@ -404,13 +416,15 @@
     "name": "16zikara",
     "category": "extra",
     "path": "decomoji/extra/16zikara.png",
-    "created": "v5.22.0"
+    "created": "v5.22.0",
+    "updated": "v5.35.0"
   },
   {
     "name": "16zimade",
     "category": "extra",
     "path": "decomoji/extra/16zimade.png",
-    "created": "v5.22.0"
+    "created": "v5.22.0",
+    "updated": "v5.35.0"
   },
   {
     "name": "16zisyussya",
@@ -434,13 +448,15 @@
     "name": "17zikara",
     "category": "extra",
     "path": "decomoji/extra/17zikara.png",
-    "created": "v5.22.0"
+    "created": "v5.22.0",
+    "updated": "v5.35.0"
   },
   {
     "name": "17zimade",
     "category": "extra",
     "path": "decomoji/extra/17zimade.png",
-    "created": "v5.22.0"
+    "created": "v5.22.0",
+    "updated": "v5.35.0"
   },
   {
     "name": "17zisyussya",
@@ -464,13 +480,15 @@
     "name": "18zikara",
     "category": "extra",
     "path": "decomoji/extra/18zikara.png",
-    "created": "v5.22.0"
+    "created": "v5.22.0",
+    "updated": "v5.35.0"
   },
   {
     "name": "18zimade",
     "category": "extra",
     "path": "decomoji/extra/18zimade.png",
-    "created": "v5.22.0"
+    "created": "v5.22.0",
+    "updated": "v5.35.0"
   },
   {
     "name": "18zisyussya",
@@ -494,13 +512,15 @@
     "name": "19zikara",
     "category": "extra",
     "path": "decomoji/extra/19zikara.png",
-    "created": "v5.22.0"
+    "created": "v5.22.0",
+    "updated": "v5.35.0"
   },
   {
     "name": "19zimade",
     "category": "extra",
     "path": "decomoji/extra/19zimade.png",
-    "created": "v5.22.0"
+    "created": "v5.22.0",
+    "updated": "v5.35.0"
   },
   {
     "name": "1bai",
@@ -549,7 +569,7 @@
     "category": "extra",
     "path": "decomoji/extra/1mozi2pxkurai.png",
     "created": "v5.17.0",
-    "updated": "v5.17.1"
+    "updated": "v5.35.0"
   },
   {
     "name": "1nenngo",

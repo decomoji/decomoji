@@ -230,12 +230,6 @@
     "created": "v5.20.0"
   },
   {
-    "name": "jsomurie",
-    "category": "extra",
-    "path": "decomoji/extra/jsomurie.png",
-    "created": "v5.21.0"
-  },
-  {
     "name": "json",
     "category": "extra",
     "path": "decomoji/extra/json.png",
@@ -252,6 +246,12 @@
     "category": "extra",
     "path": "decomoji/extra/jsonp.png",
     "created": "v5.31.0"
+  },
+  {
+    "name": "jssomurie",
+    "category": "extra",
+    "path": "decomoji/extra/jssomurie.png",
+    "created": "v5.35.0"
   },
   {
     "name": "jstukao",

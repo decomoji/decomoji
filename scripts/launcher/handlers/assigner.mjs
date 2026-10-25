@@ -1,17 +1,19 @@
-import { pretender, remover, update } from "../index.mjs"
+import { pretender, remover, uploader } from "../agents/index.mjs";
 
 // 追加・削除・エイリアス登録をするエージェント
-const agents = { pretender, remover, uploader };
+const agents = { uploader, remover, pretender };
 
 // modeごとに実行するエージェントと順番
 const serials = {
   uninstall: ["remover"],
-  update: ["remover", "uploader"],
+  // 更新でも pretender を回す
+  // 互換のある移行をしたワークスペースでは、差し替えで道連れに消えたエイリアスの貼り直しが要る
+  update: ["remover", "uploader", "pretender"],
   migration: ["remover", "uploader"],
   compatible_migration: ["remover", "uploader", "pretender"],
 };
 
-export const assigner = async ({ inputs: initialInputs, history }) => {
+export const assigner = async ({ inputs: initialInputs, history, compatible, nsfwAdded }) => {
   const serial = serials[initialInputs.mode];
 
   // 存在しない mode の場合はエラーを返して終了する
@@ -30,13 +32,38 @@ export const assigner = async ({ inputs: initialInputs, history }) => {
 
   // ログイン情報を入力し直しているかもしれないので inputs を引き回す
   let inputs = initialInputs;
+  let failed = false;
 
   // mode ごとにエージェントを実行して input を取り直しつつ結果を格納する
   for (const name of serial) {
-    const { inputs: newInputs, result } = await agents[name]({ inputs, history });
-    inputs = newInputs;
-    results[name] = result;
+    try {
+      const {
+        inputs: newInputs,
+        result,
+        failed: agentFailed,
+      } = await agents[name]({ inputs, history, compatible, nsfwAdded });
+      inputs = newInputs;
+      results[name] = result;
+
+      // 途中で失敗したら後続のエージェントは回さない
+      // 消し終えていないまま追加すると名前が衝突するなど、ワークスペースの状態が読めなくなるため
+      if (agentFailed) {
+        failed = true;
+        break;
+      }
+    } catch (error) {
+      // エージェントが結果を返せずに投げた場合の受け止め
+      // 処理すべきリストを組む curator() やブラウザの起動は、
+      // エージェント自身の try より前にあるのでここまで上がってくる
+      //
+      // 投げ直すと launcher が history を書けず、
+      // 先に成功したエージェントの結果まで巻き添えで失われる
+      console.error(`[ERROR]${name}: ${error.message}`);
+      results[name] = { error: [{ message: error.message }] };
+      failed = true;
+      break;
+    }
   }
 
-  return { inputs, results };
+  return { inputs, results, failed };
 };

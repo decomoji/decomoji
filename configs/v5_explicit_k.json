@@ -12,10 +12,17 @@
     "created": "v5.0.0"
   },
   {
+    "name": "ketukea",
+    "category": "explicit",
+    "path": "decomoji/explicit/ketukea.png",
+    "created": "v5.35.0"
+  },
+  {
     "name": "ketumomi",
     "category": "explicit",
     "path": "decomoji/explicit/ketumomi.png",
-    "created": "v5.24.0"
+    "created": "v5.24.0",
+    "updated": "v5.35.0"
   },
   {
     "name": "kihyoudoutei",
@@ -174,10 +181,17 @@
     "created": "v5.0.0"
   },
   {
+    "name": "kurikea",
+    "category": "explicit",
+    "path": "decomoji/explicit/kurikea.png",
+    "created": "v5.35.0"
+  },
+  {
     "name": "kurimomi",
     "category": "explicit",
     "path": "decomoji/explicit/kurimomi.png",
-    "created": "v5.24.0"
+    "created": "v5.24.0",
+    "updated": "v5.35.0"
   },
   {
     "name": "kusaimononihuta",

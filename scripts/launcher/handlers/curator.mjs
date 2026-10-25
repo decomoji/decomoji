@@ -3,40 +3,27 @@
 // 引数はそれぞれ役割が違うので、下記の順に絞り込んでいく
 //
 // 1. mode + invoker  どの母集団を見るか      -> SOURCES
-// 2. includeNsfw     どのカテゴリーを扱うか  -> isTarget()
-// 3. version         前回からの差分に絞るか  -> isTarget()（mode=update の時だけ）
-// 4. invoker         どんな形で返すか        -> FORMATTERS
+// 2. compatible      エイリアスを扱うか      -> curator()（invoker=pretender の時だけ）
+// 3. includeNsfw     どのカテゴリーを扱うか  -> isTarget()
+// 4. version         前回からの差分に絞るか  -> isTarget()（mode=update の時だけ）
+// 5. nsfwAdded       差分の絞り込みを免除するか -> isTarget()（NSFW を扱い始めた時だけ）
+// 6. invoker         どんな形で返すか        -> FORMATTERS
 
 import {
   convertToUploadObject,
   getDecomojiCategory,
   getDecomojiName,
   getParsedJson,
-  getParsedSemVerObject,
+  isNewerThan,
   isStringOfNotEmpty,
 } from "../../utilities/index.mjs";
 
-const V6_DATABASE = "../../database/v6.json";
-const V5_HISTORY = "../../database/v5.json";
-const V4_ALL = "../../configs/v4_all.json";
+const V6_DATABASE = "database/v6.json";
+const V5_HISTORY = "database/v5.json";
+const V4_ALL = "database/v4.json";
 
 // NSFW なカテゴリー。includeNsfw が false の時は追加も削除もしない
 const NSFW_CATEGORIES = ["explicit"];
-
-// semver 同士を比較して、semver が base より新しいなら true
-// どちらかが空文字（updated が無いなど）の時は比較できないので false
-const isNewerThan = (semver, base) => {
-  if (!isStringOfNotEmpty(semver) || !isStringOfNotEmpty(base)) {
-    return false;
-  }
-  const target = getParsedSemVerObject(String(semver).replace(/^v/, ""));
-  const criterion = getParsedSemVerObject(String(base).replace(/^v/, ""));
-  return target.major !== criterion.major
-    ? target.major > criterion.major
-    : target.minor !== criterion.minor
-      ? target.minor > criterion.minor
-      : target.patch > criterion.patch;
-};
 
 // 名前が重複するデコモジを間引く
 // v6 の名前がラテン文字だけになる時、v4/v5 の名前と衝突することがある
@@ -116,11 +103,10 @@ const SOURCES = {
   update: {
     remover: [getV6Decomojis],
     uploader: [getV6Decomojis],
-    // TODO: 互換のある移行をした後の更新では、差し替えたデコモジを消した時に
-    // エイリアスも道連れで消えるので貼り直しが要る。
-    // それには前回の実行モード（history.inputs.mode）を curator() に渡す必要があるため、
-    // assigner() が update でも pretender を回すようになってから対応する
-    pretender: [],
+    // 差し替えたデコモジを消すとエイリアスも道連れで消えるので貼り直す
+    // 新しく追加されたデコモジには、まだ貼られていないエイリアスを貼る
+    // どちらも compatible なワークスペースだけが対象（curator() で弾く）
+    pretender: [getAliasDecomojis],
   },
   uninstall: {
     // 全削除なので v6 だけでなく v4/v5 で配ったものも消す
@@ -138,12 +124,13 @@ const SOURCES = {
 };
 
 // デコモジ1件が処理の対象になるか否かを判定する
-const isTarget = (decomoji, { initial_run, version, mode, includeNsfw, invoker }) => {
+const isTarget = (decomoji, { initial_run, version, nsfwAdded, mode, includeNsfw, invoker }) => {
   const { category, created, updated, deleted } = decomoji;
   const isRemoving = invoker === "remover";
+  const isNsfw = NSFW_CATEGORIES.includes(category);
 
   // includeNsfw が false の時は NSFW なカテゴリーを扱わない。追加も削除もしない
-  if (!includeNsfw && NSFW_CATEGORIES.includes(category)) {
+  if (!includeNsfw && isNsfw) {
     return false;
   }
 
@@ -163,7 +150,20 @@ const isTarget = (decomoji, { initial_run, version, mode, includeNsfw, invoker }
     return !isRemoving;
   }
 
+  // NSFW を扱っていなかったワークスペースが扱い始めた時は、
+  // NSFW なカテゴリーがまるごと未導入なのでバージョンを問わず追加する
+  // 除いている間も version だけは進んでいるので、差分では永久に拾えないため
+  //
+  // 削除側は通常の判定に任せる
+  // ここで消さずに返すと、差し替えられた NSFW を消せないまま追加しにいくことになり、
+  // 上書きできないので古いままになる
+  if (nsfwAdded && isNsfw && !isRemoving) {
+    return true;
+  }
+
   // 前回より後に追加（created）されたか、差し替え（updated）されたものを追加する
+  // pretender も同じ条件でよい
+  // 追加されたものには新しくエイリアスを貼り、差し替えで道連れに消えたエイリアスは貼り直す
   if (!isRemoving) {
     return isNewerThan(created, version) || isNewerThan(updated, version);
   }
@@ -185,7 +185,15 @@ const FORMATTERS = {
   pretender: ({ name, alias_for }) => ({ name, alias_for }),
 };
 
-export const curator = async ({ initial_run, version, mode, includeNsfw, invoker }) => {
+export const curator = async ({
+  initial_run,
+  version,
+  compatible,
+  nsfwAdded,
+  mode,
+  includeNsfw,
+  invoker,
+}) => {
   const getSources = SOURCES[mode]?.[invoker] ?? [];
 
   // 処理する母集団が無い組み合わせは、何もしないで返す
@@ -193,9 +201,15 @@ export const curator = async ({ initial_run, version, mode, includeNsfw, invoker
     return [];
   }
 
+  // エイリアスは互換のある移行をしたワークスペースにしか無いので、
+  // そうでなければ貼りにいかない。移行で捨てたはずの v5 の名前を更新で生やさないため
+  if (invoker === "pretender" && !compatible) {
+    return [];
+  }
+
   const decomojis = (await Promise.all(getSources.map((getSource) => getSource()))).flat();
   const curated = decomojis.filter((decomoji) =>
-    isTarget(decomoji, { initial_run, version, mode, includeNsfw, invoker }),
+    isTarget(decomoji, { initial_run, version, nsfwAdded, mode, includeNsfw, invoker }),
   );
 
   return uniqueByName(curated).map(FORMATTERS[invoker]);

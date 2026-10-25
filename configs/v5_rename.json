@@ -1,11 +1,39 @@
 [
   {
+    "name": "01pa-sento",
+    "alias_for": "01pa-sennto"
+  },
+  {
+    "name": "100okuenngatya",
+    "alias_for": "100okurenngatya"
+  },
+  {
+    "name": "100pa-sentopuroguramagatadasii",
+    "alias_for": "100pa-senntopuroguramagatadasii"
+  },
+  {
     "name": "50onnjunn",
     "alias_for": "50onnzyunn"
   },
   {
     "name": "a-ne",
     "alias_for": "a-ne_"
+  },
+  {
+    "name": "a-ri-adaouta-",
+    "alias_for": "a-ri-adaputa-"
+  },
+  {
+    "name": "abannbousyougunn",
+    "alias_for": "abarennbousyougunn"
+  },
+  {
+    "name": "adeasonn",
+    "alias_for": "aideasonn"
+  },
+  {
+    "name": "aiya-sya-rennzoruburuhhusyuterenfeauazahha-",
+    "alias_for": "aiya-sya-rennzoruburuhhusyuterennfeauazahha-"
   },
   {
     "name": "ajairu",
@@ -16,8 +44,20 @@
     "alias_for": "azyenndawo"
   },
   {
+    "name": "anohigaasa",
+    "alias_for": "anohigasa"
+  },
+  {
     "name": "anosakujo",
     "alias_for": "anosakuzyo"
+  },
+  {
+    "name": "anotokonaru",
+    "alias_for": "anotokonatu"
+  },
+  {
+    "name": "aonohennnomi-mu",
+    "alias_for": "anohennnomi-mu"
   },
   {
     "name": "arufabettojunn",
@@ -28,6 +68,18 @@
     "alias_for": "asanozyunnbi"
   },
   {
+    "name": "ayamattarasinubyou_",
+    "alias_for": "ayamattarasinuyamai_"
+  },
+  {
+    "name": "ayatotiri",
+    "alias_for": "hayatotiri"
+  },
+  {
+    "name": "azasuomori",
+    "alias_for": "azasumori"
+  },
+  {
     "name": "ba-jonnagete",
     "alias_for": "ba-zyonnagete"
   },
@@ -36,16 +88,36 @@
     "alias_for": "ba-zyonnsagete"
   },
   {
+    "name": "baddoomori",
+    "alias_for": "baddomori"
+  },
+  {
     "name": "bajetto",
     "alias_for": "bazyetto"
+  },
+  {
+    "name": "barunai",
+    "alias_for": "bagunai"
   },
   {
     "name": "bau",
     "alias_for": "bau_"
   },
   {
+    "name": "beibi-sabumissyon",
+    "alias_for": "beibi-sabumissyonn"
+  },
+  {
     "name": "bekkakujoukyuusei",
     "alias_for": "bekkakuzyoukyuusei"
+  },
+  {
+    "name": "besutohuraminngu",
+    "alias_for": "besutohuraminngo"
+  },
+  {
+    "name": "bibibiriteihidden",
+    "alias_for": "bibibiriteihiddenn"
   },
   {
     "name": "bienn",
@@ -68,12 +140,52 @@
     "alias_for": "bizyuaruzyouzumann"
   },
   {
+    "name": "biriaruteisuu",
+    "alias_for": "biriaruteiri"
+  },
+  {
+    "name": "birinyani",
+    "alias_for": "biriyani"
+  },
+  {
+    "name": "bokugadaha",
+    "alias_for": "bokugadeha"
+  },
+  {
+    "name": "bokuhadaha",
+    "alias_for": "bokuhadeha"
+  },
+  {
+    "name": "bokumodaha",
+    "alias_for": "bokumodeha"
+  },
+  {
+    "name": "bokunidaha",
+    "alias_for": "bokunideha"
+  },
+  {
+    "name": "bokunodaha",
+    "alias_for": "bokunodeha"
+  },
+  {
     "name": "bokunodoui_1",
     "alias_for": "bokuhadoui"
   },
   {
+    "name": "bokunohigaasa",
+    "alias_for": "bokunohigasa"
+  },
+  {
     "name": "bokunosakujo",
     "alias_for": "bokunosakuzyo"
+  },
+  {
+    "name": "bokunotokonaru",
+    "alias_for": "bokunotokonatu"
+  },
+  {
+    "name": "bokuwodaha",
+    "alias_for": "bokuwodeha"
   },
   {
     "name": "bosutaijou",
@@ -82,6 +194,26 @@
   {
     "name": "bosutoujou",
     "alias_for": "bosutouzyou"
+  },
+  {
+    "name": "bougyoroku0",
+    "alias_for": "bougyoryoku0"
+  },
+  {
+    "name": "buronzu",
+    "alias_for": "buronnzu"
+  },
+  {
+    "name": "busukete",
+    "alias_for": "bosukete"
+  },
+  {
+    "name": "buttonyousowotukaunitodouyouni",
+    "alias_for": "buttonyousowotukaunotodouyouni"
+  },
+  {
+    "name": "chatpgt",
+    "alias_for": "chatgpt"
   },
   {
     "name": "daigekijou",
@@ -120,8 +252,36 @@
     "alias_for": "daizyoubuyo"
   },
   {
+    "name": "daizitoomottemoraukotogadaizi",
+    "alias_for": "daizidatoomottemoraukotogadaizi"
+  },
+  {
     "name": "dakarajanaiga",
     "alias_for": "dakarazyanaiga"
+  },
+  {
+    "name": "daregadaha",
+    "alias_for": "daregadeha"
+  },
+  {
+    "name": "darehadaha",
+    "alias_for": "darehadeha"
+  },
+  {
+    "name": "daremodaha",
+    "alias_for": "daremodeha"
+  },
+  {
+    "name": "darenidaha",
+    "alias_for": "darenideha"
+  },
+  {
+    "name": "darenodaha",
+    "alias_for": "darenodeha"
+  },
+  {
+    "name": "darewodaha",
+    "alias_for": "darewodeha"
   },
   {
     "name": "dassuisyoujou",
@@ -130,6 +290,10 @@
   {
     "name": "debagguzinja",
     "alias_for": "debagguzinnzya"
+  },
+  {
+    "name": "dekomozigaganai",
+    "alias_for": "dekomoziganai"
   },
   {
     "name": "desunejanaiga",
@@ -148,16 +312,44 @@
     "alias_for": "dhite-ruwozyuusi"
   },
   {
+    "name": "dittiyo",
+    "alias_for": "dottiyo"
+  },
+  {
     "name": "dodekaminnsutorongu",
     "alias_for": "dodekaminnsutoronngu"
+  },
+  {
+    "name": "donohigaasa",
+    "alias_for": "donohigasa"
   },
   {
     "name": "donosakujo",
     "alias_for": "donosakuzyo"
   },
   {
+    "name": "donotokonaru",
+    "alias_for": "donotokonatu"
+  },
+  {
+    "name": "doryokuwosurutaiminng",
+    "alias_for": "doryokuwosurutaiminngu"
+  },
+  {
     "name": "doujousikanai",
     "alias_for": "douzyousikanai"
+  },
+  {
+    "name": "doukakunonoga",
+    "alias_for": "doukakunoga"
+  },
+  {
+    "name": "dousitesorenao",
+    "alias_for": "dousitesorenano"
+  },
+  {
+    "name": "eapurituuti",
+    "alias_for": "eariputuuti"
   },
   {
     "name": "eejanaika",
@@ -188,8 +380,16 @@
     "alias_for": "ennpouhuka"
   },
   {
+    "name": "eraberuomori",
+    "alias_for": "eraberumori"
+  },
+  {
     "name": "euc_jp",
     "alias_for": "euc-jp"
+  },
+  {
+    "name": "evezya-",
+    "alias_for": "ravezya-"
   },
   {
     "name": "fansa",
@@ -208,8 +408,56 @@
     "alias_for": "garigari"
   },
   {
+    "name": "gassyukuyoru",
+    "alias_for": "gassyukunoyoru"
+  },
+  {
     "name": "geijutu",
     "alias_for": "geizyutu"
+  },
+  {
+    "name": "gennki80baii",
+    "alias_for": "gennki80bai"
+  },
+  {
+    "name": "getuyouda",
+    "alias_for": "getuyoubida"
+  },
+  {
+    "name": "getuyoude",
+    "alias_for": "getuyoubide"
+  },
+  {
+    "name": "getuyouga",
+    "alias_for": "getuyoubiga"
+  },
+  {
+    "name": "getuyouha",
+    "alias_for": "getuyoubiha"
+  },
+  {
+    "name": "getuyouka",
+    "alias_for": "getuyoubika"
+  },
+  {
+    "name": "getuyoumo",
+    "alias_for": "getuyoubimo"
+  },
+  {
+    "name": "getuyouna",
+    "alias_for": "getuyoubina"
+  },
+  {
+    "name": "getuyouni",
+    "alias_for": "getuyoubini"
+  },
+  {
+    "name": "getuyouwo",
+    "alias_for": "getuyoubiwo"
+  },
+  {
+    "name": "getuyouyo",
+    "alias_for": "getuyoubiyo"
   },
   {
     "name": "gijutuhusai",
@@ -224,6 +472,22 @@
     "alias_for": "gizyutusyotenn"
   },
   {
+    "name": "ginnzaniuama",
+    "alias_for": "ginnzaniyama"
+  },
+  {
+    "name": "girigirdekikou",
+    "alias_for": "girigiridekikou"
+  },
+  {
+    "name": "go-tutyuu",
+    "alias_for": "go-tityuu"
+  },
+  {
+    "name": "guddoomori",
+    "alias_for": "guddomori"
+  },
+  {
     "name": "guunonemodenai_1",
     "alias_for": "guunone"
   },
@@ -232,36 +496,212 @@
     "alias_for": "gyoukaihyouzyunn"
   },
   {
+    "name": "hai-",
+    "alias_for": "hai_"
+  },
+  {
+    "name": "hai-fi",
+    "alias_for": "hi-fi"
+  },
+  {
+    "name": "haiharyou",
+    "alias_for": "haihairyo"
+  },
+  {
+    "name": "happi-dorinku",
+    "alias_for": "happi-dorinnku"
+  },
+  {
     "name": "harajukusaikyou",
     "alias_for": "harazyukusaikyou"
+  },
+  {
+    "name": "haruhodhinngura-do",
+    "alias_for": "naruhodhinngura-do"
+  },
+  {
+    "name": "hatarakuhusiawasezikkan",
+    "alias_for": "hatarakuhusiawasezikkann"
   },
   {
     "name": "hattenntojou",
     "alias_for": "hattenntozyou"
   },
   {
+    "name": "hauringu",
+    "alias_for": "haurinngu"
+  },
+  {
+    "name": "heiopo-zu",
+    "alias_for": "heriopo-zu"
+  },
+  {
+    "name": "higaasa",
+    "alias_for": "higasa"
+  },
+  {
+    "name": "higaasaari",
+    "alias_for": "higasaari"
+  },
+  {
+    "name": "higaasaaru",
+    "alias_for": "higasaaru"
+  },
+  {
+    "name": "higaasadake",
+    "alias_for": "higasadake"
+  },
+  {
+    "name": "higaasadana",
+    "alias_for": "higasadana"
+  },
+  {
+    "name": "higaasadane",
+    "alias_for": "higasadane"
+  },
+  {
+    "name": "higaasadayo",
+    "alias_for": "higasadayo"
+  },
+  {
+    "name": "higaasadeha",
+    "alias_for": "higasadeha"
+  },
+  {
+    "name": "higaasadesu",
+    "alias_for": "higasadesu"
+  },
+  {
+    "name": "higaasakaiwai",
+    "alias_for": "higasakaiwai"
+  },
+  {
+    "name": "higaasakamo",
+    "alias_for": "higasakamo"
+  },
+  {
+    "name": "higaasakana",
+    "alias_for": "higasakana"
+  },
+  {
+    "name": "higaasakayo",
+    "alias_for": "higasakayo"
+  },
+  {
+    "name": "higaasakeisatu",
+    "alias_for": "higasakeisatu"
+  },
+  {
+    "name": "higaasamati",
+    "alias_for": "higasamati"
+  },
+  {
+    "name": "higaasamazoku",
+    "alias_for": "higasamazoku"
+  },
+  {
+    "name": "higaasamore",
+    "alias_for": "higasamore"
+  },
+  {
+    "name": "higaasanai",
+    "alias_for": "higasanai"
+  },
+  {
+    "name": "higaasanasi",
+    "alias_for": "higasanasi"
+  },
+  {
+    "name": "higaasanooni",
+    "alias_for": "higasanooni"
+  },
+  {
+    "name": "higaasasiro",
+    "alias_for": "higasasiro"
+  },
+  {
+    "name": "higaasasita",
+    "alias_for": "higasasita"
+  },
+  {
+    "name": "higaasasite",
+    "alias_for": "higasasite"
+  },
+  {
+    "name": "higaasasiyo",
+    "alias_for": "higasasiyo"
+  },
+  {
+    "name": "higaasasuru",
+    "alias_for": "higasasuru"
+  },
+  {
+    "name": "higaasatarou",
+    "alias_for": "higasatarou"
+  },
+  {
+    "name": "higaasawasure",
+    "alias_for": "higasawasure"
+  },
+  {
+    "name": "higaasazumi",
+    "alias_for": "higasazumi"
+  },
+  {
     "name": "hissujoukenn",
     "alias_for": "hissuzyoukenn"
+  },
+  {
+    "name": "hissyousenndenn",
+    "alias_for": "issyousenndenn"
   },
   {
     "name": "hitoridehakikennja",
     "alias_for": "hitoridehakikennzya"
   },
   {
+    "name": "hobohagonn",
+    "alias_for": "hobokagonn"
+  },
+  {
     "name": "honnninntoujou",
     "alias_for": "honnninntouzyou"
+  },
+  {
+    "name": "hougannbazoku",
+    "alias_for": "hougannmazoku"
+  },
+  {
+    "name": "huhuhutenntenntenn",
+    "alias_for": "huhuhu"
+  },
+  {
+    "name": "huinnkidegironn",
+    "alias_for": "hunnikidegironn"
   },
   {
     "name": "hunnikiyamero",
     "alias_for": "hunnikideyaro"
   },
   {
+    "name": "hurontodeyaro",
+    "alias_for": "huronntodeyaro"
+  },
+  {
     "name": "huseijukyuu",
     "alias_for": "huseizyukyuu"
   },
   {
+    "name": "hyoukasarerutaiminng",
+    "alias_for": "hyoukasarerutaiminngu"
+  },
+  {
     "name": "iijann",
     "alias_for": "iizyann"
+  },
+  {
+    "name": "iikanzideonegaisimasu",
+    "alias_for": "iikannzideonegaisimasu"
   },
   {
     "name": "iinnjanaikana",
@@ -280,6 +720,10 @@
     "alias_for": "ikokuzyoutyo"
   },
   {
+    "name": "imahaanakitori",
+    "alias_for": "imahanakitori"
+  },
+  {
     "name": "imajasutonoomoituki",
     "alias_for": "imazyasutonoomoituki"
   },
@@ -288,20 +732,48 @@
     "alias_for": "imahaanakitori"
   },
   {
+    "name": "innbinnsiburu",
+    "alias_for": "innbisiburu"
+  },
+  {
     "name": "innta-nettojoutai",
     "alias_for": "innta-nettozyoutai"
+  },
+  {
+    "name": "innyouedesu",
+    "alias_for": "innyoudesu"
   },
   {
     "name": "innzyecsyon",
     "alias_for": "innzyekusyonn"
   },
   {
+    "name": "inobigataki",
+    "alias_for": "sinobigataki"
+  },
+  {
     "name": "irunndesujanaiga",
     "alias_for": "irunndesuzyanaiga"
   },
   {
+    "name": "iryouhoutai",
+    "alias_for": "iryouhoukai"
+  },
+  {
+    "name": "isyuumeseddo",
+    "alias_for": "isyuumesoddo"
+  },
+  {
+    "name": "itibuhigaasa",
+    "alias_for": "itibuhigasa"
+  },
+  {
     "name": "itibusakujo",
     "alias_for": "itibusakuzyo"
+  },
+  {
+    "name": "itibutokonaru",
+    "alias_for": "itibutokonatu"
   },
   {
     "name": "itinitijuuutaiodottesyannpannakete",
@@ -310,6 +782,10 @@
   {
     "name": "ittannkaijo",
     "alias_for": "ittannkaizyo"
+  },
+  {
+    "name": "ittutut",
+    "alias_for": "ittuitu"
   },
   {
     "name": "ja-zi",
@@ -428,6 +904,10 @@
     "alias_for": "zyousyamuri"
   },
   {
+    "name": "jsomurie",
+    "alias_for": "jssomurie"
+  },
+  {
     "name": "jugemuyatu",
     "alias_for": "zyugemuyatu"
   },
@@ -540,6 +1020,10 @@
     "alias_for": "kaizyosiyo"
   },
   {
+    "name": "kaisagaiyou",
+    "alias_for": "kaisyagaiyou"
+  },
+  {
     "name": "kaisyahagakkoujanelenndayo",
     "alias_for": "kaisyahagakkouzyanelenndayo"
   },
@@ -560,16 +1044,56 @@
     "alias_for": "kazyuarutennsyoku"
   },
   {
+    "name": "kakudegennkyuu",
+    "alias_for": "kaodegennkyuu"
+  },
+  {
+    "name": "kakuteiensyutu",
+    "alias_for": "kakuteiennsyutu"
+  },
+  {
+    "name": "kaninoto",
+    "alias_for": "kaninooto"
+  },
+  {
+    "name": "kanndannguriru",
+    "alias_for": "karudannguriru"
+  },
+  {
+    "name": "kanngaerareteri",
+    "alias_for": "kanngaerareteru"
+  },
+  {
     "name": "kannsokusijousaikyou",
     "alias_for": "kannsokusizyousaikyou"
+  },
+  {
+    "name": "kanntannyosaku",
+    "alias_for": "kanntannyoyaku"
+  },
+  {
+    "name": "kaohasyouryou",
+    "alias_for": "kaohasyoutyou"
+  },
+  {
+    "name": "karesikyouhaiyanidekotteiruna",
+    "alias_for": "karesikyouhaiyanidekotuteyiruna"
   },
   {
     "name": "karyokujuusi",
     "alias_for": "karyokuzyuusi"
   },
   {
+    "name": "katedakayo",
+    "alias_for": "hatedakayo"
+  },
+  {
     "name": "kateinozijou",
     "alias_for": "kateinozizyou"
+  },
+  {
+    "name": "kattemodouzenn",
+    "alias_for": "kattamodouzenn"
   },
   {
     "name": "keiyakukaijo",
@@ -580,36 +1104,128 @@
     "alias_for": "kihyousyozyo"
   },
   {
+    "name": "kikaikaini",
+    "alias_for": "kikaikani"
+  },
+  {
+    "name": "kimigadaha",
+    "alias_for": "kimigadeha"
+  },
+  {
+    "name": "kimihadaha",
+    "alias_for": "kimihadeha"
+  },
+  {
+    "name": "kimimodaha",
+    "alias_for": "kimimodeha"
+  },
+  {
+    "name": "kiminidaha",
+    "alias_for": "kiminideha"
+  },
+  {
+    "name": "kiminodaha",
+    "alias_for": "kiminodeha"
+  },
+  {
     "name": "kiminodoui_1",
     "alias_for": "kimihadoui"
+  },
+  {
+    "name": "kiminohigaasa",
+    "alias_for": "kiminohigasa"
   },
   {
     "name": "kiminosakujo",
     "alias_for": "kiminosakuzyo"
   },
   {
+    "name": "kiminotokonaru",
+    "alias_for": "kiminotokonatu"
+  },
+  {
+    "name": "kimiwodaha",
+    "alias_for": "kimiwodeha"
+  },
+  {
+    "name": "kimuripasuta",
+    "alias_for": "kimutipasuta"
+  },
+  {
+    "name": "kininarimanda",
+    "alias_for": "kininarimannda"
+  },
+  {
+    "name": "kittoomori",
+    "alias_for": "kittomori"
+  },
+  {
+    "name": "koaneru",
+    "alias_for": "kohaneru"
+  },
+  {
     "name": "kodomonozijou",
     "alias_for": "kodomonozizyou"
+  },
+  {
+    "name": "koknangenntei",
+    "alias_for": "kokanngenntei"
   },
   {
     "name": "kokoronojunnbi",
     "alias_for": "kokoronozyunnbi"
   },
   {
+    "name": "konnpine",
+    "alias_for": "konnpone"
+  },
+  {
+    "name": "konohigaasa",
+    "alias_for": "konohigasa"
+  },
+  {
+    "name": "konomesse-zidehagemasareteruhitonokannzyuseiyasyoudyouttetaisitakotonainnzya",
+    "alias_for": "konomesse-zidehagemasareteruhitonokannzyuseiyasyoudouttetaisitakotonainnzya"
+  },
+  {
     "name": "konosakujo",
     "alias_for": "konosakuzyo"
+  },
+  {
+    "name": "konotokonaru",
+    "alias_for": "konotokonatu"
+  },
+  {
+    "name": "korezoomori",
+    "alias_for": "korezomori"
+  },
+  {
+    "name": "korokro",
+    "alias_for": "korokoro"
   },
   {
     "name": "koroso",
     "alias_for": "koroso"
   },
   {
+    "name": "kougyoutekiakumanosyoumei",
+    "alias_for": "kougakutekiakumanosyoumei"
+  },
+  {
     "name": "koukuunaihoukaijou",
     "alias_for": "koukuunaihoukaizyou"
   },
   {
+    "name": "kouritugakkouhouzinn",
+    "alias_for": "kouritudaigakuhouzinn"
+  },
+  {
     "name": "kowasunnggi",
     "alias_for": "kowasunngi"
+  },
+  {
+    "name": "kuriekennriku",
+    "alias_for": "kuriekenntiku"
   },
   {
     "name": "kutigajouzu",
@@ -624,24 +1240,72 @@
     "alias_for": "kyouhagati"
   },
   {
+    "name": "kyouseihaooyou",
+    "alias_for": "kyouseihappyou"
+  },
+  {
+    "name": "kyouyuurikai",
+    "alias_for": "kyoutuurikai"
+  },
+  {
+    "name": "kyuusobara",
+    "alias_for": "kyuusobaya"
+  },
+  {
+    "name": "madahigaasa",
+    "alias_for": "madahigasa"
+  },
+  {
     "name": "madasakujo",
     "alias_for": "madasakuzyo"
+  },
+  {
+    "name": "madatokonaru",
+    "alias_for": "madatokonatu"
+  },
+  {
+    "name": "maiagattata",
+    "alias_for": "maiagatteta"
+  },
+  {
+    "name": "maihigaasa",
+    "alias_for": "maihigasa"
+  },
+  {
+    "name": "mainoganntann",
+    "alias_for": "maiganntann"
   },
   {
     "name": "maisakujo",
     "alias_for": "maisakuzyo"
   },
   {
+    "name": "maitokonaru",
+    "alias_for": "maitokonatu"
+  },
+  {
     "name": "mannjouitti",
     "alias_for": "mannzyouitti"
+  },
+  {
+    "name": "manohigaasa",
+    "alias_for": "manohigasa"
   },
   {
     "name": "manosakujo",
     "alias_for": "manosakuzyo"
   },
   {
+    "name": "manotokonaru",
+    "alias_for": "manotokonatu"
+  },
+  {
     "name": "mataennjou",
     "alias_for": "mataennzyou"
+  },
+  {
+    "name": "matahigaasa",
+    "alias_for": "matahigasa"
   },
   {
     "name": "matajaaku",
@@ -652,12 +1316,28 @@
     "alias_for": "matasakuzyo"
   },
   {
+    "name": "matatokonaru",
+    "alias_for": "matatokonatu"
+  },
+  {
+    "name": "matayutuiri",
+    "alias_for": "matatuyuiri"
+  },
+  {
+    "name": "mausa-nohima",
+    "alias_for": "mausa-nohime"
+  },
+  {
     "name": "meja-",
     "alias_for": "mezya-"
   },
   {
     "name": "meja-debyu-",
     "alias_for": "mezya-debyu-"
+  },
+  {
+    "name": "mendokusaidesu",
+    "alias_for": "menndokusaidesu"
   },
   {
     "name": "mennbaa",
@@ -668,8 +1348,64 @@
     "alias_for": "menntarugasinnda"
   },
   {
+    "name": "mesinosabukusu",
+    "alias_for": "mesinosabusuku"
+  },
+  {
+    "name": "metyamai",
+    "alias_for": "metyaamai"
+  },
+  {
+    "name": "mieareta",
+    "alias_for": "mirareta"
+  },
+  {
+    "name": "mihobo",
+    "alias_for": "mihogo"
+  },
+  {
+    "name": "minnnagadaha",
+    "alias_for": "minnnagadeha"
+  },
+  {
+    "name": "minnnahadaha",
+    "alias_for": "minnnahadeha"
+  },
+  {
+    "name": "minnnamodaha",
+    "alias_for": "minnnamodeha"
+  },
+  {
+    "name": "minnnanidaha",
+    "alias_for": "minnnanideha"
+  },
+  {
+    "name": "minnnanodaha",
+    "alias_for": "minnnanodeha"
+  },
+  {
+    "name": "minnnawodaha",
+    "alias_for": "minnnawodeha"
+  },
+  {
+    "name": "miozunosaikyou",
+    "alias_for": "mizunosaikyou"
+  },
+  {
+    "name": "mirukulbo-i",
+    "alias_for": "mirukubo-i"
+  },
+  {
     "name": "mokugekijouhou",
     "alias_for": "mokugekizyouhou"
+  },
+  {
+    "name": "mottoomori",
+    "alias_for": "mottomori"
+  },
+  {
+    "name": "mouhigaasa",
+    "alias_for": "mouhigasa"
   },
   {
     "name": "moujaaku",
@@ -680,6 +1416,14 @@
     "alias_for": "mousakuzyo"
   },
   {
+    "name": "moutokonaru",
+    "alias_for": "moutokonatu"
+  },
+  {
+    "name": "mtg8zikan",
+    "alias_for": "mtg8zikann"
+  },
+  {
     "name": "mugennninomero",
     "alias_for": "mugennninomeru"
   },
@@ -688,12 +1432,112 @@
     "alias_for": "muzyunn"
   },
   {
+    "name": "naisuomori",
+    "alias_for": "naisumori"
+  },
+  {
+    "name": "nanimotamsitenai",
+    "alias_for": "nanimotamesitenai"
+  },
+  {
+    "name": "nannkahidori",
+    "alias_for": "nannkahidoi"
+  },
+  {
     "name": "nazonobijo",
     "alias_for": "nazonobizyo"
   },
   {
+    "name": "nazosopusi",
+    "alias_for": "nazosupusi"
+  },
+  {
+    "name": "nenndainikabe",
+    "alias_for": "nenndainokabe"
+  },
+  {
+    "name": "nennreiseigen",
+    "alias_for": "nennreiseigenn"
+  },
+  {
+    "name": "niteinai",
+    "alias_for": "nitenai"
+  },
+  {
+    "name": "nitiyouda",
+    "alias_for": "nitiyoubida"
+  },
+  {
+    "name": "nitiyoude",
+    "alias_for": "nitiyoubide"
+  },
+  {
+    "name": "nitiyouga",
+    "alias_for": "nitiyoubiga"
+  },
+  {
+    "name": "nitiyouha",
+    "alias_for": "nitiyoubiha"
+  },
+  {
+    "name": "nitiyouka",
+    "alias_for": "nitiyoubika"
+  },
+  {
+    "name": "nitiyoumo",
+    "alias_for": "nitiyoubimo"
+  },
+  {
+    "name": "nitiyouna",
+    "alias_for": "nitiyoubina"
+  },
+  {
+    "name": "nitiyouni",
+    "alias_for": "nitiyoubini"
+  },
+  {
+    "name": "nitiyousyukuziti",
+    "alias_for": "nitiyousyukuzitu"
+  },
+  {
+    "name": "nitiyouwo",
+    "alias_for": "nitiyoubiwo"
+  },
+  {
+    "name": "nitiyouyo",
+    "alias_for": "nitiyoubiyo"
+  },
+  {
+    "name": "nobennkyou",
+    "alias_for": "-nobennkyou"
+  },
+  {
     "name": "noburisuoburi-ju",
     "alias_for": "noburisuoburi-zyu"
+  },
+  {
+    "name": "nosei",
+    "alias_for": "-nosei"
+  },
+  {
+    "name": "nottoomori",
+    "alias_for": "nottomori"
+  },
+  {
+    "name": "nottorerusi-",
+    "alias_for": "nottoherusi-"
+  },
+  {
+    "name": "noukoummazoku",
+    "alias_for": "noukoumazoku"
+  },
+  {
+    "name": "nukagake",
+    "alias_for": "nukegake"
+  },
+  {
+    "name": "nukanohotori",
+    "alias_for": "numanohotori"
   },
   {
     "name": "nyuujoukinnsi",
@@ -702,6 +1546,18 @@
   {
     "name": "nyuujoukisei",
     "alias_for": "nyuuzyoukisei"
+  },
+  {
+    "name": "ohutyobettositatehuwomabugattositerittonisuru",
+    "alias_for": "ohutyobettositatehuwomabugaddositerittonisuru"
+  },
+  {
+    "name": "oiketebori",
+    "alias_for": "oitekebori"
+  },
+  {
+    "name": "oisogasiitokoromakotonimousuwakearimasennga",
+    "alias_for": "oisogasiitokoromakotonimousiwakearimasennga"
   },
   {
     "name": "ojann",
@@ -720,24 +1576,128 @@
     "alias_for": "okumanntyouzya"
   },
   {
+    "name": "omorigairu",
+    "alias_for": "morigairu"
+  },
+  {
+    "name": "omorigatobu",
+    "alias_for": "morigatobu"
+  },
+  {
+    "name": "omorihatobu",
+    "alias_for": "morihatobu"
+  },
+  {
+    "name": "omorihaziyuu",
+    "alias_for": "morihaziyuu"
+  },
+  {
+    "name": "omorimi-mu",
+    "alias_for": "morimi-mu"
+  },
+  {
+    "name": "omorinikannsya",
+    "alias_for": "morinikannsya"
+  },
+  {
+    "name": "oninohigaasa",
+    "alias_for": "oninohigasa"
+  },
+  {
     "name": "oninosakujo",
     "alias_for": "oninosakuzyo"
+  },
+  {
+    "name": "oninotokonaru",
+    "alias_for": "oninotokonatu"
+  },
+  {
+    "name": "ookiitanyuurui",
+    "alias_for": "ookiihonyuurui"
   },
   {
     "name": "oowaraikaisuiyokujou",
     "alias_for": "oowaraikaisuiyokuzyou"
   },
   {
+    "name": "oozyanohuukaku",
+    "alias_for": "ouzyanohuukaku"
+  },
+  {
+    "name": "opiniopmi",
+    "alias_for": "opiniomi"
+  },
+  {
+    "name": "orakaramorata",
+    "alias_for": "oyakaramoratta"
+  },
+  {
+    "name": "oregadaha",
+    "alias_for": "oregadeha"
+  },
+  {
+    "name": "orehadaha",
+    "alias_for": "orehadeha"
+  },
+  {
+    "name": "oremodaha",
+    "alias_for": "oremodeha"
+  },
+  {
+    "name": "orenidaha",
+    "alias_for": "orenideha"
+  },
+  {
+    "name": "orenodaha",
+    "alias_for": "orenodeha"
+  },
+  {
     "name": "orenodoui_1",
     "alias_for": "orehadoui"
+  },
+  {
+    "name": "orenohigaasa",
+    "alias_for": "orenohigasa"
   },
   {
     "name": "orenosakujo",
     "alias_for": "orenosakuzyo"
   },
   {
+    "name": "orenotokonaru",
+    "alias_for": "orenotokonatu"
+  },
+  {
+    "name": "orewodaha",
+    "alias_for": "orewodeha"
+  },
+  {
     "name": "otonanozijou",
     "alias_for": "otonanozizyou"
+  },
+  {
+    "name": "panedhissyon",
+    "alias_for": "panedhissyonn"
+  },
+  {
+    "name": "paradhinng",
+    "alias_for": "paradhinn"
+  },
+  {
+    "name": "pe-zinairinku",
+    "alias_for": "pe-zinairinnku"
+  },
+  {
+    "name": "pennro-zupointo",
+    "alias_for": "pennro-zupoinnto"
+  },
+  {
+    "name": "potipotitti",
+    "alias_for": "potipotitto"
+  },
+  {
+    "name": "prtazei",
+    "alias_for": "rtazei"
   },
   {
     "name": "ra-men",
@@ -748,12 +1708,20 @@
     "alias_for": "rahunesu"
   },
   {
+    "name": "raihennhahima",
+    "alias_for": "rainennhahima"
+  },
+  {
     "name": "reikijoutai",
     "alias_for": "reikizyoutai"
   },
   {
     "name": "rimo-tokinntai_1",
     "alias_for": "rimo-totaikinn"
+  },
+  {
+    "name": "rubaru",
+    "alias_for": "rubiaru"
   },
   {
     "name": "rubinsii",
@@ -764,8 +1732,24 @@
     "alias_for": "ryouhousakuzyo"
   },
   {
+    "name": "saigonoomori",
+    "alias_for": "saigonomori"
+  },
+  {
+    "name": "saikinnnoomori",
+    "alias_for": "saikinnnomori"
+  },
+  {
+    "name": "saisyonoomori",
+    "alias_for": "saisyonomori"
+  },
+  {
     "name": "sake",
     "alias_for": "sake_"
+  },
+  {
+    "name": "sakkasann",
+    "alias_for": "rakkasann"
   },
   {
     "name": "sakujo",
@@ -884,12 +1868,32 @@
     "alias_for": "seisakukannryou"
   },
   {
+    "name": "saltulatumu",
+    "alias_for": "saltultumu"
+  },
+  {
+    "name": "sasetteyo",
+    "alias_for": "sasotteyo"
+  },
+  {
+    "name": "sasygadesu",
+    "alias_for": "sasugadesu"
+  },
+  {
+    "name": "satonisyorui",
+    "alias_for": "atonisyorui"
+  },
+  {
     "name": "seijakuannnei",
     "alias_for": "seizyakuannnei"
   },
   {
     "name": "seijouhukki",
     "alias_for": "seizyouhukki"
+  },
+  {
+    "name": "seikagaderutaiminng",
+    "alias_for": "seikagaderutaiminngu"
   },
   {
     "name": "senneijasyu",
@@ -900,12 +1904,20 @@
     "alias_for": "sennzya"
   },
   {
+    "name": "sennryakutekigyogyou",
+    "alias_for": "sennzyututekigyogyou"
+  },
+  {
     "name": "sennseijann",
     "alias_for": "sennseizyann"
   },
   {
     "name": "seyashina",
     "alias_for": "seyasina"
+  },
+  {
+    "name": "si-zunarithi-",
+    "alias_for": "si-zunarithi"
   },
   {
     "name": "sigusinu",
@@ -928,36 +1940,100 @@
     "alias_for": "sinnzyukusaikyou"
   },
   {
+    "name": "sinnkannasi",
+    "alias_for": "sinnkannnasi"
+  },
+  {
+    "name": "sinnkikeiyalu",
+    "alias_for": "sinnkikeiyaku"
+  },
+  {
     "name": "sinnoukubosaikyou",
     "alias_for": "sinnookubosaikyou"
+  },
+  {
+    "name": "sinnraisiteru5ninnsyuu",
+    "alias_for": "sinnraisiteiru5ninnsyuu"
+  },
+  {
+    "name": "sinnritekiannzennzei",
+    "alias_for": "sinnritekiannzennsei"
   },
   {
     "name": "sinnsennennsatu",
     "alias_for": "sinnsennenn"
   },
   {
+    "name": "sinzyukugyoenn",
+    "alias_for": "sinnzyukugyoenn"
+  },
+  {
+    "name": "sitaisinaide",
+    "alias_for": "kitaisinaide"
+  },
+  {
+    "name": "sobietotosiadeha",
+    "alias_for": "sobietorosiadeha"
+  },
+  {
+    "name": "sonnnanimoaru",
+    "alias_for": "sonnnahimoaru"
+  },
+  {
+    "name": "sonohigaasa",
+    "alias_for": "sonohigasa"
+  },
+  {
     "name": "sonosakujo",
     "alias_for": "sonosakuzyo"
+  },
+  {
+    "name": "sonotokonaru",
+    "alias_for": "sonotokonatu"
   },
   {
     "name": "soreijouikenai",
     "alias_for": "soreizyouikenai"
   },
   {
+    "name": "soreyure",
+    "alias_for": "soreyue"
+  },
+  {
     "name": "soseisyujutu",
     "alias_for": "soseisyuzyutu"
+  },
+  {
+    "name": "sougousousya",
+    "alias_for": "sougousyousya"
   },
   {
     "name": "soujukennyou",
     "alias_for": "souzyukennyou"
   },
   {
+    "name": "sousitaradounaruo",
+    "alias_for": "sousitaradounaruno"
+  },
+  {
     "name": "soutaijourenn",
     "alias_for": "soutaizyourenn"
   },
   {
+    "name": "souzaisyouziki",
+    "alias_for": "sozaisyouziki"
+  },
+  {
+    "name": "souzouwiozessite",
+    "alias_for": "souzouwozessite"
+  },
+  {
     "name": "suguennjou",
     "alias_for": "suguennzyou"
+  },
+  {
+    "name": "suguhigaasa",
+    "alias_for": "suguhigasa"
   },
   {
     "name": "sugujaaku",
@@ -972,8 +2048,20 @@
     "alias_for": "sugukaizyo"
   },
   {
+    "name": "sugumerikari",
+    "alias_for": "sugumerukari"
+  },
+  {
+    "name": "sugurokuoku",
+    "alias_for": "sugu6oku"
+  },
+  {
     "name": "sugusakujo",
     "alias_for": "sugusakuzyo"
+  },
+  {
+    "name": "sugutokonaru",
+    "alias_for": "sugutokonatu"
   },
   {
     "name": "suiminnnojuuyousei",
@@ -982,6 +2070,30 @@
   {
     "name": "sukuro-rujakku",
     "alias_for": "sukuro-ruzyakku"
+  },
+  {
+    "name": "suttoomori",
+    "alias_for": "suttomori"
+  },
+  {
+    "name": "suua9ten",
+    "alias_for": "suua9tenn"
+  },
+  {
+    "name": "swarite",
+    "alias_for": "suwarite"
+  },
+  {
+    "name": "syadannhouzonn",
+    "alias_for": "syadannhouzinn"
+  },
+  {
+    "name": "syainnsyotugyou",
+    "alias_for": "syainnsotugyou"
+  },
+  {
+    "name": "syoakukonngen",
+    "alias_for": "syoakukonngenn"
   },
   {
     "name": "syojokana",
@@ -1016,8 +2128,32 @@
     "alias_for": "syuukyouzyounoriyuu"
   },
   {
+    "name": "tabakareta",
+    "alias_for": "tabakarareta"
+  },
+  {
+    "name": "tadanotaopo",
+    "alias_for": "tadanotaipo"
+  },
+  {
     "name": "taifuusekkinn",
     "alias_for": "taihuusekkinn"
+  },
+  {
+    "name": "taikennnnyuugaku",
+    "alias_for": "taikennnyuugaku"
+  },
+  {
+    "name": "taikennnnyuusya",
+    "alias_for": "taikennnyuusya"
+  },
+  {
+    "name": "taikennnnyuutenn",
+    "alias_for": "taikennnyuutenn"
+  },
+  {
+    "name": "takkyusitai",
+    "alias_for": "takkyuusitai"
   },
   {
     "name": "tannjunnsyozi",
@@ -1026,6 +2162,18 @@
   {
     "name": "tannkatakaijou",
     "alias_for": "tannkatakaizyou"
+  },
+  {
+    "name": "tegasyoutyiu",
+    "alias_for": "tegasyoutyou"
+  },
+  {
+    "name": "teiuomori",
+    "alias_for": "teiumori"
+  },
+  {
+    "name": "tekiniaru",
+    "alias_for": "tekininaru"
   },
   {
     "name": "tennjoutennge",
@@ -1038,6 +2186,130 @@
   {
     "name": "tennsyokusijou",
     "alias_for": "tennsyokusizyou"
+  },
+  {
+    "name": "to-taruikurupusu",
+    "alias_for": "to-taruikuripusu"
+  },
+  {
+    "name": "tokgakita",
+    "alias_for": "tokigakita"
+  },
+  {
+    "name": "tokonaru",
+    "alias_for": "tokonatu"
+  },
+  {
+    "name": "tokonaruari",
+    "alias_for": "tokonatuari"
+  },
+  {
+    "name": "tokonaruaru",
+    "alias_for": "tokonatuaru"
+  },
+  {
+    "name": "tokonarudake",
+    "alias_for": "tokonatudake"
+  },
+  {
+    "name": "tokonarudana",
+    "alias_for": "tokonatudana"
+  },
+  {
+    "name": "tokonarudane",
+    "alias_for": "tokonatudane"
+  },
+  {
+    "name": "tokonarudayo",
+    "alias_for": "tokonatudayo"
+  },
+  {
+    "name": "tokonarudeha",
+    "alias_for": "tokonatudeha"
+  },
+  {
+    "name": "tokonarudesu",
+    "alias_for": "tokonatudesu"
+  },
+  {
+    "name": "tokonarukaiwai",
+    "alias_for": "tokonatukaiwai"
+  },
+  {
+    "name": "tokonarukamo",
+    "alias_for": "tokonatukamo"
+  },
+  {
+    "name": "tokonarukana",
+    "alias_for": "tokonatukana"
+  },
+  {
+    "name": "tokonarukayo",
+    "alias_for": "tokonatukayo"
+  },
+  {
+    "name": "tokonarukeisatu",
+    "alias_for": "tokonatukeisatu"
+  },
+  {
+    "name": "tokonarumati",
+    "alias_for": "tokonatumati"
+  },
+  {
+    "name": "tokonarumazoku",
+    "alias_for": "tokonatumazoku"
+  },
+  {
+    "name": "tokonarumore",
+    "alias_for": "tokonatumore"
+  },
+  {
+    "name": "tokonarunai",
+    "alias_for": "tokonatunai"
+  },
+  {
+    "name": "tokonarunasi",
+    "alias_for": "tokonatunasi"
+  },
+  {
+    "name": "tokonarunooni",
+    "alias_for": "tokonatunooni"
+  },
+  {
+    "name": "tokonarusiro",
+    "alias_for": "tokonatusiro"
+  },
+  {
+    "name": "tokonarusita",
+    "alias_for": "tokonatusita"
+  },
+  {
+    "name": "tokonarusite",
+    "alias_for": "tokonatusite"
+  },
+  {
+    "name": "tokonarusiyo",
+    "alias_for": "tokonatusiyo"
+  },
+  {
+    "name": "tokonarusuru",
+    "alias_for": "tokonatusuru"
+  },
+  {
+    "name": "tokonarutarou",
+    "alias_for": "tokonatutarou"
+  },
+  {
+    "name": "tokonaruwasure",
+    "alias_for": "tokonatuwasure"
+  },
+  {
+    "name": "tokonaruzumi",
+    "alias_for": "tokonatuzumi"
+  },
+  {
+    "name": "tokukakuaru",
+    "alias_for": "tonikakuaru"
   },
   {
     "name": "tokusyujoutai",
@@ -1068,8 +2340,28 @@
     "alias_for": "tourokusakuzyo"
   },
   {
+    "name": "tsomurie",
+    "alias_for": "tssomurie"
+  },
+  {
     "name": "tukaene-jane-ka",
     "alias_for": "tukaene-zyane-ka"
+  },
+  {
+    "name": "tukarenohiwa",
+    "alias_for": "tukarenoniwa"
+  },
+  {
+    "name": "turudayo",
+    "alias_for": "tuyudayo"
+  },
+  {
+    "name": "tutawarimasen",
+    "alias_for": "tutawarimasenn"
+  },
+  {
+    "name": "tyokudnen",
+    "alias_for": "tyokudenn"
   },
   {
     "name": "unndounojuuyousei",
@@ -1080,12 +2372,28 @@
     "alias_for": "unnkizyousyou"
   },
   {
+    "name": "up-",
+    "alias_for": "up_"
+  },
+  {
+    "name": "usakawaii",
+    "alias_for": "uzakawaii"
+  },
+  {
+    "name": "versel",
+    "alias_for": "vercel"
+  },
+  {
     "name": "versionbro",
     "alias_for": "visionbro"
   },
   {
     "name": "wa-i_1",
     "alias_for": "wa-"
+  },
+  {
+    "name": "wakarimasen",
+    "alias_for": "wakarimasenn"
   },
   {
     "name": "wakariminojutu",
@@ -1096,20 +2404,104 @@
     "alias_for": "wakarukaradaizyoubu"
   },
   {
+    "name": "wakaruyro_",
+    "alias_for": "wakaruyaro_"
+  },
+  {
+    "name": "waregadaha",
+    "alias_for": "waregadeha"
+  },
+  {
+    "name": "warehadaha",
+    "alias_for": "warehadeha"
+  },
+  {
+    "name": "waremodaha",
+    "alias_for": "waremodeha"
+  },
+  {
+    "name": "warenidaha",
+    "alias_for": "warenideha"
+  },
+  {
+    "name": "warenodaha",
+    "alias_for": "warenodeha"
+  },
+  {
+    "name": "warewodaha",
+    "alias_for": "warewodeha"
+  },
+  {
+    "name": "watasigadaha",
+    "alias_for": "watasigadeha"
+  },
+  {
+    "name": "watasihadaha",
+    "alias_for": "watasihadeha"
+  },
+  {
+    "name": "watasimodaha",
+    "alias_for": "watasimodeha"
+  },
+  {
+    "name": "watasinidaha",
+    "alias_for": "watasinideha"
+  },
+  {
+    "name": "watasinodaha",
+    "alias_for": "watasinodeha"
+  },
+  {
     "name": "watasinodoui_1",
     "alias_for": "watasihadoui"
+  },
+  {
+    "name": "watasinohigaasa",
+    "alias_for": "watasinohigasa"
   },
   {
     "name": "watasinosakujo",
     "alias_for": "watasinosakuzyo"
   },
   {
+    "name": "watasinotokonaru",
+    "alias_for": "watasinotokonatu"
+  },
+  {
+    "name": "watasiwodaha",
+    "alias_for": "watasiwodeha"
+  },
+  {
+    "name": "widomannsyutettenkouzou",
+    "alias_for": "widomannsyutettennkouzou"
+  },
+  {
+    "name": "yahariomori",
+    "alias_for": "yaharimori"
+  },
+  {
+    "name": "yakubu-ru",
+    "alias_for": "yakubu-tu"
+  },
+  {
     "name": "yamikituennjo",
     "alias_for": "yamikituennzyo"
   },
   {
+    "name": "yamimi-thingu",
+    "alias_for": "yamimi-thinngu"
+  },
+  {
     "name": "yasaiju-su",
     "alias_for": "yasaizyu-su"
+  },
+  {
+    "name": "yattaramorisageru",
+    "alias_for": "yattaramorisagaru"
+  },
+  {
+    "name": "yattoomori",
+    "alias_for": "yattomori"
   },
   {
     "name": "yaudeyanngu",
@@ -1128,6 +2520,10 @@
     "alias_for": "yosinaryoku"
   },
   {
+    "name": "yosouyokusenn",
+    "alias_for": "yosoukyokusenn"
+  },
+  {
     "name": "youkaijuubakosumitutuki",
     "alias_for": "youkaizyuubakosumitutuki"
   },
@@ -1144,8 +2540,24 @@
     "alias_for": "yu-zyuaru"
   },
   {
+    "name": "yuanoganntann",
+    "alias_for": "yuaganntann"
+  },
+  {
+    "name": "yumenohigaasa",
+    "alias_for": "yumenohigasa"
+  },
+  {
     "name": "yumenosakujo",
     "alias_for": "yumenosakuzyo"
+  },
+  {
+    "name": "yumenotokonaru",
+    "alias_for": "yumenotokonatu"
+  },
+  {
+    "name": "yurusugioru",
+    "alias_for": "yurusugiru"
   },
   {
     "name": "yuujoukonnbo",
@@ -1160,24 +2572,68 @@
     "alias_for": "yuureipoi"
   },
   {
+    "name": "zaikarunikkukouka",
+    "alias_for": "zaigarunikkukouka"
+  },
+  {
     "name": "zairyokujuusi",
     "alias_for": "zairyokuzyuusi"
+  },
+  {
+    "name": "zanekusutozyenere-sytonn",
+    "alias_for": "zanekusutozyenere-syonn"
+  },
+  {
+    "name": "zannennmunenn",
+    "alias_for": "zannnennmunenn"
+  },
+  {
+    "name": "zennbuhigaasa",
+    "alias_for": "zennbuhigasa"
   },
   {
     "name": "zennbusakujo",
     "alias_for": "zennbusakuzyo"
   },
   {
+    "name": "zennbutokonaru",
+    "alias_for": "zennbutokonatu"
+  },
+  {
+    "name": "zenngepoinnto",
+    "alias_for": "zanngepoinnto"
+  },
+  {
     "name": "zenninnennjou",
     "alias_for": "zenninnennzyou"
+  },
+  {
+    "name": "zenninnhigaasa",
+    "alias_for": "zenninnhigasa"
   },
   {
     "name": "zenninnsakujo",
     "alias_for": "zenninnsakuzyo"
   },
   {
+    "name": "zenninntokonaru",
+    "alias_for": "zenninntokonatu"
+  },
+  {
+    "name": "zenninsatou",
+    "alias_for": "zenninnsatou"
+  },
+  {
     "name": "zennkannumotteta",
     "alias_for": "zennkannmotteta"
+  },
+  {
+    "name": "zennryokusairyou",
+    "alias_for": "zennryokusaiyou"
+  },
+  {
+    "name": "zenntaitekinisouiuhuinnki",
+    "alias_for": "zenntaitekinisouiuhunniki"
   },
   {
     "name": "zijouari",
@@ -1196,8 +2652,36 @@
     "alias_for": "zizyounoarukuso"
   },
   {
+    "name": "zikannai",
+    "alias_for": "zikannnai"
+  },
+  {
+    "name": "zikenndazikanndadaizikenn",
+    "alias_for": "zikenndazikenndadaizikenn"
+  },
+  {
+    "name": "zikkanonokawa",
+    "alias_for": "zikkanokawa"
+  },
+  {
     "name": "zinnseijouhou",
     "alias_for": "zinnseizyouhou"
+  },
+  {
+    "name": "zinnwai",
+    "alias_for": "zinnwari"
+  },
+  {
+    "name": "zittaisinu",
+    "alias_for": "zettaisinu"
+  },
+  {
+    "name": "zittaiyaru",
+    "alias_for": "zettaiyaru"
+  },
+  {
+    "name": "zituhabakusei",
+    "alias_for": "zituhagakusei"
   },
   {
     "name": "zizitujounoakumu",
@@ -1398,5 +2882,17 @@
   {
     "name": "zizitujounozissou",
     "alias_for": "zizituzyounozissou"
+  },
+  {
+    "name": "zuttoomori",
+    "alias_for": "zuttomori"
+  },
+  {
+    "name": "zyounoutisissu",
+    "alias_for": "zyounoutisisu"
+  },
+  {
+    "name": "zyuudannbakugeki",
+    "alias_for": "zyuutannbakugeki"
   }
 ]

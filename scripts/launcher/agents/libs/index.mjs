@@ -1,4 +1,6 @@
 export { goToEmojiPage } from "./goToEmojiPage.mjs"
+export { goToSignInPage } from "./goToSignInPage.mjs"
+export { isSignInFailed } from "./isSignInFailed.mjs"
 export { postEmojiAdd } from "./postEmojiAdd.mjs"
 export { postEmojiAlias } from "./postEmojiAlias.mjs"
 export { postEmojiRemove } from "./postEmojiRemove.mjs"

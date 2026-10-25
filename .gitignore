@@ -8,6 +8,7 @@ decomoji/basic_tmp
 decomoji/extra_tmp
 decomoji/explicit_tmp
 decomoji/tmp
+scripts/auto-commiter/*.json
 inputs.json
 inputs.*.json
 !inputs.example.json
