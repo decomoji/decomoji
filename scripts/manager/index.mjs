@@ -37,7 +37,6 @@ const main = async (INPUTS) => {
     configs: INPUTS.configs,
     first_letter_mode: INPUTS.first_letter_mode,
     selected_first_letters: INPUTS.selected_first_letters,
-    forceRemove: INPUTS.forceRemove || false,
     excludeExplicit: typeof INPUTS.excludeExplicit === "undefined" ? true : INPUTS.excludeExplicit,
     log: options.log || options.debug,
     time: options.time || options.debug,

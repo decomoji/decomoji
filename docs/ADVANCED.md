@@ -26,24 +26,9 @@
 node scripts/manager/index.mjs --inputs
 ```
 
-## 削除時に自分以外のメンバーが登録したカスタム絵文字も強制的に削除する
+## 削除について
 
-scripst/manager の削除スクリプトは、デフォルトでは自分が登録した絵文字しか削除できない設定になっています。**あなたのアカウントに権限があれば**、他のメンバーが登録した絵文字でも強制的に削除できます。
-
-強制削除オプションは対話入力では設定できません。 inputs.json を `"mode": "remove"` として `"forceRemove": true` を追記してください。
-
-```json
-// scripts/manager/inputs.json
-{
-  "workspace": "<workspace>",
-  "email": "<email>",
-  "password": "<password>",
-  "mode": "remove",
-  "term": "category",
-  "configs": ["v5_basic", "v5_extra", "v5_fixed"],
-  "forceRemove": true
-}
-```
+scripts/manager の削除・更新・移行モードは、**自分のアカウントの権限の範囲で**対象のデコモジを削除します。権限があれば、他のメンバーが登録した同名のカスタム絵文字も削除されます。
 
 **権限にかかわらず削除した絵文字はたとえ直後であっても復元できません。必ず削除前にバックアップするなどしてください。**
 
@@ -66,7 +51,6 @@ scripst/manager の削除スクリプトは、デフォルトでは自分が登�
   "mode": "update",
   "term": "version",
   "configs": ["v5.18.0"],
-  "forceRemove": true,
   "excludeExplicit": false
 }
 ```
@@ -148,5 +132,4 @@ Slack の仕様により、１つのエイリアス名には複数のエイリ�
 | mode            | `"upload" \| "alias" \| "remove" \| "update"`                                                                                                                                  | `"upload"`                                           |
 | term            | `"category" \| "version"`                                                                                                                                                      | `"category"`                                         | デコモジをカテゴリーごとに選択するかバージョンごとに選択するか                                                                       |
 | configs         | `("v4_all" \| "v4_basic" \| "v4_extra" \| "v4_fixed" \| "v5_all" \| "v5_basic" \| "v5_extra" \| "v5_explicit" \| "v4_rename" \| "v5_rename \| <TAG_VERSION_NAME> \| string)[]` | `["v5_basic", "v5_extra"]`, `["v5.18.0", "v5.17.3"]` | configs/ に格納した json ファイル名を値にとる配列                                                                                    |
-| forceRemove     | `boolean`                                                                                                                                                                      | `false`                                              | mode="remove" で `true` の時、他ユーザーが登録したカスタム絵文字も削除対象に含めます。対象に含めても権限がない場合は削除されません。 |
 | excludeExplicit | `boolean`                                                                                                                                                                      | `true`                                               | mode="upload" か mode="update" でかつ term="version" の時のみ有効です。デフォルトでは `true` として振る舞います。                    |
