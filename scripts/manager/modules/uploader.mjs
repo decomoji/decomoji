@@ -150,7 +150,8 @@ export const uploader = async (inputs) => {
       name: "result",
     });
     // 入力し直したかもしれないので返す
-    return inputs;
+    // 呼び出し元が後続の処理を続けるか判断できるように、失敗したか否かも返す
+    return { ...inputs, failed: FAILED };
   };
 
   // 処理対象のデコモジが存在しなければ、ブラウザを起動せずにスキップする

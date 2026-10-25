@@ -24,6 +24,14 @@ program
 program.parse(process.argv);
 const options = program.opts();
 
+// 前のステップが失敗していたら後続のステップを実行せずに中断する
+const isAborted = ({ failed }) => {
+  if (failed) {
+    console.error("[ERROR]Aborted because the previous step failed.");
+  }
+  return failed;
+};
+
 // 自動処理を実行する
 const main = async (INPUTS) => {
   // コマンドオプションと inquirer から必要なものだけ取り出す
@@ -77,18 +85,20 @@ Connecting...
       break;
     case "migration":
       console.log("Remove 'v4_all' starting...");
-      await remover({
+      const _migrateInputs1 = await remover({
         ..._inputs,
         ...{ mode: "remove", configs: ["v4_all"] },
       });
+      if (isAborted(_migrateInputs1)) break;
       console.log("Upload 'v5_basic, v5_extra' starting...");
-      await uploader({
-        ..._inputs,
+      const _migrateInputs2 = await uploader({
+        ..._migrateInputs1,
         ...{ mode: "upload", configs: ["v5_basic", "v5_extra"] },
       });
+      if (isAborted(_migrateInputs2)) break;
       console.log("Register 'v4_rename, v5_rename' starting...");
       await pretender({
-        ..._inputs,
+        ..._migrateInputs2,
         ...{ mode: "alias", configs: ["v4_rename", "v5_rename"] },
       });
       console.log("All migration step has completed!");
@@ -104,11 +114,13 @@ Connecting...
           configs: removeConfigs,
         },
       });
+      if (isAborted(_inputs1)) break;
       console.log(`Upload "${_inputs.configs}" starting...`);
       const _inputs2 = await uploader({
         ..._inputs1,
         ...{ mode: "upload" },
       });
+      if (isAborted(_inputs2)) break;
       console.log(`Register "${aliasConfigs}" starting...`);
       await pretender({
         ..._inputs2,
