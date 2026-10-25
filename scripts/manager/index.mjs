@@ -138,5 +138,7 @@ if (options.inputs) {
   main(await getParsedJson(`../manager/${FILE}`));
 } else {
   // --inputs オプション がない場合は inquirer を起動して対話的にオプションを作る
-  askInputs((inputs) => main({ ...inputs, configs: inputs.configs.reverse() }), options.adhoc);
+  // migration では configs が undefined になりうるのでオプショナルチェーンニングで変数化する
+  const configs = inputs.configs?.reverse()
+  askInputs((inputs) => main({ ...inputs, configs }), options.adhoc);
 }
