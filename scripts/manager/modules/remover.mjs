@@ -59,13 +59,6 @@ export const remover = async (inputs) => {
     // 再入力されているかもしれないので取り直す
     const { twofactor_code: TWOFACTOR_CODE, workspace: WORKSPACE } = inputs;
 
-    // ローカルのデコモジが存在しなかったらエラーにして終了する
-    if (localDecomojiListLength === 0) {
-      console.error("[ERROR]No decomoji items.");
-      !DEBUG && (await browser.close());
-      return inputs;
-    }
-
     TIME && console.time("[Remove time]");
     while (i < localDecomojiListLength) {
       const { name } = localDecomojiList[i];
@@ -147,6 +140,12 @@ export const remover = async (inputs) => {
     // 入力し直したかもしれないので返す
     return inputs;
   };
+
+  // 処理対象のデコモジが存在しなければ、ブラウザを起動せずにスキップする
+  if (localDecomojiListLength === 0) {
+    console.info("No decomoji items. Skipped.");
+    return inputs;
+  }
 
   // 再帰処理をスタートする
   return await _remove(inputs);
