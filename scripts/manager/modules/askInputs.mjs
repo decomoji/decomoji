@@ -80,7 +80,8 @@ const V5_TAGGING_DATES = getGitTaggingDateArray()
 const AVAILABLE_VERSION_ITEMS = (await getParsedJson("../../configs/v5_versions.json"))
   .sort((a, b) => b.localeCompare(a, undefined, { numeric: true }))
   .map((tag) => ({
-    name: `${tag}（${V5_TAGGING_DATES[tag]}）`,
+    // タギングされていないバージョンではバージョン名だけを表示する
+    name: V5_TAGGING_DATES[tag] ? `${tag}（${V5_TAGGING_DATES[tag]}）` : tag,
     value: tag,
   }));
 
