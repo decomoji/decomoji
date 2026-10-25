@@ -35,6 +35,6 @@
   "allowScripts": {
     "optipng-bin@7.0.1": true,
     "pngquant-bin@9.0.0": true,
-    "puppeteer@25.3.0": true
+    "puppeteer@25.16.0": true
   }
 }
