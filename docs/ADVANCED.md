@@ -61,12 +61,12 @@ scripts/manager の削除・更新・移行モードは、**自分のアカウ�
 
 ## タギングされていないオリジナルのバージョンを登録する
 
-登録スクリプトに `--aditional` オプション（または `-a`）を付与すると、バージョン別の選択肢に git でタギングされていないバージョンを含められます。
+登録スクリプトに `--adhoc` オプション（または `-a`）を付与すると、バージョン別の選択肢に git でタギングされていないバージョンを含められます。
 
-このバージョンの中身は toDiffJson.js であらかじめ `configs/` に出力しておいてください。
+このバージョンの中身は toDiffJson.mjs であらかじめ `configs/` に出力しておいてください。
 
 ```bash
-node scripts/generator/toDiffJson.js v5.100.0
+node scripts/generator/toDiffJson.mjs v5.100.0
 ```
 
 指定のバージョンを `--adhoc` オプションに渡すと、
@@ -75,7 +75,7 @@ node scripts/generator/toDiffJson.js v5.100.0
 node scripts/manager/index.mjs --adhoc v5.100.0
 ```
 
-登録スクリプト実行時のバージョン選択に「ユーザーが追加したバージョン」として表示されます。
+登録スクリプト実行時のバージョン選択に「ad hocなバージョン」として表示されます。
 
 ```bash
 % node scripts/manager/index.mjs -a v5.100.0
@@ -86,7 +86,7 @@ node scripts/manager/index.mjs --adhoc v5.100.0
 ? 対象タイプを選択してください: バージョンごと
 ? バージョンを選択してください: (Press <space> to select, <a> to toggle all, <i> to invert selection)
  ──────────────
-❯◯ v5.100.0（ユーザーが追加したバージョン）
+❯◯ v5.100.0（ad hocなバージョン）
  ◯ v5.19.1（2022年1月7日公開）
  ◯ v5.19.0（2021年12月30日公開）
 ```
@@ -124,12 +124,12 @@ Slack の仕様により、１つのエイリアス名には複数のエイリ�
 
 ## inputs.json の型
 
-| キー            | 値の型                                                                                                                                                                         | 値の凡例                                             | 注記                                                                                                                                 |
-| :-------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
-| workspace       | `string`                                                                                                                                                                       | `"decomoji"`                                         | ワークスペースのサブドメインです。                                                                                                   |
-| email           | `email`                                                                                                                                                                        | `"otiext@gmail.com"`                                 |                                                                                                                                      |
-| password        | `string`                                                                                                                                                                       | `"hogehoge"`                                         |                                                                                                                                      |
-| mode            | `"upload" \| "alias" \| "remove" \| "update"`                                                                                                                                  | `"upload"`                                           |
-| term            | `"category" \| "version"`                                                                                                                                                      | `"category"`                                         | デコモジをカテゴリーごとに選択するかバージョンごとに選択するか                                                                       |
-| configs         | `("v4_all" \| "v4_basic" \| "v4_extra" \| "v4_fixed" \| "v5_all" \| "v5_basic" \| "v5_extra" \| "v5_explicit" \| "v4_rename" \| "v5_rename \| <TAG_VERSION_NAME> \| string)[]` | `["v5_basic", "v5_extra"]`, `["v5.18.0", "v5.17.3"]` | configs/ に格納した json ファイル名を値にとる配列                                                                                    |
-| excludeExplicit | `boolean`                                                                                                                                                                      | `true`                                               | mode="upload" か mode="update" でかつ term="version" の時のみ有効です。デフォルトでは `true` として振る舞います。                    |
+| キー            | 値の型                                                                                                                                                                         | 値の凡例                                             | 注記                                                                                                              |
+| :-------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------- |
+| workspace       | `string`                                                                                                                                                                       | `"decomoji"`                                         | ワークスペースのサブドメインです。                                                                                |
+| email           | `email`                                                                                                                                                                        | `"otiext@gmail.com"`                                 |                                                                                                                   |
+| password        | `string`                                                                                                                                                                       | `"hogehoge"`                                         |                                                                                                                   |
+| mode            | `"upload" \| "alias" \| "remove" \| "update" \| "migration"`                                                                                                                   | `"upload"`                                           |
+| term            | `"category" \| "version"`                                                                                                                                                      | `"category"`                                         | デコモジをカテゴリーごとに選択するかバージョンごとに選択するか                                                    |
+| configs         | `("v4_all" \| "v4_basic" \| "v4_extra" \| "v4_fixed" \| "v5_all" \| "v5_basic" \| "v5_extra" \| "v5_explicit" \| "v4_rename" \| "v5_rename \| <TAG_VERSION_NAME> \| string)[]` | `["v5_basic", "v5_extra"]`, `["v5.18.0", "v5.17.3"]` | configs/ に格納した json ファイル名を値にとる配列                                                                 |
+| excludeExplicit | `boolean`                                                                                                                                                                      | `true`                                               | mode="upload" か mode="update" でかつ term="version" の時のみ有効です。デフォルトでは `true` として振る舞います。 |

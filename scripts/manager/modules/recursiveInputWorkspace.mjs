@@ -11,9 +11,7 @@ const MAX_ATTEMPTS = 5;
 export const recursiveInputWorkspace = async (page, inputs, attempt = 1) => {
   // 上限に達したら諦めて呼び出し元にエラーを伝播させる
   if (attempt > MAX_ATTEMPTS) {
-    throw new Error(
-      `[ERROR]Could not find the workspace. (tried ${MAX_ATTEMPTS} times)`,
-    );
+    throw new Error(`[ERROR]Could not find the workspace. (tried ${MAX_ATTEMPTS} times)`);
   }
 
   const { workspace } = await inquirer.prompt({
