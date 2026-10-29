@@ -69,7 +69,25 @@ export const goToEmojiPage = async (browser, page, inputs) => {
     );
   }
   // ページ遷移とカスタム絵文字セクションが見つかるまで待つ
-  await page.waitForSelector("#list_emoji_section");
+  // ログイン後に redir が効かず別のページに着地することがあるので、見つからなければ管理画面へ直接遷移し直す
+  const emojiSection = await page
+    .waitForSelector("#list_emoji_section", { timeout: 30000 })
+    .catch(() => null);
+  if (!emojiSection) {
+    console.info(`Emoji page not found at ${page.url()}. Retrying...`);
+    await page.goto(`https://${inputs.workspace}.slack.com/customize/emoji`, {
+      waitUntil: "domcontentloaded",
+    });
+    await page.waitForSelector("#list_emoji_section", { timeout: 60000 }).catch(async () => {
+      // 原因を調べられるように着地したページの URL とスクリーンショットを残して終了する
+      const screenshotPath = `logs/_tmp_emoji_page_not_found_${Date.now()}.png`;
+      await page.screenshot({ path: screenshotPath, fullPage: true }).catch(() => void 0);
+      await exitWithError(
+        browser,
+        `[ERROR]Could not reach the custom emoji page. (url: ${page.url()}, screenshot: ${screenshotPath})`,
+      );
+    });
+  }
 
   TIME && console.timeEnd("[Login time]");
 
